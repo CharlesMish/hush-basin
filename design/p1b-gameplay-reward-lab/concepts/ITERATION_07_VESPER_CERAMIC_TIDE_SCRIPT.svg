@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10141b"/>
+      <stop offset="1" stop-color="#22232d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#292a34"/>
+      <stop offset="1" stop-color="#191c23"/>
+    </linearGradient>
+    <linearGradient id="tide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A995BF" stop-opacity="0"/>
+      <stop offset="0.42" stop-color="#CBD6DA" stop-opacity="0.18"/>
+      <stop offset="0.75" stop-color="#A995BF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#CBD6DA" stop-opacity="0.36"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 36px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f5f0ea; letter-spacing: 1px; }
+      .kicker { font: 700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #bca8ca; letter-spacing: 2.1px; }
+      .h2 { font: 700 23px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f5f0ea; }
+      .h3 { font: 700 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f5f0ea; }
+      .body { font: 400 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #c0c4cc; }
+      .small { font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #979eaa; }
+      .mono { font: 650 13px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #d7cdd9; }
+      .tag { font: 700 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: 1.1px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="54" y="44" width="1492" height="912" rx="24" fill="none" stroke="#50525f" stroke-width="2"/>
+  <text x="86" y="86" class="kicker">DISTRICT ZERO · GAMEPLAY &amp; REWARD LAB · ITERATION 07</text>
+  <text x="86" y="132" class="title">Receipt first. Reward optional. Drive remains the point.</text>
+  <text x="86" y="162" class="body">Vesper Ceramic + Tide Script · presentation concepts only · no R7 or product gameplay change</text>
+
+  <rect x="82" y="196" width="704" height="386" rx="18" fill="url(#panel)" stroke="#50525f"/>
+  <text x="112" y="234" class="kicker">PAINT 07 · RESEARCHED RESERVE</text>
+  <text x="112" y="269" class="h2">VESPER CERAMIC</text>
+  <text x="112" y="294" class="body">Aubergine body · warm ceramic reveal</text>
+
+  <path d="M423 264 L489 237 L555 264 L578 337 L550 461 L489 505 L428 461 L400 337 Z" fill="#161A20" stroke="#737784" stroke-width="3"/>
+  <path d="M435 290 L489 266 L543 290 L553 342 L528 379 L450 379 L425 342 Z" fill="#57485E"/>
+  <path d="M436 392 L477 379 L477 468 L444 445 Z" fill="#C4AF99"/>
+  <path d="M502 379 L542 392 L534 445 L502 468 Z" fill="#C4AF99"/>
+  <path d="M477 379 L502 379 L502 468 L489 482 L477 468 Z" fill="#263A3C"/>
+  <path d="M425 342 L450 379 L436 392 L408 353 Z" fill="#D7CDD9"/>
+  <path d="M553 342 L528 379 L542 392 L570 353 Z" fill="#D7CDD9"/>
+  <rect x="466" y="305" width="46" height="50" rx="9" fill="#727A83" stroke="#D7CDD9" stroke-width="2"/>
+  <path d="M473 313 L489 298 L505 313" fill="none" stroke="#27d8d0" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="420" cy="406" r="7" fill="#ffb547"/>
+  <circle cx="558" cy="406" r="7" fill="#27d8d0"/>
+  <text x="489" y="533" class="small" text-anchor="middle">orange/cyan shown only as preserved functional cues</text>
+
+  <g transform="translate(112 329)">
+    <rect width="214" height="30" rx="7" fill="#161A20" stroke="#6f727b"/>
+    <text x="226" y="21" class="mono">FRAME  #161A20</text>
+    <rect y="42" width="214" height="30" rx="7" fill="#57485E"/>
+    <text x="226" y="63" class="mono">SHELL  #57485E</text>
+    <rect y="84" width="214" height="30" rx="7" fill="#C4AF99"/>
+    <text x="226" y="105" class="mono">LIFT   #C4AF99</text>
+    <rect y="126" width="214" height="30" rx="7" fill="#263A3C"/>
+    <text x="226" y="147" class="mono">UNDER  #263A3C</text>
+    <rect y="168" width="214" height="30" rx="7" fill="#D7CDD9"/>
+    <text x="226" y="189" class="mono">TRIM   #D7CDD9</text>
+  </g>
+
+  <rect x="814" y="196" width="704" height="386" rx="18" fill="url(#panel)" stroke="#50525f"/>
+  <text x="844" y="234" class="kicker">TRAIL 07 · RESEARCHED RESERVE</text>
+  <text x="844" y="269" class="h2">TIDE SCRIPT</text>
+  <text x="844" y="294" class="body">One actual-path ribbon · spatial rhythm, never timer or guide</text>
+
+  <path d="M854 480 C930 528 1014 505 1079 447 C1146 387 1217 329 1312 349 C1380 363 1416 409 1460 380" stroke="url(#tide)" stroke-width="17" fill="none" stroke-linecap="round"/>
+  <path d="M854 476 C930 524 1014 501 1079 443 C1146 383 1217 325 1312 345 C1380 359 1416 405 1460 376" stroke="#CBD6DA" stroke-opacity="0.48" stroke-width="2" fill="none"/>
+  <path d="M854 484 C930 532 1014 509 1079 451 C1146 391 1217 333 1312 353 C1380 367 1416 413 1460 384" stroke="#A995BF" stroke-opacity="0.48" stroke-width="2" fill="none"/>
+  <path d="M1439 352 L1480 370 L1462 411 L1421 393 Z" fill="#57485E" stroke="#D7CDD9" stroke-width="2"/>
+  <path d="M1447 362 L1468 371 L1459 397 L1438 388 Z" fill="#C4AF99"/>
+
+  <g transform="translate(846 324)">
+    <text y="0" class="mono">20 samples max · 40 vertices</text>
+    <text y="25" class="mono">38 triangles · 0.54 s / 18 m</text>
+    <text y="50" class="mono">0.040–0.066 m · 4.80 m wavelength</text>
+    <text y="75" class="mono">reduced: 8 samples · 0.18 s · 4 m</text>
+  </g>
+  <g transform="translate(846 518)">
+    <rect width="624" height="38" rx="9" fill="#14171d" stroke="#454955"/>
+    <text x="18" y="25" class="small">Past path only · depth tested · clear before relocation · Trail Off always free</text>
+  </g>
+
+  <rect x="82" y="612" width="1436" height="306" rx="18" fill="#15181f" stroke="#50525f"/>
+  <text x="112" y="650" class="kicker">REWARD SURFACE · RECEIPT_FIRST_SESSION_REWARD_SURFACE_V1</text>
+
+  <rect x="112" y="681" width="452" height="194" rx="14" fill="#222730" stroke="#bca8ca" stroke-width="2"/>
+  <text x="136" y="712" class="tag" fill="#bca8ca">DELIVERED · GRADE A</text>
+  <text x="136" y="745" class="h2">96 CREDITS</text>
+  <text x="136" y="776" class="body">DELIVERY +50 · CONDITION +32 · PACE +14</text>
+  <text x="136" y="807" class="small">SESSION PROTOTYPE · resets when app closes</text>
+  <rect x="136" y="826" width="232" height="32" rx="8" fill="#d7cdd9"/>
+  <text x="252" y="848" class="tag" fill="#20222a" text-anchor="middle">CONTINUE AT DEP</text>
+  <text x="388" y="848" class="small">FINISHES</text>
+
+  <path d="M565 777 L618 777" stroke="#656876" stroke-width="2"/>
+  <path d="M610 769 L618 777 L610 785" fill="none" stroke="#656876" stroke-width="2"/>
+
+  <rect x="634" y="681" width="382" height="194" rx="14" fill="#222730" stroke="#8d7b96"/>
+  <text x="658" y="712" class="tag" fill="#d7cdd9">FREE FINISH CHOICE READY</text>
+  <text x="658" y="745" class="body">C01 FIRST CLEAR · FREE · SESSION ONLY</text>
+  <text x="658" y="776" class="small">District Standard · Proof A · Proof B · Trail Off</text>
+  <text x="658" y="807" class="small">No prices · no locked tease · choice may be deferred</text>
+  <text x="658" y="847" class="tag" fill="#bca8ca">ONE CARD · NEVER AUTO-OPENS</text>
+
+  <rect x="1040" y="681" width="448" height="194" rx="14" fill="#1b1e25" stroke="#555965" stroke-dasharray="7 6"/>
+  <text x="1064" y="712" class="tag" fill="#969ca6">POST-GATE CHALLENGER · NOT AUTHORIZED</text>
+  <text x="1064" y="747" class="h3">Shallow paid loadout</text>
+  <text x="1064" y="778" class="body">Unchosen paint · 80 · exact {C01,C02}</text>
+  <text x="1064" y="805" class="body">One approved trail · 160 · exact {C01,C02,C03}</text>
+  <text x="1064" y="837" class="small">No Rep · no sales · no client price · no stat effect</text>
+
+  <text x="112" y="902" class="small">112/112 pure vectors pass · native desirability and performance remain unperformed</text>
+  <text x="1488" y="902" class="small" text-anchor="end">HUMAN WORLD GATE · NOT PERFORMED</text>
+  <text x="86" y="943" class="small">Design mockup only · Vesper Ceramic and Tide Script remain researched reserves · product P1B not implemented</text>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "algorithm": "json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(comma,colon), allow_nan=False).encode(UTF-8)",
+  "distinguishes": [
+    "integer 10 from float 10.0",
+    "negative zero from positive zero",
+    "non-ASCII Unicode",
+    "recursive key order",
+    "CRLF and LF characters inside a string value",
+    "artifact file LF/final-LF through raw checksum"
+  ],
+  "expected_canonical_sha256": "d2ca0c0cc1443ea172a596d87ece84ff5fa9860ddea6a7ed87d9d4b12d218894",
+  "expected_canonical_utf8_hex": "7b22615f666c6f6174223a31302e302c226c696e655f656e64696e67735f696e5f76616c7565223a22616c7068615c725c6e626574615c6e67616d6d61222c226e656761746976655f7a65726f223a2d302e302c226e6573746564223a7b2261223a312c227a223a312e302c22ceb2223a2d302e307d2c22756e69636f64655fceb2223a22c3a92fce942fe99baa222c227a5f696e7465676572223a31307d",
+  "file_line_endings": "LF with final LF",
+  "purpose": "reference-only verification of the historical compact route-array hash; generated artifact identity itself always uses raw bytes",
+  "reference_runtime": "CPython standard library json",
+  "runtime_identity_rule": "NOT USED; consumers hash shipped raw bytes and never reserialize to establish identity",
+  "schema": "district_zero.p1a.canonical_serializer_fixture.v1",
+  "test_object": {
+    "a_float": 10.0,
+    "line_endings_in_value": "alpha\r\nbeta\ngamma",
+    "negative_zero": -0.0,
+    "nested": {
+      "a": 1,
+      "z": 1.0,
+      "β": -0.0
+    },
+    "unicode_β": "é/Δ/雪",
+    "z_integer": 10
+  }
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <title>District Zero Iteration 03 — Reprise Alloy, Second Draft, and results hierarchy concept</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111520"/>
+      <stop offset="1" stop-color="#090c12"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#31394b"/>
+      <stop offset="1" stop-color="#1e2330"/>
+    </linearGradient>
+    <linearGradient id="lift" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c4c8dc"/>
+      <stop offset="1" stop-color="#8188aa"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect x="26" y="26" width="1148" height="668" rx="20" fill="none" stroke="#444b63" stroke-width="2"/>
+  <text x="58" y="70" fill="#f1eff5" font-family="Inter,Arial,sans-serif" font-size="29" font-weight="700">REPRISE ALLOY · SECOND DRAFT</text>
+  <text x="58" y="98" fill="#b8acd4" font-family="Inter,Arial,sans-serif" font-size="14" letter-spacing="2">ITERATION 03 · PACE / GRADE / RETRY STUDY · CONCEPT ONLY</text>
+
+  <!-- Current-path trail study. The two strokes are deliberately asymmetric. -->
+  <rect x="58" y="128" width="654" height="526" rx="15" fill="url(#road)" stroke="#525a70"/>
+  <path d="M83 572 C176 526, 224 491, 307 504 C415 521, 479 451, 528 379 C568 321, 628 285, 689 276"
+        fill="none" stroke="#536074" stroke-width="118" stroke-linecap="round" opacity="0.66"/>
+  <path d="M88 578 C178 532, 225 500, 306 512 C410 528, 473 460, 521 389"
+        fill="none" stroke="#b9c3d8" stroke-width="7" stroke-linecap="round" opacity="0.42"/>
+  <path d="M121 553 C191 518, 235 493, 305 503 C384 515, 439 480, 476 432"
+        fill="none" stroke="#d4c0dc" stroke-width="4" stroke-linecap="round" opacity="0.34"/>
+  <text x="82" y="624" fill="#c8ccda" font-family="Inter,Arial,sans-serif" font-size="13">Both strokes contain only the current path. Neither is a prior run, target line, or pace delta.</text>
+
+  <!-- Stylized role preview, not replacement geometry. -->
+  <g transform="translate(541 361) rotate(-35)">
+    <ellipse cx="0" cy="30" rx="102" ry="67" fill="#080a0f" opacity="0.55"/>
+    <path d="M-76 14 L-112 -63 L-60 -83 L-18 -18 Z" fill="url(#lift)" stroke="#ddd2e5" stroke-width="5"/>
+    <path d="M76 14 L112 -63 L60 -83 L18 -18 Z" fill="url(#lift)" stroke="#ddd2e5" stroke-width="5"/>
+    <path d="M-69 31 L-88 95 L-34 101 L-14 29 Z" fill="#332b42" stroke="#ddd2e5" stroke-width="4"/>
+    <path d="M69 31 L88 95 L34 101 L14 29 Z" fill="#332b42" stroke="#ddd2e5" stroke-width="4"/>
+    <path d="M-42 -24 L-22 -69 L22 -69 L42 -24 L30 70 L-30 70 Z" fill="#434a68" stroke="#171a29" stroke-width="12"/>
+    <path d="M-27 -54 L0 -80 L27 -54 L21 16 L-21 16 Z" fill="#615a7a"/>
+    <path d="M-20 15 L0 -7 L20 15 L16 55 L-16 55 Z" fill="#171a29"/>
+    <circle cx="0" cy="7" r="12" fill="#4ff7e8" filter="url(#glow)"/>
+    <circle cx="0" cy="7" r="5" fill="#f5ffff"/>
+    <path d="M-33 -21 L-48 17 M33 -21 L48 17 M-22 69 L-48 86 M22 69 L48 86" fill="none" stroke="#ddd2e5" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Results hierarchy mockup. -->
+  <g transform="translate(744 128)" font-family="Inter,Arial,sans-serif">
+    <rect width="398" height="526" rx="15" fill="#171b27" stroke="#5d6481"/>
+    <text x="24" y="43" fill="#eef0f6" font-size="15" letter-spacing="1.5">DELIVERED · GRADE A</text>
+    <text x="24" y="89" fill="#f0d98e" font-size="34" font-weight="700">96 CREDITS</text>
+    <text x="374" y="86" text-anchor="end" fill="#aeb4c8" font-size="13">BALANCE 164</text>
+    <line x1="24" y1="111" x2="374" y2="111" stroke="#3b4154"/>
+    <text x="24" y="142" fill="#d7d9e2" font-size="15">DELIVERY</text><text x="374" y="142" text-anchor="end" fill="#f1f2f5" font-size="15">+50</text>
+    <text x="24" y="174" fill="#d7d9e2" font-size="15">CONDITION 92% · 1 EPISODE</text><text x="374" y="174" text-anchor="end" fill="#f1f2f5" font-size="15">+32</text>
+    <text x="24" y="206" fill="#d7d9e2" font-size="15">PACE 1:42 · REF 1:35</text><text x="374" y="206" text-anchor="end" fill="#f1f2f5" font-size="15">+14</text>
+    <rect x="24" y="230" width="350" height="39" rx="7" fill="#242a3b"/>
+    <text x="40" y="255" fill="#d4c0dc" font-size="14" font-weight="700">NEW SESSION BEST RECEIPT</text>
+    <rect x="24" y="293" width="350" height="54" rx="8" fill="#ddd2e5"/>
+    <text x="199" y="326" text-anchor="middle" fill="#171a29" font-size="15" font-weight="700">CONTINUE AT DEP</text>
+    <rect x="24" y="358" width="350" height="54" rx="8" fill="#252b3c" stroke="#7d83a0"/>
+    <text x="199" y="391" text-anchor="middle" fill="#e0e2eb" font-size="15" font-weight="700">RESTART AT MRK</text>
+    <text x="199" y="431" text-anchor="middle" fill="#9fa5bb" font-size="12">Relocates craft · completed reward remains</text>
+    <text x="24" y="473" fill="#b9c3d8" font-size="13">Run details  ›</text>
+    <text x="24" y="505" fill="#777f96" font-size="11">Grade explains the same condition + pace evidence.</text>
+  </g>
+
+  <text x="58" y="680" fill="#7e8599" font-family="Inter,Arial,sans-serif" font-size="12">Research only · R7 unchanged · native cue / wall occlusion / readability / performance / owner-feel review still required</text>
+</svg>
+

@@ -1,0 +1,222 @@
+{
+  "authority_version": "1.2.3",
+  "authorized_C1_deliverables": {
+    "comparator": {
+      "authorization": "Shipped Python-standard-library-only comparator required at C1; it performs only line-count, field-set, tick-alignment, frozen-hash, and tolerance checks defined here.",
+      "path_in_P1A_root": "tools/compare_p1a_baseline.py",
+      "required_cli_contract": "<P0_TRACE_JSONL> <P1A_TRACE_JSONL> <THIS_FIXTURE_JSON>"
+    },
+    "packet_status": "SHIPPED in this handoff and required at C1; Codex may repair implementation defects only within their frozen fixture contract.",
+    "runner": {
+      "authorization": "Shipped behavior-neutral test-only runner required at C1 in both the immutable P0 fixture copy and clean P1A root; it may not modify frozen movement files or the fixture schedule.",
+      "path_in_P0_fixture_copy_and_P1A_root": "tests/p1a_baseline_runner.gd",
+      "required_cli_contract": "--output <JSONL_PATH>"
+    }
+  },
+  "commands": {
+    "P0": "<GODOT_4_7_1_EXE> --headless --path <P0_BASELINE_FIXTURE_ROOT> --fixed-fps 60 --script res://tests/p1a_baseline_runner.gd -- --output baseline_p0_trace.jsonl",
+    "P1A": "<GODOT_4_7_1_EXE> --headless --path <P1A_ROOT> --fixed-fps 60 --script res://tests/p1a_baseline_runner.gd -- --output baseline_p1a_trace.jsonl",
+    "compare": "<PYTHON_3_EXE> tools/compare_p1a_baseline.py baseline_p0_trace.jsonl baseline_p1a_trace.jsonl tests/fixtures/baseline_flat_support.json"
+  },
+  "comparison": {
+    "P0_capture": "run exact fixture against immutable extracted P0 substantive tree; write baseline_p0_trace.jsonl",
+    "P1A_capture": "run exact fixture against clean P1A root; write baseline_p1a_trace.jsonl",
+    "alignment": "same physics_tick; exact field set and line count 1260",
+    "required_result": "every field at every aligned tick within tolerance; frozen-file hashes exact",
+    "tolerances": {
+      "all_scalar_and_vector_components_absolute": 0.001,
+      "integer_and_boolean_fields": "exact"
+    }
+  },
+  "fixed_physics_timestep_s": 0.016666666666666666,
+  "purpose": "capture P0 expected trace on the implementation host, then compare clean-root P1A with the identical fixture and frozen files",
+  "required_godot_version": "4.7.1.stable.official.a13da4feb",
+  "reset_alignment": {
+    "capture_tick_zero": "first physics tick after set_spawn_transform/reset_craft has completed and input lock is released",
+    "random_seed": 0,
+    "trace_alignment_key": "physics_tick 0..1259"
+  },
+  "scene_contract": {
+    "camera": {
+      "enabled": true,
+      "mouse_input": "none",
+      "rendering": "headless trace does not require pixels; camera transform still sampled after its normal update",
+      "script": "res://scripts/camera_rig.gd",
+      "target": "craft",
+      "viewport_px": [
+        1280,
+        720
+      ],
+      "window_focus": "fixed"
+    },
+    "craft": {
+      "collision_layer": "unchanged from frozen craft scene",
+      "collision_mask": "unchanged from frozen craft scene",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "scene": "res://scenes/craft.tscn",
+      "spawn_position_xyz_m": [
+        0.0,
+        1.65,
+        0.0
+      ],
+      "spawn_yaw_rad": 0.0
+    },
+    "root": "Node3D BaselineFlatSupport",
+    "support": {
+      "collision_layer": 1,
+      "collision_mask": 1,
+      "collision_shape": {
+        "size_xyz_m": [
+          160.0,
+          1.0,
+          160.0
+        ],
+        "type": "BoxShape3D"
+      },
+      "node_type": "StaticBody3D",
+      "surface_tag": "BASELINE_SMOOTH",
+      "transform_origin_xyz_m": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "visible_mesh": {
+        "size_xyz_m": [
+          160.0,
+          1.0,
+          160.0
+        ],
+        "type": "BoxMesh"
+      }
+    },
+    "world_environment": "none beyond Godot defaults; no wind, moving bodies, or surface coefficient override"
+  },
+  "schema": "district_zero.p1a.same_host_baseline.v1",
+  "status_in_director_turn": "NOT PERFORMED for v1.2.3; the exact-engine C1 run remains a Codex runtime prerequisite.",
+  "tick_schedule": [
+    {
+      "actions": {},
+      "ticks_inclusive": [
+        0,
+        119
+      ]
+    },
+    {
+      "actions": {
+        "throttle": 1.0
+      },
+      "ticks_inclusive": [
+        120,
+        359
+      ]
+    },
+    {
+      "actions": {
+        "steer_right": 0.6,
+        "throttle": 1.0
+      },
+      "ticks_inclusive": [
+        360,
+        479
+      ]
+    },
+    {
+      "actions": {
+        "brake": 1.0
+      },
+      "ticks_inclusive": [
+        480,
+        599
+      ]
+    },
+    {
+      "actions": {
+        "transform": 1.0
+      },
+      "ticks_inclusive": [
+        600,
+        659
+      ]
+    },
+    {
+      "actions": {
+        "throttle": 1.0,
+        "transform": 1.0
+      },
+      "ticks_inclusive": [
+        660,
+        899
+      ]
+    },
+    {
+      "actions": {
+        "steer_left": 0.35,
+        "throttle": 1.0,
+        "transform": 1.0
+      },
+      "ticks_inclusive": [
+        900,
+        1019
+      ]
+    },
+    {
+      "actions": {
+        "brake": 1.0,
+        "transform": 1.0
+      },
+      "ticks_inclusive": [
+        1020,
+        1079
+      ]
+    },
+    {
+      "actions": {},
+      "ticks_inclusive": [
+        1080,
+        1139
+      ]
+    },
+    {
+      "actions": {
+        "hop_press": 1
+      },
+      "ticks_inclusive": [
+        1140,
+        1140
+      ]
+    },
+    {
+      "actions": {},
+      "ticks_inclusive": [
+        1141,
+        1259
+      ]
+    }
+  ],
+  "trace_fields_every_physics_tick": [
+    "physics_tick",
+    "global_position_xyz",
+    "global_basis_x_xyz",
+    "global_basis_y_xyz",
+    "global_basis_z_xyz",
+    "velocity_xyz",
+    "fold_amount",
+    "probe_hit_count",
+    "measured_height",
+    "support_normal_xyz",
+    "support_reacquire_blend",
+    "hop_count",
+    "hop_cooldown_remaining",
+    "impact_count",
+    "last_impact_strength",
+    "camera_global_position_xyz",
+    "camera_global_basis_x_xyz",
+    "camera_global_basis_y_xyz",
+    "camera_global_basis_z_xyz"
+  ]
+}

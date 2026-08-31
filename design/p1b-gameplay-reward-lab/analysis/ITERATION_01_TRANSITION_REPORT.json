@@ -1,0 +1,172 @@
+{
+  "check_count": 41,
+  "checks": [
+    {
+      "id": "dispatch exact spatial and speed boundaries are inclusive",
+      "status": "PASS"
+    },
+    {
+      "id": "dispatch rejects outer pad blend",
+      "status": "PASS"
+    },
+    {
+      "id": "dispatch press revalidation rejects excess speed",
+      "status": "PASS"
+    },
+    {
+      "id": "dispatch rejects insufficient support",
+      "status": "PASS"
+    },
+    {
+      "id": "dispatch rejects nonfinite observation",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery feedback prioritizes outside zone",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery feedback prioritizes support after zone",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery feedback exposes cargo-loss impact",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery feedback exposes exact speed failure",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery feedback exposes settle progress",
+      "status": "PASS"
+    },
+    {
+      "id": "ineligible dispatch rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "ineligible dispatch preserves free roam",
+      "status": "PASS"
+    },
+    {
+      "id": "fresh dispatch opens board",
+      "status": "PASS"
+    },
+    {
+      "id": "board owns pause",
+      "status": "PASS"
+    },
+    {
+      "id": "opener hold cannot accept",
+      "status": "PASS"
+    },
+    {
+      "id": "new accept edge enters neutral latch",
+      "status": "PASS"
+    },
+    {
+      "id": "held-or-single-neutral frame cannot cross modal",
+      "status": "PASS"
+    },
+    {
+      "id": "two consecutive neutral frames release modal",
+      "status": "PASS"
+    },
+    {
+      "id": "modal and neutral time are free",
+      "status": "PASS"
+    },
+    {
+      "id": "first resumed physics activates contract",
+      "status": "PASS"
+    },
+    {
+      "id": "first resumed physics charges one delta",
+      "status": "PASS"
+    },
+    {
+      "id": "fresh pause opens overlay",
+      "status": "PASS"
+    },
+    {
+      "id": "pause freezes clock and settle",
+      "status": "PASS"
+    },
+    {
+      "id": "fresh pause close enters neutral latch",
+      "status": "PASS"
+    },
+    {
+      "id": "resume has no delta catch-up",
+      "status": "PASS"
+    },
+    {
+      "id": "invalid resumed sample resets preserved settle",
+      "status": "PASS"
+    },
+    {
+      "id": "valid arrival begins automatic settle",
+      "status": "PASS"
+    },
+    {
+      "id": "first valid tick counts toward settle",
+      "status": "PASS"
+    },
+    {
+      "id": "zero-loss contact preserves settle",
+      "status": "PASS"
+    },
+    {
+      "id": "cargo-loss impact resets settle before terminal",
+      "status": "PASS"
+    },
+    {
+      "id": "twenty-nine valid ticks cannot complete half-second settle",
+      "status": "PASS"
+    },
+    {
+      "id": "thirty valid ticks commit delivery",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery commits result and award once",
+      "status": "PASS"
+    },
+    {
+      "id": "post-result samples cannot double award",
+      "status": "PASS"
+    },
+    {
+      "id": "reset wins delivery terminal race",
+      "status": "PASS"
+    },
+    {
+      "id": "aborted attempt awards zero",
+      "status": "PASS"
+    },
+    {
+      "id": "board consumes reset without R7 teleport",
+      "status": "PASS"
+    },
+    {
+      "id": "modal reset preserves board and creates no terminal",
+      "status": "PASS"
+    },
+    {
+      "id": "fresh continue enters neutral latch",
+      "status": "PASS"
+    },
+    {
+      "id": "held result input cannot resume world",
+      "status": "PASS"
+    },
+    {
+      "id": "neutral result exit returns to free roam",
+      "status": "PASS"
+    }
+  ],
+  "product_source_modified": false,
+  "schema": "district_zero.p1b.iteration_01_transition_report.v1",
+  "status": "PASS"
+}

@@ -1,0 +1,346 @@
+{
+  "schema": "district_zero.p1a.v1_2_8.raster_ownership_contract.v1",
+  "authority_version": "v1.2.8",
+  "status": "READY FOR CODEX — RASTER OWNERSHIP DIAGNOSTIC THEN BOUNDED CALIBRATION",
+  "exact_engine": "4.7.1.stable.official.a13da4feb",
+  "renderer": "Forward+",
+  "viewport_px": [1280, 720],
+  "bound_source_packet_inventory": {
+    "record_count": 2198,
+    "sha256": "e6a13365f3019b21457d754d6d128ef85d70a39c718579703574de066141bf44"
+  },
+  "bound_historical_run_2": {
+    "zip_byte_size": 7729110,
+    "zip_sha256": "2d92dc591ed8b4288e357f85978b93e793523e8e097ace28456de9df6129877f",
+    "inventory_record_count": 640,
+    "terminal_status": "NO_PRESENTATION_ONLY_INTERVAL",
+    "disposition": "CLOSED_NOT_REUSABLE_AS_V1_2_8_CANDIDATE_EVIDENCE"
+  },
+  "coordinate_conversion": {
+    "formula_x": "clamp(floor(normalized_x * width), 0, width - 1)",
+    "formula_y": "clamp(floor(normalized_y * height), 0, height - 1)",
+    "original_normalized": [0.2, 0.34],
+    "original_continuous_px": [256.0, 244.8],
+    "original_integer_center_px": [256, 244],
+    "original_pixel_center_px": [256.5, 244.5],
+    "original_patch_bounds_inclusive": {
+      "x": [252, 260],
+      "y": [240, 248]
+    },
+    "metric_patch_radius_px": 4,
+    "metric_patch_side_px": 9,
+    "metric_patch_pixel_count": 81,
+    "ownership_margin_px": 2,
+    "ownership_footprint_radius_px": 6,
+    "ownership_footprint_side_px": 13,
+    "ownership_footprint_pixel_count": 169,
+    "selected_coordinate_authority": "INTEGER_PIXEL_INDEX",
+    "selected_normalized_formula": [
+      "(selected_x + 0.5) / 1280",
+      "(selected_y + 0.5) / 720"
+    ],
+    "metric_must_consume_integer_center_directly": true
+  },
+  "diagnostic_renderer_invariants": [
+    "exact canonical A1 camera transform and projection",
+    "exact canonical frame schedule and waits",
+    "native RGB8 1280x720 output",
+    "Forward+ renderer",
+    "unchanged geometry positions, triangle stream, normals, transforms, culling and depth behavior",
+    "unchanged global lighting, background, tonemapping and shadow settings",
+    "unchanged collision and frozen ray fixtures"
+  ],
+  "diagnostic_launch_budget": {
+    "pre_repair_engine_launch_cap": 5,
+    "absolute_engine_launch_cap": 10,
+    "pre_repair_import_preflight_cap": 5,
+    "absolute_import_preflight_cap": 10,
+    "branch_a_or_original_valid_exact_launches": 5,
+    "branch_b_maximum_epochs": 2,
+    "offline_decode_launch_cost": 0,
+    "separate_from_calibration_candidate_cap": true
+  },
+  "diagnostic_cases": [
+    {
+      "case_id": "BASELINE",
+      "outer_albedo_scale": 1.0,
+      "outer_emission_multiplier": 0.0,
+      "core_wall_albedo_scale": 1.0,
+      "core_wall_emission_multiplier": 0.0,
+      "required_native_views": ["A1_SHADOW_ON", "A1_SHADOW_OFF"]
+    },
+    {
+      "case_id": "TARGET_MIDPOINT",
+      "outer_albedo_scale": 1.15,
+      "outer_emission_multiplier": 0.0,
+      "core_wall_albedo_scale": 1.0,
+      "core_wall_emission_multiplier": 0.0,
+      "required_native_views": ["A1_SHADOW_ON", "A1_SHADOW_OFF"]
+    },
+    {
+      "case_id": "TARGET_EXTREME",
+      "outer_albedo_scale": 1.3,
+      "outer_emission_multiplier": 0.0,
+      "core_wall_albedo_scale": 1.0,
+      "core_wall_emission_multiplier": 0.0,
+      "required_native_views": ["A1_SHADOW_ON", "A1_SHADOW_OFF"]
+    },
+    {
+      "case_id": "UNRELATED_EXTREME",
+      "outer_albedo_scale": 1.0,
+      "outer_emission_multiplier": 0.0,
+      "core_wall_albedo_scale": 1.47,
+      "core_wall_emission_multiplier": 0.0,
+      "required_native_views": ["A1_SHADOW_ON", "A1_SHADOW_OFF"]
+    },
+    {
+      "case_id": "OWNERSHIP_ID",
+      "outer_albedo_scale": 1.0,
+      "outer_emission_multiplier": 0.0,
+      "core_wall_albedo_scale": 1.0,
+      "core_wall_emission_multiplier": 0.0,
+      "required_native_views": ["A1_OWNER_LOW_REFERENCE", "A1_OWNER_HIGH_ONLY_PASSES"]
+    }
+  ],
+  "diagnostic_case_execution_contract": {
+    "epochs": ["PRE_REPAIR", "POST_BINDING_REPAIR"],
+    "strict_executed_complete_required": true,
+    "required_fields": [
+      "epoch",
+      "case_id",
+      "canonical_parameters",
+      "evaluated_builder_sha256",
+      "runtime_project_root",
+      "import_preflight_record_sha256",
+      "exact_engine_identity",
+      "argv",
+      "cwd",
+      "process_return_code",
+      "runtime_result",
+      "stdout_path_and_sha256",
+      "stderr_path_and_sha256",
+      "engine_log_path_and_sha256",
+      "image_paths_dimensions_modes_and_sha256"
+    ],
+    "zero_return_code_alone_is_execution_proof": false,
+    "parse_or_import_errors_allowed": false
+  },
+  "ownership_decode": {
+    "decoded_bounds_inclusive": {
+      "x": [218, 294],
+      "y": [206, 282]
+    },
+    "connectivity": "FOUR_CONNECTED",
+    "owner_enumeration": "all enabled MeshInstance3D nodes in sorted absolute NodePath order",
+    "pass_method": "one stable all-low unshaded reference plus one high-only pass per enumerated owner inside the OWNERSHIP_ID process; finite bit-plane classification is permitted inside the same process",
+    "material_override_constraints": "duplicate effective materials once, preserve cull/transparency/depth/render_priority, keep each override RID stable across passes, and change only diagnostic low/high color and unshaded state",
+    "decode_exact": "exactly one stable high-only owner pass differs from the all-low reference",
+    "decode_background": "zero high-only owner passes differ from the all-low reference",
+    "decode_mixed_or_unsafe": "more than one owner differs, decoding is unstable, or classification is ambiguous",
+    "target_source_geometry_id": "OUTER_CLOSURE_MASK",
+    "target_render_node": "/root/DistrictZeroP1A/World/MESH_OUTER_CLOSURE_Visual",
+    "target_face_class": "SIDE",
+    "required_pixel_fields": [
+      "x",
+      "y",
+      "decode_status",
+      "source_geometry_id",
+      "render_node",
+      "face_class",
+      "connected_side_component_id",
+      "side_plane_id_or_null",
+      "triangle_id_or_null"
+    ],
+    "triangle_rule": "record exact triangle where unambiguous; null is permitted only with an explicit reason and never changes exact owner/component/face classification",
+    "canonical_triangle_stream_hash_required_for_any_diagnostic_rebuild": true,
+    "original_81_pixel_table_required": true,
+    "nearest_boundary_record": {
+      "required": true,
+      "distance_metric": "minimum squared Euclidean integer-pixel distance from center to any pixel with a different or unsafe owner",
+      "also_record": "maximum all-owner Chebyshev radius"
+    }
+  },
+  "supplemental_rays": {
+    "do_not_modify_frozen_14_rays": true,
+    "pixel_center_points": [[256, 244], [252, 240], [260, 240], [252, 248], [260, 248]],
+    "legacy_continuous_point": [256.0, 244.8],
+    "required_fields": ["origin", "direction", "physics_hit", "render_node", "source_geometry_id", "triangle_id_or_null", "distance"]
+  },
+  "branch_decision": {
+    "additional_properties_allowed": false,
+    "incomplete_or_ambiguous": {
+      "branch": "NONE",
+      "terminal": "BLOCKED/NOT TESTABLE — HARNESS"
+    },
+    "original_footprint_unsafe": {
+      "branch": "BRANCH_A_SAMPLE_REPLACEMENT",
+      "condition": "any of the original 169 footprint pixels is background, mixed, unsafe, another source/render owner, another connected side component, or not SIDE"
+    },
+    "original_footprint_safe_and_target_response_valid": {
+      "branch": "ORIGINAL_VALID",
+      "condition": "all 169 pixels share the exact target owner/component/face key and sensitivity passes"
+    },
+    "original_footprint_safe_and_target_response_invalid": {
+      "branch": "BRANCH_B_RENDER_CONSUMER_BINDING",
+      "condition": "all 169 pixels share the exact target owner/component/face key but target sensitivity is flat, opposite, zero or otherwise misbound"
+    }
+  },
+  "branch_a_selector": {
+    "selector_inputs_allowed": ["decoded owner labels", "original integer center", "viewport bounds"],
+    "selector_inputs_forbidden": ["RGB", "luminance", "threshold values", "metric pass/fail", "candidate result", "material response magnitude"],
+    "search_radius_px": 32,
+    "search_condition_inclusive": "(x - 256)^2 + (y - 244)^2 <= 1024",
+    "intended_component_rule": "among exact OUTER_CLOSURE_MASK SIDE owner pixels in the search region, choose the four-connected visible component whose nearest pixel ranks first by (squared_distance,y,x); record and retain that component identity",
+    "eligibility": "all 169 center-plus-or-minus-6 pixels are exact OUTER_CLOSURE_MASK owners in the intended four-connected SIDE component",
+    "ordering": ["squared_distance", "y", "x"],
+    "selection": "first sorted eligible tuple",
+    "no_eligible_terminal": "DIRECTOR DECISION REQUIRED — NO ROBUST OUTER-CLOSURE SAMPLE",
+    "selection_transcript": {
+      "additional_properties_allowed": false,
+      "required_fields": ["original_center_px", "intended_component_derivation", "sorted_eligible", "selected", "luminance_inputs_used"],
+      "eligible_tuple_fields": ["x", "y", "squared_distance", "owner_component_id", "footprint_owner_count"],
+      "required_footprint_owner_count": 169,
+      "luminance_inputs_used": false,
+      "forbidden_fields": ["RGB", "Y", "threshold", "pass", "fail", "response"]
+    }
+  },
+  "branch_b_repair": {
+    "allowed": "smallest canonical render-consumer binding change required for OUTER_CLOSURE_MASK to govern its own exact visible pixels",
+    "forbidden": [
+      "geometry",
+      "screen-space overlay",
+      "new vertices",
+      "new faces",
+      "new world data",
+      "new material family",
+      "camera",
+      "lighting",
+      "threshold",
+      "unrelated material binding"
+    ],
+    "expected_source_bytes_must_be_derived_from_frozen_builder_and_binding_record": true,
+    "post_repair_full_diagnostic_epoch_required": true,
+    "target_influence_must_be_subset_of_target_owner_pixels": true,
+    "unrelated_geometry_rebound_count_max": 0
+  },
+  "sensitivity": {
+    "owner_and_margin_must_pass": true,
+    "shadow_on_required_relation": "medianY(BASELINE) < medianY(TARGET_MIDPOINT) < medianY(TARGET_EXTREME)",
+    "baseline_midpoint_delta_must_be_strictly_positive": true,
+    "midpoint_extreme_delta_must_be_strictly_positive": true,
+    "unrelated_control_rule": "all 81 corrected-patch RGB8 triplets are byte-identical between BASELINE and UNRELATED_EXTREME",
+    "shadow_off_medians_and_masks_required": true,
+    "shadow_off_adds_new_threshold": false,
+    "required_masks": ["BASELINE_TO_TARGET_MIDPOINT", "BASELINE_TO_TARGET_EXTREME", "BASELINE_TO_UNRELATED_EXTREME"],
+    "required_mask_fields": ["raw_mask_path", "sha256", "changed_pixel_count", "bounding_box_or_null", "corrected_patch_changed_count", "original_patch_changed_count"],
+    "failure_terminal": "BLOCKED/NOT TESTABLE — MEASUREMENT BINDING",
+    "failure_may_be_reclassified_as_no_interval": false
+  },
+  "selected_sample_record": {
+    "additional_properties_allowed": false,
+    "required_fields": [
+      "schema",
+      "run_id",
+      "branch",
+      "integer_center_px",
+      "pixel_center_normalized_rational",
+      "owner_key",
+      "ownership_diagnostic_sha256",
+      "selection_transcript_sha256_or_null",
+      "sensitivity_result_sha256",
+      "clean_source_inventory_sha256",
+      "historical_non_gating"
+    ],
+    "historical_non_gating_required_fields": ["integer_center_px", "normalized", "shadow_on_Y", "shadow_off_Y", "label", "gating"],
+    "historical_non_gating_label": "v1.2.7R1_old_sample_historical_non_gating",
+    "historical_non_gating_gating_value": false
+  },
+  "selected_acceptance_fixture": {
+    "required_path": "tests/fixtures/v1_2_8_visual_acceptance_selected.json",
+    "bound_base_fixture": "tests/fixtures/v1_2_6_visual_acceptance.json",
+    "bound_base_fixture_sha256": "2efcc9de2b70e3b2d2d06d021e60da5c4b78ad5610fd364707847b226638eee5",
+    "base_fixture_must_remain_byte_identical": true,
+    "branch_a_only_logical_field_change": "samples.A1_FAMILIARIZATION.left_outer_closure",
+    "original_valid_or_branch_b_coordinate_change_count": 0,
+    "check_count": 21,
+    "old_sample_may_be_added_as_acceptance_gate": false
+  },
+  "visual_acceptance_continuation": {
+    "check_count": 21,
+    "check_ids_unchanged": true,
+    "only_rebindable_check": "A1_FAMILIARIZATION:left_outer_closure",
+    "shadow_on_Y_min": 0.075,
+    "left_outer_closure_minus_adjacent_ground_absolute_Y_min": 0.12,
+    "right_core_wall_minus_adjacent_ground_absolute_Y_min": 0.12,
+    "all_other_v1_2_6_hard_thresholds_unchanged": true,
+    "ray_classification_count": 14,
+    "ray_mismatch_count_max": 0,
+    "historical_derived_outer_fields": ["measured_Y_feasible_interval", "balanced_target_Y"],
+    "historical_derived_outer_fields_are_hard_thresholds": false,
+    "exact_feasible_outer_predicate": "Y >= 0.075 and (Y <= adjacent_ground_Y - 0.12 or Y >= adjacent_ground_Y + 0.12)",
+    "corrected_search_rule": "derive reachable low/high branch from fresh baseline/midpoint/extreme and search the unchanged quantized domain against actual hard predicates; never reject a high-branch 21-of-21 pass because it is outside the obsolete historical low interval",
+    "preferred_interior_half_width_inherited": true,
+    "primary_minimum_presentation_delta_inherited": true,
+    "guard_probes_and_tie_breaks_inherited": true
+  },
+  "fresh_calibration_reset": {
+    "prerequisites": ["OWNERSHIP_PASS", "SENSITIVITY_PASS", "V1_2_8_SEMANTIC_PREFLIGHT_PASS"],
+    "source": "fresh copy of exact clean unmaterialized v1.2.7R1 source with only the selected authorized v1.2.8 binding",
+    "launches": 0,
+    "index": 0,
+    "records": [],
+    "cache": {},
+    "candidate_root_must_be_empty": true,
+    "historical_run_2_records_allowed": false,
+    "diagnostic_counter_carries_into_candidate_counter": false,
+    "calibration_candidate_engine_launch_cap": 82,
+    "v1_2_7_domains_quanta_material_families_and_guard_probes_unchanged": true
+  },
+  "candidate_binding_required": [
+    "v1_2_8_run_id",
+    "clean_source_inventory_sha256",
+    "selected_sample_record_sha256",
+    "ownership_diagnostic_sha256",
+    "sensitivity_result_sha256",
+    "exact engine identity",
+    "current gating metric recomputed from native PNG",
+    "historical non-gating metric recomputed from native PNG"
+  ],
+  "no_interval_admissibility": {
+    "required": [
+      "ownership PASS",
+      "sensitivity PASS",
+      "v1.2.8 semantic preflight PASS",
+      "exact registered stage transcript COMPLETE",
+      "every planned record strict executed-complete",
+      "every record bound to the selected v1.2.8 sample and run",
+      "no eligible candidate"
+    ],
+    "forbidden_substitutes": [
+      "flat or nonmonotonic sensitivity",
+      "missing diagnostic evidence",
+      "cap reached before plan completion",
+      "old v1.2.7R1 records",
+      "incomplete candidate transcript",
+      "invalid runtime result"
+    ],
+    "terminal": "NO_PRESENTATION_ONLY_INTERVAL"
+  },
+  "terminal_statuses": [
+    "NO_PRESENTATION_ONLY_INTERVAL",
+    "DIRECTOR DECISION REQUIRED — NO ROBUST OUTER-CLOSURE SAMPLE",
+    "BLOCKED/NOT TESTABLE — EXACT ENGINE",
+    "BLOCKED/NOT TESTABLE — SOURCE OR EVIDENCE IDENTITY",
+    "BLOCKED/NOT TESTABLE — HARNESS",
+    "BLOCKED/NOT TESTABLE — MEASUREMENT BINDING",
+    "BLOCKED/NOT TESTABLE — FINAL NATIVE VISUALS",
+    "BLOCKED/NOT TESTABLE — PRESERVATION",
+    "BLOCKED/NOT TESTABLE — C1",
+    "BLOCKED/NOT TESTABLE — LAUNCHER SMOKE",
+    "BLOCKED/NOT TESTABLE — PREPARED SESSION",
+    "AUTOMATION PASS — PREPARED A1 SESSION READY FOR DIRECTOR REVIEW"
+  ],
+  "human_attempts": 0,
+  "human_world_gate": "NOT PERFORMED",
+  "P1B": "FROZEN"
+}

@@ -1,0 +1,625 @@
+{
+  "check_count": 142,
+  "checks": [
+    {
+      "id": "provisional global rate authors eighty-Credit paint",
+      "status": "PASS"
+    },
+    {
+      "id": "provisional global rate authors one-sixty trail",
+      "status": "PASS"
+    },
+    {
+      "id": "paint target is eight-tenths reward minute",
+      "status": "PASS"
+    },
+    {
+      "id": "trail target is one-point-six reward minutes",
+      "status": "PASS"
+    },
+    {
+      "id": "price terms carry stable SHA-256 identity",
+      "status": "PASS"
+    },
+    {
+      "id": "whole shelf uses explicit upward ten-Credit quantization",
+      "status": "PASS"
+    },
+    {
+      "id": "zero catalog rate rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "nonfinite catalog rate rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "zero paint target rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "trail target must exceed paint target",
+      "status": "PASS"
+    },
+    {
+      "id": "grade cannot enter price authoring",
+      "status": "PASS"
+    },
+    {
+      "id": "player balance cannot enter price authoring",
+      "status": "PASS"
+    },
+    {
+      "id": "Gate-B catalog disables every paid purchase",
+      "status": "PASS"
+    },
+    {
+      "id": "post-Gate-B challenger explicitly enables paid stock",
+      "status": "PASS"
+    },
+    {
+      "id": "proof and expansion catalogs have distinct identities",
+      "status": "PASS"
+    },
+    {
+      "id": "catalog binds all three exact contract identities",
+      "status": "PASS"
+    },
+    {
+      "id": "free issue choice set is hash-bound",
+      "status": "PASS"
+    },
+    {
+      "id": "missing proof contract rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "extra contract cannot enter frozen proof catalog",
+      "status": "PASS"
+    },
+    {
+      "id": "catalog key and terms mismatch rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "duplicate contract identities rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "unregistered progression phase rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "forged price literal with stale identity rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "forged price-terms hash rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "phase bit flip with stale catalog hash rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "one-Credit shelf with stale catalog hash rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "forged choice-set hash rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "profile construction rejects forged phase catalog",
+      "status": "PASS"
+    },
+    {
+      "id": "profile construction rejects forged price catalog",
+      "status": "PASS"
+    },
+    {
+      "id": "stale-hash forged ContractTerms base rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "catalog build rejects forged ContractTerms base",
+      "status": "PASS"
+    },
+    {
+      "id": "profile construction rejects forged ContractTerms base",
+      "status": "PASS"
+    },
+    {
+      "id": "stale-hash forged ContractTerms reference rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "catalog build rejects forged ContractTerms reference",
+      "status": "PASS"
+    },
+    {
+      "id": "profile construction rejects forged ContractTerms reference",
+      "status": "PASS"
+    },
+    {
+      "id": "session-only loss is explicit in profile label",
+      "status": "PASS"
+    },
+    {
+      "id": "new proof session begins economically empty",
+      "status": "PASS"
+    },
+    {
+      "id": "District Standard is the sole initial paint",
+      "status": "PASS"
+    },
+    {
+      "id": "Trail Off is the sole initial trail",
+      "status": "PASS"
+    },
+    {
+      "id": "free defaults begin equipped",
+      "status": "PASS"
+    },
+    {
+      "id": "session snapshot uses exact progression whitelist",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes reputation",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes rep",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes xp",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes level",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes grade",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes condition",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes pace",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes route",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes distance",
+      "status": "PASS"
+    },
+    {
+      "id": "progression snapshot excludes upgrade",
+      "status": "PASS"
+    },
+    {
+      "id": "Gate-B purchase attempt is blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "blocked Gate-B purchase cannot mutate economic profile snapshot",
+      "status": "PASS"
+    },
+    {
+      "id": "blocked purchase identity cannot be reused with changed item",
+      "status": "PASS"
+    },
+    {
+      "id": "C01 abort awards zero session Credits",
+      "status": "PASS"
+    },
+    {
+      "id": "C01 abort creates no clear fact",
+      "status": "PASS"
+    },
+    {
+      "id": "C01 abort creates no paint issue",
+      "status": "PASS"
+    },
+    {
+      "id": "first C01 delivery commits its ordinary receipt",
+      "status": "PASS"
+    },
+    {
+      "id": "first C01 delivery records one exact clear",
+      "status": "PASS"
+    },
+    {
+      "id": "first C01 delivery creates one free issue",
+      "status": "PASS"
+    },
+    {
+      "id": "identical terminal replay is progression no-op",
+      "status": "PASS"
+    },
+    {
+      "id": "terminal replay cannot duplicate balance",
+      "status": "PASS"
+    },
+    {
+      "id": "altered terminal reuse raises ledger conflict",
+      "status": "PASS"
+    },
+    {
+      "id": "genuine C01 repeat receives full ordinary pay",
+      "status": "PASS"
+    },
+    {
+      "id": "repeat cannot duplicate clear or issue",
+      "status": "PASS"
+    },
+    {
+      "id": "canonical forged-base receipt cannot mint Credits or clear",
+      "status": "PASS"
+    },
+    {
+      "id": "forged-base rejection is progression atomic",
+      "status": "PASS"
+    },
+    {
+      "id": "canonical forged-reference receipt cannot mint Credits or clear",
+      "status": "PASS"
+    },
+    {
+      "id": "forged-reference rejection creates no issue",
+      "status": "PASS"
+    },
+    {
+      "id": "free issue cannot be claimed before C01 delivery",
+      "status": "PASS"
+    },
+    {
+      "id": "unknown entitlement rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "stale choice-set hash rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "unregistered issue choice rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "first valid issue grants and equips chosen paint",
+      "status": "PASS"
+    },
+    {
+      "id": "free issue never debits Credits",
+      "status": "PASS"
+    },
+    {
+      "id": "issued paint is owned and equipped atomically",
+      "status": "PASS"
+    },
+    {
+      "id": "same free-issue replay is idempotent",
+      "status": "PASS"
+    },
+    {
+      "id": "same entitlement cannot choose a second paint",
+      "status": "PASS"
+    },
+    {
+      "id": "re-equipping District Standard is free",
+      "status": "PASS"
+    },
+    {
+      "id": "unowned cosmetic cannot be equipped",
+      "status": "PASS"
+    },
+    {
+      "id": "Keep Standard defers rather than consumes free issue",
+      "status": "PASS"
+    },
+    {
+      "id": "new app session clears balance and clear ledger together",
+      "status": "PASS"
+    },
+    {
+      "id": "new app session restores default-only ownership",
+      "status": "PASS"
+    },
+    {
+      "id": "new app session clears issue claim state",
+      "status": "PASS"
+    },
+    {
+      "id": "ordinary profile remains intact until explicit new epoch",
+      "status": "PASS"
+    },
+    {
+      "id": "new session must use a distinct epoch",
+      "status": "PASS"
+    },
+    {
+      "id": "completion-floor cadence vector",
+      "status": "PASS"
+    },
+    {
+      "id": "typical-learner cadence vector",
+      "status": "PASS"
+    },
+    {
+      "id": "learned-clean cadence vector",
+      "status": "PASS"
+    },
+    {
+      "id": "clean-at-par cadence vector",
+      "status": "PASS"
+    },
+    {
+      "id": "post-Gate-B shelf starts locked without clear facts",
+      "status": "PASS"
+    },
+    {
+      "id": "one clear reveals no paid stock",
+      "status": "PASS"
+    },
+    {
+      "id": "two distinct clears reveal only unchosen proof paint",
+      "status": "PASS"
+    },
+    {
+      "id": "typical first two jobs afford remaining paint with room",
+      "status": "PASS"
+    },
+    {
+      "id": "three distinct clears reveal first trail",
+      "status": "PASS"
+    },
+    {
+      "id": "typical three-job chain buys paint and trail with seventy-five left",
+      "status": "PASS"
+    },
+    {
+      "id": "balance equals ordinary awards minus literal committed prices",
+      "status": "PASS"
+    },
+    {
+      "id": "purchases atomically add exact ownership",
+      "status": "PASS"
+    },
+    {
+      "id": "successful purchases may equip without extra charge",
+      "status": "PASS"
+    },
+    {
+      "id": "same purchase replay cannot debit twice",
+      "status": "PASS"
+    },
+    {
+      "id": "fresh owned-item request cannot debit again",
+      "status": "PASS"
+    },
+    {
+      "id": "already-owned request identity cannot later buy changed content",
+      "status": "PASS"
+    },
+    {
+      "id": "purchase identity reuse with changed item conflicts",
+      "status": "PASS"
+    },
+    {
+      "id": "stale catalog purchase conflicts",
+      "status": "PASS"
+    },
+    {
+      "id": "unknown item cannot debit profile",
+      "status": "PASS"
+    },
+    {
+      "id": "blocked unknown request identity cannot later buy changed content",
+      "status": "PASS"
+    },
+    {
+      "id": "purchase request cannot supply its own price",
+      "status": "PASS"
+    },
+    {
+      "id": "client-supplied price is structurally rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "clear permutation 1 yields identical final stock",
+      "status": "PASS"
+    },
+    {
+      "id": "clear permutation 2 yields identical final stock",
+      "status": "PASS"
+    },
+    {
+      "id": "clear permutation 3 yields identical final stock",
+      "status": "PASS"
+    },
+    {
+      "id": "clear permutation 4 yields identical final stock",
+      "status": "PASS"
+    },
+    {
+      "id": "clear permutation 5 yields identical final stock",
+      "status": "PASS"
+    },
+    {
+      "id": "clear permutation 6 yields identical final stock",
+      "status": "PASS"
+    },
+    {
+      "id": "future contract cannot substitute for frozen C02 predicate",
+      "status": "PASS"
+    },
+    {
+      "id": "future contract cannot substitute for frozen C03 predicate",
+      "status": "PASS"
+    },
+    {
+      "id": "quality extremes create identical distinct-clear facts",
+      "status": "PASS"
+    },
+    {
+      "id": "grade integrity and pace cannot alter stock availability",
+      "status": "PASS"
+    },
+    {
+      "id": "one hundred repeats cannot counterfeit breadth",
+      "status": "PASS"
+    },
+    {
+      "id": "one hundred shortest repeats reveal no later stock",
+      "status": "PASS"
+    },
+    {
+      "id": "repeats still receive full ordinary Credits",
+      "status": "PASS"
+    },
+    {
+      "id": "floor chain after paint has transparent one-hundred balance",
+      "status": "PASS"
+    },
+    {
+      "id": "floor chain cannot overspend on trail",
+      "status": "PASS"
+    },
+    {
+      "id": "insufficient purchase leaves every economic profile field unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "insufficient request ID remains terminal after later funding",
+      "status": "PASS"
+    },
+    {
+      "id": "one ordinary shortest repeat completes worst-chain shelf",
+      "status": "PASS"
+    },
+    {
+      "id": "learned-clean chain buys full paid shelf with one-oh-nine left",
+      "status": "PASS"
+    },
+    {
+      "id": "clean-at-par chain buys full paid shelf with one hundred left",
+      "status": "PASS"
+    },
+    {
+      "id": "exact paint boundary setup reaches eighty Credits",
+      "status": "PASS"
+    },
+    {
+      "id": "exact paint funds succeed to zero",
+      "status": "PASS"
+    },
+    {
+      "id": "one-below paint boundary setup reaches seventy-nine",
+      "status": "PASS"
+    },
+    {
+      "id": "one below paint price fails",
+      "status": "PASS"
+    },
+    {
+      "id": "one-below paint failure is atomic",
+      "status": "PASS"
+    },
+    {
+      "id": "exact trail boundary setup reaches one-sixty Credits",
+      "status": "PASS"
+    },
+    {
+      "id": "exact trail funds succeed to zero",
+      "status": "PASS"
+    },
+    {
+      "id": "one-below trail boundary setup reaches one-fifty-nine",
+      "status": "PASS"
+    },
+    {
+      "id": "one below trail price fails",
+      "status": "PASS"
+    },
+    {
+      "id": "one-below trail failure is atomic",
+      "status": "PASS"
+    },
+    {
+      "id": "full session reset clears award and purchase value together",
+      "status": "PASS"
+    },
+    {
+      "id": "full session reset clears breadth and issue state together",
+      "status": "PASS"
+    },
+    {
+      "id": "full session reset clears paid ownership together",
+      "status": "PASS"
+    },
+    {
+      "id": "full session reset restores free equipment together",
+      "status": "PASS"
+    }
+  ],
+  "decision": "SESSION_CLEAR_LEDGER_REWARD_BRIDGE_V1",
+  "evidence": {
+    "floor_balance_after_paid_paint_then_trail_and_one_typical_short_repeat": 1,
+    "gate_b": {
+      "credits": "SESSION_ONLY_LABELLED",
+      "first_clear_issue": "C01_FIRST_CLEAR_PROOF_PAINT_ISSUE",
+      "paid_purchase": "NOT AUTHORIZED",
+      "reputation": "NOT PRESENT"
+    },
+    "human_authority": "NOT CLAIMED",
+    "illustrative_awards": {
+      "clean_at_par": [
+        66,
+        113,
+        161
+      ],
+      "completion_floor": [
+        35,
+        60,
+        85
+      ],
+      "learned_clean": [
+        68,
+        116,
+        165
+      ],
+      "typical_learner": [
+        61,
+        105,
+        149
+      ]
+    },
+    "post_gate_b_challenger": {
+      "catalog": "CLEAR_SET_CATALOG_V1",
+      "paint_price": 80,
+      "paint_reveal": [
+        "C01",
+        "C02"
+      ],
+      "trail_price": 160,
+      "trail_reveal": [
+        "C01",
+        "C02",
+        "C03"
+      ]
+    },
+    "selected_decision": "SESSION_CLEAR_LEDGER_REWARD_BRIDGE_V1",
+    "typical_balance_after_paid_paint_and_trail": 75
+  },
+  "product_source_modified": false,
+  "schema": "district_zero.p1b.iteration_05_progression_report.v1",
+  "status": "PASS_WITH_POST_GATE_B_AND_NATIVE_FALSIFIERS_REMAINING"
+}

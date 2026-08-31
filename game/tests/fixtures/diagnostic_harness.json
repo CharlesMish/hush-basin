@@ -1,0 +1,439 @@
+{
+  "authority_version": "1.2.3",
+  "build_label": "DISTRICT ZERO · P1A WORLD GATE · v1.2.3",
+  "coverage_credit": "menu selection and spawn never grant ENTERED, TRAVERSED, or GATE_CROSSED",
+  "default_menu_selection": "T01_WEST_GATE",
+  "initial_craft_spawn": {
+    "classification_at_spawn": "JUNCTION_MRK",
+    "id": "SPAWN_NEUTRAL_MRK",
+    "initial_linear_velocity_xyz_mps": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "initial_mode": "SPREAD",
+    "transform": {
+      "position_xyz_m": [
+        0.0,
+        1.65,
+        20.0
+      ],
+      "source": {
+        "node": "MRK",
+        "toward_route": "L2"
+      },
+      "support_height_m": 0.0,
+      "vertical_offset_m": 1.65,
+      "yaw_rad": -1.989022
+    },
+    "uses": [
+      "INITIAL_CRAFT_SPAWN",
+      "VOLUNTARY_ROAM_SPAWN"
+    ]
+  },
+  "keyboard_bindings": {
+    "brake": "S",
+    "debug_overlay": "F1",
+    "diagnostic_menu": "TAB",
+    "diagnostic_next": "RIGHT_BRACKET",
+    "diagnostic_prev": "LEFT_BRACKET",
+    "diagnostic_spawn": "ENTER",
+    "hop": "SPACE",
+    "pause": "ESCAPE",
+    "reset": "R",
+    "steer_left": "A",
+    "steer_right": "D",
+    "throttle": "W",
+    "transform": "SHIFT"
+  },
+  "menu_is_visible_and_discoverable": true,
+  "neutral_spawn_selection_id": "T00_NEUTRAL_ROAM",
+  "reset_rule": "ENTER while the visible menu is open starts the currently selected item and emits RESET reason DIAGNOSTIC followed by DIAGNOSTIC_SPAWN. R never selects or starts another item; it emits RESET reason MANUAL and returns to the active segment spawn, or to SPAWN_NEUTRAL_MRK before any diagnostic segment. Fall reset emits RESET reason FALL to the same active segment spawn.",
+  "schema": "district_zero.p1a.diagnostic_harness.v1",
+  "selection_order": [
+    "T00_NEUTRAL_ROAM",
+    "T01_WEST_GATE",
+    "T02_WEST_SWEEP",
+    "T03_EAST_SWEEP",
+    "T04_QUARRY_SHELF",
+    "T05_MARKET_LOOP",
+    "T06_RELAY_LINK",
+    "T07_WORKS_LINK",
+    "T08_SOUTH_STRAIGHT",
+    "T09_SOUTH_BENT",
+    "T10_BOUNDARY_EDGE_A",
+    "T11_BOUNDARY_EDGE_B",
+    "T12_BOUNDARY_EDGE_C",
+    "T13_BOUNDARY_EDGE_D"
+  ],
+  "tours": [
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": {
+        "purpose": "fixed neutral voluntary-roam origin"
+      },
+      "display_label": "Free Roam",
+      "id": "T00_NEUTRAL_ROAM",
+      "initial_mode": "SPREAD",
+      "spawn_id": "SPAWN_NEUTRAL_MRK",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          1.65,
+          20.0
+        ],
+        "source": {
+          "node": "MRK",
+          "toward_route": "L2"
+        },
+        "support_height_m": 0.0,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.989022
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "A0",
+        "GW"
+      ],
+      "display_label": "West Threshold",
+      "id": "T01_WEST_GATE",
+      "initial_mode": "DRIVE",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -235.143777,
+          0.065506,
+          21.689638
+        ],
+        "source": {
+          "chainage_m": 10.0,
+          "direction": "FORWARD",
+          "route": "A0"
+        },
+        "support_height_m": -1.584494,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.740573
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "A1",
+        "RLY"
+      ],
+      "display_label": "Long West Sweep",
+      "id": "T02_WEST_SWEEP",
+      "initial_mode": "DRIVE",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -169.318885,
+          1.626743,
+          20.015472
+        ],
+        "source": {
+          "chainage_m": 15.0,
+          "direction": "FORWARD",
+          "route": "A1"
+        },
+        "support_height_m": -0.023257,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -0.045425
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "A2",
+        "GE"
+      ],
+      "display_label": "Long East Sweep",
+      "id": "T03_EAST_SWEEP",
+      "initial_mode": "DRIVE",
+      "spawn_transform": {
+        "position_xyz_m": [
+          14.367394,
+          3.194049,
+          -214.310218
+        ],
+        "source": {
+          "chainage_m": 15.0,
+          "direction": "FORWARD",
+          "route": "A2"
+        },
+        "support_height_m": 1.544049,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.27934
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "X0",
+        "QRY",
+        "RLY"
+      ],
+      "display_label": "Quarry Shelf",
+      "id": "T04_QUARRY_SHELF",
+      "initial_mode": "DRIVE",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -251.708204,
+          0.142219,
+          6.583592
+        ],
+        "source": {
+          "chainage_m": 15.0,
+          "direction": "FORWARD",
+          "route": "X0"
+        },
+        "support_height_m": -1.507781,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 0.463649
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "DEP",
+        "MRK",
+        "CLN"
+      ],
+      "display_label": "Market Loop",
+      "id": "T05_MARKET_LOOP",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -166.095656,
+          1.55,
+          38.123475
+        ],
+        "source": {
+          "chainage_m": 5.0,
+          "direction": "FORWARD",
+          "route": "L0"
+        },
+        "support_height_m": -0.1,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.245539
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "L4",
+        "L5",
+        "GN"
+      ],
+      "display_label": "Relay Link",
+      "id": "T06_RELAY_LINK",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          3.25,
+          -205.0
+        ],
+        "source": {
+          "chainage_m": 5.0,
+          "direction": "FORWARD",
+          "route": "L4"
+        },
+        "support_height_m": 1.6,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -3.141593
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "R0",
+        "L6",
+        "L7",
+        "WRK"
+      ],
+      "display_label": "Works Link",
+      "id": "T07_WORKS_LINK",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          5.0,
+          2.45,
+          -130.0
+        ],
+        "source": {
+          "chainage_m": 5.0,
+          "direction": "FORWARD",
+          "route": "R0"
+        },
+        "support_height_m": 0.8,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "S0",
+        "HOP",
+        "S1",
+        "HJW",
+        "HJE"
+      ],
+      "display_label": "South Straight Choice",
+      "id": "T08_SOUTH_STRAIGHT",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -93.76063,
+          1.724507,
+          122.671586
+        ],
+        "source": {
+          "chainage_m": 55.0,
+          "direction": "FORWARD",
+          "route": "S0"
+        },
+        "support_height_m": 0.074507,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.152176
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": [
+        "DOG",
+        "S1",
+        "HJW",
+        "HJE"
+      ],
+      "display_label": "South Bent Choice",
+      "id": "T09_SOUTH_BENT",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -43.143047,
+          1.7,
+          139.642383
+        ],
+        "source": {
+          "chainage_m": 5.0,
+          "direction": "FORWARD",
+          "route": "DOG"
+        },
+        "support_height_m": 0.05,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.761086
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": {
+        "boundary_probe_id": "CORE_PLINTH",
+        "target_xz_m": [
+          96.606477,
+          -78.056832
+        ]
+      },
+      "display_label": "Boundary Edge A",
+      "id": "T10_BOUNDARY_EDGE_A",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          93.0,
+          2.232,
+          -73.5
+        ],
+        "source": {
+          "human_boundary_probe": "CORE_PLINTH"
+        },
+        "support_height_m": 0.582,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -0.669502
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": {
+        "boundary_probe_id": "OUTER_CLOSURE",
+        "target_xz_m": [
+          56.75866,
+          -209.279076
+        ]
+      },
+      "display_label": "Boundary Edge B",
+      "id": "T11_BOUNDARY_EDGE_B",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          54.0,
+          3.046,
+          -214.5
+        ],
+        "source": {
+          "human_boundary_probe": "OUTER_CLOSURE"
+        },
+        "support_height_m": 1.396,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.655495
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": {
+        "boundary_probe_id": "CORE_WALL",
+        "target_xz_m": [
+          169.310149,
+          26.03389
+        ]
+      },
+      "display_label": "Boundary Edge C",
+      "id": "T12_BOUNDARY_EDGE_C",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          175.5,
+          1.561,
+          25.5
+        ],
+        "source": {
+          "human_boundary_probe": "CORE_WALL"
+        },
+        "support_height_m": -0.089,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 1.656836
+      }
+    },
+    {
+      "coverage_credit_on_spawn": "SPAWNED_ONLY; never ENTERED/TRAVERSED/GATE_CROSSED",
+      "covers_for_human_prompting_only": {
+        "boundary_probe_id": "OUTER_WALL",
+        "target_xz_m": [
+          -254.794501,
+          78.767008
+        ]
+      },
+      "display_label": "Boundary Edge D",
+      "id": "T13_BOUNDARY_EDGE_D",
+      "initial_mode": "SPREAD",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -253.5,
+          0.874,
+          66.0
+        ],
+        "source": {
+          "human_boundary_probe": "OUTER_WALL"
+        },
+        "support_height_m": -0.776,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 3.040544
+      }
+    }
+  ],
+  "voluntary_roam_spawn_id": "SPAWN_NEUTRAL_MRK"
+}

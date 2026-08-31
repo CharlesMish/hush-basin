@@ -1,0 +1,84 @@
+{
+  "class_cache_path": ".godot/global_script_class_cache.cfg",
+  "exact_engine_version": "4.7.1.stable.official.a13da4feb",
+  "execution_overlay_authority_version": "1.2.4J",
+  "forbidden_packaged_entries": [
+    ".godot/",
+    "__MACOSX/",
+    "._*",
+    ".DS_Store",
+    "editor state",
+    "unretained logs",
+    "nested archives"
+  ],
+  "ordered_pipeline": [
+    "STATIC_IDENTITY",
+    "ENGINE_IDENTITY",
+    "COPY_SELECTED_PROJECT",
+    "EXACT_ENGINE_HEADLESS_IMPORT",
+    "VALIDATE_IMPORT_RESULT_AND_CLASS_AVAILABILITY",
+    "EXACT_ENGINE_RUNTIME_RUNNER_CHECK_ONLY",
+    "VALIDATE_RUNTIME_RUNNER_PARSE_RESULT",
+    "A1_V5_CANDIDATE_SELECTION",
+    "A1_FROZEN_CONFIRMATION",
+    "A2_X0_PROSPECTIVE",
+    "SELECTED_C1_ZERO_DELTA",
+    "COMPLETE_40_VECTOR_SUITE",
+    "STOP_BEFORE_HUMAN_AND_P1B"
+  ],
+  "required_per_vector_evidence": [
+    "argv.json",
+    "stdout.txt",
+    "stderr.txt",
+    "engine.txt",
+    "runtime_result_line.txt",
+    "runtime_result.json",
+    "suite_classification.json",
+    "events.jsonl",
+    "post_result_events.jsonl",
+    "result.json",
+    "SHA256SUMS.txt"
+  ],
+  "required_registered_classes": {
+    "CraftController": "res://scripts/craft_controller.gd",
+    "CraftTuning": "res://scripts/craft_tuning.gd",
+    "MotionMath": "res://scripts/motion_math.gd",
+    "P1AMap": "res://scripts/p1a_map.gd",
+    "P1ATelemetry": "res://scripts/p1a_telemetry.gd",
+    "P1AWorldBuilder": "res://scripts/p1a_world_builder.gd",
+    "P1AWorldData": "res://scripts/p1a_world_data.gd",
+    "P1AWorldGate": "res://scripts/p1a_world_gate.gd",
+    "StableCameraRig": "res://scripts/camera_rig.gd",
+    "SurfaceFeedback3D": "res://scripts/surface_feedback_3d.gd"
+  },
+  "runtime_runner_parse_command_contract": {
+    "argv_tokens_in_order": [
+      "<exact-godot>",
+      "--headless",
+      "--path",
+      "<disposable-selected-project-root>",
+      "--check-only",
+      "--script",
+      "res://tests/p1a_runtime_runner.gd",
+      "--log-file",
+      "<runner-parse-engine-log>"
+    ],
+    "parse_error_count_required": 0,
+    "process_returncode_zero_required": true,
+    "project_root_must_equal_import_and_runtime_root": true,
+    "target_hash_must_equal_packet_authority": true
+  },
+  "runtime_runner_raw_sha256": "db0b357b688c1e00cf1dabe956220b7aaf2ea8c150d62334bcc124f10136b6ea",
+  "runtime_runner_resource_path": "res://tests/p1a_runtime_runner.gd",
+  "schema": "district_zero.p1a.v1_2_4j.disposable_import_and_runner_parse_preflight_contract.v1",
+  "terminal_evidence_stages": [
+    "STATIC_VERIFIER",
+    "ENGINE_IDENTITY",
+    "COPY_SELECTED_PROJECT",
+    "DISPOSABLE_IMPORT_AND_RUNNER_PARSE",
+    "FAST_ROUTE_GATE",
+    "C1_SELECTED",
+    "COMPLETE_40_VECTOR_SUITE"
+  ],
+  "world_data_authority_version": "1.2.3"
+}

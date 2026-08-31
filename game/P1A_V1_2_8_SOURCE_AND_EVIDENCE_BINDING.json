@@ -1,0 +1,42 @@
+{
+  "schema": "district_zero.p1a.v1_2_8.source_and_evidence_binding.v1",
+  "authority_version": "v1.2.8",
+  "exact_engine": "4.7.1.stable.official.a13da4feb",
+  "source": {
+    "role": "clean_unmaterialized_v1_2_7r1_source",
+    "packet_inventory_record_count": 2198,
+    "packet_inventory_sha256": "e6a13365f3019b21457d754d6d128ef85d70a39c718579703574de066141bf44",
+    "v1_2_7_input_inventory_record_count": 2187,
+    "v1_2_7_input_inventory_sha256": "b943b4c6c6b3a0a5166a3c8431582628e71b1b2421619220dd8b9b94bbd5d8fe",
+    "unmaterialized_world_builder_sha256": "c016d5e2654919d6de5e1416ab21a40da81149ec11100dae8d95a89922b9dc38",
+    "local_path_hint": "/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.7R1-Repair-Run-1/District-Zero-P1A-v1.2.7R1-Source"
+  },
+  "historical_run_2_evidence": {
+    "role": "closed_v1_2_7r1_no_interval_evidence",
+    "zip_name": "District-Zero-P1A-v1.2.7R1-Calibration-Validation-Evidence.zip",
+    "zip_byte_size": 7729110,
+    "zip_sha256": "2d92dc591ed8b4288e357f85978b93e793523e8e097ace28456de9df6129877f",
+    "inventory_record_count": 640,
+    "terminal_result_sha256": "052ca83b04caf4ebcfd28ec3d38ba79a3bc398e5874eea2dff1a5069036c41f0",
+    "package_report_sha256": "57ee3ad5cbe7d913d0079e3155c6c23bc5f1e09e77cc97cf00db587688e428a4",
+    "execution_report_sha256": "85ddf8f2121832f24b0e2c5c8112fedca0e8e8e3f11e7c090e75801766993e9f",
+    "terminal_status": "NO_PRESENTATION_ONLY_INTERVAL",
+    "terminal_stage": "OUTER_STUDY",
+    "candidate_render_launches": 21,
+    "human_attempts": 0,
+    "human_world_gate": "NOT PERFORMED",
+    "P1B": "FROZEN",
+    "local_zip_path_hint": "/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.7R1-Repair-Run-2/District-Zero-P1A-v1.2.7R1-Calibration-Validation-Evidence.zip"
+  },
+  "inherited_authority_hashes": {
+    "P1A_V1_2_7R1_HARNESS_REPAIR_AUTHORITY.md": "7888d43f7307322fc82ac3fd139ead563aeb570b9f0fc478b0b502f5768897e6",
+    "P1A_V1_2_7_BOUNDED_PRESENTATION_CALIBRATION_AUTHORITY.md": "0c19445590c3ded950e57bdc6d1918faa2f35c3fde8effebac83fa0011fc81bc",
+    "tests/fixtures/v1_2_7r1_harness_repair_contract.json": "355546c40ad1e3997942e5dbae05bc1139e6e7e2f422914bd17ca1570496b024",
+    "tests/fixtures/v1_2_7_calibration_registry.json": "42805132c538805c0c7113e4274987f018e3e4cac0a5c3b290d21ce2d3094e3a",
+    "tests/fixtures/v1_2_7_final_evidence_contract.json": "01beb2a7f3f134483e7832f89753d45891251d217e448c018902341040463cbd",
+    "tests/fixtures/v1_2_6_visual_acceptance.json": "2efcc9de2b70e3b2d2d06d021e60da5c4b78ad5610fd364707847b226638eee5",
+    "tests/fixtures/v1_2_6_ray_classification_baseline.json": "a79bc27edac622a6a9af00bc6820e39d926e550d973cd165852089b4a27f24ff"
+  },
+  "identity_rule": "Verify raw bytes and inventories before execution; do not reserialize JSON to establish identity.",
+  "outer_transport_rule": "Any later archive wrapper is transport-only; the identities in this record and internal inventories are authoritative."
+}

@@ -1,0 +1,38 @@
+{
+  "attempts_consumed": 0,
+  "authority_version": "v1.2.6",
+  "entrypoint": "exact generated START_A1_CAPTURE.command invoked with --smoke on a disposable copy of the new prepared session",
+  "fail_action": "STOP; preserve evidence; no retry; no human-ready session; BLOCKED/NOT TESTABLE — MACOS GODOT RUNTIME",
+  "minimum_wall_duration_s": 75.0,
+  "no_assistance": "no route follower, steering law, metric coaching, or capture attempt; Codex operator supplies ordinary inputs only",
+  "pass": [
+    "duration >=75.0 s",
+    "clean exit",
+    "no crash report",
+    "no script/import/parse error",
+    "no unauthorized session mutation",
+    "A1 capture/replay remain NOT PERFORMED"
+  ],
+  "prior_crash_window_s": 57.5035,
+  "required_actions": [
+    "reach visible A1 FAMILIARIZATION overlay",
+    "at least 10 cumulative seconds nonzero normal movement input",
+    "at least 2 cumulative seconds steer_left and 2 cumulative seconds steer_right",
+    "pause and resume once",
+    "native application focus-out then focus-in once",
+    "clean F10 familiarization exit after 75 seconds"
+  ],
+  "required_evidence": [
+    "exact launcher argv/cwd and generated child argv",
+    "engine identity",
+    "PID and timestamps",
+    "stdout/stderr/engine log",
+    "focus and pause action timestamps",
+    "familiarization_result.json",
+    "session_state before/after",
+    "proof no routes/*/captures or attempt_result exists",
+    "checksums and standalone smoke evidence ZIP"
+  ],
+  "route": "A1",
+  "schema": "district_zero.p1a.v1_2_6.native_launcher_smoke.v1"
+}

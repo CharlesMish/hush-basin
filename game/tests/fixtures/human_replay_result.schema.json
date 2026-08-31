@@ -1,0 +1,146 @@
+{
+  "$id": "district_zero.p1a.human_replay_result.schema.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authority_version": {
+      "const": "v1.2.5"
+    },
+    "determinism": {
+      "additionalProperties": false,
+      "properties": {
+        "all_limits_pass": {
+          "type": "boolean"
+        },
+        "canonical_state_trace_sha256_match": {
+          "type": "boolean"
+        },
+        "event_sequence_match": {
+          "type": "boolean"
+        },
+        "input_trace_sha256_match": {
+          "type": "boolean"
+        },
+        "maximum_raw_deltas": {
+          "additionalProperties": false,
+          "properties": {
+            "chainage_m": {
+              "minimum": 0,
+              "type": "number"
+            },
+            "fast_distance_m": {
+              "minimum": 0,
+              "type": "number"
+            },
+            "fold": {
+              "minimum": 0,
+              "type": "number"
+            },
+            "lateral_m": {
+              "minimum": 0,
+              "type": "number"
+            },
+            "position_m": {
+              "minimum": 0,
+              "type": "number"
+            },
+            "velocity_mps": {
+              "minimum": 0,
+              "type": "number"
+            },
+            "yaw_rad": {
+              "minimum": 0,
+              "type": "number"
+            }
+          },
+          "required": [
+            "position_m",
+            "velocity_mps",
+            "yaw_rad",
+            "fold",
+            "chainage_m",
+            "lateral_m",
+            "fast_distance_m"
+          ],
+          "type": "object"
+        },
+        "termination_tick_match": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "input_trace_sha256_match",
+        "canonical_state_trace_sha256_match",
+        "termination_tick_match",
+        "event_sequence_match",
+        "maximum_raw_deltas",
+        "all_limits_pass"
+      ],
+      "type": "object"
+    },
+    "evidence_hashes": {
+      "additionalProperties": false,
+      "properties": {
+        "input_trace_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "state_trace_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "telemetry_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input_trace_sha256",
+        "telemetry_sha256",
+        "state_trace_sha256"
+      ],
+      "type": "object"
+    },
+    "replay_index": {
+      "maximum": 3,
+      "minimum": 1,
+      "type": "integer"
+    },
+    "route_id": {
+      "enum": [
+        "A1",
+        "A2",
+        "X0"
+      ]
+    },
+    "route_metrics_pass": {
+      "type": "boolean"
+    },
+    "schema": {
+      "const": "district_zero.p1a.human_replay_result.v1"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED/NOT TESTABLE"
+      ]
+    },
+    "trace_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "authority_version",
+    "trace_id",
+    "route_id",
+    "replay_index",
+    "status",
+    "route_metrics_pass",
+    "determinism",
+    "evidence_hashes"
+  ],
+  "type": "object"
+}

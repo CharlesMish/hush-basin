@@ -1,0 +1,901 @@
+{
+  "P1B_pass": false,
+  "P1B_product_implementation": "NOT STARTED",
+  "R7_source_modified": false,
+  "aggregate_pure_checks": 844,
+  "authority": "PURE DESIGN-LAB CONVERGENCE \u2014 NOT GODOT, BALANCE, OR HUMAN EVIDENCE",
+  "checks": {
+    "failed": 0,
+    "passed": 110,
+    "records": [
+      {
+        "id": "final decision identity is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "final status does not claim implementation",
+        "status": "PASS"
+      },
+      {
+        "id": "authority names missing evidence classes",
+        "status": "PASS"
+      },
+      {
+        "id": "all eight inherited suite counts sum to 734",
+        "status": "PASS"
+      },
+      {
+        "id": "exactly eight pre-convergence suite counts are bound",
+        "status": "PASS"
+      },
+      {
+        "id": "session warning is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B no-shop label is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "proof catalog is exactly C01 C02 C03",
+        "status": "PASS"
+      },
+      {
+        "id": "proof titles are stable",
+        "status": "PASS"
+      },
+      {
+        "id": "proof chain is spatially continuous",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts share one mechanical family",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts share one cargo profile",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts are K0 NONE",
+        "status": "PASS"
+      },
+      {
+        "id": "every route option is advisory only",
+        "status": "PASS"
+      },
+      {
+        "id": "C01 route length is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "C02 suggested route length is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "C03 inner route length is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "C03 legal outer route length is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option cardinality is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "fourteen final invariants are unique",
+        "status": "PASS"
+      },
+      {
+        "id": "hard invariant retained: R7_MOVEMENT_WORLD_CAMERA_VEHICLE_BYTES_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "id": "hard invariant retained: CLEAN_DRIFT_HOP_LANDING_ROUGH_TRAVEL_ZERO_CARGO_LOSS",
+        "status": "PASS"
+      },
+      {
+        "id": "hard invariant retained: ROUTE_DISTANCE_FLOW_GRADE_COSMETICS_REPEATS_NEVER_PAY",
+        "status": "PASS"
+      },
+      {
+        "id": "hard invariant retained: NO_SHOP_TRAIL_SAVE_REPUTATION_OR_MECHANICAL_UPGRADE",
+        "status": "PASS"
+      },
+      {
+        "id": "cargo dead-zone seed is retained",
+        "status": "PASS"
+      },
+      {
+        "id": "cargo episode-loss seed is retained",
+        "status": "PASS"
+      },
+      {
+        "id": "cargo exponent seed is retained",
+        "status": "PASS"
+      },
+      {
+        "id": "cargo quiet-window seed is retained",
+        "status": "PASS"
+      },
+      {
+        "id": "pickup speed seed is retained",
+        "status": "PASS"
+      },
+      {
+        "id": "delivery speed seed is retained",
+        "status": "PASS"
+      },
+      {
+        "id": "settle-time seed is retained",
+        "status": "PASS"
+      },
+      {
+        "id": "pace anchors are exact",
+        "status": "PASS"
+      },
+      {
+        "id": "illustrative term order follows proof chain",
+        "status": "PASS"
+      },
+      {
+        "id": "illustrative valuation durations are exact",
+        "status": "PASS"
+      },
+      {
+        "id": "illustrative references are 1.10x",
+        "status": "PASS"
+      },
+      {
+        "id": "illustrative K0 bases are exact",
+        "status": "PASS"
+      },
+      {
+        "id": "illustrative terms cannot smuggle complexity",
+        "status": "PASS"
+      },
+      {
+        "id": "completion-floor chain pays 180 illustrative Credits",
+        "status": "PASS"
+      },
+      {
+        "id": "typical learner chain pays 315 illustrative Credits",
+        "status": "PASS"
+      },
+      {
+        "id": "learned-clean chain pays 349 illustrative Credits",
+        "status": "PASS"
+      },
+      {
+        "id": "clean-reference chain pays 340 illustrative Credits",
+        "status": "PASS"
+      },
+      {
+        "id": "synthetic wall-pressure chain pays 330 illustrative Credits",
+        "status": "PASS"
+      },
+      {
+        "id": "cadence stress uses five preregistered overheads",
+        "status": "PASS"
+      },
+      {
+        "id": "cadence sensitivity reproduces exact spreads",
+        "status": "PASS"
+      },
+      {
+        "id": "four-second overhead fails preferred rate spread",
+        "status": "PASS"
+      },
+      {
+        "id": "matched twelve-second overhead meets preferred rate spread",
+        "status": "PASS"
+      },
+      {
+        "id": "synthetic wall pressure exposes at least one rate dominance",
+        "status": "PASS"
+      },
+      {
+        "id": "wall-pressure risk remains open",
+        "status": "PASS"
+      },
+      {
+        "id": "economy requires measured cadence before freezing",
+        "status": "PASS"
+      },
+      {
+        "id": "minus-ten-percent base perturbation changes typical chain 315 to 284",
+        "status": "PASS"
+      },
+      {
+        "id": "minus-ten-percent base perturbation changes floor chain 180 to 163",
+        "status": "PASS"
+      },
+      {
+        "id": "conditional shelf margin changes from plus one to minus twenty-two",
+        "status": "PASS"
+      },
+      {
+        "id": "full 0.001 legacy-float grid reproduces fifty-five grade mismatches",
+        "status": "PASS"
+      },
+      {
+        "id": "three exact float-boundary regression examples are preserved",
+        "status": "PASS"
+      },
+      {
+        "id": "exact S ratio boundary is inclusive when quality clears",
+        "status": "PASS"
+      },
+      {
+        "id": "S ratio gate rejects one tenth beyond boundary",
+        "status": "PASS"
+      },
+      {
+        "id": "A integrity floor may pass at strong pace",
+        "status": "PASS"
+      },
+      {
+        "id": "A integrity floor rejects one unit below",
+        "status": "PASS"
+      },
+      {
+        "id": "condition-floor gate can hold quality below B",
+        "status": "PASS"
+      },
+      {
+        "id": "one unit below B integrity stays C",
+        "status": "PASS"
+      },
+      {
+        "id": "zero-integrity fast completion remains D",
+        "status": "PASS"
+      },
+      {
+        "id": "exact Q45 binary-float seam resolves C",
+        "status": "PASS"
+      },
+      {
+        "id": "exact Q65 binary-float seam resolves B",
+        "status": "PASS"
+      },
+      {
+        "id": "exact Q82 binary-float seam resolves A",
+        "status": "PASS"
+      },
+      {
+        "id": "grade projection preserves non-delivery terminal",
+        "status": "PASS"
+      },
+      {
+        "id": "grade projection rejects a noncanonical receipt",
+        "status": "PASS"
+      },
+      {
+        "id": "final visible Results example is canonically reconciled",
+        "status": "PASS"
+      },
+      {
+        "id": "strongest desk paint 3-set is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "strongest desk trail 3-set is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "paint reserves are exact",
+        "status": "PASS"
+      },
+      {
+        "id": "trail reserves are exact",
+        "status": "PASS"
+      },
+      {
+        "id": "paint finalists and reserves are unique",
+        "status": "PASS"
+      },
+      {
+        "id": "trail finalists and reserves are unique",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B cosmetic scope excludes a trail",
+        "status": "PASS"
+      },
+      {
+        "id": "iteration refines one existing lead paint",
+        "status": "PASS"
+      },
+      {
+        "id": "Orchid trim ceiling is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "Orchid cannot exceed global cosmetic ceiling",
+        "status": "PASS"
+      },
+      {
+        "id": "Orchid refinement does not claim native selection",
+        "status": "PASS"
+      },
+      {
+        "id": "malformed paint color fails closed",
+        "status": "PASS"
+      },
+      {
+        "id": "paint above global ceiling fails closed",
+        "status": "PASS"
+      },
+      {
+        "id": "iteration refines one existing lead trail",
+        "status": "PASS"
+      },
+      {
+        "id": "Twin Vector anchors are mirrored",
+        "status": "PASS"
+      },
+      {
+        "id": "Twin Vector history geometry cap is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "Twin Vector history bounds are exact",
+        "status": "PASS"
+      },
+      {
+        "id": "Twin Vector reduced-motion bounds are exact",
+        "status": "PASS"
+      },
+      {
+        "id": "trail refinement stays outside Gate B",
+        "status": "PASS"
+      },
+      {
+        "id": "oversize trail geometry fails closed",
+        "status": "PASS"
+      },
+      {
+        "id": "forward-side trail anchor fails closed",
+        "status": "PASS"
+      },
+      {
+        "id": "nonfinite trail profile fails closed",
+        "status": "PASS"
+      },
+      {
+        "id": "current gate stops without implementation authority",
+        "status": "PASS"
+      },
+      {
+        "id": "authority cannot waive exact engine",
+        "status": "PASS"
+      },
+      {
+        "id": "engine alone cannot waive R7 proof",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 proof cannot waive input seam",
+        "status": "PASS"
+      },
+      {
+        "id": "input proof cannot waive cargo observer",
+        "status": "PASS"
+      },
+      {
+        "id": "C01 technical evidence stops before owner Gate A",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate A cannot unlock breadth without recovery anchor",
+        "status": "PASS"
+      },
+      {
+        "id": "recovery proof cannot invent paint qualification",
+        "status": "PASS"
+      },
+      {
+        "id": "reward qualification stops before owner Gate B",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate B returns without self-authorizing expansion",
+        "status": "PASS"
+      },
+      {
+        "id": "shop trail and save are deferred",
+        "status": "PASS"
+      },
+      {
+        "id": "results relocation remains separately authorized",
+        "status": "PASS"
+      },
+      {
+        "id": "mechanical upgrades are rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "fourth proof contract is rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "deferred list is unique",
+        "status": "PASS"
+      },
+      {
+        "id": "rejected list is unique",
+        "status": "PASS"
+      },
+      {
+        "id": "report preserves current authority stop",
+        "status": "PASS"
+      },
+      {
+        "id": "report records no product or R7 modification",
+        "status": "PASS"
+      },
+      {
+        "id": "report does not claim Godot execution",
+        "status": "PASS"
+      },
+      {
+        "id": "report does not claim Human World Gate",
+        "status": "PASS"
+      },
+      {
+        "id": "report does not claim P1B implementation or pass",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS WITH EXPLICIT NATIVE, ECONOMY, COSMETIC, AND OWNER GATES REMAINING",
+    "total": 110
+  },
+  "cosmetics": {
+    "desk_paint_reserves": [
+      "VESPER_CERAMIC",
+      "MOSS_CIRCUIT"
+    ],
+    "desk_paints": [
+      "ORCHID_STATIC",
+      "SALTGLASS",
+      "EMBER_RELAY"
+    ],
+    "desk_trail_reserves": [
+      "ONE_WAKE",
+      "TIDE_SCRIPT"
+    ],
+    "desk_trails": [
+      "TWIN_VECTOR",
+      "COURIER_PULSE",
+      "COMET_LEDGER"
+    ],
+    "gate_b_scope": [
+      "DISTRICT_STANDARD",
+      "TWO_NATIVE_APPROVED_PROOF_PAINTS",
+      "TRAIL_OFF"
+    ],
+    "native_selection": "NOT PERFORMED",
+    "owner_selection": "NOT PERFORMED",
+    "paint_refinement": "ORCHID_STATIC",
+    "trail_refinement": "TWIN_VECTOR"
+  },
+  "decision": "THREE_JOB_MOMENTUM_COURIER_VERTICAL_SLICE_V1",
+  "deferred": [
+    "PAID_SHOP",
+    "ANY_TRAIL_STOCK",
+    "DURABLE_SAVE",
+    "REPUTATION_XP_LEVELS",
+    "POST_GATE_B_QRY_SOUTH_OR_WORKS_CHALLENGER",
+    "RESULTS_RESTART_RELOCATION",
+    "SEALED_ROUTE_OR_DIRECTION_ADAPTER",
+    "FRAGILE_EXPRESS_MULTISTOP_OR_STACKED_MODIFIERS",
+    "PHYSICAL_CARGO"
+  ],
+  "economy": {
+    "acceptance_target": "respectable complete-cycle rate spread <=5%; stop above 15%",
+    "authority": "ILLUSTRATIVE V=30/60/90s, R=100, H=12s \u2014 NOT CATALOG AUTHORITY",
+    "cadence_sensitivity": [
+      {
+        "actual_overhead_s": 4,
+        "learned_clean_rate_spread_percent": "13.939",
+        "learned_clean_rates": {
+          "C01": "120.000",
+          "C02": "108.750",
+          "C03": "105.319"
+        },
+        "wall_pressure_dominates": [
+          "C02",
+          "C03"
+        ],
+        "wall_pressure_rates": {
+          "C01": "119.813",
+          "C02": "109.817",
+          "C03": "106.183"
+        }
+      },
+      {
+        "actual_overhead_s": 8,
+        "learned_clean_rate_spread_percent": "6.284",
+        "learned_clean_rates": {
+          "C01": "107.368",
+          "C02": "102.353",
+          "C03": "101.020"
+        },
+        "wall_pressure_dominates": [
+          "C02",
+          "C03"
+        ],
+        "wall_pressure_rates": {
+          "C01": "106.519",
+          "C02": "102.964",
+          "C03": "101.574"
+        }
+      },
+      {
+        "actual_overhead_s": 12,
+        "learned_clean_rate_spread_percent": "0.493",
+        "learned_clean_rates": {
+          "C01": "97.143",
+          "C02": "96.667",
+          "C03": "97.059"
+        },
+        "wall_pressure_dominates": [
+          "C02",
+          "C03"
+        ],
+        "wall_pressure_rates": {
+          "C01": "95.880",
+          "C02": "96.916",
+          "C03": "97.348"
+        }
+      },
+      {
+        "actual_overhead_s": 16,
+        "learned_clean_rate_spread_percent": "5.300",
+        "learned_clean_rates": {
+          "C01": "88.696",
+          "C02": "91.579",
+          "C03": "93.396"
+        },
+        "wall_pressure_dominates": [
+          "C03"
+        ],
+        "wall_pressure_rates": {
+          "C01": "87.174",
+          "C02": "91.540",
+          "C03": "93.460"
+        }
+      },
+      {
+        "actual_overhead_s": 20,
+        "learned_clean_rate_spread_percent": "10.294",
+        "learned_clean_rates": {
+          "C01": "81.600",
+          "C02": "87.000",
+          "C03": "90.000"
+        },
+        "wall_pressure_dominates": [],
+        "wall_pressure_rates": {
+          "C01": "79.917",
+          "C02": "86.728",
+          "C03": "89.870"
+        }
+      }
+    ],
+    "conditional_price_sensitivity": {
+      "authority": "OFFLINE -10% GLOBAL-RATE PERTURBATION \u2014 80/160 SHELF REMAINS UNAUTHORIZED",
+      "floor_chain_original": 180,
+      "floor_chain_reduced": 163,
+      "floor_plus_typical_c01_after_240_original": 1,
+      "floor_plus_typical_c01_after_240_reduced": -22,
+      "original_bases": {
+        "C01": 70,
+        "C02": 120,
+        "C03": 170
+      },
+      "reduced_bases": {
+        "C01": 63,
+        "C02": 108,
+        "C03": 153
+      },
+      "typical_chain_original": 315,
+      "typical_chain_reduced": 284
+    },
+    "required_action": "measure overhead and hostile strategies; version R/H/B, never hide risk with prices or repeat decay",
+    "scenarios": {
+      "CLEAN_REFERENCE": {
+        "chain_total": 340,
+        "credits": {
+          "C01": 66,
+          "C02": 113,
+          "C03": 161
+        },
+        "elapsed_ms": {
+          "C01": 33000,
+          "C02": 66000,
+          "C03": 99000
+        },
+        "grade": {
+          "C01": "A",
+          "C02": "A",
+          "C03": "A"
+        }
+      },
+      "COMPLETION_FLOOR": {
+        "chain_total": 180,
+        "credits": {
+          "C01": 35,
+          "C02": 60,
+          "C03": 85
+        },
+        "elapsed_ms": {
+          "C01": 99000,
+          "C02": 198000,
+          "C03": 297000
+        },
+        "grade": {
+          "C01": "D",
+          "C02": "D",
+          "C03": "D"
+        }
+      },
+      "LEARNED_CLEAN": {
+        "chain_total": 349,
+        "credits": {
+          "C01": 68,
+          "C02": 116,
+          "C03": 165
+        },
+        "elapsed_ms": {
+          "C01": 30000,
+          "C02": 60000,
+          "C03": 90000
+        },
+        "grade": {
+          "C01": "A",
+          "C02": "A",
+          "C03": "A"
+        }
+      },
+      "TYPICAL_LEARNER": {
+        "chain_total": 315,
+        "credits": {
+          "C01": 61,
+          "C02": 105,
+          "C03": 149
+        },
+        "elapsed_ms": {
+          "C01": 41250,
+          "C02": 82500,
+          "C03": 123750
+        },
+        "grade": {
+          "C01": "B",
+          "C02": "B",
+          "C03": "B"
+        }
+      },
+      "WALL_PRESSURE_SYNTHETIC": {
+        "chain_total": 330,
+        "credits": {
+          "C01": 64,
+          "C02": 110,
+          "C03": 156
+        },
+        "elapsed_ms": {
+          "C01": 28050,
+          "C02": 56100,
+          "C03": 84150
+        },
+        "grade": {
+          "C01": "B",
+          "C02": "B",
+          "C03": "B"
+        }
+      }
+    },
+    "terms": {
+      "C01": {
+        "base_credits": 70,
+        "complexity_class": 0,
+        "reference_ms": 33000,
+        "valuation_ms": 30000
+      },
+      "C02": {
+        "base_credits": 120,
+        "complexity_class": 0,
+        "reference_ms": 66000,
+        "valuation_ms": 60000
+      },
+      "C03": {
+        "base_credits": 170,
+        "complexity_class": 0,
+        "reference_ms": 99000,
+        "valuation_ms": 90000
+      }
+    },
+    "wall_pressure_status": "OPEN NATIVE FALSIFIER \u2014 SYNTHETIC RATE CAN DOMINATE"
+  },
+  "godot_runtime": "NOT PERFORMED IN ITERATION 08",
+  "hard_invariants": [
+    "R7_MOVEMENT_WORLD_CAMERA_VEHICLE_BYTES_UNCHANGED",
+    "NEW_P1B_SIBLING_OR_WRAPPER_ONLY",
+    "THREE_OPEN_ENDPOINT_K0_CONTRACTS",
+    "ONE_SHARED_FORGIVING_CARGO_PROFILE",
+    "CLEAN_DRIFT_HOP_LANDING_ROUGH_TRAVEL_ZERO_CARGO_LOSS",
+    "RESET_ABORTS_ONCE_AND_AWARDS_ZERO",
+    "NO_TIMEOUT_AND_DELIVERY_VALID_AT_ANY_INTEGRITY",
+    "PAYOUT_50_35_15_ONLY",
+    "ROUTE_DISTANCE_FLOW_GRADE_COSMETICS_REPEATS_NEVER_PAY",
+    "FULL_PAY_FOR_EVERY_GENUINE_REPEAT",
+    "CANONICAL_ATOMIC_ONE_ATTEMPT_ONE_TERMINAL_LEDGER",
+    "ONE_SESSION_CREDIT_BALANCE_AND_ONE_C01_FREE_PAINT_ISSUE",
+    "NO_SHOP_TRAIL_SAVE_REPUTATION_OR_MECHANICAL_UPGRADE",
+    "RECEIPT_FIRST_CONTINUE_DEFAULT_EXACT_SESSION_WARNING"
+  ],
+  "human_world_gate": "NOT PERFORMED",
+  "implementation_gate_now": "NOT AUTHORIZED \u2014 DESIGN LAB ONLY",
+  "inherited_pure_checks": {
+    "counts": [
+      33,
+      41,
+      64,
+      83,
+      105,
+      142,
+      154,
+      112
+    ],
+    "total": 734
+  },
+  "legacy_float_grade_audit": {
+    "examples": [
+      {
+        "exact_grade": "C",
+        "integrity_units": 215,
+        "legacy_grade": "D",
+        "ratio_milli": 851
+      },
+      {
+        "exact_grade": "B",
+        "integrity_units": 575,
+        "legacy_grade": "C",
+        "ratio_milli": 955
+      },
+      {
+        "exact_grade": "A",
+        "integrity_units": 835,
+        "legacy_grade": "B",
+        "ratio_milli": 979
+      }
+    ],
+    "grid": "integrity_units 0..1000 \u00d7 ratio_milli 0..3000",
+    "mismatch_count": 55,
+    "points_scanned": 3004001,
+    "product_requirement": "derive grade with integer/Decimal/rational evidence and bind it to the canonical receipt"
+  },
+  "no_shop_label": "SESSION CREDITS \u00b7 NO SHOP IN THIS PROOF",
+  "product_source_modified": false,
+  "proof_catalog": [
+    {
+      "cargo_profile": "R7_COUNTER_EPOCH_FORGIVING_PEAK_EPISODE_V1",
+      "complexity_class": 0,
+      "complexity_reason": "NONE",
+      "contract_id": "C01",
+      "destination": "DEP",
+      "family": "OPEN_ENDPOINT_V1",
+      "origin": "MRK",
+      "route_options": [
+        {
+          "advisory_only": true,
+          "option_id": "MARKET_DIRECT",
+          "route_ids": [
+            "L1"
+          ],
+          "suggested_distance_m": "129.429845"
+        }
+      ],
+      "title": "Market Parcel"
+    },
+    {
+      "cargo_profile": "R7_COUNTER_EPOCH_FORGIVING_PEAK_EPISODE_V1",
+      "complexity_class": 0,
+      "complexity_reason": "NONE",
+      "contract_id": "C02",
+      "destination": "RLY",
+      "family": "OPEN_ENDPOINT_V1",
+      "origin": "DEP",
+      "route_options": [
+        {
+          "advisory_only": true,
+          "option_id": "LONG_WEST_SWEEP",
+          "route_ids": [
+            "L0",
+            "A1"
+          ],
+          "suggested_distance_m": "394.186048"
+        }
+      ],
+      "title": "Relay Window"
+    },
+    {
+      "cargo_profile": "R7_COUNTER_EPOCH_FORGIVING_PEAK_EPISODE_V1",
+      "complexity_class": 0,
+      "complexity_reason": "NONE",
+      "contract_id": "C03",
+      "destination": "CLN",
+      "family": "OPEN_ENDPOINT_V1",
+      "origin": "RLY",
+      "route_options": [
+        {
+          "advisory_only": true,
+          "option_id": "INNER_CLINIC",
+          "route_ids": [
+            "L4",
+            "L5",
+            "L2"
+          ],
+          "suggested_distance_m": "377.225159"
+        },
+        {
+          "advisory_only": true,
+          "option_id": "OUTER_EASTLINE",
+          "route_ids": [
+            "A2",
+            "L3"
+          ],
+          "suggested_distance_m": "514.603795"
+        }
+      ],
+      "title": "Clinic Glass"
+    }
+  ],
+  "provisional_seeds": {
+    "authoring_cadence_allowance_s": "12",
+    "authoring_rate_credits_per_minute": "100",
+    "cargo_dead_zone": "0.20",
+    "cargo_exponent": "1.50",
+    "cargo_integrity_units": 1000,
+    "cargo_max_episode_loss": "0.24",
+    "cargo_quiet_window_s": "0.25",
+    "delivery_settle_s": "0.50",
+    "delivery_speed_ceiling_mps": "6.0",
+    "grade_weights": [
+      "0.70",
+      "0.30"
+    ],
+    "pace_anchors": [
+      [
+        "0.85",
+        "1.00"
+      ],
+      [
+        "1.00",
+        "0.75"
+      ],
+      [
+        "1.25",
+        "0.40"
+      ],
+      [
+        "1.75",
+        "0.00"
+      ]
+    ],
+    "pickup_speed_ceiling_mps": "4.0"
+  },
+  "rejected_for_gate_b": [
+    "RAW_SPEED_BRAKE_INTEGRITY_OR_HANDLING_UPGRADES",
+    "ACTUAL_DISTANCE_ROUTE_EFFICIENCY_FLOW_DRIFT_HOP_OR_GRADE_MONEY",
+    "REPEAT_DECAY_COOLDOWN_DAILY_CAP_OR_RESET_FEE",
+    "HARD_TIMER_OR_LATE_FAILURE",
+    "AUTO_OPEN_NEXT_OFFER_OR_PICKUP_DWELL",
+    "PROCEDURAL_ROTATING_OR_RANDOM_CONTRACTS",
+    "FOURTH_GATE_B_CONTRACT"
+  ],
+  "schema": "district_zero.p1b.iteration_08_final_convergence_report.v1",
+  "session_warning": "SESSION PROTOTYPE \u2014 CREDITS AND FINISHES RESET WHEN THE APP CLOSES",
+  "status": "DESIGN LAB COMPLETE \u2014 AWAITING EXPLICIT P1B IMPLEMENTATION AUTHORITY"
+}

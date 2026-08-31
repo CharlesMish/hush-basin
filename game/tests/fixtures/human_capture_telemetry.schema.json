@@ -1,0 +1,150 @@
+{
+  "$id": "district_zero.p1a.human_capture_telemetry.schema.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "attempt_index": {
+      "maximum": 5,
+      "minimum": 1,
+      "type": "integer"
+    },
+    "engine_identity": {
+      "const": "4.7.1.stable.official.a13da4feb"
+    },
+    "events": {
+      "type": "array"
+    },
+    "project_identity": {
+      "type": "object"
+    },
+    "records": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "fast_distance_m": {
+            "type": "number"
+          },
+          "fold": {
+            "type": "number"
+          },
+          "horizontal_speed_mps": {
+            "type": "number"
+          },
+          "input": {
+            "additionalProperties": false,
+            "properties": {
+              "brake_u16": {
+                "maximum": 65535,
+                "minimum": 0,
+                "type": "integer"
+              },
+              "hop_pressed": {
+                "type": "boolean"
+              },
+              "steer_i16": {
+                "maximum": 32767,
+                "minimum": -32767,
+                "type": "integer"
+              },
+              "throttle_u16": {
+                "maximum": 65535,
+                "minimum": 0,
+                "type": "integer"
+              },
+              "transform_pressed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "throttle_u16",
+              "brake_u16",
+              "steer_i16",
+              "transform_pressed",
+              "hop_pressed"
+            ],
+            "type": "object"
+          },
+          "physics_tick": {
+            "type": "integer"
+          },
+          "position_xyz_m": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "route_chainage_m": {
+            "type": "number"
+          },
+          "route_lateral_distance_m": {
+            "type": "number"
+          },
+          "surface_class": {
+            "type": "integer"
+          },
+          "vector_tick": {
+            "type": "integer"
+          },
+          "velocity_xyz_mps": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "yaw_rad": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "vector_tick",
+          "physics_tick",
+          "position_xyz_m",
+          "velocity_xyz_mps",
+          "yaw_rad",
+          "fold",
+          "surface_class",
+          "route_chainage_m",
+          "route_lateral_distance_m",
+          "horizontal_speed_mps",
+          "fast_distance_m",
+          "input"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "route_id": {
+      "enum": [
+        "A1",
+        "A2",
+        "X0"
+      ]
+    },
+    "schema": {
+      "const": "district_zero.p1a.human_capture_telemetry.v1"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "trace_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "trace_id",
+    "route_id",
+    "attempt_index",
+    "engine_identity",
+    "project_identity",
+    "records",
+    "events",
+    "summary"
+  ],
+  "type": "object"
+}

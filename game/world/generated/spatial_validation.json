@@ -1,0 +1,2319 @@
+{
+  "authority_version": "1.2",
+  "core_interfaces": {
+    "all_pass": true,
+    "authorized_crossings": [
+      {
+        "gate": "GW",
+        "route": "A0",
+        "xz_m": [
+          -170.0,
+          35.0
+        ]
+      },
+      {
+        "gate": "GW",
+        "route": "A1",
+        "xz_m": [
+          -170.0,
+          35.0
+        ]
+      },
+      {
+        "gate": "GE",
+        "route": "A2",
+        "xz_m": [
+          170.0,
+          35.0
+        ]
+      },
+      {
+        "gate": "GW",
+        "route": "L0",
+        "xz_m": [
+          -170.0,
+          35.0
+        ]
+      },
+      {
+        "gate": "GE",
+        "route": "L3",
+        "xz_m": [
+          170.0,
+          35.0
+        ]
+      },
+      {
+        "gate": "GN",
+        "route": "L4",
+        "xz_m": [
+          0.0,
+          -130.0
+        ]
+      },
+      {
+        "gate": "GN",
+        "route": "L5",
+        "xz_m": [
+          0.0,
+          -130.0
+        ]
+      },
+      {
+        "gate": "GE",
+        "route": "L7",
+        "xz_m": [
+          170.0,
+          35.0
+        ]
+      },
+      {
+        "gate": "GN",
+        "route": "R0",
+        "xz_m": [
+          0.0,
+          -130.0
+        ]
+      }
+    ],
+    "unauthorized_crossings": []
+  },
+  "destination_clearance": {
+    "all_pass": true,
+    "rows": [
+      {
+        "destination": "CLN",
+        "pad_plus_craft_to_hard_obstacle_m": 12.035485,
+        "pad_plus_craft_to_outer_boundary_m": 110.535079,
+        "pass": true
+      },
+      {
+        "destination": "DEP",
+        "pad_plus_craft_to_hard_obstacle_m": 12.035485,
+        "pad_plus_craft_to_outer_boundary_m": 119.208749,
+        "pass": true
+      },
+      {
+        "destination": "MRK",
+        "pad_plus_craft_to_hard_obstacle_m": 18.028258,
+        "pad_plus_craft_to_outer_boundary_m": 209.511386,
+        "pass": true
+      },
+      {
+        "destination": "QRY",
+        "pad_plus_craft_to_hard_obstacle_m": 26.11997,
+        "pad_plus_craft_to_outer_boundary_m": 46.884415,
+        "pass": true
+      },
+      {
+        "destination": "RLY",
+        "pad_plus_craft_to_hard_obstacle_m": 32.011394,
+        "pad_plus_craft_to_outer_boundary_m": 70.682568,
+        "pass": true
+      },
+      {
+        "destination": "WRK",
+        "pad_plus_craft_to_hard_obstacle_m": 10.037894,
+        "pad_plus_craft_to_outer_boundary_m": 191.431802,
+        "pass": true
+      }
+    ]
+  },
+  "flood_fill_full": {
+    "cell_size_m": 1.0,
+    "component_cell_counts": [
+      76750
+    ],
+    "component_count": 1,
+    "connectivity": 4,
+    "grid_origin_xz_m": [
+      -330.0,
+      -315.0
+    ],
+    "height": 601,
+    "mask_sha256": "bcc998c5dbf54a1f8f12438277e111a8c78894c2c8ec40765f45f38ae1dffe54",
+    "probes": {
+      "CLN": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          440,
+          390
+        ],
+        "requested_xz_m": [
+          110.0,
+          75.0
+        ],
+        "walkable": true
+      },
+      "DEP": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          220,
+          390
+        ],
+        "requested_xz_m": [
+          -110.0,
+          75.0
+        ],
+        "walkable": true
+      },
+      "GE": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          500,
+          350
+        ],
+        "requested_xz_m": [
+          170.0,
+          35.0
+        ],
+        "walkable": true
+      },
+      "GN": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          330,
+          185
+        ],
+        "requested_xz_m": [
+          0.0,
+          -130.0
+        ],
+        "walkable": true
+      },
+      "GW": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          160,
+          350
+        ],
+        "requested_xz_m": [
+          -170.0,
+          35.0
+        ],
+        "walkable": true
+      },
+      "HJE": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          375,
+          450
+        ],
+        "requested_xz_m": [
+          45.0,
+          135.0
+        ],
+        "walkable": true
+      },
+      "HJW": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          285,
+          450
+        ],
+        "requested_xz_m": [
+          -45.0,
+          135.0
+        ],
+        "walkable": true
+      },
+      "MRK": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          330,
+          335
+        ],
+        "requested_xz_m": [
+          0.0,
+          20.0
+        ],
+        "walkable": true
+      },
+      "QRY": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          85,
+          335
+        ],
+        "requested_xz_m": [
+          -245.0,
+          20.0
+        ],
+        "walkable": true
+      },
+      "RLY": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          330,
+          105
+        ],
+        "requested_xz_m": [
+          0.0,
+          -210.0
+        ],
+        "walkable": true
+      },
+      "WRK": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          420,
+          260
+        ],
+        "requested_xz_m": [
+          90.0,
+          -55.0
+        ],
+        "walkable": true
+      }
+    },
+    "walkable_cell_count": 76750,
+    "width": 661
+  },
+  "gate_clearance_after_pylon_removal": {
+    "all_pass": true,
+    "rows": [
+      {
+        "collidable_pylon_count": 0,
+        "craft_center_clear_width_m": 16.1,
+        "gate": "GE",
+        "pass": true,
+        "physical_aperture_width_m": 18.0,
+        "visual_marker_intersects_hard_obstacle": false
+      },
+      {
+        "collidable_pylon_count": 0,
+        "craft_center_clear_width_m": 14.1,
+        "gate": "GN",
+        "pass": true,
+        "physical_aperture_width_m": 16.0,
+        "visual_marker_intersects_hard_obstacle": false
+      },
+      {
+        "collidable_pylon_count": 0,
+        "craft_center_clear_width_m": 16.1,
+        "gate": "GW",
+        "pass": true,
+        "physical_aperture_width_m": 18.0,
+        "visual_marker_intersects_hard_obstacle": false
+      }
+    ]
+  },
+  "generation_environment": {
+    "geos": "3.13.1",
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "scipy": "1.17.0",
+    "shapely": "2.1.2"
+  },
+  "graph": {
+    "all_six_destinations_reachable": true,
+    "components": [
+      [
+        "CLN",
+        "DEP",
+        "GE",
+        "GN",
+        "GW",
+        "HJE",
+        "HJW",
+        "MRK",
+        "QRY",
+        "RLY",
+        "WRK"
+      ]
+    ],
+    "components_without_HOP": [
+      [
+        "CLN",
+        "DEP",
+        "GE",
+        "GN",
+        "GW",
+        "HJE",
+        "HJW",
+        "MRK",
+        "QRY",
+        "RLY",
+        "WRK"
+      ]
+    ],
+    "node_count": 11,
+    "route_count": 17
+  },
+  "hard_face_heights": {
+    "all_pass": true,
+    "rows": [
+      {
+        "absolute_top_y_m": 5.5,
+        "boundary_class": "CORE_PLINTH_MASK",
+        "highest_adjacent_quantized_support_y_m": 0.716,
+        "minimum_vertical_face_height_m": 4.784,
+        "pass": true,
+        "required_minimum_m": 4.7,
+        "sampling_band_m": 3.0
+      },
+      {
+        "absolute_top_y_m": 8.0,
+        "boundary_class": "OUTER_CLOSURE_MASK",
+        "highest_adjacent_quantized_support_y_m": 1.296,
+        "minimum_vertical_face_height_m": 6.704,
+        "pass": true,
+        "required_minimum_m": 4.7,
+        "sampling_band_m": 3.0
+      },
+      {
+        "absolute_top_y_m": 6.0,
+        "boundary_class": "CORE_WALL",
+        "highest_adjacent_quantized_support_y_m": 0.816,
+        "minimum_vertical_face_height_m": 5.184,
+        "pass": true,
+        "required_minimum_m": 4.7,
+        "sampling_band_m": 3.0
+      },
+      {
+        "absolute_top_y_m": 10.0,
+        "boundary_class": "OUTER_WALL",
+        "highest_adjacent_quantized_support_y_m": -0.253,
+        "minimum_vertical_face_height_m": 10.253,
+        "pass": true,
+        "required_minimum_m": 4.7,
+        "sampling_band_m": 20.0
+      }
+    ]
+  },
+  "nearest_projection_generator_crosscheck": {
+    "A0": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 7.105427357601002e-15
+    },
+    "A1": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.4210854715202004e-14
+    },
+    "A2": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.9317880628477724e-14
+    },
+    "DOG": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.5987211554602254e-14
+    },
+    "HOP": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 0.0
+    },
+    "L0": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.0658141036401503e-14
+    },
+    "L1": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 8.881784197001252e-15
+    },
+    "L2": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 8.881784197001252e-15
+    },
+    "L3": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.0658141036401503e-14
+    },
+    "L4": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 0.0
+    },
+    "L5": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 7.105427357601002e-15
+    },
+    "L6": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 8.881784197001252e-15
+    },
+    "L7": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.3322676295501878e-14
+    },
+    "R0": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.3100631690576847e-14
+    },
+    "S0": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.4210854715202004e-14
+    },
+    "S1": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 1.4210854715202004e-14
+    },
+    "X0": {
+      "crosscheck_sample_count": 257,
+      "maximum_distance_error_m": 2.842170943040401e-14
+    }
+  },
+  "pad_approaches": {
+    "all_pass": true,
+    "rows": [
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 10.724571,
+        "destination": "CLN",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "L2"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 11.022575,
+        "destination": "CLN",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "L3"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 10.446929,
+        "destination": "CLN",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "S1"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 11.022575,
+        "destination": "DEP",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "L0"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 10.724571,
+        "destination": "DEP",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "L1"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 10.446929,
+        "destination": "DEP",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "S0"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 15.373981,
+        "destination": "MRK",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "L1"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 15.373981,
+        "destination": "MRK",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "L2"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 15.382551,
+        "destination": "MRK",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "L5"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 15.37422,
+        "destination": "MRK",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "L6"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 24.609698,
+        "destination": "QRY",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "A0"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 33.807202,
+        "destination": "QRY",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "X0"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 30.752997,
+        "destination": "RLY",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "A1"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 38.090508,
+        "destination": "RLY",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "A2"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 28.792735,
+        "destination": "RLY",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "L4"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 44.101268,
+        "destination": "RLY",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "X0"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 9.579596,
+        "destination": "WRK",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "L6"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 9.939696,
+        "destination": "WRK",
+        "direction": "OUTBOUND",
+        "pass": true,
+        "route": "L7"
+      },
+      {
+        "approach_length_m": 18.0,
+        "centerline_to_hard_obstacle_m": 11.488209,
+        "destination": "WRK",
+        "direction": "INBOUND",
+        "pass": true,
+        "route": "R0"
+      }
+    ]
+  },
+  "pylons": {
+    "retained_collidable_count": 0,
+    "retained_visual_surface_band_count": 3,
+    "visual_bands_disjoint_from_hard_obstacle_union": true
+  },
+  "route_bake": {
+    "all_per_route_hashes_match_v1_1": true,
+    "fixed_global_compact_array_sha256": "f26283b6cd314ba1d27aebea0bf80d82fbf2426ee5f22b610b38c273fec73330",
+    "routes": {
+      "A0": {
+        "analytic_post_fillet_length_m": 76.509934,
+        "baked_polyline_length_m": 76.509932,
+        "minimum_fillet_radius_m": 55.0,
+        "minimum_straight_piece_m": 34.093003,
+        "raw_array_sha256": "91b9c4603e6aa09491df423742d85879ca65d7f2da7d45c7833af97a867ac3d9",
+        "sample_count": 309
+      },
+      "A1": {
+        "analytic_post_fillet_length_m": 321.864232,
+        "baked_polyline_length_m": 321.864198,
+        "minimum_fillet_radius_m": 72.0,
+        "minimum_straight_piece_m": 77.584272,
+        "raw_array_sha256": "c749a924aa1a3dfbaa28be66dc0270ed322094dc85108164bc55a6417fd475ea",
+        "sample_count": 1291
+      },
+      "A2": {
+        "analytic_post_fillet_length_m": 442.282038,
+        "baked_polyline_length_m": 442.281945,
+        "minimum_fillet_radius_m": 72.0,
+        "minimum_straight_piece_m": 61.446877,
+        "raw_array_sha256": "b25574ee6c8ebcab80d688dc58ad9a33b5dd954e44e8f5c889ff69309955e9a3",
+        "sample_count": 1773
+      },
+      "DOG": {
+        "analytic_post_fillet_length_m": 124.514507,
+        "baked_polyline_length_m": 124.514081,
+        "minimum_fillet_radius_m": 14.0,
+        "minimum_straight_piece_m": 20.059234,
+        "raw_array_sha256": "dc5aafca0696bea87ce656d13cf6f61efffc11a337fd75896af2882ce130cb4b",
+        "sample_count": 505
+      },
+      "HOP": {
+        "analytic_post_fillet_length_m": 90.0,
+        "baked_polyline_length_m": 90.0,
+        "minimum_fillet_radius_m": null,
+        "minimum_straight_piece_m": 90.0,
+        "raw_array_sha256": "c47725781eea61ee35382c3662eaed2d949d7fc93b36f4f21844b11a89251d05",
+        "sample_count": 361
+      },
+      "L0": {
+        "analytic_post_fillet_length_m": 72.321875,
+        "baked_polyline_length_m": 72.32185,
+        "minimum_fillet_radius_m": 16.0,
+        "minimum_straight_piece_m": 30.768345,
+        "raw_array_sha256": "4729e44ef8f05a39a66c91b13fa4a34d5de32e86aedc47082c232fb5e31ea65e",
+        "sample_count": 292
+      },
+      "L1": {
+        "analytic_post_fillet_length_m": 129.430082,
+        "baked_polyline_length_m": 129.429845,
+        "minimum_fillet_radius_m": 14.0,
+        "minimum_straight_piece_m": 28.560911,
+        "raw_array_sha256": "8b051c064417ae2ecbbb93ab0980d5070d39919b47502f8bdfa2f5b9bf053a82",
+        "sample_count": 521
+      },
+      "L2": {
+        "analytic_post_fillet_length_m": 129.430082,
+        "baked_polyline_length_m": 129.429845,
+        "minimum_fillet_radius_m": 14.0,
+        "minimum_straight_piece_m": 28.560911,
+        "raw_array_sha256": "952d27eebd9b15095cbffbb90e7aacb61133bc3ba69b8db03fd8040f14865390",
+        "sample_count": 521
+      },
+      "L3": {
+        "analytic_post_fillet_length_m": 72.321875,
+        "baked_polyline_length_m": 72.32185,
+        "minimum_fillet_radius_m": 16.0,
+        "minimum_straight_piece_m": 30.768345,
+        "raw_array_sha256": "d1c30ac437c73732cda94af38818e569a4c94de447f604a212923db4c7380244",
+        "sample_count": 292
+      },
+      "L4": {
+        "analytic_post_fillet_length_m": 80.0,
+        "baked_polyline_length_m": 80.0,
+        "minimum_fillet_radius_m": null,
+        "minimum_straight_piece_m": 80.0,
+        "raw_array_sha256": "94f93843b2f3d6c0d9d3b49e245157b4095202bae549cf3de21b728a0602914a",
+        "sample_count": 321
+      },
+      "L5": {
+        "analytic_post_fillet_length_m": 167.795523,
+        "baked_polyline_length_m": 167.795314,
+        "minimum_fillet_radius_m": 14.0,
+        "minimum_straight_piece_m": 45.333333,
+        "raw_array_sha256": "c32aaf4e30161f7f100aa333af981da7cc07c62bee5c6b7e4681c81e8023ff5f",
+        "sample_count": 675
+      },
+      "L6": {
+        "analytic_post_fillet_length_m": 118.070857,
+        "baked_polyline_length_m": 118.070808,
+        "minimum_fillet_radius_m": 14.0,
+        "minimum_straight_piece_m": 38.436436,
+        "raw_array_sha256": "94ef0f690a85317f3979f43210c9e6d93cd374f02c4ef67965138695036c325b",
+        "sample_count": 474
+      },
+      "L7": {
+        "analytic_post_fillet_length_m": 122.344456,
+        "baked_polyline_length_m": 122.344392,
+        "minimum_fillet_radius_m": 16.0,
+        "minimum_straight_piece_m": 35.585189,
+        "raw_array_sha256": "b1804c3c7fc894d4b03bbfc95ebdfc42b737b329eb433e099dac73c13bc0525b",
+        "sample_count": 493
+      },
+      "R0": {
+        "analytic_post_fillet_length_m": 137.716487,
+        "baked_polyline_length_m": 137.716327,
+        "minimum_fillet_radius_m": 22.0,
+        "minimum_straight_piece_m": 27.261551,
+        "raw_array_sha256": "964af9220650db1aa0376083d7055c815667e3ace0c1c9276abdb89bac295dde",
+        "sample_count": 555
+      },
+      "S0": {
+        "analytic_post_fillet_length_m": 107.177831,
+        "baked_polyline_length_m": 107.177582,
+        "minimum_fillet_radius_m": 16.0,
+        "minimum_straight_piece_m": 25.213368,
+        "raw_array_sha256": "044b95e90e451ed71bd8eb0ad4627ecf2b21e3950fad0e501be904c964f9ac43",
+        "sample_count": 432
+      },
+      "S1": {
+        "analytic_post_fillet_length_m": 107.177831,
+        "baked_polyline_length_m": 107.177582,
+        "minimum_fillet_radius_m": 16.0,
+        "minimum_straight_piece_m": 25.213368,
+        "raw_array_sha256": "e7b67910e05b2e03ab9410176a70a6b3656baddd4159165cf5985c74d0eaf9bd",
+        "sample_count": 432
+      },
+      "X0": {
+        "analytic_post_fillet_length_m": 499.881201,
+        "baked_polyline_length_m": 499.881048,
+        "minimum_fillet_radius_m": 42.0,
+        "minimum_straight_piece_m": 45.644671,
+        "raw_array_sha256": "b9b428ff56d2714dde20df7af9d5baf6e8b1450cd0af8f9ea6069dc1e1915edc",
+        "sample_count": 2005
+      }
+    },
+    "total_point_count": 11252
+  },
+  "route_center_clearance": {
+    "all_pass": true,
+    "craft_radius_m": 0.95,
+    "rows": [
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 8.989159,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "A0"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 3.944921,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "A1"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 6.423391,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "A2"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 7.999692,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "DOG"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 7.0,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "HOP"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 5.850008,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "L0"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 8.499665,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "L1"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 8.499665,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "L2"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 5.850008,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "L3"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 6.344597,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "L4"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 2.655208,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "L5"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 8.499665,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "L6"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 1.959715,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "L7"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 3.133783,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "R0"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 7.999761,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "S0"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 7.999761,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "S1"
+      },
+      {
+        "centerline_to_non_hop_hard_obstacle_m": 11.999947,
+        "minimum_required_craft_radius_m": 0.95,
+        "pass": true,
+        "route": "X0"
+      }
+    ]
+  },
+  "route_outer_boundary": {
+    "all_pass": true,
+    "minimum_margin_m": 17.004645,
+    "rows": [
+      {
+        "operational_envelope_to_outer_boundary_m": 44.826974,
+        "pass": true,
+        "route": "A0"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 67.643071,
+        "pass": true,
+        "route": "A1"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 26.475045,
+        "pass": true,
+        "route": "A2"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 66.947003,
+        "pass": true,
+        "route": "DOG"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 96.989965,
+        "pass": true,
+        "route": "HOP"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 87.178265,
+        "pass": true,
+        "route": "L0"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 124.658595,
+        "pass": true,
+        "route": "L1"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 115.980532,
+        "pass": true,
+        "route": "L2"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 94.513043,
+        "pass": true,
+        "route": "L3"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 73.6313,
+        "pass": true,
+        "route": "L4"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 155.93788,
+        "pass": true,
+        "route": "L5"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 196.878,
+        "pass": true,
+        "route": "L6"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 94.511876,
+        "pass": true,
+        "route": "L7"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 147.641419,
+        "pass": true,
+        "route": "R0"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 90.723415,
+        "pass": true,
+        "route": "S0"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 94.330792,
+        "pass": true,
+        "route": "S1"
+      },
+      {
+        "operational_envelope_to_outer_boundary_m": 17.004645,
+        "pass": true,
+        "route": "X0"
+      }
+    ]
+  },
+  "route_pair_separation": {
+    "all_pass": true,
+    "minimum_residual_margin_m": 3.437031,
+    "pair_count": 136,
+    "rows": [
+      {
+        "junction_exceptions": [
+          "GW"
+        ],
+        "non_junction_centerline_distance_m": 48.760771,
+        "pass": true,
+        "required_centerline_distance_m": 41.0,
+        "residual_margin_m": 7.760771,
+        "route_a": "A0",
+        "route_b": "A1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 298.202951,
+        "pass": true,
+        "required_centerline_distance_m": 41.0,
+        "residual_margin_m": 257.202951,
+        "route_a": "A0",
+        "route_b": "A2"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 160.078106,
+        "pass": true,
+        "required_centerline_distance_m": 32.0,
+        "residual_margin_m": 128.078106,
+        "route_a": "A0",
+        "route_b": "DOG"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 160.078106,
+        "pass": true,
+        "required_centerline_distance_m": 31.0,
+        "residual_margin_m": 129.078106,
+        "route_a": "A0",
+        "route_b": "HOP"
+      },
+      {
+        "junction_exceptions": [
+          "GW"
+        ],
+        "non_junction_centerline_distance_m": 74.183028,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 41.183028,
+        "route_a": "A0",
+        "route_b": "L0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 72.111026,
+        "pass": true,
+        "required_centerline_distance_m": 32.5,
+        "residual_margin_m": 39.611026,
+        "route_a": "A0",
+        "route_b": "L1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 170.660482,
+        "pass": true,
+        "required_centerline_distance_m": 32.5,
+        "residual_margin_m": 138.160482,
+        "route_a": "A0",
+        "route_b": "L2"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 282.842712,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 249.842712,
+        "route_a": "A0",
+        "route_b": "L3"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 236.907155,
+        "pass": true,
+        "required_centerline_distance_m": 35.0,
+        "residual_margin_m": 201.907155,
+        "route_a": "A0",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 154.701393,
+        "pass": true,
+        "required_centerline_distance_m": 32.5,
+        "residual_margin_m": 122.201393,
+        "route_a": "A0",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 170.660482,
+        "pass": true,
+        "required_centerline_distance_m": 32.5,
+        "residual_margin_m": 138.160482,
+        "route_a": "A0",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 275.13633,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 242.13633,
+        "route_a": "A0",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 236.907155,
+        "pass": true,
+        "required_centerline_distance_m": 35.0,
+        "residual_margin_m": 201.907155,
+        "route_a": "A0",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 72.111026,
+        "pass": true,
+        "required_centerline_distance_m": 32.0,
+        "residual_margin_m": 40.111026,
+        "route_a": "A0",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 237.118114,
+        "pass": true,
+        "required_centerline_distance_m": 32.0,
+        "residual_margin_m": 205.118114,
+        "route_a": "A0",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [
+          "QRY"
+        ],
+        "non_junction_centerline_distance_m": 46.348004,
+        "pass": true,
+        "required_centerline_distance_m": 36.0,
+        "residual_margin_m": 10.348004,
+        "route_a": "A0",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "RLY"
+        ],
+        "non_junction_centerline_distance_m": 91.046833,
+        "pass": true,
+        "required_centerline_distance_m": 42.0,
+        "residual_margin_m": 49.046833,
+        "route_a": "A1",
+        "route_b": "A2"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 160.078106,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 127.078106,
+        "route_a": "A1",
+        "route_b": "DOG"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 160.078106,
+        "pass": true,
+        "required_centerline_distance_m": 32.0,
+        "residual_margin_m": 128.078106,
+        "route_a": "A1",
+        "route_b": "HOP"
+      },
+      {
+        "junction_exceptions": [
+          "GW"
+        ],
+        "non_junction_centerline_distance_m": 67.227855,
+        "pass": true,
+        "required_centerline_distance_m": 34.0,
+        "residual_margin_m": 33.227855,
+        "route_a": "A1",
+        "route_b": "L0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 72.111026,
+        "pass": true,
+        "required_centerline_distance_m": 33.5,
+        "residual_margin_m": 38.611026,
+        "route_a": "A1",
+        "route_b": "L1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 169.143537,
+        "pass": true,
+        "required_centerline_distance_m": 33.5,
+        "residual_margin_m": 135.643537,
+        "route_a": "A1",
+        "route_b": "L2"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 282.842712,
+        "pass": true,
+        "required_centerline_distance_m": 34.0,
+        "residual_margin_m": 248.842712,
+        "route_a": "A1",
+        "route_b": "L3"
+      },
+      {
+        "junction_exceptions": [
+          "RLY"
+        ],
+        "non_junction_centerline_distance_m": 43.951931,
+        "pass": true,
+        "required_centerline_distance_m": 36.0,
+        "residual_margin_m": 7.951931,
+        "route_a": "A1",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 67.165613,
+        "pass": true,
+        "required_centerline_distance_m": 33.5,
+        "residual_margin_m": 33.665613,
+        "route_a": "A1",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 169.143537,
+        "pass": true,
+        "required_centerline_distance_m": 33.5,
+        "residual_margin_m": 135.643537,
+        "route_a": "A1",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 179.025989,
+        "pass": true,
+        "required_centerline_distance_m": 34.0,
+        "residual_margin_m": 145.025989,
+        "route_a": "A1",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 67.165613,
+        "pass": true,
+        "required_centerline_distance_m": 36.0,
+        "residual_margin_m": 31.165613,
+        "route_a": "A1",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 72.111026,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 39.111026,
+        "route_a": "A1",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 237.118114,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 204.118114,
+        "route_a": "A1",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [
+          "RLY"
+        ],
+        "non_junction_centerline_distance_m": 45.59514,
+        "pass": true,
+        "required_centerline_distance_m": 37.0,
+        "residual_margin_m": 8.59514,
+        "route_a": "A1",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 160.078106,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 127.078106,
+        "route_a": "A2",
+        "route_b": "DOG"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 160.078106,
+        "pass": true,
+        "required_centerline_distance_m": 32.0,
+        "residual_margin_m": 128.078106,
+        "route_a": "A2",
+        "route_b": "HOP"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 282.842712,
+        "pass": true,
+        "required_centerline_distance_m": 34.0,
+        "residual_margin_m": 248.842712,
+        "route_a": "A2",
+        "route_b": "L0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 170.660482,
+        "pass": true,
+        "required_centerline_distance_m": 33.5,
+        "residual_margin_m": 137.160482,
+        "route_a": "A2",
+        "route_b": "L1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 72.111026,
+        "pass": true,
+        "required_centerline_distance_m": 33.5,
+        "residual_margin_m": 38.611026,
+        "route_a": "A2",
+        "route_b": "L2"
+      },
+      {
+        "junction_exceptions": [
+          "GE"
+        ],
+        "non_junction_centerline_distance_m": 67.641823,
+        "pass": true,
+        "required_centerline_distance_m": 34.0,
+        "residual_margin_m": 33.641823,
+        "route_a": "A2",
+        "route_b": "L3"
+      },
+      {
+        "junction_exceptions": [
+          "RLY"
+        ],
+        "non_junction_centerline_distance_m": 73.805562,
+        "pass": true,
+        "required_centerline_distance_m": 36.0,
+        "residual_margin_m": 37.805562,
+        "route_a": "A2",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 80.0,
+        "pass": true,
+        "required_centerline_distance_m": 33.5,
+        "residual_margin_m": 46.5,
+        "route_a": "A2",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 119.47155,
+        "pass": true,
+        "required_centerline_distance_m": 33.5,
+        "residual_margin_m": 85.97155,
+        "route_a": "A2",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [
+          "GE"
+        ],
+        "non_junction_centerline_distance_m": 39.414122,
+        "pass": true,
+        "required_centerline_distance_m": 34.0,
+        "residual_margin_m": 5.414122,
+        "route_a": "A2",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 80.0,
+        "pass": true,
+        "required_centerline_distance_m": 36.0,
+        "residual_margin_m": 44.0,
+        "route_a": "A2",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 237.118114,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 204.118114,
+        "route_a": "A2",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 72.111026,
+        "pass": true,
+        "required_centerline_distance_m": 33.0,
+        "residual_margin_m": 39.111026,
+        "route_a": "A2",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [
+          "RLY"
+        ],
+        "non_junction_centerline_distance_m": 85.472881,
+        "pass": true,
+        "required_centerline_distance_m": 37.0,
+        "residual_margin_m": 48.472881,
+        "route_a": "A2",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "HJE",
+          "HJW"
+        ],
+        "non_junction_centerline_distance_m": 26.437031,
+        "pass": true,
+        "required_centerline_distance_m": 23.0,
+        "residual_margin_m": 3.437031,
+        "route_a": "DOG",
+        "route_b": "HOP"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 88.45903,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 63.45903,
+        "route_a": "DOG",
+        "route_b": "L0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 68.485194,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 43.985194,
+        "route_a": "DOG",
+        "route_b": "L1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 68.485194,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 43.985194,
+        "route_a": "DOG",
+        "route_b": "L2"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 88.45903,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 63.45903,
+        "route_a": "DOG",
+        "route_b": "L3"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 268.793601,
+        "pass": true,
+        "required_centerline_distance_m": 27.0,
+        "residual_margin_m": 241.793601,
+        "route_a": "DOG",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 123.49089,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 98.99089,
+        "route_a": "DOG",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 123.49089,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 98.99089,
+        "route_a": "DOG",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 160.078106,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 135.078106,
+        "route_a": "DOG",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 195.256242,
+        "pass": true,
+        "required_centerline_distance_m": 27.0,
+        "residual_margin_m": 168.256242,
+        "route_a": "DOG",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [
+          "HJW"
+        ],
+        "non_junction_centerline_distance_m": 40.049483,
+        "pass": true,
+        "required_centerline_distance_m": 24.0,
+        "residual_margin_m": 16.049483,
+        "route_a": "DOG",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [
+          "HJE"
+        ],
+        "non_junction_centerline_distance_m": 40.049483,
+        "pass": true,
+        "required_centerline_distance_m": 24.0,
+        "residual_margin_m": 16.049483,
+        "route_a": "DOG",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 230.70544,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 202.70544,
+        "route_a": "DOG",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 88.45903,
+        "pass": true,
+        "required_centerline_distance_m": 24.0,
+        "residual_margin_m": 64.45903,
+        "route_a": "HOP",
+        "route_b": "L0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 68.485194,
+        "pass": true,
+        "required_centerline_distance_m": 23.5,
+        "residual_margin_m": 44.985194,
+        "route_a": "HOP",
+        "route_b": "L1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 68.485194,
+        "pass": true,
+        "required_centerline_distance_m": 23.5,
+        "residual_margin_m": 44.985194,
+        "route_a": "HOP",
+        "route_b": "L2"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 88.45903,
+        "pass": true,
+        "required_centerline_distance_m": 24.0,
+        "residual_margin_m": 64.45903,
+        "route_a": "HOP",
+        "route_b": "L3"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 265.0,
+        "pass": true,
+        "required_centerline_distance_m": 26.0,
+        "residual_margin_m": 239.0,
+        "route_a": "HOP",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 115.0,
+        "pass": true,
+        "required_centerline_distance_m": 23.5,
+        "residual_margin_m": 91.5,
+        "route_a": "HOP",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 115.0,
+        "pass": true,
+        "required_centerline_distance_m": 23.5,
+        "residual_margin_m": 91.5,
+        "route_a": "HOP",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 160.078106,
+        "pass": true,
+        "required_centerline_distance_m": 24.0,
+        "residual_margin_m": 136.078106,
+        "route_a": "HOP",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 195.256242,
+        "pass": true,
+        "required_centerline_distance_m": 26.0,
+        "residual_margin_m": 169.256242,
+        "route_a": "HOP",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [
+          "HJW"
+        ],
+        "non_junction_centerline_distance_m": 48.0,
+        "pass": true,
+        "required_centerline_distance_m": 23.0,
+        "residual_margin_m": 25.0,
+        "route_a": "HOP",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [
+          "HJE"
+        ],
+        "non_junction_centerline_distance_m": 48.0,
+        "pass": true,
+        "required_centerline_distance_m": 23.0,
+        "residual_margin_m": 25.0,
+        "route_a": "HOP",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 230.70544,
+        "pass": true,
+        "required_centerline_distance_m": 27.0,
+        "residual_margin_m": 203.70544,
+        "route_a": "HOP",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "DEP"
+        ],
+        "non_junction_centerline_distance_m": 50.233152,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 24.733152,
+        "route_a": "L0",
+        "route_b": "L1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.983739,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 97.483739,
+        "route_a": "L0",
+        "route_b": "L2"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 220.0,
+        "pass": true,
+        "required_centerline_distance_m": 26.0,
+        "residual_margin_m": 194.0,
+        "route_a": "L0",
+        "route_b": "L3"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 232.565127,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 204.565127,
+        "route_a": "L0",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.621488,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 97.121488,
+        "route_a": "L0",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.983739,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 97.483739,
+        "route_a": "L0",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 238.537209,
+        "pass": true,
+        "required_centerline_distance_m": 26.0,
+        "residual_margin_m": 212.537209,
+        "route_a": "L0",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 232.565127,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 204.565127,
+        "route_a": "L0",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [
+          "DEP"
+        ],
+        "non_junction_centerline_distance_m": 44.953106,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 19.953106,
+        "route_a": "L0",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 166.207701,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 141.207701,
+        "route_a": "L0",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 76.485293,
+        "pass": true,
+        "required_centerline_distance_m": 29.0,
+        "residual_margin_m": 47.485293,
+        "route_a": "L0",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "MRK"
+        ],
+        "non_junction_centerline_distance_m": 58.429711,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 33.429711,
+        "route_a": "L1",
+        "route_b": "L2"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.983739,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 97.483739,
+        "route_a": "L1",
+        "route_b": "L3"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 150.0,
+        "pass": true,
+        "required_centerline_distance_m": 27.5,
+        "residual_margin_m": 122.5,
+        "route_a": "L1",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [
+          "MRK"
+        ],
+        "non_junction_centerline_distance_m": 42.361954,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 17.361954,
+        "route_a": "L1",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [
+          "MRK"
+        ],
+        "non_junction_centerline_distance_m": 63.857322,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 38.857322,
+        "route_a": "L1",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 117.153745,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 91.653745,
+        "route_a": "L1",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 117.153745,
+        "pass": true,
+        "required_centerline_distance_m": 27.5,
+        "residual_margin_m": 89.653745,
+        "route_a": "L1",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [
+          "DEP"
+        ],
+        "non_junction_centerline_distance_m": 36.769553,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 12.269553,
+        "route_a": "L1",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.983739,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 98.483739,
+        "route_a": "L1",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 145.773797,
+        "pass": true,
+        "required_centerline_distance_m": 28.5,
+        "residual_margin_m": 117.273797,
+        "route_a": "L1",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "CLN"
+        ],
+        "non_junction_centerline_distance_m": 50.233152,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 24.733152,
+        "route_a": "L2",
+        "route_b": "L3"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 150.0,
+        "pass": true,
+        "required_centerline_distance_m": 27.5,
+        "residual_margin_m": 122.5,
+        "route_a": "L2",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [
+          "MRK"
+        ],
+        "non_junction_centerline_distance_m": 60.960443,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 35.960443,
+        "route_a": "L2",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [
+          "MRK"
+        ],
+        "non_junction_centerline_distance_m": 28.88199,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 3.88199,
+        "route_a": "L2",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 72.111026,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 46.611026,
+        "route_a": "L2",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 105.224805,
+        "pass": true,
+        "required_centerline_distance_m": 27.5,
+        "residual_margin_m": 77.724805,
+        "route_a": "L2",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.983739,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 98.483739,
+        "route_a": "L2",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [
+          "CLN"
+        ],
+        "non_junction_centerline_distance_m": 36.769553,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 12.269553,
+        "route_a": "L2",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 230.0,
+        "pass": true,
+        "required_centerline_distance_m": 28.5,
+        "residual_margin_m": 201.5,
+        "route_a": "L2",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 232.565127,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 204.565127,
+        "route_a": "L3",
+        "route_b": "L4"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.983739,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 97.483739,
+        "route_a": "L3",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 106.080691,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 80.580691,
+        "route_a": "L3",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [
+          "GE"
+        ],
+        "non_junction_centerline_distance_m": 51.428124,
+        "pass": true,
+        "required_centerline_distance_m": 26.0,
+        "residual_margin_m": 25.428124,
+        "route_a": "L3",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 120.253797,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 92.253797,
+        "route_a": "L3",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 166.207701,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 141.207701,
+        "route_a": "L3",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [
+          "CLN"
+        ],
+        "non_junction_centerline_distance_m": 44.953106,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 19.953106,
+        "route_a": "L3",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 298.202951,
+        "pass": true,
+        "required_centerline_distance_m": 29.0,
+        "residual_margin_m": 269.202951,
+        "route_a": "L3",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "GN"
+        ],
+        "non_junction_centerline_distance_m": 49.302176,
+        "pass": true,
+        "required_centerline_distance_m": 27.5,
+        "residual_margin_m": 21.802176,
+        "route_a": "L4",
+        "route_b": "L5"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 116.672619,
+        "pass": true,
+        "required_centerline_distance_m": 27.5,
+        "residual_margin_m": 89.172619,
+        "route_a": "L4",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 117.153745,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 89.153745,
+        "route_a": "L4",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [
+          "GN"
+        ],
+        "non_junction_centerline_distance_m": 36.769553,
+        "pass": true,
+        "required_centerline_distance_m": 30.0,
+        "residual_margin_m": 6.769553,
+        "route_a": "L4",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 232.647802,
+        "pass": true,
+        "required_centerline_distance_m": 27.0,
+        "residual_margin_m": 205.647802,
+        "route_a": "L4",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 232.647802,
+        "pass": true,
+        "required_centerline_distance_m": 27.0,
+        "residual_margin_m": 205.647802,
+        "route_a": "L4",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [
+          "RLY"
+        ],
+        "non_junction_centerline_distance_m": 78.222085,
+        "pass": true,
+        "required_centerline_distance_m": 31.0,
+        "residual_margin_m": 47.222085,
+        "route_a": "L4",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "MRK"
+        ],
+        "non_junction_centerline_distance_m": 45.68349,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 20.68349,
+        "route_a": "L5",
+        "route_b": "L6"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 115.761545,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 90.261545,
+        "route_a": "L5",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [
+          "GN"
+        ],
+        "non_junction_centerline_distance_m": 46.482538,
+        "pass": true,
+        "required_centerline_distance_m": 27.5,
+        "residual_margin_m": 18.982538,
+        "route_a": "L5",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.621488,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 98.121488,
+        "route_a": "L5",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.983739,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 98.483739,
+        "route_a": "L5",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 80.0,
+        "pass": true,
+        "required_centerline_distance_m": 28.5,
+        "residual_margin_m": 51.5,
+        "route_a": "L5",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "WRK"
+        ],
+        "non_junction_centerline_distance_m": 36.605831,
+        "pass": true,
+        "required_centerline_distance_m": 25.5,
+        "residual_margin_m": 11.105831,
+        "route_a": "L6",
+        "route_b": "L7"
+      },
+      {
+        "junction_exceptions": [
+          "WRK"
+        ],
+        "non_junction_centerline_distance_m": 42.319305,
+        "pass": true,
+        "required_centerline_distance_m": 27.5,
+        "residual_margin_m": 14.819305,
+        "route_a": "L6",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 122.983739,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 98.483739,
+        "route_a": "L6",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 106.080691,
+        "pass": true,
+        "required_centerline_distance_m": 24.5,
+        "residual_margin_m": 81.580691,
+        "route_a": "L6",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 179.234483,
+        "pass": true,
+        "required_centerline_distance_m": 28.5,
+        "residual_margin_m": 150.734483,
+        "route_a": "L6",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [
+          "WRK"
+        ],
+        "non_junction_centerline_distance_m": 44.612158,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 16.612158,
+        "route_a": "L7",
+        "route_b": "R0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 233.076515,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 208.076515,
+        "route_a": "L7",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 72.111026,
+        "pass": true,
+        "required_centerline_distance_m": 25.0,
+        "residual_margin_m": 47.111026,
+        "route_a": "L7",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 179.234483,
+        "pass": true,
+        "required_centerline_distance_m": 29.0,
+        "residual_margin_m": 150.234483,
+        "route_a": "L7",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 232.647802,
+        "pass": true,
+        "required_centerline_distance_m": 27.0,
+        "residual_margin_m": 205.647802,
+        "route_a": "R0",
+        "route_b": "S0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 131.529464,
+        "pass": true,
+        "required_centerline_distance_m": 27.0,
+        "residual_margin_m": 104.529464,
+        "route_a": "R0",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 80.0,
+        "pass": true,
+        "required_centerline_distance_m": 31.0,
+        "residual_margin_m": 49.0,
+        "route_a": "R0",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 90.0,
+        "pass": true,
+        "required_centerline_distance_m": 24.0,
+        "residual_margin_m": 66.0,
+        "route_a": "S0",
+        "route_b": "S1"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 145.773797,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 117.773797,
+        "route_a": "S0",
+        "route_b": "X0"
+      },
+      {
+        "junction_exceptions": [],
+        "non_junction_centerline_distance_m": 305.491407,
+        "pass": true,
+        "required_centerline_distance_m": 28.0,
+        "residual_margin_m": 277.491407,
+        "route_a": "S1",
+        "route_b": "X0"
+      }
+    ]
+  },
+  "schema": "district_zero.p1a.static_spatial_validation.v1",
+  "southern_annulus": {
+    "cell_size_m": 1.0,
+    "component_cell_counts": [
+      7535,
+      2254
+    ],
+    "component_count": 2,
+    "connectivity": 4,
+    "grid_origin_xz_m": [
+      -330.0,
+      -315.0
+    ],
+    "height": 601,
+    "mask_sha256": "ce0f1a46c611c1c167b72f983f867f9963d5e26a3855934da631695b07038840",
+    "probes": {
+      "GE_EXTERIOR": {
+        "component_id": 1,
+        "grid_ix_iz": [
+          513,
+          335
+        ],
+        "requested_xz_m": [
+          183.170092,
+          19.948466
+        ],
+        "walkable": true
+      },
+      "GW_EXTERIOR": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          140,
+          346
+        ],
+        "requested_xz_m": [
+          -189.512195,
+          30.609756
+        ],
+        "walkable": true
+      }
+    },
+    "walkable_cell_count": 9789,
+    "width": 661
+  },
+  "status_boundary": {
+    "CODE_VERIFIABLE": "PASS for rows in this file",
+    "GODOT_RUNTIME": "NOT PERFORMED",
+    "HUMAN_ONLY": "NOT PERFORMED"
+  },
+  "terrain": {
+    "fall_reset_y_m": -12.0,
+    "heightfield_raw_sha256": "f377a1034406ee2f35232c01f6cb80be8dd43d13267e3821d1edcab9a9735b88",
+    "maximum_y_m": 1.6,
+    "minimum_margin_above_fall_reset_m": 10.2,
+    "minimum_y_m": -1.8,
+    "surface_mask_raw_sha256": "3d7466384a52bb8033e5fad5acd014a2daedec76475d5ad21ff13a94cee73949"
+  }
+}

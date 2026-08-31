@@ -1,0 +1,17 @@
+{
+  "P1B": "FROZEN",
+  "checksum_inventory_required": true,
+  "human_attempts_consumed": 0,
+  "human_world_gate": "NOT PERFORMED",
+  "required_stages": [
+    "STATIC_VERIFIER",
+    "C1_INSTRUMENTATION_INACTIVE",
+    "NATIVE_FREE_ROAM_BEFORE_AFTER",
+    "NATIVE_A1_BEFORE_AFTER",
+    "RAY_CLASSIFICATION_REPEAT",
+    "LAUNCHER_SMOKE_75S"
+  ],
+  "required_terminal_status": "READY FOR A1 HUMAN FEASIBILITY CAPTURE",
+  "schema": "district_zero.p1a.v1_2_6.release_evidence_contract.v1",
+  "standalone_zip_required": true
+}

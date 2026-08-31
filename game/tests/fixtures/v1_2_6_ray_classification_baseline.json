@@ -1,0 +1,173 @@
+{
+  "a1": {
+    "camera": {
+      "far_m": 900.0,
+      "fov_degrees": 73.5,
+      "global_position_xyz_m": [
+        -170.385955810547,
+        6.35000038146973,
+        43.4912338256836
+      ],
+      "near_m": 0.119999997317791
+    },
+    "records": {
+      "BACKGROUND_ABOVE_STRUCTURE": {
+        "classification": "GENUINE_EMPTY_SPACE",
+        "collision_node": null,
+        "collision_source_geometry_id": null,
+        "normalized_screen_xy": [
+          0.550000011920929,
+          0.100000001490116
+        ],
+        "render_node": null
+      },
+      "CENTER_DARK_BETWEEN_STRUCTURES": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.490000009536743,
+          0.419999986886978
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldVisual"
+      },
+      "CENTER_DARK_DRIVABLE": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.469999998807907,
+          0.829999983310699
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/GW_Marker"
+      },
+      "LEFT_DARK_REGION": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.0599999986588955,
+          0.509999990463257
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldVisual"
+      },
+      "LEFT_GREY_STRUCTURE": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/MESH_OUTER_CLOSURE_Collision",
+        "collision_source_geometry_id": "OUTER_CLOSURE_MASK",
+        "normalized_screen_xy": [
+          0.200000002980232,
+          0.340000003576279
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/MESH_OUTER_CLOSURE_Visual"
+      },
+      "RIGHT_SMALL_DARK_TRIANGLE": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.675000011920929,
+          0.469999998807907
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldVisual"
+      },
+      "RIGHT_STRIPED_GREY_STRUCTURE": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/MESH_CORE_WALL_Collision",
+        "collision_source_geometry_id": "CORE_WALL",
+        "normalized_screen_xy": [
+          0.600000023841858,
+          0.430000007152557
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/MESH_CORE_WALL_Visual"
+      }
+    }
+  },
+  "comparison_rule": "classification, collision node/source geometry, and render node must remain identical; render triangle/vertex indices may differ only because the v1.2.6 render-only vertex split preserves source triangle order",
+  "engine": "4.7.1.stable.official.a13da4feb",
+  "free_roam": {
+    "camera": {
+      "far_m": 900.0,
+      "fov_degrees": 68.0,
+      "global_position_xyz_m": [
+        -7.76739358901978,
+        6.3713321685791,
+        16.5478115081787
+      ],
+      "near_m": 0.119999997317791
+    },
+    "records": {
+      "BACKGROUND_ABOVE_STRUCTURE": {
+        "classification": "GENUINE_EMPTY_SPACE",
+        "collision_node": null,
+        "collision_source_geometry_id": null,
+        "normalized_screen_xy": [
+          0.626999974250793,
+          0.0860000029206276
+        ],
+        "render_node": null
+      },
+      "CENTER_DARK_DRIVABLE": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.5,
+          0.709999978542328
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/MRK_Marker"
+      },
+      "CENTER_STRUCTURE_APERTURE": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.517000019550323,
+          0.319999992847443
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldVisual"
+      },
+      "LEFT_DARK_REGION": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.275000005960464,
+          0.545000016689301
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldVisual"
+      },
+      "LEFT_STRUCTURE_APERTURE": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/MESH_CORE_PLINTH_Collision",
+        "collision_source_geometry_id": "CORE_PLINTH_MASK",
+        "normalized_screen_xy": [
+          0.291999995708466,
+          0.319999992847443
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/MESH_CORE_PLINTH_Visual"
+      },
+      "RIGHT_JAGGED_DARK_REGION": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.759999990463257,
+          0.529999971389771
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldVisual"
+      },
+      "VISIBLE_GREY_STRUCTURE": {
+        "classification": "RENDERED_AND_COLLIDABLE_SURFACE",
+        "collision_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldCollision",
+        "collision_source_geometry_id": "HEIGHTFIELD_SUPPORT",
+        "normalized_screen_xy": [
+          0.446999996900558,
+          0.414000004529953
+        ],
+        "render_node": "/root/DistrictZeroP1A/World/FrozenHeightfieldVisual"
+      }
+    }
+  },
+  "schema": "district_zero.p1a.v1_2_6.ray_classification_baseline.v1"
+}

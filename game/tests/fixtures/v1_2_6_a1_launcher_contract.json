@@ -1,0 +1,93 @@
+{
+  "abnormal_exit": {
+    "attempt_consumed": false,
+    "automatic_retry": false,
+    "classification": "BLOCKED/NOT TESTABLE — MACOS GODOT RUNTIME",
+    "preserve_before_return": true,
+    "requirements": [
+      "retain launcher and child argv/stdout/stderr/engine logs/PID/timestamps/exit status",
+      "retain macOS crash report when discoverable without deleting or altering it",
+      "quarantine partial attempt directory as abnormal-exit evidence; never finalize it as human FAIL",
+      "finalize checksummed launcher evidence ZIP before returning"
+    ],
+    "session_reuse_after_abnormal_exit": false
+  },
+  "capture_semantics_version": "v1.2.5",
+  "filename": "START_A1_CAPTURE.command",
+  "human_entrypoint": "double-click START_A1_CAPTURE.command",
+  "launch_command_contract": {
+    "arguments": [
+      "--stage",
+      "capture",
+      "--route",
+      "A1",
+      "--godot",
+      "<session>/engine/Godot",
+      "--baseline-root",
+      "<session>/inputs/v1_2_5_baseline",
+      "--p0-root",
+      "<session>/inputs/p0",
+      "--session-root",
+      "<session>",
+      "--standalone-evidence-zip",
+      "<session>/launcher_evidence/A1_CAPTURE_EVIDENCE.zip"
+    ],
+    "cwd": "<session>/project",
+    "editor_forbidden": true,
+    "program": "project/tools/run_human_feasibility_session.py",
+    "standalone_game_process_required": true
+  },
+  "launcher_evidence_minimum": [
+    "launcher_argv.json",
+    "launcher_cwd.txt",
+    "launcher_engine_identity.json",
+    "launcher_process.json",
+    "launcher_stdout.txt",
+    "launcher_stderr.txt",
+    "launcher_timestamps.json",
+    "child_evidence_zip_identity.json",
+    "SHA256SUMS.txt"
+  ],
+  "ordinary_project_entrypoint_label": "DIAGNOSTIC FREE ROAM — NOT HUMAN CAPTURE",
+  "overlay_authority_version": "v1.2.6",
+  "prelaunch_checks": [
+    "resolve session root from launcher file directory, never current working directory",
+    "SESSION_MANIFEST schema/authority/session UUID and A1 binding valid",
+    "manifest supersedes incident transport SHA 9ecddef5a6f38d590fc97666b9e55c27e6c389b4ee1ba82a39eaa4f86a96c231",
+    "manifest explicitly forbids original session reuse",
+    "engine/Godot resolves and reports exact engine identity",
+    "project and session checksum inventories match",
+    "session_state prepared is true and A1/A2/X0 capture/replay remain NOT PERFORMED",
+    "no routes/A1 capture, selected trace, finalized marker, prior launcher-used marker, or inconsistent evidence package exists",
+    "prepared session is not the blocked original and has a new v1.2.6 UUID"
+  ],
+  "prepared_session_layout": {
+    "baseline_relative_path": "inputs/v1_2_5_baseline",
+    "engine_relative_path": "engine/Godot",
+    "launcher": "START_A1_CAPTURE.command",
+    "launcher_evidence_root": "launcher_evidence",
+    "manifest": "SESSION_MANIFEST.json",
+    "p0_relative_path": "inputs/p0",
+    "project_relative_path": "project",
+    "state": "session_state.json"
+  },
+  "process_record_fields": [
+    "pid",
+    "started_utc",
+    "ended_utc",
+    "wall_duration_s",
+    "returncode",
+    "signal_if_any",
+    "normal_exit",
+    "child_result_present",
+    "child_result_status"
+  ],
+  "route_id": "A1",
+  "schema": "district_zero.p1a.v1_2_6.a1_launcher_contract.v1",
+  "single_use": {
+    "clean completed capture also not rerunnable": true,
+    "create_marker_before_child_launch": "LAUNCH_USED.json",
+    "second_launch_rejected": true
+  },
+  "template_raw_sha256": "373b75fc46ab59c18283fe6f89aef26d22383d3bdcf9646e5e0bc42c037607be"
+}

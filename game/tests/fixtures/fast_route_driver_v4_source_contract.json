@@ -1,0 +1,58 @@
+{
+  "algorithm_authority_version": "1.2.4E",
+  "algorithm_id": "DZP1A_FORWARD_CURVATURE_BACKWARD_BRAKE_V1",
+  "core_function_contracts": {
+    "_observe_v4_route_projection": {
+      "byte_identical": true,
+      "v1_2_4g": {
+        "byte_length": 1795,
+        "sha256": "d38202fa285f881513a07a7d81f98f5f53930e16e901a45f1b6d7b7ff8b53c9a"
+      },
+      "v1_2_4h": {
+        "byte_length": 1795,
+        "sha256": "d38202fa285f881513a07a7d81f98f5f53930e16e901a45f1b6d7b7ff8b53c9a"
+      }
+    },
+    "_route_controller_v4_forward_braking_contained": {
+      "byte_identical": true,
+      "v1_2_4g": {
+        "byte_length": 4146,
+        "sha256": "a99df21dfa70c6707369c90a182a2acf0ebcbb22c285b674665445dcda31b8d0"
+      },
+      "v1_2_4h": {
+        "byte_length": 4146,
+        "sha256": "a99df21dfa70c6707369c90a182a2acf0ebcbb22c285b674665445dcda31b8d0"
+      }
+    },
+    "_v4_plan_speed_at": {
+      "byte_identical": true,
+      "v1_2_4g": {
+        "byte_length": 576,
+        "sha256": "558a38f0307c1b57dd59a17f6f175c0bd16d7646675706de8ba7d76f45101d9a"
+      },
+      "v1_2_4h": {
+        "byte_length": 576,
+        "sha256": "558a38f0307c1b57dd59a17f6f175c0bd16d7646675706de8ba7d76f45101d9a"
+      }
+    },
+    "_v4_speed_plan": {
+      "byte_identical": true,
+      "v1_2_4g": {
+        "byte_length": 2015,
+        "sha256": "cf97c42c76fd7df96053f589f5fc8b641d49d87bb59a388c114af9dcb30e2a46"
+      },
+      "v1_2_4h": {
+        "byte_length": 2015,
+        "sha256": "cf97c42c76fd7df96053f589f5fc8b641d49d87bb59a388c114af9dcb30e2a46"
+      }
+    }
+  },
+  "current_execution_overlay_version": "1.2.4H",
+  "historical_A1_disposition": "TEST_DRIVER — V4_INERTIAL_COURSE_CONTROL_INSUFFICIENT",
+  "historical_evidence_root": "evidence/historical/v1_2_4g_valid_fail_misclassified",
+  "historical_parse_overlay_version": "1.2.4G",
+  "not_current_fast_route_authority": true,
+  "schema": "district_zero.p1a.fast_route_driver_v4_historical_contract.v1",
+  "status": "HISTORICAL_SUPERSEDED_FOR_A1_A2_X0",
+  "wrapper_disposition": "TEST_HARNESS — VALID_FAIL_EXIT_CONTRACT_MISCLASSIFIED"
+}

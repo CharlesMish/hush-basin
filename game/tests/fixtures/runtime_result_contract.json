@@ -1,0 +1,115 @@
+{
+  "blocked_exit_code": 2,
+  "cases": [
+    {
+      "executed": true,
+      "expected": "PASS",
+      "id": "PASS_0",
+      "launch_errors": [],
+      "post_event_count": 0,
+      "pre_event_count": 2,
+      "raw_status": "PASS",
+      "requested_id": "RT_ROUTE_A1",
+      "returncode": 0
+    },
+    {
+      "executed": true,
+      "expected": "FAIL",
+      "id": "FAIL_1",
+      "launch_errors": [],
+      "post_event_count": 0,
+      "pre_event_count": 2,
+      "raw_status": "FAIL",
+      "requested_id": "RT_ROUTE_A1",
+      "returncode": 1
+    },
+    {
+      "executed": false,
+      "expected": "BLOCKED/NOT TESTABLE",
+      "id": "MISSING_RESULT",
+      "launch_errors": [],
+      "post_event_count": 0,
+      "pre_event_count": 2,
+      "raw_status": null,
+      "requested_id": "RT_ROUTE_A1",
+      "returncode": 0
+    },
+    {
+      "executed": false,
+      "expected": "BLOCKED/NOT TESTABLE",
+      "id": "WRONG_CODE",
+      "launch_errors": [],
+      "post_event_count": 0,
+      "pre_event_count": 2,
+      "raw_status": "FAIL",
+      "requested_id": "RT_ROUTE_A1",
+      "returncode": 0
+    },
+    {
+      "executed": false,
+      "expected": "BLOCKED/NOT TESTABLE",
+      "id": "PARSE_ERROR",
+      "launch_errors": [
+        "Parse Error: fixture"
+      ],
+      "post_event_count": 0,
+      "pre_event_count": 2,
+      "raw_status": "PASS",
+      "requested_id": "RT_ROUTE_A1",
+      "returncode": 0
+    },
+    {
+      "executed": false,
+      "expected": "BLOCKED/NOT TESTABLE",
+      "id": "ZERO_EVENTS",
+      "launch_errors": [],
+      "post_event_count": 0,
+      "pre_event_count": 0,
+      "raw_status": "PASS",
+      "requested_id": "RT_ROUTE_A1",
+      "returncode": 0
+    },
+    {
+      "executed": false,
+      "expected": "BLOCKED/NOT TESTABLE",
+      "id": "POST_RESULT_EVENT",
+      "launch_errors": [],
+      "post_event_count": 1,
+      "pre_event_count": 2,
+      "raw_status": "FAIL",
+      "requested_id": "RT_ROUTE_A1",
+      "returncode": 1
+    },
+    {
+      "executed": false,
+      "expected": "BLOCKED/NOT TESTABLE",
+      "id": "BLOCKED_2",
+      "launch_errors": [],
+      "post_event_count": 0,
+      "pre_event_count": 0,
+      "raw_status": "BLOCKED/NOT TESTABLE",
+      "requested_id": "RT_ROUTE_A1",
+      "returncode": 2
+    }
+  ],
+  "contract_id": "DZP1A_RUNTIME_RESULT_EXIT_V1",
+  "executed_status_exit_map": {
+    "FAIL": 1,
+    "PASS": 0
+  },
+  "execution_overlay_authority_version": "1.2.4J",
+  "historical_v1_2_4h_result": "V5 selection PERFORMED; 3/3 valid FAIL/1 gameplay results; no candidate selected.",
+  "raw_result_and_suite_classification_are_separate": true,
+  "required_execution_evidence": [
+    "exactly one valid P1A_RUNTIME_RESULT",
+    "matching vector ID",
+    "status PASS or FAIL",
+    "matching process exit code",
+    "positive physics_ticks",
+    "nonempty pre-result telemetry",
+    "zero post-result telemetry",
+    "no parse/load errors",
+    "terminal evidence sealed before result"
+  ],
+  "schema": "district_zero.p1a.runtime_result_exit_contract.v1_2_4j"
+}

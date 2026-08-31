@@ -1,0 +1,103 @@
+{
+  "$id": "district_zero.p1a.human_state_trace.schema.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authority_version": {
+      "const": "v1.2.5"
+    },
+    "records": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "chainage_mm": {
+            "type": "integer"
+          },
+          "fast_distance_mm": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "fold_u6": {
+            "type": "integer"
+          },
+          "lateral_mm": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "physics_tick": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "position_mm": {
+            "items": {
+              "type": "integer"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "surface_class": {
+            "type": "integer"
+          },
+          "vector_tick": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "velocity_mmps": {
+            "items": {
+              "type": "integer"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "yaw_urad": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "chainage_mm",
+          "fast_distance_mm",
+          "fold_u6",
+          "lateral_mm",
+          "physics_tick",
+          "position_mm",
+          "surface_class",
+          "vector_tick",
+          "velocity_mmps",
+          "yaw_urad"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "route_id": {
+      "enum": [
+        "A1",
+        "A2",
+        "X0"
+      ]
+    },
+    "schema": {
+      "const": "district_zero.p1a.human_state_trace.v1"
+    },
+    "serialization_contract": {
+      "const": "tests/fixtures/human_trace_serialization_contract.json"
+    },
+    "trace_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "authority_version",
+    "serialization_contract",
+    "trace_id",
+    "route_id",
+    "records"
+  ],
+  "title": "District Zero canonical quantized state trace",
+  "type": "object"
+}

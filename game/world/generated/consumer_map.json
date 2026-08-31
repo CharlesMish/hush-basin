@@ -1,0 +1,59 @@
+{
+  "authority_version": "1.2",
+  "consumers": {
+    "collision_support": {
+      "heightfield": "world/generated/heightfield_i16le.bin",
+      "required_mesh_ids": [
+        "MESH_CORE_PLINTH",
+        "MESH_OUTER_CLOSURE",
+        "MESH_CORE_WALL",
+        "MESH_OUTER_WALL",
+        "MESH_HOP_BAR_01"
+      ],
+      "solid_meshes": "world/generated/solid_meshes.json"
+    },
+    "map": {
+      "region_and_gate_arrays": "world/generated/geometry_polygons.json",
+      "route_arrays": "world/generated/route_bake.json"
+    },
+    "rendered_support": {
+      "heightfield": "world/generated/heightfield_i16le.bin",
+      "solid_meshes": "world/generated/solid_meshes.json",
+      "surface_classes": "world/generated/surface_classes_u8.bin"
+    },
+    "road_render_bands": {
+      "polygon_arrays": "world/generated/geometry_polygons.json",
+      "route_arrays": "world/generated/route_bake.json",
+      "triangulations": "world/generated/planar_triangulations.json"
+    },
+    "telemetry": {
+      "event_contract": "tests/fixtures/telemetry_event_schema.json",
+      "route_arrays": "world/generated/route_bake.json",
+      "route_operational_and_junction_arrays": "world/generated/geometry_polygons.json"
+    },
+    "terrain_carving": {
+      "authoritative_result": "world/generated/heightfield_i16le.bin",
+      "explanation": "the director-generated final support surface already incorporates road, shoulder, bank, junction, pad, and roughness evaluation",
+      "runtime_operation": "NONE"
+    },
+    "validation": {
+      "expected_results": "world/generated/spatial_validation.json",
+      "heightfield": "world/generated/heightfield_i16le.bin",
+      "polygon_arrays": "world/generated/geometry_polygons.json",
+      "route_arrays": "world/generated/route_bake.json",
+      "solid_meshes": "world/generated/solid_meshes.json",
+      "surface_classes": "world/generated/surface_classes_u8.bin",
+      "triangulations": "world/generated/planar_triangulations.json"
+    }
+  },
+  "forbidden_parallel_sources": [
+    "anchor polylines as runtime geometry",
+    "Godot Curve3D resmoothing",
+    "Godot Boolean polygon compilation",
+    "runtime/editor triangulation",
+    "independently drawn map curves",
+    "independently sampled telemetry splines"
+  ],
+  "identity_rule": "Every adapter opens the shipped raw bytes named here. No adapter regenerates, resmooths, Boolean-compiles, triangulates, or reserializes identity data.",
+  "schema": "district_zero.p1a.consumer_map.v1"
+}

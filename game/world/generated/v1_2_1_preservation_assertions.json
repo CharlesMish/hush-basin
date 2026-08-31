@@ -1,0 +1,592 @@
+{
+  "authority_version": "1.2.1",
+  "baseline_authority_version": "1.2",
+  "changed_geometry_components_only": {
+    "CORE_PLINTH_MASK_C01": {
+      "reconstructing_v1_2_by_single_insertion_matches": true,
+      "removed_exact_vertex_xz_m": [
+        170.0,
+        35.0
+      ],
+      "v1_2_1_component_compact_sha256": "1ed43d9cfa51619412de8365a4f2c55060f6a8551763cc1bf6a2173a247046fd",
+      "v1_2_1_exterior_compact_sha256": "3c5b9e59ee0bcf075ecb535598ec31a4034bb79534961b1767ec0c9492b0d23d",
+      "v1_2_1_vertex_count": 1258,
+      "v1_2_component_compact_sha256": "9c51d7f60e5571755fa67a405be76d329a8702366d25d4bfa2ddfb44e486a692",
+      "v1_2_exterior_compact_sha256": "16c07d2c1981e93ff7330a81743281fbcc19fcd3e31fcf24e904e08448ce200d",
+      "v1_2_insertion_index": 1251,
+      "v1_2_vertex_count": 1259
+    },
+    "CORE_PLINTH_MASK_C02": {
+      "reconstructing_v1_2_by_single_insertion_matches": true,
+      "removed_exact_vertex_xz_m": [
+        -170.0,
+        35.0
+      ],
+      "v1_2_1_component_compact_sha256": "2af4938dc1e8962a3865454fa3607e642de6c21764a3f5c09e783fcde9bf05b9",
+      "v1_2_1_exterior_compact_sha256": "5633004c7755d9701a0416c28d7fb27eafae796d55dc50b07540be66b4abd111",
+      "v1_2_1_vertex_count": 679,
+      "v1_2_component_compact_sha256": "b65e94b06fe09a8fa34d181266b3655a9b8f2c2603e8035990f12215331e68e4",
+      "v1_2_exterior_compact_sha256": "41e6f8d9820c9788af94748a227228364b239a9251bd8fb6969079cd83aa713d",
+      "v1_2_insertion_index": 0,
+      "v1_2_vertex_count": 680
+    }
+  },
+  "core_plinth_unaffected_components_required_compact_byte_identical": {
+    "byte_identical": true,
+    "component_ids": [
+      "CORE_PLINTH_MASK_C03",
+      "CORE_PLINTH_MASK_C04",
+      "CORE_PLINTH_MASK_C05",
+      "CORE_PLINTH_MASK_C06",
+      "CORE_PLINTH_MASK_C07"
+    ],
+    "v1_2_1_compact_sha256": "bea876a269447aeb66caf8d475a5ac0dc2caabbfdcb4d9b9d627b287fb02138a",
+    "v1_2_compact_sha256": "bea876a269447aeb66caf8d475a5ac0dc2caabbfdcb4d9b9d627b287fb02138a"
+  },
+  "generation_verification": {
+    "all_geometry_group_assertions_pass": true,
+    "all_manifest_section_assertions_pass": true,
+    "all_raw_file_assertions_pass": true,
+    "all_solid_mesh_array_group_assertions_pass": true,
+    "all_triangulation_group_assertions_pass": true,
+    "core_plinth_unaffected_components_pass": true,
+    "each_permitted_component_is_exactly_one_vertex_deletion": true
+  },
+  "geometry_record_groups_required_compact_byte_identical": {
+    "ALL_GEOMETRY_EXCEPT_CORE_PLINTH_MASK": {
+      "byte_identical": true,
+      "geometry_ids": [
+        "CORE_REGION",
+        "CORE_WALL",
+        "CRAFT_CENTER_SPACE",
+        "GATE_GE_APERTURE",
+        "GATE_GE_VISUAL_BAND",
+        "GATE_GN_APERTURE",
+        "GATE_GN_VISUAL_BAND",
+        "GATE_GW_APERTURE",
+        "GATE_GW_VISUAL_BAND",
+        "HARD_OBSTACLE_UNION",
+        "HOP_BAR_01",
+        "JUNCTION_CLN",
+        "JUNCTION_DEP",
+        "JUNCTION_GE",
+        "JUNCTION_GN",
+        "JUNCTION_GW",
+        "JUNCTION_HJE",
+        "JUNCTION_HJW",
+        "JUNCTION_MRK",
+        "JUNCTION_QRY",
+        "JUNCTION_RLY",
+        "JUNCTION_WRK",
+        "OUTER_CLOSURE_MASK",
+        "OUTER_ENVELOPE",
+        "OUTER_WALL",
+        "PAD_CLN",
+        "PAD_DEP",
+        "PAD_MRK",
+        "PAD_QRY",
+        "PAD_RLY",
+        "PAD_WRK",
+        "PLAYABLE_MASK",
+        "QRY_BOWL",
+        "RLY_SHELF",
+        "ROUTE_A0_BANK",
+        "ROUTE_A0_OPERATIONAL",
+        "ROUTE_A0_ROADBED",
+        "ROUTE_A0_SHOULDER",
+        "ROUTE_A1_BANK",
+        "ROUTE_A1_OPERATIONAL",
+        "ROUTE_A1_ROADBED",
+        "ROUTE_A1_SHOULDER",
+        "ROUTE_A2_BANK",
+        "ROUTE_A2_OPERATIONAL",
+        "ROUTE_A2_ROADBED",
+        "ROUTE_A2_SHOULDER",
+        "ROUTE_DOG_BANK",
+        "ROUTE_DOG_OPERATIONAL",
+        "ROUTE_DOG_ROADBED",
+        "ROUTE_DOG_SHOULDER",
+        "ROUTE_HOP_BANK",
+        "ROUTE_HOP_OPERATIONAL",
+        "ROUTE_HOP_ROADBED",
+        "ROUTE_HOP_SHOULDER",
+        "ROUTE_L0_BANK",
+        "ROUTE_L0_OPERATIONAL",
+        "ROUTE_L0_ROADBED",
+        "ROUTE_L0_SHOULDER",
+        "ROUTE_L1_BANK",
+        "ROUTE_L1_OPERATIONAL",
+        "ROUTE_L1_ROADBED",
+        "ROUTE_L1_SHOULDER",
+        "ROUTE_L2_BANK",
+        "ROUTE_L2_OPERATIONAL",
+        "ROUTE_L2_ROADBED",
+        "ROUTE_L2_SHOULDER",
+        "ROUTE_L3_BANK",
+        "ROUTE_L3_OPERATIONAL",
+        "ROUTE_L3_ROADBED",
+        "ROUTE_L3_SHOULDER",
+        "ROUTE_L4_BANK",
+        "ROUTE_L4_OPERATIONAL",
+        "ROUTE_L4_ROADBED",
+        "ROUTE_L4_SHOULDER",
+        "ROUTE_L5_BANK",
+        "ROUTE_L5_OPERATIONAL",
+        "ROUTE_L5_ROADBED",
+        "ROUTE_L5_SHOULDER",
+        "ROUTE_L6_BANK",
+        "ROUTE_L6_OPERATIONAL",
+        "ROUTE_L6_ROADBED",
+        "ROUTE_L6_SHOULDER",
+        "ROUTE_L7_BANK",
+        "ROUTE_L7_OPERATIONAL",
+        "ROUTE_L7_ROADBED",
+        "ROUTE_L7_SHOULDER",
+        "ROUTE_R0_BANK",
+        "ROUTE_R0_OPERATIONAL",
+        "ROUTE_R0_ROADBED",
+        "ROUTE_R0_SHOULDER",
+        "ROUTE_S0_BANK",
+        "ROUTE_S0_OPERATIONAL",
+        "ROUTE_S0_ROADBED",
+        "ROUTE_S0_SHOULDER",
+        "ROUTE_S1_BANK",
+        "ROUTE_S1_OPERATIONAL",
+        "ROUTE_S1_ROADBED",
+        "ROUTE_S1_SHOULDER",
+        "ROUTE_X0_BANK",
+        "ROUTE_X0_OPERATIONAL",
+        "ROUTE_X0_ROADBED",
+        "ROUTE_X0_SHOULDER",
+        "WALKABLE_GROUND"
+      ],
+      "v1_2_1_compact_sha256": "41217ac36f9ea2b1bd79929bd906db6984890279f530cd4876dcb042e29bd7f7",
+      "v1_2_compact_sha256": "41217ac36f9ea2b1bd79929bd906db6984890279f530cd4876dcb042e29bd7f7"
+    },
+    "APERTURES": {
+      "byte_identical": true,
+      "geometry_ids": [
+        "GATE_GE_APERTURE",
+        "GATE_GN_APERTURE",
+        "GATE_GW_APERTURE"
+      ],
+      "v1_2_1_compact_sha256": "bc62af09b41e54c6c535b8b3bcc574884c01811ad29551fe5a9575507b3e19a0",
+      "v1_2_compact_sha256": "bc62af09b41e54c6c535b8b3bcc574884c01811ad29551fe5a9575507b3e19a0"
+    },
+    "BOUNDARY_AND_REGION_MASKS": {
+      "byte_identical": true,
+      "geometry_ids": [
+        "CORE_REGION",
+        "CORE_WALL",
+        "OUTER_CLOSURE_MASK",
+        "OUTER_ENVELOPE",
+        "OUTER_WALL",
+        "HOP_BAR_01"
+      ],
+      "v1_2_1_compact_sha256": "124d42d90c7adba266e9c0abace7c7b6a561a8c5671ff2613954429d2fe3b8aa",
+      "v1_2_compact_sha256": "124d42d90c7adba266e9c0abace7c7b6a561a8c5671ff2613954429d2fe3b8aa"
+    },
+    "PASSABILITY_SETS": {
+      "byte_identical": true,
+      "geometry_ids": [
+        "PLAYABLE_MASK",
+        "WALKABLE_GROUND",
+        "CRAFT_CENTER_SPACE",
+        "HARD_OBSTACLE_UNION"
+      ],
+      "v1_2_1_compact_sha256": "dd6c32f92275ee2a127448808a299d2e06dd9bd2b3543a31537a52a2b907f189",
+      "v1_2_compact_sha256": "dd6c32f92275ee2a127448808a299d2e06dd9bd2b3543a31537a52a2b907f189"
+    },
+    "ROUTE_OPERATIONAL_ROADBEDS_SHOULDERS_BANKS": {
+      "byte_identical": true,
+      "geometry_ids": [
+        "ROUTE_A0_BANK",
+        "ROUTE_A0_OPERATIONAL",
+        "ROUTE_A0_ROADBED",
+        "ROUTE_A0_SHOULDER",
+        "ROUTE_A1_BANK",
+        "ROUTE_A1_OPERATIONAL",
+        "ROUTE_A1_ROADBED",
+        "ROUTE_A1_SHOULDER",
+        "ROUTE_A2_BANK",
+        "ROUTE_A2_OPERATIONAL",
+        "ROUTE_A2_ROADBED",
+        "ROUTE_A2_SHOULDER",
+        "ROUTE_DOG_BANK",
+        "ROUTE_DOG_OPERATIONAL",
+        "ROUTE_DOG_ROADBED",
+        "ROUTE_DOG_SHOULDER",
+        "ROUTE_HOP_BANK",
+        "ROUTE_HOP_OPERATIONAL",
+        "ROUTE_HOP_ROADBED",
+        "ROUTE_HOP_SHOULDER",
+        "ROUTE_L0_BANK",
+        "ROUTE_L0_OPERATIONAL",
+        "ROUTE_L0_ROADBED",
+        "ROUTE_L0_SHOULDER",
+        "ROUTE_L1_BANK",
+        "ROUTE_L1_OPERATIONAL",
+        "ROUTE_L1_ROADBED",
+        "ROUTE_L1_SHOULDER",
+        "ROUTE_L2_BANK",
+        "ROUTE_L2_OPERATIONAL",
+        "ROUTE_L2_ROADBED",
+        "ROUTE_L2_SHOULDER",
+        "ROUTE_L3_BANK",
+        "ROUTE_L3_OPERATIONAL",
+        "ROUTE_L3_ROADBED",
+        "ROUTE_L3_SHOULDER",
+        "ROUTE_L4_BANK",
+        "ROUTE_L4_OPERATIONAL",
+        "ROUTE_L4_ROADBED",
+        "ROUTE_L4_SHOULDER",
+        "ROUTE_L5_BANK",
+        "ROUTE_L5_OPERATIONAL",
+        "ROUTE_L5_ROADBED",
+        "ROUTE_L5_SHOULDER",
+        "ROUTE_L6_BANK",
+        "ROUTE_L6_OPERATIONAL",
+        "ROUTE_L6_ROADBED",
+        "ROUTE_L6_SHOULDER",
+        "ROUTE_L7_BANK",
+        "ROUTE_L7_OPERATIONAL",
+        "ROUTE_L7_ROADBED",
+        "ROUTE_L7_SHOULDER",
+        "ROUTE_R0_BANK",
+        "ROUTE_R0_OPERATIONAL",
+        "ROUTE_R0_ROADBED",
+        "ROUTE_R0_SHOULDER",
+        "ROUTE_S0_BANK",
+        "ROUTE_S0_OPERATIONAL",
+        "ROUTE_S0_ROADBED",
+        "ROUTE_S0_SHOULDER",
+        "ROUTE_S1_BANK",
+        "ROUTE_S1_OPERATIONAL",
+        "ROUTE_S1_ROADBED",
+        "ROUTE_S1_SHOULDER",
+        "ROUTE_X0_BANK",
+        "ROUTE_X0_OPERATIONAL",
+        "ROUTE_X0_ROADBED",
+        "ROUTE_X0_SHOULDER"
+      ],
+      "v1_2_1_compact_sha256": "2786129d55b58e989c4e90109a3e2a156a5ae11531417012be4e57a1051bd9d6",
+      "v1_2_compact_sha256": "2786129d55b58e989c4e90109a3e2a156a5ae11531417012be4e57a1051bd9d6"
+    }
+  },
+  "manifest_sections_required_compact_byte_identical": {
+    "building_masses": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "5278ba6f003b04550148b74aba4e8085ea24a09bf7c0e6f94c2b8e6fe3154571",
+      "v1_2_compact_sha256": "5278ba6f003b04550148b74aba4e8085ea24a09bf7c0e6f94c2b8e6fe3154571"
+    },
+    "destination_pads": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "5c0865ca346274d230c79b013d2efe75a9e4dabeca92d2e5b8a0f9ee2e991638",
+      "v1_2_compact_sha256": "5c0865ca346274d230c79b013d2efe75a9e4dabeca92d2e5b8a0f9ee2e991638"
+    },
+    "field": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "68bfc8bb475d8e0b0b5d0a078704e6670b2d3c0a8935ecce6083c2c44bae53c2",
+      "v1_2_compact_sha256": "68bfc8bb475d8e0b0b5d0a078704e6670b2d3c0a8935ecce6083c2c44bae53c2"
+    },
+    "gates": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "dbe27d238dc733f0574fa80d172f0b7bcd082fc67b3a856de31592879d7017e1",
+      "v1_2_compact_sha256": "dbe27d238dc733f0574fa80d172f0b7bcd082fc67b3a856de31592879d7017e1"
+    },
+    "junctions": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "954b86e1466cfabfd9f5213b68d227980a29534b9972e8c3acfb82f2192c7caa",
+      "v1_2_compact_sha256": "954b86e1466cfabfd9f5213b68d227980a29534b9972e8c3acfb82f2192c7caa"
+    },
+    "landmarks": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "cd514f49b6f6b0877118450dfe901245d63e3e8a155fc0fafcc33ad827761dc5",
+      "v1_2_compact_sha256": "cd514f49b6f6b0877118450dfe901245d63e3e8a155fc0fafcc33ad827761dc5"
+    },
+    "nodes": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "568fbab9c393a2f10df70582b7cb5bc11cd2db9a1f54125553b5968dd4e00201",
+      "v1_2_compact_sha256": "568fbab9c393a2f10df70582b7cb5bc11cd2db9a1f54125553b5968dd4e00201"
+    },
+    "product_thesis": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "13cd3b1a810ca70d96bf108fe47065332fcc0e8c4de623284181762f1a142c9c",
+      "v1_2_compact_sha256": "13cd3b1a810ca70d96bf108fe47065332fcc0e8c4de623284181762f1a142c9c"
+    },
+    "regions": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "542f06fe26948881518c3cb7e93785946d5ed803e3656badae6d495e2513a54c",
+      "v1_2_compact_sha256": "542f06fe26948881518c3cb7e93785946d5ed803e3656badae6d495e2513a54c"
+    },
+    "route_bake": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "a243b2c7fcb7547531d79b7db1efac10d07d0d50274b0bfc5f8a6d945b8ef951",
+      "v1_2_compact_sha256": "a243b2c7fcb7547531d79b7db1efac10d07d0d50274b0bfc5f8a6d945b8ef951"
+    },
+    "routes": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "23458beb9425d5d9b3d10c5ff9060644dc73bd19bd08c15336782144ecee1552",
+      "v1_2_compact_sha256": "23458beb9425d5d9b3d10c5ff9060644dc73bd19bd08c15336782144ecee1552"
+    },
+    "terrain": {
+      "byte_identical": true,
+      "v1_2_1_compact_sha256": "c3f352b42b5d6c326825d3d4298f2d69e1172ddc4fe509ac16f08e786a861059",
+      "v1_2_compact_sha256": "c3f352b42b5d6c326825d3d4298f2d69e1172ddc4fe509ac16f08e786a861059"
+    }
+  },
+  "raw_files_required_byte_identical": {
+    "world/generated/consumer_map.json": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 2485,
+        "raw_byte_sha256": "6c5c5a4acbe327d03f65ed87f57a005cf8b235b3964ac82235b4305ef1c00d03"
+      },
+      "v1_2_1": {
+        "byte_length": 2485,
+        "raw_byte_sha256": "6c5c5a4acbe327d03f65ed87f57a005cf8b235b3964ac82235b4305ef1c00d03"
+      }
+    },
+    "world/generated/flood_fill_mask_u8.bin": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 397261,
+        "raw_byte_sha256": "bcc998c5dbf54a1f8f12438277e111a8c78894c2c8ec40765f45f38ae1dffe54"
+      },
+      "v1_2_1": {
+        "byte_length": 397261,
+        "raw_byte_sha256": "bcc998c5dbf54a1f8f12438277e111a8c78894c2c8ec40765f45f38ae1dffe54"
+      }
+    },
+    "world/generated/flood_fill_metadata.json": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 4298,
+        "raw_byte_sha256": "810f936605d0ddaceaccf55e4a66185578317cacc81ad001f61f583ad6fe3c38"
+      },
+      "v1_2_1": {
+        "byte_length": 4298,
+        "raw_byte_sha256": "810f936605d0ddaceaccf55e4a66185578317cacc81ad001f61f583ad6fe3c38"
+      }
+    },
+    "world/generated/heightfield_i16le.bin": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 353682,
+        "raw_byte_sha256": "f377a1034406ee2f35232c01f6cb80be8dd43d13267e3821d1edcab9a9735b88"
+      },
+      "v1_2_1": {
+        "byte_length": 353682,
+        "raw_byte_sha256": "f377a1034406ee2f35232c01f6cb80be8dd43d13267e3821d1edcab9a9735b88"
+      }
+    },
+    "world/generated/route_bake.json": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 712606,
+        "raw_byte_sha256": "d2acb912bcebc35a325971bed2b8b33854e44d1833517423d5f52d846cf094a6"
+      },
+      "v1_2_1": {
+        "byte_length": 712606,
+        "raw_byte_sha256": "d2acb912bcebc35a325971bed2b8b33854e44d1833517423d5f52d846cf094a6"
+      }
+    },
+    "world/generated/southern_annulus_mask_u8.bin": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 397261,
+        "raw_byte_sha256": "ce0f1a46c611c1c167b72f983f867f9963d5e26a3855934da631695b07038840"
+      },
+      "v1_2_1": {
+        "byte_length": 397261,
+        "raw_byte_sha256": "ce0f1a46c611c1c167b72f983f867f9963d5e26a3855934da631695b07038840"
+      }
+    },
+    "world/generated/spatial_validation.json": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 63988,
+        "raw_byte_sha256": "e8fe90da916ecac87f14815853e023a78b7538ddd727c594e6041c6cc00691a2"
+      },
+      "v1_2_1": {
+        "byte_length": 63988,
+        "raw_byte_sha256": "e8fe90da916ecac87f14815853e023a78b7538ddd727c594e6041c6cc00691a2"
+      }
+    },
+    "world/generated/surface_classes_u8.bin": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 176841,
+        "raw_byte_sha256": "3d7466384a52bb8033e5fad5acd014a2daedec76475d5ad21ff13a94cee73949"
+      },
+      "v1_2_1": {
+        "byte_length": 176841,
+        "raw_byte_sha256": "3d7466384a52bb8033e5fad5acd014a2daedec76475d5ad21ff13a94cee73949"
+      }
+    },
+    "world/generated/terrain_metadata.json": {
+      "byte_identical": true,
+      "v1_2": {
+        "byte_length": 4802,
+        "raw_byte_sha256": "1843bd1dc20fb5d488170774437ae32839c5e117b298d22753a82a3f276bc486"
+      },
+      "v1_2_1": {
+        "byte_length": 4802,
+        "raw_byte_sha256": "1843bd1dc20fb5d488170774437ae32839c5e117b298d22753a82a3f276bc486"
+      }
+    }
+  },
+  "schema": "district_zero.p1a.v1_2_1_preservation_assertions.v1",
+  "scope": "bounded artifact/test-integrity correction; no route, node, terrain, aperture, passability, or world-design change",
+  "solid_mesh_array_groups_required_compact_byte_identical": {
+    "ALL_MESH_ARRAYS_EXCEPT_CORE_PLINTH": {
+      "byte_identical": true,
+      "mesh_ids": [
+        "MESH_B01",
+        "MESH_B02",
+        "MESH_B03",
+        "MESH_B04",
+        "MESH_B05",
+        "MESH_B06",
+        "MESH_B07",
+        "MESH_B08",
+        "MESH_B09",
+        "MESH_B10",
+        "MESH_B11",
+        "MESH_B12",
+        "MESH_B13",
+        "MESH_B14",
+        "MESH_CORE_WALL",
+        "MESH_HOP_BAR_01",
+        "MESH_OUTER_CLOSURE",
+        "MESH_OUTER_WALL"
+      ],
+      "v1_2_1_compact_sha256": "b621b3362994e6dbe7cdaf29aa0adf84a98aed283fcd596776f848afe06d54c4",
+      "v1_2_compact_sha256": "b621b3362994e6dbe7cdaf29aa0adf84a98aed283fcd596776f848afe06d54c4"
+    }
+  },
+  "triangulation_groups_required_compact_byte_identical": {
+    "ALL_RECORDS_EXCEPT_CORE_PLINTH_MASK": {
+      "byte_identical": true,
+      "triangulation_ids": [
+        "CORE_REGION",
+        "CORE_WALL",
+        "CRAFT_CENTER_SPACE",
+        "GATE_GE_APERTURE",
+        "GATE_GE_VISUAL_BAND",
+        "GATE_GN_APERTURE",
+        "GATE_GN_VISUAL_BAND",
+        "GATE_GW_APERTURE",
+        "GATE_GW_VISUAL_BAND",
+        "HARD_OBSTACLE_UNION",
+        "HOP_BAR_01",
+        "JUNCTION_CLN",
+        "JUNCTION_DEP",
+        "JUNCTION_GE",
+        "JUNCTION_GN",
+        "JUNCTION_GW",
+        "JUNCTION_HJE",
+        "JUNCTION_HJW",
+        "JUNCTION_MRK",
+        "JUNCTION_QRY",
+        "JUNCTION_RLY",
+        "JUNCTION_WRK",
+        "OUTER_CLOSURE_MASK",
+        "OUTER_ENVELOPE",
+        "OUTER_WALL",
+        "PAD_CLN",
+        "PAD_DEP",
+        "PAD_MRK",
+        "PAD_QRY",
+        "PAD_RLY",
+        "PAD_WRK",
+        "PLAYABLE_MASK",
+        "QRY_BOWL",
+        "RLY_SHELF",
+        "ROUTE_A0_BANK",
+        "ROUTE_A0_OPERATIONAL",
+        "ROUTE_A0_ROADBED",
+        "ROUTE_A0_SHOULDER",
+        "ROUTE_A1_BANK",
+        "ROUTE_A1_OPERATIONAL",
+        "ROUTE_A1_ROADBED",
+        "ROUTE_A1_SHOULDER",
+        "ROUTE_A2_BANK",
+        "ROUTE_A2_OPERATIONAL",
+        "ROUTE_A2_ROADBED",
+        "ROUTE_A2_SHOULDER",
+        "ROUTE_DOG_BANK",
+        "ROUTE_DOG_OPERATIONAL",
+        "ROUTE_DOG_ROADBED",
+        "ROUTE_DOG_SHOULDER",
+        "ROUTE_HOP_BANK",
+        "ROUTE_HOP_OPERATIONAL",
+        "ROUTE_HOP_ROADBED",
+        "ROUTE_HOP_SHOULDER",
+        "ROUTE_L0_BANK",
+        "ROUTE_L0_OPERATIONAL",
+        "ROUTE_L0_ROADBED",
+        "ROUTE_L0_SHOULDER",
+        "ROUTE_L1_BANK",
+        "ROUTE_L1_OPERATIONAL",
+        "ROUTE_L1_ROADBED",
+        "ROUTE_L1_SHOULDER",
+        "ROUTE_L2_BANK",
+        "ROUTE_L2_OPERATIONAL",
+        "ROUTE_L2_ROADBED",
+        "ROUTE_L2_SHOULDER",
+        "ROUTE_L3_BANK",
+        "ROUTE_L3_OPERATIONAL",
+        "ROUTE_L3_ROADBED",
+        "ROUTE_L3_SHOULDER",
+        "ROUTE_L4_BANK",
+        "ROUTE_L4_OPERATIONAL",
+        "ROUTE_L4_ROADBED",
+        "ROUTE_L4_SHOULDER",
+        "ROUTE_L5_BANK",
+        "ROUTE_L5_OPERATIONAL",
+        "ROUTE_L5_ROADBED",
+        "ROUTE_L5_SHOULDER",
+        "ROUTE_L6_BANK",
+        "ROUTE_L6_OPERATIONAL",
+        "ROUTE_L6_ROADBED",
+        "ROUTE_L6_SHOULDER",
+        "ROUTE_L7_BANK",
+        "ROUTE_L7_OPERATIONAL",
+        "ROUTE_L7_ROADBED",
+        "ROUTE_L7_SHOULDER",
+        "ROUTE_R0_BANK",
+        "ROUTE_R0_OPERATIONAL",
+        "ROUTE_R0_ROADBED",
+        "ROUTE_R0_SHOULDER",
+        "ROUTE_S0_BANK",
+        "ROUTE_S0_OPERATIONAL",
+        "ROUTE_S0_ROADBED",
+        "ROUTE_S0_SHOULDER",
+        "ROUTE_S1_BANK",
+        "ROUTE_S1_OPERATIONAL",
+        "ROUTE_S1_ROADBED",
+        "ROUTE_S1_SHOULDER",
+        "ROUTE_X0_BANK",
+        "ROUTE_X0_OPERATIONAL",
+        "ROUTE_X0_ROADBED",
+        "ROUTE_X0_SHOULDER",
+        "WALKABLE_GROUND"
+      ],
+      "v1_2_1_compact_sha256": "9dac78ee2e9e61ec9fcf65f61dac41895826e6675170aea6d8759de2c2d482e8",
+      "v1_2_compact_sha256": "9dac78ee2e9e61ec9fcf65f61dac41895826e6675170aea6d8759de2c2d482e8"
+    },
+    "CORE_PLINTH_UNAFFECTED_COMPONENTS": {
+      "byte_identical": true,
+      "component_ids": [
+        "CORE_PLINTH_MASK_C03",
+        "CORE_PLINTH_MASK_C04",
+        "CORE_PLINTH_MASK_C05",
+        "CORE_PLINTH_MASK_C06",
+        "CORE_PLINTH_MASK_C07"
+      ],
+      "v1_2_1_compact_sha256": "7b5248834fd50cfbf9f31d43fa7ba2a6b7897c7356cedb772844743c3d319db9",
+      "v1_2_compact_sha256": "7b5248834fd50cfbf9f31d43fa7ba2a6b7897c7356cedb772844743c3d319db9"
+    }
+  }
+}

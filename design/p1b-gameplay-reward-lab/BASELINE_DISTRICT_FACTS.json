@@ -1,0 +1,52 @@
+{
+  "schema": "district_zero.p1b.design_lab.baseline_facts.v1",
+  "source_authority": "R7 player / world v1.2.3 read-only",
+  "route_count": 17,
+  "node_count": 11,
+  "total_route_bake_points": 11252,
+  "initial_craft_classification": "JUNCTION_MRK",
+  "destination_inner_flat_radius_m": 8.0,
+  "nodes": {
+    "CLN": "DESTINATION",
+    "DEP": "DESTINATION",
+    "GE": "GATE",
+    "GN": "GATE",
+    "GW": "GATE",
+    "HJE": "JUNCTION",
+    "HJW": "JUNCTION",
+    "MRK": "DESTINATION",
+    "QRY": "DESTINATION",
+    "RLY": "DESTINATION",
+    "WRK": "DESTINATION"
+  },
+  "route_lengths_m": {
+    "A0": 76.509932,
+    "A1": 321.864198,
+    "A2": 442.281945,
+    "DOG": 124.514081,
+    "HOP": 90.0,
+    "L0": 72.32185,
+    "L1": 129.429845,
+    "L2": 129.429845,
+    "L3": 72.32185,
+    "L4": 80.0,
+    "L5": 167.795314,
+    "L6": 118.070808,
+    "L7": 122.344392,
+    "R0": 137.716327,
+    "S0": 107.177582,
+    "S1": 107.177582,
+    "X0": 499.881048
+  },
+  "existing_observation_affordances": [
+    "route entry, traversal, chainage and lateral distance",
+    "hard-collision source, contact normal and craft velocity",
+    "Hop start count",
+    "surface-class changes",
+    "reset and fall-reset events",
+    "gate crossing",
+    "map route highlighting",
+    "presentation-only VehicleVisualRig"
+  ],
+  "product_source_modified": false
+}

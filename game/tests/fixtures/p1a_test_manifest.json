@@ -1,0 +1,81 @@
+{
+  "P1B": "FROZEN",
+  "active_fast_route_algorithm_id": "DZP1A_NORMALIZED_HUMAN_INPUT_REPLAY_V1",
+  "active_fast_route_controller": "NORMALIZED_INPUT_TRACE_REPLAY_V1",
+  "authorized_sequence": [
+    {
+      "action": "Codex implements the exact capture/replay contract; packet, J baseline, J evidence, P0, selected/frozen bytes, exact engine, import, and runner parse must pass",
+      "checkpoint": "C0",
+      "stop_on_failure": true
+    },
+    {
+      "action": "A1 non-evidentiary familiarization <=300 s, then <=5 recorded attempts; select first full PASS",
+      "checkpoint": "F1",
+      "failure": "HUMAN FEASIBILITY NOT ESTABLISHED — A1",
+      "stop_on_failure": true
+    },
+    {
+      "action": "Replay selected A1 trace three times from identical state; each metrics PASS and determinism contract PASS",
+      "checkpoint": "R1",
+      "stop_on_failure": true
+    },
+    {
+      "action": "A2 familiarization/capture/replay under the same bounds",
+      "checkpoint": "F2",
+      "failure": "HUMAN FEASIBILITY NOT ESTABLISHED — A2",
+      "stop_on_failure": true
+    },
+    {
+      "action": "X0 familiarization/capture/replay under the same bounds",
+      "checkpoint": "F3",
+      "failure": "HUMAN FEASIBILITY NOT ESTABLISHED — X0",
+      "stop_on_failure": true
+    },
+    {
+      "action": "behavior-neutral selected-project baseline comparison with instrumentation inactive",
+      "checkpoint": "C1",
+      "pass": "maximum delta 0.0",
+      "stop_on_failure": true
+    },
+    {
+      "action": "complete 40-vector suite; A1/A2/X0 consume selected human traces",
+      "checkpoint": "S40",
+      "pass": "40/40 PASS",
+      "stop_on_failure": true
+    },
+    {
+      "action": "authorize but do not conduct qualitative Human World Gate",
+      "checkpoint": "HG",
+      "pass": "S40 only"
+    },
+    {
+      "action": "stop before Human World Gate execution and P1B",
+      "checkpoint": "STOP"
+    }
+  ],
+  "autonomous_v4_v7_development": "RETIRED",
+  "historical_prerequisites": {
+    "isolated_hop_gate": "PASS",
+    "q1_q4": "PASS",
+    "selected_c1": {
+      "maximum_delta": 0.0,
+      "status": "PASS"
+    },
+    "v1_2_4j": {
+      "axis_sensitivity": "PASS — P/L/H active",
+      "classification": "TEST_DRIVER",
+      "evidence_sha256": "227f3aa338040f02487fea189c03a3158f97af7df9b864c8324e4b1d6685ac30",
+      "selection": "7/7 executed FAIL; no candidate selected",
+      "status": "STOP/RETHINK — AUTOMATED A1 GATE"
+    }
+  },
+  "human_world_gate": "NOT PERFORMED",
+  "schema": "district_zero.p1a.test_manifest.v1_2_5",
+  "selected_world_source": {
+    "candidate_id": "HB_TOP_1240MM",
+    "timing_offset_m": 0.0,
+    "top_y_m": 1.24
+  },
+  "test_overlay_authority_version": "v1.2.5",
+  "world_data_authority_version": "v1.2.3"
+}

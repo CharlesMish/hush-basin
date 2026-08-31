@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/craft_controller.gd" id="1_controller"]
+[ext_resource type="Resource" path="res://resources/default_tuning.tres" id="2_tuning"]
+[ext_resource type="PackedScene" path="res://scenes/vehicle_visual.tscn" id="3_visual"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape_craft"]
+radius = 0.58
+height = 1.9
+
+[sub_resource type="SphereShape3D" id="SphereShape_preview"]
+radius = 0.48
+
+[node name="Craft" type="CharacterBody3D"]
+process_mode = 3
+collision_layer = 2
+collision_mask = 1
+motion_mode = 1
+script = ExtResource("1_controller")
+tuning = ExtResource("2_tuning")
+
+[node name="FixedCollider" type="CollisionShape3D" parent="."]
+rotation = Vector3(1.5708, 0, 0)
+shape = SubResource("CapsuleShape_craft")
+
+[node name="ProbeLeft" type="RayCast3D" parent="."]
+position = Vector3(-0.48, 0, 0.52)
+target_position = Vector3(0, -3.8, 0)
+collision_mask = 1
+enabled = true
+
+[node name="ProbeRight" type="RayCast3D" parent="."]
+position = Vector3(0.48, 0, 0.52)
+target_position = Vector3(0, -3.8, 0)
+collision_mask = 1
+enabled = true
+
+[node name="ProbeRear" type="RayCast3D" parent="."]
+position = Vector3(0, 0, -0.72)
+target_position = Vector3(0, -3.8, 0)
+collision_mask = 1
+enabled = true
+
+[node name="HazardPreview" type="ShapeCast3D" parent="."]
+position = Vector3(0, -0.04, -0.25)
+shape = SubResource("SphereShape_preview")
+target_position = Vector3(0, 0, -2)
+collision_mask = 1
+exclude_parent = true
+enabled = true
+
+[node name="VisualRoot" parent="." instance=ExtResource("3_visual")]

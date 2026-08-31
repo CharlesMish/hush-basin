@@ -1,0 +1,82 @@
+{
+  "engine": "4.7.1.stable.official.a13da4feb",
+  "hard_thresholds": {
+    "each_ground_minus_same_view_background_Y_min": 0.1,
+    "left_outer_closure_minus_adjacent_ground_absolute_Y_min": 0.12,
+    "ray_classification_mismatch_count_max": 0,
+    "right_core_wall_minus_adjacent_ground_absolute_Y_min": 0.12,
+    "shadow_on_Y_min": 0.075,
+    "shadow_on_to_shadow_off_Y_ratio_min": 0.55
+  },
+  "matched_views": {
+    "A1_FAMILIARIZATION": {
+      "after_required": "evidence/v1_2_6_native_visuals/a1-after-native.png",
+      "before": "evidence/historical/v1_2_5_first_human_incident/a1-familiarization-native.png",
+      "shadow_off_required": "evidence/v1_2_6_native_visuals/a1-after-shadow-off-reference.png"
+    },
+    "FREE_ROAM": {
+      "after_required": "evidence/v1_2_6_native_visuals/free-roam-after-native.png",
+      "before": "evidence/historical/v1_2_5_first_human_incident/before-native-spawn.png",
+      "shadow_off_required": "evidence/v1_2_6_native_visuals/free-roam-after-shadow-off-reference.png"
+    }
+  },
+  "pixel_metric": {
+    "decode": "PNG sRGB channel to linear using IEC 61966-2-1 transfer, then Y=0.2126R+0.7152G+0.0722B",
+    "patch": "median of 9x9 pixels centered at normalized point",
+    "ui_pixels": "sample points are outside UI; any UI overlap invalidates capture"
+  },
+  "renderer": "Forward+",
+  "samples": {
+    "A1_FAMILIARIZATION": {
+      "background": [
+        0.55,
+        0.1
+      ],
+      "between_structures_ground": [
+        0.49,
+        0.42
+      ],
+      "left_outer_closure": [
+        0.2,
+        0.34
+      ],
+      "right_core_wall": [
+        0.6,
+        0.43
+      ],
+      "right_ground": [
+        0.675,
+        0.47
+      ]
+    },
+    "FREE_ROAM": {
+      "aperture_ground": [
+        0.517,
+        0.32
+      ],
+      "background": [
+        0.627,
+        0.086
+      ],
+      "left_ground": [
+        0.275,
+        0.545
+      ],
+      "right_ground": [
+        0.76,
+        0.53
+      ]
+    }
+  },
+  "schema": "district_zero.p1a.v1_2_6.native_visual_acceptance.v1",
+  "status_rule": "all hard thresholds and ray classifications are mandatory; screenshots and supplementary review cannot waive a failed hard condition",
+  "supplementary_human_review": [
+    "CORE_WALL planar side face shows no alternating triangle striping",
+    "apertures read as openings onto terrain rather than missing triangles",
+    "route and obstacle silhouettes remain readable under cast shadows"
+  ],
+  "viewport_px": [
+    1280,
+    720
+  ]
+}

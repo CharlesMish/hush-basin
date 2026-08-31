@@ -1,0 +1,3885 @@
+{
+  "authority_version": "v1.2.5",
+  "execution_overlay_authority_version": "1.2.4I",
+  "fixed_physics_timestep_s": 0.016666666666666666,
+  "fixture_authority_version": "1.2.4I",
+  "global_rules": {
+    "all_vectors_required": true,
+    "allowed_input_actions_exact": [
+      "brake",
+      "debug_overlay",
+      "diagnostic_menu",
+      "diagnostic_next",
+      "diagnostic_prev",
+      "diagnostic_spawn",
+      "hop",
+      "pause",
+      "reset",
+      "steer_left",
+      "steer_right",
+      "throttle",
+      "transform"
+    ],
+    "boundary_case_definitions": {
+      "DRIVE": {
+        "initial_horizontal_speed_mps": 18.0,
+        "mode": "DRIVE",
+        "role": "representative ordinary Drive impact/continued thrust",
+        "throttle": 1.0
+      },
+      "LOW_THRUST": {
+        "initial_horizontal_speed_mps": 0.0,
+        "mode": "SPREAD",
+        "role": "low-speed sustained-thrust climb/search case",
+        "throttle": 0.35
+      },
+      "WORST_HOP": {
+        "hop_press_tick": 0,
+        "initial_horizontal_speed_mps": 17.0,
+        "initial_mode": "SPREAD",
+        "initial_upward_speed_mps": 0.5,
+        "role": "worst case within the explicitly authorized frozen Spread/support eligibility envelope; not a claim about impossible externally injected velocities",
+        "source_limits": {
+          "hop_max_support_distance_m": 1.55,
+          "spread_powered_speed_cap_mps": 17.0,
+          "support_reacquire_max_departure_speed_mps": 0.5
+        },
+        "support_distance_m": 1.55,
+        "throttle": 1.0
+      }
+    },
+    "collision_counting": {
+      "collapse_rule": "emit at most one COLLISION_SAMPLE per (physics_tick, source_geometry_id), regardless of contact-point or slide-iteration count",
+      "contact_source": "contacts reported by the frozen craft movement/collision path during the normal physics tick; test code must not add movement or collision response",
+      "counting_window": "first normal physics tick after initial spawn/reset completion through vector termination tick inclusive; HOP_PRESS and HOP_RELEASE do not alter the window",
+      "excluded": "heightfield/road support contacts and trigger-only gate/route areas are not hard collisions",
+      "hard_collision_count": "count of collapsed COLLISION_SAMPLE records in the full window whose collision_class is HARD_HOP or HARD_NON_HOP",
+      "hard_geometry_ids": [
+        "CORE_PLINTH_MASK",
+        "CORE_WALL",
+        "HOP_BAR_01",
+        "OUTER_CLOSURE_MASK",
+        "OUTER_WALL"
+      ],
+      "hop_bar_collision_count": "count of collapsed records in the full window whose collision_class is HARD_HOP and source_geometry_id is HOP_BAR_01",
+      "non_hop_hard_collision_count": "count of collapsed records in the full window whose collision_class is HARD_NON_HOP"
+    },
+    "controller_contracts": {
+      "MULTI_ROUTE_FOLLOWER_INPUT_CONTROLLER": {
+        "path_segment_required_fields": [
+          "route",
+          "direction",
+          "start_chainage_m",
+          "end_chainage_m"
+        ],
+        "required_fields": [
+          "type",
+          "path",
+          "lookahead_m",
+          "throttle_command"
+        ]
+      },
+      "POINT_TARGET_INPUT_CONTROLLER": {
+        "required_fields": [
+          "type",
+          "target_xz_m",
+          "steer_gain",
+          "throttle"
+        ]
+      },
+      "POWERED_WAYPOINT_INPUT_CONTROLLER": {
+        "minimum_waypoint_count": 2,
+        "position_or_velocity_writes": "FORBIDDEN",
+        "required_fields": [
+          "type",
+          "waypoints_xz_m",
+          "waypoint_radius_m",
+          "steer_gain",
+          "throttle"
+        ]
+      },
+      "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2": {
+        "required_fields": [
+          "type",
+          "route_id",
+          "direction"
+        ],
+        "route_id_must_resolve_exactly_once": true,
+        "special_termination_fields": {
+          "RT_R0_SURFACE_NEUTRALITY": [
+            "terminate_chainage_m"
+          ]
+        }
+      },
+      "ROUTE_FOLLOWER_INPUT_CONTROLLER_V4_FORWARD_BRAKING_CONTAINED": {
+        "authorized_vectors": [
+          "RT_ROUTE_A1",
+          "RT_ROUTE_A2",
+          "RT_ROUTE_X0"
+        ],
+        "position_or_velocity_writes": "FORBIDDEN",
+        "required_fields": [
+          "type",
+          "route_id",
+          "direction",
+          "curve_plan_algorithm_id",
+          "forward_curvature_window_m",
+          "drive_speed_cap_mps",
+          "drive_yaw_rate_rad_s",
+          "turn_rate_margin",
+          "braking_envelope_decel_mps2",
+          "endpoint_margin_m",
+          "endpoint_speed_cap_mps",
+          "plan_query_lead_time_s",
+          "plan_query_lead_min_m",
+          "plan_query_lead_max_m",
+          "steering_lookahead_min_m",
+          "steering_lookahead_max_m",
+          "steering_lookahead_speed_gain_s",
+          "lateral_soft_limit_m",
+          "lateral_hard_limit_m",
+          "recovery_speed_cap_mps",
+          "recovery_prediction_horizon_s",
+          "recovery_emergency_margin_m",
+          "route_projection_evidence_every_tick",
+          "fail_fast_on_first_unauthorized_hard_collision"
+        ],
+        "route_id_must_resolve_exactly_once": true
+      },
+      "ROUTE_FOLLOWER_INPUT_CONTROLLER_V5_INERTIAL_THRUST_VECTOR_CONTAINED": {
+        "authorized_vectors": [
+          "RT_ROUTE_A1",
+          "RT_ROUTE_A2",
+          "RT_ROUTE_X0"
+        ],
+        "candidate_id_source": "--v5-candidate-id",
+        "candidate_registry_path": "tests/fixtures/fast_route_driver_v5_candidates.json",
+        "dynamics_model": [
+          "steering rotates body orientation, not velocity",
+          "course rotation requires transverse thrust",
+          "positive turning throttle retained during braking/recovery",
+          "simultaneous throttle and brake permitted"
+        ],
+        "position_or_velocity_writes": "FORBIDDEN",
+        "required_fields": [
+          "type",
+          "route_id",
+          "direction",
+          "candidate_registry_path",
+          "candidate_id_source",
+          "lateral_soft_limit_m",
+          "lateral_hard_limit_m",
+          "route_projection_evidence_every_tick",
+          "fail_fast_on_first_unauthorized_hard_collision",
+          "fail_fast_on_first_hard_lateral_limit_violation",
+          "input_actions_only",
+          "position_or_velocity_writes"
+        ],
+        "route_id_must_resolve_exactly_once": true
+      },
+      "SUPPORTED_HOP_BRACKET_CONTROLLER": {
+        "position_or_velocity_writes": "FORBIDDEN",
+        "required_fields": [
+          "type",
+          "support_readiness",
+          "runup",
+          "timing_model",
+          "timing_offsets_m",
+          "bar_overlap_clearance"
+        ],
+        "timing_offset_source": "--hop-offset-m during bracket scan; after selection, selected_timing_offset_m frozen into the promoted fixture"
+      }
+    },
+    "crossing_plane_contract": {
+      "continuous_crossing": "one crossing is counted when consecutive non-teleport samples change from signed_distance < 0 to signed_distance >= 0; a sample exactly on zero can complete only one crossing until a later negative sample re-arms it",
+      "reset_and_teleport": "clear plane history and never count as a crossing",
+      "signed_distance": "dot(craft_center_xz_m - point_xz_m, unit_normal_xz)",
+      "spawn_side": "every vector using a plane must begin with signed_distance < 0",
+      "target_face": "each boundary vector embeds its exact plane point and unit normal; target_probe_xz_m is the plane point and the normal points from spawn toward that point"
+    },
+    "failure_classification": [
+      "TEST_DRIVER",
+      "RUNTIME_IMPLEMENTATION",
+      "WORLD_AUTHORITY"
+    ],
+    "fast_route_test_driver_tuning": {
+      "candidate_count": 3,
+      "candidate_registry": "tests/fixtures/fast_route_driver_v5_candidates.json",
+      "current_controller": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V5_INERTIAL_THRUST_VECTOR_CONTAINED",
+      "parameter_changes_after_A1_selection": "FORBIDDEN",
+      "route_specific_control_scripts": "FORBIDDEN",
+      "selection_lane": "A1 development candidates -> frozen A1 confirmation -> prospective A2/X0"
+    },
+    "gate_coverage_required": [
+      "GW",
+      "GN",
+      "GE"
+    ],
+    "hop_geometry_bracket": {
+      "candidate_registry": "world/generated/hop_bar_bracket_candidates.json",
+      "candidate_step_m": 0.01,
+      "candidate_top_y_max_m": 1.8,
+      "candidate_top_y_min_m": 1.01,
+      "fixture": "tests/fixtures/hop_gate_bracket.json",
+      "footprint_and_base_frozen": true,
+      "full_suite_gate": "the complete 40-vector suite is forbidden until a selected candidate passes C1 zero-delta and all four isolated HOP questions",
+      "height_only": true,
+      "no_interval_rule": "if no candidate through 1.80 m passes, stop NO_HEIGHT_ONLY_GEOMETRY_INTERVAL; do not alter movement, footprint, routes, terrain, or add an edge/lip/bevel in this turn",
+      "proven_failing_lower_bound_top_y_m": 1.0,
+      "schema": "district_zero.p1a.hop_bar_height_bracket.v1",
+      "selection_rule": "lowest candidate on the preregistered 10 mm grid that passes all four isolated questions under the exact engine and repetition rules"
+    },
+    "hop_no_slip_claims": {
+      "direct_non_hop_bar_span_denial": "RT_HOP_DIRECT_NON_HOP_SPAN is the established powered no-Hop failure case. Candidate geometry must produce bar contact with zero BAR_SPAN and HJE_CLEAR crossings in three fresh processes.",
+      "geometry_change": "Only the HOP_BAR_01 top elevation may change; footprint, base, vertices x/z, triangle indices, routes, terrain, apertures, masks, and every other solid are frozen.",
+      "north_end_seal": "RT_HOP_NO_SLIP_NORTH is a legal straight powered seam probe at z=129.25 m, with 0.30 m conservative craft-center clearance from CORE_PLINTH_MASK before expected HOP_BAR_01 contact; the finite x=0 seam crossing is forbidden.",
+      "south_end_seal": "RT_HOP_NO_SLIP_SOUTH is the corresponding legal straight powered seam probe at z=140.75 m.",
+      "static_end_proof": "world/generated/hop_gate_end_seals.json proves the craft-expanded x=0 cut is closed by overlapping north-plinth, bar, and south-plinth intervals.",
+      "supported_hop_clearance": "RT_HOP_SUCCESS first establishes twelve consecutive support-ready ticks, then uses an input-only speed-and-position trigger so the Hop apex overlaps the bar. It requires zero HOP_BAR_01 contact and measured positive vertical clearance while plan-overlapping the bar."
+    },
+    "implemented_commands": [
+      "ASSERT_SELECTION",
+      "END",
+      "HOP_PRESS",
+      "HOP_RELEASE",
+      "MANUAL_RESET_WITH_R",
+      "OPEN_DIAGNOSTIC_MENU",
+      "PREVIOUS_SELECTION",
+      "SET_POSITION_Y_FOR_FALL_TEST",
+      "SPAWN_SELECTED_WITH_ENTER",
+      "THROTTLE"
+    ],
+    "movement_tuning_digest": {
+      "algorithm_id": "DZP1A_TUNING_SHA256_V1",
+      "digest_algorithm": "SHA-256",
+      "expected_default_runtime_digest": "f68c66e8e155e0891b822506a22a6b40084e1d2ae98159a1a144115095697364",
+      "field_count": 56,
+      "field_order": [
+        "gravity",
+        "fall_reset_y",
+        "spread_target_height",
+        "spread_hover_omega",
+        "spread_hover_zeta",
+        "spread_hover_accel_up_max",
+        "spread_hover_accel_down_max",
+        "spread_gravity_compensation_ratio",
+        "drive_target_height",
+        "drive_hover_omega",
+        "drive_hover_zeta",
+        "drive_hover_accel_up_max",
+        "drive_hover_accel_down_max",
+        "drive_gravity_compensation_ratio",
+        "spread_thrust_accel",
+        "spread_powered_speed_soft",
+        "spread_powered_speed_cap",
+        "spread_steer_rate",
+        "spread_drag",
+        "spread_brake_decel",
+        "drive_thrust_accel",
+        "drive_powered_speed_soft",
+        "drive_powered_speed_cap",
+        "drive_steer_rate",
+        "drive_drag",
+        "drive_brake_decel",
+        "fold_duration",
+        "deploy_duration",
+        "support_reacquire_duration",
+        "support_reacquire_max_distance",
+        "support_reacquire_max_slope_degrees",
+        "support_reacquire_max_departure_speed",
+        "hop_normal_speed",
+        "hop_tangential_retention",
+        "hop_cooldown",
+        "hop_max_fold_amount",
+        "hop_max_support_distance",
+        "hop_input_buffer_seconds",
+        "hop_support_grace_seconds",
+        "impact_min_closing_speed",
+        "impact_full_closing_speed",
+        "spread_impact_max_speed_loss",
+        "drive_impact_max_speed_loss",
+        "impact_strike_cue_duration",
+        "preview_min_distance",
+        "preview_max_distance",
+        "preview_seconds_ahead",
+        "visual_bank_degrees",
+        "visual_response",
+        "camera_distance",
+        "camera_height",
+        "camera_look_ahead",
+        "camera_look_height",
+        "camera_response",
+        "spread_camera_fov",
+        "drive_fov_increase"
+      ],
+      "prefix_bytes_utf8_then_nul": "DZP1A-TUNING-V1",
+      "record_encoding": "for each field in field_order: UTF-8 field name, one NUL byte, then IEEE-754 binary64 big-endian runtime value; no separators or final bytes",
+      "scope": "all 56 exported float properties of the live CraftTuning resource; capture immediately before first R0 sample and immediately after final R0 sample",
+      "source_identity_sha256": {
+        "resources/default_tuning.tres": "a6d7a6ef66f28a480bc28096c91124e5c93f9b8e7dd32c68296030ce21800459",
+        "scripts/craft_tuning.gd": "c6b82758d7d985d0a16d16a7265a52e2ba2b5a4ec2e608a08ef1d2fa7650acfd"
+      }
+    },
+    "named_crossing_planes": {
+      "HOP_BAR_HJE_CLEAR": {
+        "derivation": "HOP_BAR_01 HJE face x=+0.90 plus conservative craft-center radius 0.95 m",
+        "negative_side": "bar/HJW side",
+        "nonnegative_side": "craft conservative footprint fully beyond the HJE face",
+        "point_xz_m": [
+          1.85,
+          135.0
+        ],
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ]
+      },
+      "HOP_BAR_SPAN_PENETRATION": {
+        "evidence_class": "BAR_SPAN",
+        "maximum_source_boundary_distance_m": 0.05,
+        "maximum_tangent_offset_m": 9.0,
+        "meaning": "bar penetration/overflight evidence only; z=126..144",
+        "minimum_tangent_offset_m": -9.0,
+        "point_xz_m": [
+          0.0,
+          135.0
+        ],
+        "required_source_geometry_id": "HOP_BAR_01",
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ],
+        "unit_tangent_xz": [
+          0.0,
+          1.0
+        ]
+      },
+      "HOP_NORTH_END_BYPASS": {
+        "evidence_class": "END_BYPASS",
+        "maximum_source_boundary_distance_m": 0.0,
+        "maximum_tangent_offset_m": -9.01,
+        "meaning": "bounded HJW-to-HJE crossing window around the north end, z=124.4..125.99; entirely outside bar plan span",
+        "minimum_tangent_offset_m": -10.6,
+        "point_xz_m": [
+          1.85,
+          135.0
+        ],
+        "required_source_geometry_id": "",
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ],
+        "unit_tangent_xz": [
+          0.0,
+          1.0
+        ]
+      },
+      "HOP_NORTH_SEAM_CROSSING": {
+        "evidence_class": "END_BYPASS",
+        "id": "HOP_NORTH_SEAM_CROSSING",
+        "maximum_source_boundary_distance_m": 0.0,
+        "maximum_tangent_offset_m": 0.1,
+        "meaning": "finite north seam crossing at x=0; any crossing disproves the end seal",
+        "minimum_tangent_offset_m": -0.1,
+        "point_xz_m": [
+          0.0,
+          129.25
+        ],
+        "required_source_geometry_id": "",
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ],
+        "unit_tangent_xz": [
+          0.0,
+          1.0
+        ]
+      },
+      "HOP_SOUTH_END_BYPASS": {
+        "evidence_class": "END_BYPASS",
+        "maximum_source_boundary_distance_m": 0.0,
+        "maximum_tangent_offset_m": 10.6,
+        "meaning": "bounded HJW-to-HJE crossing window around the south end, z=144.01..145.6; entirely outside bar plan span",
+        "minimum_tangent_offset_m": 9.01,
+        "point_xz_m": [
+          1.85,
+          135.0
+        ],
+        "required_source_geometry_id": "",
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ],
+        "unit_tangent_xz": [
+          0.0,
+          1.0
+        ]
+      },
+      "HOP_SOUTH_SEAM_CROSSING": {
+        "evidence_class": "END_BYPASS",
+        "id": "HOP_SOUTH_SEAM_CROSSING",
+        "maximum_source_boundary_distance_m": 0.0,
+        "maximum_tangent_offset_m": 0.1,
+        "meaning": "finite south seam crossing at x=0; any crossing disproves the end seal",
+        "minimum_tangent_offset_m": -0.1,
+        "point_xz_m": [
+          0.0,
+          140.75
+        ],
+        "required_source_geometry_id": "",
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ],
+        "unit_tangent_xz": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    "no_vector_may_write_physics_position_or_velocity_except declared initial state and explicit fall-reset fixture": true,
+    "plane_crossing": "continuous sample-segment intersection with an exact finite tangent window; source-geometry association is required only for bar-span or named target-face evidence, never for an end-bypass window outside the bar footprint",
+    "retired_test_driver_contracts": {
+      "ROUTE_FOLLOWER_INPUT_CONTROLLER_V3_FAST_CONTAINED": {
+        "authorized_vectors": [
+          "RT_ROUTE_A1",
+          "RT_ROUTE_A2",
+          "RT_ROUTE_X0"
+        ],
+        "position_or_velocity_writes": "FORBIDDEN",
+        "required_fields": [
+          "type",
+          "route_id",
+          "direction",
+          "preview_distances_m",
+          "lateral_soft_limit_m",
+          "lateral_hard_limit_m",
+          "recovery_speed_cap_mps"
+        ],
+        "route_id_must_resolve_exactly_once": true
+      },
+      "ROUTE_FOLLOWER_INPUT_CONTROLLER_V4_FORWARD_BRAKING_CONTAINED": "Historical v1.2.4E/G evidence only; not authorized for fresh A1/A2/X0 execution."
+    },
+    "route_coverage_required": [
+      "A0",
+      "A1",
+      "A2",
+      "DOG",
+      "HOP",
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "R0",
+      "S0",
+      "S1",
+      "X0"
+    ],
+    "route_entry_hysteresis": {
+      "backdating": {
+        "committed_entry_backdates_to_original_crossing": true,
+        "distance_since_genuine_entry_m": "horizontal craft-center distance from the interpolated original crossing through commitment and onward; the committed ENTERED and later TRAVERSED records retain that backdated distance origin",
+        "entry_crossing_xz_m": "the interpolated original crossing point",
+        "entry_tick": "the later tick of the original outside-to-inside crossing pair; never the later commitment tick",
+        "event_physics_tick": "the commitment tick"
+      },
+      "candidate_cancel": "reset/teleport, junction override, a different candidate winning the total tie-break, or leaving the candidate entry-inset envelope before commitment clears candidate tick/time/distance",
+      "candidate_commit_requires_both": true,
+      "candidate_crossing_point": "linear interpolation of the consecutive craft-center samples at the entry-inset boundary; ties use the route tie-break before interpolation",
+      "candidate_distance": "horizontal craft-center polyline distance from the interpolated crossing point through every subsequent candidate sample; distance before the crossing point is excluded",
+      "candidate_minimum_time_s": 0.25,
+      "candidate_minimum_travel_m": 2.0,
+      "candidate_start": "only a continuous non-teleport pair whose earlier sample is outside the winning route entry-inset envelope (or is classified junction/base/another route) and whose later sample is inside; the first post-boundary sample establishes prior state and cannot start a candidate",
+      "commit": "commit on the first physics tick where continuous candidate time is at least 0.25 s and candidate distance is at least 2.0 m",
+      "entry_inset_m": 0.5,
+      "exit": "the committed route remains current until junction override or three consecutive physics ticks outside that route exit-outset envelope; the exit effective tick is the third outside tick and no exit backdating occurs",
+      "exit_consecutive_physics_ticks": 3,
+      "exit_outset_m": 1.0,
+      "first_post_boundary_sample": "establish previous craft-center/classification state only; cannot create candidate, ENTERED, TRAVERSED, or GATE_CROSSED credit",
+      "junction_override": true,
+      "sample_point": "craft global-position x,z after the normal physics movement for the tick and before telemetry emission",
+      "tie_break": [
+        "lowest normalized centerline distance",
+        "lexical route ID"
+      ]
+    },
+    "runtime_vector_count": 40,
+    "screenshots_are_never_substitutes_for event/threshold proof": true,
+    "spawns_and_resets_are_segment_boundaries": true,
+    "standalone_evidence_contract": {
+      "completion": "all final vector directories must be present; partial/failed-launch-only evidence may be diagnostic but cannot be labeled final standalone evidence",
+      "required_per_vector_files": [
+        "argv.json",
+        "stdout.txt",
+        "stderr.txt",
+        "engine.txt",
+        "events.jsonl",
+        "post_result_events.jsonl",
+        "runtime_result_line.txt",
+        "runtime_result.json",
+        "suite_classification.json",
+        "result.json",
+        "SHA256SUMS.txt"
+      ],
+      "required_root_files": [
+        "suite_argv.json",
+        "engine_identity.json",
+        "runtime_vector_results.json",
+        "SHA256SUMS.txt"
+      ]
+    },
+    "test_driver": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2 uses only input actions; no transform, position, velocity, or physics-state writes",
+    "test_driver_liveness_contract": {
+      "end_attempts": {
+        "expected_sample_count": 240,
+        "legal_seam_probe_rule": "straight powered approach must remain free of CORE_PLINTH_MASK contacts until HOP_BAR_01 contact; no requirement to reach a point inside expanded plinth space",
+        "minimum_first_sample_horizontal_speed_mps": 5.0,
+        "minimum_positive_throttle_fraction": 1.0
+      },
+      "sampling": "one TEST_DRIVER_LIVENESS record after every executed physics tick, including position, horizontal speed, commanded throttle, closest distance to the finite controller path, and closest distance to the required finite window when named",
+      "teleport_rule": "segment boundaries reset crossing history; no liveness sample supplies route/gate credit"
+    },
+    "test_overlay_authority_version": "1.2.4I",
+    "threshold_evaluator_registry": {
+      "default_diagnostic_selection": "FRESH_OPEN_IDENTITY",
+      "default_spawn_id": "FRESH_OPEN_IDENTITY",
+      "exact_allowed_input_actions": "FRESH_OPEN_IDENTITY",
+      "exact_gate_crossing_count": "GATE_CROSSING_EXACT",
+      "exact_hop_started_count": "HOP_STARTED_EXACT",
+      "expected_test_driver_liveness_sample_count": "TEST_DRIVER_LIVENESS_EXACT",
+      "fast_route_speed_floor_mps": "FAST_ROUTE_SPEED_FLOOR",
+      "hop_started_before_bar_contact_plane": "HOP_START_POSITION_ORDER",
+      "legacy_selector_action_count": "FRESH_OPEN_IDENTITY",
+      "maximum_core_plinth_collision_count": "CORE_PLINTH_COLLISION_MAX",
+      "maximum_craft_center_samples_inside_hard_obstacle": "HARD_OBSTACLE_CENTER_SAMPLE_MAX",
+      "maximum_crossings_to_opposite_side_of_target_face": "TARGET_FACE_CROSSING_MAX",
+      "maximum_fall_reset_count": "FALL_RESET_MAX",
+      "maximum_hard_collision_count": "HARD_COLLISION_MAX",
+      "maximum_hard_obstacle_penetration_samples": "HARD_OBSTACLE_CENTER_SAMPLE_MAX",
+      "maximum_hop_bar_collision_count": "HOP_BAR_COLLISION_MAX",
+      "maximum_hop_bar_hje_clear_crossing_count": "HOP_CLEAR_CROSSING_MAX",
+      "maximum_hop_bar_span_crossing_count": "HOP_BAR_SPAN_CROSSING_MAX",
+      "maximum_hop_command_to_start_ticks": "HOP_COMMAND_TO_START_MAX",
+      "maximum_hop_end_bypass_crossing_count": "HOP_END_BYPASS_CROSSING_MAX",
+      "maximum_hop_started_physics_tick": "HOP_STARTED_TICK_MAX",
+      "maximum_non_hop_hard_collision_count": "NON_HOP_HARD_COLLISION_MAX",
+      "maximum_powered_required_window_distance_m": "TEST_DRIVER_POWERED_WINDOW_APPROACH_MAX",
+      "maximum_route_entered_event_count": "ROUTE_ENTERED_MAX",
+      "maximum_route_entered_or_traversed_events_caused_by_spawn_or_reset": "DIAGNOSTIC_ROUTE_CREDIT_MAX",
+      "maximum_route_traversed_event_count": "ROUTE_TRAVERSED_MAX",
+      "maximum_test_driver_path_deviation_m": "TEST_DRIVER_PATH_DEVIATION_MAX",
+      "minimum_HOP_BAR_HJE_CLEAR_crossing_count": "HOP_CLEAR_CROSSING_MIN",
+      "minimum_bar_overlap_vertical_clearance_m": "HOP_BAR_VERTICAL_CLEARANCE_MIN",
+      "minimum_distance_at_or_above_fast_route_speed_m": "FAST_ROUTE_SUSTAINED_DISTANCE_MIN",
+      "minimum_final_route_chainage_m": "FINAL_CHAINAGE_MIN",
+      "minimum_first_liveness_horizontal_speed_mps": "TEST_DRIVER_FIRST_SPEED_MIN",
+      "minimum_genuine_classified_distance_m": "REQUESTED_ROUTE_TRAVERSED_DISTANCE_MIN",
+      "minimum_hop_bar_collision_count": "HOP_BAR_COLLISION_MIN",
+      "minimum_hop_started_count": "HOP_STARTED_MIN",
+      "minimum_peak_horizontal_speed_mps": "TEST_DRIVER_PEAK_SPEED_MIN",
+      "minimum_positive_throttle_fraction": "TEST_DRIVER_POSITIVE_THROTTLE_FRACTION_MIN",
+      "minimum_support_ready_consecutive_ticks": "SUPPORT_READY_CONSECUTIVE_MIN",
+      "movement_tuning_digest_algorithm_id": "LIVE_TUNING_DIGEST",
+      "movement_tuning_digest_before_equals_after": "LIVE_TUNING_DIGEST",
+      "required_event_order": "DIAGNOSTIC_EVENT_ORDER",
+      "required_first_hard_geometry_id": "FIRST_HARD_GEOMETRY_ID",
+      "required_liveness_every_tick": "TEST_DRIVER_LIVENESS_CONTIGUOUS",
+      "required_movement_tuning_digest_after": "LIVE_TUNING_DIGEST",
+      "required_movement_tuning_digest_before": "LIVE_TUNING_DIGEST",
+      "required_neutral_spawn_selection_id": "DIAGNOSTIC_SELECTION_FINAL",
+      "required_surface_class_sequence": "SURFACE_CLASS_SEQUENCE",
+      "support_ready_before_hop_command": "SUPPORT_READY_ORDER",
+      "target_face_plane_id": "TARGET_FACE_WINDOW_ID",
+      "visible_build_label_exact": "FRESH_OPEN_IDENTITY"
+    },
+    "tick_command_registry": {
+      "implemented_commands": [
+        "ASSERT_SELECTION",
+        "END",
+        "HOP_PRESS",
+        "HOP_RELEASE",
+        "MANUAL_RESET_WITH_R",
+        "OPEN_DIAGNOSTIC_MENU",
+        "PREVIOUS_SELECTION",
+        "SET_POSITION_Y_FOR_FALL_TEST",
+        "SPAWN_SELECTED_WITH_ENTER",
+        "THROTTLE"
+      ],
+      "termination_marker_only": [
+        "END"
+      ],
+      "unlisted_command_policy": "FAIL_VECTOR"
+    },
+    "world_data_authority_version": "1.2.3"
+  },
+  "required_godot_version": "4.7.1.stable.official.a13da4feb",
+  "schema": "district_zero.p1a.runtime_vectors.v1_2_5",
+  "vectors": [
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route A0",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 30.0,
+        "lookahead_min_m": 10.0,
+        "lookahead_speed_gain_s": 0.55,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "A0",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "A0",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "A0",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_A0",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "DRIVE",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -245.0,
+          0.05,
+          20.0
+        ],
+        "source": {
+          "node": "QRY",
+          "toward_route": "A0"
+        },
+        "support_height_m": -1.6,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.740573
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_GW after genuine entry into A0",
+        "maximum_duration_s": 24.751655
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 10.007946
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route A1",
+      "controller_commands": {
+        "algorithm_id": "DZP1A_NORMALIZED_HUMAN_INPUT_REPLAY_V1",
+        "direction": "FORWARD",
+        "fail_fast_on_first_hard_lateral_limit_violation": true,
+        "fail_fast_on_first_unauthorized_hard_collision": true,
+        "input_actions_only": [
+          "throttle",
+          "brake",
+          "steer_left",
+          "steer_right",
+          "transform"
+        ],
+        "input_trace_schema": "tests/fixtures/human_input_trace.schema.json",
+        "lateral_hard_limit_m": 11.0,
+        "lateral_soft_limit_m": 8.0,
+        "position_or_velocity_writes": "FORBIDDEN",
+        "prohibited_actions": [
+          "hop",
+          "reset",
+          "pause",
+          "debug_overlay",
+          "diagnostic_menu",
+          "diagnostic_prev",
+          "diagnostic_next",
+          "diagnostic_spawn"
+        ],
+        "route_id": "A1",
+        "route_projection_evidence_every_tick": true,
+        "selected_trace_manifest_flag": "--selected-trace-manifest",
+        "selected_trace_manifest_schema": "tests/fixtures/selected_human_trace_manifest.schema.json",
+        "trace_route_id_must_match": true,
+        "type": "NORMALIZED_INPUT_TRACE_REPLAY_V1"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "A1",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "A1",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_A1",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "DRIVE",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -170.0,
+          1.55,
+          35.0
+        ],
+        "source": {
+          "node": "GW",
+          "toward_route": "A1"
+        },
+        "support_height_m": -0.1,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -0.045422
+      },
+      "supplementary_capture": {
+        "authority": "district_zero.p1a.human_feasibility_capture.v1",
+        "protocol": "tests/fixtures/human_feasibility_protocol.json"
+      },
+      "termination": {
+        "condition": "craft center enters JUNCTION_RLY after genuine entry into A1",
+        "maximum_duration_s": 65.644033
+      },
+      "test_overlay_note": "v1.2.5 retires autonomous V4–V7 development. This vector consumes the first valid informed-human witness trace selected under the bounded capture protocol and replays only normalized player inputs from the unchanged canonical state. All route metrics and thresholds remain unchanged.",
+      "thresholds": {
+        "fast_route_speed_floor_mps": 18.0,
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "maximum_test_driver_path_deviation_m": 11.0,
+        "minimum_distance_at_or_above_fast_route_speed_m": 64.37284,
+        "minimum_genuine_classified_distance_m": 190.291358
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route A2",
+      "controller_commands": {
+        "algorithm_id": "DZP1A_NORMALIZED_HUMAN_INPUT_REPLAY_V1",
+        "direction": "FORWARD",
+        "fail_fast_on_first_hard_lateral_limit_violation": true,
+        "fail_fast_on_first_unauthorized_hard_collision": true,
+        "input_actions_only": [
+          "throttle",
+          "brake",
+          "steer_left",
+          "steer_right",
+          "transform"
+        ],
+        "input_trace_schema": "tests/fixtures/human_input_trace.schema.json",
+        "lateral_hard_limit_m": 11.0,
+        "lateral_soft_limit_m": 8.0,
+        "position_or_velocity_writes": "FORBIDDEN",
+        "prohibited_actions": [
+          "hop",
+          "reset",
+          "pause",
+          "debug_overlay",
+          "diagnostic_menu",
+          "diagnostic_prev",
+          "diagnostic_next",
+          "diagnostic_spawn"
+        ],
+        "route_id": "A2",
+        "route_projection_evidence_every_tick": true,
+        "selected_trace_manifest_flag": "--selected-trace-manifest",
+        "selected_trace_manifest_schema": "tests/fixtures/selected_human_trace_manifest.schema.json",
+        "trace_route_id_must_match": true,
+        "type": "NORMALIZED_INPUT_TRACE_REPLAY_V1"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "A2",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "A2",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_A2",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "DRIVE",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          3.25,
+          -210.0
+        ],
+        "source": {
+          "node": "RLY",
+          "toward_route": "A2"
+        },
+        "support_height_m": 1.6,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.27934
+      },
+      "supplementary_capture": {
+        "authority": "district_zero.p1a.human_feasibility_capture.v1",
+        "protocol": "tests/fixtures/human_feasibility_protocol.json"
+      },
+      "termination": {
+        "condition": "craft center enters JUNCTION_GE after genuine entry into A2",
+        "maximum_duration_s": 85.713658
+      },
+      "test_overlay_note": "v1.2.5 retires autonomous V4–V7 development. This vector consumes the first valid informed-human witness trace selected under the bounded capture protocol and replays only normalized player inputs from the unchanged canonical state. All route metrics and thresholds remain unchanged.",
+      "thresholds": {
+        "fast_route_speed_floor_mps": 18.0,
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "maximum_test_driver_path_deviation_m": 11.0,
+        "minimum_distance_at_or_above_fast_route_speed_m": 88.456389,
+        "minimum_genuine_classified_distance_m": 289.825556
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route DOG",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "DOG",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "DOG",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "DOG",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_DOG",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -45.0,
+          1.7,
+          135.0
+        ],
+        "source": {
+          "node": "HJW",
+          "toward_route": "DOG"
+        },
+        "support_height_m": 0.05,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.761086
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_HJE after genuine entry into DOG",
+        "maximum_duration_s": 32.752347
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 61.211265
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route HOP",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "HOP",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "HOP",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "HOP",
+          "state": "TRAVERSED"
+        },
+        {
+          "event": "HOP_STARTED",
+          "minimum_count": 1
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_HOP",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -45.0,
+          1.7,
+          135.0
+        ],
+        "source": {
+          "node": "HJW",
+          "toward_route": "HOP"
+        },
+        "support_height_m": 0.05,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_HJE after genuine entry into HOP",
+        "maximum_duration_s": 27.0
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 33.6
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route L0",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "L0",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L0",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L0",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_L0",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -170.0,
+          1.55,
+          35.0
+        ],
+        "source": {
+          "node": "GW",
+          "toward_route": "L0"
+        },
+        "support_height_m": -0.1,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.245539
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_DEP after genuine entry into L0",
+        "maximum_duration_s": 24.053642
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 6.65748
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route L1",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "L1",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L1",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L1",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_L1",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -110.0,
+          1.75,
+          75.0
+        ],
+        "source": {
+          "node": "DEP",
+          "toward_route": "L1"
+        },
+        "support_height_m": 0.1,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_MRK after genuine entry into L1",
+        "maximum_duration_s": 33.571641
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 57.143876
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route L2",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "L2",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L2",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L2",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_L2",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          1.65,
+          20.0
+        ],
+        "source": {
+          "node": "MRK",
+          "toward_route": "L2"
+        },
+        "support_height_m": 0.0,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.989022
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_CLN after genuine entry into L2",
+        "maximum_duration_s": 33.571641
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 57.143876
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route L3",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "L3",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L3",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L3",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_L3",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          110.0,
+          1.75,
+          75.0
+        ],
+        "source": {
+          "node": "CLN",
+          "toward_route": "L3"
+        },
+        "support_height_m": 0.1,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.051652
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_GE after genuine entry into L3",
+        "maximum_duration_s": 24.053642
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 9.85748
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route L4",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "L4",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L4",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L4",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_L4",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          3.25,
+          -210.0
+        ],
+        "source": {
+          "node": "RLY",
+          "toward_route": "L4"
+        },
+        "support_height_m": 1.6,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -3.141593
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_GN after genuine entry into L4",
+        "maximum_duration_s": 25.333333
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 6.4
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route L5",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "L5",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L5",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L5",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_L5",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          2.45,
+          -130.0
+        ],
+        "source": {
+          "node": "GN",
+          "toward_route": "L5"
+        },
+        "support_height_m": 0.8,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 2.498089
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_MRK after genuine entry into L5",
+        "maximum_duration_s": 39.965886
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 87.836251
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route L6",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "L6",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L6",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L6",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_L6",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          1.65,
+          20.0
+        ],
+        "source": {
+          "node": "MRK",
+          "toward_route": "L6"
+        },
+        "support_height_m": 0.0,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.051649
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_WRK after genuine entry into L6",
+        "maximum_duration_s": 31.678468
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 49.656646
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route L7",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "L7",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L7",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "L7",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_L7",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          90.0,
+          2.2,
+          -55.0
+        ],
+        "source": {
+          "node": "WRK",
+          "toward_route": "L7"
+        },
+        "support_height_m": 0.55,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.191047
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_GE after genuine entry into L7",
+        "maximum_duration_s": 32.390732
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 51.475514
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route R0",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "R0",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "R0",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "R0",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_R0",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          2.45,
+          -130.0
+        ],
+        "source": {
+          "node": "GN",
+          "toward_route": "R0"
+        },
+        "support_height_m": 0.8,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_WRK after genuine entry into R0",
+        "maximum_duration_s": 34.952721
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 70.173062
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route S0",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "S0",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "S0",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "S0",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_S0",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -110.0,
+          1.75,
+          75.0
+        ],
+        "source": {
+          "node": "DEP",
+          "toward_route": "S0"
+        },
+        "support_height_m": 0.1,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -3.141593
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_HJW after genuine entry into S0",
+        "maximum_duration_s": 29.86293
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 45.742066
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route S1",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "S1",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "S1",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "S1",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_S1",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          45.0,
+          1.7,
+          135.0
+        ],
+        "source": {
+          "node": "HJE",
+          "toward_route": "S1"
+        },
+        "support_height_m": 0.05,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      },
+      "supplementary_capture": null,
+      "termination": {
+        "condition": "craft center enters JUNCTION_CLN after genuine entry into S1",
+        "maximum_duration_s": 29.86293
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 45.742066
+      }
+    },
+    {
+      "authority_claim": "genuine runtime traversal and coverage of route X0",
+      "controller_commands": {
+        "algorithm_id": "DZP1A_NORMALIZED_HUMAN_INPUT_REPLAY_V1",
+        "direction": "FORWARD",
+        "fail_fast_on_first_hard_lateral_limit_violation": true,
+        "fail_fast_on_first_unauthorized_hard_collision": true,
+        "input_actions_only": [
+          "throttle",
+          "brake",
+          "steer_left",
+          "steer_right",
+          "transform"
+        ],
+        "input_trace_schema": "tests/fixtures/human_input_trace.schema.json",
+        "lateral_hard_limit_m": 8.0,
+        "lateral_soft_limit_m": 5.5,
+        "position_or_velocity_writes": "FORBIDDEN",
+        "prohibited_actions": [
+          "hop",
+          "reset",
+          "pause",
+          "debug_overlay",
+          "diagnostic_menu",
+          "diagnostic_prev",
+          "diagnostic_next",
+          "diagnostic_spawn"
+        ],
+        "route_id": "X0",
+        "route_projection_evidence_every_tick": true,
+        "selected_trace_manifest_flag": "--selected-trace-manifest",
+        "selected_trace_manifest_schema": "tests/fixtures/selected_human_trace_manifest.schema.json",
+        "trace_route_id_must_match": true,
+        "type": "NORMALIZED_INPUT_TRACE_REPLAY_V1"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "X0",
+          "state": "ENTERED"
+        },
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "X0",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_ROUTE_X0",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "DRIVE",
+      "reset_rule": "reset to this vector spawn; emit RESET then DIAGNOSTIC_SPAWN; clear route candidate state but not monotonic serials",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -245.0,
+          0.05,
+          20.0
+        ],
+        "source": {
+          "node": "QRY",
+          "toward_route": "X0"
+        },
+        "support_height_m": -1.6,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 0.463649
+      },
+      "supplementary_capture": {
+        "authority": "district_zero.p1a.human_feasibility_capture.v1",
+        "protocol": "tests/fixtures/human_feasibility_protocol.json"
+      },
+      "termination": {
+        "condition": "craft center enters JUNCTION_RLY after genuine entry into X0",
+        "maximum_duration_s": 95.313508
+      },
+      "test_overlay_note": "v1.2.5 retires autonomous V4–V7 development. This vector consumes the first valid informed-human witness trace selected under the bounded capture protocol and replays only normalized player inputs from the unchanged canonical state. All route metrics and thresholds remain unchanged.",
+      "thresholds": {
+        "fast_route_speed_floor_mps": 18.0,
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "maximum_test_driver_path_deviation_m": 8.0,
+        "minimum_distance_at_or_above_fast_route_speed_m": 99.97621,
+        "minimum_genuine_classified_distance_m": 342.304838
+      }
+    },
+    {
+      "authority_claim": "genuine continuous crossing of named gate GW",
+      "controller_commands": {
+        "brake_command": 0.0,
+        "lookahead_m": 8.0,
+        "path": [
+          {
+            "direction": "FORWARD",
+            "end_chainage_m": 76.50993210434004,
+            "route": "A0",
+            "start_chainage_m": 25.0
+          },
+          {
+            "direction": "FORWARD",
+            "end_chainage_m": 24.0,
+            "route": "L0",
+            "start_chainage_m": 0.0
+          }
+        ],
+        "position_or_velocity_writes": "FORBIDDEN",
+        "steer_command": "clamp(1.6*heading_error,-1,1)",
+        "throttle_command": 0.65,
+        "type": "MULTI_ROUTE_FOLLOWER_INPUT_CONTROLLER"
+      },
+      "expected_events": [
+        {
+          "direction": "OUTSKIRTS_TO_CORE",
+          "event": "GATE_CROSSED",
+          "gate_id": "GW"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_GATE_GW",
+      "initial_mode": "DRIVE",
+      "reset_rule": "vector spawn with segment-boundary events; no coverage credit until continuous movement",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -220.359444,
+          0.540464,
+          24.224095
+        ],
+        "source": {
+          "chainage_m": 25.0,
+          "direction": "FORWARD",
+          "route": "A0"
+        },
+        "support_height_m": -1.109536,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.740573
+      },
+      "supplementary_capture": {
+        "at_event": "GATE_CROSSED",
+        "purpose": "visual context only; event is proof"
+      },
+      "termination": {
+        "condition": "complete final path chainage",
+        "maximum_duration_s": 20.0
+      },
+      "thresholds": {
+        "exact_gate_crossing_count": 1,
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0
+      }
+    },
+    {
+      "authority_claim": "genuine continuous crossing of named gate GN",
+      "controller_commands": {
+        "brake_command": 0.0,
+        "lookahead_m": 8.0,
+        "path": [
+          {
+            "direction": "FORWARD",
+            "end_chainage_m": 80.0,
+            "route": "L4",
+            "start_chainage_m": 35.0
+          },
+          {
+            "direction": "FORWARD",
+            "end_chainage_m": 28.0,
+            "route": "L5",
+            "start_chainage_m": 0.0
+          }
+        ],
+        "position_or_velocity_writes": "FORBIDDEN",
+        "steer_command": "clamp(1.6*heading_error,-1,1)",
+        "throttle_command": 0.65,
+        "type": "MULTI_ROUTE_FOLLOWER_INPUT_CONTROLLER"
+      },
+      "expected_events": [
+        {
+          "direction": "OUTSKIRTS_TO_CORE",
+          "event": "GATE_CROSSED",
+          "gate_id": "GN"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_GATE_GN",
+      "initial_mode": "SPREAD",
+      "reset_rule": "vector spawn with segment-boundary events; no coverage credit until continuous movement",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          2.9,
+          -175.0
+        ],
+        "source": {
+          "chainage_m": 35.0,
+          "direction": "FORWARD",
+          "route": "L4"
+        },
+        "support_height_m": 1.25,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -3.141593
+      },
+      "supplementary_capture": {
+        "at_event": "GATE_CROSSED",
+        "purpose": "visual context only; event is proof"
+      },
+      "termination": {
+        "condition": "complete final path chainage",
+        "maximum_duration_s": 20.0
+      },
+      "thresholds": {
+        "exact_gate_crossing_count": 1,
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0
+      }
+    },
+    {
+      "authority_claim": "genuine continuous crossing of named gate GE",
+      "controller_commands": {
+        "brake_command": 0.0,
+        "lookahead_m": 8.0,
+        "path": [
+          {
+            "direction": "FORWARD",
+            "end_chainage_m": 442.2819454094287,
+            "route": "A2",
+            "start_chainage_m": 394.2819454094287
+          },
+          {
+            "direction": "REVERSE",
+            "end_chainage_m": 48.32185006524436,
+            "route": "L3",
+            "start_chainage_m": 72.32185006524436
+          }
+        ],
+        "position_or_velocity_writes": "FORBIDDEN",
+        "steer_command": "clamp(1.6*heading_error,-1,1)",
+        "throttle_command": 0.65,
+        "type": "MULTI_ROUTE_FOLLOWER_INPUT_CONTROLLER"
+      },
+      "expected_events": [
+        {
+          "direction": "OUTSKIRTS_TO_CORE",
+          "event": "GATE_CROSSED",
+          "gate_id": "GE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_GATE_GE",
+      "initial_mode": "DRIVE",
+      "reset_rule": "vector spawn with segment-boundary events; no coverage credit until continuous movement",
+      "spawn_transform": {
+        "position_xyz_m": [
+          201.608221,
+          1.734618,
+          -1.123681
+        ],
+        "source": {
+          "chainage_m": 394.281945,
+          "direction": "FORWARD",
+          "route": "A2"
+        },
+        "support_height_m": 0.084618,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 2.422761
+      },
+      "supplementary_capture": {
+        "at_event": "GATE_CROSSED",
+        "purpose": "visual context only; event is proof"
+      },
+      "termination": {
+        "condition": "complete final path chainage",
+        "maximum_duration_s": 20.0
+      },
+      "thresholds": {
+        "exact_gate_crossing_count": 1,
+        "maximum_fall_reset_count": 0,
+        "maximum_non_hop_hard_collision_count": 0
+      }
+    },
+    {
+      "authority_claim": "CORE_PLINTH prevents craft-center crossing under DRIVE",
+      "duration_s": 8.0,
+      "expected_events": [
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_CORE_PLINTH_DRIVE",
+      "initial_linear_velocity_xyz_mps": [
+        13.046658,
+        0.0,
+        -12.400996
+      ],
+      "initial_mode": "DRIVE",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          85.5,
+          2.219,
+          -67.5
+        ],
+        "source": {
+          "boundary": "CORE_PLINTH",
+          "case": "DRIVE"
+        },
+        "support_height_m": 0.569,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -0.810765
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 479
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_CORE_PLINTH_DRIVE",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          96.606477,
+          -78.056832
+        ],
+        "required_source_geometry_id": "CORE_PLINTH_MASK",
+        "unit_normal_xz": [
+          0.724814349,
+          -0.688944236
+        ],
+        "unit_tangent_xz": [
+          0.688944236,
+          0.724814349
+        ]
+      },
+      "target_probe_xz_m": [
+        96.606477,
+        -78.056832
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 0,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_CORE_PLINTH_DRIVE"
+      },
+      "tick_commands": [
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 1.0
+        },
+        {
+          "command": "END",
+          "tick": 480
+        }
+      ]
+    },
+    {
+      "authority_claim": "CORE_PLINTH prevents craft-center crossing under LOW_THRUST",
+      "duration_s": 12.0,
+      "expected_events": [
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_CORE_PLINTH_LOW_THRUST",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          93.0,
+          2.232,
+          -73.5
+        ],
+        "source": {
+          "boundary": "CORE_PLINTH",
+          "case": "LOW_THRUST"
+        },
+        "support_height_m": 0.582,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -0.669502
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 719
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_CORE_PLINTH_LOW_THRUST",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          96.606477,
+          -78.056832
+        ],
+        "required_source_geometry_id": "CORE_PLINTH_MASK",
+        "unit_normal_xz": [
+          0.620595571,
+          -0.784130817
+        ],
+        "unit_tangent_xz": [
+          0.784130817,
+          0.620595571
+        ]
+      },
+      "target_probe_xz_m": [
+        96.606477,
+        -78.056832
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 0,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_CORE_PLINTH_LOW_THRUST"
+      },
+      "tick_commands": [
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 0.35
+        },
+        {
+          "command": "END",
+          "tick": 720
+        }
+      ]
+    },
+    {
+      "authority_claim": "CORE_PLINTH prevents craft-center crossing under WORST_HOP",
+      "duration_s": 6.0,
+      "expected_events": [
+        {
+          "event": "HOP_STARTED",
+          "minimum_count": 1
+        },
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_CORE_PLINTH_WORST_HOP",
+      "initial_linear_velocity_xyz_mps": [
+        10.550125,
+        0.5,
+        -13.330224
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          93.0,
+          2.132,
+          -73.5
+        ],
+        "source": {
+          "boundary": "CORE_PLINTH",
+          "case": "WORST_HOP"
+        },
+        "support_height_m": 0.582,
+        "vertical_offset_m": 1.55,
+        "yaw_rad": -0.669502
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 359
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_CORE_PLINTH_WORST_HOP",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          96.606477,
+          -78.056832
+        ],
+        "required_source_geometry_id": "CORE_PLINTH_MASK",
+        "unit_normal_xz": [
+          0.620595571,
+          -0.784130817
+        ],
+        "unit_tangent_xz": [
+          0.784130817,
+          0.620595571
+        ]
+      },
+      "target_probe_xz_m": [
+        96.606477,
+        -78.056832
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 1,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_CORE_PLINTH_WORST_HOP"
+      },
+      "tick_commands": [
+        {
+          "command": "HOP_PRESS",
+          "tick": 0,
+          "value": 1
+        },
+        {
+          "command": "HOP_RELEASE",
+          "tick": 1,
+          "value": 0
+        },
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 1.0
+        },
+        {
+          "command": "END",
+          "tick": 360
+        }
+      ]
+    },
+    {
+      "authority_claim": "OUTER_CLOSURE prevents craft-center crossing under DRIVE",
+      "duration_s": 8.0,
+      "expected_events": [
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_OUTER_CLOSURE_DRIVE",
+      "initial_linear_velocity_xyz_mps": [
+        6.756062,
+        0.0,
+        16.683993
+      ],
+      "initial_mode": "DRIVE",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          51.0,
+          3.047,
+          -223.5
+        ],
+        "source": {
+          "boundary": "OUTER_CLOSURE",
+          "case": "DRIVE"
+        },
+        "support_height_m": 1.397,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.756833
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 479
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_OUTER_CLOSURE_DRIVE",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          56.75866,
+          -209.279076
+        ],
+        "required_source_geometry_id": "OUTER_CLOSURE_MASK",
+        "unit_normal_xz": [
+          0.375336776,
+          0.926888507
+        ],
+        "unit_tangent_xz": [
+          -0.926888507,
+          0.375336776
+        ]
+      },
+      "target_probe_xz_m": [
+        56.75866,
+        -209.279076
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 0,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_OUTER_CLOSURE_DRIVE"
+      },
+      "tick_commands": [
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 1.0
+        },
+        {
+          "command": "END",
+          "tick": 480
+        }
+      ]
+    },
+    {
+      "authority_claim": "OUTER_CLOSURE prevents craft-center crossing under LOW_THRUST",
+      "duration_s": 12.0,
+      "expected_events": [
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_OUTER_CLOSURE_LOW_THRUST",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          54.0,
+          3.046,
+          -214.5
+        ],
+        "source": {
+          "boundary": "OUTER_CLOSURE",
+          "case": "LOW_THRUST"
+        },
+        "support_height_m": 1.396,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.655495
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 719
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_OUTER_CLOSURE_LOW_THRUST",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          56.75866,
+          -209.279076
+        ],
+        "required_source_geometry_id": "OUTER_CLOSURE_MASK",
+        "unit_normal_xz": [
+          0.467178757,
+          0.884162886
+        ],
+        "unit_tangent_xz": [
+          -0.884162886,
+          0.467178757
+        ]
+      },
+      "target_probe_xz_m": [
+        56.75866,
+        -209.279076
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 0,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_OUTER_CLOSURE_LOW_THRUST"
+      },
+      "tick_commands": [
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 0.35
+        },
+        {
+          "command": "END",
+          "tick": 720
+        }
+      ]
+    },
+    {
+      "authority_claim": "OUTER_CLOSURE prevents craft-center crossing under WORST_HOP",
+      "duration_s": 6.0,
+      "expected_events": [
+        {
+          "event": "HOP_STARTED",
+          "minimum_count": 1
+        },
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_OUTER_CLOSURE_WORST_HOP",
+      "initial_linear_velocity_xyz_mps": [
+        7.942039,
+        0.5,
+        15.030769
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          54.0,
+          2.946,
+          -214.5
+        ],
+        "source": {
+          "boundary": "OUTER_CLOSURE",
+          "case": "WORST_HOP"
+        },
+        "support_height_m": 1.396,
+        "vertical_offset_m": 1.55,
+        "yaw_rad": -2.655495
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 359
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_OUTER_CLOSURE_WORST_HOP",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          56.75866,
+          -209.279076
+        ],
+        "required_source_geometry_id": "OUTER_CLOSURE_MASK",
+        "unit_normal_xz": [
+          0.467178757,
+          0.884162886
+        ],
+        "unit_tangent_xz": [
+          -0.884162886,
+          0.467178757
+        ]
+      },
+      "target_probe_xz_m": [
+        56.75866,
+        -209.279076
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 1,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_OUTER_CLOSURE_WORST_HOP"
+      },
+      "tick_commands": [
+        {
+          "command": "HOP_PRESS",
+          "tick": 0,
+          "value": 1
+        },
+        {
+          "command": "HOP_RELEASE",
+          "tick": 1,
+          "value": 0
+        },
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 1.0
+        },
+        {
+          "command": "END",
+          "tick": 360
+        }
+      ]
+    },
+    {
+      "authority_claim": "CORE_WALL long eastern face prevents craft-center crossing under DRIVE; the complete bounded target window and 0.95 m craft-swept envelope are disjoint from every gate aperture",
+      "duration_s": 8.0,
+      "expected_events": [
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "gate_aperture_exclusion_proof": {
+        "craft_sweep_radius_m": 0.95,
+        "minimum_clearance_beyond_gate_aperture_and_craft_m": {
+          "GE": 45.971255,
+          "GN": 182.764232,
+          "GW": 325.065609
+        },
+        "target_window_endpoints_xz_m": [
+          [
+            160.520468,
+            -20.111933
+          ],
+          [
+            159.77202,
+            -24.041289
+          ]
+        ]
+      },
+      "id": "RT_BOUNDARY_CORE_WALL_DRIVE",
+      "initial_linear_velocity_xyz_mps": [
+        -17.682094,
+        0.0,
+        3.368018
+      ],
+      "initial_mode": "DRIVE",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          175.200988,
+          1.95682,
+          -24.944181
+        ],
+        "source": {
+          "boundary": "CORE_WALL",
+          "case": "DRIVE",
+          "geometry_component": "CORE_WALL_C02_LONG_EAST_FACE"
+        },
+        "support_height_m": 0.30682,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 1.759018
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 479
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_CORE_WALL_DRIVE",
+        "maximum_source_boundary_distance_m": 0.05,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond C02 long eastern wall face",
+        "point_xz_m": [
+          160.146244,
+          -22.076611
+        ],
+        "required_source_geometry_id": "CORE_WALL",
+        "unit_normal_xz": [
+          -0.982339,
+          0.187112
+        ],
+        "unit_tangent_xz": [
+          -0.187112,
+          -0.982339
+        ]
+      },
+      "target_probe_xz_m": [
+        160.146244,
+        -22.076611
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 0,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_CORE_WALL_DRIVE"
+      },
+      "tick_commands": [
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 1.0
+        },
+        {
+          "command": "END",
+          "tick": 480
+        }
+      ]
+    },
+    {
+      "authority_claim": "CORE_WALL long eastern face prevents craft-center crossing under LOW_THRUST; the complete bounded target window and 0.95 m craft-swept envelope are disjoint from every gate aperture",
+      "duration_s": 12.0,
+      "expected_events": [
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "gate_aperture_exclusion_proof": {
+        "craft_sweep_radius_m": 0.95,
+        "minimum_clearance_beyond_gate_aperture_and_craft_m": {
+          "GE": 45.971255,
+          "GN": 182.764232,
+          "GW": 325.065609
+        },
+        "target_window_endpoints_xz_m": [
+          [
+            160.520468,
+            -20.111933
+          ],
+          [
+            159.77202,
+            -24.041289
+          ]
+        ]
+      },
+      "id": "RT_BOUNDARY_CORE_WALL_LOW_THRUST",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          166.249349,
+          1.929583,
+          -23.239107
+        ],
+        "source": {
+          "boundary": "CORE_WALL",
+          "case": "LOW_THRUST",
+          "geometry_component": "CORE_WALL_C02_LONG_EAST_FACE"
+        },
+        "support_height_m": 0.279583,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 1.759018
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 719
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_CORE_WALL_LOW_THRUST",
+        "maximum_source_boundary_distance_m": 0.05,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond C02 long eastern wall face",
+        "point_xz_m": [
+          160.146244,
+          -22.076611
+        ],
+        "required_source_geometry_id": "CORE_WALL",
+        "unit_normal_xz": [
+          -0.982339,
+          0.187112
+        ],
+        "unit_tangent_xz": [
+          -0.187112,
+          -0.982339
+        ]
+      },
+      "target_probe_xz_m": [
+        160.146244,
+        -22.076611
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 0,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_CORE_WALL_LOW_THRUST"
+      },
+      "tick_commands": [
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 0.35
+        },
+        {
+          "command": "END",
+          "tick": 720
+        }
+      ]
+    },
+    {
+      "authority_claim": "CORE_WALL long eastern face prevents craft-center crossing under WORST_HOP; the complete bounded target window and 0.95 m craft-swept envelope are disjoint from every gate aperture",
+      "duration_s": 6.0,
+      "expected_events": [
+        {
+          "event": "HOP_STARTED",
+          "minimum_count": 1
+        },
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "gate_aperture_exclusion_proof": {
+        "craft_sweep_radius_m": 0.95,
+        "minimum_clearance_beyond_gate_aperture_and_craft_m": {
+          "GE": 45.971255,
+          "GN": 182.764232,
+          "GW": 325.065609
+        },
+        "target_window_endpoints_xz_m": [
+          [
+            160.520468,
+            -20.111933
+          ],
+          [
+            159.77202,
+            -24.041289
+          ]
+        ]
+      },
+      "id": "RT_BOUNDARY_CORE_WALL_WORST_HOP",
+      "initial_linear_velocity_xyz_mps": [
+        -16.699756,
+        0.5,
+        3.180906
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          166.249349,
+          1.829583,
+          -23.239107
+        ],
+        "source": {
+          "boundary": "CORE_WALL",
+          "case": "WORST_HOP",
+          "geometry_component": "CORE_WALL_C02_LONG_EAST_FACE"
+        },
+        "support_height_m": 0.279583,
+        "vertical_offset_m": 1.55,
+        "yaw_rad": 1.759018
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 359
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_CORE_WALL_WORST_HOP",
+        "maximum_source_boundary_distance_m": 0.05,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond C02 long eastern wall face",
+        "point_xz_m": [
+          160.146244,
+          -22.076611
+        ],
+        "required_source_geometry_id": "CORE_WALL",
+        "unit_normal_xz": [
+          -0.982339,
+          0.187112
+        ],
+        "unit_tangent_xz": [
+          -0.187112,
+          -0.982339
+        ]
+      },
+      "target_probe_xz_m": [
+        160.146244,
+        -22.076611
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 1,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_CORE_WALL_WORST_HOP"
+      },
+      "tick_commands": [
+        {
+          "command": "HOP_PRESS",
+          "tick": 0,
+          "value": 1
+        },
+        {
+          "command": "HOP_RELEASE",
+          "tick": 1,
+          "value": 0
+        },
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 1.0
+        },
+        {
+          "command": "END",
+          "tick": 360
+        }
+      ]
+    },
+    {
+      "authority_claim": "OUTER_WALL prevents craft-center crossing under DRIVE",
+      "duration_s": 8.0,
+      "expected_events": [
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_OUTER_WALL_DRIVE",
+      "initial_linear_velocity_xyz_mps": [
+        -3.459941,
+        0.0,
+        17.664337
+      ],
+      "initial_mode": "DRIVE",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -252.0,
+          0.827,
+          64.5
+        ],
+        "source": {
+          "boundary": "OUTER_WALL",
+          "case": "DRIVE"
+        },
+        "support_height_m": -0.823,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 2.94817
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 479
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_OUTER_WALL_DRIVE",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          -254.794501,
+          78.767008
+        ],
+        "required_source_geometry_id": "OUTER_WALL",
+        "unit_normal_xz": [
+          -0.192218952,
+          0.981352065
+        ],
+        "unit_tangent_xz": [
+          -0.981352065,
+          -0.192218952
+        ]
+      },
+      "target_probe_xz_m": [
+        -254.794501,
+        78.767008
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 0,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_OUTER_WALL_DRIVE"
+      },
+      "tick_commands": [
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 1.0
+        },
+        {
+          "command": "END",
+          "tick": 480
+        }
+      ]
+    },
+    {
+      "authority_claim": "OUTER_WALL prevents craft-center crossing under LOW_THRUST",
+      "duration_s": 12.0,
+      "expected_events": [
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_OUTER_WALL_LOW_THRUST",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -253.5,
+          0.874,
+          66.0
+        ],
+        "source": {
+          "boundary": "OUTER_WALL",
+          "case": "LOW_THRUST"
+        },
+        "support_height_m": -0.776,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": 3.040544
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 719
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_OUTER_WALL_LOW_THRUST",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          -254.794501,
+          78.767008
+        ],
+        "required_source_geometry_id": "OUTER_WALL",
+        "unit_normal_xz": [
+          -0.100877012,
+          0.994898904
+        ],
+        "unit_tangent_xz": [
+          -0.994898904,
+          -0.100877012
+        ]
+      },
+      "target_probe_xz_m": [
+        -254.794501,
+        78.767008
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 0,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_OUTER_WALL_LOW_THRUST"
+      },
+      "tick_commands": [
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 0.35
+        },
+        {
+          "command": "END",
+          "tick": 720
+        }
+      ]
+    },
+    {
+      "authority_claim": "OUTER_WALL prevents craft-center crossing under WORST_HOP",
+      "duration_s": 6.0,
+      "expected_events": [
+        {
+          "event": "HOP_STARTED",
+          "minimum_count": 1
+        },
+        {
+          "allowed": true,
+          "event": "COLLISION_SAMPLE"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_BOUNDARY_OUTER_WALL_WORST_HOP",
+      "initial_linear_velocity_xyz_mps": [
+        -1.714909,
+        0.5,
+        16.913281
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "reset to exact vector spawn; monotonic serials continue",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -253.5,
+          0.774,
+          66.0
+        ],
+        "source": {
+          "boundary": "OUTER_WALL",
+          "case": "WORST_HOP"
+        },
+        "support_height_m": -0.776,
+        "vertical_offset_m": 1.55,
+        "yaw_rad": 3.040544
+      },
+      "supplementary_capture": {
+        "purpose": "visual context only",
+        "tick": 359
+      },
+      "target_face_plane": {
+        "id": "PLANE_RT_BOUNDARY_OUTER_WALL_WORST_HOP",
+        "maximum_source_boundary_distance_m": 1.0,
+        "maximum_tangent_offset_m": 2.0,
+        "minimum_tangent_offset_m": -2.0,
+        "negative_side": "authorized spawn/approach side",
+        "nonnegative_side": "opposite side beyond the tested target face",
+        "point_xz_m": [
+          -254.794501,
+          78.767008
+        ],
+        "required_source_geometry_id": "OUTER_WALL",
+        "unit_normal_xz": [
+          -0.100877012,
+          0.994898904
+        ],
+        "unit_tangent_xz": [
+          -0.994898904,
+          -0.100877012
+        ]
+      },
+      "target_probe_xz_m": [
+        -254.794501,
+        78.767008
+      ],
+      "thresholds": {
+        "maximum_craft_center_samples_inside_hard_obstacle": 0,
+        "maximum_crossings_to_opposite_side_of_target_face": 0,
+        "maximum_fall_reset_count": 0,
+        "minimum_hop_started_count": 1,
+        "target_face_plane_id": "PLANE_RT_BOUNDARY_OUTER_WALL_WORST_HOP"
+      },
+      "tick_commands": [
+        {
+          "command": "HOP_PRESS",
+          "tick": 0,
+          "value": 1
+        },
+        {
+          "command": "HOP_RELEASE",
+          "tick": 1,
+          "value": 0
+        },
+        {
+          "command": "THROTTLE",
+          "tick": 0,
+          "value": 1.0
+        },
+        {
+          "command": "END",
+          "tick": 360
+        }
+      ]
+    },
+    {
+      "authority_claim": "support readiness is established before command; one correctly timed supported Spread Hop overlaps and clears the active HOP_BAR_01 candidate with zero contact and positive measured vertical clearance, completing at the first valid bounded HOP_BAR_HJE_CLEAR crossing",
+      "controller_commands": {
+        "bar_overlap_clearance": {
+          "bar_geometry_id": "HOP_BAR_01",
+          "clearance_formula": "craft_center_y - 0.58 - active_bar_top_y",
+          "craft_plan_half_length_m": 0.95,
+          "craft_vertical_radius_m": 0.58,
+          "plan_overlap_center_x_max_m": 1.85,
+          "plan_overlap_center_x_min_m": -1.85,
+          "plan_overlap_center_z_max_m": 144.95,
+          "plan_overlap_center_z_min_m": 125.05
+        },
+        "runup": {
+          "brake_above_band": 0.5,
+          "centerline_z_m": 135.0,
+          "hold_throttle_in_band": 0.3,
+          "maximum_trigger_speed_mps": 12.0,
+          "minimum_trigger_speed_mps": 11.5,
+          "steer_gain": 1.6,
+          "throttle_below_band": 1.0
+        },
+        "selected_timing_offset_m": 0.0,
+        "support_readiness": {
+          "maximum_abs_support_normal_speed_mps": 0.1,
+          "maximum_fold_amount": 0.01,
+          "maximum_hop_cooldown_s": 0.0,
+          "maximum_measured_height_m": 1.35,
+          "minimum_consecutive_physics_ticks": 12,
+          "minimum_measured_height_m": 1.2,
+          "minimum_probe_hit_count": 3,
+          "minimum_support_reacquire_blend": 0.999,
+          "no_collision_or_reset_during_readiness": true
+        },
+        "support_readiness_derivation": {
+          "algorithm_id": "DZP1A_SPREAD_DISCRETE_SUPPORT_EQUILIBRIUM_V1",
+          "controller_update_order": "gravity velocity increment precedes damped hover evaluation of support-normal speed",
+          "fixed_physics_timestep_s": 0.016666666666666666,
+          "formula": "h_eq = target + 2*zeta*gravity*dt/omega",
+          "gravity_mps2": 18.0,
+          "hover_omega": 8.0,
+          "hover_zeta": 1.0,
+          "maximum_measured_height_m": 1.35,
+          "numerical_margin_m": 0.025,
+          "spread_target_height_m": 1.25,
+          "stationary_discrete_equilibrium_m": 1.325,
+          "substantive_hop_acceptance_unchanged": true
+        },
+        "timing_model": {
+          "apex_time_s": 0.355555555555556,
+          "bar_center_x_m": 0.0,
+          "gravity_mps2": 18.0,
+          "hop_normal_speed_mps": 6.4,
+          "hop_tangential_retention": 0.84,
+          "required_hop_started_before_center_x_m": -1.85,
+          "trigger_x_formula": "bar_center_x - horizontal_speed*hop_tangential_retention*apex_time + timing_offset_m"
+        },
+        "timing_offsets_m": [
+          -0.3,
+          -0.15,
+          0.0,
+          0.15,
+          0.3
+        ],
+        "type": "SUPPORTED_HOP_BRACKET_CONTROLLER"
+      },
+      "crossing_plane": {
+        "evidence_class": "HOP_CLEAR",
+        "id": "HOP_BAR_HJE_CLEAR",
+        "maximum_source_boundary_distance_m": 0.0,
+        "maximum_tangent_offset_m": 4.0,
+        "minimum_tangent_offset_m": -4.0,
+        "point_xz_m": [
+          1.85,
+          135.0
+        ],
+        "required_source_geometry_id": "",
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ],
+        "unit_tangent_xz": [
+          0.0,
+          1.0
+        ]
+      },
+      "expected_events": [
+        {
+          "event": "SUPPORT_READY",
+          "minimum_count": 1
+        },
+        {
+          "event": "HOP_COMMAND",
+          "minimum_count": 1
+        },
+        {
+          "event": "HOP_STARTED",
+          "minimum_count": 1
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_HOP_SUCCESS",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "exact vector spawn; first post-boundary sample grants no route or gate credit",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -20.0,
+          1.3,
+          135.0
+        ],
+        "source": {
+          "case": "SUPPORTED_HOP_BRACKET",
+          "obstacle": "HOP_BAR_01"
+        },
+        "support_height_m": 0.05,
+        "vertical_offset_m": 1.25,
+        "yaw_rad": -1.570796
+      },
+      "termination": {
+        "claim_boundary": "first valid bounded HJE crossing after the complete supported-Hop clearance claim; no post-clearance drive, landing, or support-reacquisition requirement",
+        "completion_geometry": {
+          "bar_east_face_x_m": 0.9,
+          "clearance_plane_x_m": 1.85,
+          "conservative_craft_plan_half_length_m": 0.95,
+          "meaning": "complete conservative craft plan footprint is beyond HOP_BAR_01",
+          "tangent_range_z_m": [
+            131.0,
+            139.0
+          ]
+        },
+        "completion_tick_inclusive": true,
+        "requires": {
+          "exact_hop_started_count": 1,
+          "maximum_hard_collision_count": 0,
+          "maximum_hop_bar_collision_count": 0,
+          "minimum_bar_overlap_clearance_sample_count": 1,
+          "minimum_bar_overlap_vertical_clearance_m": 0.025,
+          "minimum_support_ready_consecutive_ticks": 12,
+          "ordered_events": [
+            "SUPPORT_READY",
+            "HOP_COMMAND",
+            "HOP_STARTED"
+          ]
+        },
+        "timeout_is_failure": true,
+        "timeout_tick": 359,
+        "type": "FIRST_VALID_HOP_CLEARANCE",
+        "window_id": "HOP_BAR_HJE_CLEAR"
+      },
+      "thresholds": {
+        "exact_hop_started_count": 1,
+        "hop_started_before_bar_contact_plane": true,
+        "maximum_fall_reset_count": 0,
+        "maximum_hard_collision_count": 0,
+        "maximum_hop_bar_collision_count": 0,
+        "maximum_hop_command_to_start_ticks": 2,
+        "maximum_route_entered_event_count": 0,
+        "maximum_route_traversed_event_count": 0,
+        "minimum_HOP_BAR_HJE_CLEAR_crossing_count": 1,
+        "minimum_bar_overlap_vertical_clearance_m": 0.025,
+        "minimum_hop_started_count": 1,
+        "minimum_support_ready_consecutive_ticks": 12,
+        "support_ready_before_hop_command": true
+      }
+    },
+    {
+      "authority_claim": "ordinary powered non-Hop travel must contact and remain denied by the active HOP_BAR_01 candidate; the v1.2.4A top=1.000 m crossing is established lower-bound evidence",
+      "controller_commands": {
+        "steer_gain": 1.6,
+        "target_xz_m": [
+          8.0,
+          135.0
+        ],
+        "throttle": 1.0,
+        "type": "POINT_TARGET_INPUT_CONTROLLER"
+      },
+      "crossing_windows": [
+        {
+          "evidence_class": "BAR_SPAN",
+          "id": "HOP_BAR_SPAN_PENETRATION",
+          "maximum_source_boundary_distance_m": 0.05,
+          "maximum_tangent_offset_m": 9.0,
+          "meaning": "bar penetration/overflight evidence only; z=126..144",
+          "minimum_tangent_offset_m": -9.0,
+          "point_xz_m": [
+            0.0,
+            135.0
+          ],
+          "required_source_geometry_id": "HOP_BAR_01",
+          "unit_normal_xz": [
+            1.0,
+            0.0
+          ],
+          "unit_tangent_xz": [
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "evidence_class": "HOP_CLEAR",
+          "id": "HOP_BAR_HJE_CLEAR",
+          "maximum_source_boundary_distance_m": 0.0,
+          "maximum_tangent_offset_m": 4.0,
+          "meaning": "conservative craft footprint fully beyond HJE face",
+          "minimum_tangent_offset_m": -4.0,
+          "point_xz_m": [
+            1.85,
+            135.0
+          ],
+          "required_source_geometry_id": "",
+          "unit_normal_xz": [
+            1.0,
+            0.0
+          ],
+          "unit_tangent_xz": [
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_HOP_DIRECT_NON_HOP_SPAN",
+      "initial_linear_velocity_xyz_mps": [
+        5.5,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "obstacle_geometry_id": "HOP_BAR_01",
+      "reset_rule": "exact vector spawn; no route/gate credit",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -12.0,
+          1.7,
+          135.0
+        ],
+        "source": {
+          "case": "DIRECT_NON_HOP_SPAN",
+          "obstacle": "HOP_BAR_01"
+        },
+        "support_height_m": 0.05,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      },
+      "termination": {
+        "tick": 239
+      },
+      "test_driver_liveness": {
+        "path_polyline_xz_m": [
+          [
+            -12.0,
+            135.0
+          ],
+          [
+            8.0,
+            135.0
+          ]
+        ],
+        "record_every_tick": true,
+        "required_window_id": "HOP_BAR_SPAN_PENETRATION"
+      },
+      "thresholds": {
+        "exact_hop_started_count": 0,
+        "expected_test_driver_liveness_sample_count": 240,
+        "maximum_core_plinth_collision_count": 0,
+        "maximum_hard_obstacle_penetration_samples": 0,
+        "maximum_hop_bar_hje_clear_crossing_count": 0,
+        "maximum_hop_bar_span_crossing_count": 0,
+        "minimum_first_liveness_horizontal_speed_mps": 5.0,
+        "minimum_hop_bar_collision_count": 1,
+        "minimum_peak_horizontal_speed_mps": 5.0,
+        "minimum_positive_throttle_fraction": 1.0,
+        "required_liveness_every_tick": true
+      }
+    },
+    {
+      "authority_claim": "powered non-Hop north seam probe reaches HOP_BAR_01 through a legal plinth-clear corridor and cannot cross the finite x=0 seam window",
+      "controller_commands": {
+        "steer_gain": 1.6,
+        "target_xz_m": [
+          8.0,
+          129.25
+        ],
+        "throttle": 1.0,
+        "type": "POINT_TARGET_INPUT_CONTROLLER"
+      },
+      "crossing_windows": [
+        {
+          "evidence_class": "END_BYPASS",
+          "id": "HOP_NORTH_SEAM_CROSSING",
+          "maximum_source_boundary_distance_m": 0.0,
+          "maximum_tangent_offset_m": 0.1,
+          "meaning": "finite north seam crossing at x=0; any crossing disproves the end seal",
+          "minimum_tangent_offset_m": -0.1,
+          "point_xz_m": [
+            0.0,
+            129.25
+          ],
+          "required_source_geometry_id": "",
+          "unit_normal_xz": [
+            1.0,
+            0.0
+          ],
+          "unit_tangent_xz": [
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "evidence_class": "BAR_SPAN",
+          "id": "HOP_BAR_SPAN_PENETRATION",
+          "maximum_source_boundary_distance_m": 0.05,
+          "maximum_tangent_offset_m": 9.0,
+          "meaning": "bar penetration/overflight evidence only; z=126..144",
+          "minimum_tangent_offset_m": -9.0,
+          "point_xz_m": [
+            0.0,
+            135.0
+          ],
+          "required_source_geometry_id": "HOP_BAR_01",
+          "unit_normal_xz": [
+            1.0,
+            0.0
+          ],
+          "unit_tangent_xz": [
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_HOP_NO_SLIP_NORTH",
+      "initial_linear_velocity_xyz_mps": [
+        5.5,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "obstacle_geometry_id": "HOP_BAR_01",
+      "reset_rule": "exact vector spawn; no route/gate credit",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -12.0,
+          1.63,
+          129.25
+        ],
+        "source": {
+          "case": "NORTH_SEAM_PROBE",
+          "obstacle": "HOP_BAR_01"
+        },
+        "support_height_m": -0.02,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      },
+      "static_seal_proof_artifact": "world/generated/hop_gate_end_seals.json",
+      "termination": {
+        "tick": 239
+      },
+      "test_driver_liveness": {
+        "path_polyline_xz_m": [
+          [
+            -12.0,
+            129.25
+          ],
+          [
+            8.0,
+            129.25
+          ]
+        ],
+        "record_every_tick": true
+      },
+      "thresholds": {
+        "exact_hop_started_count": 0,
+        "expected_test_driver_liveness_sample_count": 240,
+        "maximum_core_plinth_collision_count": 0,
+        "maximum_fall_reset_count": 0,
+        "maximum_hard_obstacle_penetration_samples": 0,
+        "maximum_hop_bar_span_crossing_count": 0,
+        "maximum_hop_end_bypass_crossing_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_first_liveness_horizontal_speed_mps": 5.0,
+        "minimum_hop_bar_collision_count": 1,
+        "minimum_peak_horizontal_speed_mps": 5.0,
+        "minimum_positive_throttle_fraction": 1.0,
+        "required_first_hard_geometry_id": "HOP_BAR_01",
+        "required_liveness_every_tick": true
+      }
+    },
+    {
+      "authority_claim": "powered non-Hop south seam probe reaches HOP_BAR_01 through a legal plinth-clear corridor and cannot cross the finite x=0 seam window",
+      "controller_commands": {
+        "steer_gain": 1.6,
+        "target_xz_m": [
+          8.0,
+          140.75
+        ],
+        "throttle": 1.0,
+        "type": "POINT_TARGET_INPUT_CONTROLLER"
+      },
+      "crossing_windows": [
+        {
+          "evidence_class": "END_BYPASS",
+          "id": "HOP_SOUTH_SEAM_CROSSING",
+          "maximum_source_boundary_distance_m": 0.0,
+          "maximum_tangent_offset_m": 0.1,
+          "meaning": "finite south seam crossing at x=0; any crossing disproves the end seal",
+          "minimum_tangent_offset_m": -0.1,
+          "point_xz_m": [
+            0.0,
+            140.75
+          ],
+          "required_source_geometry_id": "",
+          "unit_normal_xz": [
+            1.0,
+            0.0
+          ],
+          "unit_tangent_xz": [
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "evidence_class": "BAR_SPAN",
+          "id": "HOP_BAR_SPAN_PENETRATION",
+          "maximum_source_boundary_distance_m": 0.05,
+          "maximum_tangent_offset_m": 9.0,
+          "meaning": "bar penetration/overflight evidence only; z=126..144",
+          "minimum_tangent_offset_m": -9.0,
+          "point_xz_m": [
+            0.0,
+            135.0
+          ],
+          "required_source_geometry_id": "HOP_BAR_01",
+          "unit_normal_xz": [
+            1.0,
+            0.0
+          ],
+          "unit_tangent_xz": [
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_HOP_NO_SLIP_SOUTH",
+      "initial_linear_velocity_xyz_mps": [
+        5.5,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "obstacle_geometry_id": "HOP_BAR_01",
+      "reset_rule": "exact vector spawn; no route/gate credit",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -12.0,
+          1.63,
+          140.75
+        ],
+        "source": {
+          "case": "SOUTH_SEAM_PROBE",
+          "obstacle": "HOP_BAR_01"
+        },
+        "support_height_m": -0.02,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      },
+      "static_seal_proof_artifact": "world/generated/hop_gate_end_seals.json",
+      "termination": {
+        "tick": 239
+      },
+      "test_driver_liveness": {
+        "path_polyline_xz_m": [
+          [
+            -12.0,
+            140.75
+          ],
+          [
+            8.0,
+            140.75
+          ]
+        ],
+        "record_every_tick": true
+      },
+      "thresholds": {
+        "exact_hop_started_count": 0,
+        "expected_test_driver_liveness_sample_count": 240,
+        "maximum_core_plinth_collision_count": 0,
+        "maximum_fall_reset_count": 0,
+        "maximum_hard_obstacle_penetration_samples": 0,
+        "maximum_hop_bar_span_crossing_count": 0,
+        "maximum_hop_end_bypass_crossing_count": 0,
+        "maximum_non_hop_hard_collision_count": 0,
+        "minimum_first_liveness_horizontal_speed_mps": 5.0,
+        "minimum_hop_bar_collision_count": 1,
+        "minimum_peak_horizontal_speed_mps": 5.0,
+        "minimum_positive_throttle_fraction": 1.0,
+        "required_first_hard_geometry_id": "HOP_BAR_01",
+        "required_liveness_every_tick": true
+      }
+    },
+    {
+      "authority_claim": "DOG remains a no-Hop alternative between HJW and HJE",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "DOG",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "ROUTE_STATE",
+          "route_id": "DOG",
+          "state": "TRAVERSED"
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_DOG_PASSAGE",
+      "initial_linear_velocity_xyz_mps": [
+        0,
+        0,
+        0
+      ],
+      "initial_mode": "SPREAD",
+      "reset_rule": "exact vector spawn",
+      "spawn_transform": {
+        "position_xyz_m": [
+          -45.0,
+          1.7,
+          135.0
+        ],
+        "source": {
+          "node": "HJW",
+          "toward_route": "DOG"
+        },
+        "support_height_m": 0.05,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -2.761086
+      },
+      "termination": {
+        "condition": "enter JUNCTION_HJE",
+        "maximum_duration_s": 24.0
+      },
+      "thresholds": {
+        "exact_hop_started_count": 0,
+        "maximum_hard_collision_count": 0,
+        "minimum_genuine_classified_distance_m": 65.0
+      }
+    },
+    {
+      "authority_claim": "R0 visibly/materially enters and exits its rough band without changing movement coefficients",
+      "controller_commands": {
+        "curvature_span_m": 8.0,
+        "direction": "FORWARD",
+        "drive_brake_decel_mps2": 4.5,
+        "drive_speed_cap_mps": 27.0,
+        "drive_yaw_rate_rad_s": 0.44,
+        "endpoint_margin_m": 3.0,
+        "lookahead_max_m": 12.0,
+        "lookahead_min_m": 5.0,
+        "lookahead_speed_gain_s": 0.35,
+        "nearest_projection": "all baked segments; minimum squared distance then lower chainage",
+        "position_or_velocity_writes": "FORBIDDEN",
+        "route_id": "R0",
+        "speed_deadband_mps": 0.6,
+        "speed_error_full_scale_mps": 5.0,
+        "spread_brake_decel_mps2": 19.0,
+        "spread_speed_cap_mps": 11.5,
+        "spread_yaw_rate_rad_s": 1.9,
+        "steer_gain": 1.75,
+        "terminate_chainage_m": 122.0,
+        "turn_rate_margin": 0.72,
+        "type": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2"
+      },
+      "expected_events": [
+        {
+          "event": "SURFACE_CLASS_CHANGED",
+          "ordered_values": [
+            2,
+            5,
+            2
+          ]
+        }
+      ],
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_R0_SURFACE_NEUTRALITY",
+      "initial_linear_velocity_route_tangent_mps": 8.0,
+      "initial_mode": "SPREAD",
+      "reset_rule": "exact vector spawn",
+      "spawn_transform": {
+        "position_xyz_m": [
+          20.0,
+          2.414,
+          -130.0
+        ],
+        "source": {
+          "chainage_m": 20.0,
+          "direction": "FORWARD",
+          "route": "R0"
+        },
+        "support_height_m": 0.764,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.570796
+      },
+      "termination": {
+        "condition": "requested route R0 chainage >= controller_commands.terminate_chainage_m",
+        "maximum_duration_s": 22.0
+      },
+      "thresholds": {
+        "maximum_fall_reset_count": 0,
+        "movement_tuning_digest_algorithm_id": "DZP1A_TUNING_SHA256_V1",
+        "movement_tuning_digest_before_equals_after": true,
+        "required_movement_tuning_digest_after": "f68c66e8e155e0891b822506a22a6b40084e1d2ae98159a1a144115095697364",
+        "required_movement_tuning_digest_before": "f68c66e8e155e0891b822506a22a6b40084e1d2ae98159a1a144115095697364",
+        "required_surface_class_sequence": [
+          2,
+          5,
+          2
+        ]
+      }
+    },
+    {
+      "authority_claim": "all diagnostic select/spawn/reset/log paths are visible and segment-bounded",
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_DIAGNOSTIC_PATHS",
+      "initial_mode": "SPREAD",
+      "reset_rule": "uses public reset path only except explicit fall-test position fixture",
+      "spawn_transform": {
+        "position_xyz_m": [
+          0.0,
+          1.65,
+          20.0
+        ],
+        "source": {
+          "node": "MRK",
+          "toward_route": "L2"
+        },
+        "support_height_m": 0.0,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.989022
+      },
+      "thresholds": {
+        "maximum_route_entered_or_traversed_events_caused_by_spawn_or_reset": 0,
+        "required_event_order": [
+          "DIAGNOSTIC_SELECTION:T00_NEUTRAL_ROAM",
+          "RESET:DIAGNOSTIC",
+          "DIAGNOSTIC_SPAWN:SPAWN_NEUTRAL_MRK",
+          "RESET:MANUAL",
+          "RESET:FALL"
+        ],
+        "required_neutral_spawn_selection_id": "T00_NEUTRAL_ROAM"
+      },
+      "tick_commands": [
+        {
+          "command": "OPEN_DIAGNOSTIC_MENU",
+          "tick": 0
+        },
+        {
+          "command": "ASSERT_SELECTION",
+          "tick": 1,
+          "value": "T01_WEST_GATE"
+        },
+        {
+          "command": "PREVIOUS_SELECTION",
+          "tick": 2
+        },
+        {
+          "command": "ASSERT_SELECTION",
+          "tick": 3,
+          "value": "T00_NEUTRAL_ROAM"
+        },
+        {
+          "command": "SPAWN_SELECTED_WITH_ENTER",
+          "tick": 4
+        },
+        {
+          "command": "MANUAL_RESET_WITH_R",
+          "tick": 60
+        },
+        {
+          "command": "SET_POSITION_Y_FOR_FALL_TEST",
+          "tick": 120,
+          "value": -12.01
+        },
+        {
+          "command": "END",
+          "tick": 121
+        }
+      ]
+    },
+    {
+      "authority_claim": "fresh extraction opens as unmistakable P1A v1.2.3 under exact Godot",
+      "fixed_physics_timestep_s": 0.016666666666666666,
+      "id": "RT_FRESH_OPEN_IDENTITY",
+      "launch": {
+        "godot_version": "4.7.1.stable.official.a13da4feb",
+        "scene": "res://scenes/district_zero_p1a.tscn"
+      },
+      "supplementary_capture": {
+        "purpose": "required identity evidence; not proof of topology or feel",
+        "tick": 120
+      },
+      "termination": {
+        "tick": 120
+      },
+      "thresholds": {
+        "default_diagnostic_selection": "T01_WEST_GATE",
+        "default_spawn_id": "SPAWN_NEUTRAL_MRK",
+        "exact_allowed_input_actions": [
+          "brake",
+          "debug_overlay",
+          "diagnostic_menu",
+          "diagnostic_next",
+          "diagnostic_prev",
+          "diagnostic_spawn",
+          "hop",
+          "pause",
+          "reset",
+          "steer_left",
+          "steer_right",
+          "throttle",
+          "transform"
+        ],
+        "legacy_selector_action_count": 0,
+        "visible_build_label_exact": "DISTRICT ZERO · P1A WORLD GATE · v1.2.3"
+      }
+    }
+  ],
+  "world_data_authority_version": "1.2.3"
+}

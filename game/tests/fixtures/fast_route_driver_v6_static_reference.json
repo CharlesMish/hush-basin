@@ -1,0 +1,623 @@
+{
+  "algorithm_id": "DZP1A_DECEL_CONSTRAINED_THRUST_VECTOR_V1",
+  "authority_version": "1.2.4I",
+  "braking_feasibility_rule": "Backward planner uses 90% of the net deceleration guaranteed by the exact candidate input-combination constraint; frozen drag is not credited.",
+  "record_count": 36,
+  "records": [
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R35_S08",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R35_S08",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R35_S08",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R35_S10",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R35_S10",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R35_S10",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R45_S08",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R45_S08",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R45_S08",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R45_S10",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R45_S10",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 1.8,
+      "candidate_id": "V6_D20_R45_S10",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.5,
+      "minimum_required_net_deceleration_mps2": 2.0,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R35_S08",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R35_S08",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R35_S08",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R35_S10",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R35_S10",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R35_S10",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R45_S08",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R45_S08",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R45_S08",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R45_S10",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R45_S10",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.25,
+      "candidate_id": "V6_D25_R45_S10",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 2.0,
+      "minimum_required_net_deceleration_mps2": 2.5,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R35_S08",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R35_S08",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R35_S08",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R35_S10",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R35_S10",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R35_S10",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R45_S08",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R45_S08",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R45_S08",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R45_S10",
+      "fast_distance_geometric_headroom_m": 257.491358,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "route_length_m": 321.864198,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R45_S10",
+      "fast_distance_geometric_headroom_m": 353.825556,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "route_length_m": 442.281945,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    },
+    {
+      "braking_envelope_decel_mps2": 2.7,
+      "candidate_id": "V6_D30_R45_S10",
+      "fast_distance_geometric_headroom_m": 399.904838,
+      "full_brake_decel_mps2": 4.5,
+      "maximum_forward_thrust_projection_during_slowdown_mps2": 1.5,
+      "minimum_required_net_deceleration_mps2": 3.0,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "route_length_m": 499.881048,
+      "static_assertions": {
+        "fast_distance_headroom_positive": true,
+        "planner_envelope_has_10pct_margin": true,
+        "planner_envelope_no_greater_than_guaranteed_net_decel": true,
+        "required_net_decel_positive_and_below_full_brake": true
+      }
+    }
+  ],
+  "route_compact_sha256": "f26283b6cd314ba1d27aebea0bf80d82fbf2426ee5f22b610b38c273fec73330",
+  "schema": "district_zero.p1a.fast_route_driver_v6_static_reference.v1",
+  "status": "STATIC AUTHORITY ONLY — exact-engine execution NOT PERFORMED"
+}

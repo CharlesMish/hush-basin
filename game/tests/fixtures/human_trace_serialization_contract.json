@@ -1,0 +1,48 @@
+{
+  "authority_version": "v1.2.5",
+  "canonical_files": {
+    "input_trace.json": "one canonical JSON object validated by human_input_trace.schema.json",
+    "selected_human_traces.json": "one canonical JSON object validated by selected_human_trace_manifest.schema.json",
+    "state_trace.json": "one canonical JSON object validated by human_state_trace.schema.json"
+  },
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "raw bytes of the named file; hashes are stored only in detached result/manifests and SHA256SUMS.txt",
+  "input_record_key_order": [
+    "brake_u16",
+    "hop_pressed",
+    "physics_tick",
+    "steer_i16",
+    "throttle_u16",
+    "transform_pressed",
+    "vector_tick"
+  ],
+  "json_document": {
+    "bom": "FORBIDDEN",
+    "encoding": "UTF-8",
+    "key_order": "lexicographic Unicode code-point order recursively",
+    "line_endings": "LF",
+    "numbers": "input/state trace records contain integers only; nonfinite numbers forbidden; negative zero forbidden",
+    "terminal_newline": "REQUIRED",
+    "unicode": "unescaped UTF-8 where valid; control characters escaped by JSON",
+    "whitespace": "compact JSON; separators comma and colon; no insignificant spaces"
+  },
+  "noncanonical_human_readable_files": {
+    "attempt_result.json": "validated by human_capture_attempt_result.schema.json",
+    "replay_result.json": "validated by human_replay_result.schema.json",
+    "telemetry.json": "raw full-precision evidence validated by human_capture_telemetry.schema.json; identity is still its shipped raw-byte SHA-256"
+  },
+  "schema": "district_zero.p1a.human_trace_serialization_contract.v1",
+  "self_hashing_fields": "FORBIDDEN",
+  "state_record_key_order": [
+    "chainage_mm",
+    "fast_distance_mm",
+    "fold_u6",
+    "lateral_mm",
+    "physics_tick",
+    "position_mm",
+    "surface_class",
+    "vector_tick",
+    "velocity_mmps",
+    "yaw_urad"
+  ]
+}

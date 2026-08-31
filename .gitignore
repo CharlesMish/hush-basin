@@ -1,0 +1,48 @@
+# Godot-generated state
+**/.godot/
+**/.import/
+**/.mono/
+**/*.translation
+**/export_credentials.cfg
+**/override.cfg
+
+# The verified R7 packet intentionally excludes these three editor-generated
+# test-script UIDs. Do not ignore UID files globally: the other UID files are
+# authoritative Godot source metadata.
+/game/tests/p1a_vehicle_r7_pose_probe.gd.uid
+/game/tests/p1a_vehicle_r7_runner.gd.uid
+/game/tests/p1a_vehicle_r7_ui_probe.gd.uid
+
+# Python/tool state
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# OS/editor metadata
+**/.DS_Store
+**/._*
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Runtime, build, export, and package output
+**/*.log
+**/*.pid
+build/
+dist/
+exports/
+artifacts/
+run-output/
+*.pck
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.dmg
+*.app/

@@ -1,0 +1,276 @@
+{
+  "allowed_files_for_implementation": [
+    "project.godot",
+    "scenes/district_zero_p1a.tscn",
+    "scripts/p1a_world_builder.gd",
+    "scripts/p1a_world_gate.gd",
+    "tests/p1a_human_feasibility_runner.gd",
+    "presentation/generated/solid_render_meshes_v1_2_6.json",
+    "tools/launch_a1_capture.py",
+    "tools/run_human_feasibility_session.py",
+    "tools/run_v1_2_6_launcher_smoke.py",
+    "START_A1_CAPTURE.command",
+    "README_FIRST.md",
+    "P1A_FEASIBILITY_CAPTURE_CARD.md",
+    "P1A_PLAYTEST_CARD.md",
+    "STATUS.md",
+    "evidence/v1_2_6_*",
+    "tests/fixtures/v1_2_6_*"
+  ],
+  "capture_replay_semantics_authority_version": "v1.2.5",
+  "color_values": "literal Godot Color(r,g,b,1) channel values; no texture/color-profile dependency",
+  "diagnostic_main_scene_label": {
+    "exact_text": "DIAGNOSTIC FREE ROAM — NOT HUMAN CAPTURE",
+    "font_color_rgba": [
+      1.0,
+      0.76,
+      0.22,
+      1.0
+    ],
+    "minimum_font_size_px": 24,
+    "panel_background_rgba": [
+      0.02,
+      0.025,
+      0.03,
+      0.9
+    ],
+    "persistent": true,
+    "project_name": "District Zero P1A — Diagnostic Free Roam (Not Human Capture)"
+  },
+  "environment": {
+    "ambient_light_color": [
+      0.6,
+      0.67,
+      0.72,
+      1.0
+    ],
+    "ambient_light_energy": 0.92,
+    "ambient_light_source": 2,
+    "background_color": [
+      0.008,
+      0.014,
+      0.024,
+      1.0
+    ],
+    "background_mode": 1,
+    "project_default_clear_color": [
+      0.008,
+      0.014,
+      0.024,
+      1.0
+    ],
+    "sun": {
+      "directional_shadow_max_distance_m_frozen": 230.0,
+      "light_angular_distance_degrees": 0.35,
+      "light_color": [
+        0.96,
+        0.91,
+        0.82,
+        1.0
+      ],
+      "light_energy": 1.1,
+      "rotation_degrees_frozen": [
+        -48.0,
+        -32.0,
+        0.0
+      ],
+      "shadow_enabled": true,
+      "shadow_opacity": 0.55
+    },
+    "tonemap_mode": 2
+  },
+  "forbidden": [
+    "global brightness-only repair",
+    "texture/model/font/audio import",
+    "geometry or collision mutation",
+    "camera transform change",
+    "route/mask/terrain change",
+    "indiscriminate smooth normals across polygon corners",
+    "unlit solids",
+    "shadow removal"
+  ],
+  "landmarks": {
+    "albedo_color": [
+      0.72,
+      0.56,
+      0.26,
+      1.0
+    ],
+    "roughness": 0.7
+  },
+  "node_markers": {
+    "destination": [
+      0.2,
+      0.8,
+      0.68,
+      1.0
+    ],
+    "emission_multiplier": 0.3,
+    "gate": [
+      0.95,
+      0.68,
+      0.18,
+      1.0
+    ]
+  },
+  "nominal_rec709_luminance_for_ordering_only": {
+    "0_NON_PLAYABLE_BASE": 0.101831,
+    "10_GATE_VISUAL_BAND_NONCOLLIDING": 0.607078,
+    "11_HARD_OBSTACLE_FOOTPRINT": 0.12647,
+    "1_PLAYABLE_BASE": 0.227204,
+    "2_ROADBED_SMOOTH_PAVE": 0.321628,
+    "3_ROADBED_SMOOTH_FIRM": 0.305708,
+    "4_ROADBED_COMPACTED_SMOOTH": 0.317938,
+    "5_ROADBED_ROUGH_R2_ACTIVE": 0.340298,
+    "6_SHOULDER": 0.498476,
+    "7_BANK_BLEND": 0.207204,
+    "8_JUNCTION_SMOOTH": 0.360906,
+    "9_PAD_SMOOTH": 0.361652,
+    "BUILDING_B01_TO_B14": 0.515828,
+    "CORE_PLINTH_MASK": 0.575106,
+    "CORE_WALL": 0.627232,
+    "DESTINATION_MARKER": 0.663776,
+    "EMPTY_BACKGROUND": 0.013446,
+    "GATE_MARKER": 0.701302,
+    "HOP_BAR_01": 0.49624,
+    "LANDMARK": 0.572356,
+    "OUTER_CLOSURE_MASK": 0.41294,
+    "OUTER_WALL": 0.465788
+  },
+  "presentation_launch_overlay_authority_version": "v1.2.6",
+  "schema": "district_zero.p1a.v1_2_6.presentation_authority.v1",
+  "solids": {
+    "collision_arrays_path_unchanged": "world/generated/solid_meshes.json",
+    "collision_arrays_raw_sha256": "72f36973cde5e6f9c53a09086f7decbb3c4e7f56cfcff7925e9f8de4b8380201",
+    "material": {
+      "metallic": 0.0,
+      "roughness": 0.74,
+      "shading_mode": 1,
+      "transparency": 0
+    },
+    "render_arrays_path": "presentation/generated/solid_render_meshes_v1_2_6.json",
+    "render_arrays_raw_sha256": "895b8d08e19a7c67679b50591c1be021f43e825f08ad02116da7a085a7855eff",
+    "source_geometry_colors": {
+      "BUILDING_B01_TO_B14": [
+        0.48,
+        0.52,
+        0.58,
+        1.0
+      ],
+      "CORE_PLINTH_MASK": [
+        0.54,
+        0.58,
+        0.63,
+        1.0
+      ],
+      "CORE_WALL": [
+        0.6,
+        0.63,
+        0.68,
+        1.0
+      ],
+      "HOP_BAR_01": [
+        0.82,
+        0.44,
+        0.1,
+        1.0
+      ],
+      "OUTER_CLOSURE_MASK": [
+        0.38,
+        0.42,
+        0.44,
+        1.0
+      ],
+      "OUTER_WALL": [
+        0.44,
+        0.47,
+        0.5,
+        1.0
+      ]
+    }
+  },
+  "terrain": {
+    "material": {
+      "metallic": 0.0,
+      "roughness": 0.88,
+      "shading_mode": 1,
+      "transparency": 0,
+      "vertex_color_use_as_albedo": true
+    },
+    "surface_class_colors": {
+      "0_NON_PLAYABLE_BASE": [
+        0.085,
+        0.105,
+        0.12,
+        1.0
+      ],
+      "10_GATE_VISUAL_BAND_NONCOLLIDING": [
+        0.85,
+        0.58,
+        0.16,
+        1.0
+      ],
+      "11_HARD_OBSTACLE_FOOTPRINT": [
+        0.11,
+        0.13,
+        0.14,
+        1.0
+      ],
+      "1_PLAYABLE_BASE": [
+        0.19,
+        0.24,
+        0.21,
+        1.0
+      ],
+      "2_ROADBED_SMOOTH_PAVE": [
+        0.24,
+        0.34,
+        0.38,
+        1.0
+      ],
+      "3_ROADBED_SMOOTH_FIRM": [
+        0.3,
+        0.31,
+        0.28,
+        1.0
+      ],
+      "4_ROADBED_COMPACTED_SMOOTH": [
+        0.26,
+        0.34,
+        0.27,
+        1.0
+      ],
+      "5_ROADBED_ROUGH_R2_ACTIVE": [
+        0.48,
+        0.32,
+        0.13,
+        1.0
+      ],
+      "6_SHOULDER": [
+        0.52,
+        0.5,
+        0.42,
+        1.0
+      ],
+      "7_BANK_BLEND": [
+        0.17,
+        0.22,
+        0.19,
+        1.0
+      ],
+      "8_JUNCTION_SMOOTH": [
+        0.28,
+        0.38,
+        0.41,
+        1.0
+      ],
+      "9_PAD_SMOOTH": [
+        0.24,
+        0.4,
+        0.34,
+        1.0
+      ]
+    }
+  },
+  "world_data_authority_version": "v1.2.3"
+}

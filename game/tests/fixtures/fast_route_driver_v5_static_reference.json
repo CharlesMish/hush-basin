@@ -1,0 +1,108 @@
+{
+  "algorithm_id": "DZP1A_INERTIAL_THRUST_VECTOR_V1",
+  "interpretation": "Static speed-plan feasibility and candidate-registration proof only. This is not Godot runtime passage evidence.",
+  "records": [
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 321.864198,
+      "candidate_id": "V5_A_BALANCED",
+      "distance_with_plan_at_or_above_18_mps": 277.678117,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 1291,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "static_headroom_m": 213.305277
+    },
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 442.281945,
+      "candidate_id": "V5_A_BALANCED",
+      "distance_with_plan_at_or_above_18_mps": 398.164407,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 1773,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "static_headroom_m": 309.708018
+    },
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 499.881048,
+      "candidate_id": "V5_A_BALANCED",
+      "distance_with_plan_at_or_above_18_mps": 355.624151,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 2005,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "static_headroom_m": 255.647941
+    },
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 321.864198,
+      "candidate_id": "V5_B_EARLY_RECOVERY",
+      "distance_with_plan_at_or_above_18_mps": 277.678117,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 1291,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "static_headroom_m": 213.305277
+    },
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 442.281945,
+      "candidate_id": "V5_B_EARLY_RECOVERY",
+      "distance_with_plan_at_or_above_18_mps": 398.164407,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 1773,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "static_headroom_m": 309.708018
+    },
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 499.881048,
+      "candidate_id": "V5_B_EARLY_RECOVERY",
+      "distance_with_plan_at_or_above_18_mps": 333.905191,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 2005,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "static_headroom_m": 233.928981
+    },
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 321.864198,
+      "candidate_id": "V5_C_MAX_CONTAINMENT",
+      "distance_with_plan_at_or_above_18_mps": 277.678117,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 1291,
+      "required_fast_distance_m": 64.37284,
+      "route_id": "A1",
+      "static_headroom_m": 213.305277
+    },
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 442.281945,
+      "candidate_id": "V5_C_MAX_CONTAINMENT",
+      "distance_with_plan_at_or_above_18_mps": 398.164407,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 1773,
+      "required_fast_distance_m": 88.456389,
+      "route_id": "A2",
+      "static_headroom_m": 309.708018
+    },
+    {
+      "backward_envelope_violation_count": 0,
+      "baked_length_m": 499.881048,
+      "candidate_id": "V5_C_MAX_CONTAINMENT",
+      "distance_with_plan_at_or_above_18_mps": 315.680688,
+      "minimum_plan_speed_mps": 8.0,
+      "point_count": 2005,
+      "required_fast_distance_m": 99.97621,
+      "route_id": "X0",
+      "static_headroom_m": 215.704478
+    }
+  ],
+  "route_bake_fixed_global_compact_array_sha256": "f26283b6cd314ba1d27aebea0bf80d82fbf2426ee5f22b610b38c273fec73330",
+  "schema": "district_zero.p1a.fast_route_driver_v5_static_reference.v1",
+  "test_overlay_authority_version": "1.2.4H"
+}

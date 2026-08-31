@@ -1,0 +1,132 @@
+{
+  "$id": "district_zero.p1a.human_input_trace.schema.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "attempt_index": {
+      "maximum": 5,
+      "minimum": 1,
+      "type": "integer"
+    },
+    "authority_version": {
+      "const": "v1.2.5"
+    },
+    "engine_identity": {
+      "const": "4.7.1.stable.official.a13da4feb"
+    },
+    "initial_state": {
+      "type": "object"
+    },
+    "physics_timestep_s": {
+      "const": 0.016666666666666666
+    },
+    "project_identity": {
+      "type": "object"
+    },
+    "records": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "brake_u16": {
+            "maximum": 65535,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "hop_pressed": {
+            "const": false
+          },
+          "physics_tick": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "steer_i16": {
+            "maximum": 32767,
+            "minimum": -32767,
+            "type": "integer"
+          },
+          "throttle_u16": {
+            "maximum": 65535,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "transform_pressed": {
+            "const": true
+          },
+          "vector_tick": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "vector_tick",
+          "physics_tick",
+          "throttle_u16",
+          "brake_u16",
+          "steer_i16",
+          "transform_pressed",
+          "hop_pressed"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "route_id": {
+      "enum": [
+        "A1",
+        "A2",
+        "X0"
+      ]
+    },
+    "schema": {
+      "const": "district_zero.p1a.human_input_trace.v1"
+    },
+    "serialization_contract": {
+      "const": "tests/fixtures/human_trace_serialization_contract.json"
+    },
+    "terminal": {
+      "properties": {
+        "record_count": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "ABORTED"
+          ]
+        },
+        "termination_reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "record_count",
+        "termination_reason",
+        "status"
+      ],
+      "type": "object"
+    },
+    "trace_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "authority_version",
+    "serialization_contract",
+    "trace_id",
+    "route_id",
+    "attempt_index",
+    "engine_identity",
+    "project_identity",
+    "initial_state",
+    "physics_timestep_s",
+    "records",
+    "terminal"
+  ],
+  "title": "District Zero normalized human input trace",
+  "type": "object"
+}

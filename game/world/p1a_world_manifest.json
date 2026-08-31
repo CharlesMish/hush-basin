@@ -1,0 +1,2704 @@
+{
+  "P1B_frozen_until_P1A_passes": [
+    "contracts",
+    "cargo profiles/consequences",
+    "crash/shock/freshness/qualification/scoring",
+    "best time/replay",
+    "economy/progression/save",
+    "traffic",
+    "second district/open world",
+    "final art",
+    "audio",
+    "movement/camera/surface retuning"
+  ],
+  "artifact_integrity_correction": {
+    "P1B_status": "FROZEN",
+    "aperture_change": false,
+    "candidate": "HB_TOP_1240MM unchanged",
+    "corrected_success_boundary": "first valid bounded HOP_BAR_HJE_CLEAR crossing with strict collision counting through completion tick inclusive",
+    "historical_v1_2_4c_Q1": "five fixed-horizon failures reclassified TEST_DRIVER/TEST_AUTHORITY; not retroactive passes",
+    "human_status": "NOT PERFORMED",
+    "movement_change": false,
+    "passability_plan_change": false,
+    "presentation_change": false,
+    "preserved_source_frozen_file_count": 19,
+    "readiness_ceiling_m": 1.35,
+    "route_change": false,
+    "runtime_status": "v1.2.4D exact-engine Q1 NOT PERFORMED; fresh five-offset scan required",
+    "scope": "bounded Q1 post-success test-authority correction; event-based completion, raw evidence adjudication, runner/verifier and directly derived identities only",
+    "surface_change": false,
+    "terrain_change": false,
+    "version": "1.2.4D",
+    "world_geometry_change": "NONE"
+  },
+  "authority_chain": [
+    {
+      "order": 1,
+      "path": "README_FIRST.md",
+      "role": "use order and truthful v1.2.4D status"
+    },
+    {
+      "order": 2,
+      "path": "P1A_WORLD_AUTHORITY.md",
+      "role": "sole operative human-readable test authority"
+    },
+    {
+      "order": 3,
+      "path": "world/p1a_world_manifest.json",
+      "role": "machine-readable unchanged world base plus v1.2.4D test-overlay authority"
+    },
+    {
+      "order": 4,
+      "path": "evidence/v1_2_4d_q1_resume_checkpoint.json",
+      "role": "verified raw v1.2.4C evidence adjudication and exact fresh-run resume contract"
+    },
+    {
+      "order": 5,
+      "path": "tests/fixtures/runtime_vectors.json",
+      "role": "canonical 40-vector contract with event-based Q1 completion"
+    },
+    {
+      "order": 6,
+      "path": "tests/fixtures/hop_gate_bracket.json",
+      "role": "unchanged candidate grid and execution locks with corrected Q1 horizon"
+    },
+    {
+      "order": 7,
+      "path": "world/generated/hop_bar_bracket_candidates.json",
+      "role": "deterministic 80-candidate identity registry"
+    },
+    {
+      "order": 8,
+      "path": "world/generated/hop_gate_end_seals.json",
+      "role": "unchanged Q3/Q4 configuration-space proof"
+    },
+    {
+      "order": 9,
+      "path": "tests/fixtures/runtime_evaluator_registry.json",
+      "role": "controller/termination/threshold evaluator registry"
+    },
+    {
+      "order": 10,
+      "path": "tests/fixtures/telemetry_event_schema.json",
+      "role": "behavior-neutral evidence and inclusive collision-window contract"
+    },
+    {
+      "order": 11,
+      "path": "P1A_V1_2_4D_ADJUDICATION.md",
+      "role": "bounded evidence ledger; cannot override authority/fixtures"
+    },
+    {
+      "order": 12,
+      "path": "P1A_CODEX_SENDOFF.md",
+      "role": "exact resume and locked execution order"
+    },
+    {
+      "order": 13,
+      "path": "P1A_REQUIRED_INPUTS.json",
+      "role": "exact C0 implementation inputs"
+    },
+    {
+      "order": 14,
+      "path": "AGENTS.md",
+      "role": "scope, clean-room, and external-action boundary"
+    }
+  ],
+  "authority_date": "2026-08-15",
+  "authority_id": "DISTRICT_ZERO_P1A_V1_2_4D_Q1_SUCCESS_HORIZON",
+  "authority_version": "1.2.4D",
+  "building_masses": [
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        -80.0,
+        -5.0
+      ],
+      "footprint_xz_m": [
+        30.0,
+        24.0
+      ],
+      "height_m": 10.0,
+      "id": "B01",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P2",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        -60.0,
+        -70.0
+      ],
+      "footprint_xz_m": [
+        16.0,
+        14.0
+      ],
+      "height_m": 14.0,
+      "id": "B02",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P2",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        20.0,
+        -60.0
+      ],
+      "footprint_xz_m": [
+        28.0,
+        24.0
+      ],
+      "height_m": 12.0,
+      "id": "B03",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P4",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        50.0,
+        -90.0
+      ],
+      "footprint_xz_m": [
+        16.0,
+        14.0
+      ],
+      "height_m": 16.0,
+      "id": "B04",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P4",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        110.0,
+        -100.0
+      ],
+      "footprint_xz_m": [
+        14.0,
+        10.0
+      ],
+      "height_m": 14.0,
+      "id": "B05",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P6",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        135.0,
+        -60.0
+      ],
+      "footprint_xz_m": [
+        10.0,
+        14.0
+      ],
+      "height_m": 18.0,
+      "id": "B06",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P6",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        85.0,
+        10.0
+      ],
+      "footprint_xz_m": [
+        24.0,
+        20.0
+      ],
+      "height_m": 11.0,
+      "id": "B07",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P5",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        115.0,
+        30.0
+      ],
+      "footprint_xz_m": [
+        12.0,
+        12.0
+      ],
+      "height_m": 15.0,
+      "id": "B08",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P5",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        -40.0,
+        95.0
+      ],
+      "footprint_xz_m": [
+        18.0,
+        14.0
+      ],
+      "height_m": 9.0,
+      "id": "B09",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P3",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        0.0,
+        85.0
+      ],
+      "footprint_xz_m": [
+        20.0,
+        16.0
+      ],
+      "height_m": 12.0,
+      "id": "B10",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P3",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        40.0,
+        95.0
+      ],
+      "footprint_xz_m": [
+        18.0,
+        14.0
+      ],
+      "height_m": 9.0,
+      "id": "B11",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P3",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        -115.0,
+        145.0
+      ],
+      "footprint_xz_m": [
+        24.0,
+        20.0
+      ],
+      "height_m": 10.0,
+      "id": "B12",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P1",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        115.0,
+        145.0
+      ],
+      "footprint_xz_m": [
+        24.0,
+        20.0
+      ],
+      "height_m": 10.0,
+      "id": "B13",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P1",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        0.0,
+        151.0
+      ],
+      "footprint_xz_m": [
+        14.0,
+        6.0
+      ],
+      "height_m": 6.0,
+      "id": "B14",
+      "minimum_inset_from_plinth_edge_m": 2.0,
+      "plinth_component": "P7",
+      "shape": "BOX"
+    }
+  ],
+  "coordinate_system": {
+    "east": "+x",
+    "horizontal": "x,z metres",
+    "south": "+z",
+    "vertical": "+y",
+    "world_datum_y_m": 0.0
+  },
+  "destination_pads": {
+    "CLN": {
+      "blend_radius_m": 13.0,
+      "center_xz_m": [
+        110.0,
+        75.0
+      ],
+      "clear_approach_m": 18.0,
+      "elevation_m": 0.1,
+      "flat_radius_m": 8.0,
+      "inner_flat_radius_m": 8.0,
+      "outer_blend_radius_m": 13.0,
+      "surface": "PAD_SMOOTH"
+    },
+    "DEP": {
+      "blend_radius_m": 13.0,
+      "center_xz_m": [
+        -110.0,
+        75.0
+      ],
+      "clear_approach_m": 18.0,
+      "elevation_m": 0.1,
+      "flat_radius_m": 8.0,
+      "inner_flat_radius_m": 8.0,
+      "outer_blend_radius_m": 13.0,
+      "surface": "PAD_SMOOTH"
+    },
+    "MRK": {
+      "blend_radius_m": 13.0,
+      "center_xz_m": [
+        0.0,
+        20.0
+      ],
+      "clear_approach_m": 18.0,
+      "elevation_m": 0.0,
+      "flat_radius_m": 8.0,
+      "inner_flat_radius_m": 8.0,
+      "outer_blend_radius_m": 13.0,
+      "surface": "PAD_SMOOTH"
+    },
+    "QRY": {
+      "blend_radius_m": 13.0,
+      "center_xz_m": [
+        -245.0,
+        20.0
+      ],
+      "clear_approach_m": 18.0,
+      "elevation_m": -1.6,
+      "flat_radius_m": 8.0,
+      "inner_flat_radius_m": 8.0,
+      "outer_blend_radius_m": 13.0,
+      "surface": "PAD_SMOOTH"
+    },
+    "RLY": {
+      "blend_radius_m": 13.0,
+      "center_xz_m": [
+        0.0,
+        -210.0
+      ],
+      "clear_approach_m": 18.0,
+      "elevation_m": 1.6,
+      "flat_radius_m": 8.0,
+      "inner_flat_radius_m": 8.0,
+      "outer_blend_radius_m": 13.0,
+      "surface": "PAD_SMOOTH"
+    },
+    "WRK": {
+      "blend_radius_m": 13.0,
+      "center_xz_m": [
+        90.0,
+        -55.0
+      ],
+      "clear_approach_m": 18.0,
+      "elevation_m": 0.55,
+      "flat_radius_m": 8.0,
+      "inner_flat_radius_m": 8.0,
+      "outer_blend_radius_m": 13.0,
+      "surface": "PAD_SMOOTH"
+    }
+  },
+  "diagnostic": {
+    "coverage_required_gates": [
+      "GW",
+      "GN",
+      "GE"
+    ],
+    "coverage_required_routes": [
+      "A0",
+      "A1",
+      "A2",
+      "DOG",
+      "HOP",
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "R0",
+      "S0",
+      "S1",
+      "X0"
+    ],
+    "default_menu_selection": "T01_WEST_GATE",
+    "fixture": {
+      "byte_length": 11456,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/diagnostic_harness.json",
+      "raw_byte_sha256": "e01a2750c38902b2127d3c5ed7f6c2171d6338b186a217804d8fc6ae0d86d7bf"
+    },
+    "initial_craft_spawn": {
+      "classification_at_spawn": "JUNCTION_MRK",
+      "id": "SPAWN_NEUTRAL_MRK",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "transform": {
+        "position_xyz_m": [
+          0.0,
+          1.65,
+          20.0
+        ],
+        "source": {
+          "node": "MRK",
+          "toward_route": "L2"
+        },
+        "support_height_m": 0.0,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.989022
+      },
+      "uses": [
+        "INITIAL_CRAFT_SPAWN",
+        "VOLUNTARY_ROAM_SPAWN"
+      ]
+    },
+    "neutral_spawn_selection": "T00_NEUTRAL_ROAM",
+    "voluntary_roam_spawn": {
+      "classification_at_spawn": "JUNCTION_MRK",
+      "id": "SPAWN_NEUTRAL_MRK",
+      "initial_linear_velocity_xyz_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_mode": "SPREAD",
+      "transform": {
+        "position_xyz_m": [
+          0.0,
+          1.65,
+          20.0
+        ],
+        "source": {
+          "node": "MRK",
+          "toward_route": "L2"
+        },
+        "support_height_m": 0.0,
+        "vertical_offset_m": 1.65,
+        "yaw_rad": -1.989022
+      },
+      "uses": [
+        "INITIAL_CRAFT_SPAWN",
+        "VOLUNTARY_ROAM_SPAWN"
+      ]
+    }
+  },
+  "evidence_preservation_policy": "Charlie session is informed director/world-gate evidence and cannot establish naive route discovery; a later naive claim requires a different unexposed player, otherwise later evidence must be labeled informed-player evidence.",
+  "field": {
+    "CRAFT_CENTER_SPACE": {
+      "area_m2": 76771.772428,
+      "craft_plan_radius_m": 0.95,
+      "definition": "BUFFER(WALKABLE_GROUND,-0.95)",
+      "geometry_id": "CRAFT_CENTER_SPACE"
+    },
+    "PLAYABLE_MASK": {
+      "area_m2": 82189.621381,
+      "definition": "INTERSECT(OUTER_ENVELOPE,UNION(ROUTE_OPERATIONAL,JUNCTIONS,OPEN_LOBES))",
+      "geometry_id": "PLAYABLE_MASK"
+    },
+    "WALKABLE_GROUND": {
+      "area_m2": 81876.458094,
+      "definition": "DIFFERENCE(PLAYABLE_MASK,UNION(CORE_WALL,OUTER_WALL,HOP_BAR_01))",
+      "geometry_id": "WALKABLE_GROUND"
+    },
+    "minimum_outer_envelope_to_grid_edge_m": 15.0,
+    "non_playable_boundary_buffer": {
+      "credited_hard_closure": [
+        "OUTER_CLOSURE_MASK",
+        "OUTER_WALL"
+      ],
+      "definition": "terrain grid outside OUTER_ENVELOPE plus OUTER_CLOSURE_MASK and OUTER_WALL"
+    },
+    "outer_envelope_area_m2": 269500.0,
+    "outer_envelope_polygon_xz_m": [
+      [
+        -315.0,
+        70.0
+      ],
+      [
+        -315.0,
+        -95.0
+      ],
+      [
+        -285.0,
+        -205.0
+      ],
+      [
+        -205.0,
+        -290.0
+      ],
+      [
+        -75.0,
+        -300.0
+      ],
+      [
+        70.0,
+        -290.0
+      ],
+      [
+        205.0,
+        -235.0
+      ],
+      [
+        285.0,
+        -145.0
+      ],
+      [
+        300.0,
+        -35.0
+      ],
+      [
+        285.0,
+        70.0
+      ],
+      [
+        225.0,
+        125.0
+      ],
+      [
+        175.0,
+        210.0
+      ],
+      [
+        80.0,
+        240.0
+      ],
+      [
+        0.0,
+        245.0
+      ],
+      [
+        -85.0,
+        235.0
+      ],
+      [
+        -175.0,
+        205.0
+      ],
+      [
+        -225.0,
+        145.0
+      ],
+      [
+        -255.0,
+        80.0
+      ]
+    ],
+    "terrain_grid_extents_xmin_zmin_xmax_zmax_m": [
+      -330.0,
+      -315.0,
+      330.0,
+      285.0
+    ],
+    "terrain_grid_origin_xz_m": [
+      -330.0,
+      -315.0
+    ],
+    "terrain_grid_spacing_m": 1.5,
+    "terrain_grid_vertex_count_x": 441,
+    "terrain_grid_vertex_count_z": 401,
+    "vertical_datum": {
+      "frozen_fall_reset_y_m": -12.0,
+      "maximum_authored_heightfield_y_m": 1.6,
+      "minimum_authored_heightfield_y_m": -1.8,
+      "minimum_margin_above_fall_reset_m": 10.2
+    }
+  },
+  "gates": {
+    "GE": {
+      "center_xz_m": [
+        170.0,
+        35.0
+      ],
+      "collidable_pylons": [],
+      "craft_center_clear_width_m": 16.1,
+      "crossing_semantics": "only continuous craft-center containment change across CORE_REGION boundary inside this aperture emits GATE_CROSSED",
+      "funnel_length_each_side_m": 35.0,
+      "incident_routes": [
+        "A2",
+        "L3",
+        "L7"
+      ],
+      "junction_radius_m": 34.0,
+      "physical_aperture_radius_m": 9.0,
+      "physical_aperture_width_m": 18.0,
+      "pylon_count": 0,
+      "visual_marker": {
+        "geometry_id": "GATE_GE_VISUAL_BAND",
+        "inner_radius_m": 7.4,
+        "outer_radius_m": 8.65,
+        "surface_class": 10,
+        "type": "NONCOLLIDING_TERRAIN_SURFACE_BAND"
+      }
+    },
+    "GN": {
+      "center_xz_m": [
+        0.0,
+        -130.0
+      ],
+      "collidable_pylons": [],
+      "craft_center_clear_width_m": 14.1,
+      "crossing_semantics": "only continuous craft-center containment change across CORE_REGION boundary inside this aperture emits GATE_CROSSED",
+      "funnel_length_each_side_m": 25.0,
+      "incident_routes": [
+        "L4",
+        "L5",
+        "R0"
+      ],
+      "junction_radius_m": 26.0,
+      "physical_aperture_radius_m": 8.0,
+      "physical_aperture_width_m": 16.0,
+      "pylon_count": 0,
+      "visual_marker": {
+        "geometry_id": "GATE_GN_VISUAL_BAND",
+        "inner_radius_m": 6.4,
+        "outer_radius_m": 7.65,
+        "surface_class": 10,
+        "type": "NONCOLLIDING_TERRAIN_SURFACE_BAND"
+      }
+    },
+    "GW": {
+      "center_xz_m": [
+        -170.0,
+        35.0
+      ],
+      "collidable_pylons": [],
+      "craft_center_clear_width_m": 16.1,
+      "crossing_semantics": "only continuous craft-center containment change across CORE_REGION boundary inside this aperture emits GATE_CROSSED",
+      "funnel_length_each_side_m": 35.0,
+      "incident_routes": [
+        "A0",
+        "A1",
+        "L0"
+      ],
+      "junction_radius_m": 38.0,
+      "physical_aperture_radius_m": 9.0,
+      "physical_aperture_width_m": 18.0,
+      "pylon_count": 0,
+      "visual_marker": {
+        "geometry_id": "GATE_GW_VISUAL_BAND",
+        "inner_radius_m": 7.4,
+        "outer_radius_m": 8.65,
+        "surface_class": 10,
+        "type": "NONCOLLIDING_TERRAIN_SURFACE_BAND"
+      }
+    }
+  },
+  "geometry": {
+    "consumer_map_artifact": {
+      "byte_length": 2485,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/consumer_map.json",
+      "raw_byte_sha256": "6c5c5a4acbe327d03f65ed87f57a005cf8b235b3964ac82235b4305ef1c00d03"
+    },
+    "director_generation_stack_is_provenance_only": {
+      "Codex_install_or_vendor_permission": false,
+      "geos": "3.13.1",
+      "python": "3.13.5",
+      "shapely": "2.1.2"
+    },
+    "planar_triangulation_artifact": {
+      "byte_length": 34063508,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/planar_triangulations.json",
+      "raw_byte_sha256": "043d52b4e5984aa5c74873d0b9bea4e12c6555373bf090a580765883da9b4f40"
+    },
+    "polygon_artifact": {
+      "byte_length": 20355613,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/geometry_polygons.json",
+      "raw_byte_sha256": "ed1ea320431655fb36292fc4e9cbdf7a708e08841ddcf8fb819dfe8df9062766"
+    }
+  },
+  "hard_geometry": {
+    "credited_classes": {
+      "CORE_PLINTH_MASK": {
+        "base_y_m": -8.0,
+        "footprint_geometry_id": "CORE_PLINTH_MASK",
+        "top_y_m": 5.5,
+        "vertical_faces": true
+      },
+      "CORE_WALL": {
+        "base_y_m": -8.0,
+        "footprint_geometry_id": "CORE_WALL",
+        "top_y_m": 6.0,
+        "total_thickness_m": 2.0,
+        "vertical_faces": true
+      },
+      "HOP_BAR_01": {
+        "base_y_m": 0.05,
+        "footprint_xmin_zmin_xmax_zmax_m": [
+          -0.9,
+          126.0,
+          0.9,
+          144.0
+        ],
+        "intentional_low_obstacle": true,
+        "top_y_m": 1.24,
+        "visible_and_collidable_arrays_same": true
+      },
+      "OUTER_CLOSURE_MASK": {
+        "base_y_m": -8.0,
+        "footprint_geometry_id": "OUTER_CLOSURE_MASK",
+        "top_y_m": 8.0,
+        "vertical_faces": true
+      },
+      "OUTER_WALL": {
+        "base_y_m": -8.0,
+        "footprint_geometry_id": "OUTER_WALL",
+        "top_y_m": 10.0,
+        "total_thickness_m": 2.5,
+        "vertical_faces": true
+      }
+    },
+    "mesh_artifact": {
+      "byte_length": 11040097,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/solid_meshes.json",
+      "raw_byte_sha256": "72f36973cde5e6f9c53a09086f7decbb3c4e7f56cfcff7925e9f8de4b8380201"
+    },
+    "mesh_source_resolver": {
+      "GEOMETRY_POLYGON": {
+        "artifact": "world/generated/geometry_polygons.json",
+        "collection": "geometries",
+        "match": "mapping key equals source_geometry_id"
+      },
+      "MANIFEST_BUILDING_MASS": {
+        "artifact": "world/p1a_world_manifest.json",
+        "collection": "building_masses",
+        "match": "exactly one object whose id equals source_geometry_id"
+      },
+      "MANIFEST_HARD_GEOMETRY": {
+        "artifact": "world/p1a_world_manifest.json",
+        "collection": "hard_geometry.credited_classes",
+        "match": "mapping key equals source_geometry_id"
+      },
+      "rule": "each mesh names one namespace and source_geometry_id; resolution within that namespace must yield exactly one authority record"
+    },
+    "minimum_hard_face_height_above_highest_adjacent_quantized_support_m": 4.7,
+    "pylons": {
+      "replacement": "three noncolliding terrain surface bands",
+      "retained_collidable_count": 0,
+      "retired_count": 6
+    }
+  },
+  "hop_gate_correction": {
+    "Q1_success_horizon": {
+      "bar_east_face_x_m": 0.9,
+      "clearance_plane_x_m": 1.85,
+      "completion_tick_inclusive": true,
+      "conservative_craft_plan_half_length_m": 0.95,
+      "landing_or_support_reacquisition_required": false,
+      "post_clearance_drive_required": false,
+      "requires": {
+        "exact_hop_started_count": 1,
+        "maximum_hard_collision_count": 0,
+        "maximum_hop_bar_collision_count": 0,
+        "minimum_bar_overlap_clearance_sample_count": 1,
+        "minimum_bar_overlap_vertical_clearance_m": 0.025,
+        "minimum_support_ready_consecutive_ticks": 12,
+        "ordered_events": [
+          "SUPPORT_READY",
+          "HOP_COMMAND",
+          "HOP_STARTED"
+        ]
+      },
+      "tangent_range_z_m": [
+        131.0,
+        139.0
+      ],
+      "termination_type": "FIRST_VALID_HOP_CLEARANCE",
+      "timeout_is_failure": true,
+      "timeout_tick": 359,
+      "window_id": "HOP_BAR_HJE_CLEAR"
+    },
+    "active_candidate": {
+      "candidate_id": "HB_TOP_1240MM",
+      "selected_timing_offset_m": 0.0,
+      "selection_status": "ISOLATED_GATE_PASS_C1_PASS",
+      "top_y_m": 1.24
+    },
+    "authority_version": "1.2.4D",
+    "bracket_fixture_path": "tests/fixtures/hop_gate_bracket.json",
+    "candidate_registry_path": "world/generated/hop_bar_bracket_candidates.json",
+    "end_seal_proof_path": "world/generated/hop_gate_end_seals.json",
+    "full_suite_locked": false,
+    "historical_v1_2_4c_Q1": {
+      "classification": "TEST_DRIVER/TEST_AUTHORITY",
+      "first_hard_collision_tick": 294,
+      "gap_ticks": 119,
+      "hje_clear_tick": 175,
+      "not_retroactive_passes": true
+    },
+    "only_authorized_geometry_delta": "HOP_BAR_01 top elevation under existing candidate materializer; no geometry delta in this v1.2.4D source",
+    "raw_historical_evidence_root": "evidence/historical/v1_2_4c_q1_validation",
+    "resume_candidate": {
+      "Q2_preserved_pass_repetitions": 3,
+      "candidate_id": "HB_TOP_1240MM",
+      "phase": "Q1_SUPPORTED_OFFSET_SCAN_WITH_EVENT_COMPLETION",
+      "top_y_m": 1.24
+    },
+    "resume_checkpoint_path": "evidence/v1_2_4d_q1_resume_checkpoint.json",
+    "status": "SELECTED_ISOLATED_GATE_PASS_C1_PASS",
+    "support_readiness": {
+      "all_other_predicates_unchanged": true,
+      "maximum_measured_height_m": 1.35,
+      "numerical_margin_m": 0.025,
+      "stationary_discrete_equilibrium_m": 1.325
+    },
+    "world_base_authority_version": "1.2.3"
+  },
+  "junctions": {
+    "CLN": {
+      "center_xz_m": [
+        110.0,
+        75.0
+      ],
+      "incident_edges": [
+        "L2",
+        "L3",
+        "S1"
+      ],
+      "radius_m": 26.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "DEP": {
+      "center_xz_m": [
+        -110.0,
+        75.0
+      ],
+      "incident_edges": [
+        "L0",
+        "L1",
+        "S0"
+      ],
+      "radius_m": 26.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "GE": {
+      "center_xz_m": [
+        170.0,
+        35.0
+      ],
+      "incident_edges": [
+        "A2",
+        "L3",
+        "L7"
+      ],
+      "radius_m": 34.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "GN": {
+      "center_xz_m": [
+        0.0,
+        -130.0
+      ],
+      "incident_edges": [
+        "L4",
+        "L5",
+        "R0"
+      ],
+      "radius_m": 26.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "GW": {
+      "center_xz_m": [
+        -170.0,
+        35.0
+      ],
+      "incident_edges": [
+        "A0",
+        "A1",
+        "L0"
+      ],
+      "radius_m": 38.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "HJE": {
+      "center_xz_m": [
+        45.0,
+        135.0
+      ],
+      "incident_edges": [
+        "HOP",
+        "DOG",
+        "S1"
+      ],
+      "radius_m": 24.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "HJW": {
+      "center_xz_m": [
+        -45.0,
+        135.0
+      ],
+      "incident_edges": [
+        "S0",
+        "HOP",
+        "DOG"
+      ],
+      "radius_m": 24.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "MRK": {
+      "center_xz_m": [
+        0.0,
+        20.0
+      ],
+      "incident_edges": [
+        "L1",
+        "L2",
+        "L5",
+        "L6"
+      ],
+      "radius_m": 32.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "QRY": {
+      "center_xz_m": [
+        -245.0,
+        20.0
+      ],
+      "incident_edges": [
+        "A0",
+        "X0"
+      ],
+      "radius_m": 26.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "RLY": {
+      "center_xz_m": [
+        0.0,
+        -210.0
+      ],
+      "incident_edges": [
+        "A1",
+        "A2",
+        "X0",
+        "L4"
+      ],
+      "radius_m": 46.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    },
+    "WRK": {
+      "center_xz_m": [
+        90.0,
+        -55.0
+      ],
+      "incident_edges": [
+        "L6",
+        "L7",
+        "R0"
+      ],
+      "radius_m": 24.0,
+      "terrain_surface": "JUNCTION_SMOOTH"
+    }
+  },
+  "landmarks": [
+    {
+      "base_y_m": 8.0,
+      "center_xz_m": [
+        -302.0,
+        12.0
+      ],
+      "footprint_xz_m": [
+        10.0,
+        20.0
+      ],
+      "height_m": 4.0,
+      "id": "QRY_STEP_A",
+      "role": "QUARRY_STEPS",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 8.0,
+      "center_xz_m": [
+        -306.0,
+        32.0
+      ],
+      "footprint_xz_m": [
+        8.0,
+        16.0
+      ],
+      "height_m": 7.0,
+      "id": "QRY_STEP_B",
+      "role": "QUARRY_STEPS",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 8.0,
+      "center_xz_m": [
+        -303.0,
+        48.0
+      ],
+      "footprint_xz_m": [
+        10.0,
+        10.0
+      ],
+      "height_m": 10.0,
+      "id": "QRY_STEP_C",
+      "role": "QUARRY_STEPS",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 8.0,
+      "center_xz_m": [
+        0.0,
+        -285.0
+      ],
+      "height_m": 24.0,
+      "id": "RLY_MAST",
+      "radius_m": 2.0,
+      "role": "RELAY_MAST",
+      "shape": "CYLINDER"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        -145.0,
+        120.0
+      ],
+      "footprint_xz_m": [
+        6.0,
+        10.0
+      ],
+      "height_m": 12.0,
+      "id": "DEP_TWIN_A",
+      "role": "DEPOT_TWINS",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        -131.0,
+        120.0
+      ],
+      "footprint_xz_m": [
+        6.0,
+        10.0
+      ],
+      "height_m": 8.0,
+      "id": "DEP_TWIN_B",
+      "role": "DEPOT_TWINS",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        -8.0,
+        75.0
+      ],
+      "footprint_xz_m": [
+        6.0,
+        10.0
+      ],
+      "height_m": 10.0,
+      "id": "MRK_FIN_W",
+      "role": "MARKET_CANOPY",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        8.0,
+        75.0
+      ],
+      "footprint_xz_m": [
+        6.0,
+        10.0
+      ],
+      "height_m": 10.0,
+      "id": "MRK_FIN_E",
+      "role": "MARKET_CANOPY",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        0.0,
+        67.0
+      ],
+      "footprint_xz_m": [
+        10.0,
+        6.0
+      ],
+      "height_m": 14.0,
+      "id": "MRK_FIN_N",
+      "role": "MARKET_CANOPY",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        0.0,
+        83.0
+      ],
+      "footprint_xz_m": [
+        10.0,
+        6.0
+      ],
+      "height_m": 14.0,
+      "id": "MRK_FIN_S",
+      "role": "MARKET_CANOPY",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        145.0,
+        120.0
+      ],
+      "footprint_xz_m": [
+        10.0,
+        10.0
+      ],
+      "height_m": 20.0,
+      "id": "CLN_TOWER",
+      "role": "CLINIC_TOWER",
+      "shape": "BOX"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        128.0,
+        -75.0
+      ],
+      "height_m": 10.0,
+      "id": "WRK_STACK_A",
+      "radius_m": 2.0,
+      "role": "WORKS_STACKS",
+      "shape": "CYLINDER"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        138.0,
+        -82.0
+      ],
+      "height_m": 14.0,
+      "id": "WRK_STACK_B",
+      "radius_m": 2.0,
+      "role": "WORKS_STACKS",
+      "shape": "CYLINDER"
+    },
+    {
+      "base_y_m": 5.5,
+      "center_xz_m": [
+        130.0,
+        -92.0
+      ],
+      "height_m": 18.0,
+      "id": "WRK_STACK_C",
+      "radius_m": 2.0,
+      "role": "WORKS_STACKS",
+      "shape": "CYLINDER"
+    }
+  ],
+  "migration": {
+    "allowed_custom_input_actions": [
+      "throttle",
+      "brake",
+      "steer_left",
+      "steer_right",
+      "transform",
+      "hop",
+      "reset",
+      "pause",
+      "debug_overlay",
+      "diagnostic_menu",
+      "diagnostic_prev",
+      "diagnostic_next",
+      "diagnostic_spawn"
+    ],
+    "clean_root_name": "District-Zero-P1A",
+    "do_not_copy": [
+      "P0 authority/doc chain",
+      "M5-M8 study scenes/scripts/docs/tests",
+      "dispatch/contracts/cargo/result flow",
+      "legacy selectors",
+      "historical verification-count expectations"
+    ],
+    "generated_root_authority_files": [
+      "README_FIRST.md",
+      "AGENTS.md",
+      "P1A_WORLD_AUTHORITY.md",
+      "world/p1a_world_manifest.json",
+      "tests/fixtures/p1a_test_manifest.json"
+    ],
+    "immutable_input_tree": true,
+    "retain_byte_identical": [
+      "scripts/craft_controller.gd",
+      "scripts/craft_tuning.gd",
+      "scripts/motion_math.gd",
+      "scripts/camera_rig.gd",
+      "scenes/craft.tscn",
+      "resources/default_tuning.tres",
+      "scripts/surface_feedback_3d.gd"
+    ],
+    "shared_logical_test_manifest": "tests/fixtures/p1a_test_manifest.json",
+    "strip_legacy_input_actions": [
+      "clear_wakes",
+      "park_layout_1",
+      "park_layout_2",
+      "park_layout_3",
+      "m8_mode_1",
+      "m8_mode_2",
+      "m8_mode_3",
+      "m8_mode_4",
+      "study_scale_200",
+      "study_scale_320",
+      "study_scale_440",
+      "study_scale_cycle",
+      "study_boundary"
+    ]
+  },
+  "movement_freeze": {
+    "behavior_changes_forbidden": [
+      "propulsion",
+      "steering",
+      "drag",
+      "brake",
+      "transform",
+      "hover",
+      "support",
+      "Hop",
+      "impact response",
+      "camera",
+      "surface feel"
+    ],
+    "byte_identical_files_sha256": {
+      "resources/default_tuning.tres": "a6d7a6ef66f28a480bc28096c91124e5c93f9b8e7dd32c68296030ce21800459",
+      "scenes/craft.tscn": "2ccf2f2e9007eeb63a52091a771c840aabb5b1cf9a176f5f6e21d3c84cab8502",
+      "scripts/camera_rig.gd": "91cf26e9510734580d0424533f1c3bb0b0104f2b490a337f6f57a0c14e9fb67e",
+      "scripts/craft_controller.gd": "fd2e6e676bf828382fda4dee7eaf37fde0c00a326ef1d5ca56d1cfaaa15e1b5d",
+      "scripts/craft_tuning.gd": "c6b82758d7d985d0a16d16a7265a52e2ba2b5a4ec2e608a08ef1d2fa7650acfd",
+      "scripts/motion_math.gd": "c2ceb0ab0f5bcff7d6a4cf7c2b6e3c7fa1c70b96edee206d00b529d3329ed575",
+      "scripts/surface_feedback_3d.gd": "8db47e1ba550efc3c0bfa871edae2a74ab103d7720ed8284add75057eaa4bda6"
+    },
+    "collider_plan_footprint_m": {
+      "conservative_isotropic_radius": 0.95,
+      "length": 1.9,
+      "width": 1.16
+    },
+    "controller_responsibility_source": {
+      "scripts/district_zero_controller.gd": "84ff6862c0c2c22378d68d15cdff11a7eb930e21c483e5c70476528b5f1c3076"
+    },
+    "fall_reset_y_m": -12.0,
+    "movement_tuning_digest": {
+      "algorithm_id": "DZP1A_TUNING_SHA256_V1",
+      "digest_algorithm": "SHA-256",
+      "expected_default_runtime_digest": "f68c66e8e155e0891b822506a22a6b40084e1d2ae98159a1a144115095697364",
+      "field_count": 56,
+      "field_order": [
+        "gravity",
+        "fall_reset_y",
+        "spread_target_height",
+        "spread_hover_omega",
+        "spread_hover_zeta",
+        "spread_hover_accel_up_max",
+        "spread_hover_accel_down_max",
+        "spread_gravity_compensation_ratio",
+        "drive_target_height",
+        "drive_hover_omega",
+        "drive_hover_zeta",
+        "drive_hover_accel_up_max",
+        "drive_hover_accel_down_max",
+        "drive_gravity_compensation_ratio",
+        "spread_thrust_accel",
+        "spread_powered_speed_soft",
+        "spread_powered_speed_cap",
+        "spread_steer_rate",
+        "spread_drag",
+        "spread_brake_decel",
+        "drive_thrust_accel",
+        "drive_powered_speed_soft",
+        "drive_powered_speed_cap",
+        "drive_steer_rate",
+        "drive_drag",
+        "drive_brake_decel",
+        "fold_duration",
+        "deploy_duration",
+        "support_reacquire_duration",
+        "support_reacquire_max_distance",
+        "support_reacquire_max_slope_degrees",
+        "support_reacquire_max_departure_speed",
+        "hop_normal_speed",
+        "hop_tangential_retention",
+        "hop_cooldown",
+        "hop_max_fold_amount",
+        "hop_max_support_distance",
+        "hop_input_buffer_seconds",
+        "hop_support_grace_seconds",
+        "impact_min_closing_speed",
+        "impact_full_closing_speed",
+        "spread_impact_max_speed_loss",
+        "drive_impact_max_speed_loss",
+        "impact_strike_cue_duration",
+        "preview_min_distance",
+        "preview_max_distance",
+        "preview_seconds_ahead",
+        "visual_bank_degrees",
+        "visual_response",
+        "camera_distance",
+        "camera_height",
+        "camera_look_ahead",
+        "camera_look_height",
+        "camera_response",
+        "spread_camera_fov",
+        "drive_fov_increase"
+      ],
+      "prefix_bytes_utf8_then_nul": "DZP1A-TUNING-V1",
+      "record_encoding": "for each field in field_order: UTF-8 field name, one NUL byte, then IEEE-754 binary64 big-endian runtime value; no separators or final bytes",
+      "scope": "all 56 exported float properties of the live CraftTuning resource; capture immediately before first R0 sample and immediately after final R0 sample",
+      "source_identity_sha256": {
+        "resources/default_tuning.tres": "a6d7a6ef66f28a480bc28096c91124e5c93f9b8e7dd32c68296030ce21800459",
+        "scripts/craft_tuning.gd": "c6b82758d7d985d0a16d16a7265a52e2ba2b5a4ec2e608a08ef1d2fa7650acfd"
+      }
+    },
+    "permitted_behavior_neutral_observation": [
+      "route/gate events",
+      "Hop start",
+      "support state",
+      "velocity/normal snapshots",
+      "monotonic impact sample serial and bounded observer queue"
+    ],
+    "responsibilities_to_preserve": [
+      "spawn/reset ownership",
+      "HUD build identity and controls",
+      "pause",
+      "F1 diagnostics",
+      "camera ownership",
+      "surface feedback ownership"
+    ]
+  },
+  "nodes": {
+    "CLN": {
+      "elevation_m": 0.1,
+      "kind": "DESTINATION",
+      "xz_m": [
+        110.0,
+        75.0
+      ]
+    },
+    "DEP": {
+      "elevation_m": 0.1,
+      "kind": "DESTINATION",
+      "xz_m": [
+        -110.0,
+        75.0
+      ]
+    },
+    "GE": {
+      "elevation_m": -0.1,
+      "kind": "GATE",
+      "xz_m": [
+        170.0,
+        35.0
+      ]
+    },
+    "GN": {
+      "elevation_m": 0.8,
+      "kind": "GATE",
+      "xz_m": [
+        0.0,
+        -130.0
+      ]
+    },
+    "GW": {
+      "elevation_m": -0.1,
+      "kind": "GATE",
+      "xz_m": [
+        -170.0,
+        35.0
+      ]
+    },
+    "HJE": {
+      "elevation_m": 0.05,
+      "kind": "JUNCTION",
+      "xz_m": [
+        45.0,
+        135.0
+      ]
+    },
+    "HJW": {
+      "elevation_m": 0.05,
+      "kind": "JUNCTION",
+      "xz_m": [
+        -45.0,
+        135.0
+      ]
+    },
+    "MRK": {
+      "elevation_m": 0.0,
+      "kind": "DESTINATION",
+      "xz_m": [
+        0.0,
+        20.0
+      ]
+    },
+    "QRY": {
+      "elevation_m": -1.6,
+      "kind": "DESTINATION",
+      "xz_m": [
+        -245.0,
+        20.0
+      ]
+    },
+    "RLY": {
+      "elevation_m": 1.6,
+      "kind": "DESTINATION",
+      "xz_m": [
+        0.0,
+        -210.0
+      ]
+    },
+    "WRK": {
+      "elevation_m": 0.55,
+      "kind": "DESTINATION",
+      "xz_m": [
+        90.0,
+        -55.0
+      ]
+    }
+  },
+  "presentation": {
+    "bounded_visual_freedom": "Per-channel material value may vary by at most 0.04; geometry, silhouette role, collision and route semantics may not vary.",
+    "build_label": "DISTRICT ZERO · P1A WORLD GATE · v1.2.1",
+    "external_assets_forbidden": true,
+    "functional_palette_linear_rgb": {
+      "COMPACTED_SMOOTH": [
+        0.3,
+        0.34,
+        0.3
+      ],
+      "CORE_PLINTH": [
+        0.34,
+        0.36,
+        0.39
+      ],
+      "OUTER_CLOSURE": [
+        0.24,
+        0.27,
+        0.26
+      ],
+      "ROUGH_R2": [
+        0.46,
+        0.35,
+        0.2
+      ],
+      "SHOULDER": [
+        0.52,
+        0.5,
+        0.45
+      ],
+      "SMOOTH_FIRM": [
+        0.32,
+        0.31,
+        0.29
+      ],
+      "SMOOTH_PAVE": [
+        0.23,
+        0.25,
+        0.28
+      ]
+    },
+    "gate_surface_band": {
+      "bounded_color": "one contrasting value derived from functional palette; per-channel variation <=0.04",
+      "collision": false
+    },
+    "primitive_only": true
+  },
+  "product_thesis": {
+    "decision": "B_WITH_BOUNDED_D",
+    "scope": "100_PERCENT_P1A_ZERO_PERCENT_P1B",
+    "statement": "one irregular, learnable Mode-Gate District with a dense core and partial outskirts; no universal collar or open world",
+    "world_gate_question": "is the frozen craft enjoyable and legible in the authored district before contracts?"
+  },
+  "raw_byte_identity": {
+    "canonical_serializer_required_at_runtime": false,
+    "rule": "this file and every referenced generated JSON/binary are identified by raw SHA-256 bytes; consumers parse but never reserialize to establish identity"
+  },
+  "regions": {
+    "CORE_REGION": {
+      "area_m2": 91487.5,
+      "polygon_xz_m": [
+        [
+          -170.0,
+          35.0
+        ],
+        [
+          -135.0,
+          -15.0
+        ],
+        [
+          -80.0,
+          -90.0
+        ],
+        [
+          0.0,
+          -130.0
+        ],
+        [
+          60.0,
+          -165.0
+        ],
+        [
+          120.0,
+          -120.0
+        ],
+        [
+          150.0,
+          -70.0
+        ],
+        [
+          170.0,
+          35.0
+        ],
+        [
+          165.0,
+          100.0
+        ],
+        [
+          135.0,
+          160.0
+        ],
+        [
+          70.0,
+          195.0
+        ],
+        [
+          0.0,
+          205.0
+        ],
+        [
+          -70.0,
+          195.0
+        ],
+        [
+          -135.0,
+          160.0
+        ],
+        [
+          -165.0,
+          100.0
+        ]
+      ]
+    },
+    "core_outskirts_interface_rule": "routes cross CORE_REGION boundary only through GW, GN, or GE apertures; all other boundary is CORE_WALL",
+    "open_lobes": {
+      "QRY_BOWL": [
+        [
+          -295.0,
+          45.0
+        ],
+        [
+          -288.0,
+          -10.0
+        ],
+        [
+          -260.0,
+          -35.0
+        ],
+        [
+          -222.0,
+          -30.0
+        ],
+        [
+          -205.0,
+          0.0
+        ],
+        [
+          -210.0,
+          48.0
+        ],
+        [
+          -250.0,
+          68.0
+        ],
+        [
+          -280.0,
+          62.0
+        ]
+      ],
+      "RLY_SHELF": [
+        [
+          -65.0,
+          -205.0
+        ],
+        [
+          -55.0,
+          -245.0
+        ],
+        [
+          -15.0,
+          -272.0
+        ],
+        [
+          40.0,
+          -260.0
+        ],
+        [
+          62.0,
+          -220.0
+        ],
+        [
+          40.0,
+          -175.0
+        ],
+        [
+          -35.0,
+          -170.0
+        ]
+      ]
+    }
+  },
+  "required_generated_artifacts": {
+    "evidence/historical/v1_2_4c_q1_validation/SHA256SUMS.txt": {
+      "byte_length": 9504,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "evidence/historical/v1_2_4c_q1_validation/SHA256SUMS.txt",
+      "raw_byte_sha256": "2ee4f301ef0f029f66008c2f22b6751d77ad7ca6cd066b0eea2a98c9f45c4296"
+    },
+    "evidence/runtime_vector_results.json": {
+      "byte_length": 989,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "evidence/runtime_vector_results.json",
+      "raw_byte_sha256": "7e2d398b64e3b700426d4b55cfd08b26b9f17312a10645b86b9b601173611c33"
+    },
+    "evidence/v1_2_3_preservation_assertions.json": {
+      "byte_length": 5878,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "evidence/v1_2_3_preservation_assertions.json",
+      "raw_byte_sha256": "2503553e2259c62c07a2159f75d9a21602843438adfd09457950655bd35cf698"
+    },
+    "evidence/v1_2_4d_preservation_assertions.json": {
+      "byte_length": 12841,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "evidence/v1_2_4d_preservation_assertions.json",
+      "raw_byte_sha256": "d5d0e6c6d101cb134bb0ebe68d191c562b50d388952f20f4bc787eab6686373f"
+    },
+    "evidence/v1_2_4d_q1_resume_checkpoint.json": {
+      "byte_length": 14038,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "evidence/v1_2_4d_q1_resume_checkpoint.json",
+      "raw_byte_sha256": "eb7213855974129cc0ca642ad0093c2f0266d9f854c4de5dc25e7903af16edca"
+    },
+    "project.godot": {
+      "byte_length": 6381,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "project.godot",
+      "raw_byte_sha256": "dd165998773ddc2985bf866fcd1bcf718886f57be25f806492ef79cd9fbbd9c2"
+    },
+    "scenes/district_zero_p1a.tscn": {
+      "byte_length": 3416,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "scenes/district_zero_p1a.tscn",
+      "raw_byte_sha256": "85d1f3b1945b179142b17f8978b2d6c95a33c00a6c093d582cb95618ae619a36"
+    },
+    "scripts/p1a_map.gd": {
+      "byte_length": 2183,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "scripts/p1a_map.gd",
+      "raw_byte_sha256": "99537011781ff23e5579bedea6262134515806260412650d54d60050b0dc3f2f"
+    },
+    "scripts/p1a_telemetry.gd": {
+      "byte_length": 12904,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "scripts/p1a_telemetry.gd",
+      "raw_byte_sha256": "fb0928f22d15a2b4ed7d1ec987cc410c51b69731ecc95ffcd3cb9ae69e793f5d"
+    },
+    "scripts/p1a_world_builder.gd": {
+      "byte_length": 8577,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "scripts/p1a_world_builder.gd",
+      "raw_byte_sha256": "533f3adbc2e6879064e1a42c4f7362b7ca56b5b4a8f8d4e21bec1fdf591e40db"
+    },
+    "scripts/p1a_world_data.gd": {
+      "byte_length": 6906,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "scripts/p1a_world_data.gd",
+      "raw_byte_sha256": "4d4eb6f896967b150f91f2e3d4cc954a9e09568e9eb65291aa57a8b8af1fb6c7"
+    },
+    "scripts/p1a_world_gate.gd": {
+      "byte_length": 6093,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "scripts/p1a_world_gate.gd",
+      "raw_byte_sha256": "d6b94ef4631cdb0003cf95aa19d91a62106977f3781791fd459b15b039769d32"
+    },
+    "tests/fixtures/baseline_flat_support.json": {
+      "byte_length": 6109,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/baseline_flat_support.json",
+      "raw_byte_sha256": "0b5147dc5448f987a3e8d68b597501687347bd4f7049e676ad42e48849080770"
+    },
+    "tests/fixtures/canonical_serialization_fixture.json": {
+      "byte_length": 1515,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/canonical_serialization_fixture.json",
+      "raw_byte_sha256": "10bf0e56736e29ee0edc8fccc534e32facfba6bc3f3006369f8a8085ba59e9f9"
+    },
+    "tests/fixtures/diagnostic_harness.json": {
+      "byte_length": 11456,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/diagnostic_harness.json",
+      "raw_byte_sha256": "e01a2750c38902b2127d3c5ed7f6c2171d6338b186a217804d8fc6ae0d86d7bf"
+    },
+    "tests/fixtures/hop_gate_bracket.json": {
+      "byte_length": 7094,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/hop_gate_bracket.json",
+      "raw_byte_sha256": "68d79270de09167a46ed0e84920dd34199c23966f41b56120e3b989ec8779841"
+    },
+    "tests/fixtures/p1a_test_manifest.json": {
+      "byte_length": 3051,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/p1a_test_manifest.json",
+      "raw_byte_sha256": "1425299e0c36e64ac78b3aa646e3cbb510714cae624eba79f1e309bb8b37613d"
+    },
+    "tests/fixtures/runtime_evaluator_registry.json": {
+      "byte_length": 9545,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/runtime_evaluator_registry.json",
+      "raw_byte_sha256": "523271aba589bbf80b07bbd57fba9afd68036fd91dd337704d18d56f1d6d7dee"
+    },
+    "tests/fixtures/runtime_vectors.json": {
+      "byte_length": 122258,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/runtime_vectors.json",
+      "raw_byte_sha256": "a13530229046396ad3cce398aeecc2e739d35dbac874662fe3d667b4f345ca50"
+    },
+    "tests/fixtures/telemetry_event_schema.json": {
+      "byte_length": 9820,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/telemetry_event_schema.json",
+      "raw_byte_sha256": "13f143cfaedb3afffb2efb7f0c5de7973256cbe4ae8e3085a746e19be4d26b2c"
+    },
+    "tests/p1a_baseline_runner.gd": {
+      "byte_length": 5902,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/p1a_baseline_runner.gd",
+      "raw_byte_sha256": "fad438c5308a5026db8f11f6dcac44d2f12809be46ad3ec7b916a1baad300bbf"
+    },
+    "tests/p1a_runtime_runner.gd": {
+      "byte_length": 71376,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/p1a_runtime_runner.gd",
+      "raw_byte_sha256": "42272fd2751079fc3d954faab919b465a4451a3882db0208aeda08f1aebb1a0a"
+    },
+    "tools/compare_p1a_baseline.py": {
+      "byte_length": 6645,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tools/compare_p1a_baseline.py",
+      "raw_byte_sha256": "fe5a8328cd50c0cd8ce7d305ac78bd96e0b674f69990109849202576c3d2e59f"
+    },
+    "tools/materialize_hop_bar_candidate.py": {
+      "byte_length": 10066,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tools/materialize_hop_bar_candidate.py",
+      "raw_byte_sha256": "f5eaa3de2afd8e0ab5e43488dff166b560e317b2848227145546d157b8e1bcf9"
+    },
+    "tools/run_hop_gate_bracket.py": {
+      "byte_length": 37931,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tools/run_hop_gate_bracket.py",
+      "raw_byte_sha256": "d6341a37c52bebf54e8d8d61485ce7bbfb87a4c5137d0c8b59945a3fedd434aa"
+    },
+    "tools/run_p1a_runtime_suite.py": {
+      "byte_length": 8511,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tools/run_p1a_runtime_suite.py",
+      "raw_byte_sha256": "269bb5cdc53ce948e4f2a22b06ac1c45b5f07b8b5c2289ff53e64d798f7d778b"
+    },
+    "tools/verify_p1a_implementation.py": {
+      "byte_length": 40820,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tools/verify_p1a_implementation.py",
+      "raw_byte_sha256": "fda5ab1724b94db8c2f7489e6e59cf0beaae173d9426019a35646cfd19322bfe"
+    },
+    "world/generated/consumer_map.json": {
+      "byte_length": 2485,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/consumer_map.json",
+      "raw_byte_sha256": "6c5c5a4acbe327d03f65ed87f57a005cf8b235b3964ac82235b4305ef1c00d03"
+    },
+    "world/generated/flood_fill_mask_u8.bin": {
+      "byte_length": 397261,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/flood_fill_mask_u8.bin",
+      "raw_byte_sha256": "bcc998c5dbf54a1f8f12438277e111a8c78894c2c8ec40765f45f38ae1dffe54"
+    },
+    "world/generated/flood_fill_metadata.json": {
+      "byte_length": 4298,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/flood_fill_metadata.json",
+      "raw_byte_sha256": "810f936605d0ddaceaccf55e4a66185578317cacc81ad001f61f583ad6fe3c38"
+    },
+    "world/generated/geometry_polygons.json": {
+      "byte_length": 20355613,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/geometry_polygons.json",
+      "raw_byte_sha256": "ed1ea320431655fb36292fc4e9cbdf7a708e08841ddcf8fb819dfe8df9062766"
+    },
+    "world/generated/heightfield_i16le.bin": {
+      "byte_length": 353682,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/heightfield_i16le.bin",
+      "raw_byte_sha256": "f377a1034406ee2f35232c01f6cb80be8dd43d13267e3821d1edcab9a9735b88"
+    },
+    "world/generated/hop_gate_end_seals.json": {
+      "byte_length": 3590,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/hop_gate_end_seals.json",
+      "raw_byte_sha256": "e049d6ac152701982cd85b46433dfb3f7a31d7f4ec3711053ed44dc54866594e"
+    },
+    "world/generated/planar_triangulations.json": {
+      "byte_length": 34063508,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/planar_triangulations.json",
+      "raw_byte_sha256": "043d52b4e5984aa5c74873d0b9bea4e12c6555373bf090a580765883da9b4f40"
+    },
+    "world/generated/route_bake.json": {
+      "byte_length": 712606,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/route_bake.json",
+      "raw_byte_sha256": "d2acb912bcebc35a325971bed2b8b33854e44d1833517423d5f52d846cf094a6"
+    },
+    "world/generated/solid_meshes.json": {
+      "byte_length": 11040097,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/solid_meshes.json",
+      "raw_byte_sha256": "72f36973cde5e6f9c53a09086f7decbb3c4e7f56cfcff7925e9f8de4b8380201"
+    },
+    "world/generated/southern_annulus_mask_u8.bin": {
+      "byte_length": 397261,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/southern_annulus_mask_u8.bin",
+      "raw_byte_sha256": "ce0f1a46c611c1c167b72f983f867f9963d5e26a3855934da631695b07038840"
+    },
+    "world/generated/spatial_validation.json": {
+      "byte_length": 63988,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/spatial_validation.json",
+      "raw_byte_sha256": "e8fe90da916ecac87f14815853e023a78b7538ddd727c594e6041c6cc00691a2"
+    },
+    "world/generated/surface_classes_u8.bin": {
+      "byte_length": 176841,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/surface_classes_u8.bin",
+      "raw_byte_sha256": "3d7466384a52bb8033e5fad5acd014a2daedec76475d5ad21ff13a94cee73949"
+    },
+    "world/generated/terrain_metadata.json": {
+      "byte_length": 4802,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/terrain_metadata.json",
+      "raw_byte_sha256": "1843bd1dc20fb5d488170774437ae32839c5e117b298d22753a82a3f276bc486"
+    },
+    "world/generated/v1_2_1_preservation_assertions.json": {
+      "byte_length": 20228,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/v1_2_1_preservation_assertions.json",
+      "raw_byte_sha256": "658395f6df09dc0873e73525a4f9d7a636bc049cd839b91db66b25086ab6acdc"
+    }
+  },
+  "required_godot_version": "4.7.1.stable.official.a13da4feb",
+  "route_bake": {
+    "artifact": {
+      "byte_length": 712606,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/route_bake.json",
+      "raw_byte_sha256": "d2acb912bcebc35a325971bed2b8b33854e44d1833517423d5f52d846cf094a6"
+    },
+    "consumer_rule": "all collision/render/carve/map/telemetry/validation centerline use reads these exact points",
+    "fixed_global_compact_array_sha256": "f26283b6cd314ba1d27aebea0bf80d82fbf2426ee5f22b610b38c273fec73330",
+    "total_point_count": 11252
+  },
+  "routes": {
+    "A0": {
+      "analytic_post_fillet_length_m": 76.509934,
+      "authoritative_baked_polyline_length_m": 76.509932,
+      "baked_array_compact_sha256": "91b9c4603e6aa09491df423742d85879ca65d7f2da7d45c7833af97a867ac3d9",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/A0/points_xz_m",
+      "baked_point_count": 309,
+      "bank_width_m": 8.0,
+      "end_elevation_m": -0.1,
+      "expected_mode": "DRIVE_COMMITMENT",
+      "family": "West arterial",
+      "fillet_radii_m": [
+        55.0
+      ],
+      "from_node": "QRY",
+      "minimum_fillet_radius_m": 55.0,
+      "minimum_straight_piece_m": 34.093003,
+      "operational_half_width_m": 16.0,
+      "roadbed_width_m": 22.0,
+      "shoulder_each_side_m": 5.0,
+      "start_elevation_m": -1.6,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "GW",
+      "vertices_xz_m": [
+        [
+          -245.0,
+          20.0
+        ],
+        [
+          -210.0,
+          26.0
+        ],
+        [
+          -170.0,
+          35.0
+        ]
+      ]
+    },
+    "A1": {
+      "analytic_post_fillet_length_m": 321.864232,
+      "authoritative_baked_polyline_length_m": 321.864198,
+      "baked_array_compact_sha256": "c749a924aa1a3dfbaa28be66dc0270ed322094dc85108164bc55a6417fd475ea",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/A1/points_xz_m",
+      "baked_point_count": 1291,
+      "bank_width_m": 8.0,
+      "end_elevation_m": 1.6,
+      "expected_mode": "DRIVE_COMMITMENT",
+      "family": "West sweep",
+      "fillet_radii_m": [
+        72.0,
+        72.0
+      ],
+      "from_node": "GW",
+      "minimum_fillet_radius_m": 72.0,
+      "minimum_straight_piece_m": 77.584272,
+      "operational_half_width_m": 17.0,
+      "roadbed_width_m": 24.0,
+      "shoulder_each_side_m": 5.0,
+      "start_elevation_m": -0.1,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "RLY",
+      "vertices_xz_m": [
+        [
+          -170.0,
+          35.0
+        ],
+        [
+          -165.0,
+          -75.0
+        ],
+        [
+          -85.0,
+          -155.0
+        ],
+        [
+          0.0,
+          -210.0
+        ]
+      ]
+    },
+    "A2": {
+      "analytic_post_fillet_length_m": 442.282038,
+      "authoritative_baked_polyline_length_m": 442.281945,
+      "baked_array_compact_sha256": "b25574ee6c8ebcab80d688dc58ad9a33b5dd954e44e8f5c889ff69309955e9a3",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/A2/points_xz_m",
+      "baked_point_count": 1773,
+      "bank_width_m": 8.0,
+      "end_elevation_m": -0.1,
+      "expected_mode": "DRIVE_COMMITMENT",
+      "family": "East sweep",
+      "fillet_radii_m": [
+        72.0,
+        72.0,
+        72.0
+      ],
+      "from_node": "RLY",
+      "minimum_fillet_radius_m": 72.0,
+      "minimum_straight_piece_m": 61.446877,
+      "operational_half_width_m": 17.0,
+      "roadbed_width_m": 24.0,
+      "shoulder_each_side_m": 5.0,
+      "start_elevation_m": 1.6,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "GE",
+      "vertices_xz_m": [
+        [
+          0.0,
+          -210.0
+        ],
+        [
+          100.0,
+          -240.0
+        ],
+        [
+          195.0,
+          -160.0
+        ],
+        [
+          240.0,
+          -45.0
+        ],
+        [
+          170.0,
+          35.0
+        ]
+      ]
+    },
+    "DOG": {
+      "analytic_post_fillet_length_m": 124.514507,
+      "authoritative_baked_polyline_length_m": 124.514081,
+      "baked_array_compact_sha256": "dc5aafca0696bea87ce656d13cf6f61efffc11a337fd75896af2882ce130cb4b",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/DOG/points_xz_m",
+      "baked_point_count": 505,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.05,
+      "expected_mode": "SPREAD",
+      "family": "South cut",
+      "fillet_radii_m": [
+        14.0,
+        14.0,
+        14.0
+      ],
+      "from_node": "HJW",
+      "minimum_fillet_radius_m": 14.0,
+      "minimum_straight_piece_m": 20.059234,
+      "operational_half_width_m": 8.0,
+      "roadbed_width_m": 10.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.05,
+      "surface_authority": "SMOOTH_FIRM",
+      "to_node": "HJE",
+      "vertices_xz_m": [
+        [
+          -45.0,
+          135.0
+        ],
+        [
+          -35.0,
+          160.0
+        ],
+        [
+          0.0,
+          170.0
+        ],
+        [
+          35.0,
+          160.0
+        ],
+        [
+          45.0,
+          135.0
+        ]
+      ]
+    },
+    "HOP": {
+      "analytic_post_fillet_length_m": 90.0,
+      "authoritative_baked_polyline_length_m": 90.0,
+      "baked_array_compact_sha256": "c47725781eea61ee35382c3662eaed2d949d7fc93b36f4f21844b11a89251d05",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/HOP/points_xz_m",
+      "baked_point_count": 361,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.05,
+      "expected_mode": "SPREAD_HOP_OPTION",
+      "family": "South cut",
+      "fillet_radii_m": [],
+      "from_node": "HJW",
+      "minimum_fillet_radius_m": null,
+      "minimum_straight_piece_m": 90.0,
+      "operational_half_width_m": 7.0,
+      "roadbed_width_m": 8.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.05,
+      "surface_authority": "SMOOTH_FIRM",
+      "to_node": "HJE",
+      "vertices_xz_m": [
+        [
+          -45.0,
+          135.0
+        ],
+        [
+          45.0,
+          135.0
+        ]
+      ]
+    },
+    "L0": {
+      "analytic_post_fillet_length_m": 72.321875,
+      "authoritative_baked_polyline_length_m": 72.32185,
+      "baked_array_compact_sha256": "4729e44ef8f05a39a66c91b13fa4a34d5de32e86aedc47082c232fb5e31ea65e",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/L0/points_xz_m",
+      "baked_point_count": 292,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.1,
+      "expected_mode": "SPREAD",
+      "family": "Market way",
+      "fillet_radii_m": [
+        16.0
+      ],
+      "from_node": "GW",
+      "minimum_fillet_radius_m": 16.0,
+      "minimum_straight_piece_m": 30.768345,
+      "operational_half_width_m": 9.0,
+      "roadbed_width_m": 12.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": -0.1,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "DEP",
+      "vertices_xz_m": [
+        [
+          -170.0,
+          35.0
+        ],
+        [
+          -145.0,
+          55.0
+        ],
+        [
+          -110.0,
+          75.0
+        ]
+      ]
+    },
+    "L1": {
+      "analytic_post_fillet_length_m": 129.430082,
+      "authoritative_baked_polyline_length_m": 129.429845,
+      "baked_array_compact_sha256": "8b051c064417ae2ecbbb93ab0980d5070d39919b47502f8bdfa2f5b9bf053a82",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/L1/points_xz_m",
+      "baked_point_count": 521,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.0,
+      "expected_mode": "SPREAD",
+      "family": "Market way",
+      "fillet_radii_m": [
+        14.0,
+        14.0
+      ],
+      "from_node": "DEP",
+      "minimum_fillet_radius_m": 14.0,
+      "minimum_straight_piece_m": 28.560911,
+      "operational_half_width_m": 8.5,
+      "roadbed_width_m": 11.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.1,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "MRK",
+      "vertices_xz_m": [
+        [
+          -110.0,
+          75.0
+        ],
+        [
+          -75.0,
+          75.0
+        ],
+        [
+          -45.0,
+          40.0
+        ],
+        [
+          0.0,
+          20.0
+        ]
+      ]
+    },
+    "L2": {
+      "analytic_post_fillet_length_m": 129.430082,
+      "authoritative_baked_polyline_length_m": 129.429845,
+      "baked_array_compact_sha256": "952d27eebd9b15095cbffbb90e7aacb61133bc3ba69b8db03fd8040f14865390",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/L2/points_xz_m",
+      "baked_point_count": 521,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.1,
+      "expected_mode": "SPREAD",
+      "family": "Market way",
+      "fillet_radii_m": [
+        14.0,
+        14.0
+      ],
+      "from_node": "MRK",
+      "minimum_fillet_radius_m": 14.0,
+      "minimum_straight_piece_m": 28.560911,
+      "operational_half_width_m": 8.5,
+      "roadbed_width_m": 11.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.0,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "CLN",
+      "vertices_xz_m": [
+        [
+          0.0,
+          20.0
+        ],
+        [
+          45.0,
+          40.0
+        ],
+        [
+          75.0,
+          75.0
+        ],
+        [
+          110.0,
+          75.0
+        ]
+      ]
+    },
+    "L3": {
+      "analytic_post_fillet_length_m": 72.321875,
+      "authoritative_baked_polyline_length_m": 72.32185,
+      "baked_array_compact_sha256": "d1c30ac437c73732cda94af38818e569a4c94de447f604a212923db4c7380244",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/L3/points_xz_m",
+      "baked_point_count": 292,
+      "bank_width_m": 4.0,
+      "end_elevation_m": -0.1,
+      "expected_mode": "SPREAD",
+      "family": "Market way",
+      "fillet_radii_m": [
+        16.0
+      ],
+      "from_node": "CLN",
+      "minimum_fillet_radius_m": 16.0,
+      "minimum_straight_piece_m": 30.768345,
+      "operational_half_width_m": 9.0,
+      "roadbed_width_m": 12.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.1,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "GE",
+      "vertices_xz_m": [
+        [
+          110.0,
+          75.0
+        ],
+        [
+          145.0,
+          55.0
+        ],
+        [
+          170.0,
+          35.0
+        ]
+      ]
+    },
+    "L4": {
+      "analytic_post_fillet_length_m": 80.0,
+      "authoritative_baked_polyline_length_m": 80.0,
+      "baked_array_compact_sha256": "94f93843b2f3d6c0d9d3b49e245157b4095202bae549cf3de21b728a0602914a",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/L4/points_xz_m",
+      "baked_point_count": 321,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.8,
+      "expected_mode": "SPREAD",
+      "family": "Relay spine",
+      "fillet_radii_m": [],
+      "from_node": "RLY",
+      "minimum_fillet_radius_m": null,
+      "minimum_straight_piece_m": 80.0,
+      "operational_half_width_m": 11.0,
+      "roadbed_width_m": 14.0,
+      "shoulder_each_side_m": 4.0,
+      "start_elevation_m": 1.6,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "GN",
+      "vertices_xz_m": [
+        [
+          0.0,
+          -210.0
+        ],
+        [
+          0.0,
+          -130.0
+        ]
+      ]
+    },
+    "L5": {
+      "analytic_post_fillet_length_m": 167.795523,
+      "authoritative_baked_polyline_length_m": 167.795314,
+      "baked_array_compact_sha256": "c32aaf4e30161f7f100aa333af981da7cc07c62bee5c6b7e4681c81e8023ff5f",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/L5/points_xz_m",
+      "baked_point_count": 675,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.0,
+      "expected_mode": "SPREAD",
+      "family": "Relay spine",
+      "fillet_radii_m": [
+        14.0,
+        14.0
+      ],
+      "from_node": "GN",
+      "minimum_fillet_radius_m": 14.0,
+      "minimum_straight_piece_m": 45.333333,
+      "operational_half_width_m": 8.5,
+      "roadbed_width_m": 11.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.8,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "MRK",
+      "vertices_xz_m": [
+        [
+          0.0,
+          -130.0
+        ],
+        [
+          -30.0,
+          -90.0
+        ],
+        [
+          -30.0,
+          -30.0
+        ],
+        [
+          0.0,
+          20.0
+        ]
+      ]
+    },
+    "L6": {
+      "analytic_post_fillet_length_m": 118.070857,
+      "authoritative_baked_polyline_length_m": 118.070808,
+      "baked_array_compact_sha256": "94ef0f690a85317f3979f43210c9e6d93cd374f02c4ef67965138695036c325b",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/L6/points_xz_m",
+      "baked_point_count": 474,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.55,
+      "expected_mode": "SPREAD",
+      "family": "Works way",
+      "fillet_radii_m": [
+        14.0
+      ],
+      "from_node": "MRK",
+      "minimum_fillet_radius_m": 14.0,
+      "minimum_straight_piece_m": 38.436436,
+      "operational_half_width_m": 8.5,
+      "roadbed_width_m": 11.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.0,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "WRK",
+      "vertices_xz_m": [
+        [
+          0.0,
+          20.0
+        ],
+        [
+          35.0,
+          0.0
+        ],
+        [
+          90.0,
+          -55.0
+        ]
+      ]
+    },
+    "L7": {
+      "analytic_post_fillet_length_m": 122.344456,
+      "authoritative_baked_polyline_length_m": 122.344392,
+      "baked_array_compact_sha256": "b1804c3c7fc894d4b03bbfc95ebdfc42b737b329eb433e099dac73c13bc0525b",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/L7/points_xz_m",
+      "baked_point_count": 493,
+      "bank_width_m": 4.0,
+      "end_elevation_m": -0.1,
+      "expected_mode": "SPREAD",
+      "family": "Works way",
+      "fillet_radii_m": [
+        16.0,
+        16.0
+      ],
+      "from_node": "WRK",
+      "minimum_fillet_radius_m": 16.0,
+      "minimum_straight_piece_m": 35.585189,
+      "operational_half_width_m": 9.0,
+      "roadbed_width_m": 12.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.55,
+      "surface_authority": "SMOOTH_PAVE",
+      "to_node": "GE",
+      "vertices_xz_m": [
+        [
+          90.0,
+          -55.0
+        ],
+        [
+          125.0,
+          -30.0
+        ],
+        [
+          150.0,
+          0.0
+        ],
+        [
+          170.0,
+          35.0
+        ]
+      ]
+    },
+    "R0": {
+      "analytic_post_fillet_length_m": 137.716487,
+      "authoritative_baked_polyline_length_m": 137.716327,
+      "baked_array_compact_sha256": "964af9220650db1aa0376083d7055c815667e3ace0c1c9276abdb89bac295dde",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/R0/points_xz_m",
+      "baked_point_count": 555,
+      "bank_width_m": 6.0,
+      "end_elevation_m": 0.55,
+      "expected_mode": "SPREAD_ROUGH",
+      "family": "Rough drain",
+      "fillet_radii_m": [
+        22.0,
+        22.0
+      ],
+      "from_node": "GN",
+      "minimum_fillet_radius_m": 22.0,
+      "minimum_straight_piece_m": 27.261551,
+      "operational_half_width_m": 11.0,
+      "roadbed_width_m": 14.0,
+      "shoulder_each_side_m": 4.0,
+      "start_elevation_m": 0.8,
+      "surface_authority": "ROUGH_R2",
+      "to_node": "WRK",
+      "vertices_xz_m": [
+        [
+          0.0,
+          -130.0
+        ],
+        [
+          45.0,
+          -130.0
+        ],
+        [
+          80.0,
+          -105.0
+        ],
+        [
+          90.0,
+          -55.0
+        ]
+      ]
+    },
+    "S0": {
+      "analytic_post_fillet_length_m": 107.177831,
+      "authoritative_baked_polyline_length_m": 107.177582,
+      "baked_array_compact_sha256": "044b95e90e451ed71bd8eb0ad4627ecf2b21e3950fad0e501be904c964f9ac43",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/S0/points_xz_m",
+      "baked_point_count": 432,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.05,
+      "expected_mode": "SPREAD",
+      "family": "South cut",
+      "fillet_radii_m": [
+        16.0,
+        16.0
+      ],
+      "from_node": "DEP",
+      "minimum_fillet_radius_m": 16.0,
+      "minimum_straight_piece_m": 25.213368,
+      "operational_half_width_m": 8.0,
+      "roadbed_width_m": 10.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.1,
+      "surface_authority": "SMOOTH_FIRM",
+      "to_node": "HJW",
+      "vertices_xz_m": [
+        [
+          -110.0,
+          75.0
+        ],
+        [
+          -110.0,
+          112.0
+        ],
+        [
+          -75.0,
+          135.0
+        ],
+        [
+          -45.0,
+          135.0
+        ]
+      ]
+    },
+    "S1": {
+      "analytic_post_fillet_length_m": 107.177831,
+      "authoritative_baked_polyline_length_m": 107.177582,
+      "baked_array_compact_sha256": "e7b67910e05b2e03ab9410176a70a6b3656baddd4159165cf5985c74d0eaf9bd",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/S1/points_xz_m",
+      "baked_point_count": 432,
+      "bank_width_m": 4.0,
+      "end_elevation_m": 0.1,
+      "expected_mode": "SPREAD",
+      "family": "South cut",
+      "fillet_radii_m": [
+        16.0,
+        16.0
+      ],
+      "from_node": "HJE",
+      "minimum_fillet_radius_m": 16.0,
+      "minimum_straight_piece_m": 25.213368,
+      "operational_half_width_m": 8.0,
+      "roadbed_width_m": 10.0,
+      "shoulder_each_side_m": 3.0,
+      "start_elevation_m": 0.05,
+      "surface_authority": "SMOOTH_FIRM",
+      "to_node": "CLN",
+      "vertices_xz_m": [
+        [
+          45.0,
+          135.0
+        ],
+        [
+          75.0,
+          135.0
+        ],
+        [
+          110.0,
+          112.0
+        ],
+        [
+          110.0,
+          75.0
+        ]
+      ]
+    },
+    "X0": {
+      "analytic_post_fillet_length_m": 499.881201,
+      "authoritative_baked_polyline_length_m": 499.881048,
+      "baked_array_compact_sha256": "b9b428ff56d2714dde20df7af9d5baf6e8b1450cd0af8f9ea6069dc1e1915edc",
+      "baked_curve_ref": "world/generated/route_bake.json#/routes/X0/points_xz_m",
+      "baked_point_count": 2005,
+      "bank_width_m": 6.0,
+      "end_elevation_m": 1.6,
+      "expected_mode": "MIXED_SPREAD_DRIVE",
+      "family": "Quarry shelf",
+      "fillet_radii_m": [
+        42.0,
+        42.0,
+        42.0,
+        42.0
+      ],
+      "from_node": "QRY",
+      "minimum_fillet_radius_m": 42.0,
+      "minimum_straight_piece_m": 45.644671,
+      "operational_half_width_m": 12.0,
+      "roadbed_width_m": 16.0,
+      "shoulder_each_side_m": 4.0,
+      "start_elevation_m": -1.6,
+      "surface_authority": "COMPACTED_SMOOTH",
+      "to_node": "RLY",
+      "vertices_xz_m": [
+        [
+          -245.0,
+          20.0
+        ],
+        [
+          -285.0,
+          -60.0
+        ],
+        [
+          -270.0,
+          -155.0
+        ],
+        [
+          -170.0,
+          -245.0
+        ],
+        [
+          -100.0,
+          -260.0
+        ],
+        [
+          0.0,
+          -210.0
+        ]
+      ]
+    }
+  },
+  "schema": "district_zero.p1a.world_manifest.v1_2_3",
+  "status": "HOP CANDIDATE HB_TOP_1240MM SELECTED — isolated four-question gate and C1 PASS; complete 40-vector suite authorized but NOT PERFORMED",
+  "telemetry": {
+    "collision_counting_window": "first normal physics tick after initial spawn/reset through actual vector termination tick inclusive; RT_HOP_SUCCESS terminates at first valid bounded HJE completion, not at a fixed post-success horizon",
+    "fixture": {
+      "byte_length": 9271,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "tests/fixtures/telemetry_event_schema.json",
+      "raw_byte_sha256": "26a91e8901b5fdca121f9ac0f250cabec5f9e2342a67f017a0f915b650df89b1"
+    },
+    "hard_collision_set": [
+      "CORE_PLINTH_MASK",
+      "CORE_WALL",
+      "HOP_BAR_01",
+      "OUTER_CLOSURE_MASK",
+      "OUTER_WALL"
+    ],
+    "non_hop_hard_collision_rule": "same hard count excluding only source_geometry_id HOP_BAR_01",
+    "observational_only": true,
+    "physics_write_forbidden": true,
+    "route_entry_backdates_to_original_crossing": true,
+    "route_entry_rule": "first post-boundary sample establishes prior state only; candidate creation requires a continuous outside-to-inside crossing of the entry-inset envelope",
+    "spawn_never_counts_as_entry_traversal_or_gate_crossing": true
+  },
+  "terrain": {
+    "heightfield_artifact": {
+      "byte_length": 353682,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/heightfield_i16le.bin",
+      "raw_byte_sha256": "f377a1034406ee2f35232c01f6cb80be8dd43d13267e3821d1edcab9a9735b88"
+    },
+    "metadata_artifact": {
+      "byte_length": 4802,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/terrain_metadata.json",
+      "raw_byte_sha256": "1843bd1dc20fb5d488170774437ae32839c5e117b298d22753a82a3f276bc486"
+    },
+    "render_and_collision_support_must_share_height_bytes": true,
+    "runtime_terrain_regeneration_forbidden": true,
+    "surface_class_artifact": {
+      "byte_length": 176841,
+      "identity_rule": "open and hash raw bytes; parse only after identity passes; never reserialize to establish identity",
+      "path": "world/generated/surface_classes_u8.bin",
+      "raw_byte_sha256": "3d7466384a52bb8033e5fad5acd014a2daedec76475d5ad21ff13a94cee73949"
+    }
+  },
+  "test_overlay_authority_version": "1.2.4D",
+  "tests": {
+    "Godot_runtime_status": "0/40 — NOT PERFORMED; exact-engine HOP height bracket and selected-candidate C1 pending",
+    "Q1_completion": "FIRST_VALID_HOP_CLEARANCE at HOP_BAR_HJE_CLEAR; timeout is failure; no landing requirement",
+    "baseline_fixture": "tests/fixtures/baseline_flat_support.json",
+    "baseline_runner_and_comparator": {
+      "comparator": "tools/compare_p1a_baseline.py",
+      "runner": "tests/p1a_baseline_runner.gd",
+      "status": "SHIPPED; authorized C1 deliverables"
+    },
+    "historical_failure_adjudication": "evidence/historical/v1_2_1/failure_adjudication.json",
+    "historical_runtime_evidence": "evidence/historical/v1_2_1/runtime_vector_results.json",
+    "human_status": "NOT PERFORMED",
+    "logical_manifest": "tests/fixtures/p1a_test_manifest.json",
+    "preservation_assertions": "evidence/v1_2_4b_preservation_assertions.json",
+    "runtime_evaluator_registry": "tests/fixtures/runtime_evaluator_registry.json",
+    "runtime_status": "v1.2.4D Q1 fresh execution NOT PERFORMED",
+    "runtime_vectors": "tests/fixtures/runtime_vectors.json",
+    "static_validation": "tools/verify_p1a_implementation.py",
+    "suite_wrapper": "tools/run_p1a_runtime_suite.py"
+  },
+  "world_base_authority_version": "1.2.3",
+  "world_data_authority_version": "1.2.3"
+}

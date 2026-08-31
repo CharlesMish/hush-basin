@@ -1,0 +1,458 @@
+{
+  "check_count": 83,
+  "checks": [
+    {
+      "id": "pace anchor 0.00 equals 1.00",
+      "status": "PASS"
+    },
+    {
+      "id": "pace anchor 0.85 equals 1.00",
+      "status": "PASS"
+    },
+    {
+      "id": "pace anchor 1.00 equals 0.75",
+      "status": "PASS"
+    },
+    {
+      "id": "pace anchor 1.25 equals 0.40",
+      "status": "PASS"
+    },
+    {
+      "id": "pace anchor 1.75 equals 0.00",
+      "status": "PASS"
+    },
+    {
+      "id": "pace anchor 3.00 equals 0.00",
+      "status": "PASS"
+    },
+    {
+      "id": "first pace segment interpolates",
+      "status": "PASS"
+    },
+    {
+      "id": "second pace segment interpolates",
+      "status": "PASS"
+    },
+    {
+      "id": "third pace segment interpolates",
+      "status": "PASS"
+    },
+    {
+      "id": "pace factor is globally monotone",
+      "status": "PASS"
+    },
+    {
+      "id": "pace factor is globally bounded",
+      "status": "PASS"
+    },
+    {
+      "id": "pace is scale invariant",
+      "status": "PASS"
+    },
+    {
+      "id": "reference boundary is continuous across one tick",
+      "status": "PASS"
+    },
+    {
+      "id": "negative pace ratio rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "nonfinite elapsed rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "nonpositive reference rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "HUD states full bonus without countdown",
+      "status": "PASS"
+    },
+    {
+      "id": "HUD states easing at reference",
+      "status": "PASS"
+    },
+    {
+      "id": "HUD states delivery continues at zero bonus",
+      "status": "PASS"
+    },
+    {
+      "id": "pace copy never implies contract failure",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario exceptional is S",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario clean_reference is A",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario ordinary_learner is B",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario clean_long_drift is B",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario fast_damaged is B",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario fragile_reference is C",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario pristine_no_pace is B",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario damaged_no_pace is D",
+      "status": "PASS"
+    },
+    {
+      "id": "grade scenario empty_fast is D",
+      "status": "PASS"
+    },
+    {
+      "id": "comfortable clean reference run tends A",
+      "status": "PASS"
+    },
+    {
+      "id": "strong clean run can reach S",
+      "status": "PASS"
+    },
+    {
+      "id": "S ratio gate is explicit",
+      "status": "PASS"
+    },
+    {
+      "id": "S condition gate is explicit",
+      "status": "PASS"
+    },
+    {
+      "id": "A condition gate is explicit",
+      "status": "PASS"
+    },
+    {
+      "id": "B condition gate is explicit",
+      "status": "PASS"
+    },
+    {
+      "id": "all five grade labels are registered",
+      "status": "PASS"
+    },
+    {
+      "id": "quality is monotone in integrity",
+      "status": "PASS"
+    },
+    {
+      "id": "quality is monotone in elapsed ratio",
+      "status": "PASS"
+    },
+    {
+      "id": "integrity above one rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "negative integrity rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "nonfinite grade input rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "receipt lines exactly sum at base 1",
+      "status": "PASS"
+    },
+    {
+      "id": "receipt lines exactly sum at base 7",
+      "status": "PASS"
+    },
+    {
+      "id": "receipt lines exactly sum at base 120",
+      "status": "PASS"
+    },
+    {
+      "id": "receipt lines exactly sum at base 121",
+      "status": "PASS"
+    },
+    {
+      "id": "receipt lines exactly sum at base 999",
+      "status": "PASS"
+    },
+    {
+      "id": "grade never multiplies payout",
+      "status": "PASS"
+    },
+    {
+      "id": "grade rendering cannot alter payout",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery floor remains fifty percent",
+      "status": "PASS"
+    },
+    {
+      "id": "perfect delivery reaches base but never exceeds it",
+      "status": "PASS"
+    },
+    {
+      "id": "nonpositive base rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "reference calibration uses median",
+      "status": "PASS"
+    },
+    {
+      "id": "reference is 110 percent rounded up to a tenth",
+      "status": "PASS"
+    },
+    {
+      "id": "calibration is permutation stable",
+      "status": "PASS"
+    },
+    {
+      "id": "reference rounds upward to next tenth",
+      "status": "PASS"
+    },
+    {
+      "id": "calibration declares two warmups plus five measured",
+      "status": "PASS"
+    },
+    {
+      "id": "reference is frozen per build",
+      "status": "PASS"
+    },
+    {
+      "id": "calibration rejects missing valid run",
+      "status": "PASS"
+    },
+    {
+      "id": "calibration stops when cargo-route evidence is not clean",
+      "status": "PASS"
+    },
+    {
+      "id": "calibration rejects invalid observation",
+      "status": "PASS"
+    },
+    {
+      "id": "first completion establishes session best",
+      "status": "PASS"
+    },
+    {
+      "id": "lower pay cannot beat best receipt by speed",
+      "status": "PASS"
+    },
+    {
+      "id": "condition breaks equal-credit tie",
+      "status": "PASS"
+    },
+    {
+      "id": "pace breaks equal-credit condition tie",
+      "status": "PASS"
+    },
+    {
+      "id": "exact tie retains earlier session best",
+      "status": "PASS"
+    },
+    {
+      "id": "abort cannot create or erase session best",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery commits one immutable receipt",
+      "status": "PASS"
+    },
+    {
+      "id": "delivery changes balance exactly once",
+      "status": "PASS"
+    },
+    {
+      "id": "duplicate result cannot duplicate award",
+      "status": "PASS"
+    },
+    {
+      "id": "held results input cannot continue",
+      "status": "PASS"
+    },
+    {
+      "id": "fresh continue enters neutral gate",
+      "status": "PASS"
+    },
+    {
+      "id": "one neutral frame cannot exit results",
+      "status": "PASS"
+    },
+    {
+      "id": "continue preserves reached destination",
+      "status": "PASS"
+    },
+    {
+      "id": "continue updates recovery anchor without relocation",
+      "status": "PASS"
+    },
+    {
+      "id": "continue never auto-opens next dispatch",
+      "status": "PASS"
+    },
+    {
+      "id": "restart is omitted without explicit relocation authority",
+      "status": "PASS"
+    },
+    {
+      "id": "explicit restart enters neutral gate",
+      "status": "PASS"
+    },
+    {
+      "id": "restart relocates to named origin only after neutral",
+      "status": "PASS"
+    },
+    {
+      "id": "restart preserves prior award and relocates once",
+      "status": "PASS"
+    },
+    {
+      "id": "restart cannot repeat relocation or auto-accept",
+      "status": "PASS"
+    },
+    {
+      "id": "active reset creates one aborted terminal",
+      "status": "PASS"
+    },
+    {
+      "id": "active reset returns to origin and awards zero",
+      "status": "PASS"
+    },
+    {
+      "id": "duplicate reset cannot create another terminal",
+      "status": "PASS"
+    }
+  ],
+  "decision": "REFERENCE_RATIO_CONDITION_PACE_GRADE_V1",
+  "evidence": {
+    "calibration_example": {
+      "high_condition_runs": 4,
+      "measured_runs": 5,
+      "median_s": 100.0,
+      "reference_s": 110.0,
+      "version_locked": true,
+      "warmups_required": 2
+    },
+    "grade_scenarios": {
+      "clean_long_drift": {
+        "grade": "B",
+        "integrity": 1.0,
+        "label": "SOLID",
+        "pace_factor": 0.2,
+        "quality": 76.0,
+        "ratio": 1.5
+      },
+      "clean_reference": {
+        "grade": "A",
+        "integrity": 0.95,
+        "label": "STRONG",
+        "pace_factor": 0.75,
+        "quality": 88.99999999999999,
+        "ratio": 1.0
+      },
+      "damaged_no_pace": {
+        "grade": "D",
+        "integrity": 0.55,
+        "label": "ROUGH",
+        "pace_factor": 0.0,
+        "quality": 38.5,
+        "ratio": 1.75
+      },
+      "empty_fast": {
+        "grade": "D",
+        "integrity": 0.0,
+        "label": "ROUGH",
+        "pace_factor": 1.0,
+        "quality": 30.0,
+        "ratio": 0.8
+      },
+      "exceptional": {
+        "grade": "S",
+        "integrity": 0.98,
+        "label": "EXCEPTIONAL",
+        "pace_factor": 0.9166666666666666,
+        "quality": 96.09999999999998,
+        "ratio": 0.9
+      },
+      "fast_damaged": {
+        "grade": "B",
+        "integrity": 0.75,
+        "label": "SOLID",
+        "pace_factor": 1.0,
+        "quality": 82.5,
+        "ratio": 0.85
+      },
+      "fragile_reference": {
+        "grade": "C",
+        "integrity": 0.55,
+        "label": "COMPLETE",
+        "pace_factor": 0.75,
+        "quality": 61.0,
+        "ratio": 1.0
+      },
+      "ordinary_learner": {
+        "grade": "B",
+        "integrity": 0.9,
+        "label": "SOLID",
+        "pace_factor": 0.4,
+        "quality": 75.0,
+        "ratio": 1.25
+      },
+      "pristine_no_pace": {
+        "grade": "B",
+        "integrity": 1.0,
+        "label": "SOLID",
+        "pace_factor": 0.0,
+        "quality": 70.0,
+        "ratio": 1.75
+      }
+    },
+    "pace_anchors": [
+      {
+        "factor": 1.0,
+        "ratio": 0.85
+      },
+      {
+        "factor": 0.75,
+        "ratio": 1.0
+      },
+      {
+        "factor": 0.4,
+        "ratio": 1.25
+      },
+      {
+        "factor": 0.0,
+        "ratio": 1.75
+      }
+    ],
+    "receipt_example": {
+      "credits": 113,
+      "grade": "A",
+      "grade_label": "STRONG",
+      "grade_modifies_money": false,
+      "lines": {
+        "condition": 40,
+        "delivery": 60,
+        "pace": 13
+      },
+      "pace_factor": 0.75,
+      "quality": 88.99999999999999,
+      "terminal": "DELIVERED"
+    }
+  },
+  "human_feel_authority": "NOT CLAIMED",
+  "product_source_modified": false,
+  "schema": "district_zero.p1b.iteration_03_pace_grade_report.v1",
+  "status": "PASS"
+}

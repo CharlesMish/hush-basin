@@ -1,0 +1,28 @@
+# Repository wrapper files use stable LF endings across macOS, Linux, and
+# Windows. The verified R7 subtree disables line-ending conversion so its
+# manifest-bound bytes survive every clone exactly.
+* text=auto eol=lf
+
+*.md text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.gd text eol=lf
+*.godot text eol=lf
+*.tscn text eol=lf
+*.tres text eol=lf
+*.command text eol=lf
+*.sh text eol=lf
+
+game/** -text whitespace=-blank-at-eol,-blank-at-eof
+design/p1b-gameplay-reward-lab/** whitespace=-blank-at-eol,-blank-at-eof
+
+*.bin binary linguist-generated=true
+*.png binary
+
+# Large deterministic world data belongs in ordinary Git at the current size,
+# but line-by-line review is not useful. Its SHA-256 inventory remains the
+# review authority.
+game/world/generated/planar_triangulations.json -diff linguist-generated=true
+game/world/generated/geometry_polygons.json -diff linguist-generated=true
+game/world/generated/solid_meshes.json -diff linguist-generated=true
+game/presentation/generated/solid_render_meshes_v1_2_6.json -diff linguist-generated=true

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200px" height="720px" viewBox="0 0 1200 720">
+  <title>District Zero Iteration 04 — Fixed Measure paint, Paired Proof trail, and duration-value study</title>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101516"/>
+      <stop offset="1" stop-color="#080b0d"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34403f"/>
+      <stop offset="1" stop-color="#20282b"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c4beaa"/>
+      <stop offset="1" stop-color="#8b856f"/>
+    </linearGradient>
+    <filter id="energyGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#background)"/>
+  <rect x="26" y="26" width="1148" height="668" rx="20" fill="none" stroke="#465653" stroke-width="2"/>
+  <text x="58" y="70" fill="#f0f0ea" font-family="Inter,Arial,sans-serif" font-size="29" font-weight="700">FIXED MEASURE · PAIRED PROOF</text>
+  <text x="58" y="98" fill="#9fb3ad" font-family="Inter,Arial,sans-serif" font-size="14" letter-spacing="2">ITERATION 04 · AUTHORED VALUE / ANTI-FARM STUDY · CONCEPT ONLY</text>
+
+  <rect x="58" y="128" width="682" height="526" rx="15" fill="url(#road)" stroke="#566561"/>
+  <path d="M83 575 C174 524, 240 488, 322 501 C417 516, 483 452, 535 379 C578 319, 640 283, 717 267"
+        fill="none" stroke="#596866" stroke-width="124" stroke-linecap="round" opacity="0.68"/>
+
+  <!-- Paired Proof: simultaneous mirrored diamonds, finite and non-reactive. -->
+  <g stroke-width="1.5" opacity="0.62">
+    <g fill="#d9d8cc" stroke="#f2f1e8">
+      <path d="M104 557 l6 -6 l6 6 l-6 6 z"/><path d="M119 565 l6 -6 l6 6 l-6 6 z"/>
+      <path d="M164 523 l6 -6 l6 6 l-6 6 z"/><path d="M179 531 l6 -6 l6 6 l-6 6 z"/>
+      <path d="M229 496 l6 -6 l6 6 l-6 6 z"/><path d="M244 504 l6 -6 l6 6 l-6 6 z"/>
+      <path d="M300 492 l6 -6 l6 6 l-6 6 z"/><path d="M315 500 l6 -6 l6 6 l-6 6 z"/>
+    </g>
+    <g fill="#879b96" stroke="#b8cbc5">
+      <path d="M134 540 l6 -6 l6 6 l-6 6 z"/><path d="M149 548 l6 -6 l6 6 l-6 6 z"/>
+      <path d="M196 507 l6 -6 l6 6 l-6 6 z"/><path d="M211 515 l6 -6 l6 6 l-6 6 z"/>
+      <path d="M265 491 l6 -6 l6 6 l-6 6 z"/><path d="M280 499 l6 -6 l6 6 l-6 6 z"/>
+      <path d="M338 493 l6 -6 l6 6 l-6 6 z"/><path d="M353 501 l6 -6 l6 6 l-6 6 z"/>
+    </g>
+  </g>
+
+  <!-- Stylized role preview only; not replacement geometry. -->
+  <g transform="translate(560 372) rotate(-36)">
+    <ellipse cx="0" cy="27" rx="106" ry="70" fill="#080a0b" opacity="0.58"/>
+    <path d="M-76 14 L-113 -64 L-60 -84 L-18 -18 Z" fill="url(#stone)" stroke="#d9d8cc" stroke-width="5"/>
+    <path d="M76 14 L113 -64 L60 -84 L18 -18 Z" fill="url(#stone)" stroke="#d9d8cc" stroke-width="5"/>
+    <path d="M-70 31 L-89 96 L-35 103 L-14 29 Z" fill="#29313a" stroke="#d9d8cc" stroke-width="4"/>
+    <path d="M70 31 L89 96 L35 103 L14 29 Z" fill="#29313a" stroke="#d9d8cc" stroke-width="4"/>
+    <path d="M-42 -24 L-22 -69 L22 -69 L42 -24 L30 71 L-30 71 Z" fill="#3e4947" stroke="#171b1c" stroke-width="12"/>
+    <path d="M-27 -55 L0 -80 L27 -55 L21 16 L-21 16 Z" fill="#626b68"/>
+    <path d="M-20 15 L0 -7 L20 15 L16 56 L-16 56 Z" fill="#171b1c"/>
+    <circle cx="0" cy="7" r="12" fill="#4ff7e8" filter="url(#energyGlow)"/>
+    <circle cx="0" cy="7" r="5" fill="#f5ffff"/>
+    <path d="M-33 -21 L-48 17 M33 -21 L48 17 M-22 70 L-48 87 M22 70 L48 87" fill="none" stroke="#d9d8cc" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="82" y="622" fill="#cbd3d0" font-family="Inter,Arial,sans-serif" font-size="13">Twelve finite mirrored pairs · current visual history only · never contract distance or payout state</text>
+
+  <g transform="translate(770 128)" font-family="Inter,Arial,sans-serif">
+    <rect width="372" height="526" rx="15" fill="#171d1e" stroke="#566561"/>
+    <text x="22" y="38" fill="#f0f0ea" font-size="18" font-weight="700">DURATION-VALUE STUDY</text>
+    <text x="22" y="64" fill="#9fb3ad" font-size="12">Illustrative seeds · not contract authority</text>
+
+    <text x="22" y="104" fill="#cbd3d0" font-size="13">LEARNED MEDIAN</text>
+    <text x="176" y="104" fill="#cbd3d0" font-size="13">PACE REF</text>
+    <text x="350" y="104" text-anchor="end" fill="#cbd3d0" font-size="13">BASE</text>
+    <line x1="22" y1="115" x2="350" y2="115" stroke="#3f4b49"/>
+    <text x="22" y="146" fill="#f0f0ea" font-size="16">0:30</text><text x="176" y="146" fill="#f0f0ea" font-size="16">0:33</text><text x="350" y="146" text-anchor="end" fill="#d9d8cc" font-size="18" font-weight="700">70</text>
+    <text x="22" y="181" fill="#f0f0ea" font-size="16">1:00</text><text x="176" y="181" fill="#f0f0ea" font-size="16">1:06</text><text x="350" y="181" text-anchor="end" fill="#d9d8cc" font-size="18" font-weight="700">120</text>
+    <text x="22" y="216" fill="#f0f0ea" font-size="16">1:30</text><text x="176" y="216" fill="#f0f0ea" font-size="16">1:39</text><text x="350" y="216" text-anchor="end" fill="#d9d8cc" font-size="18" font-weight="700">170</text>
+
+    <rect x="22" y="242" width="328" height="105" rx="9" fill="#222a2a"/>
+    <text x="38" y="269" fill="#d9d8cc" font-size="13" font-weight="700">AUTHORED ONCE · FROZEN AT ACCEPT</text>
+    <text x="38" y="294" fill="#b7c1be" font-size="12">Base comes from learned duration + one</text>
+    <text x="38" y="314" fill="#b7c1be" font-size="12">global cadence allowance — never odometer.</text>
+    <text x="38" y="334" fill="#b7c1be" font-size="12">Every genuine repeat earns its full receipt.</text>
+
+    <text x="22" y="385" fill="#f0f0ea" font-size="17" font-weight="700">PAINT ROLES</text>
+    <g transform="translate(22 402)" font-size="12">
+      <rect width="30" height="22" rx="4" fill="#171b1c"/><text x="42" y="16" fill="#cbd3d0">carbon ink</text>
+      <rect y="30" width="30" height="22" rx="4" fill="#3e4947"/><text x="42" y="46" fill="#cbd3d0">graphite sage</text>
+      <rect y="60" width="30" height="22" rx="4" fill="#ada690"/><text x="42" y="76" fill="#cbd3d0">measured stone</text>
+      <rect x="164" width="30" height="22" rx="4" fill="#29313a"/><text x="206" y="16" fill="#cbd3d0">drafting slate</text>
+      <rect x="164" y="30" width="30" height="22" rx="4" fill="#d9d8cc"/><text x="206" y="46" fill="#cbd3d0">paper ivory</text>
+      <rect x="164" y="60" width="30" height="22" rx="4" fill="#626b68"/><text x="206" y="76" fill="#cbd3d0">oxidized nickel</text>
+    </g>
+
+    <text x="22" y="508" fill="#788984" font-size="11">Paint/trail have zero economy inputs.</text>
+  </g>
+
+  <text x="58" y="680" fill="#77837f" font-family="Inter,Arial,sans-serif" font-size="12">Research only · R7 unchanged · native rate, wall-pressure, cue, occlusion, comfort and performance evidence remains</text>
+</svg>
+

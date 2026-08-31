@@ -1,0 +1,37 @@
+{
+  "branch": "BRANCH_A_SAMPLE_REPLACEMENT",
+  "clean_source_inventory_sha256": "e6a13365f3019b21457d754d6d128ef85d70a39c718579703574de066141bf44",
+  "historical_non_gating": {
+    "gating": false,
+    "integer_center_px": [
+      256,
+      244
+    ],
+    "label": "v1.2.7R1_old_sample_historical_non_gating",
+    "normalized": [
+      0.2,
+      0.34
+    ],
+    "shadow_off_Y": 0.06987974055145937,
+    "shadow_on_Y": 0.06987974055145937
+  },
+  "integer_center_px": [
+    246,
+    234
+  ],
+  "owner_key": {
+    "connected_side_component_id": "OUTER_CLOSURE_MASK_C02:VISIBLE_001",
+    "face_class": "SIDE",
+    "render_node": "/root/DistrictZeroP1A/World/MESH_OUTER_CLOSURE_Visual",
+    "source_geometry_id": "OUTER_CLOSURE_MASK"
+  },
+  "ownership_diagnostic_sha256": "8bb58f195e26ee41457abb227290c765635264a0101d65c5326af47f167bd385",
+  "pixel_center_normalized_rational": [
+    "493/2560",
+    "469/1440"
+  ],
+  "run_id": "v1.2.8-execution-run-1",
+  "schema": "district_zero.p1a.v1_2_8.selected_sample.v1",
+  "selection_transcript_sha256_or_null": "8bb58f195e26ee41457abb227290c765635264a0101d65c5326af47f167bd385",
+  "sensitivity_result_sha256": "35b55b4b5bf6af80e88081a86ae61e03d6e96ef647e0a454ca3c8cee26e6f19f"
+}

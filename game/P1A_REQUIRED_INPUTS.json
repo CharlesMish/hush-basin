@@ -1,0 +1,34 @@
+{
+  "P1B": "FROZEN",
+  "authority_version": "v1.2.5",
+  "authorized_sequence": [
+    "CODEX_CAPTURE_IMPLEMENTATION",
+    "STATIC_AND_EXACT_ENGINE_PREFLIGHT",
+    "A1_CAPTURE_REPLAY",
+    "A2_CAPTURE_REPLAY",
+    "X0_CAPTURE_REPLAY",
+    "C1_ZERO_DELTA",
+    "COMPLETE_40_VECTOR_SUITE",
+    "AUTHORIZE_BUT_DO_NOT_RUN_HUMAN_WORLD_GATE",
+    "STOP_BEFORE_P1B"
+  ],
+  "execution_overlay_authority_version": "v1.2.5",
+  "human_world_gate": "NOT PERFORMED",
+  "implementation_inputs": {
+    "comparison_baseline": {
+      "name": "District-Zero-P1A-Codex-Handoff-v1.2.4J.zip",
+      "transport_sha256": "6000296b93ee9f941afb2751061b30982ae3d1587b3949aedc11c04240a64557"
+    },
+    "executed_j_evidence": {
+      "checksum_records": 225,
+      "embedded_root": "evidence/historical/v1_2_4j_automated_a1_stop",
+      "transport_sha256": "227f3aa338040f02487fea189c03a3158f97af7df9b864c8324e4b1d6685ac30"
+    },
+    "godot_exact": "4.7.1.stable.official.a13da4feb",
+    "p0_substantive_tree": "exact path/size/SHA tree matching P0_SUBSTANTIVE_SHA256SUMS.txt",
+    "recovery_packet": "this extracted v1.2.5 packet verified by PACKET_SHA256SUMS.txt"
+  },
+  "packet_identity_rule": "Verify shipped raw bytes; do not reserialize JSON to establish identity.",
+  "schema": "district_zero.p1a.required_inputs.v1_2_5",
+  "world_data_authority_version": "v1.2.3"
+}

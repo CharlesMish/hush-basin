@@ -1,0 +1,190 @@
+{
+  "schema": "district_zero.p1a.v1_2_8.semantic_regression_contract.v1",
+  "authority_version": "v1.2.8",
+  "rule": "Every required case must be implemented as an assertion over parsed structures or callable behavior; source-string presence is insufficient.",
+  "required_cases": [
+    {
+      "id": "COORD_FLOOR_ORIGINAL",
+      "assertion": "floor conversion maps normalized [0.20,0.34] at 1280x720 to [256,244]"
+    },
+    {
+      "id": "COORD_PATCH_BOUNDS",
+      "assertion": "9x9 original bounds are x252..260/y240..248 and contain exactly 81 unique pixels"
+    },
+    {
+      "id": "COORD_FOOTPRINT_BOUNDS",
+      "assertion": "13x13 ownership footprint is center +/-6 and contains exactly 169 unique pixels"
+    },
+    {
+      "id": "COORD_SELECTED_ROUNDTRIP",
+      "assertion": "for every in-bounds integer sample, normalized pixel-center formula ((x+0.5)/1280,(y+0.5)/720) floors back to [x,y]"
+    },
+    {
+      "id": "OWNER_ALL_SAFE_RESPONSIVE_ORIGINAL_VALID",
+      "assertion": "one exact target owner/component/SIDE key over all 169 pixels plus passing sensitivity yields ORIGINAL_VALID"
+    },
+    {
+      "id": "OWNER_FOREIGN_METRIC_PIXEL_BRANCH_A",
+      "assertion": "one exact foreign owner inside the 9x9 yields BRANCH_A_SAMPLE_REPLACEMENT"
+    },
+    {
+      "id": "OWNER_FOREIGN_PERIMETER_PIXEL_BRANCH_A",
+      "assertion": "one exact foreign owner only in the two-pixel perimeter yields BRANCH_A_SAMPLE_REPLACEMENT"
+    },
+    {
+      "id": "OWNER_MIXED_BOUNDARY_BRANCH_A",
+      "assertion": "a repeatable mixed/boundary pixel in the footprint is boundary-unsafe and yields Branch A"
+    },
+    {
+      "id": "OWNER_INCOMPLETE_MAP_HARNESS",
+      "assertion": "missing, malformed, unstable, or unaccounted owner pixels yield BLOCKED/NOT TESTABLE — HARNESS"
+    },
+    {
+      "id": "OWNER_SAFE_FLAT_BRANCH_B",
+      "assertion": "all 169 exact target pixels plus flat target response yields BRANCH_B_RENDER_CONSUMER_BINDING"
+    },
+    {
+      "id": "SEARCH_RADIUS_INCLUSIVE",
+      "assertion": "a center at squared distance 1024 is considered and a center at 1025 is not"
+    },
+    {
+      "id": "SEARCH_COMPONENT_FILTER",
+      "assertion": "a fully target-material patch in a different visible connected component is ineligible"
+    },
+    {
+      "id": "SEARCH_FACE_FILTER",
+      "assertion": "a target-owned TOP or BOTTOM patch is ineligible; SIDE is required"
+    },
+    {
+      "id": "SEARCH_FULL_169_FILTER",
+      "assertion": "168 matching pixels and one nonmatching footprint pixel is ineligible"
+    },
+    {
+      "id": "SEARCH_TIE_D2_Y_X",
+      "assertion": "eligible centers are selected by ascending squared_distance, then y, then x"
+    },
+    {
+      "id": "SEARCH_NO_ELIGIBLE_EXACT_TERMINAL",
+      "assertion": "an empty eligible list emits exactly DIRECTOR DECISION REQUIRED — NO ROBUST OUTER-CLOSURE SAMPLE"
+    },
+    {
+      "id": "SEARCH_LUMINANCE_BLIND_PERMUTATION",
+      "assertion": "arbitrary permutations of RGB, Y, thresholds and check results with the same owner map cannot change component or sample selection"
+    },
+    {
+      "id": "SEARCH_SELECTOR_SIGNATURE_BLIND",
+      "assertion": "selector callable and transcript accept no RGB, Y, response magnitude, threshold, or pass/fail input"
+    },
+    {
+      "id": "SEARCH_BRIGHTER_FARTHER_CANNOT_WIN",
+      "assertion": "a brighter or more responsive farther eligible center cannot displace the first (d2,y,x) tuple"
+    },
+    {
+      "id": "SENSITIVITY_STRICT_MONOTONIC_PASS",
+      "assertion": "base < midpoint < extreme with unrelated exact RGB8 equality and safe ownership passes"
+    },
+    {
+      "id": "SENSITIVITY_GLOBAL_CHANGE_FLAT_PATCH_BLOCKER",
+      "assertion": "changed whole-image hashes or many changed pixels with a flat corrected median emits BLOCKED/NOT TESTABLE — MEASUREMENT BINDING"
+    },
+    {
+      "id": "SENSITIVITY_OPPOSITE_OR_NONMONOTONIC_BLOCKER",
+      "assertion": "base >= midpoint or midpoint >= extreme emits measurement-binding blocker"
+    },
+    {
+      "id": "SENSITIVITY_UNRELATED_ONE_PIXEL_BLOCKER",
+      "assertion": "one corrected-patch RGB8 triplet changed by UNRELATED_EXTREME emits measurement-binding blocker"
+    },
+    {
+      "id": "SENSITIVITY_SHADOW_OFF_OBSERVATIONAL",
+      "assertion": "shadow-off medians and masks are required but do not introduce a new numerical threshold"
+    },
+    {
+      "id": "OUTER_PREDICATE_LOW_BRANCH",
+      "assertion": "Y>=0.075 and Y<=ground-0.12 is recognized as a valid low separation branch"
+    },
+    {
+      "id": "OUTER_PREDICATE_HIGH_BRANCH",
+      "assertion": "Y>=ground+0.12 is recognized as a valid high separation branch"
+    },
+    {
+      "id": "OUTER_HIGH_BRANCH_REGRESSION",
+      "assertion": "with ground 0.1991557292161208 and synthetic monotonic Y values 0.2950366856, 0.3840860532 and 0.4754721832, baseline fails separation while midpoint and extreme reach the high branch; obsolete [0.075,0.0791557292161208] cannot reject them"
+    },
+    {
+      "id": "OUTER_ACTUAL_HARD_PREDICATES_ONLY",
+      "assertion": "candidate eligibility evaluates all 21 hard checks and never treats measured_Y_feasible_interval or balanced_target_Y as a hard threshold"
+    },
+    {
+      "id": "HISTORICAL_SAMPLE_REQUIRED_NON_GATING",
+      "assertion": "every candidate recomputes the old sample and labels it historical_non_gating with gating=false"
+    },
+    {
+      "id": "HISTORICAL_SAMPLE_CANNOT_ENTER_CHECKS",
+      "assertion": "missing/mislabeled old history is rejected, and its values cannot enter the 21-check array, local_pass, combined selection or terminal result"
+    },
+    {
+      "id": "HISTORICAL_VALUE_INVARIANCE",
+      "assertion": "changing only historical non-gating values cannot change candidate status or selection"
+    },
+    {
+      "id": "FRESH_CALIBRATION_STATE",
+      "assertion": "after diagnostic PASS, launches/index are zero, records/cache empty, and candidate root empty before first outer endpoint"
+    },
+    {
+      "id": "OLD_RUN_RECORD_REJECTED",
+      "assertion": "a v1.2.7R1 run ID, candidate record, or cache entry is rejected from v1.2.8 state"
+    },
+    {
+      "id": "DIAGNOSTIC_CAP_SEPARATE",
+      "assertion": "5/10 diagnostic launch counters do not increment or reduce the frozen 82 calibration-candidate cap"
+    },
+    {
+      "id": "NO_INTERVAL_COMPLETE_TRANSCRIPT_ONLY",
+      "assertion": "ownership+sensitivity PASS and a complete bound registered stage transcript with no eligible candidate may emit NO_PRESENTATION_ONLY_INTERVAL"
+    },
+    {
+      "id": "NO_INTERVAL_INCOMPLETE_PLAN_REJECTED",
+      "assertion": "executed-complete records with a missing planned step cannot emit NO_PRESENTATION_ONLY_INTERVAL"
+    },
+    {
+      "id": "NO_INTERVAL_CAP_BEFORE_COMPLETION_REJECTED",
+      "assertion": "reaching a cap before the registered transcript completes cannot emit NO_PRESENTATION_ONLY_INTERVAL"
+    },
+    {
+      "id": "NO_INTERVAL_BINDING_FAILURE_REJECTED",
+      "assertion": "missing ownership, flat sensitivity, incomplete evidence, or invalid runtime result cannot emit NO_PRESENTATION_ONLY_INTERVAL"
+    },
+    {
+      "id": "BRANCH_B_DELTA_WHITELIST",
+      "assertion": "Branch B expected bytes accept only the registered target render-consumer binding and reject geometry, neighboring, unrelated-material, camera or threshold changes"
+    },
+    {
+      "id": "BRANCH_B_INFLUENCE_SUBSET",
+      "assertion": "a target extreme influence pixel outside the exact target-owner mask rejects the repair"
+    },
+    {
+      "id": "CHECK_AND_RAY_CARDINALITY_FROZEN",
+      "assertion": "the successor contains the same 21 check IDs and 14 ray expectations; only the authorized visual sample coordinate may differ"
+    },
+    {
+      "id": "TERMINAL_FINALIZER_ALL_PATHS",
+      "assertion": "each registered terminal calls one finalizer before cleanup and produces inventory, evidence ZIP, ZIP tests and fresh-extraction verification"
+    },
+    {
+      "id": "DIAGNOSTIC_OVERRIDE_EXCLUDED",
+      "assertion": "diagnostic materials, owner passes, editor state and caches never appear in implemented-source or prepared-session inventories"
+    },
+    {
+      "id": "PREPARED_SESSION_COMPLETE_INVENTORY",
+      "assertion": "prepared result is written before the complete session inventory and fresh extraction verifies every session file"
+    },
+    {
+      "id": "AUTOMATION_SUCCESS_DOES_NOT_AUTHORIZE_HUMAN",
+      "assertion": "automation success records zero human attempts, HWG NOT PERFORMED and P1B FROZEN"
+    }
+  ],
+  "minimum_required_case_count": 45,
+  "godot_required_for_semantic_unit_cases": false,
+  "exact_engine_parse_and_probe_smokes_required_separately": true
+}

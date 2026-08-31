@@ -1,0 +1,467 @@
+{
+  "check_count": 105,
+  "checks": [
+    {
+      "id": "fixed-point pace anchor 0/1000",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-point pace anchor 850/1000",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-point pace anchor 1000/1000",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-point pace anchor 1250/1000",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-point pace anchor 1750/1000",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-point pace anchor 3000/1000",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-point first pace segment",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-point second pace segment",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed-point third pace segment",
+      "status": "PASS"
+    },
+    {
+      "id": "pace factor globally monotone",
+      "status": "PASS"
+    },
+    {
+      "id": "pace factor globally bounded",
+      "status": "PASS"
+    },
+    {
+      "id": "negative elapsed rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "zero reference rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "V30 duration valuation vector",
+      "status": "PASS"
+    },
+    {
+      "id": "V30 initial proof complexity is zero",
+      "status": "PASS"
+    },
+    {
+      "id": "V30 terms have SHA-256 identity",
+      "status": "PASS"
+    },
+    {
+      "id": "V60 duration valuation vector",
+      "status": "PASS"
+    },
+    {
+      "id": "V60 initial proof complexity is zero",
+      "status": "PASS"
+    },
+    {
+      "id": "V60 terms have SHA-256 identity",
+      "status": "PASS"
+    },
+    {
+      "id": "V90 duration valuation vector",
+      "status": "PASS"
+    },
+    {
+      "id": "V90 initial proof complexity is zero",
+      "status": "PASS"
+    },
+    {
+      "id": "V90 terms have SHA-256 identity",
+      "status": "PASS"
+    },
+    {
+      "id": "base uses half-up Credit rounding sentinel",
+      "status": "PASS"
+    },
+    {
+      "id": "complexity classes apply bounded visible premiums",
+      "status": "PASS"
+    },
+    {
+      "id": "complexity premium requires machine-enforced reason",
+      "status": "PASS"
+    },
+    {
+      "id": "unregistered complexity class rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "blank contract id rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "zero median rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "nonfinite global rate rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "negative cadence allowance rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "pace reference and valuation duration are separate",
+      "status": "PASS"
+    },
+    {
+      "id": "later generosity change cannot recalculate base",
+      "status": "PASS"
+    },
+    {
+      "id": "accepted immutable terms survive later catalog mutation",
+      "status": "PASS"
+    },
+    {
+      "id": "catalog mutation changes identity",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring snapshot has exact frozen whitelist",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring excludes actual_distance_m",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring excludes route_id",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring excludes flow",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring excludes paint_id",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring excludes trail_id",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring excludes odometer",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring excludes grade",
+      "status": "PASS"
+    },
+    {
+      "id": "scoring excludes completion_count",
+      "status": "PASS"
+    },
+    {
+      "id": "distance cannot enter evaluator constructor",
+      "status": "PASS"
+    },
+    {
+      "id": "three lines exactly reconcile at base 1",
+      "status": "PASS"
+    },
+    {
+      "id": "delivered payout bounded at base 1",
+      "status": "PASS"
+    },
+    {
+      "id": "three lines exactly reconcile at base 7",
+      "status": "PASS"
+    },
+    {
+      "id": "delivered payout bounded at base 7",
+      "status": "PASS"
+    },
+    {
+      "id": "three lines exactly reconcile at base 70",
+      "status": "PASS"
+    },
+    {
+      "id": "delivered payout bounded at base 70",
+      "status": "PASS"
+    },
+    {
+      "id": "three lines exactly reconcile at base 73",
+      "status": "PASS"
+    },
+    {
+      "id": "delivered payout bounded at base 73",
+      "status": "PASS"
+    },
+    {
+      "id": "three lines exactly reconcile at base 120",
+      "status": "PASS"
+    },
+    {
+      "id": "delivered payout bounded at base 120",
+      "status": "PASS"
+    },
+    {
+      "id": "three lines exactly reconcile at base 138",
+      "status": "PASS"
+    },
+    {
+      "id": "delivered payout bounded at base 138",
+      "status": "PASS"
+    },
+    {
+      "id": "three lines exactly reconcile at base 170",
+      "status": "PASS"
+    },
+    {
+      "id": "delivered payout bounded at base 170",
+      "status": "PASS"
+    },
+    {
+      "id": "three lines exactly reconcile at base 999",
+      "status": "PASS"
+    },
+    {
+      "id": "delivered payout bounded at base 999",
+      "status": "PASS"
+    },
+    {
+      "id": "worst successful record receives rounded fifty-percent floor",
+      "status": "PASS"
+    },
+    {
+      "id": "perfect record receives base and never more",
+      "status": "PASS"
+    },
+    {
+      "id": "receipt lines match both extrema",
+      "status": "PASS"
+    },
+    {
+      "id": "ABORTED has zero award",
+      "status": "PASS"
+    },
+    {
+      "id": "OBSERVER_INVALID has zero award",
+      "status": "PASS"
+    },
+    {
+      "id": "unknown terminal rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "integrity overflow rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "negative integrity rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "Credits monotone over every integrity unit",
+      "status": "PASS"
+    },
+    {
+      "id": "Credits never rise with extra elapsed time",
+      "status": "PASS"
+    },
+    {
+      "id": "shortcut pace saturates at full share",
+      "status": "PASS"
+    },
+    {
+      "id": "late completion creates no debt",
+      "status": "PASS"
+    },
+    {
+      "id": "learned-clean award vectors",
+      "status": "PASS"
+    },
+    {
+      "id": "clean-at-par award vectors",
+      "status": "PASS"
+    },
+    {
+      "id": "typical learner award vectors",
+      "status": "PASS"
+    },
+    {
+      "id": "illustrative learned-clean rates fit target five-percent band",
+      "status": "PASS"
+    },
+    {
+      "id": "illustrative learned-clean rates stay near global scale",
+      "status": "PASS"
+    },
+    {
+      "id": "wide duration grid remains rate normalized",
+      "status": "PASS"
+    },
+    {
+      "id": "wide duration grid spread remains under four percent",
+      "status": "PASS"
+    },
+    {
+      "id": "static model truthfully exposes plausible wall-rate vulnerability",
+      "status": "PASS"
+    },
+    {
+      "id": "illustrative wall-rate vulnerability is bounded but unresolved",
+      "status": "PASS"
+    },
+    {
+      "id": "new delivered attempt pays full receipt",
+      "status": "PASS"
+    },
+    {
+      "id": "identical duplicate result is idempotent",
+      "status": "PASS"
+    },
+    {
+      "id": "duplicate result cannot change balance",
+      "status": "PASS"
+    },
+    {
+      "id": "altered duplicate payload raises ledger conflict",
+      "status": "PASS"
+    },
+    {
+      "id": "genuinely new repeat pays full ordinary receipt",
+      "status": "PASS"
+    },
+    {
+      "id": "distinct attempt awards add exactly once",
+      "status": "PASS"
+    },
+    {
+      "id": "aborted attempt commits zero-award terminal",
+      "status": "PASS"
+    },
+    {
+      "id": "aborted attempt cannot later become delivered",
+      "status": "PASS"
+    },
+    {
+      "id": "skipped attempt sequence is a ledger conflict",
+      "status": "PASS"
+    },
+    {
+      "id": "attempt sequence overflow rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "blank session epoch rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "forged receipt lines rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "forged receipt total rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "unauthorized contract identity rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "balance overflow rejects transaction atomically",
+      "status": "PASS"
+    },
+    {
+      "id": "overflow rejection preserves prior balance",
+      "status": "PASS"
+    },
+    {
+      "id": "abort cannot claim first-clear entitlement",
+      "status": "PASS"
+    },
+    {
+      "id": "first delivered clear claims entitlement once",
+      "status": "PASS"
+    },
+    {
+      "id": "repeat cannot duplicate first-clear entitlement",
+      "status": "PASS"
+    },
+    {
+      "id": "first-clear ledger is separate from ordinary Credits",
+      "status": "PASS"
+    },
+    {
+      "id": "detour cannot increase and shortcut cannot exceed base",
+      "status": "PASS"
+    },
+    {
+      "id": "actual route cannot mutate accepted base",
+      "status": "PASS"
+    },
+    {
+      "id": "four-second overhead exposes short-job farming sensitivity",
+      "status": "PASS"
+    },
+    {
+      "id": "illustrative four-second sensitivity remains just inside stop band",
+      "status": "PASS"
+    }
+  ],
+  "decision": "VERSIONED_DURATION_RATE_BASE_V1",
+  "evidence": {
+    "cadence_allowance_seed_ms": 12000,
+    "example_terms": {
+      "V30": {
+        "base_credits": 70,
+        "definition_hash": "69845acb5cf16b6419251e519ba182fd468ba2cbdab9687014ed605c9c79d3cf",
+        "reference_ms": 33000,
+        "valuation_ms": 30000
+      },
+      "V60": {
+        "base_credits": 120,
+        "definition_hash": "73c75075cbff1c6a294f483784b5bf7f1ccfe7e79d01acf1ae5bc7bcdcab275a",
+        "reference_ms": 66000,
+        "valuation_ms": 60000
+      },
+      "V90": {
+        "base_credits": 170,
+        "definition_hash": "601b4db24a0bdedcc97a1092672b3eb2bf10e0793f32d8f396ce106509691325",
+        "reference_ms": 99000,
+        "valuation_ms": 90000
+      }
+    },
+    "four_second_overhead_rate_spread": "0.139393939393939393939393939",
+    "global_seed_rate_per_minute": 100,
+    "human_rate_authority": "NOT CLAIMED",
+    "learned_clean_rates_per_minute": {
+      "V30": "97.14285714285714285714285714",
+      "V60": "96.66666666666666666666666667",
+      "V90": "97.05882352941176470588235294"
+    },
+    "selected_decision": "VERSIONED_DURATION_RATE_BASE_V1",
+    "static_wall_rate_status": "REQUIRES_EXACT_ENGINE_HOSTILE_STRATEGY_CAPTURE",
+    "wall_rate_advantage_per_minute": {
+      "V30": "-1.26270733012306046013911182",
+      "V60": "0.24963289280469897209985315",
+      "V90": "0.28907038634486555932825548"
+    }
+  },
+  "product_source_modified": false,
+  "schema": "district_zero.p1b.iteration_04_payout_report.v1",
+  "status": "PASS_WITH_NATIVE_RATE_FALSIFIERS_REMAINING"
+}

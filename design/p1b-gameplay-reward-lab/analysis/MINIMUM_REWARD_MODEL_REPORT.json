@@ -1,0 +1,85 @@
+{
+  "base_credits": 120,
+  "results": [
+    {
+      "credits": 119,
+      "grade": "S",
+      "id": "NEAR_PERFECT_FLOW",
+      "quality_score": 97.8,
+      "receipt": {
+        "completion": 60,
+        "condition": 42,
+        "note": "Total rounds once from the raw additive multiplier; display lines are explanatory.",
+        "pace_unrounded": 17.099999999999998
+      },
+      "terminal": "DELIVERED",
+      "time_factor": 0.95
+    },
+    {
+      "credits": 115,
+      "grade": "S",
+      "id": "CLEAN_PAR",
+      "quality_score": 92.0,
+      "receipt": {
+        "completion": 60,
+        "condition": 40,
+        "note": "Total rounds once from the raw additive multiplier; display lines are explanatory.",
+        "pace_unrounded": 15.299999999999999
+      },
+      "terminal": "DELIVERED",
+      "time_factor": 0.85
+    },
+    {
+      "credits": 103,
+      "grade": "B",
+      "id": "TYPICAL_LEARNER",
+      "quality_score": 71.1,
+      "receipt": {
+        "completion": 60,
+        "condition": 33,
+        "note": "Total rounds once from the raw additive multiplier; display lines are explanatory.",
+        "pace_unrounded": 9.9
+      },
+      "terminal": "DELIVERED",
+      "time_factor": 0.55
+    },
+    {
+      "credits": 84,
+      "grade": "D",
+      "id": "DAMAGED_DELIVERY",
+      "quality_score": 39.599999999999994,
+      "receipt": {
+        "completion": 60,
+        "condition": 18,
+        "note": "Total rounds once from the raw additive multiplier; display lines are explanatory.",
+        "pace_unrounded": 6.119999999999999
+      },
+      "terminal": "DELIVERED",
+      "time_factor": 0.33999999999999997
+    },
+    {
+      "credits": 0,
+      "grade": null,
+      "id": "RESET_RECOVERY",
+      "quality_score": null,
+      "terminal": "ABORTED",
+      "time_factor": null
+    },
+    {
+      "credits": 100,
+      "grade": "B",
+      "id": "CIRCLE_FARM_HOSTILE_RECORD",
+      "quality_score": 67.3,
+      "receipt": {
+        "completion": 60,
+        "condition": 40,
+        "note": "Total rounds once from the raw additive multiplier; display lines are explanatory.",
+        "pace_unrounded": 0.4800000000000001
+      },
+      "terminal": "DELIVERED",
+      "time_factor": 0.026666666666666672
+    }
+  ],
+  "schema": "district_zero.p1b.minimum_reward_model_report.v1",
+  "status": "SELECTED_FOR_FIRST_SLICE_PROOF_NOT_PRODUCT_AUTHORITY"
+}

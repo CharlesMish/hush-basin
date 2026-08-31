@@ -1,0 +1,167 @@
+{
+  "authority_version": "v1.2.6",
+  "expected": {
+    "mesh_count": 19,
+    "meshes": {
+      "MESH_B01": {
+        "arrays_sha256": "99e0d94114110f8a55048234ed715a1fd51cb0249cfd118bbdc39995804fae26",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B02": {
+        "arrays_sha256": "415b19b4bdb9f74b11a767ec3c0be5e7c83da3e3b3dd377a6d1a1d03379c1538",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B03": {
+        "arrays_sha256": "18a7b820d5607838cc6d758b0faa583b809b33f5b05ac536473bdd09a2418c48",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B04": {
+        "arrays_sha256": "51f6c1f422d2ee5909998dcd685708a3a43f13949da5b76789a8c6fb966268cd",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B05": {
+        "arrays_sha256": "b6c6c5f29944ee647877c001fa67e0789853a5d127fe0c21133404ffc363c2d9",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B06": {
+        "arrays_sha256": "bf0c3551f1fd79702a55c7e64a73f5c83de186af49b85f456c82e80ee92bf4fd",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B07": {
+        "arrays_sha256": "bce502203c99614e1c53341312ca38022798e77d2f5d115797805158f38c9e65",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B08": {
+        "arrays_sha256": "8f1cc446dadc92c1710f6f5b7601d21cd16aa302f6a96b6b093152869ffde2b4",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B09": {
+        "arrays_sha256": "0557fee1d58209ec95debbdb91362d53af342f125466154a817a340eb5dd27cc",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B10": {
+        "arrays_sha256": "f8659ec6b34679d7abdbcaf48297a080eccc91e19d1573258b17fdff93c5b041",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B11": {
+        "arrays_sha256": "d14d0840acab28afa460f038f0941376c33c1b32c1cc0c3a9013db1a6fe83d8c",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B12": {
+        "arrays_sha256": "2fadfa4926bf5b69763b60a2db8766bdbf8c8c8b53754db8c90f1deed4ba2162",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B13": {
+        "arrays_sha256": "f5db23a94b73849b6482f149b4c244e9ac1d7b04dc779397ec7dcfac0dbea3f2",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_B14": {
+        "arrays_sha256": "518aa274caae122a164b56959f2f638f18e4b13d343136c645e95f45311d7380",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_CORE_PLINTH": {
+        "arrays_sha256": "7427d758e3b9fc3fa928e55e1d4566c940ca09c403f173295831c3945fc1dd70",
+        "render_vertices": 35130,
+        "side_quad_pairs": 5855,
+        "source_triangles": 23392,
+        "source_vertices": 11710
+      },
+      "MESH_CORE_WALL": {
+        "arrays_sha256": "e7620821355a6b813b027b6fe85de6626f290dad89124b0be5841855963f2ea4",
+        "render_vertices": 636,
+        "side_quad_pairs": 106,
+        "source_triangles": 412,
+        "source_vertices": 212
+      },
+      "MESH_HOP_BAR_01": {
+        "arrays_sha256": "f675d66257b74e4cfc2e71bb37272d5fad63c555b8b2bf2278dcbf82e62e5f90",
+        "render_vertices": 24,
+        "side_quad_pairs": 4,
+        "source_triangles": 12,
+        "source_vertices": 8
+      },
+      "MESH_OUTER_CLOSURE": {
+        "arrays_sha256": "f3e1e34fa6cf3e1fc3c28871c98251dd367481ff8f0871ab96ab1622fe5f6c80",
+        "render_vertices": 53418,
+        "side_quad_pairs": 8903,
+        "source_triangles": 35600,
+        "source_vertices": 17806
+      },
+      "MESH_OUTER_WALL": {
+        "arrays_sha256": "5d10a3b06f8f8077e842e8f7befe087a9f5dd7d92cb3ed1120d155d9bed28af7",
+        "render_vertices": 756,
+        "side_quad_pairs": 126,
+        "source_triangles": 504,
+        "source_vertices": 252
+      }
+    },
+    "render_artifact_path": "presentation/generated/solid_render_meshes_v1_2_6.json",
+    "render_artifact_raw_sha256": "895b8d08e19a7c67679b50591c1be021f43e825f08ad02116da7a085a7855eff",
+    "render_index_count": 180264,
+    "render_vertex_count": 90300,
+    "schema": "district_zero.p1a.v1_2_6.solid_render_mesh_summary.v1",
+    "side_quad_pair_count": 15050,
+    "source_triangle_count": 60088,
+    "source_vertex_count": 30100
+  },
+  "render_mesh_path": "presentation/generated/solid_render_meshes_v1_2_6.json",
+  "rules": [
+    "source triangle order is retained exactly",
+    "TOP triangles use exactly [0,1,0]",
+    "BOTTOM triangles use exactly [0,-1,0]",
+    "SIDE triangle pairs are identified by their shared nonhorizontal nonvertical source diagonal; both receive one outward normalized xz-plane normal derived from source CCW winding",
+    "render vertex key is (source_vertex_index, face_normal_key); duplication is allowed only when a source position requires distinct face normals",
+    "positions are exact source values; no source triangle is added, removed, reordered, or displaced",
+    "collision continues to consume source solid_meshes.json, never this render artifact"
+  ],
+  "schema": "district_zero.p1a.v1_2_6.render_normal_contract.v1",
+  "source_mesh_path": "world/generated/solid_meshes.json",
+  "tolerances": {
+    "position_absolute_delta_m": 0.0,
+    "side_y_absolute_maximum": 1e-09,
+    "unit_normal_absolute": 1e-08,
+    "winding_dot_minimum": 0.99999999
+  }
+}

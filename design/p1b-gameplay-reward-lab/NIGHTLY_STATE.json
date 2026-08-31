@@ -1,0 +1,26 @@
+{
+  "schema": "district_zero.p1b.gameplay_reward_nightly_state.v1",
+  "status": "COMPLETE_FROZEN",
+  "iterations_completed": 8,
+  "iteration_cap": 8,
+  "started_local": "2026-08-26T00:05:34-05:00",
+  "stop_at_or_after_local": "2026-08-26T08:00:00-05:00",
+  "next_iteration": null,
+  "next_theme": null,
+  "updated_local": "2026-08-26T08:32:00-05:00",
+  "last_iteration": {
+    "id": 8,
+    "theme": "convergence_simulated_economy_strongest_3_plus_3_vertical_slice_scope_and_playtest_questions",
+    "decision": "THREE_JOB_MOMENTUM_COURIER_VERTICAL_SLICE_V1",
+    "paint": "ORCHID_STATIC_R1_REFINEMENT",
+    "trail": "TWIN_VECTOR_R1_REFINEMENT_PRESENTATION_ONLY",
+    "deterministic_checks": "110/110 PASS; 844/844 AGGREGATE PURE CHECKS WITH NATIVE ECONOMY COSMETIC AND OWNER GATES REMAINING",
+    "artifact": "iterations/ITERATION_08_FINAL_CONVERGENCE.md"
+  },
+  "product_source_modified": false,
+  "human_world_gate": "NOT PERFORMED",
+  "P1B_product_implementation": "NOT STARTED",
+  "final_recommendation": "FINAL_RECOMMENDATION.md",
+  "later_invocations": "NO_CHANGES",
+  "completed_local": "2026-08-26T08:32:00-05:00"
+}

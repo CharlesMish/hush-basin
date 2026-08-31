@@ -1,0 +1,28 @@
+{
+  "schema": "district_zero.github_source_provenance.v1",
+  "playable": {
+    "label": "District Zero Vehicle Integration R7 owner-review player",
+    "manifest": "game/VEHICLE_R7_SHA256SUMS.txt",
+    "manifest_record_count": 234,
+    "manifest_sha256": "e178f1d4b50518107dbbba0e4bc3eb0c22b41baefce029ecc704c2f6d7fe130c",
+    "copied_file_count_including_manifest": 235,
+    "copied_bytes": 80612548,
+    "engine_identity": "4.7.1.stable.official.a13da4feb",
+    "status": "OWNER REVIEW BUILD — NOT P1A PASS"
+  },
+  "design_lab": {
+    "path": "design/p1b-gameplay-reward-lab",
+    "substantive_file_count": 65,
+    "canonical_tree_sha256": "150cfe8dcf9829595cfecbfbf7929f138da4d26efd42c6392eb91c8caf0ffe55",
+    "copied_bytes": 2328104,
+    "status": "COMPLETE_FROZEN",
+    "aggregate_pure_checks": "844/844 PASS",
+    "product_implementation": "NOT STARTED"
+  },
+  "repository_policy": {
+    "first_remote_visibility": "PRIVATE_RECOMMENDED",
+    "license_selected": false,
+    "git_lfs_required": false,
+    "external_runtime_dependencies": []
+  }
+}

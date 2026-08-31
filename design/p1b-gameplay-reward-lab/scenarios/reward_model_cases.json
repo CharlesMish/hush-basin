@@ -1,0 +1,67 @@
+{
+  "schema": "district_zero.p1b.reward_model_cases.v1",
+  "base_credits": 120,
+  "cases": [
+    {
+      "id": "NEAR_PERFECT_FLOW",
+      "integrity": 0.99,
+      "elapsed_par_ratio": 0.90,
+      "hard_impacts": 0,
+      "brushes": 0,
+      "resets": 0,
+      "distance_reference_ratio": 1.03,
+      "flow_factor": 1.0
+    },
+    {
+      "id": "CLEAN_PAR",
+      "integrity": 0.95,
+      "elapsed_par_ratio": 1.0,
+      "hard_impacts": 0,
+      "brushes": 0,
+      "resets": 0,
+      "distance_reference_ratio": 1.10,
+      "flow_factor": 0.25
+    },
+    {
+      "id": "TYPICAL_LEARNER",
+      "integrity": 0.78,
+      "elapsed_par_ratio": 1.25,
+      "hard_impacts": 1,
+      "brushes": 1,
+      "resets": 0,
+      "distance_reference_ratio": 1.22,
+      "flow_factor": 0.15
+    },
+    {
+      "id": "DAMAGED_DELIVERY",
+      "integrity": 0.42,
+      "elapsed_par_ratio": 1.55,
+      "hard_impacts": 2,
+      "brushes": 2,
+      "resets": 0,
+      "distance_reference_ratio": 1.35,
+      "flow_factor": 0.10
+    },
+    {
+      "id": "RESET_RECOVERY",
+      "terminal": "ABORTED",
+      "integrity": 0.70,
+      "elapsed_par_ratio": 1.70,
+      "hard_impacts": 1,
+      "brushes": 1,
+      "resets": 1,
+      "distance_reference_ratio": 1.55,
+      "flow_factor": 0.20
+    },
+    {
+      "id": "CIRCLE_FARM_HOSTILE_RECORD",
+      "integrity": 0.95,
+      "elapsed_par_ratio": 2.40,
+      "hard_impacts": 0,
+      "brushes": 0,
+      "resets": 0,
+      "distance_reference_ratio": 2.50,
+      "flow_factor": 1.0
+    }
+  ]
+}

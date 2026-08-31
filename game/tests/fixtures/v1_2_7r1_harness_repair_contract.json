@@ -1,0 +1,38 @@
+{
+  "absolute_candidate_render_launch_cap": 82,
+  "allowed_product_source_change": "scripts/p1a_world_builder.gd only after deterministic selection, and only exact canonical OUTER_CLOSURE_MASK / CORE_WALL presentation bytes",
+  "base_packet_inventory_record_count": 2187,
+  "base_packet_inventory_sha256": "b943b4c6c6b3a0a5166a3c8431582628e71b1b2421619220dd8b9b94bbd5d8fe",
+  "candidate_incomplete_terminal": "BLOCKED/NOT TESTABLE — HARNESS",
+  "exact_engine": "4.7.1.stable.official.a13da4feb",
+  "frozen_authorities": {
+    "capture_replay": "v1.2.5",
+    "presentation_baseline": "v1.2.6",
+    "world_data": "v1.2.3"
+  },
+  "mandatory_preflight_materializations": [
+    "BASELINE_UNMATERIALIZED",
+    "IDENTITY_MATERIALIZATION",
+    "OUTER_ONLY",
+    "WALL_ONLY",
+    "EMISSION",
+    "COMBINED"
+  ],
+  "no_interval_requires_complete_bounded_domain": true,
+  "operative_runner": "tools/run_v1_2_7r1_calibration.py",
+  "operative_c1_runner": "tools/run_v1_2_7r1_c1.py",
+  "operative_semantic_tests": "tools/test_v1_2_7r1_repairs.py",
+  "operative_verifier": "tools/verify_v1_2_7r1_successor.py",
+  "preflight_candidate_render_launches": 0,
+  "runnable_copy_excludes_test_only_class_fixture": "tests/fixtures/v1_2_7_v1_2_6_world_builder.gd",
+  "repairs": [
+    "disposable exact import, parse, cache, and class resolution",
+    "canonical material exact-byte verifier and valid emission indentation",
+    "strict executed-complete candidate evidence eligibility",
+    "common success/failure/blocker evidence finalizer",
+    "complete inventories and fresh-extraction source-tree equality",
+    "prepared-session import/readiness/inventory plus fresh-launch re-import"
+  ],
+  "schema": "district_zero.p1a.v1_2_7r1.harness_repair_contract.v1",
+  "version": "v1.2.7R1"
+}

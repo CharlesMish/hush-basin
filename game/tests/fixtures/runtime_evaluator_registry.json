@@ -1,0 +1,386 @@
+{
+  "active_fast_route_algorithm_id": "DZP1A_NORMALIZED_HUMAN_INPUT_REPLAY_V1",
+  "active_fast_route_controller": "NORMALIZED_INPUT_TRACE_REPLAY_V1",
+  "allowed_input_actions_exact": [
+    "brake",
+    "debug_overlay",
+    "diagnostic_menu",
+    "diagnostic_next",
+    "diagnostic_prev",
+    "diagnostic_spawn",
+    "hop",
+    "pause",
+    "reset",
+    "steer_left",
+    "steer_right",
+    "throttle",
+    "transform"
+  ],
+  "authority_version": "v1.2.5",
+  "collision_window": "first normal physics tick after initial spawn/reset completion through vector termination tick inclusive; HOP_PRESS and HOP_RELEASE do not alter the window",
+  "controller_contracts": {
+    "MULTI_ROUTE_FOLLOWER_INPUT_CONTROLLER": {
+      "path_segment_required_fields": [
+        "route",
+        "direction",
+        "start_chainage_m",
+        "end_chainage_m"
+      ],
+      "required_fields": [
+        "type",
+        "path",
+        "lookahead_m",
+        "throttle_command"
+      ]
+    },
+    "NORMALIZED_INPUT_TRACE_REPLAY_V1": {
+      "authorized_vectors": [
+        "RT_ROUTE_A1",
+        "RT_ROUTE_A2",
+        "RT_ROUTE_X0"
+      ],
+      "evidence_source": "first passing informed-human input trace plus three exact-engine deterministic replays",
+      "position_or_velocity_writes": "FORBIDDEN",
+      "replay_count": 3,
+      "required_fields": [
+        "type",
+        "algorithm_id",
+        "route_id",
+        "direction",
+        "selected_trace_manifest_flag",
+        "trace_route_id_must_match",
+        "input_actions_only",
+        "prohibited_actions",
+        "position_or_velocity_writes",
+        "route_projection_evidence_every_tick",
+        "fail_fast_on_first_unauthorized_hard_collision",
+        "fail_fast_on_first_hard_lateral_limit_violation",
+        "lateral_soft_limit_m",
+        "lateral_hard_limit_m",
+        "input_trace_schema",
+        "selected_trace_manifest_schema"
+      ],
+      "route_id_must_resolve_exactly_once": true,
+      "selection_rule": "first full pass in attempt order"
+    },
+    "POINT_TARGET_INPUT_CONTROLLER": {
+      "required_fields": [
+        "type",
+        "target_xz_m",
+        "steer_gain",
+        "throttle"
+      ]
+    },
+    "POWERED_WAYPOINT_INPUT_CONTROLLER": {
+      "minimum_waypoint_count": 2,
+      "position_or_velocity_writes": "FORBIDDEN",
+      "required_fields": [
+        "type",
+        "waypoints_xz_m",
+        "waypoint_radius_m",
+        "steer_gain",
+        "throttle"
+      ]
+    },
+    "ROUTE_FOLLOWER_INPUT_CONTROLLER_V2": {
+      "required_fields": [
+        "type",
+        "route_id",
+        "direction"
+      ],
+      "route_id_must_resolve_exactly_once": true,
+      "special_termination_fields": {
+        "RT_R0_SURFACE_NEUTRALITY": [
+          "terminate_chainage_m"
+        ]
+      }
+    },
+    "ROUTE_FOLLOWER_INPUT_CONTROLLER_V4_FORWARD_BRAKING_CONTAINED": {
+      "authorized_vectors": [
+        "RT_ROUTE_A1",
+        "RT_ROUTE_A2",
+        "RT_ROUTE_X0"
+      ],
+      "position_or_velocity_writes": "FORBIDDEN",
+      "required_fields": [
+        "type",
+        "route_id",
+        "direction",
+        "curve_plan_algorithm_id",
+        "forward_curvature_window_m",
+        "drive_speed_cap_mps",
+        "drive_yaw_rate_rad_s",
+        "turn_rate_margin",
+        "braking_envelope_decel_mps2",
+        "endpoint_margin_m",
+        "endpoint_speed_cap_mps",
+        "plan_query_lead_time_s",
+        "plan_query_lead_min_m",
+        "plan_query_lead_max_m",
+        "steering_lookahead_min_m",
+        "steering_lookahead_max_m",
+        "steering_lookahead_speed_gain_s",
+        "lateral_soft_limit_m",
+        "lateral_hard_limit_m",
+        "recovery_speed_cap_mps",
+        "recovery_prediction_horizon_s",
+        "recovery_emergency_margin_m",
+        "route_projection_evidence_every_tick",
+        "fail_fast_on_first_unauthorized_hard_collision"
+      ],
+      "route_id_must_resolve_exactly_once": true
+    },
+    "SUPPORTED_HOP_BRACKET_CONTROLLER": {
+      "position_or_velocity_writes": "FORBIDDEN",
+      "required_fields": [
+        "type",
+        "support_readiness",
+        "runup",
+        "timing_model",
+        "timing_offsets_m",
+        "bar_overlap_clearance"
+      ],
+      "support_readiness_discrete_equilibrium": {
+        "algorithm_id": "DZP1A_SPREAD_DISCRETE_SUPPORT_EQUILIBRIUM_V1",
+        "all_other_readiness_predicates_unchanged": true,
+        "maximum_measured_height_m": 1.35,
+        "stationary_equilibrium_m": 1.325
+      },
+      "timing_offset_source": "--hop-offset-m during bracket scan; after selection, selected_timing_offset_m frozen into the promoted fixture"
+    }
+  },
+  "event_termination_contracts": {
+    "FIRST_VALID_HOP_CLEARANCE": {
+      "authorized_vector_id": "RT_HOP_SUCCESS",
+      "collision_window_end": "completion physics tick inclusive",
+      "landing_or_support_reacquisition_required": false,
+      "post_clearance_drive_required": false,
+      "required_fields": [
+        "type",
+        "window_id",
+        "timeout_tick",
+        "completion_tick_inclusive",
+        "timeout_is_failure",
+        "requires"
+      ],
+      "success_boundary": "newly observed first valid bounded crossing only",
+      "timeout_tick_is_failure": true,
+      "window_id": "HOP_BAR_HJE_CLEAR"
+    }
+  },
+  "fast_route_v4_evidence_contract": {
+    "contiguity": "vector_tick increases by one and physics_tick increases by one",
+    "event": "TEST_DRIVER_ROUTE_PROJECTION",
+    "fail_fast_reason": "FIRST_UNAUTHORIZED_HARD_COLLISION",
+    "first_collision_preservation": "the first unauthorized hard COLLISION_SAMPLE and the current route-projection record must be present before fail-fast termination",
+    "maximum_test_driver_path_deviation_m_source": "maximum route_lateral_distance_m among these V4 records only",
+    "position_or_velocity_writes": "FORBIDDEN",
+    "sampling": "one record after every normal physics tick from spawn through termination"
+  },
+  "fast_route_v5_evidence_contract": {
+    "every_tick": true,
+    "path_deviation_source": "maximum route_lateral_distance_m from genuine per-tick global route projections",
+    "post_result_events_permitted": 0,
+    "projection_event": "TEST_DRIVER_ROUTE_PROJECTION",
+    "required_fields": [
+      "route_id",
+      "chainage_m",
+      "signed_lateral_error_m",
+      "route_lateral_distance_m",
+      "horizontal_speed_mps",
+      "velocity_course_angle_rad",
+      "desired_route_course_angle_rad",
+      "course_error_rad",
+      "signed_curvature_per_m",
+      "requested_lateral_accel_mps2",
+      "body_lead_angle_rad",
+      "turning_throttle_floor",
+      "commanded_throttle",
+      "commanded_brake",
+      "commanded_steer",
+      "planned_speed_cap_mps",
+      "recovery_active",
+      "candidate_id"
+    ]
+  },
+  "hop_gate_bracket": {
+    "candidate_registry": "world/generated/hop_bar_bracket_candidates.json",
+    "fixture": "tests/fixtures/hop_gate_bracket.json",
+    "full_suite_forbidden_until_selected_candidate_green": true,
+    "isolated_question_ids": [
+      "RT_HOP_SUCCESS",
+      "RT_HOP_DIRECT_NON_HOP_SPAN",
+      "RT_HOP_NO_SLIP_NORTH",
+      "RT_HOP_NO_SLIP_SOUTH"
+    ],
+    "preserved_lower_Q2_repetition_count": 69,
+    "resume_candidate_id": "HB_TOP_1240MM",
+    "resume_checkpoint": "evidence/v1_2_4d_q1_resume_checkpoint.json",
+    "resume_phase": "Q1_SUPPORTED_OFFSET_SCAN_WITH_EVENT_COMPLETION"
+  },
+  "human_feasibility_capture": {
+    "attempt_result_schema": "tests/fixtures/human_capture_attempt_result.schema.json",
+    "human_world_gate_separate": true,
+    "input_trace_schema": "tests/fixtures/human_input_trace.schema.json",
+    "protocol": "tests/fixtures/human_feasibility_protocol.json",
+    "replay_result_schema": "tests/fixtures/human_replay_result.schema.json",
+    "selected_trace_manifest_schema": "tests/fixtures/selected_human_trace_manifest.schema.json",
+    "telemetry_schema": "tests/fixtures/human_capture_telemetry.schema.json"
+  },
+  "implemented_commands": [
+    "ASSERT_SELECTION",
+    "END",
+    "HOP_PRESS",
+    "HOP_RELEASE",
+    "MANUAL_RESET_WITH_R",
+    "OPEN_DIAGNOSTIC_MENU",
+    "PREVIOUS_SELECTION",
+    "SET_POSITION_Y_FOR_FALL_TEST",
+    "SPAWN_SELECTED_WITH_ENTER",
+    "THROTTLE"
+  ],
+  "required_godot_version": "4.7.1.stable.official.a13da4feb",
+  "retired_controller_contracts": {
+    "ROUTE_FOLLOWER_INPUT_CONTROLLER_V3_FAST_CONTAINED": {
+      "authorized_vectors": [
+        "RT_ROUTE_A1",
+        "RT_ROUTE_A2",
+        "RT_ROUTE_X0"
+      ],
+      "position_or_velocity_writes": "FORBIDDEN",
+      "required_fields": [
+        "type",
+        "route_id",
+        "direction",
+        "preview_distances_m",
+        "lateral_soft_limit_m",
+        "lateral_hard_limit_m",
+        "recovery_speed_cap_mps"
+      ],
+      "route_id_must_resolve_exactly_once": true
+    },
+    "ROUTE_FOLLOWER_INPUT_CONTROLLER_V4_FORWARD_BRAKING_CONTAINED": "Historical evidence only.",
+    "ROUTE_FOLLOWER_INPUT_CONTROLLER_V5_INERTIAL_THRUST_VECTOR_CONTAINED": {
+      "authorized_vectors": [
+        "RT_ROUTE_A1",
+        "RT_ROUTE_A2",
+        "RT_ROUTE_X0"
+      ],
+      "candidate_id_source": "--v5-candidate-id",
+      "candidate_registry_path": "tests/fixtures/fast_route_driver_v5_candidates.json",
+      "dynamics_model": [
+        "steering rotates body orientation, not velocity",
+        "course rotation requires transverse thrust",
+        "positive turning throttle retained during braking/recovery",
+        "simultaneous throttle and brake permitted"
+      ],
+      "position_or_velocity_writes": "FORBIDDEN",
+      "required_fields": [
+        "type",
+        "route_id",
+        "direction",
+        "candidate_registry_path",
+        "candidate_id_source",
+        "lateral_soft_limit_m",
+        "lateral_hard_limit_m",
+        "route_projection_evidence_every_tick",
+        "fail_fast_on_first_unauthorized_hard_collision",
+        "fail_fast_on_first_hard_lateral_limit_violation",
+        "input_actions_only",
+        "position_or_velocity_writes"
+      ],
+      "route_id_must_resolve_exactly_once": true
+    }
+  },
+  "route_candidate_first_sample_rule": "establish previous craft-center/classification state only; cannot create candidate, ENTERED, TRAVERSED, or GATE_CROSSED credit",
+  "schema": "district_zero.p1a.runtime_evaluator_registry.v1_2_5",
+  "standalone_evidence_contract": {
+    "completion": "all final vector directories must be present; partial/failed-launch-only evidence may be diagnostic but cannot be labeled final standalone evidence",
+    "required_per_vector_files": [
+      "argv.json",
+      "stdout.txt",
+      "stderr.txt",
+      "engine.txt",
+      "events.jsonl",
+      "post_result_events.jsonl",
+      "runtime_result_line.txt",
+      "runtime_result.json",
+      "suite_classification.json",
+      "result.json",
+      "SHA256SUMS.txt"
+    ],
+    "required_root_files": [
+      "suite_argv.json",
+      "engine_identity.json",
+      "runtime_vector_results.json",
+      "SHA256SUMS.txt"
+    ]
+  },
+  "termination_marker_commands": [
+    "END"
+  ],
+  "test_driver_liveness_contract": {
+    "end_attempts": {
+      "expected_sample_count": 240,
+      "legal_seam_probe_rule": "straight powered approach must remain free of CORE_PLINTH_MASK contacts until HOP_BAR_01 contact; no requirement to reach a point inside expanded plinth space",
+      "minimum_first_sample_horizontal_speed_mps": 5.0,
+      "minimum_positive_throttle_fraction": 1.0
+    },
+    "sampling": "one TEST_DRIVER_LIVENESS record after every executed physics tick, including position, horizontal speed, commanded throttle, closest distance to the finite controller path, and closest distance to the required finite window when named",
+    "teleport_rule": "segment boundaries reset crossing history; no liveness sample supplies route/gate credit"
+  },
+  "test_overlay_authority_version": "v1.2.5",
+  "threshold_evaluator_registry": {
+    "default_diagnostic_selection": "FRESH_OPEN_IDENTITY",
+    "default_spawn_id": "FRESH_OPEN_IDENTITY",
+    "exact_allowed_input_actions": "FRESH_OPEN_IDENTITY",
+    "exact_gate_crossing_count": "GATE_CROSSING_EXACT",
+    "exact_hop_started_count": "HOP_STARTED_EXACT",
+    "expected_test_driver_liveness_sample_count": "TEST_DRIVER_LIVENESS_EXACT",
+    "fast_route_speed_floor_mps": "FAST_ROUTE_SPEED_FLOOR",
+    "hop_started_before_bar_contact_plane": "HOP_START_POSITION_ORDER",
+    "legacy_selector_action_count": "FRESH_OPEN_IDENTITY",
+    "maximum_core_plinth_collision_count": "CORE_PLINTH_COLLISION_MAX",
+    "maximum_craft_center_samples_inside_hard_obstacle": "HARD_OBSTACLE_CENTER_SAMPLE_MAX",
+    "maximum_crossings_to_opposite_side_of_target_face": "TARGET_FACE_CROSSING_MAX",
+    "maximum_fall_reset_count": "FALL_RESET_MAX",
+    "maximum_hard_collision_count": "HARD_COLLISION_MAX",
+    "maximum_hard_obstacle_penetration_samples": "HARD_OBSTACLE_CENTER_SAMPLE_MAX",
+    "maximum_hop_bar_collision_count": "HOP_BAR_COLLISION_MAX",
+    "maximum_hop_bar_hje_clear_crossing_count": "HOP_CLEAR_CROSSING_MAX",
+    "maximum_hop_bar_span_crossing_count": "HOP_BAR_SPAN_CROSSING_MAX",
+    "maximum_hop_command_to_start_ticks": "HOP_COMMAND_TO_START_MAX",
+    "maximum_hop_end_bypass_crossing_count": "HOP_END_BYPASS_CROSSING_MAX",
+    "maximum_hop_started_physics_tick": "HOP_STARTED_TICK_MAX",
+    "maximum_non_hop_hard_collision_count": "NON_HOP_HARD_COLLISION_MAX",
+    "maximum_powered_required_window_distance_m": "TEST_DRIVER_POWERED_WINDOW_APPROACH_MAX",
+    "maximum_route_entered_event_count": "ROUTE_ENTERED_MAX",
+    "maximum_route_entered_or_traversed_events_caused_by_spawn_or_reset": "DIAGNOSTIC_ROUTE_CREDIT_MAX",
+    "maximum_route_traversed_event_count": "ROUTE_TRAVERSED_MAX",
+    "maximum_test_driver_path_deviation_m": "TEST_DRIVER_PATH_DEVIATION_MAX",
+    "minimum_HOP_BAR_HJE_CLEAR_crossing_count": "HOP_CLEAR_CROSSING_MIN",
+    "minimum_bar_overlap_vertical_clearance_m": "HOP_BAR_VERTICAL_CLEARANCE_MIN",
+    "minimum_distance_at_or_above_fast_route_speed_m": "FAST_ROUTE_SUSTAINED_DISTANCE_MIN",
+    "minimum_final_route_chainage_m": "FINAL_CHAINAGE_MIN",
+    "minimum_first_liveness_horizontal_speed_mps": "TEST_DRIVER_FIRST_SPEED_MIN",
+    "minimum_genuine_classified_distance_m": "REQUESTED_ROUTE_TRAVERSED_DISTANCE_MIN",
+    "minimum_hop_bar_collision_count": "HOP_BAR_COLLISION_MIN",
+    "minimum_hop_started_count": "HOP_STARTED_MIN",
+    "minimum_peak_horizontal_speed_mps": "TEST_DRIVER_PEAK_SPEED_MIN",
+    "minimum_positive_throttle_fraction": "TEST_DRIVER_POSITIVE_THROTTLE_FRACTION_MIN",
+    "minimum_support_ready_consecutive_ticks": "SUPPORT_READY_CONSECUTIVE_MIN",
+    "movement_tuning_digest_algorithm_id": "LIVE_TUNING_DIGEST",
+    "movement_tuning_digest_before_equals_after": "LIVE_TUNING_DIGEST",
+    "required_event_order": "DIAGNOSTIC_EVENT_ORDER",
+    "required_first_hard_geometry_id": "FIRST_HARD_GEOMETRY_ID",
+    "required_liveness_every_tick": "TEST_DRIVER_LIVENESS_CONTIGUOUS",
+    "required_movement_tuning_digest_after": "LIVE_TUNING_DIGEST",
+    "required_movement_tuning_digest_before": "LIVE_TUNING_DIGEST",
+    "required_neutral_spawn_selection_id": "DIAGNOSTIC_SELECTION_FINAL",
+    "required_surface_class_sequence": "SURFACE_CLASS_SEQUENCE",
+    "support_ready_before_hop_command": "SUPPORT_READY_ORDER",
+    "target_face_plane_id": "TARGET_FACE_WINDOW_ID",
+    "visible_build_label_exact": "FRESH_OPEN_IDENTITY"
+  },
+  "world_data_authority_version": "1.2.3"
+}

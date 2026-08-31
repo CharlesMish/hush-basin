@@ -1,0 +1,47 @@
+{
+  "C1": {
+    "disposable_runtime_copies_removed": true,
+    "frozen_file_count": 7,
+    "maximum_absolute_difference": 0.0,
+    "p0_trace_sha256": "d79097038845d84923b24ecc0f4294d2b40f3a9483a22ce1d2d9254a8e886478",
+    "p1a_trace_sha256": "d79097038845d84923b24ecc0f4294d2b40f3a9483a22ce1d2d9254a8e886478",
+    "returncode": 0,
+    "status": "PASS",
+    "ticks_compared": 1260,
+    "tolerance": 0.001
+  },
+  "P1B": "FROZEN",
+  "allowed_geometry_delta": "HOP_BAR_01 top y only",
+  "authority_version": "1.2.4D",
+  "candidate_id": "HB_TOP_1240MM",
+  "human_world_gate": "NOT PERFORMED",
+  "isolated_gate_summary": {
+    "candidate_id": "HB_TOP_1240MM",
+    "questions": [
+      "RT_HOP_DIRECT_NON_HOP_SPAN",
+      "RT_HOP_SUCCESS",
+      "RT_HOP_NO_SLIP_NORTH",
+      "RT_HOP_NO_SLIP_SOUTH"
+    ],
+    "selected_timing_offset_m": 0.0,
+    "status": "PASS",
+    "top_y_m": 1.24
+  },
+  "registry_identity": {
+    "candidate_id": "HB_TOP_1240MM",
+    "candidate_runtime_results_raw_byte_sha256": "073f070bebb99c87637ad760df2997721611c964e2389ec216af9e07e1c7e2a8",
+    "candidate_world_data_adapter_raw_byte_sha256": "4d4eb6f896967b150f91f2e3d4cc954a9e09568e9eb65291aa57a8b8af1fb6c7",
+    "candidate_world_manifest_byte_length": 77200,
+    "candidate_world_manifest_raw_byte_sha256": "6ed87e7c979c5a965b18df54c33199943bb9fdd46951f68c6e62f19d19778f1b",
+    "delta_from_failing_top_m": 0.24,
+    "hop_mesh_arrays_sha256": "8a39bc74aa0038566e3f99359dfcb99bd5ddb7e7b0215033cdf24e63e28f57a5",
+    "solid_meshes_byte_length": 11040097,
+    "solid_meshes_raw_byte_sha256": "72f36973cde5e6f9c53a09086f7decbb3c4e7f56cfcff7925e9f8de4b8380201",
+    "top_y_m": 1.24
+  },
+  "schema": "district_zero.p1a.hop_bar_active_candidate.v1",
+  "selected_timing_offset_m": 0.0,
+  "status": "SELECTED_ISOLATED_GATE_PASS_C1_PASS",
+  "top_y_m": 1.24,
+  "world_data_authority_version": "1.2.3"
+}

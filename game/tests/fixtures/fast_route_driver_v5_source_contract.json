@@ -1,0 +1,74 @@
+{
+  "algorithm_authority_version": "1.2.4H",
+  "algorithm_id": "DZP1A_INERTIAL_THRUST_VECTOR_V1",
+  "candidate_registry_path": "tests/fixtures/fast_route_driver_v5_candidates.json",
+  "candidate_registry_sha256": "fb6ec83548bf09e1397e8822dcf1755755ec3edb60e7898749a5c669291b9fac",
+  "controller_id": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V5_INERTIAL_THRUST_VECTOR_CONTAINED",
+  "functions": {
+    "_fast_route_projection_summary": {
+      "byte_length": 968,
+      "sha256": "93a5ed400dcd16b36ba7f3afc5d8bc1806026ba33b2e51592b52968a1272d562"
+    },
+    "_observe_v5_route_projection": {
+      "byte_length": 2382,
+      "sha256": "931331b2b8ea7b4327111bf0fe4fd60b65d4fa40f2abe86bf9df03c87e53a1fb"
+    },
+    "_route_controller_v5_inertial_thrust_vector_contained": {
+      "byte_length": 6266,
+      "sha256": "8a5715c440f7ebc9e329740d607c4797db369039dce8509312782d1b8cab10f4"
+    },
+    "_route_projection_is_contiguous": {
+      "byte_length": 337,
+      "sha256": "1fa87ea2a2ad94a566fe2bf4580ace271bd1c74751c484dd7b22b2b0f71fc832"
+    },
+    "_seal_terminal_evidence": {
+      "byte_length": 465,
+      "sha256": "d193ecc9753804c53dbb6e1b790524bf88c6414657265a8fe6b2c09b86fc7c37"
+    },
+    "_signed_angle_2d": {
+      "byte_length": 220,
+      "sha256": "2712025edc3ba8389e621678f516726003d0604d12f19b75e36497f883d2800e"
+    },
+    "_v5_available_thrust": {
+      "byte_length": 203,
+      "sha256": "51df857f5f84d6bee0500446d5a72db6db4763cd2dff14afb72c4341b348b8aa"
+    },
+    "_v5_plan_speed_at": {
+      "byte_length": 576,
+      "sha256": "310ffe328559d8b1ebefb58c37fb2b7e5c52394567b6c4828ebab3bc0c2834d1"
+    },
+    "_v5_signed_curvature": {
+      "byte_length": 334,
+      "sha256": "007c1f3628380b0ea54fda7e6a8f8d3d14e17df85a47f0a32137cd50b1540a05"
+    },
+    "_v5_speed_plan": {
+      "byte_length": 1837,
+      "sha256": "c23690857495ed685173b94a3cffd8f1e1e9d63510f0e70f8a9e1c6265562994"
+    }
+  },
+  "historical_v4_status": "retained in source and evidence; superseded for A1/A2/X0 execution only",
+  "runner_byte_size": 102898,
+  "runner_raw_sha256": "db0b357b688c1e00cf1dabe956220b7aaf2ea8c150d62334bcc124f10136b6ea",
+  "schema": "district_zero.p1a.fast_route_driver_v5_source_contract.v1",
+  "semantic_invariants": {
+    "backward_braking_feasibility_envelope_required": true,
+    "direct_transform_position_velocity_physics_collision_movement_route_writes_forbidden": true,
+    "first_hard_collision_or_hard_limit_fail_fast_required": true,
+    "forward_curvature_plan_required": true,
+    "input_actions_only": [
+      "throttle",
+      "brake",
+      "steer_left",
+      "steer_right"
+    ],
+    "maximum_preregistered_candidate_count": 3,
+    "one_shared_law_for_A1_A2_X0": true,
+    "per_tick_global_route_projection_required": true,
+    "positive_turning_throttle_floor_required": true,
+    "recovery_before_hard_lateral_limit_required": true,
+    "simultaneous_throttle_and_brake_authorized": true,
+    "velocity_course_separate_from_body_heading": true
+  },
+  "test_overlay_authority_version": "1.2.4H",
+  "world_data_authority_version": "1.2.3"
+}

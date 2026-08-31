@@ -1,0 +1,207 @@
+{
+  "authority_version": "1.2",
+  "definitions": {
+    "CRAFT_CENTER_SPACE": "0.95 m inward buffer of WALKABLE_GROUND",
+    "PLAYABLE_MASK": "authored route/junction/lobe union clipped to outer envelope",
+    "WALKABLE_GROUND": "PLAYABLE_MASK minus CORE_WALL, OUTER_WALL, HOP_BAR_01"
+  },
+  "full": {
+    "cell_size_m": 1.0,
+    "component_cell_counts": [
+      76750
+    ],
+    "component_count": 1,
+    "connectivity": 4,
+    "grid_origin_xz_m": [
+      -330.0,
+      -315.0
+    ],
+    "height": 601,
+    "mask_path": "world/generated/flood_fill_mask_u8.bin",
+    "mask_raw_sha256": "bcc998c5dbf54a1f8f12438277e111a8c78894c2c8ec40765f45f38ae1dffe54",
+    "mask_sha256": "bcc998c5dbf54a1f8f12438277e111a8c78894c2c8ec40765f45f38ae1dffe54",
+    "probes": {
+      "CLN": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          440,
+          390
+        ],
+        "requested_xz_m": [
+          110.0,
+          75.0
+        ],
+        "walkable": true
+      },
+      "DEP": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          220,
+          390
+        ],
+        "requested_xz_m": [
+          -110.0,
+          75.0
+        ],
+        "walkable": true
+      },
+      "GE": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          500,
+          350
+        ],
+        "requested_xz_m": [
+          170.0,
+          35.0
+        ],
+        "walkable": true
+      },
+      "GN": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          330,
+          185
+        ],
+        "requested_xz_m": [
+          0.0,
+          -130.0
+        ],
+        "walkable": true
+      },
+      "GW": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          160,
+          350
+        ],
+        "requested_xz_m": [
+          -170.0,
+          35.0
+        ],
+        "walkable": true
+      },
+      "HJE": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          375,
+          450
+        ],
+        "requested_xz_m": [
+          45.0,
+          135.0
+        ],
+        "walkable": true
+      },
+      "HJW": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          285,
+          450
+        ],
+        "requested_xz_m": [
+          -45.0,
+          135.0
+        ],
+        "walkable": true
+      },
+      "MRK": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          330,
+          335
+        ],
+        "requested_xz_m": [
+          0.0,
+          20.0
+        ],
+        "walkable": true
+      },
+      "QRY": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          85,
+          335
+        ],
+        "requested_xz_m": [
+          -245.0,
+          20.0
+        ],
+        "walkable": true
+      },
+      "RLY": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          330,
+          105
+        ],
+        "requested_xz_m": [
+          0.0,
+          -210.0
+        ],
+        "walkable": true
+      },
+      "WRK": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          420,
+          260
+        ],
+        "requested_xz_m": [
+          90.0,
+          -55.0
+        ],
+        "walkable": true
+      }
+    },
+    "walkable_cell_count": 76750,
+    "width": 661
+  },
+  "schema": "district_zero.p1a.flood_fill.v1",
+  "southern_annulus": {
+    "cell_size_m": 1.0,
+    "component_cell_counts": [
+      7535,
+      2254
+    ],
+    "component_count": 2,
+    "connectivity": 4,
+    "grid_origin_xz_m": [
+      -330.0,
+      -315.0
+    ],
+    "height": 601,
+    "mask_path": "world/generated/southern_annulus_mask_u8.bin",
+    "mask_raw_sha256": "ce0f1a46c611c1c167b72f983f867f9963d5e26a3855934da631695b07038840",
+    "mask_sha256": "ce0f1a46c611c1c167b72f983f867f9963d5e26a3855934da631695b07038840",
+    "probes": {
+      "GE_EXTERIOR": {
+        "component_id": 1,
+        "grid_ix_iz": [
+          513,
+          335
+        ],
+        "requested_xz_m": [
+          183.170092,
+          19.948466
+        ],
+        "walkable": true
+      },
+      "GW_EXTERIOR": {
+        "component_id": 0,
+        "grid_ix_iz": [
+          140,
+          346
+        ],
+        "requested_xz_m": [
+          -189.512195,
+          30.609756
+        ],
+        "walkable": true
+      }
+    },
+    "test_region": "CRAFT_CENTER_SPACE INTERSECT (OUTER_ENVELOPE - CORE_REGION) INTERSECT z>=0",
+    "walkable_cell_count": 9789,
+    "width": 661
+  }
+}

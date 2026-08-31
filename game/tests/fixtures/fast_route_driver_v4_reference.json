@@ -1,0 +1,58 @@
+{
+  "algorithm": {
+    "backward_envelope": "v[i]=min(raw[i],sqrt(v[i+1]^2+2*3.25*ds)) from final sample to first",
+    "curvature": "one-sided angle between tangent(s) and tangent(s+6m); radius=actual_span/angle",
+    "id": "DZP1A_FORWARD_CURVATURE_BACKWARD_BRAKE_V1",
+    "raw_cap": "min(27, 0.44*radius*0.55), plus 8m/s terminal cap inside final 4m",
+    "runtime_query": "minimum of plan at current chainage and at forward lead clamp(speed*0.35,4,12)"
+  },
+  "interpretation": "This proves only that the preregistered input-driver plan leaves static speed-distance headroom. It does not claim Godot runtime passage.",
+  "route_bake_fixed_global_compact_array_sha256": "f26283b6cd314ba1d27aebea0bf80d82fbf2426ee5f22b610b38c273fec73330",
+  "routes": [
+    {
+      "algorithm_id": "DZP1A_FORWARD_CURVATURE_BACKWARD_BRAKE_V1",
+      "backward_braking_inequality_violation_count": 0,
+      "baked_length_m": 321.864198,
+      "distance_with_plan_at_or_above_speed_floor_m": 214.916511,
+      "forward_curvature_window_m": 6.0,
+      "minimum_backward_feasible_speed_cap_mps": 8.0,
+      "minimum_one_sided_curvature_radius_m": 72.238524,
+      "minimum_raw_speed_cap_mps": 8.0,
+      "note": "Static test-driver plan capacity only; not a Godot runtime result.",
+      "point_count": 1291,
+      "route_id": "A1",
+      "speed_floor_mps": 18.0
+    },
+    {
+      "algorithm_id": "DZP1A_FORWARD_CURVATURE_BACKWARD_BRAKE_V1",
+      "backward_braking_inequality_violation_count": 0,
+      "baked_length_m": 442.281945,
+      "distance_with_plan_at_or_above_speed_floor_m": 220.787892,
+      "forward_curvature_window_m": 6.0,
+      "minimum_backward_feasible_speed_cap_mps": 8.0,
+      "minimum_one_sided_curvature_radius_m": 72.118625,
+      "minimum_raw_speed_cap_mps": 8.0,
+      "note": "Static test-driver plan capacity only; not a Godot runtime result.",
+      "point_count": 1773,
+      "route_id": "A2",
+      "speed_floor_mps": 18.0
+    },
+    {
+      "algorithm_id": "DZP1A_FORWARD_CURVATURE_BACKWARD_BRAKE_V1",
+      "backward_braking_inequality_violation_count": 0,
+      "baked_length_m": 499.881048,
+      "distance_with_plan_at_or_above_speed_floor_m": 229.158752,
+      "forward_curvature_window_m": 6.0,
+      "minimum_backward_feasible_speed_cap_mps": 8.0,
+      "minimum_one_sided_curvature_radius_m": 42.166438,
+      "minimum_raw_speed_cap_mps": 8.0,
+      "note": "Static test-driver plan capacity only; not a Godot runtime result.",
+      "point_count": 2005,
+      "route_id": "X0",
+      "speed_floor_mps": 18.0
+    }
+  ],
+  "schema": "district_zero.p1a.fast_route_driver_v4_static_reference.v1",
+  "test_overlay_authority_version": "1.2.4E",
+  "world_data_authority_version": "1.2.3"
+}

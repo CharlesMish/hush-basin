@@ -1,0 +1,50 @@
+{
+  "P1B": "FROZEN",
+  "candidate_evidence_rule": "Only a strictly validated EXECUTED_COMPLETE record may enter selection. Missing or malformed evidence terminates BLOCKED/NOT TESTABLE — HARNESS and can never mean NO_PRESENTATION_ONLY_INTERVAL.",
+  "failure_terminal_statuses": [
+    "NO_PRESENTATION_ONLY_INTERVAL",
+    "BLOCKED/NOT TESTABLE — EXACT ENGINE",
+    "BLOCKED/NOT TESTABLE — SOURCE OR EVIDENCE IDENTITY",
+    "BLOCKED/NOT TESTABLE — HARNESS",
+    "BLOCKED/NOT TESTABLE — FINAL NATIVE VISUALS",
+    "BLOCKED/NOT TESTABLE — PRESERVATION",
+    "BLOCKED/NOT TESTABLE — C1",
+    "BLOCKED/NOT TESTABLE — LAUNCHER SMOKE",
+    "BLOCKED/NOT TESTABLE — PREPARED SESSION"
+  ],
+  "fresh_extraction_contract": {
+    "complete_inventory_coverage": true,
+    "duplicate_entries": 0,
+    "source_tree_byte_identity": true,
+    "unsafe_or_forbidden_entries": 0,
+    "zip_crc": "PASS"
+  },
+  "human_attempts_consumed_before_handoff": 0,
+  "human_world_gate": "NOT PERFORMED",
+  "prepared_result_written_before_session_inventory": true,
+  "prepared_session_created_only_after_all_prerequisites": true,
+  "preflight_packages": [
+    "District-Zero-P1A-v1.2.7R1-Harness-Repair-Overlay.zip",
+    "District-Zero-P1A-v1.2.7R1-Preflight-Evidence.zip"
+  ],
+  "required_packages_on_success": [
+    "District-Zero-P1A-v1.2.7R1-Implemented-Source.zip",
+    "District-Zero-P1A-v1.2.7R1-Calibration-Validation-Evidence.zip",
+    "District-Zero-P1A-v1.2.7R1-Prepared-A1-Human-Session.zip"
+  ],
+  "required_terminal_prerequisites": [
+    "exact engine",
+    "mandatory v1.2.7R1 preflight-only PASS bound to the current packet inventory",
+    "selected literal material values materialized",
+    "21/21 native visuals",
+    "14/14 rays",
+    "strengthened exact-byte static verifier",
+    "frozen preservation",
+    "C1 1260 ticks maximum delta 0.0",
+    "75-second A1 launcher smoke",
+    "prepared-session exact import and parse"
+  ],
+  "schema": "district_zero.p1a.v1_2_7r1.final_evidence_contract.v1",
+  "terminal_finalization_rule": "Every reached success, registered failure, or blocker writes a complete inventory and fresh-extraction-verified standalone evidence ZIP before disposable cleanup.",
+  "version": "v1.2.7R1"
+}

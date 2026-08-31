@@ -1,0 +1,774 @@
+{
+  "P1B_product_implementation": "NOT STARTED",
+  "authority": "PURE DESIGN-LAB MODEL \u2014 NOT GODOT OR HUMAN EVIDENCE",
+  "catalog_sha256": "936ed907cdb0b118eae5ff4a9e79aeeed1357910ab0c6faf92b6528483a15cfe",
+  "challengers": [
+    {
+      "changed_axis": "ROUTE_CONTEXT_BREADTH",
+      "complexity_class": 0,
+      "complexity_reason": "NONE",
+      "contract_id": "GC_QRY_CHOICE",
+      "status": "REGISTERED \u2014 OWNER SIGNAL AND ORIGIN-ACCESS UX REVIEW REQUIRED"
+    },
+    {
+      "changed_axis": "TRANSIT_HANDOFF_TOPOLOGY",
+      "complexity_class": 1,
+      "complexity_reason": "MACHINE_ENFORCED_MULTI_STOP",
+      "contract_id": "GC_SOUTH_HANDOFF",
+      "status": "REGISTERED \u2014 BLOCKED PENDING TRANSIT-HANDOFF OBSERVER PROOF"
+    },
+    {
+      "changed_axis": "CARGO_RESPONSE",
+      "complexity_class": 1,
+      "complexity_reason": "MACHINE_ENFORCED_FRAGILE",
+      "contract_id": "GC_WORKS_FRAGILE",
+      "status": "REGISTERED \u2014 BLOCKED PENDING BASE-OBSERVER AND FRAGILE-SEPARATION PROOF"
+    }
+  ],
+  "checks": {
+    "failed": 0,
+    "passed": 154,
+    "records": [
+      {
+        "id": "decision identity is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "authoritative route registry contains seventeen routes",
+        "status": "PASS"
+      },
+      {
+        "id": "route registry IDs match R7",
+        "status": "PASS"
+      },
+      {
+        "id": "all route lengths are positive",
+        "status": "PASS"
+      },
+      {
+        "id": "all route endpoints differ",
+        "status": "PASS"
+      },
+      {
+        "id": "route registry has stable SHA-256 identity",
+        "status": "PASS"
+      },
+      {
+        "id": "model route IDs match live R7 manifest",
+        "status": "PASS"
+      },
+      {
+        "id": "model route IDs match live R7 route bake",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match A0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches A0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match A1",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches A1",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match A2",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches A2",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match DOG",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches DOG",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match HOP",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches HOP",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match L0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches L0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match L1",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches L1",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match L2",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches L2",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match L3",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches L3",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match L4",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches L4",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match L5",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches L5",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match L6",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches L6",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match L7",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches L7",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match R0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches R0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match S0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches S0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match S1",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches S1",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 endpoints match X0",
+        "status": "PASS"
+      },
+      {
+        "id": "R7 length matches X0",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B contract order is frozen",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B forms a spatially continuous three-job chain",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts remain Gate-B",
+        "status": "PASS"
+      },
+      {
+        "id": "three proof journeys are one mechanical family",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts use one cargo profile",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts use one settle profile",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts use one scoring profile",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts use one payout profile",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts remain K0",
+        "status": "PASS"
+      },
+      {
+        "id": "all proof contracts share the K0 reason",
+        "status": "PASS"
+      },
+      {
+        "id": "proof copy does not imply hidden modifier axes",
+        "status": "PASS"
+      },
+      {
+        "id": "proof contracts require no route or transit nodes",
+        "status": "PASS"
+      },
+      {
+        "id": "proof contracts have no hard-fail rule",
+        "status": "PASS"
+      },
+      {
+        "id": "proof contracts never pay actual distance",
+        "status": "PASS"
+      },
+      {
+        "id": "proof endpoints are destination pads",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for C01 MARKET_DIRECT",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for C02 LONG_WEST_SWEEP",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for C03 INNER_CLINIC",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for C03 OUTER_EASTLINE",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for GC_QRY_CHOICE DIRECT_X0",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for GC_QRY_CHOICE WEST_A0_A1",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for GC_SOUTH_HANDOFF SOUTH_HOP",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for GC_SOUTH_HANDOFF SOUTH_BENT",
+        "status": "PASS"
+      },
+      {
+        "id": "route-option length is exact for GC_WORKS_FRAGILE WORKS_DIRECT",
+        "status": "PASS"
+      },
+      {
+        "id": "C02 inner path remains an audit comparator",
+        "status": "PASS"
+      },
+      {
+        "id": "C02 long sweep is not falsely called shortest",
+        "status": "PASS"
+      },
+      {
+        "id": "C02 does not reopen an unselected advertised option",
+        "status": "PASS"
+      },
+      {
+        "id": "C03 outer alternative remains a legitimate longer choice",
+        "status": "PASS"
+      },
+      {
+        "id": "Quarry challenger does not hide X0 distance tradeoff",
+        "status": "PASS"
+      },
+      {
+        "id": "South challenger preserves HOP/DOG length distinction",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B suggestions cover eight of seventeen route IDs",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B suggested-route set is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B route noncoverage is explicit",
+        "status": "PASS"
+      },
+      {
+        "id": "proof cannot claim HOP DOG or X0 coverage",
+        "status": "PASS"
+      },
+      {
+        "id": "challenger registry order is frozen",
+        "status": "PASS"
+      },
+      {
+        "id": "challengers cannot silently enter Gate-B",
+        "status": "PASS"
+      },
+      {
+        "id": "every challenger changes exactly one axis",
+        "status": "PASS"
+      },
+      {
+        "id": "challenger axes are distinct and ordered",
+        "status": "PASS"
+      },
+      {
+        "id": "Quarry challenger changes route context only",
+        "status": "PASS"
+      },
+      {
+        "id": "route-choice breadth remains K0",
+        "status": "PASS"
+      },
+      {
+        "id": "Quarry route choices remain unenforced",
+        "status": "PASS"
+      },
+      {
+        "id": "South challenger changes topology only",
+        "status": "PASS"
+      },
+      {
+        "id": "machine-enforced handoff is the declared K1 burden",
+        "status": "PASS"
+      },
+      {
+        "id": "South handoff binds exactly two junctions",
+        "status": "PASS"
+      },
+      {
+        "id": "Works challenger changes cargo response only",
+        "status": "PASS"
+      },
+      {
+        "id": "fragile response is the declared K1 burden",
+        "status": "PASS"
+      },
+      {
+        "id": "fragile challenger adds no route requirement",
+        "status": "PASS"
+      },
+      {
+        "id": "challengers add neither hard failure nor distance pay",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B K0 reason composes with settled payout authority",
+        "status": "PASS"
+      },
+      {
+        "id": "South K1 reason composes with settled payout authority",
+        "status": "PASS"
+      },
+      {
+        "id": "Works K1 reason composes with settled payout authority",
+        "status": "PASS"
+      },
+      {
+        "id": "K1 challenger registry does not mint price or pace literals",
+        "status": "PASS"
+      },
+      {
+        "id": "no missing signal selects no expansion",
+        "status": "PASS"
+      },
+      {
+        "id": "explicit NONE selects no expansion",
+        "status": "PASS"
+      },
+      {
+        "id": "route-choice feedback selects Quarry challenger",
+        "status": "PASS"
+      },
+      {
+        "id": "Hop-objective feedback selects South challenger",
+        "status": "PASS"
+      },
+      {
+        "id": "cargo-stakes feedback selects Works challenger",
+        "status": "PASS"
+      },
+      {
+        "id": "duplicate same signal is idempotent",
+        "status": "PASS"
+      },
+      {
+        "id": "selection before Gate-B review rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "selection with forged catalog rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "NONE cannot coexist with missing signal",
+        "status": "PASS"
+      },
+      {
+        "id": "unregistered raw-speed signal rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "two missing signals require director selection",
+        "status": "PASS"
+      },
+      {
+        "id": "all challenger axes cannot auto-stack",
+        "status": "PASS"
+      },
+      {
+        "id": "actual distance route trace and Hop count cannot alter scoring inputs",
+        "status": "PASS"
+      },
+      {
+        "id": "scoring whitelist excludes route facts",
+        "status": "PASS"
+      },
+      {
+        "id": "negative integrity units rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "boolean integrity units rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "excess pace units rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "boolean pace units rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "nonfinite actual distance rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "unknown observed route rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "negative Hop count rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "boolean Hop count rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "unauthorized contract object rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "copy mutation with stale contract hash rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "hidden proof premium with stale hash rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "hidden fragile proof copy with stale hash rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "hard-fail mutation rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "distance-pay mutation rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "stacked challenger axes rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "rehashed Quarry cargo override still rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "rehashed South payout override still rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "rehashed Works topology stack still rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "partial transit authority rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "fragile K0 downgrade rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "rehashed challenger origin mutation rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "forged decision ID rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "forged route-registry binding rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "forged catalog hash rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "disconnected route option rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "unknown route ID rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "leg endpoints must match route authority",
+        "status": "PASS"
+      },
+      {
+        "id": "authored route reversal is accepted",
+        "status": "PASS"
+      },
+      {
+        "id": "route option cannot become a seal",
+        "status": "PASS"
+      },
+      {
+        "id": "route option cannot loop over one route twice",
+        "status": "PASS"
+      },
+      {
+        "id": "duplicate route-option IDs rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "catalog rebuild is deterministic",
+        "status": "PASS"
+      },
+      {
+        "id": "future route registry cannot mutate frozen catalog",
+        "status": "PASS"
+      },
+      {
+        "id": "report names one proof family",
+        "status": "PASS"
+      },
+      {
+        "id": "report names bounded proof suggestion context",
+        "status": "PASS"
+      },
+      {
+        "id": "report does not turn suggestions into executed coverage",
+        "status": "PASS"
+      },
+      {
+        "id": "full registry context names fifteen of seventeen routes",
+        "status": "PASS"
+      },
+      {
+        "id": "registry context honestly leaves L7 and R0 unrepresented",
+        "status": "PASS"
+      },
+      {
+        "id": "registry context touches all six destination pads",
+        "status": "PASS"
+      },
+      {
+        "id": "report registers exactly three mutually exclusive challengers",
+        "status": "PASS"
+      },
+      {
+        "id": "report does not authorize challenger product work",
+        "status": "PASS"
+      },
+      {
+        "id": "report exposes South observer blocker",
+        "status": "PASS"
+      },
+      {
+        "id": "report exposes fragile observer blocker",
+        "status": "PASS"
+      },
+      {
+        "id": "report records no product source modification",
+        "status": "PASS"
+      },
+      {
+        "id": "report records no Human World Gate",
+        "status": "PASS"
+      },
+      {
+        "id": "report records no P1B product implementation",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS WITH NATIVE AND HUMAN FALSIFIERS REMAINING",
+    "total": 154
+  },
+  "decision": "ONE_AXIS_CONTENT_LADDER_V1",
+  "gate_b": {
+    "contracts": [
+      "C01",
+      "C02",
+      "C03"
+    ],
+    "executed_route_coverage": "NOT PERFORMED",
+    "mechanical_family_count": 1,
+    "suggested_context_route_id_count": 8,
+    "suggested_context_route_ids": [
+      "A1",
+      "A2",
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5"
+    ],
+    "unrepresented_suggestion_route_ids": [
+      "A0",
+      "DOG",
+      "HOP",
+      "L6",
+      "L7",
+      "R0",
+      "S0",
+      "S1",
+      "X0"
+    ]
+  },
+  "human_world_gate": "NOT PERFORMED",
+  "product_source_modified": false,
+  "registry_context_only": {
+    "destination_nodes_touched": [
+      "CLN",
+      "DEP",
+      "MRK",
+      "QRY",
+      "RLY",
+      "WRK"
+    ],
+    "executed_route_coverage": "NOT PERFORMED",
+    "suggested_route_id_count": 15,
+    "suggested_route_ids": [
+      "A0",
+      "A1",
+      "A2",
+      "DOG",
+      "HOP",
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "S0",
+      "S1",
+      "X0"
+    ],
+    "unrepresented_route_ids": [
+      "L7",
+      "R0"
+    ]
+  },
+  "route_option_lengths_m": {
+    "C01": {
+      "MARKET_DIRECT": "129.429845"
+    },
+    "C02": {
+      "LONG_WEST_SWEEP": "394.186048"
+    },
+    "C03": {
+      "INNER_CLINIC": "377.225159",
+      "OUTER_EASTLINE": "514.603795"
+    },
+    "GC_QRY_CHOICE": {
+      "DIRECT_X0": "499.881048",
+      "WEST_A0_A1": "398.374130"
+    },
+    "GC_SOUTH_HANDOFF": {
+      "SOUTH_BENT": "338.869245",
+      "SOUTH_HOP": "304.355164"
+    },
+    "GC_WORKS_FRAGILE": {
+      "WORKS_DIRECT": "118.070808"
+    }
+  },
+  "route_registry": {
+    "all_route_ids": [
+      "A0",
+      "A1",
+      "A2",
+      "DOG",
+      "HOP",
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "R0",
+      "S0",
+      "S1",
+      "X0"
+    ],
+    "count": 17,
+    "sha256": "5b1f0339e0467c01aed8825b33c29557d6995c30df535006c7a684285bf80807"
+  },
+  "schema": "district_zero.p1b.iteration_06_contract_breadth_report.v1",
+  "selector": {
+    "HOP_OBJECTIVE": "GC_SOUTH_HANDOFF",
+    "MORE_CARGO_STAKES": "GC_WORKS_FRAGILE",
+    "MORE_ROUTE_CHOICE": "GC_QRY_CHOICE",
+    "NONE": null,
+    "multiple": "DIRECTOR_SELECTION_REQUIRED",
+    "required_gate_b_review": "PASS"
+  }
+}

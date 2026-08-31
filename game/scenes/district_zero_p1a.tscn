@@ -1,0 +1,245 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://scripts/p1a_world_gate.gd" id="1_root"]
+[ext_resource type="PackedScene" path="res://scenes/craft.tscn" id="2_craft"]
+[ext_resource type="Script" path="res://scripts/p1a_world_builder.gd" id="3_world"]
+[ext_resource type="Script" path="res://scripts/p1a_telemetry.gd" id="4_telemetry"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="5_camera"]
+[ext_resource type="Resource" path="res://resources/default_tuning.tres" id="6_tuning"]
+[ext_resource type="Script" path="res://scripts/surface_feedback_3d.gd" id="7_feedback"]
+[ext_resource type="Script" path="res://scripts/p1a_map.gd" id="8_map"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_polish"]
+sky_top_color = Color(0.004, 0.009, 0.021, 1)
+sky_horizon_color = Color(0.055, 0.083, 0.11, 1)
+sky_curve = 0.42
+ground_bottom_color = Color(0.006, 0.012, 0.022, 1)
+ground_horizon_color = Color(0.032, 0.052, 0.068, 1)
+ground_curve = 0.5
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="Sky_polish"]
+sky_material = SubResource("ProceduralSkyMaterial_polish")
+
+[sub_resource type="Environment" id="Environment_p1a"]
+background_mode = 2
+background_color = Color(0.008, 0.014, 0.024, 1)
+sky = SubResource("Sky_polish")
+ambient_light_source = 2
+ambient_light_color = Color(0.6, 0.67, 0.72, 1)
+ambient_light_energy = 0.92
+tonemap_mode = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_diagnostic_identity"]
+bg_color = Color(0.018, 0.026, 0.035, 0.68)
+border_width_top = 1
+border_color = Color(0.16, 0.72, 0.68, 0.55)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_hud"]
+content_margin_left = 14.0
+content_margin_top = 9.0
+content_margin_right = 14.0
+content_margin_bottom = 9.0
+bg_color = Color(0.018, 0.028, 0.038, 0.84)
+border_width_left = 3
+border_color = Color(0.13, 0.74, 0.69, 0.85)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_menu"]
+bg_color = Color(0.02, 0.032, 0.043, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.16, 0.55, 0.53, 0.52)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_map"]
+bg_color = Color(0.012, 0.024, 0.034, 0.82)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.13, 0.7, 0.66, 0.7)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_debug"]
+bg_color = Color(0.012, 0.02, 0.028, 0.88)
+border_width_left = 2
+border_color = Color(0.92, 0.59, 0.2, 0.78)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_pause"]
+content_margin_left = 26.0
+content_margin_top = 18.0
+content_margin_right = 26.0
+content_margin_bottom = 18.0
+bg_color = Color(0.01, 0.019, 0.028, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.18, 0.88, 0.8, 0.82)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[node name="DistrictZeroP1A" type="Node3D"]
+script = ExtResource("1_root")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p1a")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-48, -32, 0)
+light_color = Color(0.96, 0.91, 0.82, 1)
+light_energy = 1.1
+light_angular_distance = 0.35
+shadow_enabled = true
+shadow_opacity = 0.55
+directional_shadow_max_distance = 230.0
+
+[node name="World" type="Node3D" parent="."]
+script = ExtResource("3_world")
+
+[node name="Craft" parent="." instance=ExtResource("2_craft")]
+position = Vector3(0, 1.65, 20)
+rotation = Vector3(0, -1.989022, 0)
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("5_camera")
+target_path = NodePath("../Craft")
+tuning = ExtResource("6_tuning")
+
+[node name="Camera" type="Camera3D" parent="CameraRig"]
+current = true
+near = 0.12
+far = 900.0
+
+[node name="SurfaceFeedback" type="Node3D" parent="."]
+script = ExtResource("7_feedback")
+craft_path = NodePath("../Craft")
+
+[node name="Telemetry" type="Node" parent="."]
+script = ExtResource("4_telemetry")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DiagnosticIdentityPanel" type="PanelContainer" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -40.0
+offset_right = 190.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBox_diagnostic_identity")
+
+[node name="Label" type="Label" parent="UI/DiagnosticIdentityPanel"]
+theme_override_colors/font_color = Color(0.67, 0.82, 0.82, 1)
+theme_override_font_sizes/font_size = 13
+text = "P1A VEHICLE INTEGRATION R7 · OWNER REVIEW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusPanel" type="PanelContainer" parent="UI"]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 590.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBox_hud")
+
+[node name="Status" type="Label" parent="UI/StatusPanel"]
+theme_override_colors/font_color = Color(0.88, 0.94, 0.96, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7)
+theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 16
+text = "DISTRICT ZERO · P1A VEHICLE R7 · WORLD v1.2.3"
+
+[node name="MenuPanel" type="PanelContainer" parent="UI"]
+offset_left = 18.0
+offset_top = 116.0
+offset_right = 300.0
+offset_bottom = 516.0
+theme_override_styles/panel = SubResource("StyleBox_menu")
+
+[node name="MenuContent" type="MarginContainer" parent="UI/MenuPanel"]
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 10
+
+[node name="MenuLabel" type="Label" parent="UI/MenuPanel/MenuContent"]
+theme_override_colors/font_color = Color(0.88, 0.94, 0.94, 1)
+theme_override_font_sizes/font_size = 16
+text = "DIAGNOSTIC SEGMENTS"
+
+[node name="MapPanel" type="PanelContainer" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -284.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = 258.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBox_map")
+
+[node name="Map" type="Control" parent="UI/MapPanel"]
+layout_mode = 2
+script = ExtResource("8_map")
+
+[node name="DebugPanel" type="PanelContainer" parent="UI"]
+anchors_preset = 3
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -166.0
+offset_right = -938.0
+offset_bottom = -18.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBox_debug")
+
+[node name="Debug" type="Label" parent="UI/DebugPanel"]
+text = "telemetry"
+
+[node name="PausePanel" type="PanelContainer" parent="UI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = -58.0
+offset_right = 188.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBox_pause")
+
+[node name="PauseLabel" type="Label" parent="UI/PausePanel"]
+theme_override_colors/font_color = Color(0.84, 0.98, 0.96, 1)
+theme_override_font_sizes/font_size = 22
+text = "PAUSED\nESC  resume"
+horizontal_alignment = 1
+vertical_alignment = 1

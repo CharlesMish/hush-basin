@@ -1,0 +1,130 @@
+{
+  "$id": "district_zero.p1a.v1_2_7r1.candidate_evidence.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "definitions": {
+    "hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "image": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {"minLength": 1, "type": "string"},
+        "png": {
+          "additionalProperties": false,
+          "properties": {
+            "bit_depth": {"const": 8},
+            "color_type": {"const": 2},
+            "height": {"const": 720},
+            "width": {"const": 1280}
+          },
+          "required": ["width", "height", "bit_depth", "color_type"],
+          "type": "object"
+        },
+        "sha256": {"$ref": "#/definitions/hash"}
+      },
+      "required": ["path", "sha256", "png"],
+      "type": "object"
+    },
+    "material": {
+      "additionalProperties": false,
+      "properties": {
+        "albedo_scale": {"type": "number"},
+        "emission_multiplier": {"type": "number"}
+      },
+      "required": ["albedo_scale", "emission_multiplier"],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "candidate_id": {"minLength": 1, "type": "string"},
+    "command": {"items": {"type": "string"}, "minItems": 8, "type": "array"},
+    "engine_identity": {"const": "4.7.1.stable.official.a13da4feb"},
+    "engine_log_sha256": {"$ref": "#/definitions/hash"},
+    "evaluated_source_path": {"const": "evaluated_p1a_world_builder.gd"},
+    "evaluated_utc": {"minLength": 1, "type": "string"},
+    "evidence_complete": {"const": true},
+    "evidence_validator": {"const": "p1a_v1_2_7r1_harness.validate_candidate_record.v1"},
+    "execution_status": {"const": "EXECUTED_COMPLETE"},
+    "images": {
+      "additionalProperties": false,
+      "properties": {
+        "a1_off": {"$ref": "#/definitions/image"},
+        "a1_on": {"$ref": "#/definitions/image"},
+        "free_roam_off": {"$ref": "#/definitions/image"},
+        "free_roam_on": {"$ref": "#/definitions/image"}
+      },
+      "required": ["free_roam_on", "free_roam_off", "a1_on", "a1_off"],
+      "type": "object"
+    },
+    "import_preflight": {
+      "properties": {
+        "observed_engine": {"const": "4.7.1.stable.official.a13da4feb"},
+        "project_root": {"minLength": 1, "type": "string"},
+        "status": {"const": "PASS"}
+      },
+      "required": ["status", "project_root", "observed_engine", "class_cache", "required_classes"],
+      "type": "object"
+    },
+    "import_preflight_result_sha256": {"$ref": "#/definitions/hash"},
+    "metrics": {
+      "properties": {
+        "checks": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {"minLength": 1, "type": "string"},
+              "observed": {"type": "number"},
+              "pass": {"type": "boolean"}
+            },
+            "required": ["id", "observed", "pass"],
+            "type": "object"
+          },
+          "maxItems": 21,
+          "minItems": 21,
+          "type": "array"
+        },
+        "status": {"enum": ["PASS", "FAIL"]}
+      },
+      "required": ["schema", "status", "checks", "views"],
+      "type": "object"
+    },
+    "metrics_result_sha256": {"$ref": "#/definitions/hash"},
+    "parameters": {
+      "additionalProperties": false,
+      "properties": {
+        "CORE_WALL": {"$ref": "#/definitions/material"},
+        "OUTER_CLOSURE_MASK": {"$ref": "#/definitions/material"}
+      },
+      "required": ["OUTER_CLOSURE_MASK", "CORE_WALL"],
+      "type": "object"
+    },
+    "probe_result_sha256": {"$ref": "#/definitions/hash"},
+    "project_material_source_sha256": {"$ref": "#/definitions/hash"},
+    "ray_result": {
+      "properties": {
+        "mismatch_count": {"minimum": 0, "type": "integer"},
+        "mismatches": {"type": "array"},
+        "sample_count": {"const": 14},
+        "status": {"enum": ["PASS", "FAIL"]}
+      },
+      "required": ["status", "sample_count", "mismatch_count", "mismatches"],
+      "type": "object"
+    },
+    "returncode": {"enum": [0, 1]},
+    "schema": {"const": "district_zero.p1a.v1_2_7r1.candidate_record.v1"},
+    "stage": {"minLength": 1, "type": "string"},
+    "stderr_sha256": {"$ref": "#/definitions/hash"},
+    "stdout_sha256": {"$ref": "#/definitions/hash"},
+    "validation_errors": {"maxItems": 0, "type": "array"}
+  },
+  "required": [
+    "schema", "candidate_id", "stage", "parameters", "engine_identity", "command", "returncode",
+    "project_material_source_sha256", "evaluated_source_path", "images", "metrics", "ray_result",
+    "import_preflight", "stdout_sha256", "stderr_sha256", "engine_log_sha256", "probe_result_sha256",
+    "metrics_result_sha256", "import_preflight_result_sha256", "evaluated_utc", "evidence_validator",
+    "validation_errors", "evidence_complete", "execution_status"
+  ],
+  "type": "object"
+}

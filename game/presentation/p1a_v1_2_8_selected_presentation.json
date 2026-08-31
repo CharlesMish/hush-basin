@@ -1,0 +1,277 @@
+{
+  "authority_version": "v1.2.8",
+  "evaluated_source_sha256": "a7c9962f565d7af2c4f962d7b572490043a2d43eba15edf5a72f48288304f357",
+  "historical_non_gating": {
+    "gating": false,
+    "integer_center_px": [
+      256,
+      244
+    ],
+    "label": "v1.2.7R1_old_sample_historical_non_gating",
+    "normalized": [
+      0.2,
+      0.34
+    ],
+    "shadow_off_Y": 0.06987974055145937,
+    "shadow_on_Y": 0.06987974055145937
+  },
+  "outer_high_branch_margin": 0.0015721086735188683,
+  "ownership_diagnostic_sha256": "8bb58f195e26ee41457abb227290c765635264a0101d65c5326af47f167bd385",
+  "parameters": {
+    "CORE_WALL": {
+      "albedo_scale": 1.1775,
+      "emission_multiplier": 0.0
+    },
+    "OUTER_CLOSURE_MASK": {
+      "albedo_scale": 1.0425,
+      "emission_multiplier": 0.0
+    }
+  },
+  "presentation_delta": 0.391725,
+  "right_obstacle_margin": 0.004120191544828011,
+  "schema": "district_zero.p1a.v1_2_8.selected_presentation.v1",
+  "selected_candidate_id": "COMBINED-027-4739534cdf",
+  "selected_metrics": {
+    "checks": [
+      {
+        "id": "FREE_ROAM:aperture_ground:minus_background",
+        "observed": 0.19800493701069372,
+        "pass": true
+      },
+      {
+        "id": "FREE_ROAM:left_ground:minus_background",
+        "observed": 0.22329752734628053,
+        "pass": true
+      },
+      {
+        "id": "FREE_ROAM:right_ground:minus_background",
+        "observed": 0.22190222412852034,
+        "pass": true
+      },
+      {
+        "id": "FREE_ROAM:aperture_ground:shadow_on_min",
+        "observed": 0.1991557292161208,
+        "pass": true
+      },
+      {
+        "id": "FREE_ROAM:aperture_ground:shadow_ratio",
+        "observed": 1.0,
+        "pass": true
+      },
+      {
+        "id": "FREE_ROAM:left_ground:shadow_on_min",
+        "observed": 0.2244483195517076,
+        "pass": true
+      },
+      {
+        "id": "FREE_ROAM:left_ground:shadow_ratio",
+        "observed": 1.0,
+        "pass": true
+      },
+      {
+        "id": "FREE_ROAM:right_ground:shadow_on_min",
+        "observed": 0.22305301633394742,
+        "pass": true
+      },
+      {
+        "id": "FREE_ROAM:right_ground:shadow_ratio",
+        "observed": 1.0,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:between_structures_ground:minus_background",
+        "observed": 0.19800493701069372,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:right_ground:minus_background",
+        "observed": 0.18543987664739103,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:between_structures_ground:shadow_on_min",
+        "observed": 0.1991557292161208,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:between_structures_ground:shadow_ratio",
+        "observed": 1.0,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:left_outer_closure:shadow_on_min",
+        "observed": 0.32072783788963966,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:left_outer_closure:shadow_ratio",
+        "observed": 1.0105311810790556,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:right_core_wall:shadow_on_min",
+        "observed": 0.3107108603976461,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:right_core_wall:shadow_ratio",
+        "observed": 1.0,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:right_ground:shadow_on_min",
+        "observed": 0.1865906688528181,
+        "pass": true
+      },
+      {
+        "id": "A1_FAMILIARIZATION:right_ground:shadow_ratio",
+        "observed": 1.0,
+        "pass": true
+      },
+      {
+        "id": "A1:left_obstacle_separation",
+        "observed": 0.12157210867351886,
+        "pass": true
+      },
+      {
+        "id": "A1:right_obstacle_separation",
+        "observed": 0.124120191544828,
+        "pass": true
+      }
+    ],
+    "historical_non_gating": {
+      "gating": false,
+      "integer_center_px": [
+        256,
+        244
+      ],
+      "label": "v1.2.7R1_old_sample_historical_non_gating",
+      "normalized": [
+        0.2,
+        0.34
+      ],
+      "shadow_off_Y": 0.06987974055145937,
+      "shadow_on_Y": 0.06987974055145937
+    },
+    "schema": "district_zero.p1a.v1_2_8.native_visual_metric_result.v1",
+    "status": "PASS",
+    "views": {
+      "A1_FAMILIARIZATION": {
+        "background": {
+          "integer_center_px": [
+            704,
+            72
+          ],
+          "on_to_off_ratio": 1.0,
+          "shadow_off_Y": 0.0011507922054270624,
+          "shadow_on_Y": 0.0011507922054270624
+        },
+        "between_structures_ground": {
+          "integer_center_px": [
+            627,
+            302
+          ],
+          "minus_background_Y": 0.19800493701069372,
+          "on_to_off_ratio": 1.0,
+          "shadow_off_Y": 0.1991557292161208,
+          "shadow_on_Y": 0.1991557292161208
+        },
+        "left_outer_closure": {
+          "integer_center_px": [
+            246,
+            234
+          ],
+          "on_to_off_ratio": 1.0105311810790556,
+          "shadow_off_Y": 0.31738539482489114,
+          "shadow_on_Y": 0.32072783788963966
+        },
+        "obstacle_separation": {
+          "left_absolute_Y": 0.12157210867351886,
+          "right_absolute_Y": 0.124120191544828
+        },
+        "right_core_wall": {
+          "integer_center_px": [
+            768,
+            309
+          ],
+          "on_to_off_ratio": 1.0,
+          "shadow_off_Y": 0.3107108603976461,
+          "shadow_on_Y": 0.3107108603976461
+        },
+        "right_ground": {
+          "integer_center_px": [
+            864,
+            338
+          ],
+          "minus_background_Y": 0.18543987664739103,
+          "on_to_off_ratio": 1.0,
+          "shadow_off_Y": 0.1865906688528181,
+          "shadow_on_Y": 0.1865906688528181
+        }
+      },
+      "FREE_ROAM": {
+        "aperture_ground": {
+          "integer_center_px": [
+            661,
+            230
+          ],
+          "minus_background_Y": 0.19800493701069372,
+          "on_to_off_ratio": 1.0,
+          "shadow_off_Y": 0.1991557292161208,
+          "shadow_on_Y": 0.1991557292161208
+        },
+        "background": {
+          "integer_center_px": [
+            802,
+            61
+          ],
+          "on_to_off_ratio": 1.0,
+          "shadow_off_Y": 0.0011507922054270624,
+          "shadow_on_Y": 0.0011507922054270624
+        },
+        "left_ground": {
+          "integer_center_px": [
+            352,
+            392
+          ],
+          "minus_background_Y": 0.22329752734628053,
+          "on_to_off_ratio": 1.0,
+          "shadow_off_Y": 0.2244483195517076,
+          "shadow_on_Y": 0.2244483195517076
+        },
+        "right_ground": {
+          "integer_center_px": [
+            972,
+            381
+          ],
+          "minus_background_Y": 0.22190222412852034,
+          "on_to_off_ratio": 1.0,
+          "shadow_off_Y": 0.22305301633394742,
+          "shadow_on_Y": 0.22305301633394742
+        }
+      }
+    }
+  },
+  "selected_ray_result": {
+    "mismatch_count": 0,
+    "mismatches": [],
+    "sample_count": 14,
+    "schema": "district_zero.p1a.v1_2_7.ray_classification_comparison.v1",
+    "status": "PASS"
+  },
+  "selected_sample_sha256": "efabff6d91926ca010a24f62e806b320d4c349ee2829beb0e9f7b3bb57f82643",
+  "selection_rule": {
+    "eligibility": "all 21 original visual checks PASS and all 14 ray classifications unchanged",
+    "outer_interior_rule": "If any eligible candidate is within balanced_target_Y ± preferred_interior_half_width_Y, discard eligible candidates outside that interior set; otherwise retain candidates with maximum outer maximin margin.",
+    "primary_objective": "minimum literal presentation_delta from v1.2.6, defined as sum(abs(final_rgb-base_rgb)) across the two materials plus sum(abs(emission_rgb)) for any enabled material",
+    "tie_breaks": [
+      "larger outer maximin Y margin",
+      "larger right-obstacle separation margin",
+      "lexicographically smaller candidate_id"
+    ],
+    "wall_margin_rule": "If any remaining candidate has right separation >= 0.126, discard remaining candidates below 0.126; otherwise retain all passing candidates."
+  },
+  "sensitivity_result_sha256": "35b55b4b5bf6af80e88081a86ae61e03d6e96ef647e0a454ca3c8cee26e6f19f",
+  "source_material_file_sha256": "a7c9962f565d7af2c4f962d7b572490043a2d43eba15edf5a72f48288304f357",
+  "status": "PASS"
+}

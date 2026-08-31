@@ -1,0 +1,28 @@
+{
+  "acceptance_rule": "exactly one complete JSON object; surrounding whitespace only; process return 0; status PASS; integer error_count 0",
+  "captured_fixture": {
+    "byte_size": 681,
+    "path": "tests/fixtures/static_verifier_stdout_pretty_pass.txt",
+    "sha256": "0bbd6f4c2b4c5b710b60d264d31cfa657ce4dd895332e419162841328a8efcea",
+    "source_evidence_path": "evidence/historical/v1_2_4i_run1_static_verifier_parser_blocker/STATIC_VERIFIER/stdout.txt",
+    "source_evidence_zip_sha256": "a1910e236dc9d45cebf5d000bbe5ea3e1b8bdf985355e69abc9937c72e3d44cd"
+  },
+  "execution_overlay_authority_version": "v1.2.4I",
+  "harness_repair_revision": "v1.2.4I-R1",
+  "required_case_ids": [
+    "captured_pretty_pass_rc0",
+    "compact_pass_rc0",
+    "surrounding_whitespace_pass_rc0",
+    "pretty_status_fail_rc0",
+    "pretty_nonzero_error_count_rc0",
+    "pass_nonzero_process_return",
+    "empty_stdout",
+    "malformed_stdout",
+    "multiple_json_documents",
+    "trailing_nonwhitespace_output",
+    "non_object_array",
+    "non_object_string",
+    "non_object_number"
+  ],
+  "schema": "district_zero.p1a.v1_2_4i_r1.static_verifier_parser_cases.v1"
+}

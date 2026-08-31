@@ -1,0 +1,347 @@
+{
+  "bounded_calibration_ranges": {
+    "dead_zone_severity": [
+      0.18,
+      0.23
+    ],
+    "maximum_episode_loss_percent": [
+      20.0,
+      28.0
+    ],
+    "quiet_window_active_seconds": [
+      0.2,
+      0.3
+    ],
+    "response_exponent": [
+      1.35,
+      1.7
+    ]
+  },
+  "check_count": 64,
+  "checks": [
+    {
+      "id": "single shared proof profile has stable identity",
+      "status": "PASS"
+    },
+    {
+      "id": "dead-zone seed is exactly 0.200 severity",
+      "status": "PASS"
+    },
+    {
+      "id": "full-severity episode is capped at 24.0 percent",
+      "status": "PASS"
+    },
+    {
+      "id": "response exponent seed is exactly 1.50",
+      "status": "PASS"
+    },
+    {
+      "id": "quiet window is exactly 0.250 active seconds",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.00 is 0 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.20 is 0 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.25 is 4 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.35 is 19 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.40 is 30 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.50 is 55 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.60 is 85 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.75 is 137 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 0.80 is 156 units",
+      "status": "PASS"
+    },
+    {
+      "id": "golden curve severity 1.00 is 240 units",
+      "status": "PASS"
+    },
+    {
+      "id": "damage curve is monotone across every severity milli",
+      "status": "PASS"
+    },
+    {
+      "id": "damage curve never exceeds one-episode cap",
+      "status": "PASS"
+    },
+    {
+      "id": "acceptance snapshots nonzero counters without retroactive loss",
+      "status": "PASS"
+    },
+    {
+      "id": "unchanged counter ignores sticky severity",
+      "status": "PASS"
+    },
+    {
+      "id": "sticky severity on a quiet tick cannot damage cargo",
+      "status": "PASS"
+    },
+    {
+      "id": "no impact increment means zero loss at any driving state",
+      "status": "PASS"
+    },
+    {
+      "id": "clean expressive driving never opens an impact episode",
+      "status": "PASS"
+    },
+    {
+      "id": "sub-dead-zone impact 0.05 has zero loss",
+      "status": "PASS"
+    },
+    {
+      "id": "sub-dead-zone impact 0.12 has zero loss",
+      "status": "PASS"
+    },
+    {
+      "id": "sub-dead-zone impact 0.19 has zero loss",
+      "status": "PASS"
+    },
+    {
+      "id": "sub-dead-zone impact 0.20 has zero loss",
+      "status": "PASS"
+    },
+    {
+      "id": "repeated sub-dead-zone contact preserves full integrity",
+      "status": "PASS"
+    },
+    {
+      "id": "rising episode charges only the incremental peak",
+      "status": "PASS"
+    },
+    {
+      "id": "rising 0.25 to 0.75 episode leaves 86.3 percent",
+      "status": "PASS"
+    },
+    {
+      "id": "rising peak equals one direct terminal peak",
+      "status": "PASS"
+    },
+    {
+      "id": "falling and repeated peaks cannot double-charge",
+      "status": "PASS"
+    },
+    {
+      "id": "30 60 and 120 Hz pressure streams have identical integrity",
+      "status": "PASS"
+    },
+    {
+      "id": "rate-invariant pressure stream resolves to 86.3 percent",
+      "status": "PASS"
+    },
+    {
+      "id": "exact 0.250-second gap remains one episode",
+      "status": "PASS"
+    },
+    {
+      "id": "equal quiet-window boundary retains episode identity",
+      "status": "PASS"
+    },
+    {
+      "id": "two glances beyond quiet window each charge once",
+      "status": "PASS"
+    },
+    {
+      "id": "strictly beyond quiet window opens a second episode",
+      "status": "PASS"
+    },
+    {
+      "id": "observed zero-loss contact does not interrupt unloading",
+      "status": "PASS"
+    },
+    {
+      "id": "positive cargo loss interrupts unloading",
+      "status": "PASS"
+    },
+    {
+      "id": "Hop start is condition-neutral",
+      "status": "PASS"
+    },
+    {
+      "id": "Hop start invalidates same-tick unloading support",
+      "status": "PASS"
+    },
+    {
+      "id": "ordinary landing at dead zone loses zero",
+      "status": "PASS"
+    },
+    {
+      "id": "poor landing seed loses 8.5 percent once",
+      "status": "PASS"
+    },
+    {
+      "id": "landing and wall strike share one impact curve",
+      "status": "PASS"
+    },
+    {
+      "id": "pause freezes episode age and integrity",
+      "status": "PASS"
+    },
+    {
+      "id": "resume continues one preserved peak episode",
+      "status": "PASS"
+    },
+    {
+      "id": "reset epoch change aborts before cleared counters are inspected",
+      "status": "PASS"
+    },
+    {
+      "id": "same-tick reset cannot add cargo loss",
+      "status": "PASS"
+    },
+    {
+      "id": "post-abort samples cannot mutate integrity",
+      "status": "PASS"
+    },
+    {
+      "id": "post-delivery samples cannot mutate frozen integrity",
+      "status": "PASS"
+    },
+    {
+      "id": "impact counter jump fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "impact counter jump invalidates attempt observer",
+      "status": "PASS"
+    },
+    {
+      "id": "counter rewind without reset fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "missing active sample sequence fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "nonpositive active delta fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "nonfinite active delta fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "invalid impact severity nan fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "invalid impact severity -0.01 fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "invalid impact severity 1.01 fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "missing severity on new impact fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "controller counter change during pause fails closed",
+      "status": "PASS"
+    },
+    {
+      "id": "repeated severe episodes clamp integrity at zero",
+      "status": "PASS"
+    },
+    {
+      "id": "integrity never underflows",
+      "status": "PASS"
+    },
+    {
+      "id": "zero integrity remains deliverable in forgiving proof",
+      "status": "PASS"
+    }
+  ],
+  "damage_inputs": [
+    "fresh_impact_count_increment",
+    "matching_last_impact_severity"
+  ],
+  "decision": "R7_COUNTER_EPOCH_FORGIVING_PEAK_EPISODE_V1",
+  "explicit_non_inputs": [
+    "speed",
+    "sideslip",
+    "Drive duty",
+    "steering",
+    "transform",
+    "Hop count",
+    "support loss or reacquisition",
+    "braking",
+    "elapsed time",
+    "paint id",
+    "trail id",
+    "COLLISION_SAMPLE count"
+  ],
+  "parameters": {
+    "dead_zone_severity": 0.2,
+    "integrity_precision_percent": 0.1,
+    "maximum_episode_loss_percent": 24.0,
+    "quiet_window_active_seconds": 0.25,
+    "response_exponent": 1.5,
+    "severity_precision": 0.001,
+    "shared_by_initial_contracts": 3
+  },
+  "product_source_modified": false,
+  "scenario_results": {
+    "CLEAN_HOP_AND_LANDING": {
+      "episode_count": 1,
+      "integrity_percent": 100.0,
+      "integrity_units": 1000
+    },
+    "EXPRESSIVE_DRIFT": {
+      "episode_count": 0,
+      "integrity_percent": 100.0,
+      "integrity_units": 1000
+    },
+    "GLANCING_STRIKE_050": {
+      "integrity_percent": 94.5,
+      "integrity_units": 945
+    },
+    "LIGHT_BRUSH_035": {
+      "integrity_percent": 98.1,
+      "integrity_units": 981
+    },
+    "POOR_LANDING_060": {
+      "integrity_percent": 91.5,
+      "integrity_units": 915
+    },
+    "SEVERE_STRIKE_100": {
+      "integrity_percent": 76.0,
+      "integrity_units": 760
+    },
+    "SUSTAINED_PRESSURE_075": {
+      "integrity_percent": 86.3,
+      "integrity_units": 863
+    },
+    "TWO_SEPARATE_GLANCES": {
+      "episode_count": 2,
+      "integrity_percent": 89.0,
+      "integrity_units": 890
+    }
+  },
+  "schema": "district_zero.p1b.iteration_02_cargo_report.v1",
+  "status": "PASS"
+}

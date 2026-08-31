@@ -1,0 +1,132 @@
+{
+  "authority_version": "v1.2.5",
+  "canonical_artifacts_per_attempt": [
+    "argv.json",
+    "engine_identity.json",
+    "project_identity.json",
+    "input_trace.json",
+    "telemetry.json",
+    "state_trace.json",
+    "attempt_result.json",
+    "stdout.txt",
+    "stderr.txt",
+    "engine.txt",
+    "SHA256SUMS.txt"
+  ],
+  "canonical_artifacts_per_replay": [
+    "argv.json",
+    "engine_identity.json",
+    "project_identity.json",
+    "input_trace.json",
+    "telemetry.json",
+    "state_trace.json",
+    "replay_result.json",
+    "stdout.txt",
+    "stderr.txt",
+    "engine.txt",
+    "SHA256SUMS.txt"
+  ],
+  "capture_tick_order": [
+    "read normalized player inputs at the start of vector physics tick",
+    "record the exact integer input record",
+    "apply only those normal inputs through the existing input system",
+    "advance frozen craft physics",
+    "record post-physics state and events with the same vector_tick"
+  ],
+  "evidence_packaging": {
+    "every_terminal_path_requires_standalone_zip": true,
+    "finalize_before_disposable_cleanup": true,
+    "forbidden_entries": [
+      ".godot",
+      "__MACOSX",
+      "._*",
+      ".DS_Store",
+      "editor state",
+      "nested archives",
+      "unretained logs"
+    ],
+    "retain_all_familiarization_session metadata and all recorded attempts": true,
+    "root_checksum_file": "SHA256SUMS.txt"
+  },
+  "forbidden_assistance": [
+    "automatic steering",
+    "automatic braking",
+    "route-following input generation",
+    "aim assist",
+    "ideal-line display",
+    "live lateral or chainage coaching",
+    "transform/position/velocity/physics-state writes after tick zero"
+  ],
+  "implementation_acceptance": [
+    "exact Godot import and --check-only parse pass",
+    "C1 maximum delta 0.0 with instrumentation inactive",
+    "schemas and raw-byte hashes emitted",
+    "all attempts retained",
+    "three exact replay repetitions",
+    "zero post-result events",
+    "no forbidden gameplay/world deltas"
+  ],
+  "permitted_setup_writes": [
+    "canonical spawn transform before tick zero",
+    "zero initial linear velocity before tick zero",
+    "frozen initial DRIVE fold state before tick zero",
+    "physics disabled during ready countdown"
+  ],
+  "required_files": [
+    {
+      "path": "tests/p1a_human_feasibility_runner.gd",
+      "purpose": "visible unassisted familiarization and capture; headless deterministic replay from canonical state"
+    },
+    {
+      "path": "tools/run_human_feasibility_session.py",
+      "purpose": "route-ordered session orchestration, immutable evidence packaging, attempt limits, replay locks"
+    },
+    {
+      "path": "tools/validate_human_feasibility_evidence.py",
+      "purpose": "standard-library validation of schemas, metrics, hashes, sequence, and deterministic replay"
+    },
+    {
+      "path": "evidence/v1_2_5_capture_implementation_manifest.json",
+      "purpose": "Codex-generated raw hashes and exact-engine parse/import proof for the implementation"
+    },
+    {
+      "path": "tests/p1a_runtime_runner.gd",
+      "purpose": "add NORMALIZED_INPUT_TRACE_REPLAY_V1 support without changing other vectors"
+    },
+    {
+      "path": "tools/run_p1a_runtime_suite.py",
+      "purpose": "resolve selected traces for A1/A2/X0 and preserve the other 37 vectors"
+    }
+  ],
+  "runner_cli": {
+    "capture_only_flags": [
+      "--attempt-index"
+    ],
+    "replay_only_flags": [
+      "--input-trace",
+      "--replay-index"
+    ],
+    "required_flags": [
+      "--mode",
+      "--route",
+      "--output-dir",
+      "--session-id"
+    ],
+    "required_modes": [
+      "familiarization",
+      "capture",
+      "replay"
+    ]
+  },
+  "schema": "district_zero.p1a.human_capture_implementation_contract.v1",
+  "serialization_contract": "tests/fixtures/human_trace_serialization_contract.json",
+  "status": "CODEX_IMPLEMENTATION_REQUIRED",
+  "terminal_paths": {
+    "complete_suite_failure": "completed exact-engine suite FAIL",
+    "complete_suite_success": "FEASIBILITY GATE PASS; authorize but do not conduct Human World Gate",
+    "implementation_or_import_failure": "BLOCKED/NOT TESTABLE",
+    "replay_mismatch": "HUMAN FEASIBILITY NOT ESTABLISHED — <route>",
+    "route_attempts_exhausted": "HUMAN FEASIBILITY NOT ESTABLISHED — <route>",
+    "selected_c1_failure": "BLOCKED/NOT TESTABLE or completed C1 FAIL according to raw result; never hide it"
+  }
+}

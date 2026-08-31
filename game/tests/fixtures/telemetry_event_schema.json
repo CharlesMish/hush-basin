@@ -1,0 +1,351 @@
+{
+  "authority_version": "1.2.4J",
+  "classification": {
+    "backdating": {
+      "committed_entry_backdates_to_original_crossing": true,
+      "distance_since_genuine_entry_m": "horizontal craft-center distance from the interpolated original crossing through commitment and onward; the committed ENTERED and later TRAVERSED records retain that backdated distance origin",
+      "entry_crossing_xz_m": "the interpolated original crossing point",
+      "entry_tick": "the later tick of the original outside-to-inside crossing pair; never the later commitment tick",
+      "event_physics_tick": "the commitment tick"
+    },
+    "candidate_cancel": "reset/teleport, junction override, a different candidate winning the total tie-break, or leaving the candidate entry-inset envelope before commitment clears candidate tick/time/distance",
+    "candidate_commit_requires_both": true,
+    "candidate_crossing_point": "linear interpolation of the consecutive craft-center samples at the entry-inset boundary; ties use the route tie-break before interpolation",
+    "candidate_distance": "horizontal craft-center polyline distance from the interpolated crossing point through every subsequent candidate sample; distance before the crossing point is excluded",
+    "candidate_minimum_time_s": 0.25,
+    "candidate_minimum_travel_m": 2.0,
+    "candidate_start": "only a continuous non-teleport pair whose earlier sample is outside the winning route entry-inset envelope (or is classified junction/base/another route) and whose later sample is inside; the first post-boundary sample establishes prior state and cannot start a candidate",
+    "commit": "commit on the first physics tick where continuous candidate time is at least 0.25 s and candidate distance is at least 2.0 m",
+    "entry_inset_m": 0.5,
+    "exit": "the committed route remains current until junction override or three consecutive physics ticks outside that route exit-outset envelope; the exit effective tick is the third outside tick and no exit backdating occurs",
+    "exit_consecutive_physics_ticks": 3,
+    "exit_outset_m": 1.0,
+    "first_post_boundary_sample": "establish previous craft-center/classification state only; cannot create candidate, ENTERED, TRAVERSED, or GATE_CROSSED credit",
+    "junction_override": true,
+    "sample_point": "craft global-position x,z after the normal physics movement for the tick and before telemetry emission",
+    "tie_break": [
+      "lowest normalized centerline distance",
+      "lexical route ID"
+    ]
+  },
+  "collision_interface": {
+    "collapse_rule": "emit at most one COLLISION_SAMPLE per (physics_tick, source_geometry_id), regardless of contact-point or slide-iteration count",
+    "contact_source": "contacts reported by the frozen craft movement/collision path during the normal physics tick; test code must not add movement or collision response",
+    "counted_hard_collision": "one collapsed COLLISION_SAMPLE on a hard_geometry_id during the vector counting window; HOP_BAR_01 is hard-Hop, the other four IDs are hard/non-Hop",
+    "counting_window": "first normal physics tick after initial spawn/reset completion through vector termination tick inclusive; for RT_HOP_SUCCESS, termination is the first valid bounded HOP_BAR_HJE_CLEAR completion tick; HOP_PRESS and HOP_RELEASE do not alter the window",
+    "excluded": "heightfield/road support contacts and trigger-only gate/route areas are not hard collisions",
+    "hard_collision_count": "count of COLLISION_SAMPLE records whose source_geometry_id is any hard_geometry_id",
+    "hard_geometry_ids": [
+      "CORE_PLINTH_MASK",
+      "CORE_WALL",
+      "HOP_BAR_01",
+      "OUTER_CLOSURE_MASK",
+      "OUTER_WALL"
+    ],
+    "hop_bar_collision_count": "count restricted to source_geometry_id HOP_BAR_01",
+    "non_hop_hard_collision_count": "same count after excluding source_geometry_id HOP_BAR_01",
+    "required_evidence_fields": [
+      "contact_position_xyz_m",
+      "craft_position_xyz_m",
+      "craft_velocity_xyz_mps",
+      "horizontal_speed_mps",
+      "normal_xyz",
+      "source_geometry_id",
+      "route_id",
+      "route_chainage_m",
+      "route_lateral_distance_m"
+    ]
+  },
+  "gate_event": {
+    "fields": [
+      "serial",
+      "physics_tick",
+      "gate_id",
+      "direction",
+      "crossing_xz_m"
+    ],
+    "name": "GATE_CROSSED",
+    "rule": "continuous non-teleport consecutive craft-center samples change CORE_REGION containment and their segment crosses CORE_BOUNDARY inside exactly one named aperture"
+  },
+  "hop_gate_test_events": {
+    "HOP_BAR_CLEARANCE_SAMPLE": {
+      "fields": [
+        "physics_tick",
+        "craft_center_xyz_m",
+        "bar_top_y_m",
+        "clearance_m"
+      ],
+      "physics_effect": "none",
+      "producer": "test runner only",
+      "sampling": "every tick whose conservative craft plan footprint overlaps the bar footprint"
+    },
+    "HOP_CLEARANCE_COMPLETION": {
+      "boundary": "first valid bounded HOP_BAR_HJE_CLEAR crossing after support readiness, ordered Hop command/start, plan-overlap clearance, and zero hard collision through the completion tick inclusive",
+      "not_a_gameplay_event": true,
+      "physics_effect": "none",
+      "post_clearance_drive_or_landing_required": false,
+      "producer": "test runner only",
+      "result_field": "termination_evidence"
+    },
+    "HOP_COMMAND": {
+      "fields": [
+        "physics_tick",
+        "timing_offset_m",
+        "trigger_x_m",
+        "craft_center_x_m",
+        "horizontal_speed_mps"
+      ],
+      "physics_effect": "input action only",
+      "producer": "test runner only"
+    },
+    "SUPPORT_READY": {
+      "fields": [
+        "physics_tick",
+        "consecutive_ticks",
+        "probe_hit_count",
+        "measured_height_m",
+        "support_reacquire_blend",
+        "support_normal_speed_mps",
+        "fold_amount",
+        "hop_cooldown_s"
+      ],
+      "physics_effect": "none",
+      "producer": "test runner only"
+    }
+  },
+  "impact_interface": {
+    "impact_sample_serial": "uint64 never reset",
+    "movement_effect": "none; existing impact_count and last_impact fields remain byte-identical and behavior-identical",
+    "queue": "bounded append-only ring of 256 samples; observers drain copies; overflow emits dropped_count; appended after existing velocity write",
+    "reset_serial": "uint64 increments per reset"
+  },
+  "observational_only": true,
+  "other_events": [
+    "HOP_STARTED",
+    "SUPPORT_STATE_CHANGED",
+    "SURFACE_CLASS_CHANGED",
+    "COLLISION_SAMPLE",
+    "IMPACT_SAMPLE",
+    "TEST_ASSERTION"
+  ],
+  "physics_write_forbidden": true,
+  "plane_evidence": {
+    "bar_span": "HOP_BAR_SPAN_PENETRATION is associated with canonical HOP_BAR_01 containment/boundary evidence and covers z=126..144",
+    "continuous_crossing_rule": "one crossing is counted when consecutive non-teleport samples change from signed_distance < 0 to signed_distance >= 0; a sample exactly on zero can complete only one crossing until a later negative sample re-arms it",
+    "end_bypass": "north/south end windows are finite HJW-to-HJE crossing windows outside the bar span and intentionally have no bar-containment/proximity requirement",
+    "infinite_plane_forbidden": true,
+    "reset_and_teleport": "clear window history; the first later sample establishes prior signed distance and cannot count",
+    "v1_2_4a_split": "supported Hop clearance, direct non-Hop BAR_SPAN/HJE_CLEAR denial, and north/south END_BYPASS denial are separate claims; end crossings never require bar containment.",
+    "v1_2_4b_split": "Four isolated claims: support-ready timed Hop clearance; direct powered non-Hop span denial; north legal seam denial; south legal seam denial. Static end closure is separately bound to world/generated/hop_gate_end_seals.json."
+  },
+  "reset_reasons": [
+    "DIAGNOSTIC",
+    "MANUAL",
+    "FALL"
+  ],
+  "route_event": {
+    "fields": [
+      "serial",
+      "physics_tick",
+      "route_id",
+      "state",
+      "entry_tick",
+      "entry_crossing_xz_m",
+      "distance_since_genuine_entry_m"
+    ],
+    "name": "ROUTE_STATE",
+    "rules": {
+      "ENTERED": "emitted at the commitment tick only after the exact candidate hysteresis contract; entry_tick, crossing point, and distance backdate to the original genuine crossing",
+      "SPAWNED": "emitted when teleport/reset ends inside a route envelope; grants no entry or traversal credit",
+      "TRAVERSED": "emitted only for the genuinely entered route when its destination junction is reached; a test runner must match the requested route_id and may not terminate on another route traversal"
+    },
+    "states": [
+      "SPAWNED",
+      "ENTERED",
+      "TRAVERSED"
+    ]
+  },
+  "schema": "district_zero.p1a.telemetry_event_schema.v1_2_4j",
+  "segment_boundary_events": {
+    "DIAGNOSTIC_SELECTION": [
+      "serial",
+      "physics_tick",
+      "selected_tour_id",
+      "prior_tour_id"
+    ],
+    "DIAGNOSTIC_SPAWN": [
+      "serial",
+      "physics_tick",
+      "tour_id",
+      "spawn_id",
+      "spawn_transform",
+      "classification_at_spawn"
+    ],
+    "RESET": [
+      "serial",
+      "physics_tick",
+      "reason",
+      "from_transform",
+      "to_transform"
+    ]
+  },
+  "terminal_runtime_result_boundary": {
+    "completion_tick": "inclusive",
+    "events_after_result": "INVALID AUTHORITATIVE EVIDENCE; preserve separately and classify BLOCKED/NOT TESTABLE",
+    "order": [
+      "release input actions",
+      "disable craft and telemetry physics processing",
+      "disconnect telemetry observer",
+      "freeze event window",
+      "emit exactly one P1A_RUNTIME_RESULT",
+      "exit with PASS=0 or FAIL=1"
+    ],
+    "post_result_event_count_required": 0
+  },
+  "test_driver_liveness_event": {
+    "event": "TEST_DRIVER_LIVENESS",
+    "every_tick_rule": "required for the two powered end attempts and direct non-Hop span vector; contiguous vector ticks with no omissions",
+    "physics_write_forbidden": true,
+    "producer": "tests/p1a_runtime_runner.gd only; not gameplay telemetry",
+    "required_fields": [
+      "vector_id",
+      "vector_tick",
+      "physics_tick",
+      "craft_center_xz_m",
+      "horizontal_speed_mps",
+      "commanded_throttle",
+      "closest_path_distance_m",
+      "closest_required_window_distance_m"
+    ]
+  },
+  "test_driver_route_projection_event": {
+    "controller_authority": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V5_INERTIAL_THRUST_VECTOR_CONTAINED",
+    "fail_fast": "after the first unauthorized hard collision is observed and recorded, the vector ends with FIRST_UNAUTHORIZED_HARD_COLLISION",
+    "fields": [
+      "vector_id",
+      "vector_tick",
+      "physics_tick",
+      "route_id",
+      "chainage_m",
+      "route_lateral_distance_m",
+      "signed_lateral_error_m",
+      "horizontal_speed_mps",
+      "planned_speed_cap_mps",
+      "recovery_active",
+      "emergency_brake_active",
+      "commanded_throttle",
+      "commanded_brake",
+      "commanded_steer"
+    ],
+    "name": "TEST_DRIVER_ROUTE_PROJECTION",
+    "physics_effect": "none",
+    "producer": "test runner only",
+    "required_fields": [
+      "event",
+      "vector_id",
+      "vector_tick",
+      "physics_tick",
+      "route_id",
+      "chainage_m",
+      "route_lateral_distance_m",
+      "signed_lateral_error_m",
+      "horizontal_speed_mps",
+      "velocity_course_angle_rad",
+      "desired_route_course_angle_rad",
+      "course_error_rad",
+      "signed_curvature_per_m",
+      "requested_lateral_accel_mps2",
+      "body_lead_angle_rad",
+      "turning_throttle_floor",
+      "commanded_throttle",
+      "commanded_brake",
+      "commanded_steer",
+      "planned_speed_cap_mps",
+      "recovery_active",
+      "candidate_id"
+    ],
+    "sampling": "after each normal physics tick for V5 fast-route vectors",
+    "threshold_binding": "maximum_test_driver_path_deviation_m equals the maximum route_lateral_distance_m from these records; liveness defaults cannot satisfy it"
+  },
+  "test_overlay_authority_version": "1.2.4J",
+  "v6_fast_route_required_fields": [
+    "event",
+    "vector_id",
+    "vector_tick",
+    "physics_tick",
+    "route_id",
+    "chainage_m",
+    "route_lateral_distance_m",
+    "signed_lateral_error_m",
+    "horizontal_speed_mps",
+    "observed_speed_mps",
+    "pre_command_speed_mps",
+    "desired_speed_mps",
+    "planned_speed_cap_mps",
+    "velocity_course_angle_rad",
+    "desired_route_course_angle_rad",
+    "course_error_rad",
+    "signed_curvature_per_m",
+    "requested_lateral_accel_mps2",
+    "body_lead_angle_rad",
+    "lateral_velocity_mps",
+    "predicted_lateral_error_m",
+    "commanded_throttle",
+    "commanded_brake",
+    "commanded_steer",
+    "recovery_active",
+    "recovery_phase",
+    "slowdown_command_active",
+    "required_net_decel_mps2",
+    "maximum_authorized_longitudinal_thrust_mps2",
+    "actual_body_forward_longitudinal_component",
+    "predicted_longitudinal_accel_mps2",
+    "predicted_speed_delta_mps",
+    "observed_speed_delta_mps",
+    "slowdown_window_tick_count",
+    "slowdown_window_cumulative_speed_change_mps",
+    "slowdown_healthy",
+    "candidate_id",
+    "algorithm_id"
+  ],
+  "v7_fast_route_required_fields": [
+    "event",
+    "vector_id",
+    "vector_tick",
+    "physics_tick",
+    "route_id",
+    "chainage_m",
+    "route_lateral_distance_m",
+    "signed_lateral_error_m",
+    "lateral_velocity_mps",
+    "candidate_id",
+    "algorithm_id",
+    "desired_speed_mps",
+    "observed_speed_mps",
+    "pre_command_speed_mps",
+    "predicted_speed_delta_mps",
+    "observed_speed_delta_mps",
+    "commanded_throttle",
+    "commanded_brake",
+    "commanded_steer",
+    "recovery_phase",
+    "phase_ticks",
+    "velocity_course_angle_rad",
+    "desired_route_course_angle_rad",
+    "course_error_rad",
+    "signed_curvature_per_m",
+    "requested_lateral_accel_mps2",
+    "body_lead_angle_rad",
+    "predicted_lateral_error_m",
+    "capture_active",
+    "planned_speed_cap_mps",
+    "turn_plan_preview_m",
+    "plan_lateral_accel_budget_mps2",
+    "brake_release_hysteresis_mps",
+    "slowdown_window_tick_count",
+    "slowdown_window_cumulative_speed_change_mps",
+    "slowdown_healthy"
+  ],
+  "v7_phase_separation_invariant": "commanded_throttle and commanded_brake may not both be positive in any projection record",
+  "world_data_authority_version": "1.2.3"
+}

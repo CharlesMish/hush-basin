@@ -1,0 +1,142 @@
+{
+  "adjacent_plinth_components": {
+    "north": {
+      "component_id": "CORE_PLINTH_MASK_C03",
+      "expanded_limit_z_m": 128.95,
+      "geometry_id": "CORE_PLINTH_MASK",
+      "raw_limit_z_m": 128.0
+    },
+    "south": {
+      "component_id": "CORE_PLINTH_MASK_C07",
+      "expanded_limit_z_m": 141.05,
+      "geometry_id": "CORE_PLINTH_MASK",
+      "raw_limit_z_m": 142.0
+    }
+  },
+  "authority_version": "1.2.4D",
+  "bar_footprint_xmin_zmin_xmax_zmax_m": [
+    -0.9,
+    126.0,
+    0.9,
+    144.0
+  ],
+  "craft_center_plan_radius_m": 0.95,
+  "expanded_bar_z_interval_m": [
+    125.05,
+    144.95
+  ],
+  "invariants": [
+    "Both seam-probe centerlines are outside craft-expanded CORE_PLINTH_MASK by at least 0.30 m before HOP_BAR contact.",
+    "Both seam-probe centerlines intersect the craft-expanded HOP_BAR_01 west face at center x=-1.85 m.",
+    "The x=0 configuration-space cut is continuously covered by north plinth, HOP bar, and south plinth intervals; no 0.95 m center-space end gap exists.",
+    "Changing HOP_BAR_01 top elevation does not change any plan-space value in this artifact."
+  ],
+  "overlap_m": {
+    "north": 3.9,
+    "south": 3.9
+  },
+  "runtime_seam_probes": {
+    "north": {
+      "expected_first_hard_geometry_id": "HOP_BAR_01",
+      "forbidden_crossing_window": {
+        "id": "HOP_NORTH_SEAM_CROSSING",
+        "maximum_tangent_offset_m": 0.1,
+        "minimum_tangent_offset_m": -0.1,
+        "point_xz_m": [
+          0.0,
+          129.25
+        ],
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ],
+        "unit_tangent_xz": [
+          0.0,
+          1.0
+        ]
+      },
+      "minimum_craft_center_clearance_from_plinth_m": 0.3,
+      "minimum_raw_plinth_distance_m": 1.25,
+      "spawn_center_y_m": 1.63,
+      "spawn_xz_m": [
+        -12.0,
+        129.25
+      ],
+      "support_height_m": -0.02,
+      "target_xz_m": [
+        8.0,
+        129.25
+      ],
+      "vector_id": "RT_HOP_NO_SLIP_NORTH",
+      "z_m": 129.25
+    },
+    "south": {
+      "expected_first_hard_geometry_id": "HOP_BAR_01",
+      "forbidden_crossing_window": {
+        "id": "HOP_SOUTH_SEAM_CROSSING",
+        "maximum_tangent_offset_m": 0.1,
+        "minimum_tangent_offset_m": -0.1,
+        "point_xz_m": [
+          0.0,
+          140.75
+        ],
+        "unit_normal_xz": [
+          1.0,
+          0.0
+        ],
+        "unit_tangent_xz": [
+          0.0,
+          1.0
+        ]
+      },
+      "minimum_craft_center_clearance_from_plinth_m": 0.3,
+      "minimum_raw_plinth_distance_m": 1.25,
+      "spawn_center_y_m": 1.63,
+      "spawn_xz_m": [
+        -12.0,
+        140.75
+      ],
+      "support_height_m": -0.02,
+      "target_xz_m": [
+        8.0,
+        140.75
+      ],
+      "vector_id": "RT_HOP_NO_SLIP_SOUTH",
+      "z_m": 140.75
+    }
+  },
+  "schema": "district_zero.p1a.hop_gate_end_seals.v1",
+  "vertical_cut_proof": {
+    "covered_intervals_m": [
+      {
+        "source": "CORE_PLINTH_MASK_C03 expanded 0.95 m",
+        "z_m": [
+          115.0,
+          128.95
+        ]
+      },
+      {
+        "source": "HOP_BAR_01 expanded 0.95 m",
+        "z_m": [
+          125.05,
+          144.95
+        ]
+      },
+      {
+        "source": "CORE_PLINTH_MASK_C07 expanded 0.95 m",
+        "z_m": [
+          141.05,
+          155.0
+        ]
+      }
+    ],
+    "local_z_domain_m": [
+      115.0,
+      155.0
+    ],
+    "meaning": "No craft-center path crosses the x=0 cut through either bar end inside the local HOP-gate domain.",
+    "union_covers_domain": true,
+    "x_m": 0.0
+  },
+  "world_base_authority_version": "1.2.3"
+}

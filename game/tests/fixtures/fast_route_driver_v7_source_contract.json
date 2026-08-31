@@ -1,0 +1,55 @@
+{
+  "algorithm_id": "DZP1A_PHASE_SEPARATED_BRAKE_CAPTURE_V1",
+  "authority_version": "v1.2.4J",
+  "candidate_registry_sha256": "bbdb572eaed9ed40432652e80dd5e2efd0809b4e5de9e4c748aedb6bdfdedeb8",
+  "controller_id": "ROUTE_FOLLOWER_INPUT_CONTROLLER_V7_PHASE_SEPARATED_BRAKE_CAPTURE_CONTAINED",
+  "function_records": [
+    {
+      "byte_length": 7568,
+      "function": "_route_controller_v7_phase_separated_brake_capture_contained",
+      "sha256": "4ab25022830f8854093d0405f59e8d7dbf96e37f498fd84b17cc607eecbca857"
+    },
+    {
+      "byte_length": 1919,
+      "function": "_v7_speed_plan",
+      "sha256": "89f17b4b0c8a63494fd78046f1cf34e406ec6ac44f012ec719830a3b34d796bd"
+    },
+    {
+      "byte_length": 599,
+      "function": "_v7_plan_speed_at",
+      "sha256": "7e58de16a70296847f9755c7378d2e1b6754db05e930d95b67c30a26fc7b61f8"
+    },
+    {
+      "byte_length": 378,
+      "function": "_v7_effective_signed_curvature",
+      "sha256": "b3f7d8058d753abc18eeedbf1b03d0b06cb6ae5638272658b82bda9e183d2920"
+    },
+    {
+      "byte_length": 4573,
+      "function": "_observe_v7_route_projection",
+      "sha256": "cb44daa5c02aa558b8ef7a3247bd5fe32a90fcaa3deff3c47713b299ad341f4f"
+    },
+    {
+      "byte_length": 3395,
+      "function": "_termination_reached",
+      "sha256": "143647d4bfd618d743c7bd78033249ae44b27181fcf44109156b91031c309d1b"
+    },
+    {
+      "byte_length": 10615,
+      "function": "_validate_vector_contract",
+      "sha256": "6a4020cf9562c511c9eeab5b0a7233d6ebc2f12deb2925c2f42f041b43db6fb9"
+    }
+  ],
+  "input_only_actions": [
+    "throttle",
+    "brake",
+    "steer_left",
+    "steer_right"
+  ],
+  "phase_separation": "BRAKE_COMMIT has throttle=0 and brake=1; CAPTURE_THRUST has brake=0 and throttle>0; simultaneous throttle+brake is forbidden.",
+  "position_transform_velocity_physics_world_writes": "FORBIDDEN",
+  "runtime_runner_path": "tests/p1a_runtime_runner.gd",
+  "runtime_runner_sha256": "f6238169dfb88b3bdfe1bfc10125ff16dbbfdabbdf9653fb7e0f8793c961acaa",
+  "schema": "district_zero.p1a.v1_2_4j.fast_route_driver_v7_source_contract.v1",
+  "static_reference_sha256": "9ea06a9e455b26637cfa98356d642d201f309a948d8e74669296cd3834037d08"
+}

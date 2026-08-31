@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11161d"/>
+      <stop offset="1" stop-color="#1d252c"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#273038"/>
+      <stop offset="1" stop-color="#1b2229"/>
+    </linearGradient>
+    <linearGradient id="wake" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D8C89B" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#8FA9B3" stop-opacity="0.25"/>
+      <stop offset="0.72" stop-color="#D8C89B" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#8FA9B3" stop-opacity="0.32"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <style>
+      .title { font: 700 36px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f4f0e5; letter-spacing: 1px; }
+      .kicker { font: 700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #8FA9B3; letter-spacing: 2.2px; }
+      .h2 { font: 700 23px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f4f0e5; }
+      .h3 { font: 700 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f4f0e5; }
+      .body { font: 400 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #bbc5ca; }
+      .small { font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #96a3aa; }
+      .mono { font: 650 13px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #d8c89b; }
+      .tag { font: 700 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: 1.2px; }
+      .line { stroke: #5a6971; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="54" y="44" width="1492" height="912" rx="24" fill="none" stroke="#46545d" stroke-width="2"/>
+  <text x="86" y="86" class="kicker">DISTRICT ZERO · GAMEPLAY &amp; REWARD LAB · ITERATION 06</text>
+  <text x="86" y="132" class="title">One family first. One new axis next.</text>
+  <text x="86" y="162" class="body">Field Atlas + One Wake · presentation concepts only · no R7 or product gameplay change</text>
+
+  <!-- Paint panel -->
+  <rect x="82" y="196" width="704" height="386" rx="18" fill="url(#panel)" stroke="#46545d"/>
+  <text x="112" y="234" class="kicker">PAINT 06</text>
+  <text x="112" y="269" class="h2">FIELD ATLAS</text>
+  <text x="112" y="294" class="body">A fixed field-book finish. No route or handling effect.</text>
+
+  <!-- top-down craft abstraction -->
+  <path d="M423 264 L489 237 L555 264 L578 337 L550 461 L489 505 L428 461 L400 337 Z" fill="#191D22" stroke="#788790" stroke-width="3"/>
+  <path d="M435 290 L489 266 L543 290 L553 342 L528 379 L450 379 L425 342 Z" fill="#665043"/>
+  <path d="M436 392 L477 379 L477 468 L444 445 Z" fill="#8FA9B3"/>
+  <path d="M502 379 L542 392 L534 445 L502 468 Z" fill="#8FA9B3"/>
+  <path d="M477 379 L502 379 L502 468 L489 482 L477 468 Z" fill="#3A3141"/>
+  <path d="M425 342 L450 379 L436 392 L408 353 Z" fill="#D8C89B"/>
+  <path d="M553 342 L528 379 L542 392 L570 353 Z" fill="#D8C89B"/>
+  <rect x="466" y="305" width="46" height="50" rx="9" fill="#75675D" stroke="#d8c89b" stroke-width="2"/>
+  <path d="M473 313 L489 298 L505 313" fill="none" stroke="#8FA9B3" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="420" cy="406" r="7" fill="#27d8d0"/>
+  <circle cx="558" cy="406" r="7" fill="#27d8d0"/>
+  <text x="489" y="533" class="small" text-anchor="middle">functional cyan shown only as a preserved cue</text>
+
+  <!-- palette -->
+  <g transform="translate(112 329)">
+    <rect width="214" height="30" rx="7" fill="#191D22" stroke="#68747a"/>
+    <text x="226" y="21" class="mono">FRAME  #191D22</text>
+    <rect y="42" width="214" height="30" rx="7" fill="#665043"/>
+    <text x="226" y="63" class="mono">SHELL  #665043</text>
+    <rect y="84" width="214" height="30" rx="7" fill="#8FA9B3"/>
+    <text x="226" y="105" class="mono">LIFT   #8FA9B3</text>
+    <rect y="126" width="214" height="30" rx="7" fill="#3A3141"/>
+    <text x="226" y="147" class="mono">UNDER  #3A3141</text>
+    <rect y="168" width="214" height="30" rx="7" fill="#D8C89B"/>
+    <text x="226" y="189" class="mono">TRIM   #D8C89B</text>
+  </g>
+
+  <!-- Trail panel -->
+  <rect x="814" y="196" width="704" height="386" rx="18" fill="url(#panel)" stroke="#46545d"/>
+  <text x="844" y="234" class="kicker">TRAIL 06</text>
+  <text x="844" y="269" class="h2">ONE WAKE</text>
+  <text x="844" y="294" class="body">One narrow world-oriented tape · actual past path only</text>
+
+  <path d="M857 471 C928 515 1012 510 1074 454 C1131 402 1178 337 1288 352 C1361 362 1401 406 1454 380" stroke="#8FA9B3" stroke-opacity="0.15" stroke-width="25" fill="none" filter="url(#soft)"/>
+  <path d="M857 471 C928 515 1012 510 1074 454 C1131 402 1178 337 1288 352 C1361 362 1401 406 1454 380" stroke="url(#wake)" stroke-width="13" fill="none" stroke-linecap="round"/>
+  <path d="M857 471 C928 515 1012 510 1074 454 C1131 402 1178 337 1288 352 C1361 362 1401 406 1454 380" stroke="#D8C89B" stroke-opacity="0.55" stroke-width="2" fill="none" stroke-dasharray="22 18"/>
+  <path d="M857 473 C928 517 1012 512 1074 456 C1131 404 1178 339 1288 354 C1361 364 1401 408 1454 382" stroke="#8FA9B3" stroke-opacity="0.55" stroke-width="2" fill="none" stroke-dasharray="18 22"/>
+  <path d="M1437 355 L1480 372 L1463 415 L1420 398 Z" fill="#665043" stroke="#D8C89B" stroke-width="2"/>
+  <path d="M1445 365 L1467 374 L1459 396 L1437 388 Z" fill="#8FA9B3"/>
+
+  <g transform="translate(846 321)">
+    <text y="0" class="mono">24 samples max</text>
+    <text y="25" class="mono">48 vertices · 46 triangles</text>
+    <text y="50" class="mono">0.46 s / 15 m cap</text>
+    <text y="75" class="mono">one twist / 12 m visual history</text>
+  </g>
+  <g transform="translate(846 518)">
+    <rect width="624" height="38" rx="9" fill="#151a20" stroke="#3e4a51"/>
+    <text x="18" y="25" class="small">No branching · no prediction · no gameplay query · clear before any relocation frame</text>
+  </g>
+
+  <!-- Contract decision panel -->
+  <rect x="82" y="612" width="1436" height="306" rx="18" fill="#151b21" stroke="#46545d"/>
+  <text x="112" y="650" class="kicker">CONTENT DECISION · ONE_AXIS_CONTENT_LADDER_V1</text>
+
+  <rect x="112" y="677" width="386" height="188" rx="14" fill="#263039" stroke="#8FA9B3" stroke-width="2"/>
+  <text x="136" y="709" class="tag" fill="#8FA9B3">GATE B · SELECTED PROOF</text>
+  <text x="136" y="743" class="h3">One open-endpoint family</text>
+  <text x="136" y="775" class="body">C01  MRK → DEP</text>
+  <text x="136" y="800" class="body">C02  DEP → RLY</text>
+  <text x="136" y="825" class="body">C03  RLY → CLN</text>
+  <text x="136" y="851" class="small">shared cargo · K0 · soft completion · no route pay</text>
+
+  <path d="M498 770 L553 770" class="line"/>
+  <path d="M545 762 L553 770 L545 778" fill="none" stroke="#5a6971" stroke-width="2"/>
+  <text x="525" y="746" class="small" text-anchor="middle">after Gate-B</text>
+  <text x="525" y="795" class="small" text-anchor="middle">owner review PASS</text>
+
+  <g transform="translate(570 673)">
+    <rect width="280" height="91" rx="13" fill="#222b32" stroke="#6a7c85"/>
+    <text x="18" y="27" class="tag" fill="#D8C89B">ROUTE CONTEXT · K0</text>
+    <text x="18" y="53" class="h3">Quarry Choice</text>
+    <text x="18" y="76" class="small">QRY → RLY · X0 or A0+A1 · open</text>
+
+    <rect y="101" width="280" height="91" rx="13" fill="#222b32" stroke="#826f4d"/>
+    <text x="18" y="128" class="tag" fill="#d5b55f">TOPOLOGY · K1 PROSPECTIVE</text>
+    <text x="18" y="154" class="h3">South Handoff</text>
+    <text x="18" y="177" class="small">BLOCKED · transit observer proof required</text>
+
+    <rect x="296" width="280" height="91" rx="13" fill="#222b32" stroke="#785d70"/>
+    <text x="314" y="27" class="tag" fill="#c9a8c0">CARGO RESPONSE · K1 PROSPECTIVE</text>
+    <text x="314" y="53" class="h3">Works Fragile</text>
+    <text x="314" y="76" class="small">BLOCKED · native separation proof required</text>
+
+    <rect x="296" y="101" width="280" height="91" rx="13" fill="#171d22" stroke="#4e5a61"/>
+    <text x="314" y="128" class="tag" fill="#95a0a6">SELECTION RULE</text>
+    <text x="314" y="154" class="body">One missing signal → one challenger</text>
+    <text x="314" y="177" class="small">None → stop · multiple → director decision</text>
+  </g>
+
+  <text x="1182" y="889" class="small" text-anchor="end">REGISTERED ≠ AUTHORIZED</text>
+  <text x="1490" y="889" class="small" text-anchor="end">HUMAN WORLD GATE · NOT PERFORMED</text>
+  <text x="86" y="943" class="small">Design mockup only · Field Atlas and One Wake remain presentation-only candidates · Trail Off remains free</text>
+</svg>

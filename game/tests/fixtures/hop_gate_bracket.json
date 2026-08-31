@@ -1,0 +1,179 @@
+{
+  "authority_version": "1.2.4D",
+  "candidate_acceptance": {
+    "C1_zero_delta_required_before_full_suite": true,
+    "all_repetitions_fresh_processes": true,
+    "direct_repetitions": 3,
+    "minimum_measured_bar_overlap_vertical_clearance_m": 0.025,
+    "north_repetitions": 3,
+    "selected_offset_tie_break": [
+      "greatest minimum measured bar-overlap vertical clearance",
+      "smallest absolute timing offset",
+      "earlier timing offset"
+    ],
+    "selected_supported_hop_repetitions": 3,
+    "south_repetitions": 3,
+    "two_adjacent_supported_hop_offsets_required": true,
+    "zero_direct_crossings": true,
+    "zero_hop_bar_contacts": true
+  },
+  "candidate_grid": {
+    "candidate_count": 80,
+    "maximum_top_y_m": 1.8,
+    "minimum_claim": "lowest passing value on this preregistered 10 mm grid; no sub-grid minimum is claimed",
+    "minimum_top_y_m": 1.01,
+    "ordering": "ascending top elevation",
+    "step_m": 0.01
+  },
+  "established_lower_bound": {
+    "bar_span_crossing": {
+      "commanded_throttle": 1.0,
+      "horizontal_speed_mps": 12.2919902801514,
+      "physics_tick": 69,
+      "point_xz_m": [
+        0.0,
+        135.0
+      ]
+    },
+    "bar_top_y_m": 1.0,
+    "events_path": "evidence/v1_2_4a_isolated_hop_stop/RT_HOP_DIRECT_NON_HOP_SPAN/events.jsonl",
+    "events_raw_sha256": "c477df4f77eee08add4ce931e47bdf5d9cf9eb04d151bd9c72900a731968bfb8",
+    "evidence_result_path": "evidence/v1_2_4a_isolated_hop_stop/RT_HOP_DIRECT_NON_HOP_SPAN/result.json",
+    "hje_clear_crossing": {
+      "horizontal_speed_mps": 13.2086296081543,
+      "physics_tick": 78,
+      "point_xz_m": [
+        1.85000002384186,
+        135.0
+      ]
+    },
+    "hop_starts": 0,
+    "result_raw_sha256": "7368de53e517925c7cfa0e45d353408761d69d009419832d4c608fd86e040602",
+    "status": "FAIL — direct non-Hop crossing established"
+  },
+  "full_suite_authorization": "Only a selected candidate with all four questions green and C1 zero-delta may unlock the complete 40-vector suite. Human World Gate and P1B remain forbidden.",
+  "height_only_geometry_contract": {
+    "all_other_mesh_records_byte-logically frozen": true,
+    "base_y_m": 0.05,
+    "footprint_xmin_zmin_xmax_zmax_m": [
+      -0.9,
+      126.0,
+      0.9,
+      144.0
+    ],
+    "only_mutable_coordinates": "y of vertices 2,3,6,7 and matching top_y_m",
+    "triangle_indices_frozen": true
+  },
+  "monotonic_stop_rule": "Resume at preserved first robust direct-denial candidate HB_TOP_1240MM. Run the corrected fresh five-offset Q1 scan with event-based HJE completion. If valid support readiness is established but no two adjacent preregistered offsets pass, or the newly selected offset fails three fresh repetitions, stop NO_HEIGHT_ONLY_GEOMETRY_INTERVAL; do not test higher tops, change geometry class, or retune movement.",
+  "q1_success_horizon": {
+    "bar_east_face_x_m": 0.9,
+    "clearance_plane_x_m": 1.85,
+    "collision_window": "first normal post-spawn tick through first valid HJE completion tick, inclusive",
+    "completion_tick_inclusive": true,
+    "conservative_craft_plan_half_length_m": 0.95,
+    "landing_or_support_reacquisition_required": false,
+    "no_post_clearance_drive_requirement": true,
+    "requires": {
+      "exact_hop_started_count": 1,
+      "maximum_hard_collision_count": 0,
+      "maximum_hop_bar_collision_count": 0,
+      "minimum_bar_overlap_clearance_sample_count": 1,
+      "minimum_bar_overlap_vertical_clearance_m": 0.025,
+      "minimum_support_ready_consecutive_ticks": 12,
+      "ordered_events": [
+        "SUPPORT_READY",
+        "HOP_COMMAND",
+        "HOP_STARTED"
+      ]
+    },
+    "tangent_range_z_m": [
+      131.0,
+      139.0
+    ],
+    "termination_type": "FIRST_VALID_HOP_CLEARANCE",
+    "timeout_is_failure": true,
+    "timeout_tick": 359,
+    "window_id": "HOP_BAR_HJE_CLEAR"
+  },
+  "question_order": [
+    {
+      "claim": "ordinary powered no-Hop denial",
+      "id": "RT_HOP_DIRECT_NON_HOP_SPAN",
+      "order": 1,
+      "search_use": "run first at each ascending candidate; a valid crossing rejects that candidate"
+    },
+    {
+      "claim": "support-ready timed Hop clearance",
+      "id": "RT_HOP_SUCCESS",
+      "order": 2,
+      "pass_window": "fresh v1.2.4D: at least two adjacent offsets pass at first valid bounded HJE completion; selected offset then passes three fresh-process repetitions under the same event horizon",
+      "timing_offset_scan_m": [
+        -0.3,
+        -0.15,
+        0.0,
+        0.15,
+        0.3
+      ]
+    },
+    {
+      "claim": "north legal seam denial plus static cut proof",
+      "id": "RT_HOP_NO_SLIP_NORTH",
+      "order": 3
+    },
+    {
+      "claim": "south legal seam denial plus static cut proof",
+      "id": "RT_HOP_NO_SLIP_SOUTH",
+      "order": 4
+    }
+  ],
+  "required_godot_version": "4.7.1.stable.official.a13da4feb",
+  "run4_resume_checkpoint": {
+    "historical_q1_results_are_not_passes": true,
+    "historical_v1_2_4c_q1_classification": "TEST_DRIVER_TEST_AUTHORITY; fresh v1.2.4D run required",
+    "path": "evidence/v1_2_4d_q1_resume_checkpoint.json",
+    "preserve_Q2_pass_repetitions_at_resume_candidate": 3,
+    "preserve_source_C1_pass_maximum_delta": 0.0,
+    "rerun_Q2_at_resume_candidate_before_Q1": false,
+    "rerun_lower_candidates": false,
+    "resume_candidate_id": "HB_TOP_1240MM",
+    "resume_phase": "Q1_SUPPORTED_OFFSET_SCAN_WITH_EVENT_COMPLETION",
+    "resume_top_y_m": 1.24,
+    "skip_lower_candidate_Q2_repetitions": 69
+  },
+  "schema": "district_zero.p1a.hop_gate_bracket.v1",
+  "support_readiness_discrete_equilibrium": {
+    "algorithm_id": "DZP1A_SPREAD_DISCRETE_SUPPORT_EQUILIBRIUM_V1",
+    "controller_update_order": "gravity is applied to velocity before damped hover acceleration evaluates support-normal speed",
+    "corrected_maximum_measured_height_m": 1.35,
+    "fixed_physics_timestep_s": 0.016666666666666666,
+    "formula": "h_eq = 1.25 + 2*1*18*(1/60)/8",
+    "gravity_mps2": 18.0,
+    "hover_omega": 8.0,
+    "hover_zeta": 1.0,
+    "margin_above_equilibrium_m": 0.025,
+    "only_changed_readiness_predicate": "maximum_measured_height_m: 1.300 -> 1.350",
+    "retained_minimum_measured_height_m": 1.2,
+    "retained_predicates": {
+      "maximum_abs_support_normal_speed_mps": 0.1,
+      "maximum_fold_amount": 0.01,
+      "maximum_hop_cooldown_s": 0.0,
+      "minimum_consecutive_physics_ticks": 12,
+      "minimum_probe_hit_count": 3,
+      "minimum_support_reacquire_blend": 0.999,
+      "no_collision_or_reset_during_readiness": true
+    },
+    "spread_target_height_m": 1.25,
+    "stationary_discrete_equilibrium_m": 1.325
+  },
+  "upper_bound_derivation": {
+    "craft_vertical_radius_m": 0.58,
+    "gravity_mps2": 18.0,
+    "hop_normal_speed_mps": 6.4,
+    "meaning": "1.80 m is the last 10 mm candidate retaining at least 0.05 m nominal ballistic underside reserve; exact-engine measured clearance remains authoritative",
+    "nominal_ballistic_peak_underside_y_m": 1.857777777778,
+    "spread_target_height_m": 1.25,
+    "static_reserve_at_1_80_m": 0.057777777778,
+    "support_y_m": 0.05
+  },
+  "world_base_authority_version": "1.2.3"
+}

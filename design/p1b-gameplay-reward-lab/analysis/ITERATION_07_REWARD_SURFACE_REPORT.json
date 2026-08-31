@@ -1,0 +1,479 @@
+{
+  "P1B_product_implementation": "NOT STARTED",
+  "authority": "PURE DESIGN-LAB MODEL \u2014 NOT GODOT OR HUMAN EVIDENCE",
+  "checks": {
+    "failed": 0,
+    "passed": 112,
+    "records": [
+      {
+        "id": "decision identity is exact",
+        "status": "PASS"
+      },
+      {
+        "id": "paint review requires fourteen unique native cases",
+        "status": "PASS"
+      },
+      {
+        "id": "trail review requires ten unique native scenarios",
+        "status": "PASS"
+      },
+      {
+        "id": "complete paint evidence may become finalist",
+        "status": "PASS"
+      },
+      {
+        "id": "complete trail evidence may become finalist",
+        "status": "PASS"
+      },
+      {
+        "id": "static paint failure rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "static trail failure rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "missing paint captures cannot be finalist",
+        "status": "PASS"
+      },
+      {
+        "id": "partial trail matrix cannot be finalist",
+        "status": "PASS"
+      },
+      {
+        "id": "missing paint movement proof rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "nonzero trail movement delta rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "wall-through trail rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "missing reduced-motion trail rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "trail above median frame budget rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "trail above p95 frame budget rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "trail allocation growth rejects",
+        "status": "PASS"
+      },
+      {
+        "id": "automation cannot invent paint desirability",
+        "status": "PASS"
+      },
+      {
+        "id": "automation cannot invent trail equip desire",
+        "status": "PASS"
+      },
+      {
+        "id": "non-reward paint fails owner gate",
+        "status": "PASS"
+      },
+      {
+        "id": "unwanted trail fails owner gate",
+        "status": "PASS"
+      },
+      {
+        "id": "empty candidate ID rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "mechanical upgrade cannot enter cosmetic review",
+        "status": "PASS"
+      },
+      {
+        "id": "truthy nonboolean static result rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "nonfinite movement evidence rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "nonfinite performance evidence rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "negative performance evidence rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "boolean allocation growth rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "truthy nonboolean owner result rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "result receipt lines reconcile exactly",
+        "status": "PASS"
+      },
+      {
+        "id": "result shows already-committed C01 balance",
+        "status": "PASS"
+      },
+      {
+        "id": "C01 result shows one free issue card",
+        "status": "PASS"
+      },
+      {
+        "id": "free issue copy names zero-cost choice",
+        "status": "PASS"
+      },
+      {
+        "id": "result carries exact session prototype disclosure",
+        "status": "PASS"
+      },
+      {
+        "id": "Results opens receipt-first with Continue focused",
+        "status": "PASS"
+      },
+      {
+        "id": "cosmetic drawer never auto-opens",
+        "status": "PASS"
+      },
+      {
+        "id": "held Results input cannot open issue",
+        "status": "PASS"
+      },
+      {
+        "id": "blocked issue open cannot mutate profile",
+        "status": "PASS"
+      },
+      {
+        "id": "fresh issue action opens finish drawer",
+        "status": "PASS"
+      },
+      {
+        "id": "issue drawer begins on District Standard",
+        "status": "PASS"
+      },
+      {
+        "id": "proof paint preview is presentation-only",
+        "status": "PASS"
+      },
+      {
+        "id": "preview cannot claim equip or spend",
+        "status": "PASS"
+      },
+      {
+        "id": "preview rejects item outside cosmetic catalog",
+        "status": "PASS"
+      },
+      {
+        "id": "Keep Standard defers issue without modal",
+        "status": "PASS"
+      },
+      {
+        "id": "Keep Standard preserves entitlement and default equip",
+        "status": "PASS"
+      },
+      {
+        "id": "deferred issue card is dismissed only for current Results",
+        "status": "PASS"
+      },
+      {
+        "id": "same reward event cannot replay its ceremony",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B deferred issue remains reachable in shallow loadout",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B loadout contains defaults and exact free choice only",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B loadout has no paid or locked tease",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B drawer exposes no paid purchase action",
+        "status": "PASS"
+      },
+      {
+        "id": "blocked Gate-B purchase action cannot mutate profile",
+        "status": "PASS"
+      },
+      {
+        "id": "Results reset is consumed",
+        "status": "PASS"
+      },
+      {
+        "id": "modal reset cannot mutate R7-facing profile",
+        "status": "PASS"
+      },
+      {
+        "id": "held Continue cannot exit Results",
+        "status": "PASS"
+      },
+      {
+        "id": "fresh Continue enters neutral barrier",
+        "status": "PASS"
+      },
+      {
+        "id": "one neutral frame cannot resume",
+        "status": "PASS"
+      },
+      {
+        "id": "nonneutral sample resets release streak",
+        "status": "PASS"
+      },
+      {
+        "id": "neutral streak restarts at one",
+        "status": "PASS"
+      },
+      {
+        "id": "two neutral frames resume free roam",
+        "status": "PASS"
+      },
+      {
+        "id": "Continue changes neither profile nor receipt",
+        "status": "PASS"
+      },
+      {
+        "id": "reset returns to R7 ownership only after free roam",
+        "status": "PASS"
+      },
+      {
+        "id": "free issue claims and equips atomically",
+        "status": "PASS"
+      },
+      {
+        "id": "free issue never debits session Credits",
+        "status": "PASS"
+      },
+      {
+        "id": "claimed proof paint is owned and equipped",
+        "status": "PASS"
+      },
+      {
+        "id": "claim returns to same receipt without another card",
+        "status": "PASS"
+      },
+      {
+        "id": "claim cannot rewrite committed receipt",
+        "status": "PASS"
+      },
+      {
+        "id": "deferred issue can be claimed later from shallow loadout",
+        "status": "PASS"
+      },
+      {
+        "id": "late claim consumes one issue and equips one paint",
+        "status": "PASS"
+      },
+      {
+        "id": "Gate-B hides unchosen paint after issue claim",
+        "status": "PASS"
+      },
+      {
+        "id": "C02 reveals at most one paid paint card",
+        "status": "PASS"
+      },
+      {
+        "id": "post-gate Results may open optional loadout",
+        "status": "PASS"
+      },
+      {
+        "id": "loadout card order is stable",
+        "status": "PASS"
+      },
+      {
+        "id": "revealed paint shows exact literal Buy and Equip action",
+        "status": "PASS"
+      },
+      {
+        "id": "paid paint repeats session-loss disclosure",
+        "status": "PASS"
+      },
+      {
+        "id": "opening loadout never changes Results default action",
+        "status": "PASS"
+      },
+      {
+        "id": "fresh exact paint purchase commits once",
+        "status": "PASS"
+      },
+      {
+        "id": "paint purchase equips and reconciles balance",
+        "status": "PASS"
+      },
+      {
+        "id": "purchase cannot rewrite receipt",
+        "status": "PASS"
+      },
+      {
+        "id": "purchase replay cannot debit twice",
+        "status": "PASS"
+      },
+      {
+        "id": "altered purchase identity conflicts",
+        "status": "PASS"
+      },
+      {
+        "id": "held input cannot purchase",
+        "status": "PASS"
+      },
+      {
+        "id": "loadout closes back to same Results",
+        "status": "PASS"
+      },
+      {
+        "id": "C03 reveals at most one trail card",
+        "status": "PASS"
+      },
+      {
+        "id": "trail card shows exact literal price",
+        "status": "PASS"
+      },
+      {
+        "id": "trail purchase equips atomically",
+        "status": "PASS"
+      },
+      {
+        "id": "typical chain paint plus trail leaves seventy-five Credits",
+        "status": "PASS"
+      },
+      {
+        "id": "trail purchase leaves receipt immutable",
+        "status": "PASS"
+      },
+      {
+        "id": "Trail Off remains freely equipable",
+        "status": "PASS"
+      },
+      {
+        "id": "free equip cannot change balance",
+        "status": "PASS"
+      },
+      {
+        "id": "completion-floor chain after paint retains one hundred Credits",
+        "status": "PASS"
+      },
+      {
+        "id": "shortfall copy is exact and non-punitive",
+        "status": "PASS"
+      },
+      {
+        "id": "insufficient trail purchase is blocked",
+        "status": "PASS"
+      },
+      {
+        "id": "insufficient purchase cannot mutate profile",
+        "status": "PASS"
+      },
+      {
+        "id": "pending issue shows exactly the two frozen free choices",
+        "status": "PASS"
+      },
+      {
+        "id": "locked trail names exact clear predicate",
+        "status": "PASS"
+      },
+      {
+        "id": "stock copy excludes grade and Reputation",
+        "status": "PASS"
+      },
+      {
+        "id": "abort creates no reward card while pending issue remains separately available",
+        "status": "PASS"
+      },
+      {
+        "id": "forged result balance rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "mismatched receipt lines rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "unregistered grade label rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "nonhex receipt fingerprint rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "unregistered terminal rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "UI purchase accepts no client price",
+        "status": "PASS"
+      },
+      {
+        "id": "loadout availability accepts no grade",
+        "status": "PASS"
+      },
+      {
+        "id": "loadout availability accepts no distance",
+        "status": "PASS"
+      },
+      {
+        "id": "loadout availability accepts no route",
+        "status": "PASS"
+      },
+      {
+        "id": "report preserves Continue priority",
+        "status": "PASS"
+      },
+      {
+        "id": "report keeps Gate-B surface bounded",
+        "status": "PASS"
+      },
+      {
+        "id": "report does not authorize paid shelf",
+        "status": "PASS"
+      },
+      {
+        "id": "report records no product source modification",
+        "status": "PASS"
+      },
+      {
+        "id": "report records no Human World Gate",
+        "status": "PASS"
+      },
+      {
+        "id": "report records no P1B implementation",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS WITH NATIVE AND OWNER COSMETIC GATES REMAINING",
+    "total": 112
+  },
+  "decision": "RECEIPT_FIRST_SESSION_REWARD_SURFACE_V1",
+  "default_focus": "CONTINUE",
+  "gate_b_surface": "FREE FINISH ISSUE + SHALLOW FREE-ONLY LOADOUT \u2014 NO PAID SHOP OR TRAIL STOCK",
+  "human_world_gate": "NOT PERFORMED",
+  "movement_required_max_delta": "0.0",
+  "paint_native_case_count": 14,
+  "post_gate_surface": "CONDITIONAL EXACT CLEAR-SET LOADOUT \u2014 NOT AUTHORIZED",
+  "product_source_modified": false,
+  "results_hierarchy": [
+    "IMMUTABLE_RECEIPT",
+    "AT_MOST_ONE_REWARD_CARD",
+    "OPTIONAL_ACTIONS"
+  ],
+  "schema": "district_zero.p1b.iteration_07_reward_surface_report.v1",
+  "trail_added_frame_budget_ms": {
+    "median": "0.25",
+    "p95": "0.55"
+  },
+  "trail_native_case_count": 10
+}

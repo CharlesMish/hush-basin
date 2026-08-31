@@ -1,0 +1,256 @@
+{
+  "design_warning": "Endpoint-only contracts naturally collapse toward shortest paths. Authored route or gate conditions are needed when a contract should invite HOP, DOG, A1, A2, or X0.",
+  "destination_pair_count": 15,
+  "destination_pairs": [
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "CLN",
+      "node_sequence": [
+        "CLN",
+        "MRK",
+        "DEP"
+      ],
+      "route_ids": [
+        "L2",
+        "L1"
+      ],
+      "shortest_distance_m": 258.85969,
+      "to": "DEP"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "CLN",
+      "node_sequence": [
+        "CLN",
+        "MRK"
+      ],
+      "route_ids": [
+        "L2"
+      ],
+      "shortest_distance_m": 129.429845,
+      "to": "MRK"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "CLN",
+      "node_sequence": [
+        "CLN",
+        "MRK",
+        "DEP",
+        "GW",
+        "QRY"
+      ],
+      "route_ids": [
+        "L2",
+        "L1",
+        "L0",
+        "A0"
+      ],
+      "shortest_distance_m": 407.691472,
+      "to": "QRY"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "CLN",
+      "node_sequence": [
+        "CLN",
+        "MRK",
+        "GN",
+        "RLY"
+      ],
+      "route_ids": [
+        "L2",
+        "L5",
+        "L4"
+      ],
+      "shortest_distance_m": 377.225159,
+      "to": "RLY"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "CLN",
+      "node_sequence": [
+        "CLN",
+        "GE",
+        "WRK"
+      ],
+      "route_ids": [
+        "L3",
+        "L7"
+      ],
+      "shortest_distance_m": 194.666242,
+      "to": "WRK"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "DEP",
+      "node_sequence": [
+        "DEP",
+        "MRK"
+      ],
+      "route_ids": [
+        "L1"
+      ],
+      "shortest_distance_m": 129.429845,
+      "to": "MRK"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "DEP",
+      "node_sequence": [
+        "DEP",
+        "GW",
+        "QRY"
+      ],
+      "route_ids": [
+        "L0",
+        "A0"
+      ],
+      "shortest_distance_m": 148.831782,
+      "to": "QRY"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "DEP",
+      "node_sequence": [
+        "DEP",
+        "MRK",
+        "GN",
+        "RLY"
+      ],
+      "route_ids": [
+        "L1",
+        "L5",
+        "L4"
+      ],
+      "shortest_distance_m": 377.225159,
+      "to": "RLY"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "DEP",
+      "node_sequence": [
+        "DEP",
+        "MRK",
+        "WRK"
+      ],
+      "route_ids": [
+        "L1",
+        "L6"
+      ],
+      "shortest_distance_m": 247.500653,
+      "to": "WRK"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "MRK",
+      "node_sequence": [
+        "MRK",
+        "DEP",
+        "GW",
+        "QRY"
+      ],
+      "route_ids": [
+        "L1",
+        "L0",
+        "A0"
+      ],
+      "shortest_distance_m": 278.261627,
+      "to": "QRY"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "MRK",
+      "node_sequence": [
+        "MRK",
+        "GN",
+        "RLY"
+      ],
+      "route_ids": [
+        "L5",
+        "L4"
+      ],
+      "shortest_distance_m": 247.795314,
+      "to": "RLY"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "MRK",
+      "node_sequence": [
+        "MRK",
+        "WRK"
+      ],
+      "route_ids": [
+        "L6"
+      ],
+      "shortest_distance_m": 118.070808,
+      "to": "WRK"
+    },
+    {
+      "contains_fast_route": true,
+      "contains_hop": false,
+      "from": "QRY",
+      "node_sequence": [
+        "QRY",
+        "GW",
+        "RLY"
+      ],
+      "route_ids": [
+        "A0",
+        "A1"
+      ],
+      "shortest_distance_m": 398.37413,
+      "to": "RLY"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "QRY",
+      "node_sequence": [
+        "QRY",
+        "GW",
+        "DEP",
+        "MRK",
+        "WRK"
+      ],
+      "route_ids": [
+        "A0",
+        "L0",
+        "L1",
+        "L6"
+      ],
+      "shortest_distance_m": 396.332435,
+      "to": "WRK"
+    },
+    {
+      "contains_fast_route": false,
+      "contains_hop": false,
+      "from": "RLY",
+      "node_sequence": [
+        "RLY",
+        "GN",
+        "WRK"
+      ],
+      "route_ids": [
+        "L4",
+        "R0"
+      ],
+      "shortest_distance_m": 217.716327,
+      "to": "WRK"
+    }
+  ],
+  "method": "undirected Dijkstra; route-id lexical tie-break; frozen v1.2.3 lengths",
+  "schema": "district_zero.p1b.route_network_analysis.v1"
+}

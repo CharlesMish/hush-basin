@@ -1,0 +1,103 @@
+{
+  "base_credits": 120,
+  "results": [
+    {
+      "credits": 125,
+      "factors": {
+        "clean": 1.0,
+        "efficiency": 0.9249999999999997,
+        "flow": 1.0,
+        "integrity": 0.99,
+        "time": 0.95
+      },
+      "flow_credits": 7,
+      "grade": "S",
+      "id": "NEAR_PERFECT_FLOW",
+      "ordinary_credits": 118,
+      "ordinary_multiplier": 0.9853084168675516,
+      "quality_score": 97.32880306682753
+    },
+    {
+      "credits": 116,
+      "factors": {
+        "clean": 1.0,
+        "efficiency": 0.7499999999999996,
+        "flow": 0.25,
+        "integrity": 0.95,
+        "time": 0.85
+      },
+      "flow_credits": 2,
+      "grade": "A",
+      "id": "CLEAN_PAR",
+      "ordinary_credits": 114,
+      "ordinary_multiplier": 0.9467121431258756,
+      "quality_score": 90.31129875015917
+    },
+    {
+      "credits": 98,
+      "factors": {
+        "clean": 0.77,
+        "efficiency": 0.44999999999999984,
+        "flow": 0.15,
+        "integrity": 0.78,
+        "time": 0.55
+      },
+      "flow_credits": 1,
+      "grade": "B",
+      "id": "TYPICAL_LEARNER",
+      "ordinary_credits": 97,
+      "ordinary_multiplier": 0.8085623076912523,
+      "quality_score": 65.19314685295494
+    },
+    {
+      "credits": 76,
+      "factors": {
+        "clean": 0.54,
+        "efficiency": 0.12499999999999956,
+        "flow": 0.1,
+        "integrity": 0.42,
+        "time": 0.33999999999999997
+      },
+      "flow_credits": 1,
+      "grade": "D",
+      "id": "DAMAGED_DELIVERY",
+      "ordinary_credits": 75,
+      "ordinary_multiplier": 0.6274574511371399,
+      "quality_score": 32.26499111584361
+    },
+    {
+      "credits": 84,
+      "factors": {
+        "clean": 0.42000000000000004,
+        "efficiency": 0.0,
+        "flow": 0.2,
+        "integrity": 0.7,
+        "time": 0.23500000000000004
+      },
+      "flow_credits": 1,
+      "grade": "D",
+      "id": "RESET_RECOVERY",
+      "ordinary_credits": 83,
+      "ordinary_multiplier": 0.6925284345200359,
+      "quality_score": 44.096079003642885
+    },
+    {
+      "credits": 102,
+      "factors": {
+        "clean": 1.0,
+        "efficiency": 0.0,
+        "flow": 1.0,
+        "integrity": 0.95,
+        "time": 0.026666666666666672
+      },
+      "flow_credits": 7,
+      "grade": "C",
+      "id": "CIRCLE_FARM_HOSTILE_RECORD",
+      "ordinary_credits": 95,
+      "ordinary_multiplier": 0.7932121431258756,
+      "quality_score": 62.40220784106827
+    }
+  ],
+  "schema": "district_zero.p1b.reward_model_report.v1",
+  "status": "EXPLORATORY_NOT_PRODUCT_AUTHORITY"
+}

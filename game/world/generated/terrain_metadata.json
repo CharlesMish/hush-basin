@@ -1,0 +1,117 @@
+{
+  "authority_version": "1.2",
+  "evaluator": {
+    "bank_target": "base_height+(route_elevation-0.04*shoulder_width-base_height)*(1-smootherstep(u)); u=(distance-roadbed_half-shoulder)/bank_width",
+    "base_landform_m": "clamp(0.28*sin(2*pi*(x+40)/180)+0.22*cos(2*pi*(z-10)/160)-1.65*smootherstep(1-hypot(x+245,z-20)/72)+1.45*smootherstep(1-hypot(x,z+210)/85),-1.8,2.0)",
+    "destination_pads": {
+      "blend": "pad_y+(incoming-pad_y)*smootherstep((d-8)/5)",
+      "inner_flat_radius_m": 8.0,
+      "outer_radius_m": 13.0,
+      "overlap_tie": "lowest d/13 rounded to 1e-12; lexical destination ID",
+      "precedence": "after junctions",
+      "target": "destination node elevation"
+    },
+    "gate_visual_bands": "material-only; radial interval [aperture_radius-1.60, aperture_radius-0.35]; no collision or height change",
+    "grid_traversal": "iz=0..400; inside each row ix=0..440; x=-330+1.5*ix; z=-315+1.5*iz",
+    "hard_obstacles": "surface-class override only; physical solids consume frozen mesh arrays and heightfield is not their credited support",
+    "junctions": {
+      "blend": "node_y+(incoming-node_y)*smootherstep((d-8)/8)",
+      "inner_flat_radius_m": 8.0,
+      "outer_radius_m": 16.0,
+      "overlap_tie": "lowest d/16 rounded to 1e-12; lexical node ID",
+      "precedence": "after rough; before pads",
+      "target": "node elevation"
+    },
+    "nearest_chainage_projection": "minimum squared distance rounded to 1e-12; then lower baked segment index; then lower t rounded to 1e-15",
+    "numeric_model": "IEEE-754 binary64 until final height quantization; pi=3.141592653589793; sin/cos/hypot use the director generation environment recorded in spatial_validation.json",
+    "roadbed_target": "route elevation; zero crossfall",
+    "rough_R0": {
+      "chainage_m": [
+        32.0,
+        110.0
+      ],
+      "displacement_m": "0.32*weight*cos(2*pi*(s*cos(25deg)+n*sin(25deg))/16)",
+      "fade_each_end_m": 12.0,
+      "lateral_fade_m": 1.5,
+      "order": "after route shape; before junction and pad flattening",
+      "weight": "smootherstep((s-32)/12)*smootherstep((110-s)/12)*smootherstep((roadbed_half-abs(n))/1.5)"
+    },
+    "route_elevation": "linear interpolation from route start_elevation_m to end_elevation_m over cumulative six-decimal baked-polyline length",
+    "route_overlap_arbitration": "lowest zone rank ROADBED=0, SHOULDER=1, BANK=2; then lowest normalized zone distance rounded to 1e-12; then lexical route ID",
+    "shoulder_target": "route elevation - 0.04*(distance-roadbed_half_width)",
+    "smootherstep": "q=clamp(value,0,1); q*q*q*(q*(q*6-15)+10)"
+  },
+  "grid": {
+    "cell_diagonal": "from (ix,iz) to (ix+1,iz+1)",
+    "origin_xz_m": [
+      -330.0,
+      -315.0
+    ],
+    "row_major_order": "z index outer; x index inner; index=iz*441+ix",
+    "spacing_m": 1.5,
+    "vertex_count_x": 441,
+    "vertex_count_z": 401
+  },
+  "heightfield": {
+    "byte_length": 353682,
+    "clamp_m": [
+      -8.0,
+      10.0
+    ],
+    "encoding": "signed int16 little-endian millimetres",
+    "maximum_quantized_m": 1.6,
+    "minimum_quantized_m": -1.8,
+    "path": "world/generated/heightfield_i16le.bin",
+    "quantization_tie_rule": "nearest millimetre; exact half away from zero",
+    "quantum_m": 0.001,
+    "raw_byte_sha256": "f377a1034406ee2f35232c01f6cb80be8dd43d13267e3821d1edcab9a9735b88",
+    "sample_count": 176841
+  },
+  "schema": "district_zero.p1a.terrain_grid.v1",
+  "surface_classes": {
+    "byte_length": 176841,
+    "encoding": "one unsigned byte per height sample, same row-major index",
+    "path": "world/generated/surface_classes_u8.bin",
+    "raw_byte_sha256": "3d7466384a52bb8033e5fad5acd014a2daedec76475d5ad21ff13a94cee73949",
+    "sample_count": 176841,
+    "sample_counts": {
+      "BANK_BLEND": 2994,
+      "GATE_VISUAL_BAND_NONCOLLIDING": 82,
+      "HARD_OBSTACLE_FOOTPRINT": 84445,
+      "JUNCTION_SMOOTH": 2388,
+      "NON_PLAYABLE_BASE": 56039,
+      "PAD_SMOOTH": 1419,
+      "PLAYABLE_BASE": 4828,
+      "ROADBED_COMPACTED_SMOOTH": 3306,
+      "ROADBED_ROUGH_R2_ACTIVE": 483,
+      "ROADBED_SMOOTH_FIRM": 1291,
+      "ROADBED_SMOOTH_PAVE": 11427,
+      "SHOULDER": 8139
+    },
+    "values": {
+      "0": "NON_PLAYABLE_BASE",
+      "1": "PLAYABLE_BASE",
+      "10": "GATE_VISUAL_BAND_NONCOLLIDING",
+      "11": "HARD_OBSTACLE_FOOTPRINT",
+      "2": "ROADBED_SMOOTH_PAVE",
+      "3": "ROADBED_SMOOTH_FIRM",
+      "4": "ROADBED_COMPACTED_SMOOTH",
+      "5": "ROADBED_ROUGH_R2_ACTIVE",
+      "6": "SHOULDER",
+      "7": "BANK_BLEND",
+      "8": "JUNCTION_SMOOTH",
+      "9": "PAD_SMOOTH"
+    }
+  },
+  "surface_priority_low_to_high": [
+    "NON_PLAYABLE/PLAYABLE_BASE",
+    "BANK",
+    "SHOULDER",
+    "ROADBED",
+    "R0_ROUGH_ACTIVE",
+    "JUNCTION",
+    "PAD",
+    "GATE_VISUAL_BAND",
+    "HARD_OBSTACLE_FOOTPRINT"
+  ]
+}

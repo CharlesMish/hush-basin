@@ -1,0 +1,90 @@
+{
+  "P1B": "FROZEN",
+  "active_director_authority": "v1.2.8",
+  "historical_v1_2_7r1_run_2": {
+    "disposition": "CLOSED_TRUTHFUL_FOR_EXACT_HISTORICAL_SAMPLE_AND_CONTROL_DOMAIN",
+    "may_be_reused_for_candidate_selection": false,
+    "status": "NO_PRESENTATION_ONLY_INTERVAL"
+  },
+  "human_attempts": 0,
+  "human_world_gate": "NOT PERFORMED",
+  "later_authority_rule": "A later authority controls only fields it explicitly names. Every other inherited field remains frozen.",
+  "narrow_supersession": {
+    "v1.2.3": [
+      "world data"
+    ],
+    "v1.2.5": [
+      "capture and replay semantics"
+    ],
+    "v1.2.6": [
+      "all 21 visual check IDs and hard acceptance fields except the single gating sample coordinate if Branch A is selected",
+      "all 14 ray classifications",
+      "two-sided terrain consumer and canonical render-normal corrections"
+    ],
+    "v1.2.7": [
+      "candidate domains and quantization",
+      "82 calibration-candidate launch cap",
+      "material families",
+      "guard probes",
+      "minimum-presentation-delta and tie-break selection",
+      "hard thresholds",
+      "post-selection sequence"
+    ],
+    "v1.2.7R1": [
+      "disposable import and parse preflight",
+      "strict executed-evidence validation",
+      "safe disjoint output roots",
+      "common terminal finalization",
+      "deterministic packaging and fresh-extraction verification",
+      "prepared-session import and complete inventory"
+    ],
+    "v1.2.8": [
+      "raster ownership and material binding for A1_FAMILIARIZATION:left_outer_closure",
+      "diagnosis and sensitivity before calibration",
+      "conditional replacement of that visual sample coordinate only",
+      "conditional minimal target render-consumer binding repair only",
+      "derived outer-search branch values invalidated by a corrected sample binding"
+    ]
+  },
+  "operative_calibration_runner": "tools/run_v1_2_8_calibration.py",
+  "operative_v1_2_8_tools": "TO_BE_IMPLEMENTED_AND_VERIFIED_IN_A_NEW_WORKING_COPY; THIS AUTHORITY OVERLAY IS NOT EXECUTABLE",
+  "operative_verifier": "tools/verify_v1_2_8_successor.py",
+  "precedence": [
+    "v1.2.8 raster-ownership authority, machine contracts and sendoff for explicitly named fields only",
+    "v1.2.7R1 harness-repair authority and contract",
+    "v1.2.7 bounded-calibration authority, registry and final-evidence contract",
+    "v1.2.6 visual acceptance and ray baseline",
+    "v1.2.5 capture/replay authority",
+    "v1.2.3 world authority"
+  ],
+  "read_order": [
+    "AGENTS.md",
+    "README_FIRST.md",
+    "P1A_V1_2_8_SOURCE_AND_EVIDENCE_BINDING.json",
+    "P1A_ACTIVE_AUTHORITY_CHAIN.json",
+    "P1A_V1_2_8_RASTER_OWNERSHIP_CALIBRATION_AUTHORITY.md",
+    "tests/fixtures/v1_2_8_raster_ownership_contract.json",
+    "tests/fixtures/v1_2_8_semantic_regression_contract.json",
+    "tests/fixtures/v1_2_8_final_evidence_contract.json",
+    "bound v1.2.7R1 P1A_V1_2_7R1_HARNESS_REPAIR_AUTHORITY.md",
+    "bound v1.2.7 P1A_V1_2_7_BOUNDED_PRESENTATION_CALIBRATION_AUTHORITY.md",
+    "bound v1.2.6 tests/fixtures/v1_2_6_visual_acceptance.json",
+    "bound v1.2.6 tests/fixtures/v1_2_6_ray_classification_baseline.json",
+    "bound v1.2.5 capture/replay authority",
+    "bound v1.2.3 P1A_WORLD_AUTHORITY.md",
+    "P1A_CODEX_SENDOFF.md",
+    "STATUS.md"
+  ],
+  "schema": "district_zero.p1a.active_authority_chain.v1_2_8",
+  "selected_acceptance_fixture": "tests/fixtures/v1_2_8_visual_acceptance_selected.json",
+  "selected_sample_record": "presentation/p1a_v1_2_8_selected_sample.json",
+  "status": "READY FOR CODEX — RASTER OWNERSHIP DIAGNOSTIC THEN BOUNDED CALIBRATION",
+  "visual_acceptance": {
+    "check_count": 21,
+    "historical_derived_outer_interval_is_hard_threshold": false,
+    "obstacle_adjacent_ground_absolute_Y_min": 0.12,
+    "ray_expectations": "FROZEN",
+    "ray_pass_count": 14,
+    "shadow_on_Y_min": 0.075
+  }
+}

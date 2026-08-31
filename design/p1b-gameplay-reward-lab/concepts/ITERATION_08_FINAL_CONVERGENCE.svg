@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1218"/>
+      <stop offset="1" stop-color="#1d1a27"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#242a33"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="trailA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B7D3D0" stop-opacity="0"/>
+      <stop offset="1" stop-color="#B7D3D0" stop-opacity="0.50"/>
+    </linearGradient>
+    <linearGradient id="trailB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8EB8BA" stop-opacity="0"/>
+      <stop offset="1" stop-color="#8EB8BA" stop-opacity="0.50"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 35px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f4f1eb; letter-spacing: .4px; }
+      .kicker { font: 700 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #c7a9df; letter-spacing: 2px; }
+      .h2 { font: 700 22px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f4f1eb; }
+      .h3 { font: 700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f4f1eb; }
+      .body { font: 400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #c6cbd3; }
+      .small { font: 500 12.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #939ca8; }
+      .mono { font: 650 12.5px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #d9c7e8; }
+      .tag { font: 700 11.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="48" y="38" width="1504" height="924" rx="25" fill="none" stroke="#4e5662" stroke-width="2"/>
+  <text x="82" y="80" class="kicker">DISTRICT ZERO · P1B GAMEPLAY &amp; REWARD LAB · FINAL CONVERGENCE</text>
+  <text x="82" y="126" class="title">Three drives. One consequence. One reason to go again.</text>
+  <text x="82" y="157" class="body">Design-lab recommendation only · R7 unchanged · no product implementation, Godot runtime, or Human World Gate</text>
+
+  <rect x="78" y="190" width="570" height="360" rx="18" fill="url(#panel)" stroke="#535c68"/>
+  <text x="108" y="228" class="kicker">REFINED LEAD PAINT · DESK EVIDENCE</text>
+  <text x="108" y="263" class="h2">ORCHID STATIC R1</text>
+  <text x="108" y="289" class="body">A fixed violet finish · visual only</text>
+
+  <g transform="translate(486 283) scale(0.70)">
+    <path d="M0 44 L74 14 L148 44 L175 127 L143 258 L74 308 L5 258 L-27 127 Z" fill="#241D30" stroke="#707684" stroke-width="3"/>
+    <path d="M14 72 L74 45 L134 72 L145 132 L117 175 L31 175 L3 132 Z" fill="#5C3E73"/>
+    <path d="M16 190 L61 175 L61 268 L25 244 Z" fill="#9B68C4"/>
+    <path d="M87 175 L132 190 L123 244 L87 268 Z" fill="#9B68C4"/>
+    <path d="M61 175 L87 175 L87 268 L74 283 L61 268 Z" fill="#452F5A"/>
+    <path d="M3 132 L31 175 L16 190 L-17 145 Z" fill="#F0B5EB"/>
+    <path d="M145 132 L117 175 L132 190 L165 145 Z" fill="#F0B5EB"/>
+    <rect x="48" y="88" width="52" height="55" rx="10" fill="#714D8F" stroke="#F0B5EB" stroke-width="2"/>
+    <path d="M56 98 L74 81 L92 98" fill="none" stroke="#26d8cf" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="-1" cy="206" r="7" fill="#ffb448"/>
+    <circle cx="149" cy="206" r="7" fill="#25d7cf"/>
+  </g>
+
+  <g transform="translate(108 322)">
+    <rect width="182" height="27" rx="6" fill="#241D30" stroke="#666c77"/><text x="192" y="19" class="mono">FRAME  #241D30 · .14</text>
+    <rect y="38" width="182" height="27" rx="6" fill="#5C3E73"/><text x="192" y="57" class="mono">SHELL  #5C3E73 · .24</text>
+    <rect y="76" width="182" height="27" rx="6" fill="#9B68C4"/><text x="192" y="95" class="mono">LIFT   #9B68C4 · .38</text>
+    <rect y="114" width="182" height="27" rx="6" fill="#452F5A"/><text x="192" y="133" class="mono">UNDER  #452F5A · .20</text>
+    <rect y="152" width="182" height="27" rx="6" fill="#F0B5EB"/><text x="192" y="171" class="mono">TRIM   #F0B5EB · .52</text>
+  </g>
+  <text x="108" y="522" class="small">Native cue/readability gate and owner selection NOT PERFORMED</text>
+
+  <rect x="674" y="190" width="848" height="360" rx="18" fill="url(#panel)" stroke="#535c68"/>
+  <text x="704" y="228" class="kicker">REFINED LEAD TRAIL · OUTSIDE GATE B</text>
+  <text x="704" y="263" class="h2">TWIN VECTOR R1</text>
+  <text x="704" y="289" class="body">Two actual-past-path rails · continuous drift celebration, never route guidance</text>
+  <path d="M716 452 C805 490 890 462 973 401 C1060 338 1154 316 1272 349 C1348 370 1408 412 1472 373" fill="none" stroke="url(#trailA)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M716 478 C811 512 897 480 981 420 C1062 362 1158 341 1274 372 C1352 393 1410 433 1474 397" fill="none" stroke="url(#trailB)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M1437 350 L1488 375 L1463 425 L1412 400 Z" fill="#5C3E73" stroke="#F0B5EB" stroke-width="2"/>
+  <path d="M1448 361 L1476 375 L1461 410 L1433 396 Z" fill="#9B68C4"/>
+  <g transform="translate(704 326)">
+    <text y="0" class="mono">2 rails · 32 samples/rail · 128 vertices max</text>
+    <text y="25" class="mono">0.052 m · 0.58 s / 18 m · ≤30 Hz + 0.30 m</text>
+    <text y="50" class="mono">depth tested · behind craft · clear on every discontinuity</text>
+    <text y="75" class="mono">reduced: 12 samples/rail · 0.24 s · alpha ≤.20</text>
+  </g>
+  <rect x="704" y="495" width="788" height="36" rx="8" fill="#11161c" stroke="#454d59"/>
+  <text x="724" y="518" class="small">Gate B ships Trail Off only · native occlusion/performance/comfort/zero-delta gates remain</text>
+
+  <rect x="78" y="578" width="440" height="330" rx="18" fill="#151a21" stroke="#535c68"/>
+  <text x="108" y="616" class="kicker">THE PROOF · STOP AFTER OWNER GATE B</text>
+  <text x="108" y="651" class="h2">ONE OPEN-ENDPOINT FAMILY</text>
+  <g transform="translate(108 681)">
+    <circle cx="16" cy="15" r="13" fill="#c7a9df"/><text x="16" y="20" class="tag" fill="#17131d" text-anchor="middle">1</text>
+    <text x="44" y="20" class="h3">Market Parcel</text><text x="44" y="43" class="small">MRK → DEP · reverse L1 · 129.429845 m</text>
+    <path d="M16 34 L16 67" stroke="#515966" stroke-width="2"/>
+    <circle cx="16" cy="84" r="13" fill="#9a7db2"/><text x="16" y="89" class="tag" fill="#17131d" text-anchor="middle">2</text>
+    <text x="44" y="89" class="h3">Relay Window</text><text x="44" y="112" class="small">DEP → RLY · reverse L0 + A1 · 394.186048 m</text>
+    <path d="M16 103 L16 136" stroke="#515966" stroke-width="2"/>
+    <circle cx="16" cy="153" r="13" fill="#705885"/><text x="16" y="158" class="tag" fill="#f5f0fa" text-anchor="middle">3</text>
+    <text x="44" y="158" class="h3">Clinic Glass</text><text x="44" y="181" class="small">RLY → CLN · two legal route families</text>
+  </g>
+  <text x="108" y="875" class="small">All K0 · shared cargo · any route legal · no timeout</text>
+
+  <rect x="542" y="578" width="472" height="330" rx="18" fill="#151a21" stroke="#535c68"/>
+  <text x="572" y="616" class="kicker">REWARD SURFACE · GATE B ONLY</text>
+  <text x="572" y="651" class="h2">RECEIPT BEFORE REWARD</text>
+  <rect x="572" y="677" width="412" height="151" rx="12" fill="#232933" stroke="#a78abd"/>
+  <text x="596" y="707" class="tag" fill="#d6bfe7">DELIVERED · GRADE A</text>
+  <text x="596" y="738" class="h2">92 CREDITS</text>
+  <text x="596" y="767" class="body">DELIVERY +50 · CONDITION +32 · PACE +10</text>
+  <text x="596" y="794" class="small">SESSION PROTOTYPE · resets when app closes</text>
+  <rect x="596" y="842" width="224" height="34" rx="8" fill="#d6bfe7"/>
+  <text x="708" y="865" class="tag" fill="#1c1920" text-anchor="middle">CONTINUE AT DEP</text>
+  <text x="839" y="865" class="small">FINISHES</text>
+  <text x="572" y="895" class="small">District Standard + two native-approved paints + Trail Off</text>
+
+  <rect x="1038" y="578" width="484" height="330" rx="18" fill="#151a21" stroke="#535c68"/>
+  <text x="1068" y="616" class="kicker">CONVERGENCE · STRONGEST DESK 3 + 3</text>
+  <text x="1068" y="651" class="h3">Paint</text>
+  <text x="1068" y="679" class="body">1  Orchid Static</text><circle cx="1285" cy="674" r="9" fill="#9B68C4"/>
+  <text x="1068" y="705" class="body">2  Saltglass</text><circle cx="1285" cy="700" r="9" fill="#c9d8d1"/>
+  <text x="1068" y="731" class="body">3  Ember Relay</text><circle cx="1285" cy="726" r="9" fill="#c46e4c"/>
+  <text x="1320" y="690" class="small">Gate-B seed:</text><text x="1320" y="712" class="mono">ORCHID + SALTGLASS</text>
+  <text x="1320" y="734" class="small">not authorized until native + owner pass</text>
+  <line x1="1068" y1="755" x2="1492" y2="755" stroke="#3f4752"/>
+  <text x="1068" y="785" class="h3">Trail · research only</text>
+  <text x="1068" y="813" class="body">1  Twin Vector</text>
+  <text x="1068" y="839" class="body">2  Courier Pulse</text>
+  <text x="1068" y="865" class="body">3  Comet Ledger</text>
+  <text x="1320" y="822" class="small">No trail enters Gate B.</text>
+  <text x="1320" y="844" class="small">Shared-history failure</text>
+  <text x="1320" y="866" class="small">blocks the whole ribbon family.</text>
+
+  <text x="82" y="942" class="small">110/110 iteration-08 convergence vectors · aggregate 844/844 pure checks · wall-pressure and cadence remain native blockers</text>
+  <text x="1518" y="942" class="small" text-anchor="end">DESIGN LAB COMPLETE · P1B PASS = FALSE</text>
+</svg>

@@ -1,0 +1,159 @@
+{
+  "$id": "district_zero.p1a.human_capture_attempt_result.schema.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "attempt_index": {
+      "maximum": 5,
+      "minimum": 1,
+      "type": "integer"
+    },
+    "authority_version": {
+      "const": "v1.2.5"
+    },
+    "evidence_hashes": {
+      "additionalProperties": false,
+      "properties": {
+        "engine_log_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "input_trace_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "state_trace_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "stderr_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "stdout_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "telemetry_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input_trace_sha256",
+        "telemetry_sha256",
+        "state_trace_sha256",
+        "stdout_sha256",
+        "stderr_sha256",
+        "engine_log_sha256"
+      ],
+      "type": "object"
+    },
+    "failures": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "metrics": {
+      "additionalProperties": false,
+      "properties": {
+        "contiguous_tick_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "entered": {
+          "type": "boolean"
+        },
+        "fall_reset_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "fast_distance_m": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "genuine_distance_m": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "hard_collision_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "maximum_lateral_distance_m": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "peak_speed_mps": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "post_result_event_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "prohibited_input_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "termination_tick": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "traversed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "entered",
+        "traversed",
+        "genuine_distance_m",
+        "fast_distance_m",
+        "peak_speed_mps",
+        "maximum_lateral_distance_m",
+        "hard_collision_count",
+        "fall_reset_count",
+        "contiguous_tick_count",
+        "termination_tick",
+        "post_result_event_count",
+        "prohibited_input_count"
+      ],
+      "type": "object"
+    },
+    "route_id": {
+      "enum": [
+        "A1",
+        "A2",
+        "X0"
+      ]
+    },
+    "schema": {
+      "const": "district_zero.p1a.human_capture_attempt_result.v1"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "ABORTED",
+        "BLOCKED/NOT TESTABLE"
+      ]
+    },
+    "trace_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "authority_version",
+    "trace_id",
+    "route_id",
+    "attempt_index",
+    "status",
+    "metrics",
+    "failures",
+    "evidence_hashes"
+  ],
+  "type": "object"
+}

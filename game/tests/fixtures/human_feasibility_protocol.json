@@ -1,0 +1,184 @@
+{
+  "P1B": "FROZEN",
+  "authority_version": "v1.2.5",
+  "autonomous_controller_development": "RETIRED_AFTER_V7_FAMILY_EXHAUSTION",
+  "claim": "There exists a normal-player-input trajectory from each canonical fast-route initial state that satisfies every frozen route metric; the selected witness is reproducible by deterministic input replay.",
+  "evidence_policy": {
+    "Charlie_session": "INFORMED_DEVELOPER_DIRECTOR_FEASIBILITY_EVIDENCE",
+    "human_judgment_cannot_override_hard_metric": true,
+    "later_human_world_gate_remains_separate": true,
+    "naive_claims_forbidden": true
+  },
+  "failure_outcome": "HUMAN FEASIBILITY NOT ESTABLISHED",
+  "failure_policy": "A route without a valid capture and three passing deterministic replays stops the sequence; preserve all attempts and return for explicit director choice. It is not automatically WORLD_AUTHORITY FAIL.",
+  "familiarization": {
+    "evidence_class": "NON_EVIDENTIARY_FAMILIARIZATION",
+    "familiarization_inputs_cannot_be_selected_or_replayed_as_evidence": true,
+    "maximum_seconds_per_route": 300,
+    "may_end_early": true,
+    "must_precede_recorded_attempts_for_that_route": true,
+    "no_live_chainage_lateral_error_fast_distance_or_ideal_line_display": true,
+    "no_route_following_or_braking_assistance": true,
+    "standard_world_visuals_map_speedometer_and_controls_permitted": true
+  },
+  "implementation_gate": "No human trace is a required input. Codex must first implement, import, parse, and verify the capture/replay overlay.",
+  "input_quantization": {
+    "brake_u16": "round(clamp(value,0,1)*65535)",
+    "hop_pressed": "boolean; must remain false in eligible attempts",
+    "steer_i16": "round(clamp(steer_right-steer_left,-1,1)*32767)",
+    "throttle_u16": "round(clamp(value,0,1)*65535)",
+    "tick_order": "sample at start of physics tick; record post-physics state with the same vector_tick",
+    "transform_pressed": "boolean"
+  },
+  "not_claimed": [
+    "naive discovery",
+    "route comprehension",
+    "fun",
+    "comfort",
+    "final Human World Gate PASS",
+    "world or movement optimality"
+  ],
+  "recorded_attempts": {
+    "allowed_gameplay_inputs": [
+      "throttle",
+      "brake",
+      "steer_left",
+      "steer_right",
+      "transform"
+    ],
+    "canonical_start_each_attempt": true,
+    "fail_fast_conditions": [
+      "route_lateral_distance_m exceeds route limit + 0.000001",
+      "first non-Hop hard collision",
+      "fall or reset",
+      "prohibited input",
+      "transform not held",
+      "timeout",
+      "manual abort"
+    ],
+    "hard_metric_epsilon_m": 1e-06,
+    "manual_abort_is_recorded_failure": true,
+    "maximum_attempts_per_route": 5,
+    "no_live_metric_or_ideal_line_feedback": true,
+    "pass_conditions": [
+      "genuine requested-route ENTERED event",
+      "genuine requested-route TRAVERSED event",
+      "genuine distance threshold",
+      "fast-distance threshold",
+      "lateral maximum",
+      "zero non-Hop hard collisions",
+      "zero fall/reset",
+      "contiguous per-tick input and telemetry",
+      "no prohibited input"
+    ],
+    "prohibited_gameplay_inputs": [
+      "hop",
+      "reset",
+      "pause",
+      "debug_overlay",
+      "diagnostic_menu",
+      "diagnostic_prev",
+      "diagnostic_next",
+      "diagnostic_spawn"
+    ],
+    "recording_begins_at_first_enabled_physics_tick": true,
+    "retain_every_attempt": true,
+    "selection_rule": "FIRST_FULL_PASS_IN_ATTEMPT_ORDER",
+    "three_second_ready_countdown_with_physics_disabled": true,
+    "transform_required_each_tick": true
+  },
+  "replay": {
+    "canonical_state_trace_quantization": {
+      "chainage_m": 0.001,
+      "fast_distance_m": 0.001,
+      "fold": 1e-06,
+      "lateral_m": 0.001,
+      "position_m": 0.001,
+      "velocity_mps": 0.001,
+      "yaw_rad": 1e-06
+    },
+    "canonical_state_trace_sha256_must_match_capture": true,
+    "canonical_state_trace_sha256_source": "detached attempt/replay result and SHA256SUMS; never embedded in the hashed file",
+    "capture_state_trace_path": "state_trace.json",
+    "each_replay_must_independently_pass_route_metrics": true,
+    "event_sequence_must_match_capture": [
+      "ROUTE_STATE",
+      "COLLISION_SAMPLE",
+      "RESET",
+      "SURFACE_CLASS_CHANGED"
+    ],
+    "raw_delta_limits": {
+      "chainage_m": 0.0005,
+      "fast_distance_m": 0.0005,
+      "fold": 5e-07,
+      "lateral_m": 0.0005,
+      "position_m": 0.0005,
+      "velocity_mps": 0.0005,
+      "yaw_rad": 5e-07
+    },
+    "replay_state_trace_path": "state_trace.json",
+    "required_repetitions": 3,
+    "same_canonical_initial_state": true,
+    "same_exact_engine": true,
+    "same_input_trace_raw_bytes": true,
+    "same_project_bytes": true,
+    "termination_tick_must_match_capture": true,
+    "user_input_ignored_during_replay": true
+  },
+  "required_godot_version": "4.7.1.stable.official.a13da4feb",
+  "route_order": [
+    "A1",
+    "A2",
+    "X0"
+  ],
+  "route_specs": {
+    "A1": {
+      "familiarization_seconds": 300,
+      "fast_distance_m": 64.37284,
+      "genuine_distance_m": 190.291358,
+      "lateral_limit_m": 11.0,
+      "max_attempts": 5,
+      "maximum_duration_s": 65.644033,
+      "speed_floor_mps": 18.0,
+      "vector_id": "RT_ROUTE_A1"
+    },
+    "A2": {
+      "familiarization_seconds": 300,
+      "fast_distance_m": 88.456389,
+      "genuine_distance_m": 289.825556,
+      "lateral_limit_m": 11.0,
+      "max_attempts": 5,
+      "maximum_duration_s": 85.713658,
+      "speed_floor_mps": 18.0,
+      "vector_id": "RT_ROUTE_A2"
+    },
+    "X0": {
+      "familiarization_seconds": 300,
+      "fast_distance_m": 99.97621,
+      "genuine_distance_m": 342.304838,
+      "lateral_limit_m": 8.0,
+      "max_attempts": 5,
+      "maximum_duration_s": 95.313508,
+      "speed_floor_mps": 18.0,
+      "vector_id": "RT_ROUTE_X0"
+    }
+  },
+  "schema": "district_zero.p1a.human_feasibility_protocol.v1",
+  "sequence": [
+    "A1 familiarization",
+    "A1 recorded attempts <=5",
+    "A1 selected trace replay x3",
+    "A2 familiarization",
+    "A2 recorded attempts <=5",
+    "A2 selected trace replay x3",
+    "X0 familiarization",
+    "X0 recorded attempts <=5",
+    "X0 selected trace replay x3",
+    "C1 zero-delta with capture/replay instrumentation inactive",
+    "complete 40-vector suite using the three selected traces",
+    "authorize but do not conduct Human World Gate",
+    "stop before P1B"
+  ],
+  "serialization_contract": "tests/fixtures/human_trace_serialization_contract.json",
+  "world_data_authority_version": "v1.2.3"
+}
