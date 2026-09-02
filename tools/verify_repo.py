@@ -35,14 +35,30 @@ REQUIRED_ROOT_FILES = {
     ".gitignore",
     "AGENTS.md",
     "CONTRIBUTING.md",
+    "PLAY_RUN_V0.command",
     "README.md",
     "docs/GITHUB_SETUP.md",
     "docs/REPOSITORY_LAYOUT.md",
+    "docs/RUN_V0.md",
     "docs/SOURCE_PROVENANCE.json",
     "docs/SOURCE_PROVENANCE.md",
     "tools/launch.py",
     "tools/verify_repo.py",
 }
+
+RUN_V0_GAME_OVERLAY_FILES = frozenset(
+    {
+        "game/scenes/district_zero_run.tscn",
+        "game/scripts/run/brrr_seed.gd",
+        "game/scripts/run/brrr_seed.gd.uid",
+        "game/scripts/run/run_director.gd",
+        "game/scripts/run/run_director.gd.uid",
+        "game/scripts/run/run_hud.gd",
+        "game/scripts/run/run_hud.gd.uid",
+        "game/scripts/run/run_map_overlay.gd",
+        "game/scripts/run/run_map_overlay.gd.uid",
+    }
+)
 
 IGNORED_UNTRACKED_GAME_FILES = {
     "tests/p1a_vehicle_r7_pose_probe.gd.uid",
@@ -225,17 +241,32 @@ def main() -> int:
     tracked = tracked_paths()
     repository_files = tracked if tracked is not None else substantive_files_without_git()
     repository_set = set(repository_files)
-    expected_game = {f"game/{relative}" for relative in manifest}
-    expected_game.add("game/VEHICLE_R7_SHA256SUMS.txt")
+    if tracked is not None:
+        for relative in sorted(REQUIRED_ROOT_FILES):
+            if relative not in repository_set:
+                errors.append(f"required repository file is not tracked: {relative}")
+    expected_r7_game = {f"game/{relative}" for relative in manifest}
+    expected_r7_game.add("game/VEHICLE_R7_SHA256SUMS.txt")
+    permitted_game = expected_r7_game | RUN_V0_GAME_OVERLAY_FILES
     actual_game = {relative for relative in repository_set if relative.startswith("game/")}
-    unexpected_game = sorted(actual_game - expected_game)
-    missing_game = sorted(expected_game - actual_game)
+    unexpected_game = sorted(actual_game - permitted_game)
+    missing_game = sorted(expected_r7_game - actual_game)
     for relative in unexpected_game:
         short = relative.removeprefix("game/")
         if tracked is not None or short not in IGNORED_UNTRACKED_GAME_FILES:
             errors.append(f"unexpected tracked game file: {relative}")
     for relative in missing_game:
         errors.append(f"manifest source is not tracked/present: {relative}")
+
+    verified_run_overlay = 0
+    for relative in sorted(RUN_V0_GAME_OVERLAY_FILES):
+        if relative not in repository_set:
+            errors.append(f"Run v0 overlay is not tracked/present: {relative}")
+            continue
+        if not (ROOT / relative).is_file():
+            errors.append(f"Run v0 overlay file is missing: {relative}")
+            continue
+        verified_run_overlay += 1
 
     for relative in repository_files:
         if is_forbidden_tracked_path(relative):
@@ -291,6 +322,7 @@ def main() -> int:
 
     if os.name != "nt":
         for relative in (
+            "PLAY_RUN_V0.command",
             "tools/launch.py",
             "tools/verify_repo.py",
             "game/PLAY_DISTRICT_ZERO_VEHICLE_R7.command",
@@ -321,6 +353,10 @@ def main() -> int:
     print("PASS: District Zero repository source is GitHub-ready")
     print(f"R7 inventory: {verified_records}/{EXPECTED_MANIFEST_RECORDS} PASS")
     print(f"R7 manifest SHA-256: {manifest_sha}")
+    print(
+        f"Run v0 overlay: {verified_run_overlay}/"
+        f"{len(RUN_V0_GAME_OVERLAY_FILES)} exact paths PASS"
+    )
     print(f"P1B design lab: {design_count}/{EXPECTED_DESIGN_FILES} files PASS")
     print(f"P1B design tree SHA-256: {design_sha}")
     print(f"Repository scan mode: {mode}")
