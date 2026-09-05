@@ -1,0 +1,9 @@
+{
+  "artifacts": {
+    "world_polish_v1.json": "e47957b4f462f5c3e4edef0f9810b9e37b703608256af6fc75365d8a57d505f7",
+    "world_polish_v1_height.bin": "a00db0c6f9132c69c6d8858b461cc3886ec8ecec950b256a4ee98a996770dc53",
+    "world_polish_v1_surface.bin": "84bf1ec63a5c2f18b64ba02a218df5db6ceb58cfc30b73fe7d88b5f6b0c0388a"
+  },
+  "config_sha256": "e0961aca85c2a44d0a96e0f49bd41f9fc38da5123b9d9f0487d55361d2d0991f",
+  "version": "world-polish-v1"
+}

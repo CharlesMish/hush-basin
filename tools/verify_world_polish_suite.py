@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Complete World Polish verification. Use a new evidence directory per run."""
+from pathlib import Path
+import argparse
+import hashlib
+import json
+import re
+import statistics
+import subprocess
+import sys
+from launch import resolve_engine
+
+ROOT=Path(__file__).resolve().parents[1]
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--evidence',required=True,type=Path);p.add_argument('--native',action='store_true');args=p.parse_args()
+    evidence=args.evidence.resolve();evidence.mkdir(parents=True,exist_ok=False)
+    engine,version=resolve_engine(None);records=[]
+    def run(name,cmd,expected=None):
+        print(name,flush=True)
+        r=subprocess.run(cmd,cwd=ROOT,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=600)
+        (evidence/(name+'.stdout')).write_text(r.stdout)
+        ok=r.returncode==0 and not re.search(r'SCRIPT ERROR:|Parse Error:|Failed to load script',r.stdout)
+        if expected is not None:ok=ok and expected in r.stdout
+        records.append({'name':name,'argv':[str(v) for v in cmd],'cwd':str(ROOT),'returncode':r.returncode,'pass':ok})
+        print(('PASS ' if ok else 'FAIL ')+name,flush=True)
+        return ok
+    def godot(name,script,tail,headless=True):
+        cmd=[str(engine)]
+        if headless:cmd+=['--headless']
+        else:cmd+=['--resolution','1280x720','--disable-vsync']
+        cmd+=['--path',str(ROOT/'game'),'--script',script,'--log-file',str(evidence/(name+'.log')),'--',*tail]
+        return run(name,cmd)
+    run('static',[sys.executable,'tools/verify_world_polish.py','--regenerate','--result',str(evidence/'static.json')])
+    run('import',[str(engine),'--headless','--editor','--path',str(ROOT/'game'),'--import','--quit','--log-file',str(evidence/'import.log')])
+    run('parse',[str(engine),'--headless','--editor','--path',str(ROOT/'game'),'--quit-after','2','--log-file',str(evidence/'parse.log')])
+    godot('c1','res://tests/world_polish_c1.gd',['--output',str(evidence/'c1.jsonl')])
+    expected=json.loads((ROOT/'docs/world_polish_baseline.json').read_text())
+    c1=evidence/'c1.jsonl';match=c1.exists() and hashlib.sha256(c1.read_bytes()).hexdigest()==expected['synchronized_c1_trace_sha256']
+    records.append({'name':'c1_exact_1260_tick_comparison','pass':match})
+    godot('vehicle','res://tools/validate_vehicle_r7.gd',[])
+    godot('run_v0','res://tests/run_v0_probe.gd',['--result',str(evidence/'run_v0.json')])
+    godot('paused_retry','res://tests/paused_retry_addendum.gd',['--result',str(evidence/'paused_retry.json')])
+    godot('runtime','res://tests/world_polish_runtime.gd',['--result',str(evidence/'runtime.json')],not args.native)
+    for name in ['static','run_v0','paused_retry','runtime']:
+        result=evidence/(name+'.json')
+        records.append({'name':name+'_result','pass':result.exists() and json.loads(result.read_text()).get('status')=='PASS'})
+    if args.native:
+        godot('survey','res://tests/world_polish_survey.gd',['--output',str(evidence/'survey')],False)
+        after_path=evidence/'survey/survey.json'
+        if after_path.exists():
+            before=expected['baseline_survey']['records'];after=json.loads(after_path.read_text())['records']
+            b=statistics.median(v['p95_ms'] for v in before);a=statistics.median(v['p95_ms'] for v in after)
+            perf={'baseline_median_view_p95_ms':b,'successor_median_view_p95_ms':a,'ratio':a/b,'pass':a<=b*1.10,'scope':'Median of 25 matched static native views; desktop/compositor wall-clock sampling, not an uncapped GPU benchmark.','per_view':[{'id':v['id'],'before_ms':before[i]['p95_ms'],'after_ms':v['p95_ms']} for i,v in enumerate(after)]}
+            (evidence/'performance.json').write_text(json.dumps(perf,indent=2)+'\n')
+            records.append({'name':'native_performance_target','pass':perf['pass']})
+        else:records.append({'name':'native_survey_result','pass':False})
+    success=all(r['pass'] for r in records)
+    result={'status':'PASS' if success else 'FAIL','engine':version,'native':args.native,'records':records}
+    (evidence/'suite.json').write_text(json.dumps(result,indent=2)+'\n')
+    print(result['status'],flush=True)
+    return 0 if success else 1
+
+if __name__=='__main__':sys.exit(main())

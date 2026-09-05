@@ -1,7 +1,7 @@
 class_name P1AWorldData
 extends RefCounted
 
-const AUTHORITY_VERSION := "1.2.3"
+const AUTHORITY_VERSION := "world-polish-v1"
 const MANIFEST_PATH := "res://world/p1a_world_manifest.json"
 const ROUTES_PATH := "res://world/generated/route_bake.json"
 const GEOMETRY_PATH := "res://world/generated/geometry_polygons.json"
@@ -29,6 +29,8 @@ var terrain_meta: Dictionary
 var diagnostic: Dictionary
 var height_bytes: PackedByteArray
 var surface_bytes: PackedByteArray
+var polish: Dictionary = {}
+var polish_config: Dictionary = {}
 
 
 func load_all() -> bool:
@@ -52,7 +54,38 @@ func load_all() -> bool:
 	if height_bytes.size() != expected_samples * 2 or surface_bytes.size() != expected_samples:
 		push_error("P1A terrain byte count does not match metadata")
 		return false
+	var folder := "res://world/generated/"
+	var index := _load_json(folder + "world_polish_v1_index.json")
+	if index.get("version", "") != AUTHORITY_VERSION:
+		push_error("World Polish v1 index is missing or incompatible")
+		return false
+	if FileAccess.get_sha256("res://world/world_polish_v1.json") != index.config_sha256:
+		push_error("World Polish authoring configuration differs from its generated data")
+		return false
+	for artifact in index.artifacts:
+		if FileAccess.get_sha256(folder + artifact) != index.artifacts[artifact]:
+			push_error("World Polish artifact identity mismatch: " + artifact)
+			return false
+	polish = _load_json(folder + "world_polish_v1.json")
+	polish_config = _load_json("res://world/world_polish_v1.json")
+	for id in polish.meshes:
+		solids[id] = polish.meshes[id]
+	height_bytes = FileAccess.get_file_as_bytes(folder + "world_polish_v1_height.bin")
+	surface_bytes = FileAccess.get_file_as_bytes(folder + "world_polish_v1_surface.bin")
+	if height_bytes.size() != expected_samples * 2 or surface_bytes.size() != expected_samples:
+		push_error("World Polish terrain size mismatch")
+		return false
 	return true
+
+
+func yard_at(point: Vector2) -> String:
+	for protection in polish.get("protection", []):
+		if _ring_contains(protection.polygon, point):
+			return ""
+	for yard in polish.get("yards", []):
+		if _ring_contains(yard.polygon, point):
+			return String(yard.id)
+	return ""
 
 
 func height_at_index(index: int) -> float:
@@ -82,6 +115,11 @@ func terrain_height_at(world_x: float, world_z: float) -> float:
 
 
 func geometry_contains(geometry_id: String, point: Vector2) -> bool:
+	if geometry_id in ["CORE_PLINTH_MASK", "CORE_WALL", "OUTER_CLOSURE_MASK", "PLAYABLE_MASK", "WALKABLE_GROUND", "CRAFT_CENTER_SPACE"] and not yard_at(point).is_empty():
+		if geometry_id in ["CORE_PLINTH_MASK", "CORE_WALL", "OUTER_CLOSURE_MASK"]:
+			return false
+		if geometry_id in ["PLAYABLE_MASK", "WALKABLE_GROUND", "CRAFT_CENTER_SPACE"]:
+			return true
 	var geometry: Dictionary = geometries.get(geometry_id, {})
 	for component_value in geometry.get("components", []):
 		var component: Dictionary = component_value

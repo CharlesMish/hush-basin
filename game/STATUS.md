@@ -1,5 +1,8 @@
 # District Zero P1A status — vehicle integration R7
 
+Historical R7 baseline record. Current Quiet Surfaces v1 status is ../STATUS.md;
+its World Polish v1 geometry does not inherit these historical world gates.
+
 **Outcome:** `AUTOMATION PASS — VEHICLE INTEGRATION R7 READY FOR OWNER REVIEW`
 
 **This is not:** `P1A PASS` or Human World Gate authorization.

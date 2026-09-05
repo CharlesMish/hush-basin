@@ -1,0 +1,28 @@
+{
+  "version": "working-neighborhood-v1",
+  "modules": {"lower_fraction": 0.72, "upper_width_fraction": 0.78, "upper_depth_fraction": 0.76, "window_width_m": 1.65, "window_height_m": 1.55, "window_pitch_m": 3.2, "floor_pitch_m": 3.1, "trim_m": 0.16, "awning_depth_m": 1.0, "max_cosmetic_depth_m": 0.18, "roughness": 0.82, "window_emission": 0.35},
+  "palette": {"stone": [0.48,0.42,0.32], "brick": [0.40,0.29,0.21], "plaster": [0.65,0.59,0.46], "clinic": [0.69,0.68,0.58], "steel": [0.13,0.19,0.20], "frame": [0.30,0.34,0.32], "glass": [0.10,0.20,0.23], "trim": [0.63,0.58,0.45], "teal": [0.12,0.39,0.35], "amber": [0.64,0.39,0.14], "warm": [0.70,0.53,0.29], "stain": [0.29,0.27,0.20], "repair": [0.48,0.48,0.40], "letter": [0.85,0.82,0.67]},
+  "compound_door_width_m": 2.0,
+  "compound_frontages": [
+    {"node":"CLN","owner":"CLN_TOWER","title":"CLINIC"},
+    {"node":"DEP","owner":"DEP_TWIN_A","title":"BAY 01"},
+    {"node":"DEP","owner":"DEP_TWIN_B","title":"BAY 02"}
+  ],
+  "buildings": [
+    {"id":"B01","use":"workshop","name":"BASIN REPAIR","front":"S","material":"brick","window_pitch_m":4.2,"wear":[-0.36,0.28]},
+    {"id":"B02","use":"utility","name":"RELAY SERVICE","front":"W","material":"stone","window_pitch_m":4.0,"wear":[0.30]},
+    {"id":"B03","use":"storage","name":"WORKS STORES","front":"N","material":"stone","window_pitch_m":5.0,"wear":[-0.35,0.22]},
+    {"id":"B04","use":"office","name":"WORKS OFFICE","front":"W","material":"plaster","window_pitch_m":3.0,"wear":[0.31]},
+    {"id":"B05","use":"workshop","name":"PUMP HOUSE","front":"W","material":"brick","window_pitch_m":4.0,"wear":[-0.30,0.25]},
+    {"id":"B06","use":"utility","name":"VENTILATION","front":"S","material":"stone","window_pitch_m":3.5,"wear":[-0.31]},
+    {"id":"B07","use":"workshop","name":"EAST WORKSHOP","front":"W","material":"brick","window_pitch_m":4.2,"wear":[-0.35,0.30]},
+    {"id":"B08","use":"utility","name":"WATER OFFICE","front":"W","material":"plaster","window_pitch_m":3.2,"wear":[0.29]},
+    {"id":"B09","use":"market","name":"PANTRY & GOODS","front":"N","material":"plaster","window_pitch_m":2.8,"wear":[0.32]},
+    {"id":"B10","use":"market","name":"BASIN MARKET","front":"N","material":"brick","window_pitch_m":3.0,"wear":[-0.32]},
+    {"id":"B11","use":"market","name":"TEA & REPAIRS","front":"N","material":"plaster","window_pitch_m":2.8,"wear":[0.33]},
+    {"id":"B12","use":"depot","name":"DEPOT FREIGHT","front":"N","material":"stone","window_pitch_m":4.2,"wear":[-0.34,0.25]},
+    {"id":"B13","use":"clinic","name":"CLINIC SERVICES","front":"N","material":"clinic","window_pitch_m":2.8,"wear":[0.34]},
+    {"id":"B14","use":"gate","name":"SOUTH GATE","front":"N","material":"brick","window_pitch_m":3.0,"wear":[-0.30]}
+  ],
+  "landmarks": {"QUARRY_STEPS":{"name":"QUARRY","material":"stone"}, "RELAY_MAST":{"name":"RELAY","material":"steel"}, "DEPOT_TWINS":{"name":"DEPOT","material":"brick"}, "MARKET_CANOPY":{"name":"MARKET","material":"teal"}, "CLINIC_TOWER":{"name":"CLINIC","material":"clinic"}, "WORKS_STACKS":{"name":"WORKS","material":"steel"}}
+}

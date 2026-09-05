@@ -152,6 +152,9 @@ func classify(point: Vector2) -> String:
 	var route := _winning_route(point, 0.0, false)
 	if not route.is_empty():
 		return "ROUTE_%s" % route
+	var yard := data.yard_at(point)
+	if not yard.is_empty():
+		return "YARD_%s" % yard
 	return "BASE"
 
 

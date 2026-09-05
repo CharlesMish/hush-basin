@@ -1,5 +1,15 @@
 # Agent Instructions — District Zero Git Repository
 
+Current authority: QUIET_SURFACES_V1_AUTHORITY.md for the approved surface pass.
+Previous authority: NEIGHBORHOOD_V1_AUTHORITY.md for the architecture pass.
+
+Previous authority: WARM_OVERCAST_V1_AUTHORITY.md. The approved weather plan
+supersedes the named historical presentation freezes and two carryover checks.
+
+This is the isolated World Polish v1 successor. Read WORLD_POLISH_V1_AUTHORITY.md
+first; the owner's approved plan supersedes the historical freezes below for
+the fields it names. Verify using tools/verify_world_polish.py.
+
 Read this file before changing the repository. Read the nearest nested
 `AGENTS.md` before changing anything under its directory.
 

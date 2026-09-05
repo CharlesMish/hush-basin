@@ -368,4 +368,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    # This isolated successor has explicit world/presentation changes. The
+    # unchanged original verifier is retained as verify_r7_snapshot.py.
+    from verify_quiet_surfaces import main as successor_main
+    raise SystemExit(successor_main())

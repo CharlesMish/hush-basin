@@ -1,8 +1,8 @@
 class_name P1AWorldGate
 extends Node3D
 
-const BUILD_LABEL := "DISTRICT ZERO · P1A VEHICLE R7 · WORLD v1.2.3"
-const DIAGNOSTIC_LABEL := "P1A VEHICLE INTEGRATION R7 · OWNER REVIEW"
+const BUILD_LABEL := "DISTRICT ZERO · QUIET SURFACES v1"
+const DIAGNOSTIC_LABEL := "QUIET SURFACES · LIGHT DRIZZLE · OWNER REVIEW"
 
 @onready var craft: CraftController = $Craft
 @onready var camera_rig: StableCameraRig = $CameraRig
@@ -31,6 +31,12 @@ func _ready() -> void:
 		get_tree().quit(2)
 		return
 	world.build(data)
+	preload("res://scripts/world_polish_presentation.gd").new().environment(self, data)
+	preload("res://scripts/overcast_resources.gd").environment(self)
+	var weather := preload("res://scripts/overcast_weather.gd").new()
+	weather.name = "WarmOvercastWeather"
+	add_child(weather)
+	weather.configure(self)
 	world.exclude_hard_geometry_from_support(craft)
 	telemetry.configure(data, craft)
 	map.configure(data, craft)
@@ -39,6 +45,7 @@ func _ready() -> void:
 	menu_panel.visible = false
 	debug_panel.visible = false
 	pause_panel.visible = false
+	(diagnostic_identity_panel.get_node("Label") as Label).text = DIAGNOSTIC_LABEL
 	_update_menu()
 	_update_status()
 	print("P1A_RUNTIME_READY authority=%s routes=%d solids=%d" % [P1AWorldData.AUTHORITY_VERSION, data.routes.size(), data.solids.size()])

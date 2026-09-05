@@ -1,0 +1,7 @@
+{
+  "version": "warm-overcast-v1",
+  "sky": {"width":1024,"height":512,"seed":17041,"frequency":2.4,"octaves":4,"cloud_dark":[0.28,0.34,0.40],"cloud_light":[0.57,0.61,0.63],"horizon":[0.74,0.73,0.66],"ground":[0.31,0.28,0.23],"coverage":0.70,"horizon_fade":0.14},
+  "lighting": {"sun_energy":0.62,"sun_color":[1.0,0.91,0.77],"ambient_energy":0.88,"ambient_color":[0.73,0.78,0.82],"shadow_opacity":0.32,"sun_angular_distance":2.0},
+  "damp": {"paved_classes":[2,3,4,8,9],"paving_value":0.93,"paving_roughness":0.57,"mineral_roughness":0.87,"concrete_roughness":0.78,"steel_roughness":0.58},
+  "rain": {"amount":384,"seed":731,"footprint_m":48.0,"height_above_camera_m":10.0,"lifetime_s":1.7,"fall_speed_min":9.0,"fall_speed_max":11.0,"wind_direction":[0.035,-1.0,0.012],"streak_width_m":0.018,"streak_length_m":0.16,"color":[0.77,0.83,0.85,0.28],"heightfield_size":[664,120,604],"heightfield_center":[0,45,-15],"heightfield_resolution":3}
+}

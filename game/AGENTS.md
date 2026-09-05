@@ -1,5 +1,13 @@
 # Agent Instructions — District Zero P1A v1.2.8
 
+Current authority: ../QUIET_SURFACES_V1_AUTHORITY.md. Read it first.
+Previous authority: ../NEIGHBORHOOD_V1_AUTHORITY.md.
+Previous authority: ../WARM_OVERCAST_V1_AUTHORITY.md.
+
+Current successor authority: ../WORLD_POLISH_V1_AUTHORITY.md. The owner's
+World Polish v1 plan supersedes the named historical world/presentation freezes.
+The documents below remain provenance for the preserved R7 baseline.
+
 Read `P1A_POST_V1_2_8_VEHICLE_INTEGRATION_R7_AUTHORITY.md` first. It narrowly
 supersedes R6 only for replacing the primitive craft presentation subtree with
 the verified Babylon-transfer native Godot visual rig and for the smallest

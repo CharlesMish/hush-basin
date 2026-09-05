@@ -17,19 +17,14 @@ func configure(destination_xz: Vector2, destination_label: String) -> void:
 	queue_redraw()
 
 
+func marker_position() -> Vector2:
+	return P1AMap.project_world(_destination_xz, size)
+
+
 func _draw() -> void:
 	if size.x <= 0.0 or size.y <= 0.0:
 		return
-	var margin := 12.0
-	var usable := size - Vector2.ONE * margin * 2.0
-	var normalized := (
-		(_destination_xz - P1AMap.WORLD_MIN)
-		/ (P1AMap.WORLD_MAX - P1AMap.WORLD_MIN)
-	)
-	var marker := Vector2(
-		margin + normalized.x * usable.x,
-		margin + (1.0 - normalized.y) * usable.y
-	)
+	var marker := marker_position()
 	draw_circle(marker, 8.0, Color(1.0, 0.68, 0.18, 0.18))
 	draw_arc(marker, 8.0, 0.0, TAU, 32, Color(1.0, 0.68, 0.18, 0.98), 2.0, true)
 	draw_circle(marker, 2.5, Color(1.0, 0.82, 0.38, 1.0))

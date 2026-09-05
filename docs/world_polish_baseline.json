@@ -1,0 +1,384 @@
+{
+  "commit": "3b245da432b5a20a1606b3a9b2d9559ba409db39",
+  "run_files": {
+    "game/scripts/run/run_director.gd": "ec0e8e3904eb7cc8b27d9d2d7ffc45d9725f28043ece2823303513ac4980072b",
+    "game/scripts/run/run_hud.gd": "efcb5f18c11441d502e0619f2305227b3f8cde14b196460243d8de510e7f4960",
+    "game/scripts/run/run_map_overlay.gd": "7a6b384c51133d8a24597dc7c907fb77b2a34ccffe6646000f1b790bc0026517",
+    "game/scripts/run/brrr_seed.gd": "57b4cb8f53d108dd03923ccfcb4492f3a4597a1433a8f0187e486ed0e9e193af",
+    "game/scenes/district_zero_run.tscn": "628929dd68bec4bb19f02766e2c8f00a9617285f32444e411c7845bd81e8821b"
+  },
+  "c1_trace_sha256": "d79097038845d84923b24ecc0f4294d2b40f3a9483a22ce1d2d9254a8e886478",
+  "baseline_survey": {
+    "engine": {
+      "build": "official",
+      "hash": "a13da4feb8d8aefc283c3763d33a2f170a18d541",
+      "hex": 263937,
+      "major": 4,
+      "minor": 7,
+      "patch": 1,
+      "status": "stable",
+      "string": "4.7.1-stable (official)",
+      "timestamp": 0
+    },
+    "note": "Static registered/player and evidence overview cameras; not human traversal. Uncapped matched static-view wall-clock frame timings.",
+    "records": [
+      {
+        "camera": [
+          -7.76739358901978,
+          6.45000028610229,
+          16.5478115081787
+        ],
+        "draw_calls": 110.0,
+        "id": "T00_NEUTRAL_ROAM",
+        "image": "T00_NEUTRAL_ROAM.png",
+        "p50_ms": 16.655,
+        "p95_ms": 18.35,
+        "primitives": 2063184.0,
+        "sha256": "a92cfe1fab0767ad0e28f32fb186aee79fe8787b9aafd95329af66373eabc745"
+      },
+      {
+        "camera": [
+          -243.521575927734,
+          4.86550617218018,
+          20.2534580230713
+        ],
+        "draw_calls": 117.0,
+        "id": "T01_WEST_GATE",
+        "image": "T01_WEST_GATE.png",
+        "p50_ms": 16.681,
+        "p95_ms": 17.951,
+        "primitives": 2042636.0,
+        "sha256": "3848a53bf4a58ac34e0c4c76c4b53183451d29ab70619f75113390d8a8f2815a"
+      },
+      {
+        "camera": [
+          -169.704864501953,
+          6.4267430305481,
+          28.5067043304443
+        ],
+        "draw_calls": 154.0,
+        "id": "T02_WEST_SWEEP",
+        "image": "T02_WEST_SWEEP.png",
+        "p50_ms": 16.662,
+        "p95_ms": 16.996,
+        "primitives": 2068036.0,
+        "sha256": "530390136000d02a33e4803365ad4b715812eb83c015b231e3dbc57e3a5160bc"
+      },
+      {
+        "camera": [
+          6.22587013244629,
+          7.99404907226562,
+          -211.867752075195
+        ],
+        "draw_calls": 134.0,
+        "id": "T03_EAST_SWEEP",
+        "image": "T03_EAST_SWEEP.png",
+        "p50_ms": 16.652,
+        "p95_ms": 16.968,
+        "primitives": 2071472.0,
+        "sha256": "b63303f1e0f9bdb1074e21e542b505b986eba7a7d236e6acde9d538a8de60ef4"
+      },
+      {
+        "camera": [
+          -247.906875610352,
+          4.94221925735474,
+          14.1862182617188
+        ],
+        "draw_calls": 96.0,
+        "id": "T04_QUARRY_SHELF",
+        "image": "T04_QUARRY_SHELF.png",
+        "p50_ms": 16.651,
+        "p95_ms": 17.158,
+        "primitives": 1967948.0,
+        "sha256": "6588792652f9437dcc3b25df6b559996c09a0caacceef4b66498bbd42ac64f8b"
+      },
+      {
+        "camera": [
+          -172.733032226562,
+          6.35000038146973,
+          32.8135528564453
+        ],
+        "draw_calls": 125.0,
+        "id": "T05_MARKET_LOOP",
+        "image": "T05_MARKET_LOOP.png",
+        "p50_ms": 16.647,
+        "p95_ms": 17.083,
+        "primitives": 2064104.0,
+        "sha256": "ff9d9cfce07367eb16e37e7d292c3a844ee736d32608e01e7128b99ea3ae3f5e"
+      },
+      {
+        "camera": [
+          2.76965170087351e-06,
+          8.05000019073486,
+          -213.5
+        ],
+        "draw_calls": 135.0,
+        "id": "T06_RELAY_LINK",
+        "image": "T06_RELAY_LINK.png",
+        "p50_ms": 16.647,
+        "p95_ms": 17.634,
+        "primitives": 2047616.0,
+        "sha256": "4974293369236897bc3f1a9d0b757a3845a4e71dfc79ec33ff53be05506c0136"
+      },
+      {
+        "camera": [
+          -3.5,
+          7.25,
+          -130.0
+        ],
+        "draw_calls": 125.0,
+        "id": "T07_WORKS_LINK",
+        "image": "T07_WORKS_LINK.png",
+        "p50_ms": 16.647,
+        "p95_ms": 17.036,
+        "primitives": 2068528.0,
+        "sha256": "37026e164885efaba1aa7e974125388cb5238891b4bd2db913232631fe482dc4"
+      },
+      {
+        "camera": [
+          -100.864128112793,
+          6.52450704574585,
+          118.003578186035
+        ],
+        "draw_calls": 107.0,
+        "id": "T08_SOUTH_STRAIGHT",
+        "image": "T08_SOUTH_STRAIGHT.png",
+        "p50_ms": 16.655,
+        "p95_ms": 16.916,
+        "primitives": 2062980.0,
+        "sha256": "2a5c31a6afa87355dc5c3b851a06c58b2d77ed0c5e3f8db5977ae03fbe2ed958"
+      },
+      {
+        "camera": [
+          -46.2998695373535,
+          6.5,
+          131.750335693359
+        ],
+        "draw_calls": 77.0,
+        "id": "T09_SOUTH_BENT",
+        "image": "T09_SOUTH_BENT.png",
+        "p50_ms": 16.664,
+        "p95_ms": 17.276,
+        "primitives": 2062524.0,
+        "sha256": "24d2b70332f4c92724b8aae088954ccf56945aadef4905da9a33151c84486ef8"
+      },
+      {
+        "camera": [
+          87.7249374389648,
+          7.03200054168701,
+          -66.8348846435547
+        ],
+        "draw_calls": 173.0,
+        "id": "T10_BOUNDARY_EDGE_A",
+        "image": "T10_BOUNDARY_EDGE_A.png",
+        "p50_ms": 16.692,
+        "p95_ms": 16.873,
+        "primitives": 2076756.0,
+        "sha256": "39a7da0c8bf1696965771da1aa12bfe4819beb8efe074d56878b340a50209ef2"
+      },
+      {
+        "camera": [
+          50.0289764404297,
+          7.84600019454956,
+          -222.015380859375
+        ],
+        "draw_calls": 129.0,
+        "id": "T11_BOUNDARY_EDGE_B",
+        "image": "T11_BOUNDARY_EDGE_B.png",
+        "p50_ms": 16.641,
+        "p95_ms": 16.993,
+        "primitives": 2068468.0,
+        "sha256": "a01187e4c17ae4acc68391030f9aa986c8d79028daf416c90772ef87272408f2"
+      },
+      {
+        "camera": [
+          183.968551635742,
+          6.36100006103516,
+          24.7695636749268
+        ],
+        "draw_calls": 126.0,
+        "id": "T12_BOUNDARY_EDGE_C",
+        "image": "T12_BOUNDARY_EDGE_C.png",
+        "p50_ms": 16.664,
+        "p95_ms": 16.898,
+        "primitives": 2064352.0,
+        "sha256": "b71cd1fd86e2670ba3d969bccc65bf45993d3dfbb4a2b581f65319536cf58fb5"
+      },
+      {
+        "camera": [
+          -252.642547607422,
+          5.67400026321411,
+          57.5433578491211
+        ],
+        "draw_calls": 71.0,
+        "id": "T13_BOUNDARY_EDGE_D",
+        "image": "T13_BOUNDARY_EDGE_D.png",
+        "p50_ms": 16.65,
+        "p95_ms": 17.08,
+        "primitives": 2062380.0,
+        "sha256": "031b301998641fe50609897ca4825d311bbbe04b6fcfab875f6963ae76f0b1a4"
+      },
+      {
+        "camera": [
+          -245.0,
+          4.85000038146973,
+          28.5
+        ],
+        "draw_calls": 152.0,
+        "id": "destination_QRY",
+        "image": "destination_QRY.png",
+        "p50_ms": 16.673,
+        "p95_ms": 16.837,
+        "primitives": 2067756.0,
+        "sha256": "5538eacfa2aa053314285031671a561a70c249337986b67acd96403798cdb2ba"
+      },
+      {
+        "camera": [
+          -110.0,
+          6.55000019073486,
+          83.5
+        ],
+        "draw_calls": 170.0,
+        "id": "destination_DEP",
+        "image": "destination_DEP.png",
+        "p50_ms": 16.661,
+        "p95_ms": 16.862,
+        "primitives": 2070212.0,
+        "sha256": "9ed8c13224f4e4e4074219b1ad6e70afeb13f330734606dc47e0f100c1f87cc7"
+      },
+      {
+        "camera": [
+          0.0,
+          6.45000028610229,
+          28.5
+        ],
+        "draw_calls": 172.0,
+        "id": "destination_MRK",
+        "image": "destination_MRK.png",
+        "p50_ms": 16.665,
+        "p95_ms": 17.99,
+        "primitives": 2073772.0,
+        "sha256": "94a8e084326d3fba2a98b61fb29c84238da55e9f160bf0f6535318b557219783"
+      },
+      {
+        "camera": [
+          0.0,
+          8.05000019073486,
+          -201.5
+        ],
+        "draw_calls": 134.0,
+        "id": "destination_RLY",
+        "image": "destination_RLY.png",
+        "p50_ms": 16.679,
+        "p95_ms": 16.833,
+        "primitives": 1950044.0,
+        "sha256": "7a229dd8e542564790be77c634245a7ef076c083c76cfa2526f9e5eefa4127e1"
+      },
+      {
+        "camera": [
+          90.0,
+          7.0,
+          -46.5
+        ],
+        "draw_calls": 171.0,
+        "id": "destination_WRK",
+        "image": "destination_WRK.png",
+        "p50_ms": 16.649,
+        "p95_ms": 16.921,
+        "primitives": 2076408.0,
+        "sha256": "04317054db03dc74fd3f1da09fc9386b8043a54c5487fc3f2180301132fb6cd0"
+      },
+      {
+        "camera": [
+          110.0,
+          6.55000019073486,
+          83.5
+        ],
+        "draw_calls": 185.0,
+        "id": "destination_CLN",
+        "image": "destination_CLN.png",
+        "p50_ms": 16.67,
+        "p95_ms": 17.394,
+        "primitives": 2073524.0,
+        "sha256": "7fb1370290e2e21dab8bd038500c6f16bd9c43604a6f9dbf19def548595a3d11"
+      },
+      {
+        "camera": [
+          -218.066375732422,
+          5.5256667137146,
+          22.6802406311035
+        ],
+        "draw_calls": 185.0,
+        "id": "yard_west",
+        "image": "yard_west.png",
+        "p50_ms": 16.663,
+        "p95_ms": 17.078,
+        "primitives": 2070576.0,
+        "sha256": "b4243fed24b5e20ce6fd22bf57759fee6c1d82a2f372907ab4a555c0a20945cd"
+      },
+      {
+        "camera": [
+          34.8655815124512,
+          3.07255673408508,
+          -165.28434753418
+        ],
+        "draw_calls": 101.0,
+        "id": "yard_north",
+        "image": "yard_north.png",
+        "p50_ms": 16.658,
+        "p95_ms": 16.998,
+        "primitives": 2068212.0,
+        "sha256": "720abc0c561da32dff2b16c1142598c14d1d6a2d3be7614767b16ab2bfaa0935"
+      },
+      {
+        "camera": [
+          -73.5,
+          6.51000022888184,
+          60.0067672729492
+        ],
+        "draw_calls": 156.0,
+        "id": "yard_market",
+        "image": "yard_market.png",
+        "p50_ms": 17.02,
+        "p95_ms": 34.806,
+        "primitives": 2069688.0,
+        "sha256": "c2b8d368d475b2f559eadeebaaacbeb1cd19b84feb85bdbf0e3336b57c231582"
+      },
+      {
+        "camera": [
+          0.0,
+          610.0,
+          -15.0
+        ],
+        "draw_calls": 182.0,
+        "id": "overview",
+        "image": "overview.png",
+        "p50_ms": 16.679,
+        "p95_ms": 17.246,
+        "primitives": 1251932.0,
+        "sha256": "657b47ed4dace44ebc26b7882a0a47536f36d1aff0769b5b02f3e547604f4856"
+      },
+      {
+        "camera": [
+          -485.0,
+          355.0,
+          430.0
+        ],
+        "draw_calls": 68.0,
+        "id": "oblique",
+        "image": "oblique.png",
+        "p50_ms": 16.642,
+        "p95_ms": 18.737,
+        "primitives": 418020.0,
+        "sha256": "4d45846545d3dde9a0a2f478821eee7ac12b1e9ad0b2a0f2dd83347fced3d302"
+      }
+    ],
+    "renderer": "forward_plus",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "synchronized_c1_trace_sha256": "29f1049f8e16ec65d288407c35e6ccae46e87c711bb6b54b134e6158c68b9443",
+  "synchronized_c1_harness_sha256": "aba46e527e6dfa3d7647c3c370c9cae271dc8e9a9e686ff3d8a4b98c5f77a078"
+}

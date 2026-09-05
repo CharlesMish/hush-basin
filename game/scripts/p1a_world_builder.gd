@@ -1,6 +1,8 @@
 class_name P1AWorldBuilder
 extends Node3D
 
+const Overcast = preload("res://scripts/overcast_resources.gd")
+
 const RENDER_SOLIDS_PATH := "res://presentation/generated/solid_render_meshes_v1_2_6.json"
 const WALL_FACE_PRESENTATION_IDS := ["CORE_WALL", "OUTER_CLOSURE_MASK", "OUTER_WALL"]
 const WALL_SIDE_LIGHTEN := 0.18
@@ -33,10 +35,12 @@ var _hard_bodies: Array[StaticBody3D] = []
 func build(source_data: P1AWorldData) -> void:
 	data = source_data
 	_render_solids = _load_render_solids()
+	_render_solids.merge(data.polish.render_meshes, true)
 	_build_terrain()
 	_build_solids()
-	_build_landmarks()
+	preload("res://scripts/neighborhood_architecture.gd").new().build(self)
 	_build_node_markers()
+	preload("res://scripts/world_polish_presentation.gd").new().build(self, data)
 
 
 func _build_terrain() -> void:
@@ -48,14 +52,17 @@ func _build_terrain() -> void:
 	var vertices := PackedVector3Array()
 	var normals := PackedVector3Array()
 	var colors := PackedColorArray()
+	var uvs := PackedVector2Array()
 	vertices.resize(width * depth)
 	normals.resize(width * depth)
 	colors.resize(width * depth)
+	uvs.resize(width * depth)
 	for iz in depth:
 		for ix in width:
 			var index := iz * width + ix
 			vertices[index] = Vector3(origin.x + float(ix) * spacing, data.height_at_index(index), origin.y + float(iz) * spacing)
-			colors[index] = _terrain_render_color(ix, iz, width, depth)
+			colors[index] = Color.WHITE
+			uvs[index] = Vector2(float(ix) / float(width - 1), float(iz) / float(depth - 1))
 	for iz in depth:
 		for ix in width:
 			var index := iz * width + ix
@@ -82,20 +89,13 @@ func _build_terrain() -> void:
 	arrays[Mesh.ARRAY_VERTEX] = vertices
 	arrays[Mesh.ARRAY_NORMAL] = normals
 	arrays[Mesh.ARRAY_COLOR] = colors
+	arrays[Mesh.ARRAY_TEX_UV] = uvs
 	arrays[Mesh.ARRAY_INDEX] = indices
 	var mesh := ArrayMesh.new()
 	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
-	var material := StandardMaterial3D.new()
-	material.vertex_color_use_as_albedo = true
-	material.metallic = 0.0
-	material.roughness = 0.88
-	material.shading_mode = BaseMaterial3D.SHADING_MODE_PER_PIXEL
-	material.transparency = BaseMaterial3D.TRANSPARENCY_DISABLED
-	# The frozen heightfield collision is explicitly two-sided. Matching the
-	# render consumer keeps aperture/support pixels visible without changing a
-	# single source vertex, triangle, normal, or collision face.
-	material.cull_mode = BaseMaterial3D.CULL_DISABLED
-	mesh.surface_set_material(0, material)
+	# Surface authority replaces color/roughness only; all geometry arrays above
+	# still construct the exact original terrain and its collision below.
+	mesh.surface_set_material(0, preload("res://scripts/quiet_surfaces.gd").material())
 	var visual := MeshInstance3D.new()
 	visual.name = "FrozenHeightfieldVisual"
 	visual.mesh = mesh
@@ -115,7 +115,7 @@ func _build_terrain() -> void:
 func _terrain_render_color(ix: int, iz: int, width: int, depth: int) -> Color:
 	var index := iz * width + ix
 	var surface_class := int(data.surface_bytes[index])
-	var base: Color = SURFACE_COLORS.get(surface_class, Color.MAGENTA)
+	var base := _surface_color(surface_class)
 	if surface_class > TERRAIN_RENDER_SMOOTHABLE_CLASS_MAX:
 		return base
 	var different_neighbor_sum := Color(0.0, 0.0, 0.0, 0.0)
@@ -128,7 +128,7 @@ func _terrain_render_color(ix: int, iz: int, width: int, depth: int) -> Color:
 		var neighbor_class := int(data.surface_bytes[nz * width + nx])
 		if neighbor_class > TERRAIN_RENDER_SMOOTHABLE_CLASS_MAX or neighbor_class == surface_class:
 			continue
-		different_neighbor_sum += SURFACE_COLORS.get(neighbor_class, Color.MAGENTA)
+		different_neighbor_sum += _surface_color(neighbor_class)
 		different_neighbor_count += 1
 	if different_neighbor_count == 0:
 		return base
@@ -146,6 +146,10 @@ func _build_solids() -> void:
 		var render_record: Dictionary = _render_solids.get(mesh_id, {})
 		assert(not render_record.is_empty(), "Missing canonical v1.2.6 render mesh: %s" % mesh_id)
 		var source_id := String(record.source_geometry_id)
+		# Architecture v1 replaces only these building masses with shared
+		# native structural definitions; historical source artifacts stay intact.
+		if source_id.begins_with("B") and source_id.length() == 3:
+			continue
 		var raw_vertices: Array = record.vertices_xyz_m
 		var source_vertices := PackedVector3Array()
 		source_vertices.resize(raw_vertices.size())
@@ -187,7 +191,7 @@ func _build_solids() -> void:
 		# parity with closed prisms and backface-enabled concave collision.
 		material.cull_mode = BaseMaterial3D.CULL_DISABLED
 		material.metallic = 0.0
-		material.roughness = 0.74
+		material.roughness = float(Overcast.config().damp.concrete_roughness)
 		material.shading_mode = BaseMaterial3D.SHADING_MODE_PER_PIXEL
 		material.transparency = BaseMaterial3D.TRANSPARENCY_DISABLED
 		mesh.surface_set_material(0, material)
@@ -227,8 +231,8 @@ func _build_landmarks() -> void:
 			box.size = Vector3(float(record.footprint_xz_m[0]), float(record.height_m), float(record.footprint_xz_m[1]))
 			mesh = box
 		var material := StandardMaterial3D.new()
-		material.albedo_color = Color(0.72, 0.56, 0.26)
-		material.roughness = 0.70
+		material.albedo_color = _palette("quarry") if String(record.role) == "QUARRY_STEPS" else _palette("steel")
+		material.roughness = float(Overcast.config().damp.steel_roughness)
 		mesh.material = material
 		var visual := MeshInstance3D.new()
 		visual.name = String(record.id)
@@ -320,17 +324,27 @@ func _node_marker_mesh(material: StandardMaterial3D) -> ArrayMesh:
 
 
 func _solid_color(source_id: String) -> Color:
-	if source_id.begins_with("B"):
-		return Color(0.48, 0.52, 0.58)
 	if source_id == "HOP_BAR_01":
-		return Color(0.82, 0.44, 0.10)
-	if source_id == "OUTER_CLOSURE_MASK":
-		return Color(0.39615000, 0.43785000, 0.45870000)
-	if source_id == "OUTER_WALL":
-		return Color(0.44, 0.47, 0.50)
-	if source_id == "CORE_PLINTH_MASK":
-		return Color(0.54, 0.58, 0.63)
-	return Color(0.70650000, 0.74182500, 0.80070000)
+		return _palette("amber")
+	if source_id in ["OUTER_CLOSURE_MASK", "OUTER_WALL"]:
+		return _palette("quarry")
+	return _palette("concrete")
+
+
+func _palette(key: String) -> Color:
+	var rgb: Array = data.polish_config.palette[key]
+	return Color(rgb[0], rgb[1], rgb[2])
+
+
+func _surface_color(surface_class: int) -> Color:
+	match surface_class:
+		0, 1: return _palette("ground")
+		2, 8, 9: return _palette("paving")
+		3, 4: return _palette("yard").darkened(0.12)
+		5, 10: return _palette("amber")
+		6, 7: return _palette("shoulder")
+		12: return _palette("yard")
+		_: return _palette("ground").darkened(0.15)
 
 
 func _wall_face_colors(source_id: String, record: Dictionary, render_indices: PackedInt32Array, vertex_count: int) -> PackedColorArray:

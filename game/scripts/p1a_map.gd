@@ -32,6 +32,16 @@ func _draw() -> void:
 	draw_rect(Rect2(Vector2.ZERO, size), Color(0.20, 0.48, 0.46, 0.75), false, 1.5)
 	if data == null:
 		return
+	for yard in data.polish.get("yards", []):
+		var outline := PackedVector2Array()
+		for vertex in yard.polygon:
+			outline.append(_world_to_map(P1AWorldData.xz(vertex)))
+		draw_colored_polygon(outline, Color(0.31, 0.28, 0.20, 0.85))
+	for foundation in data.polish.get("protection", []):
+		var outline := PackedVector2Array()
+		for vertex in foundation.polygon:
+			outline.append(_world_to_map(P1AWorldData.xz(vertex)))
+		draw_colored_polygon(outline, Color(0.07, 0.10, 0.11, 1.0))
 	var route_ids: Array = data.routes.keys()
 	route_ids.sort()
 	for route_id_value in route_ids:
@@ -53,7 +63,7 @@ func _draw() -> void:
 	if craft != null:
 		var p := _world_to_map(Vector2(craft.global_position.x, craft.global_position.z))
 		var forward := Vector2(-craft.global_basis.z.x, -craft.global_basis.z.z).normalized()
-		var tip := p + Vector2(forward.x, -forward.y) * 9.0
+		var tip := p + forward * 9.0
 		draw_circle(p, 4.5, Color.WHITE)
 		draw_line(p, tip, Color.WHITE, 2.0)
 	# North-up orientation marker.
@@ -62,7 +72,11 @@ func _draw() -> void:
 
 
 func _world_to_map(world: Vector2) -> Vector2:
+	return project_world(world, size)
+
+
+static func project_world(world: Vector2, dimensions: Vector2) -> Vector2:
 	var margin := 12.0
-	var usable := size - Vector2.ONE * margin * 2.0
+	var usable := dimensions - Vector2.ONE * margin * 2.0
 	var normalized := (world - WORLD_MIN) / (WORLD_MAX - WORLD_MIN)
-	return Vector2(margin + normalized.x * usable.x, margin + (1.0 - normalized.y) * usable.y)
+	return Vector2(margin + normalized.x * usable.x, margin + normalized.y * usable.y)

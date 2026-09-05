@@ -1,0 +1,24 @@
+{
+  "version": "world-polish-v1",
+  "base_commit": "3b245da432b5a20a1606b3a9b2d9559ba409db39",
+  "foundation_margin_m": 3.0,
+  "entrance_width_m": 24.0,
+  "terrain_smoothing_passes": 24,
+  "terrain_blend_distance_m": 12.0,
+  "cut_solid_ids": ["CORE_PLINTH_MASK", "CORE_WALL", "OUTER_CLOSURE_MASK"],
+  "yards": [
+    {"id": "QUARRY_DEPOT", "polygon": [[-280,30],[-240,-85],[-150,-65],[-100,80],[-185,88]], "clear_square_center": [-200,-10], "entrances": [[[-245,20],[-195,0]],[[-110,75],[-155,25]]]},
+    {"id": "RELAY_WORKS", "polygon": [[-50,-240],[55,-240],[130,-105],[130,-25],[50,-25],[-45,-125]], "clear_square_center": [0,-185], "entrances": [[[0,-210],[0,-175]],[[90,-55],[65,-45]]]},
+    {"id": "MARKET_CLINIC", "polygon": [[-130,90],[-90,10],[-50,-15],[45,-15],[130,70],[85,120],[-80,120]], "clear_square_center": [-55,50], "entrances": [[[-110,75],[-75,50]],[[110,75],[70,50]]]}
+  ],
+  "palette": {
+    "ground": [0.34,0.26,0.17], "yard": [0.40,0.32,0.22],
+    "paving": [0.16,0.20,0.20], "shoulder": [0.53,0.43,0.29],
+    "concrete": [0.50,0.43,0.32], "quarry": [0.44,0.31,0.19],
+    "steel": [0.14,0.21,0.23], "teal": [0.08,0.43,0.40],
+    "amber": [0.66,0.34,0.08], "trim": [0.68,0.59,0.43],
+    "sky_top": [0.22,0.39,0.51], "sky_horizon": [0.72,0.68,0.55]
+  },
+  "lighting": {"sun_rotation_degrees": [-38,-35,0], "sun_color": [1.0,0.89,0.70], "sun_energy": 1.15, "ambient_color": [0.70,0.76,0.79], "ambient_energy": 0.72, "sky_curve": 0.3},
+  "detail": {"panel_spacing_m": 12.0, "max_wall_panels": 320, "wall_band_height_m": 0.38, "wall_band_relative_height": 0.55, "cap_band_height_m": 0.22, "panel_width_m": 0.16, "wall_detail_offset_m": 0.018, "yard_markings": false}
+}
