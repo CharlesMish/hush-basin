@@ -1,3 +1,9 @@
+# Current vehicle task
+
+Read `QUARTO_VEHICLE_V1_AUTHORITY.md` and `docs/QUARTO_VEHICLE_V1.md` first on this branch. The owner explicitly requested building on the existing native rig after reviewing the Quarto visual successor proposal. That authorizes the bounded visual scene/rig changes and their comparison tools; inherited gameplay, world, camera, engine and publication boundaries remain. Use the new versioned vehicle verifier for this successor; preserve historical inventories and their truthful results. The inherited instructions follow unchanged.
+
+---
+
 # Agent Instructions — District Zero Git Repository
 
 Current authority: QUIET_SURFACES_V1_AUTHORITY.md for the approved surface pass.

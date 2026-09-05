@@ -1,0 +1,461 @@
+[gd_scene load_steps=36 format=3]
+
+[ext_resource type="Script" path="res://review/quarto_vehicle_v1/r7_visual_rig.gd" id="1_rig"]
+
+[sub_resource type="StandardMaterial3D" id="Material_structure"]
+albedo_color = Color(0.105, 0.165, 0.195, 1)
+metallic = 0.48
+roughness = 0.38
+emission_enabled = true
+emission = Color(0.015, 0.025, 0.03, 1)
+emission_energy_multiplier = 0.3
+
+[sub_resource type="StandardMaterial3D" id="Material_shell"]
+albedo_color = Color(0.16, 0.25, 0.3, 1)
+metallic = 0.3
+roughness = 0.4
+emission_enabled = true
+emission = Color(0.025, 0.04, 0.05, 1)
+emission_energy_multiplier = 0.32
+
+[sub_resource type="StandardMaterial3D" id="Material_lift"]
+albedo_color = Color(0.18, 0.72, 0.68, 1)
+metallic = 0.18
+roughness = 0.34
+emission_enabled = true
+emission = Color(0.035, 0.2, 0.18, 1)
+emission_energy_multiplier = 0.68
+
+[sub_resource type="StandardMaterial3D" id="Material_lift_edge"]
+albedo_color = Color(0.31, 0.97, 0.91, 1)
+metallic = 0.28
+roughness = 0.25
+emission_enabled = true
+emission = Color(0.04, 0.32, 0.28, 1)
+emission_energy_multiplier = 0.75
+
+[sub_resource type="StandardMaterial3D" id="Material_energy"]
+albedo_color = Color(1, 0.58, 0.16, 1)
+metallic = 0.2
+roughness = 0.24
+emission_enabled = true
+emission = Color(0.65, 0.15, 0.02, 1)
+emission_energy_multiplier = 1.2
+
+[sub_resource type="StandardMaterial3D" id="Material_can"]
+albedo_color = Color(0.08, 0.55, 0.62, 1)
+metallic = 0.62
+roughness = 0.24
+emission_enabled = true
+emission = Color(0.015, 0.19, 0.23, 1)
+emission_energy_multiplier = 0.45
+
+[sub_resource type="StandardMaterial3D" id="Material_joint"]
+albedo_color = Color(0.15, 0.27, 0.3, 1)
+metallic = 0.55
+roughness = 0.31
+emission_enabled = true
+emission = Color(0.018, 0.04, 0.045, 1)
+emission_energy_multiplier = 0.28
+
+[sub_resource type="StandardMaterial3D" id="Material_lift_underlay"]
+albedo_color = Color(0.09, 0.38, 0.38, 1)
+metallic = 0.34
+roughness = 0.4
+emission_enabled = true
+emission = Color(0.025, 0.16, 0.15, 1)
+emission_energy_multiplier = 0.65
+
+[sub_resource type="StandardMaterial3D" id="Material_panel_seam"]
+albedo_color = Color(0.32, 0.9, 0.85, 1)
+metallic = 0.3
+roughness = 0.27
+emission_enabled = true
+emission = Color(0.06, 0.24, 0.22, 1)
+emission_energy_multiplier = 0.65
+
+[sub_resource type="StandardMaterial3D" id="Material_nozzle"]
+albedo_color = Color(0.2, 0.95, 1, 1)
+metallic = 0.38
+roughness = 0.22
+emission_enabled = true
+emission = Color(0.13, 0.62, 0.7, 1)
+emission_energy_multiplier = 0.25
+
+[sub_resource type="StandardMaterial3D" id="Material_bore"]
+albedo_color = Color(0.012, 0.025, 0.032, 1)
+metallic = 0.25
+roughness = 0.48
+
+[sub_resource type="BoxMesh" id="Mesh_keel"]
+size = Vector3(0.14, 0.14, 2.3)
+
+[sub_resource type="BoxMesh" id="Mesh_crossbeam"]
+size = Vector3(0.72, 0.12, 0.12)
+
+[sub_resource type="BoxMesh" id="Mesh_forward_body"]
+size = Vector3(0.58, 0.3, 0.66)
+
+[sub_resource type="BoxMesh" id="Mesh_energy_core"]
+size = Vector3(0.18, 0.1, 0.28)
+
+[sub_resource type="BoxMesh" id="Mesh_bay_rail"]
+size = Vector3(0.07, 0.2, 0.62)
+
+[sub_resource type="BoxMesh" id="Mesh_fixed_core"]
+size = Vector3(0.14, 0.104, 0.36)
+
+[sub_resource type="CylinderMesh" id="Mesh_moving_can"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.51
+radial_segments = 20
+rings = 2
+
+[sub_resource type="BoxMesh" id="Mesh_front_leaf"]
+size = Vector3(0.72, 0.065, 0.28)
+
+[sub_resource type="BoxMesh" id="Mesh_rear_leaf"]
+size = Vector3(0.76, 0.07, 0.34)
+
+[sub_resource type="BoxMesh" id="Mesh_front_tip"]
+size = Vector3(0.1, 0.11, 0.18)
+
+[sub_resource type="BoxMesh" id="Mesh_rear_tip"]
+size = Vector3(0.1, 0.12, 0.22)
+
+[sub_resource type="BoxMesh" id="Mesh_hinge"]
+size = Vector3(0.1, 0.13, 0.34)
+
+[sub_resource type="BoxMesh" id="Mesh_core_shroud"]
+size = Vector3(0.075, 0.14, 0.36)
+
+[sub_resource type="BoxMesh" id="Mesh_bay_cheek"]
+size = Vector3(0.09, 0.18, 0.24)
+
+[sub_resource type="BoxMesh" id="Mesh_root_socket"]
+size = Vector3(0.16, 0.1, 0.2)
+
+[sub_resource type="BoxMesh" id="Mesh_joint_bridge"]
+size = Vector3(0.14, 0.09, 0.18)
+
+[sub_resource type="CylinderMesh" id="Mesh_knuckle"]
+top_radius = 0.075
+bottom_radius = 0.075
+height = 0.22
+radial_segments = 16
+rings = 1
+
+[sub_resource type="BoxMesh" id="Mesh_front_underlay"]
+size = Vector3(0.68, 0.022, 0.25)
+
+[sub_resource type="BoxMesh" id="Mesh_rear_underlay"]
+size = Vector3(0.72, 0.024, 0.31)
+
+[sub_resource type="BoxMesh" id="Mesh_front_seam"]
+size = Vector3(0.42, 0.018, 0.025)
+
+[sub_resource type="BoxMesh" id="Mesh_rear_seam"]
+size = Vector3(0.46, 0.019, 0.024)
+
+[sub_resource type="CylinderMesh" id="Mesh_nozzle_ring"]
+top_radius = 0.13
+bottom_radius = 0.13
+height = 0.04
+radial_segments = 24
+rings = 1
+
+[sub_resource type="CylinderMesh" id="Mesh_nozzle_bore"]
+top_radius = 0.075
+bottom_radius = 0.075
+height = 0.045
+radial_segments = 24
+rings = 1
+
+[node name="VisualRoot" type="Node3D"]
+script = ExtResource("1_rig")
+
+[node name="CentralStructure" type="Node3D" parent="."]
+
+[node name="KeelPort" type="MeshInstance3D" parent="CentralStructure"]
+position = Vector3(-0.25, -0.09, 0)
+mesh = SubResource("Mesh_keel")
+material_override = SubResource("Material_structure")
+
+[node name="KeelStarboard" type="MeshInstance3D" parent="CentralStructure"]
+position = Vector3(0.25, -0.09, 0)
+mesh = SubResource("Mesh_keel")
+material_override = SubResource("Material_structure")
+
+[node name="ForwardBulkhead" type="MeshInstance3D" parent="CentralStructure"]
+position = Vector3(0, -0.02, -1.08)
+mesh = SubResource("Mesh_crossbeam")
+material_override = SubResource("Material_structure")
+
+[node name="AftBulkhead" type="MeshInstance3D" parent="CentralStructure"]
+position = Vector3(0, -0.02, 1.08)
+mesh = SubResource("Mesh_crossbeam")
+material_override = SubResource("Material_structure")
+
+[node name="ForwardBody" type="MeshInstance3D" parent="CentralStructure"]
+position = Vector3(0, 0.18, -0.58)
+rotation = Vector3(-0.10472, 0, 0)
+mesh = SubResource("Mesh_forward_body")
+material_override = SubResource("Material_shell")
+
+[node name="EnergyCore" type="MeshInstance3D" parent="CentralStructure"]
+position = Vector3(0, 0.305, -0.19)
+mesh = SubResource("Mesh_energy_core")
+material_override = SubResource("Material_energy")
+
+[node name="CoreShroudPort" type="MeshInstance3D" parent="CentralStructure"]
+position = Vector3(-0.13, 0.275, -0.19)
+rotation = Vector3(0, 0, -0.139626)
+mesh = SubResource("Mesh_core_shroud")
+material_override = SubResource("Material_structure")
+
+[node name="CoreShroudStarboard" type="MeshInstance3D" parent="CentralStructure"]
+position = Vector3(0.13, 0.275, -0.19)
+rotation = Vector3(0, 0, 0.139626)
+mesh = SubResource("Mesh_core_shroud")
+material_override = SubResource("Material_structure")
+
+[node name="DriveBay" type="Node3D" parent="CentralStructure"]
+
+[node name="PortRail" type="MeshInstance3D" parent="CentralStructure/DriveBay"]
+position = Vector3(-0.13, 0, 0.55)
+mesh = SubResource("Mesh_bay_rail")
+material_override = SubResource("Material_structure")
+
+[node name="StarboardRail" type="MeshInstance3D" parent="CentralStructure/DriveBay"]
+position = Vector3(0.13, 0, 0.55)
+mesh = SubResource("Mesh_bay_rail")
+material_override = SubResource("Material_structure")
+
+[node name="FixedCore" type="MeshInstance3D" parent="CentralStructure/DriveBay"]
+position = Vector3(0, 0, 0.5)
+mesh = SubResource("Mesh_fixed_core")
+material_override = SubResource("Material_energy")
+
+[node name="BayCheekPort" type="MeshInstance3D" parent="CentralStructure/DriveBay"]
+position = Vector3(-0.18, 0.01, 0.78)
+mesh = SubResource("Mesh_bay_cheek")
+material_override = SubResource("Material_joint")
+
+[node name="BayCheekStarboard" type="MeshInstance3D" parent="CentralStructure/DriveBay"]
+position = Vector3(0.18, 0.01, 0.78)
+mesh = SubResource("Mesh_bay_cheek")
+material_override = SubResource("Material_joint")
+
+[node name="MovingCan" type="Node3D" parent="CentralStructure/DriveBay"]
+position = Vector3(0, 0, 0.47)
+rotation = Vector3(1.570796, 0, 0)
+scale = Vector3(1, 1, 0.82)
+
+[node name="CanBody" type="MeshInstance3D" parent="CentralStructure/DriveBay/MovingCan"]
+mesh = SubResource("Mesh_moving_can")
+material_override = SubResource("Material_can")
+
+[node name="NozzleRing" type="MeshInstance3D" parent="CentralStructure/DriveBay/MovingCan"]
+position = Vector3(0, 0.255, 0)
+mesh = SubResource("Mesh_nozzle_ring")
+material_override = SubResource("Material_nozzle")
+
+[node name="NozzleBore" type="MeshInstance3D" parent="CentralStructure/DriveBay/MovingCan"]
+position = Vector3(0, 0.278, 0)
+mesh = SubResource("Mesh_nozzle_bore")
+material_override = SubResource("Material_bore")
+
+[node name="FrontPortRig" type="Node3D" parent="."]
+position = Vector3(-0.48, 0, -0.57)
+[node name="RootSocket" type="MeshInstance3D" parent="FrontPortRig"]
+position = Vector3(0.02, -0.035, 0)
+mesh = SubResource("Mesh_root_socket")
+material_override = SubResource("Material_joint")
+[node name="BookPivot" type="Node3D" parent="FrontPortRig"]
+[node name="YawPivot" type="Node3D" parent="FrontPortRig/BookPivot"]
+[node name="HaunchPivot" type="Node3D" parent="FrontPortRig/BookPivot/YawPivot"]
+[node name="SocketSlide" type="Node3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot"]
+[node name="PrimaryLeaf" type="MeshInstance3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.47, 0, 0)
+mesh = SubResource("Mesh_front_leaf")
+material_override = SubResource("Material_lift")
+[node name="LeafUnderlay" type="MeshInstance3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.47, -0.043, 0)
+mesh = SubResource("Mesh_front_underlay")
+material_override = SubResource("Material_lift_underlay")
+[node name="PanelSeam" type="MeshInstance3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.47, 0.041, 0)
+mesh = SubResource("Mesh_front_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="UnderSeam" type="MeshInstance3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.47, -0.059, 0)
+mesh = SubResource("Mesh_front_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="OuterTip" type="MeshInstance3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.8, 0.015, 0)
+mesh = SubResource("Mesh_front_tip")
+material_override = SubResource("Material_lift_edge")
+[node name="Hinge" type="MeshInstance3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.1, 0.01, 0)
+mesh = SubResource("Mesh_hinge")
+material_override = SubResource("Material_joint")
+[node name="JointBridge" type="MeshInstance3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.035, 0, 0)
+mesh = SubResource("Mesh_joint_bridge")
+material_override = SubResource("Material_joint")
+[node name="Knuckle" type="MeshInstance3D" parent="FrontPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.12, 0.025, 0)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("Mesh_knuckle")
+material_override = SubResource("Material_panel_seam")
+
+[node name="FrontStarboardRig" type="Node3D" parent="."]
+position = Vector3(0.48, 0, -0.57)
+[node name="RootSocket" type="MeshInstance3D" parent="FrontStarboardRig"]
+position = Vector3(-0.02, -0.035, 0)
+mesh = SubResource("Mesh_root_socket")
+material_override = SubResource("Material_joint")
+[node name="BookPivot" type="Node3D" parent="FrontStarboardRig"]
+[node name="YawPivot" type="Node3D" parent="FrontStarboardRig/BookPivot"]
+[node name="HaunchPivot" type="Node3D" parent="FrontStarboardRig/BookPivot/YawPivot"]
+[node name="SocketSlide" type="Node3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot"]
+[node name="PrimaryLeaf" type="MeshInstance3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.47, 0, 0)
+mesh = SubResource("Mesh_front_leaf")
+material_override = SubResource("Material_lift")
+[node name="LeafUnderlay" type="MeshInstance3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.47, -0.043, 0)
+mesh = SubResource("Mesh_front_underlay")
+material_override = SubResource("Material_lift_underlay")
+[node name="PanelSeam" type="MeshInstance3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.47, 0.041, 0)
+mesh = SubResource("Mesh_front_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="UnderSeam" type="MeshInstance3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.47, -0.059, 0)
+mesh = SubResource("Mesh_front_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="OuterTip" type="MeshInstance3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.8, 0.015, 0)
+mesh = SubResource("Mesh_front_tip")
+material_override = SubResource("Material_lift_edge")
+[node name="Hinge" type="MeshInstance3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.1, 0.01, 0)
+mesh = SubResource("Mesh_hinge")
+material_override = SubResource("Material_joint")
+[node name="JointBridge" type="MeshInstance3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.035, 0, 0)
+mesh = SubResource("Mesh_joint_bridge")
+material_override = SubResource("Material_joint")
+[node name="Knuckle" type="MeshInstance3D" parent="FrontStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.12, 0.025, 0)
+rotation = Vector3(1.570796, 0, 0)
+mesh = SubResource("Mesh_knuckle")
+material_override = SubResource("Material_panel_seam")
+
+[node name="RearPortRig" type="Node3D" parent="."]
+position = Vector3(-0.46, 0, 0.48)
+[node name="RootSocket" type="MeshInstance3D" parent="RearPortRig"]
+position = Vector3(0, -0.035, 0)
+mesh = SubResource("Mesh_root_socket")
+material_override = SubResource("Material_joint")
+[node name="BookPivot" type="Node3D" parent="RearPortRig"]
+[node name="YawPivot" type="Node3D" parent="RearPortRig/BookPivot"]
+[node name="HaunchPivot" type="Node3D" parent="RearPortRig/BookPivot/YawPivot"]
+[node name="SocketSlide" type="Node3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot"]
+[node name="PrimaryLeaf" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.45, 0, 0)
+mesh = SubResource("Mesh_rear_leaf")
+material_override = SubResource("Material_lift")
+[node name="LeafUnderlay" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.45, -0.046, 0)
+mesh = SubResource("Mesh_rear_underlay")
+material_override = SubResource("Material_lift_underlay")
+[node name="PanelSeamForward" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.45, 0.045, -0.075)
+mesh = SubResource("Mesh_rear_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="PanelSeamAft" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.45, 0.045, 0.075)
+mesh = SubResource("Mesh_rear_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="UnderSeamForward" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.45, -0.062, -0.075)
+mesh = SubResource("Mesh_rear_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="UnderSeamAft" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.45, -0.062, 0.075)
+mesh = SubResource("Mesh_rear_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="OuterTip" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.8, 0.02, 0)
+mesh = SubResource("Mesh_rear_tip")
+material_override = SubResource("Material_lift_edge")
+[node name="Hinge" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.08, 0.015, 0)
+mesh = SubResource("Mesh_hinge")
+material_override = SubResource("Material_joint")
+[node name="JointBridge" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.03, 0, 0)
+mesh = SubResource("Mesh_joint_bridge")
+material_override = SubResource("Material_joint")
+[node name="Knuckle" type="MeshInstance3D" parent="RearPortRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(-0.1, 0.03, 0)
+rotation = Vector3(1.570796, 0, 0)
+scale = Vector3(1, 1.18, 1)
+mesh = SubResource("Mesh_knuckle")
+material_override = SubResource("Material_panel_seam")
+
+[node name="RearStarboardRig" type="Node3D" parent="."]
+position = Vector3(0.46, 0, 0.48)
+[node name="RootSocket" type="MeshInstance3D" parent="RearStarboardRig"]
+position = Vector3(0, -0.035, 0)
+mesh = SubResource("Mesh_root_socket")
+material_override = SubResource("Material_joint")
+[node name="BookPivot" type="Node3D" parent="RearStarboardRig"]
+[node name="YawPivot" type="Node3D" parent="RearStarboardRig/BookPivot"]
+[node name="HaunchPivot" type="Node3D" parent="RearStarboardRig/BookPivot/YawPivot"]
+[node name="SocketSlide" type="Node3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot"]
+[node name="PrimaryLeaf" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.45, 0, 0)
+mesh = SubResource("Mesh_rear_leaf")
+material_override = SubResource("Material_lift")
+[node name="LeafUnderlay" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.45, -0.046, 0)
+mesh = SubResource("Mesh_rear_underlay")
+material_override = SubResource("Material_lift_underlay")
+[node name="PanelSeamForward" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.45, 0.045, -0.075)
+mesh = SubResource("Mesh_rear_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="PanelSeamAft" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.45, 0.045, 0.075)
+mesh = SubResource("Mesh_rear_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="UnderSeamForward" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.45, -0.062, -0.075)
+mesh = SubResource("Mesh_rear_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="UnderSeamAft" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.45, -0.062, 0.075)
+mesh = SubResource("Mesh_rear_seam")
+material_override = SubResource("Material_panel_seam")
+[node name="OuterTip" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.8, 0.02, 0)
+mesh = SubResource("Mesh_rear_tip")
+material_override = SubResource("Material_lift_edge")
+[node name="Hinge" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.08, 0.015, 0)
+mesh = SubResource("Mesh_hinge")
+material_override = SubResource("Material_joint")
+[node name="JointBridge" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.03, 0, 0)
+mesh = SubResource("Mesh_joint_bridge")
+material_override = SubResource("Material_joint")
+[node name="Knuckle" type="MeshInstance3D" parent="RearStarboardRig/BookPivot/YawPivot/HaunchPivot/SocketSlide"]
+position = Vector3(0.1, 0.03, 0)
+rotation = Vector3(1.570796, 0, 0)
+scale = Vector3(1, 1.18, 1)
+mesh = SubResource("Mesh_knuckle")
+material_override = SubResource("Material_panel_seam")

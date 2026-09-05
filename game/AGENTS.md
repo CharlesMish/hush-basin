@@ -1,3 +1,9 @@
+# Current vehicle task
+
+Read `../QUARTO_VEHICLE_V1_AUTHORITY.md` and `../docs/QUARTO_VEHICLE_V1.md` first. This owner-authorized visual successor may change only the existing `scenes/vehicle_visual.tscn` and `scripts/vehicle_visual_rig.gd` in playable source, plus their new visual resources and separate review/test scenes. It does not reopen gameplay, camera, world, physics, engine or publication. Historical R7 pose identity remains historical, not a target to relabel. The inherited instructions follow unchanged.
+
+---
+
 # Agent Instructions — District Zero P1A v1.2.8
 
 Current authority: ../QUIET_SURFACES_V1_AUTHORITY.md. Read it first.

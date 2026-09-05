@@ -1,3 +1,9 @@
+# Hush Basin — Quarto vehicle v1 candidate
+
+This task branch develops a native visual successor to the vehicle in Quiet Surfaces v1. Start with [the vehicle handoff](docs/QUARTO_VEHICLE_V1.md) and [its bounded scope](QUARTO_VEHICLE_V1_AUTHORITY.md). Native validation and owner acceptance are not implied by this branch. The inherited baseline README follows unchanged.
+
+---
+
 # District Zero — Quiet Surfaces v1
 
 A material-only successor to Working Neighborhood v1: cleaner road boundaries,

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quarto · Hush Basin geometry study</title>
+  <style>
+    :root { color-scheme:dark; font-family:Inter,ui-sans-serif,system-ui,sans-serif; color:#e8e4da; background:#13191b; }
+    * { box-sizing:border-box; }
+    body { margin:0; }
+    main { display:grid; grid-template-rows:auto minmax(320px,1fr) auto; min-height:100dvh; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:24px 32px 18px; border-bottom:1px solid #ffffff13; }
+    .eyebrow { font-size:10px; letter-spacing:.2em; color:#a8a794; text-transform:uppercase; }
+    h1 { font-weight:500; font-size:26px; letter-spacing:-.04em; margin:5px 0 0; }
+    h1 span { color:#94a6a5; font-weight:350; }
+    .notice { font-size:11px; color:#a8b4b1; line-height:1.7; max-width:340px; }
+    .stage { position:relative; min-height:0; height:calc(100dvh - 250px); }
+    canvas { display:block; width:100%; height:100%; outline:none; touch-action:none; }
+    .view-note { position:absolute; top:22px; left:32px; font-size:11px; line-height:1.8; pointer-events:none; color:#b6beb7; }
+    #viewLabel { color:#edf1e8; }
+    .coordinates { position:absolute; bottom:20px; right:32px; color:#87958d; font:10px ui-monospace,monospace; pointer-events:none; }
+    footer { padding:18px 32px 24px; background:#182022; border-top:1px solid #ffffff13; }
+    .timeline { display:flex; align-items:center; gap:18px; }
+    .endpoint { width:58px; font:11px ui-monospace,monospace; color:#c3ccc3; }
+    .endpoint:last-of-type { text-align:right; }
+    input[type=range] { min-width:100px; flex:1; accent-color:#8ee2cf; cursor:pointer; }
+    #amount { width:45px; font:12px ui-monospace,monospace; text-align:right; }
+    .controls { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:16px; }
+    .group { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
+    button,select { font:12px inherit; font-size:12px; color:#dce4db; background:#263033; border:1px solid #ffffff17; border-radius:5px; padding:9px 12px; cursor:pointer; }
+    button:hover,select:hover { background:#334044; }
+    button[aria-pressed=true], #play { color:#142322; background:#91d9c7; border-color:#91d9c7; }
+    #play { min-width:90px; }
+    select { max-width:170px; }
+    .status { font-size:10px; color:#93a39b; margin-top:15px; line-height:1.5; }
+    #error { display:none; position:absolute; inset:20px; background:#282122; border:1px solid #b66e58; padding:20px; white-space:pre-wrap; overflow:auto; }
+    @media(max-width:700px) { header { padding:18px; align-items:start; } h1{font-size:23px} .notice{max-width:175px;font-size:10px} footer{padding:15px 18px} .stage{height:calc(100dvh - 315px);min-height:300px} .view-note{left:18px}.coordinates{right:18px} .timeline{gap:8px} .controls{gap:12px} button,select{padding:9px}.eyebrow{font-size:9px} }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><div class="eyebrow">Hush Basin · native rig study</div><h1>Quarto <span>/ folding construction</span></h1></div>
+    <div class="notice">Geometry preview · Babylon renderer<br>Same authored meshes and scalar motion as the native rig. Godot lighting, gameplay and clearances remain unverified here.</div>
+  </header>
+  <section class="stage" aria-label="Interactive vehicle geometry">
+    <canvas id="renderCanvas" aria-label="Vehicle preview. Drag to orbit; scroll to zoom."></canvas>
+    <div class="view-note"><div id="viewLabel">Inspection orbit</div>Drag to orbit · scroll to zoom</div>
+    <div class="coordinates">+Y UP &nbsp; −Z NOSE &nbsp; METRES</div>
+    <pre id="error" role="alert"></pre>
+  </section>
+  <footer>
+    <div class="timeline"><span class="endpoint">SPREAD</span><input id="scrub" aria-label="Transformation amount" type="range" min="0" max="1" step="0.001" value="0"><span class="endpoint">DRIVE</span><output id="amount">0%</output></div>
+    <div class="controls">
+      <div class="group"><button id="play">Play</button><select id="speed" aria-label="Playback speed"><option value="slow">Slow · 4 seconds</option><option value="game">Game timing · 0.24 / 0.20 s</option></select><button id="spread">Spread</button><button id="drive">Drive</button></div>
+      <div class="group"><button data-view="orbit" aria-pressed="true">Orbit</button><button data-view="side" aria-pressed="false">Side</button><button data-view="stern" aria-pressed="false">Stern</button><button data-view="game" aria-pressed="false">Game camera</button><select id="energy" aria-label="Energy state"><option value="CLEAR">Clear</option><option value="CAUTION">Caution</option><option value="STRIKE">Strike</option></select></div>
+    </div>
+    <div class="status" id="status">Loading canonical native geometry…</div>
+  </footer>
+</main>
+<script type="module" src="preview.js"></script>
+</body>
+</html>

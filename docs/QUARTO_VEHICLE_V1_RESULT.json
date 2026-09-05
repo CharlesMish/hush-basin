@@ -1,0 +1,222 @@
+{
+  "schema": "hush_basin.quarto_vehicle_v1.handoff.v1",
+  "status": "IMPLEMENTED_CANDIDATE_NATIVE_VALIDATION_PENDING",
+  "baseline_commit": "9fd4c020c374a7a6db441e4cbc20b53919d5a5e4",
+  "branch": "feature/quarto-native-vehicle-v1",
+  "authority_participation": "none",
+  "changed_files": [
+    "AGENTS.md",
+    "QUARTO_VEHICLE_V1_AUTHORITY.md",
+    "README.md",
+    "docs/QUARTO_VEHICLE_V1.md",
+    "docs/QUARTO_VEHICLE_V1_RESULT.json",
+    "game/AGENTS.md",
+    "game/presentation/quarto_native_v1.json",
+    "game/review/quarto_vehicle_v1/r7_visual.tscn",
+    "game/review/quarto_vehicle_v1/r7_visual_rig.gd",
+    "game/scenes/quarto_vehicle_studio.tscn",
+    "game/scenes/quarto_vehicle_world_compare.tscn",
+    "game/scenes/vehicle_visual.tscn",
+    "game/scripts/quarto_mesh_library.gd",
+    "game/scripts/quarto_vehicle_studio.gd",
+    "game/scripts/quarto_vehicle_world_compare.gd",
+    "game/scripts/vehicle_visual_rig.gd",
+    "game/tests/fixtures/quarto_vehicle_v1_contract.json",
+    "game/tests/quarto_vehicle_v1.gd",
+    "game/tools/build_quarto_native_v1.py",
+    "tools/launch_quarto_vehicle.py",
+    "tools/quarto_preview/README.md",
+    "tools/quarto_preview/export_glb.py",
+    "tools/quarto_preview/index.html",
+    "tools/quarto_preview/preview.js",
+    "tools/quarto_preview/serve.py",
+    "tools/quarto_preview/verify_exports.py",
+    "tools/verify_quarto_vehicle.py"
+  ],
+  "native_asset_sha256": {
+    "game/scenes/vehicle_visual.tscn": "b7fd9fecc1a4f3a0a1f29d78c1e967a7df8f777d8eff0517115f87eaff76f874",
+    "game/scripts/vehicle_visual_rig.gd": "4a2189e40ba09281513b6c0a68bc6dd28e09890a3fb8ed8c8eac362b55d9b5a0",
+    "game/scripts/quarto_mesh_library.gd": "47ae536abfb724f7f5fe6e595a02afe642bbbfbee1f91d1a3032402568da72fe",
+    "game/presentation/quarto_native_v1.json": "a3c733ae61078543663cb03eaab08f3a64edf57745f3b77bae5d65b64c535ca4",
+    "game/tools/build_quarto_native_v1.py": "15921d79cb9ead324f3c65ab38e6683d94ef8ac6d24b4f4e24cc10ffb0da44a5"
+  },
+  "validation": {
+    "baseline_before_changes": {
+      "status": "PASS",
+      "checks": 389
+    },
+    "successor": {
+      "schema": "hush_basin.quarto_vehicle_v1.verification.v1",
+      "baseline_commit": "9fd4c020c374a7a6db441e4cbc20b53919d5a5e4",
+      "authority_participation": "none",
+      "static_status": "PASS",
+      "native": {
+        "status": "BLOCKED",
+        "reason": "District Zero requires exact Godot 4.7.1.stable.official.a13da4feb.\nObserved candidates:\n  none found\nSet GODOT_BIN or pass --godot with the exact executable.",
+        "records": []
+      },
+      "status": "BLOCKED",
+      "static_check_count": 449,
+      "failures": [],
+      "not_claimed": [
+        "MT1-S5HR3R1 authority or manufacturing clearance",
+        "Human gameplay feel or visual acceptance",
+        "Performance acceptance",
+        "Cross-platform physics determinism"
+      ]
+    },
+    "reproducible_generation": {
+      "status": "PASS",
+      "scope": "Fresh disposable generation; source files unchanged",
+      "files": {
+        "scenes/vehicle_visual.tscn": {
+          "matches": true,
+          "sha256": "b7fd9fecc1a4f3a0a1f29d78c1e967a7df8f777d8eff0517115f87eaff76f874"
+        },
+        "presentation/quarto_native_v1.json": {
+          "matches": true,
+          "sha256": "a3c733ae61078543663cb03eaab08f3a64edf57745f3b77bae5d65b64c535ca4"
+        }
+      }
+    },
+    "final_browser_captures": {
+      "status": "PASS",
+      "count": 7,
+      "errors": [],
+      "scope": "Babylon geometry preview, not native Godot",
+      "files_sha256": {
+        "drive.png": "b8a32cdf29f99960da8c95dc7ea470eba66d8af01dce80a47e6226aee5ab85b3",
+        "fold.png": "22460a2b9231dbb68734ea60262f6f38cf4a95b0e7354ddb7ae4c60ab3aab816",
+        "game-drive.png": "74099c7bbc04e6bef6ba5510e63a2ab6907cbfd91cc5e4aba10ffd61a72d95ca",
+        "game-spread.png": "595d47c53586160f7013c94aa0ff5e7c64ba8bf921fae394d02b15eab7c3a718",
+        "mid.png": "7a456aded7bbe97b5c09ad5cf198a463e986ba11cd0d64ff50f5ed5ef148d819",
+        "spread.png": "4aed254760d1ac11b714e8fe74c3a8c9a3ea7ab842d02fec352c7c18c5c0f103",
+        "stern.png": "03ca3856a789e4e4351a2ee745ed94362cfe123f9ee14312a3ce1c3ffa356778"
+      }
+    },
+    "glb_geometry": {
+      "status": "PASS",
+      "source_sha256": "a3c733ae61078543663cb03eaab08f3a64edf57745f3b77bae5d65b64c535ca4",
+      "scope": "Static interchange geometry; native Godot unverified",
+      "poses": [
+        {
+          "file": "quarto_native_v1_drive.glb",
+          "form_amount": 1.0,
+          "nodes": 128,
+          "world_vertex_comparisons": 5732,
+          "outward_triangle_checks": 2936,
+          "maximum_world_vertex_error_m": 2.9157578514646862e-08,
+          "status": "PASS"
+        },
+        {
+          "file": "quarto_native_v1_mid.glb",
+          "form_amount": 0.5,
+          "nodes": 128,
+          "world_vertex_comparisons": 5732,
+          "outward_triangle_checks": 2936,
+          "maximum_world_vertex_error_m": 2.9157578514646862e-08,
+          "status": "PASS"
+        },
+        {
+          "file": "quarto_native_v1_spread.glb",
+          "form_amount": 0.0,
+          "nodes": 128,
+          "world_vertex_comparisons": 5732,
+          "outward_triangle_checks": 2936,
+          "maximum_world_vertex_error_m": 2.9157578514646862e-08,
+          "status": "PASS"
+        }
+      ]
+    },
+    "historical_verifier_after_changes": {
+      "status": "EXPECTED_FAIL",
+      "checks": 389,
+      "failures": [
+        "UNCHANGED:game/scenes/vehicle_visual.tscn",
+        "UNCHANGED:game/scripts/vehicle_visual_rig.gd"
+      ],
+      "reason": "These two files are the declared visual successor; historical bindings remain unchanged."
+    },
+    "native_fixture_review": {
+      "status": "NO_REMAINING_CONCRETE_STATIC_FINDING",
+      "native_execution": "NOT_RUN",
+      "corrections": [
+        "Freeze fixture craft physics after tree insertion",
+        "Reject existing standalone result file"
+      ],
+      "fixture_sha256": "01021fdbd2bfacc3f6955f121a866867f928febbd1c1c485c7c1ba97808ce0a3"
+    }
+  },
+  "geometry": {
+    "mesh_instances": 89,
+    "unique_meshes": 89,
+    "primary_leaves": 8,
+    "triangles": 2936,
+    "channels": 21,
+    "pose_samples": 201,
+    "spread": {
+      "form_amount": 0.0,
+      "min": [
+        -1.33,
+        -0.215,
+        -1.15
+      ],
+      "max": [
+        1.33,
+        0.387,
+        1.15
+      ],
+      "size": [
+        2.66,
+        0.602,
+        2.3
+      ]
+    },
+    "drive": {
+      "form_amount": 1.0,
+      "min": [
+        -0.525669982669574,
+        -0.215,
+        -1.15
+      ],
+      "max": [
+        0.525669982669574,
+        0.6004764439841982,
+        1.2550000000000001
+      ],
+      "size": [
+        1.051339965339148,
+        0.8154764439841982,
+        2.4050000000000002
+      ]
+    },
+    "maximum_sampled_width_m": 2.667010349275117,
+    "sampled_y_m": [
+      -0.3004300461688289,
+      0.6004764439841982
+    ],
+    "main_leaf_central_defects": 0,
+    "scope": "Independent Python evaluation of authored mesh/pose data. Actual Godot runtime agreement remains a separate required check. Eight principal leaves are checked against each other and every central-structure mesh, including pockets. This is sampled presentation geometry, not whole-vehicle clearance authority."
+  },
+  "evidence_consulted": [
+    "Quarto MT1-S5HR3R1 closure and BODY-SHELL-03.1 pocket correction",
+    "Hush Basin reference and palette bridge",
+    "Current Hush Basin authorities, delivery/status and native controller/camera/rig",
+    "Existing C1, Run/reset, world/entrance and vehicle-camera fixtures"
+  ],
+  "development_negatives": [
+    "Initial SPREAD height and length failed their declared budgets; repaired geometry",
+    "Broader surface sweep found body/socket intersections that endpoint previews missed; repaired geometry",
+    "Warped bevel faces repaired into closed convex principal leaves",
+    "Initial narrow-screen orbit clipped the folios; aspect-aware framing added",
+    "Review studio/reference interpolation cadence corrected; editor meshes initialized through bounded tool scripts"
+  ],
+  "remaining_unknowns": [
+    "Exact-engine parsing, native runtime, editor rendering, native camera/material appearance and import round-trip",
+    "Native C1 movement comparison, Run/reset and world/entrance fixtures are prepared but unexecuted",
+    "Human feel, gamepad comfort and visual approval",
+    "Native performance; inherited Quiet Surfaces Market-Clinic +14.61% target miss and unexplained capture stall remain",
+    "Sampled primary-leaf/body checks are not complete accessory-to-accessory mechanical clearance or MT1 authority"
+  ],
+  "publication": "Local branch only; not pushed or merged"
+}
