@@ -490,6 +490,10 @@ def execute_native(contract, args, evidence):
     records = []
 
     def run(name, command, cwd):
+        command = list(command)
+        # Absolute, per-command logs avoid project-relative log-path failures.
+        insert_at = command.index("--") if "--" in command else len(command)
+        command[insert_at:insert_at] = ["--log-file", str(evidence / (name + ".log"))]
         try:
             process = subprocess.run([str(x) for x in command], cwd=cwd, text=True,
                                      stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=600)
@@ -538,6 +542,18 @@ def execute_native(contract, args, evidence):
         c1_ok = c1_ok and traces[0].read_bytes() == traces[1].read_bytes()
         records.append({"name": "C1_MATCHED_SAME_HOST_1260_TICKS", "pass": c1_ok,
                         "hashes": {p.name: sha(p) for p in traces if p.is_file()}})
+        baseline_world = evidence / "baseline-world"
+        baseline_world.mkdir()
+        baseline_result = baseline_world / "result.json"
+        run("baseline_world_and_entrances", [engine, "--resolution", "1280x720",
+            "--rendering-method", "forward_plus", "--path", before/"game",
+            "--script", "res://tests/world_polish_runtime.gd", "--", "--result",
+            baseline_result], before)
+        try:
+            passed = json.loads(baseline_result.read_text()).get("status") == "PASS"
+        except (OSError, ValueError, TypeError, AttributeError):
+            passed = False
+        records.append({"name": "baseline_world_and_entrances_result", "pass": passed})
         fixtures = [("quarto_vehicle", "quarto_vehicle_v1.gd", True),
                     ("run_v0", "run_v0_probe.gd", True),
                     ("paused_retry", "paused_retry_addendum.gd", True),

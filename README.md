@@ -1,6 +1,15 @@
-# Hush Basin — Quarto vehicle v1 candidate
+# Hush Basin — current full-game checkpoint
 
-This task branch develops a native visual successor to the vehicle in Quiet Surfaces v1. Start with [the vehicle handoff](docs/QUARTO_VEHICLE_V1.md) and [its bounded scope](QUARTO_VEHICLE_V1_AUTHORITY.md). Native validation and owner acceptance are not implied by this branch. The inherited baseline README follows unchanged.
+The complete Quiet Surfaces city now uses the Quarto-derived native vehicle.
+Charlie approved putting this played version on main on September 7, 2026.
+Native integration passed on Godot `4.7.1.stable.official.a13da4feb`; see the
+[current checkpoint record](docs/QUARTO_MAIN_CHECKPOINT_20260907.md) for exact
+verification and remaining limitations. Earlier handoffs below remain history.
+
+Run `python3 tools/launch.py`, or open **PLAY_FULL_GAME.command** on macOS.
+For the separate F6 comparison or vehicle studio, run
+`python3 tools/launch_quarto_vehicle.py --view compare` or `--view studio`.
+The full project is `game/project.godot`. No engine installation is automatic.
 
 ---
 

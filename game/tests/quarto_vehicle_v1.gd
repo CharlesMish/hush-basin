@@ -90,7 +90,7 @@ func _validate_mesh_binding(rig: Node3D, meshes: Array[MeshInstance3D]) -> void:
 			exact = false
 			continue
 		var definition: Dictionary = spec.meshes[String(row.mesh)]
-		var actual: PackedVector3Array = instance.mesh.get_faces()
+		var actual: PackedVector3Array = _render_faces(instance.mesh)
 		var indices: Array = definition.indices
 		exact = exact and actual.size() == indices.size()
 		for i in mini(actual.size(), indices.size()):
@@ -108,7 +108,7 @@ func _validate_samples(rig: VehicleVisualRig, meshes: Array[MeshInstance3D]) -> 
 	var areas := _areas(meshes)
 	var local_faces := {}
 	for mesh in meshes:
-		local_faces[String(rig.get_path_to(mesh))] = mesh.mesh.get_faces()
+		local_faces[String(rig.get_path_to(mesh))] = _render_faces(mesh.mesh)
 	var core := rig.get_node("CentralStructure/DriveBay/FixedCore") as Node3D
 	var can := rig.get_node("CentralStructure/DriveBay/MovingCan") as Node3D
 	var core_initial := core.transform
@@ -141,7 +141,7 @@ func _validate_samples(rig: VehicleVisualRig, meshes: Array[MeshInstance3D]) -> 
 		for mesh in meshes:
 			var path := String(rig.get_path_to(mesh))
 			stable_material = stable_material and mesh.is_visible_in_tree()
-			stable_material = stable_material and mesh.mesh.get_faces() == local_faces[path]
+			stable_material = stable_material and _render_faces(mesh.mesh) == local_faces[path]
 			stable_material = stable_material and absf(float(current_areas[mesh.get_instance_id()]) - float(areas[mesh.get_instance_id()])) <= EPS
 		var envelope := _bounds(rig, meshes)
 		envelopes.append({"form_amount": form, "min": _array(envelope.position), "max": _array(envelope.end), "size": _array(envelope.size)})
@@ -220,7 +220,7 @@ func _validate_fold_axes(rig: VehicleVisualRig) -> void:
 
 func _validate_open_can(rig: Node3D) -> void:
 	var can := rig.get_node("CentralStructure/DriveBay/MovingCan/CanBody") as MeshInstance3D
-	var faces := can.mesh.get_faces()
+	var faces := _render_faces(can.mesh)
 	var inner := INF
 	var outer := 0.0
 	var zmin := INF
@@ -244,7 +244,7 @@ func _validate_open_can(rig: Node3D) -> void:
 	var core := rig.get_node("CentralStructure/DriveBay/FixedCore") as MeshInstance3D
 	var core_fits := true
 	var relative := can.global_transform.affine_inverse() * core.global_transform
-	for point in core.mesh.get_faces():
+	for point in _render_faces(core.mesh):
 		var local := relative * point
 		core_fits = core_fits and Vector2(local.x, local.y).length() < inner - EPS
 	_check("FIXED_CORE_INSIDE_OPEN_RADIAL_PASSAGE", core_fits)
@@ -378,11 +378,28 @@ func _snapshot_matches(a: Dictionary, b: Dictionary) -> bool:
 	return true
 
 
+func _render_faces(mesh: Mesh) -> PackedVector3Array:
+	# In this exact engine get_faces() rounds triangle-helper coordinates by up
+	# to 7.63e-5 m. The direct render arrays match the authored floats exactly.
+	# Expand those indices instead; preserve EPS and the authored triangle order.
+	var faces := PackedVector3Array()
+	for surface in mesh.get_surface_count():
+		var arrays := mesh.surface_get_arrays(surface)
+		var vertices: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
+		var indices: PackedInt32Array = arrays[Mesh.ARRAY_INDEX]
+		if indices.is_empty():
+			faces.append_array(vertices)
+		else:
+			for index in indices:
+				faces.append(vertices[index])
+	return faces
+
+
 func _areas(meshes: Array[MeshInstance3D]) -> Dictionary:
 	var output := {}
 	for mesh in meshes:
 		var area := 0.0
-		var faces := mesh.mesh.get_faces()
+		var faces := _render_faces(mesh.mesh)
 		for i in range(0, faces.size(), 3):
 			var a := mesh.global_transform * faces[i]
 			var b := mesh.global_transform * faces[i + 1]
@@ -397,7 +414,7 @@ func _bounds(rig: Node3D, meshes: Array[MeshInstance3D]) -> AABB:
 	var maximum := Vector3(-INF, -INF, -INF)
 	for mesh in meshes:
 		var relative := rig.global_transform.affine_inverse() * mesh.global_transform
-		for point in mesh.mesh.get_faces():
+		for point in _render_faces(mesh.mesh):
 			var value := relative * point
 			minimum = minimum.min(value)
 			maximum = maximum.max(value)
