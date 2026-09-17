@@ -1,0 +1,306 @@
+{
+  "status": "SAME_ORIGIN_R2_HOSTING_PROVED",
+  "source": {
+    "source_commit": "74b7f5adc16d4d75ad436ebdae7dbd18d7f67152",
+    "accepted_successor": "5971b494f1dbb3e15aa4e6ac57ac1af2ba80acd8",
+    "build_source_commit": "df221870b45de53e4ebb5ea8889b6cf1114054c6",
+    "account_id": "REDACTED_ACCOUNT_ID",
+    "pages_project": "hush-basin-r2-proof-20260914",
+    "production_branch": "reserved-production",
+    "r2_bucket_created": true,
+    "deployments": [
+      {
+        "id": "27ea1fea-f95f-4551-8670-01333118a991",
+        "environment": "Preview",
+        "branch": "hosting-proof",
+        "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev"
+      }
+    ],
+    "status": "SAME_ORIGIN_R2_HOSTING_PROVED",
+    "local_http_checks": 20,
+    "local_head_method_isolation_checks": 4,
+    "static_quarto_checks": 449,
+    "native_files_preserved": 310,
+    "export_source_hashes_preserved": 311,
+    "r2_bucket": "hush-basin-r2-proof-20260914",
+    "r2_location": "WNAM",
+    "r2_storage_class": "Standard",
+    "r2_public_dev_url": false,
+    "cloudflare_error_resolved_by_owner_r2_enrollment": true,
+    "initial_cloudflare_error": {
+      "code": 10042,
+      "message": "Please enable R2 through the Cloudflare Dashboard."
+    }
+  },
+  "build": {
+    "build_id": "3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0",
+    "build_id_algorithm": "SHA-256 of files array as UTF-8 JSON with sorted keys and compact separators",
+    "export_source_commit": "df221870b45de53e4ebb5ea8889b6cf1114054c6",
+    "accepted_successor_commit": "5971b494f1dbb3e15aa4e6ac57ac1af2ba80acd8",
+    "engine": "4.7.1.stable.official.a13da4feb",
+    "template_sha256": "b7b7d7da29fc6cc2f4934fdd26cc571a40e7af57f716ea3eb7e18da720dae28a",
+    "diagnostic_entry": false,
+    "files": [
+      {
+        "name": "index.apple-touch-icon.png",
+        "bytes": 11944,
+        "sha256": "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
+      },
+      {
+        "name": "index.audio.position.worklet.js",
+        "bytes": 2973,
+        "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+      },
+      {
+        "name": "index.audio.worklet.js",
+        "bytes": 7298,
+        "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+      },
+      {
+        "name": "index.html",
+        "bytes": 5469,
+        "sha256": "771fc37829f87e14d43a6e1054fa52d3259abc8d34dbfa802ffd56fc57ad4639"
+      },
+      {
+        "name": "index.icon.png",
+        "bytes": 5700,
+        "sha256": "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5"
+      },
+      {
+        "name": "index.js",
+        "bytes": 279815,
+        "sha256": "68586d6daafc93c6e697b3fb258976874aa7459b8931165ebb1dc3c9614cc42c"
+      },
+      {
+        "name": "index.pck",
+        "bytes": 101717356,
+        "sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6"
+      },
+      {
+        "name": "index.png",
+        "bytes": 21443,
+        "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+      },
+      {
+        "name": "index.wasm",
+        "bytes": 39513091,
+        "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277"
+      }
+    ]
+  },
+  "http": [
+    {
+      "pass": "first",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.pck",
+      "utc": "2026-09-14T02:58:16.467255+00:00",
+      "status": 200,
+      "bytes": 101717356,
+      "sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+      "seconds": 3.613,
+      "matches_export": true,
+      "headers": {
+        "content-type": "application/octet-stream",
+        "content-length": "101717356",
+        "content-encoding": null,
+        "cache-control": "public, max-age=31536000, immutable, no-transform",
+        "cf-cache-status": "HIT",
+        "age": "91",
+        "x-hush-cache": "HIT",
+        "x-hush-cached-at": "2026-09-14T02:56:24.134Z",
+        "cf-ray": "a3ac21066d525298-DFW",
+        "accept-ranges": "bytes",
+        "etag": "\"sha256-7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6\"",
+        "x-hush-sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+        "x-hush-build": "3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0"
+      }
+    },
+    {
+      "pass": "first",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.wasm",
+      "utc": "2026-09-14T02:58:20.250747+00:00",
+      "status": 200,
+      "bytes": 39513091,
+      "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+      "seconds": 1.86,
+      "matches_export": true,
+      "headers": {
+        "content-type": "application/wasm",
+        "content-length": "39513091",
+        "content-encoding": null,
+        "cache-control": "public, max-age=31536000, immutable, no-transform",
+        "cf-cache-status": "HIT",
+        "age": "111",
+        "x-hush-cache": "HIT",
+        "x-hush-cached-at": "2026-09-14T02:56:24.441Z",
+        "cf-ray": "a3ac211dae234746-DFW",
+        "accept-ranges": "bytes",
+        "etag": "\"sha256-35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277\"",
+        "x-hush-sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+        "x-hush-build": "3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0"
+      }
+    },
+    {
+      "pass": "second",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.pck",
+      "utc": "2026-09-14T02:58:23.010033+00:00",
+      "status": 200,
+      "bytes": 101717356,
+      "sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+      "seconds": 5.377,
+      "matches_export": true,
+      "headers": {
+        "content-type": "application/octet-stream",
+        "content-length": "101717356",
+        "content-encoding": null,
+        "cache-control": "public, max-age=31536000, immutable, no-transform",
+        "cf-cache-status": "HIT",
+        "age": "98",
+        "x-hush-cache": "HIT",
+        "x-hush-cached-at": "2026-09-14T02:56:24.134Z",
+        "cf-ray": "a3ac212ed8ae4632-DFW",
+        "accept-ranges": "bytes",
+        "etag": "\"sha256-7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6\"",
+        "x-hush-sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+        "x-hush-build": "3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0"
+      }
+    },
+    {
+      "pass": "second",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.wasm",
+      "utc": "2026-09-14T02:58:28.507795+00:00",
+      "status": 200,
+      "bytes": 39513091,
+      "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+      "seconds": 1.288,
+      "matches_export": true,
+      "headers": {
+        "content-type": "application/wasm",
+        "content-length": "39513091",
+        "content-encoding": null,
+        "cache-control": "public, max-age=31536000, immutable, no-transform",
+        "cf-cache-status": "HIT",
+        "age": "120",
+        "x-hush-cache": "HIT",
+        "x-hush-cached-at": "2026-09-14T02:56:24.441Z",
+        "cf-ray": "a3ac2151af9af0aa-DFW",
+        "accept-ranges": "bytes",
+        "etag": "\"sha256-35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277\"",
+        "x-hush-sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+        "x-hush-build": "3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0"
+      }
+    },
+    {
+      "pass": "range",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.pck",
+      "utc": "2026-09-14T02:58:29.796209+00:00",
+      "status": 200,
+      "bytes": 101717356,
+      "sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+      "seconds": 3.262,
+      "matches_export": true,
+      "headers": {
+        "content-type": "application/octet-stream",
+        "content-length": "101717356",
+        "content-encoding": null,
+        "cache-control": "public, max-age=31536000, immutable, no-transform",
+        "cf-cache-status": "HIT",
+        "age": "105",
+        "x-hush-cache": "HIT",
+        "x-hush-cached-at": "2026-09-14T02:56:24.134Z",
+        "cf-ray": "a3ac21594d806c64-DFW",
+        "accept-ranges": "bytes",
+        "etag": "\"sha256-7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6\"",
+        "x-hush-sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+        "x-hush-build": "3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0"
+      }
+    },
+    {
+      "pass": "range",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.wasm",
+      "utc": "2026-09-14T02:58:33.058311+00:00",
+      "status": 200,
+      "bytes": 39513091,
+      "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+      "seconds": 1.46,
+      "matches_export": true,
+      "headers": {
+        "content-type": "application/wasm",
+        "content-length": "39513091",
+        "content-encoding": null,
+        "cache-control": "public, max-age=31536000, immutable, no-transform",
+        "cf-cache-status": "HIT",
+        "age": "124",
+        "x-hush-cache": "HIT",
+        "x-hush-cached-at": "2026-09-14T02:56:24.441Z",
+        "cf-ray": "a3ac216dba1d3ab9-DFW",
+        "accept-ranges": "bytes",
+        "etag": "\"sha256-35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277\"",
+        "x-hush-sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+        "x-hush-build": "3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0"
+      }
+    }
+  ],
+  "http_all_original_file_responses_passed": 20,
+  "browser_logs": [
+    {
+      "level": "log",
+      "message": "Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org",
+      "timestamp": "2026-09-14T02:56:47.857Z",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.js"
+    },
+    {
+      "level": "log",
+      "message": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "timestamp": "2026-09-14T02:56:48.784Z",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.js"
+    },
+    {
+      "level": "log",
+      "message": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "timestamp": "2026-09-14T02:56:48.896Z",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.js"
+    },
+    {
+      "level": "log",
+      "message": "P1A_RUNTIME_READY authority=world-polish-v1 routes=17 solids=19",
+      "timestamp": "2026-09-14T02:56:50.666Z",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.js"
+    },
+    {
+      "level": "log",
+      "message": "Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org",
+      "timestamp": "2026-09-14T02:59:46.600Z",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.js"
+    },
+    {
+      "level": "log",
+      "message": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "timestamp": "2026-09-14T02:59:46.723Z",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.js"
+    },
+    {
+      "level": "log",
+      "message": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "timestamp": "2026-09-14T02:59:46.767Z",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.js"
+    },
+    {
+      "level": "log",
+      "message": "P1A_RUNTIME_READY authority=world-polish-v1 routes=17 solids=19",
+      "timestamp": "2026-09-14T02:59:49.007Z",
+      "url": "https://27ea1fea.hush-basin-r2-proof-20260914.pages.dev/builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.js"
+    }
+  ],
+  "keyboard_verification": {
+    "sustained_holds": "OWNER_CONFIRMED",
+    "owner_statement": "I have confirmed that all the holds are working normally",
+    "scope": "W movement and Shift hold/release for Drive/Spread on the hosted preview",
+    "retry": "AGENT_OBSERVED",
+    "retry_evidence": "R key tap returned craft to spawn in Spread at 0.0 m/s and started countdown at 3"
+  },
+  "limitations": [
+    "Initial browser response headers not captured; HTTP verification loads were already warm",
+    "No CDN performance benchmark",
+    "No gameplay, presentation, or native source changes"
+  ]
+}

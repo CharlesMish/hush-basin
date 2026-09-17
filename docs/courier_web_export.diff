@@ -1,0 +1,49 @@
+diff --git a/tools/export_web.py b/tools/export_web.py
+index c78c167..a372b4a 100644
+--- a/tools/export_web.py
++++ b/tools/export_web.py
+@@ -50,7 +50,10 @@ def main():
+     parser.add_argument("--template", type=Path, default=default_template())
+     parser.add_argument("--output", type=Path, required=True, help="New output directory; never overwritten")
+     parser.add_argument("--smoke", action="store_true", help="Separate diagnostic entry; never use as the playable artifact")
++    parser.add_argument("--courier-smoke", action="store_true", help="Separate first-courier diagnostic entry")
+     args = parser.parse_args()
++    if args.smoke and args.courier_smoke:
++        parser.error("Choose one diagnostic entry")
+     engine, version = resolve_engine(args.godot)
+     template = args.template.expanduser().resolve()
+     if not template.is_file() or sha(template.read_bytes()) != TEMPLATE_SHA256:
+@@ -62,7 +65,7 @@ def main():
+     web = out / "web"
+     web.mkdir()
+     inputs = {str(p.relative_to(ROOT / "game")): sha(p.read_bytes()) for p in source_files()}
+-    record = {"engine": version, "template_sha256": TEMPLATE_SHA256, "diagnostic_entry": args.smoke,
++    record = {"engine": version, "template_sha256": TEMPLATE_SHA256, "diagnostic_entry": args.smoke or args.courier_smoke,
+               "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+               "source_sha256": inputs, "commands": [], "status": "INCOMPLETE"}
+     try:
+@@ -72,14 +75,19 @@ def main():
+                 target = stage / name
+                 target.parent.mkdir(parents=True, exist_ok=True)
+                 shutil.copyfile(ROOT / "game" / name, target)
+-            if args.smoke:
+-                record["diagnostic_script_sha256"] = sha((ROOT / "tools/web_smoke.gd").read_bytes())
+-                shutil.copyfile(ROOT / "tools/web_smoke.gd", stage / "web_smoke.gd")
++            if args.smoke or args.courier_smoke:
++                diagnostic = ROOT / ("tools/courier_web_smoke.gd" if args.courier_smoke else "tools/web_smoke.gd")
++                record["diagnostic_kind"] = "courier" if args.courier_smoke else "run_v0"
++                record["diagnostic_script_sha256"] = sha(diagnostic.read_bytes())
++                shutil.copyfile(diagnostic, stage / "web_smoke.gd")
+                 (stage / "web_smoke.tscn").write_text('[gd_scene load_steps=2 format=3]\n[ext_resource type="Script" path="res://web_smoke.gd" id="1"]\n[node name="WebSmoke" type="Node"]\nscript = ExtResource("1")\n')
+                 settings = stage / "project.godot"
+-                if 'run/main_scene="res://scenes/district_zero_run.tscn"' not in settings.read_text():
++                main_entries = ['run/main_scene="res://scenes/district_zero_run.tscn"',
++                                'run/main_scene="res://scenes/district_zero_courier.tscn"']
++                entries = [entry for entry in main_entries if entry in settings.read_text()]
++                if len(entries) != 1:
+                     raise LaunchError("Smoke entry expects the documented full-game main scene")
+-                settings.write_text(settings.read_text().replace('run/main_scene="res://scenes/district_zero_run.tscn"',
++                settings.write_text(settings.read_text().replace(entries[0],
+                                     'run/main_scene="res://web_smoke.tscn"'))
+             # Only the disposable preset receives this machine's template path.
+             preset = stage / "export_presets.cfg"

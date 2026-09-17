@@ -1,0 +1,110 @@
+{
+  "sizes": {
+    "baseline_pck_bytes": 101717356,
+    "successor_pck_bytes": 101862156,
+    "pck_delta_bytes": 144800,
+    "pck_delta_percent": 0.1423552535124939,
+    "baseline_complete_bytes": 141565089,
+    "successor_complete_bytes": 141709889,
+    "complete_delta_bytes": 144800,
+    "complete_delta_percent": 0.1022851050515694,
+    "complete_definition": "Original nine-file Godot export, raw bytes. Fitted shell is separately versioned, not part of this total. No size optimization or asset removal."
+  },
+  "smokes": {
+    "baseline-smoke": {
+      "pass": true,
+      "checks": {
+        "countdown_reaches_live": true,
+        "minimap_present": true,
+        "pause_stops_run_clock": true,
+        "paused_retry_owned_by_run": true,
+        "quarto_drive": true,
+        "quarto_spread": true,
+        "results_freeze_craft": true,
+        "results_to_free_roam": true,
+        "retry_clears_metrics": true,
+        "retry_reaches_live": true,
+        "run_initialized": true,
+        "segment_finish_results": true,
+        "world_loaded": true
+      },
+      "browser": "151.0.7922.34",
+      "errors": []
+    },
+    "successor-smoke": {
+      "pass": true,
+      "checks": {
+        "countdown_reaches_live": true,
+        "minimap_present": true,
+        "pause_stops_run_clock": true,
+        "paused_retry_owned_by_run": true,
+        "quarto_drive": true,
+        "quarto_spread": true,
+        "results_freeze_craft": true,
+        "results_to_free_roam": true,
+        "retry_clears_metrics": true,
+        "retry_reaches_live": true,
+        "run_initialized": true,
+        "segment_finish_results": true,
+        "world_loaded": true
+      },
+      "browser": "151.0.7922.34",
+      "errors": []
+    }
+  },
+  "pairs": [
+    {
+      "order": "AB",
+      "baseline_pass": true,
+      "successor_pass": true,
+      "workloads": [
+        {
+          "workload": "idle",
+          "baseline_p95_ms": 17.5,
+          "successor_p95_ms": 17.399999999999636,
+          "delta_percent": -0.5714285714306544
+        },
+        {
+          "workload": "drive-turn",
+          "baseline_p95_ms": 17.299999999995634,
+          "successor_p95_ms": 17.5,
+          "delta_percent": 1.1560693641873732
+        }
+      ]
+    },
+    {
+      "order": "BA",
+      "baseline_pass": true,
+      "successor_pass": true,
+      "workloads": [
+        {
+          "workload": "idle",
+          "baseline_p95_ms": 18.299999999999272,
+          "successor_p95_ms": 17.69999999999709,
+          "delta_percent": -3.2786885246022246
+        },
+        {
+          "workload": "drive-turn",
+          "baseline_p95_ms": 17.599999999998545,
+          "successor_p95_ms": 17.60000000000582,
+          "delta_percent": 4.134470543704083e-11
+        }
+      ]
+    }
+  ],
+  "shell": [
+    {
+      "name": "baseline",
+      "build_id": "42c7739b035ac4e2fc4356f435b3e098a45730b6e6e81a0f4d4cbba11aba557f",
+      "shell_bytes": 8269,
+      "shell_sha256": "fa5c23a5a620c66ffc0ae1d66c6febaaf04d779114b4e4d4bb388f93abc10579"
+    },
+    {
+      "name": "successor",
+      "build_id": "174f945680dcd636f1f9c4fb8fc62104ddc61fae1c97e616ff9fa58943939ad5",
+      "shell_bytes": 8269,
+      "shell_sha256": "c37d47cd242d6d38d9b886cd79cb89c53f9a77501d8e37f0498f76aef678ff4b"
+    }
+  ],
+  "note": "Local Chromium, WebGL Compatibility, 1280x720 fitted shell. 20-second RAF idle and W+Shift+A workloads, adjacent AB/BA; includes display pacing, not Godot GPU timing. Production never contacted or deployed. Browser smoke uses existing synthetic finish API; it is not a driven finish claim. Safari, physical gamepad, true background suspension and Web particle contact remain unverified."
+}

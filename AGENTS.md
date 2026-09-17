@@ -1,3 +1,43 @@
+# Current Web shell presentation
+
+The owner confirmed production hosting works and authorized a shell-only sizing
+and fullscreen pass. Preserve all game/native/export artifacts and private R2
+routes. Version the presentation separately; never overwrite immutable build
+HTML. See `docs/WEB_SHELL_PRESENTATION_V1.md`. No gameplay, HUD, mobile, renderer,
+package, DNS, or resource-cleanup successor is part of this pass.
+
+---
+
+# Current production Web promotion
+
+The owner accepted `SAME_ORIGIN_R2_HOSTING_PROVED` and explicitly authorized
+production-named Pages/R2 resources, intentional promotion of the exact accepted
+build to `hush-basin.cmish.dev`, and proof-resource cleanup after independent
+production/domain verification. See `docs/PRODUCTION_WEB_V1.md`. Preserve the
+proven same-origin architecture and all game/native source. No unrelated
+Cloudflare properties, account R2 subscription, or gameplay successor is in scope.
+
+---
+
+# Current Cloudflare hosting proof
+
+The owner accepted Web Feasibility v1 and authorized a temporary Pages/R2
+preview to prove same-origin streaming of the exact accepted export. See
+`docs/CLOUDFLARE_HOSTING_PROOF_V1.md`. This narrowly supersedes the earlier
+no-deployment boundary. No production domain, release, unrelated resources,
+game changes, package reduction, or alternate-origin shell work is authorized.
+
+---
+
+# Current Web feasibility task
+
+Read `WEB_FEASIBILITY_V1_AUTHORITY.md` and `docs/WEB_FEASIBILITY_V1.md` first.
+The owner authorized local single-thread Web export tooling from the September 7
+played main checkpoint. Preserve native gameplay and Forward+; no deployment.
+The prior vehicle and historical instructions follow unchanged.
+
+---
+
 # Current vehicle task
 
 Read `QUARTO_VEHICLE_V1_AUTHORITY.md` and `docs/QUARTO_VEHICLE_V1.md` first on this branch. The owner explicitly requested building on the existing native rig after reviewing the Quarto visual successor proposal. That authorizes the bounded visual scene/rig changes and their comparison tools; inherited gameplay, world, camera, engine and publication boundaries remain. Use the new versioned vehicle verifier for this successor; preserve historical inventories and their truthful results. The inherited instructions follow unchanged.

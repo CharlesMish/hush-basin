@@ -1,0 +1,386 @@
+{
+  "static": {
+    "workloads": [
+      {
+        "id": "T00_NEUTRAL_ROAM",
+        "baseline_p95_ms": 17.405,
+        "successor_p95_ms": 17.374,
+        "delta_percent": -0.1781097385808783,
+        "within_10_percent": true,
+        "baseline_draw_calls": 231.0,
+        "successor_draw_calls": 239.0
+      },
+      {
+        "id": "T01_WEST_GATE",
+        "baseline_p95_ms": 17.499,
+        "successor_p95_ms": 18.14,
+        "delta_percent": 3.663066460940634,
+        "within_10_percent": true,
+        "baseline_draw_calls": 349.0,
+        "successor_draw_calls": 374.0
+      },
+      {
+        "id": "T02_WEST_SWEEP",
+        "baseline_p95_ms": 17.473,
+        "successor_p95_ms": 17.613,
+        "delta_percent": 0.8012361929834677,
+        "within_10_percent": true,
+        "baseline_draw_calls": 491.0,
+        "successor_draw_calls": 496.0
+      },
+      {
+        "id": "T03_EAST_SWEEP",
+        "baseline_p95_ms": 17.502,
+        "successor_p95_ms": 17.619,
+        "delta_percent": 0.6684950291395264,
+        "within_10_percent": true,
+        "baseline_draw_calls": 489.0,
+        "successor_draw_calls": 490.0
+      },
+      {
+        "id": "T04_QUARRY_SHELF",
+        "baseline_p95_ms": 17.31,
+        "successor_p95_ms": 17.45,
+        "delta_percent": 0.8087810514153748,
+        "within_10_percent": true,
+        "baseline_draw_calls": 337.0,
+        "successor_draw_calls": 339.0
+      },
+      {
+        "id": "T05_MARKET_LOOP",
+        "baseline_p95_ms": 17.465,
+        "successor_p95_ms": 17.62,
+        "delta_percent": 0.8874892642427801,
+        "within_10_percent": true,
+        "baseline_draw_calls": 248.0,
+        "successor_draw_calls": 265.0
+      },
+      {
+        "id": "T06_RELAY_LINK",
+        "baseline_p95_ms": 17.504,
+        "successor_p95_ms": 17.79,
+        "delta_percent": 1.633912248628877,
+        "within_10_percent": true,
+        "baseline_draw_calls": 266.0,
+        "successor_draw_calls": 291.0
+      },
+      {
+        "id": "T07_WORKS_LINK",
+        "baseline_p95_ms": 17.519,
+        "successor_p95_ms": 17.559,
+        "delta_percent": 0.22832353444832698,
+        "within_10_percent": true,
+        "baseline_draw_calls": 498.0,
+        "successor_draw_calls": 504.0
+      },
+      {
+        "id": "T08_SOUTH_STRAIGHT",
+        "baseline_p95_ms": 17.324,
+        "successor_p95_ms": 17.435,
+        "delta_percent": 0.6407296236434767,
+        "within_10_percent": true,
+        "baseline_draw_calls": 229.0,
+        "successor_draw_calls": 236.0
+      },
+      {
+        "id": "T09_SOUTH_BENT",
+        "baseline_p95_ms": 17.366,
+        "successor_p95_ms": 17.411,
+        "delta_percent": 0.25912702982842095,
+        "within_10_percent": true,
+        "baseline_draw_calls": 217.0,
+        "successor_draw_calls": 220.0
+      },
+      {
+        "id": "T10_BOUNDARY_EDGE_A",
+        "baseline_p95_ms": 17.44,
+        "successor_p95_ms": 17.629,
+        "delta_percent": 1.0837155963302703,
+        "within_10_percent": true,
+        "baseline_draw_calls": 492.0,
+        "successor_draw_calls": 495.0
+      },
+      {
+        "id": "T11_BOUNDARY_EDGE_B",
+        "baseline_p95_ms": 17.449,
+        "successor_p95_ms": 17.336,
+        "delta_percent": -0.6476015817525549,
+        "within_10_percent": true,
+        "baseline_draw_calls": 256.0,
+        "successor_draw_calls": 275.0
+      },
+      {
+        "id": "T12_BOUNDARY_EDGE_C",
+        "baseline_p95_ms": 17.391,
+        "successor_p95_ms": 17.578,
+        "delta_percent": 1.0752688172043001,
+        "within_10_percent": true,
+        "baseline_draw_calls": 263.0,
+        "successor_draw_calls": 288.0
+      },
+      {
+        "id": "T13_BOUNDARY_EDGE_D",
+        "baseline_p95_ms": 17.287,
+        "successor_p95_ms": 17.482,
+        "delta_percent": 1.128015271591365,
+        "within_10_percent": true,
+        "baseline_draw_calls": 215.0,
+        "successor_draw_calls": 216.0
+      },
+      {
+        "id": "destination_QRY",
+        "baseline_p95_ms": 17.392,
+        "successor_p95_ms": 17.616,
+        "delta_percent": 1.2879484820607079,
+        "within_10_percent": true,
+        "baseline_draw_calls": 488.0,
+        "successor_draw_calls": 492.0
+      },
+      {
+        "id": "destination_DEP",
+        "baseline_p95_ms": 17.401,
+        "successor_p95_ms": 17.64,
+        "delta_percent": 1.3734842825124938,
+        "within_10_percent": true,
+        "baseline_draw_calls": 499.0,
+        "successor_draw_calls": 509.0
+      },
+      {
+        "id": "destination_MRK",
+        "baseline_p95_ms": 17.406,
+        "successor_p95_ms": 17.653,
+        "delta_percent": 1.4190509019878172,
+        "within_10_percent": true,
+        "baseline_draw_calls": 501.0,
+        "successor_draw_calls": 510.0
+      },
+      {
+        "id": "destination_RLY",
+        "baseline_p95_ms": 17.363,
+        "successor_p95_ms": 17.556,
+        "delta_percent": 1.1115590623740124,
+        "within_10_percent": true,
+        "baseline_draw_calls": 482.0,
+        "successor_draw_calls": 484.0
+      },
+      {
+        "id": "destination_WRK",
+        "baseline_p95_ms": 17.573,
+        "successor_p95_ms": 17.748,
+        "delta_percent": 0.9958458999601794,
+        "within_10_percent": true,
+        "baseline_draw_calls": 498.0,
+        "successor_draw_calls": 504.0
+      },
+      {
+        "id": "destination_CLN",
+        "baseline_p95_ms": 17.447,
+        "successor_p95_ms": 17.72,
+        "delta_percent": 1.5647389235971865,
+        "within_10_percent": true,
+        "baseline_draw_calls": 505.0,
+        "successor_draw_calls": 517.0
+      },
+      {
+        "id": "yard_west",
+        "baseline_p95_ms": 17.551,
+        "successor_p95_ms": 17.81,
+        "delta_percent": 1.4756993903481286,
+        "within_10_percent": true,
+        "baseline_draw_calls": 528.0,
+        "successor_draw_calls": 551.0
+      },
+      {
+        "id": "yard_north",
+        "baseline_p95_ms": 17.297,
+        "successor_p95_ms": 17.632,
+        "delta_percent": 1.9367520379256487,
+        "within_10_percent": true,
+        "baseline_draw_calls": 256.0,
+        "successor_draw_calls": 275.0
+      },
+      {
+        "id": "yard_market",
+        "baseline_p95_ms": 17.472,
+        "successor_p95_ms": 17.697,
+        "delta_percent": 1.287774725274704,
+        "within_10_percent": true,
+        "baseline_draw_calls": 516.0,
+        "successor_draw_calls": 531.0
+      },
+      {
+        "id": "overview",
+        "baseline_p95_ms": 17.362,
+        "successor_p95_ms": 17.434,
+        "delta_percent": 0.4146987674231273,
+        "within_10_percent": true,
+        "baseline_draw_calls": 348.0,
+        "successor_draw_calls": 377.0
+      },
+      {
+        "id": "oblique",
+        "baseline_p95_ms": 17.406,
+        "successor_p95_ms": 17.525,
+        "delta_percent": 0.6836722969091102,
+        "within_10_percent": true,
+        "baseline_draw_calls": 152.0,
+        "successor_draw_calls": 181.0
+      }
+    ],
+    "median_workload_delta_percent": 1.0752688172043001,
+    "all_within_10_percent": true
+  },
+  "moving_pairs": [
+    {
+      "workloads": [
+        {
+          "id": "QUARRY_DEPOT",
+          "baseline_p95_ms": 19.654,
+          "successor_p95_ms": 17.951,
+          "delta_percent": -8.66490281876463,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        },
+        {
+          "id": "RELAY_WORKS",
+          "baseline_p95_ms": 19.857,
+          "successor_p95_ms": 18.564,
+          "delta_percent": -6.511557637105303,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        },
+        {
+          "id": "MARKET_CLINIC",
+          "baseline_p95_ms": 18.501,
+          "successor_p95_ms": 18.25,
+          "delta_percent": -1.3566834225177127,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        },
+        {
+          "id": "T02_WEST_SWEEP",
+          "baseline_p95_ms": 18.104,
+          "successor_p95_ms": 18.63,
+          "delta_percent": 2.9054352629253266,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        },
+        {
+          "id": "T03_EAST_SWEEP",
+          "baseline_p95_ms": 18.004,
+          "successor_p95_ms": 18.499,
+          "delta_percent": 2.749389024661175,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        }
+      ],
+      "median_workload_delta_percent": -1.3566834225177127,
+      "all_within_10_percent": true,
+      "pair": 1,
+      "order": "AB"
+    },
+    {
+      "workloads": [
+        {
+          "id": "QUARRY_DEPOT",
+          "baseline_p95_ms": 17.786,
+          "successor_p95_ms": 17.863,
+          "delta_percent": 0.4329247722927976,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        },
+        {
+          "id": "RELAY_WORKS",
+          "baseline_p95_ms": 18.395,
+          "successor_p95_ms": 18.5,
+          "delta_percent": 0.570807284588204,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        },
+        {
+          "id": "MARKET_CLINIC",
+          "baseline_p95_ms": 18.636,
+          "successor_p95_ms": 18.55,
+          "delta_percent": -0.46147241897401825,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        },
+        {
+          "id": "T02_WEST_SWEEP",
+          "baseline_p95_ms": 18.485,
+          "successor_p95_ms": 18.679,
+          "delta_percent": 1.0494995942656127,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        },
+        {
+          "id": "T03_EAST_SWEEP",
+          "baseline_p95_ms": 18.427,
+          "successor_p95_ms": 18.06,
+          "delta_percent": -1.9916426982145796,
+          "within_10_percent": true,
+          "baseline_draw_calls": null,
+          "successor_draw_calls": null
+        }
+      ],
+      "median_workload_delta_percent": 0.4329247722927976,
+      "all_within_10_percent": true,
+      "pair": 2,
+      "order": "BA"
+    }
+  ],
+  "movement_trace": {
+    "exact_baseline_equal": true,
+    "ticks": 1260,
+    "sha256": "29f1049f8e16ec65d288407c35e6ccae46e87c711bb6b54b134e6158c68b9443"
+  },
+  "runtime_collision_identical": true,
+  "terrain_geometry_identical": true,
+  "tests": {
+    "vehicle": {
+      "status": "PASS",
+      "checks": 39,
+      "failures": []
+    },
+    "run": {
+      "status": "PASS",
+      "checks": 54,
+      "failures": []
+    },
+    "paused-retry": {
+      "status": "PASS",
+      "checks": 15,
+      "failures": []
+    },
+    "entrances": {
+      "status": "PASS",
+      "checks": 35,
+      "failures": []
+    },
+    "weather": {
+      "status": "PASS",
+      "checks": 31,
+      "failures": []
+    },
+    "rain-contact": {
+      "status": "PASS",
+      "checks": 3,
+      "failures": []
+    },
+    "successor-graph": {
+      "status": "PASS",
+      "checks": 8,
+      "failures": []
+    }
+  },
+  "note": "Native Forward+ 1280x720, same Apple M5 and engine. Per-workload wall-clock frame p95, not isolated GPU time. All AB/BA samples retained. Extra initial baseline motion retained outside comparison. Static pair was separated by implementation; moving pairs adjacent. No human feel gate."
+}

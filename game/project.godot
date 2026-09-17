@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="District Zero — Quiet Surfaces v1"
-run/main_scene="res://scenes/district_zero_run.tscn"
+run/main_scene="res://review/alpha_loop/alpha_review.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [display]

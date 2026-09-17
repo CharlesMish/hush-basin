@@ -1,0 +1,205 @@
+extends SceneTree
+const Cargo = preload("res://scripts/courier/cargo_observer.gd")
+const Event = preload("res://review/cargo_v1_1/cargo_event.gd")
+const ReviewCraft = preload("res://review/cargo_v1_1/review_craft.gd")
+class Fence:
+	extends Node
+	signal tail
+	func _ready() -> void: process_physics_priority = 1000
+	func _physics_process(_delta: float) -> void: tail.emit()
+var craft: CraftController
+var fence: Fence
+var rows: Array = []
+var checks: Dictionary = {}
+var events: Array = []
+var out := ""
+
+func _initialize() -> void: call_deferred("run")
+func ticks(n: int) -> void:
+	for i in n: await fence.tail
+func release() -> void:
+	for a in ["throttle","brake","steer_left","steer_right","hop","transform"]: Input.action_release(a)
+func box(parent: Node3D, p: Vector3, size: Vector3, id: String) -> void:
+	var body := StaticBody3D.new()
+	body.position = p
+	body.set_meta("source_geometry_id",id)
+	var shape := CollisionShape3D.new()
+	var geometry := BoxShape3D.new()
+	geometry.size = size
+	shape.shape = geometry
+	body.add_child(shape)
+	parent.add_child(body)
+func reset(drive: bool, z: float = 1.5) -> void:
+	release()
+	craft.set_spawn_transform(Transform3D(Basis.IDENTITY,Vector3(0,1.65,z)))
+	craft.reset_craft("matrix_initial_condition")
+	await ticks(3)
+	if drive: Input.action_press("transform")
+	await ticks(90)
+
+func run() -> void:
+	var args := OS.get_cmdline_user_args()
+	out = args[args.find("--result")+1]
+	var stage := Node3D.new()
+	root.add_child(stage)
+	box(stage,Vector3(0,-.5,0),Vector3(2000,1,2000),"HEIGHTFIELD_SUPPORT")
+	box(stage,Vector3(0,10,0),Vector3(2000,20,1),"SAME_FLAT_WALL")
+	craft = load("res://scenes/craft.tscn").instantiate()
+	var tuning := craft.tuning
+	craft.set_script(ReviewCraft)
+	craft.tuning = tuning
+	stage.add_child(craft)
+	fence = Fence.new()
+	root.add_child(fence)
+	await process_frame
+	if "--pressure-only" in args:
+		for drive in [false,true]:
+			await case_pressure(drive,1.5)
+			await case_repeat(drive,30)
+			await case_repeat(drive,6)
+		FileAccess.open(out,FileAccess.WRITE).store_string(JSON.stringify({"rows":rows,"events":events,"checks":checks},"  "))
+		quit()
+		return
+	for drive in [false,true]:
+		for angle in [0.0,60.0,85.0]:
+			for speed in [0.5,2.0,6.0,12.0,24.0]:
+				await case_contact(drive,speed,angle)
+		for speed in [8.0,9.0,9.3]:
+			await case_contact(drive,speed,0.0)
+		await case_pressure(drive)
+		await case_pressure(drive,1.5)
+		await case_repeat(drive,30)
+		await case_repeat(drive,6)
+	for name in ["drift","braking","transform","supported_hop","normal_travel","stale_after_strike"]:
+		await case_control(name)
+	for drive in [false,true]:
+		for angle in [0.0,60.0,85.0]:
+			var previous := -1
+			var ordered: Array = rows.filter(func(row): return row.kind=="contact" and row.drive==drive and row.angle==angle)
+			ordered.sort_custom(func(a,b): return a.initial_speed<b.initial_speed)
+			for row in ordered:
+				checks["monotonic_"+row.id] = row.loss>=previous
+				previous = row.loss
+	var monotonic := true
+	for a in range(0,1001):
+		if a>0: monotonic = monotonic and Cargo.Rules.loss_for_severity(float(a)/1000)>=Cargo.Rules.loss_for_severity(float(a-1)/1000)
+	checks["pure_curve_all_1001_severities_monotonic"] = monotonic
+	var zero := Cargo.new()
+	for i in 5:
+		zero.reduce(.3,false,0,false)
+		zero.reduce(1.0/60,true,1,true)
+	checks["zero_condition_bounded"] = zero.condition_units==0
+	var coherent := true
+	for event in events:
+		coherent = coherent and event.same_physics_frame and event.fresh and event.impact_closing_speed<=event.pre_impact_world_speed+0.001
+	checks["fresh_same_frame_closing_bounded_by_incoming_speed"] = coherent
+	var passed := true
+	for v in checks.values(): passed = passed and v
+	FileAccess.open(out,FileAccess.WRITE).store_string(JSON.stringify({"status":"PASS" if passed else "FAIL","checks":checks,"rows":rows,"events":events,"engine":Engine.get_version_info(),"fixture":"one flat support plane; same flat vertical wall; known initial velocity after settling; unchanged controller and response"},"  "))
+	print("CARGO_MATRIX ",rows.size()," cases; ",checks.size()," checks; ","PASS" if passed else "FAIL")
+	release()
+	quit(0 if passed else 1)
+
+func observe(cargo: RefCounted, row: Dictionary, tick: int) -> void:
+	var before: int = cargo.condition_units
+	var peak: int = cargo.get("_charged_peak")
+	var episode: int = cargo.episodes
+	var sample: Dictionary = cargo.sample(craft,1.0/60.0)
+	row.valid = row.valid and sample.valid
+	if sample.get("fresh",false):
+		row.peak_severity = maxf(row.peak_severity,craft.last_impact_severity)
+		row.peak_closing = maxf(row.peak_closing,craft.last_impact_closing_speed)
+		if sample.eligible:
+			row.episode_peak_severity = craft.last_impact_severity if cargo.episodes!=episode else maxf(row.episode_peak_severity,craft.last_impact_severity)
+		var event := Event.record(craft,cargo,sample,before,peak,row.episode_peak_severity)
+		event["case"] = row.id
+		event["tick"] = tick
+		event["new_episode"] = cargo.episodes!=episode
+		events.append(event)
+		if row.first_impact.is_empty(): row.first_impact = event
+		if sample.loss>0: row.loss_events.append(event)
+	row.loss = 1000-cargo.condition_units
+	row.episodes = cargo.episodes
+	row.impacts = cargo.impact_samples
+	row.ignored = cargo.ignored_samples
+
+func new_row(id: String, kind: String, drive: bool) -> Dictionary:
+	return {"id":id,"kind":kind,"drive":drive,"loss":0,"episodes":0,"impacts":0,"ignored":0,"peak_severity":0.0,"peak_closing":0.0,"episode_peak_severity":0.0,"first_impact":{},"loss_events":[],"valid":true}
+
+func case_contact(drive: bool, speed: float, angle: float) -> void:
+	await reset(drive)
+	var row := new_row("%s_%.1f_mps_%.0f_deg" % ["Drive" if drive else "Spread",speed,angle],"contact",drive)
+	row["angle"] = angle
+	row["initial_speed"] = speed
+	var cargo := Cargo.new()
+	cargo.begin(craft)
+	craft.velocity = Vector3(sin(deg_to_rad(angle))*speed,0,-cos(deg_to_rad(angle))*speed)
+	for tick in 120:
+		await fence.tail
+		observe(cargo,row,tick)
+	checks[row.id+"_valid"] = row.valid
+	rows.append(row)
+
+func case_pressure(drive: bool, start_z: float = 20) -> void:
+	await reset(drive,start_z)
+	var row := new_row("pressure_%s_start_%.1f" % [drive,start_z],"pressure",drive)
+	var cargo := Cargo.new()
+	cargo.begin(craft)
+	Input.action_press("throttle")
+	for tick in 600:
+		await fence.tail
+		observe(cargo,row,tick)
+	checks[row.id+"_bounded"] = row.valid and row.episodes==1 and row.loss<=240
+	if start_z<2: checks[row.id+"_no_pressure_escalation"] = row.loss==0
+	rows.append(row)
+
+func case_repeat(drive: bool, separation_ticks: int) -> void:
+	await reset(drive)
+	var row := new_row("repeat_%s_%d_ticks" % [drive,separation_ticks],"repeat",drive)
+	var cargo := Cargo.new()
+	cargo.begin(craft)
+	# Explicit synthetic separation for reducer adjudication, not a driven route.
+	for repetition in 3:
+		craft.global_position = Vector3(0,craft.global_position.y,1.5)
+		craft.velocity = Vector3(0,0,-12)
+		for contact_tick in 3:
+			await fence.tail
+			observe(cargo,row,repetition*100+contact_tick)
+		craft.global_position.z = 5
+		craft.velocity = Vector3.ZERO
+		for tick in separation_ticks:
+			await fence.tail
+			observe(cargo,row,repetition*100+tick+1)
+	checks[row.id+"_distinct"] = row.valid and row.episodes==3 and row.loss>240
+	rows.append(row)
+
+func case_control(name: String) -> void:
+	await reset(false,400)
+	var cargo := Cargo.new()
+	if name=="stale_after_strike":
+		craft.global_position.z = 1.5
+		craft.velocity = Vector3(0,0,-12)
+		await ticks(1)
+		craft.global_position.z = 400
+		craft.velocity = Vector3.ZERO
+	cargo.begin(craft)
+	var row := new_row(name,"control",false)
+	var old_hops := craft.hop_count
+	for tick in 240:
+		if name=="drift":
+			Input.action_press("throttle");Input.action_press("transform");Input.action_press("steer_left")
+		elif name=="braking":
+			if tick==0: craft.velocity=Vector3(20,0,0)
+			Input.action_press("brake")
+		elif name=="transform":
+			if tick%60<30: Input.action_press("transform")
+			else: Input.action_release("transform")
+		elif name=="supported_hop":
+			if tick==10: Input.action_press("hop")
+			if tick==11: Input.action_release("hop")
+		elif name=="normal_travel": Input.action_press("throttle")
+		await fence.tail
+		observe(cargo,row,tick)
+	checks[row.id+"_zero"] = row.valid and row.loss==0
+	if name=="supported_hop": checks["hop_exercised_and_landed"] = craft.hop_count==old_hops+1 and craft.probe_hit_count==3
+	rows.append(row)
