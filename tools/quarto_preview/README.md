@@ -17,7 +17,7 @@ No engine or package installation occurs. Supply an existing Babylon core:
 
 ```sh
 python3 tools/quarto_preview/serve.py \
-  --babylon-root /home/cmish/MECHA/MT1/node_modules/@babylonjs/core
+  --babylon-root <LOCAL_BABYLON_CORE>
 ```
 
 Open `http://127.0.0.1:5192`. The server binds only to loopback and exposes the
@@ -28,8 +28,8 @@ No game files are modified by the preview.
 Static interchange snapshots can be written to a new directory:
 
 ```sh
-python3 tools/quarto_preview/export_glb.py --output /tmp/quarto-native-v1-glb-review
-python3 tools/quarto_preview/verify_exports.py --exports /tmp/quarto-native-v1-glb-review
+python3 tools/quarto_preview/export_glb.py --output <LOCAL_TEMP>/quarto-native-v1-glb-review
+python3 tools/quarto_preview/verify_exports.py --exports <LOCAL_TEMP>/quarto-native-v1-glb-review
 ```
 
 The three GLBs retain the native hierarchy at Spread, midpoint and Drive, with

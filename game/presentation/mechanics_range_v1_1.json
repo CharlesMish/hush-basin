@@ -1,0 +1,24 @@
+{
+  "version": "mechanics-range-v1.1",
+  "drift": {
+    "speed_mps": 22.0,
+    "slip_min_deg": 15.0,
+    "slip_max_deg": 75.0,
+    "grace_s": 0
+  },
+  "commit": {
+    "speed_mps": 24.0,
+    "slip_max_deg": 45.0
+  },
+  "haul": {
+    "first_leg_m": 160.0,
+    "second_leg_m": 90.0,
+    "transfer_m": 40.0,
+    "spread_min_mps": 4.0
+  },
+  "thread": {
+    "approach_radius_m": 15.0,
+    "exit_radius_m": 15.0,
+    "corridor_margin_m": 9.0
+  }
+}

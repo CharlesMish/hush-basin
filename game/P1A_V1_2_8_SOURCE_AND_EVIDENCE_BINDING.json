@@ -9,7 +9,7 @@
     "v1_2_7_input_inventory_record_count": 2187,
     "v1_2_7_input_inventory_sha256": "b943b4c6c6b3a0a5166a3c8431582628e71b1b2421619220dd8b9b94bbd5d8fe",
     "unmaterialized_world_builder_sha256": "c016d5e2654919d6de5e1416ab21a40da81149ec11100dae8d95a89922b9dc38",
-    "local_path_hint": "/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.7R1-Repair-Run-1/District-Zero-P1A-v1.2.7R1-Source"
+    "local_path_hint": "<LOCAL_HANDOFF>/District-Zero-P1A-v1.2.7R1-Repair-Run-1/District-Zero-P1A-v1.2.7R1-Source"
   },
   "historical_run_2_evidence": {
     "role": "closed_v1_2_7r1_no_interval_evidence",
@@ -26,7 +26,7 @@
     "human_attempts": 0,
     "human_world_gate": "NOT PERFORMED",
     "P1B": "FROZEN",
-    "local_zip_path_hint": "/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.7R1-Repair-Run-2/District-Zero-P1A-v1.2.7R1-Calibration-Validation-Evidence.zip"
+    "local_zip_path_hint": "<LOCAL_HANDOFF>/District-Zero-P1A-v1.2.7R1-Repair-Run-2/District-Zero-P1A-v1.2.7R1-Calibration-Validation-Evidence.zip"
   },
   "inherited_authority_hashes": {
     "P1A_V1_2_7R1_HARNESS_REPAIR_AUTHORITY.md": "7888d43f7307322fc82ac3fd139ead563aeb570b9f0fc478b0b502f5768897e6",

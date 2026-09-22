@@ -1,0 +1,14 @@
+{
+  "identity":"market-home-lantern-v1",
+  "owner":"MRK_FIN_N",
+  "roof_offset_m":0.0,
+  "mast_rise_m":13.0,
+  "mast_radius_m":0.32,
+  "crown_radius_m":2.8,
+  "crown_height_m":2.2,
+  "steel":"344d49",
+  "market":"367367",
+  "warm":"d9bb79",
+  "emission_energy":0.55,
+  "note":"Rooftop market lantern. No physics, lights, particles or shaders; no ground footprint."
+}

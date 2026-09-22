@@ -28,7 +28,7 @@ The main project scene now launches the existing Run v0 scene.
 ## Observed verification
 
 Run directory used for evidence:
-`/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-World-Polish-V1-Run-1`.
+`<LOCAL_HANDOFF>/District-Zero-World-Polish-V1-Run-1`.
 All exact subprocess argv, cwd and exit codes are in `evidence/complete-3/suite.json`.
 
 From the original repository:
@@ -47,7 +47,7 @@ Historical source and recorded R7 evidence are retained unchanged.
 From this successor source, final complete command:
 
 ```sh
-python3 tools/verify_world_polish_suite.py --evidence /Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-World-Polish-V1-Run-1/evidence/complete-3 --native
+python3 tools/verify_world_polish_suite.py --evidence <LOCAL_HANDOFF>/District-Zero-World-Polish-V1-Run-1/evidence/complete-3 --native
 ```
 
 Observed exit 1, overall FAIL. Individual results:

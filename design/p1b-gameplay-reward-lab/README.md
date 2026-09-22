@@ -9,7 +9,7 @@ player and does not modify product source.
 
 ## Read-only reference
 
-`/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.8-Vehicle-Integration-R7-Run-1/District-Zero-P1A-v1.2.8-Vehicle-R7-Player`
+`<LOCAL_HANDOFF>/District-Zero-P1A-v1.2.8-Vehicle-Integration-R7-Run-1/District-Zero-P1A-v1.2.8-Vehicle-R7-Player`
 
 The reference already provides a stable craft, 17 classified routes, 11 named
 nodes, collision and route telemetry, map highlighting, a diagnostic menu, and

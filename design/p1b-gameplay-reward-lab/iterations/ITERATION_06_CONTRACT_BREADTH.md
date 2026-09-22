@@ -304,7 +304,7 @@ Command:
 
 ```text
 PYTHONPATH=tools python3 -B tools/test_iteration_06_contracts.py \
-  --r7-root /Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.8-Vehicle-Integration-R7-Run-1/District-Zero-P1A-v1.2.8-Vehicle-R7-Player \
+  --r7-root <LOCAL_HANDOFF>/District-Zero-P1A-v1.2.8-Vehicle-Integration-R7-Run-1/District-Zero-P1A-v1.2.8-Vehicle-R7-Player \
   --report analysis/ITERATION_06_CONTRACT_REPORT.json
 ```
 

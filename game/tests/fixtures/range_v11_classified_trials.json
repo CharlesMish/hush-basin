@@ -1,0 +1,891 @@
+[
+  {
+    "id": "DEP_straight",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ]
+  },
+  {
+    "id": "RLY_interior",
+    "routes": [
+      "-L5",
+      "-L4"
+    ]
+  },
+  {
+    "id": "RLY_outer_v1",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "course_gain": 0.5,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "CLN_direct",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        110,
+        75
+      ]
+    ]
+  },
+  {
+    "id": "CLN_south_dogleg",
+    "routes": [
+      "-L1",
+      "S0",
+      "DOG",
+      "S1"
+    ],
+    "spread": true
+  },
+  {
+    "id": "QRY_short",
+    "routes": [
+      "-L1",
+      "-L0",
+      "-A0"
+    ]
+  },
+  {
+    "id": "QRY_long_conservative",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 9000
+  },
+  {
+    "id": "QRY_long_spread",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "spread": true,
+    "ticks": 9000
+  },
+  {
+    "id": "DEP_shape_0.75_2.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.4,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 3.4,
+        "end": 5.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_0.75_2.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.9,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 3.9,
+        "end": 6.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_0.75_3.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.4,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 4.4,
+        "end": 7.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_0.75_3.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.9,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 4.9,
+        "end": 8.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_1.0_2.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.4,
+        "drive": true,
+        "steer": 1.0
+      },
+      {
+        "start": 3.4,
+        "end": 5.4,
+        "drive": true,
+        "steer": -1.0
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_1.0_2.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.9,
+        "drive": true,
+        "steer": 1.0
+      },
+      {
+        "start": 3.9,
+        "end": 6.4,
+        "drive": true,
+        "steer": -1.0
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_1.0_3.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.4,
+        "drive": true,
+        "steer": 1.0
+      },
+      {
+        "start": 4.4,
+        "end": 7.4,
+        "drive": true,
+        "steer": -1.0
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_1.0_3.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.9,
+        "drive": true,
+        "steer": 1.0
+      },
+      {
+        "start": 4.9,
+        "end": 8.4,
+        "drive": true,
+        "steer": -1.0
+      }
+    ]
+  },
+  {
+    "id": "RLY_clean_40",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "course_gain": 1.0,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_clean_60",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 60,
+    "course_gain": 1.0,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_clean_80",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "course_gain": 1.0,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "DEP_right_-20_2.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "heading_offset": -20,
+    "trace_every": 1,
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.9,
+        "drive": true,
+        "steer": -0.75
+      },
+      {
+        "start": 3.9,
+        "end": 6.4,
+        "drive": true,
+        "steer": 0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_right_-20_3.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "heading_offset": -20,
+    "trace_every": 1,
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.4,
+        "drive": true,
+        "steer": -0.75
+      },
+      {
+        "start": 4.4,
+        "end": 7.4,
+        "drive": true,
+        "steer": 0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_right_-20_3.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "heading_offset": -20,
+    "trace_every": 1,
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.9,
+        "drive": true,
+        "steer": -0.75
+      },
+      {
+        "start": 4.9,
+        "end": 8.4,
+        "drive": true,
+        "steer": 0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_right_-20_4.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "heading_offset": -20,
+    "trace_every": 1,
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 5.4,
+        "drive": true,
+        "steer": -0.75
+      },
+      {
+        "start": 5.4,
+        "end": 9.4,
+        "drive": true,
+        "steer": 0.75
+      }
+    ]
+  },
+  {
+    "id": "THREAD_spread_8",
+    "routes": [
+      "-L1",
+      "S0",
+      "DOG",
+      "S1"
+    ],
+    "spread": true,
+    "spread_speed": 8,
+    "look": 6
+  },
+  {
+    "id": "THREAD_spread_10",
+    "routes": [
+      "-L1",
+      "S0",
+      "DOG",
+      "S1"
+    ],
+    "spread": true,
+    "spread_speed": 10,
+    "look": 6
+  },
+  {
+    "id": "HAUL_outer_60",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 60,
+    "course_gain": 1,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_outer_80",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 80,
+    "course_gain": 1,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_outer_100",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3600_40",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3600,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3600,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 40
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3600_70",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3600,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3600,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 70
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3600_100",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3600,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3600,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 100
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3800_40",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3800,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3800,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 40
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3800_70",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3800,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3800,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 70
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3800_100",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3800,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3800,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 100
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3950_40",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3950,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3950,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 40
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3950_70",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3950,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3950,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 70
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_transfer_3950_100",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3950,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3950,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 100
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  }
+]

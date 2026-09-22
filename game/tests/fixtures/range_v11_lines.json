@@ -1,0 +1,89 @@
+{
+  "DEP_style": {
+    "heading_offset": -20,
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.9,
+        "drive": true,
+        "steer": -0.75
+      },
+      {
+        "start": 4.9,
+        "end": 8.4,
+        "drive": true,
+        "steer": 0.75
+      }
+    ]
+  },
+  "RLY_sweep": {
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "speed": 27,
+    "unfold_remaining": 30,
+    "course_gain": 1
+  },
+  "WRK_way": {
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 64,
+    "hop_distance": 51,
+    "speed": 30
+  },
+  "WRK_hot_recovery": {
+    "committed": true,
+    "unfold_remaining": 5,
+    "speed": 30,
+    "maneuvers": [
+      {
+        "start": 4,
+        "end": 12,
+        "drive": false,
+        "steer": 0,
+        "speed": 8
+      }
+    ],
+    "hop_start_s": 4.6,
+    "hop_end_s": 4.75
+  },
+  "THREAD_dogleg": {
+    "spread": true,
+    "spread_speed": 10
+  },
+  "THREAD_hop": {
+    "spread": true,
+    "spread_speed": 10,
+    "south_hop": true
+  },
+  "HAUL_long": {
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3950,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3950,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 70
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  }
+}

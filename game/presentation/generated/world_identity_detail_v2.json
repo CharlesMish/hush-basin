@@ -1,0 +1,6780 @@
+{
+  "config_sha256": "b7c9f32bc2ca490d1a206270584c941cd2d828bd551494172bb42914589e2565",
+  "labels": [
+    {
+      "district": "quarry",
+      "height": 0.85,
+      "owner": "B01",
+      "p": [
+        -80.0,
+        14.35,
+        4.271999999999999
+      ],
+      "text": "CUT / REPAIR",
+      "width": 18.08352,
+      "yaw": 0
+    },
+    {
+      "district": "relay",
+      "height": 0.85,
+      "owner": "B02",
+      "p": [
+        -66.392,
+        18.35,
+        -70.0
+      ],
+      "text": "BASIN UTILITIES",
+      "width": 8.222592,
+      "yaw": -1.5707963267948966
+    },
+    {
+      "district": "works",
+      "height": 0.85,
+      "owner": "B03",
+      "p": [
+        20.0,
+        16.35,
+        -69.27199999999999
+      ],
+      "text": "MATERIAL STORES",
+      "width": 16.877951999999997,
+      "yaw": 3.141592653589793
+    },
+    {
+      "district": "works",
+      "height": 0.85,
+      "owner": "B04",
+      "p": [
+        43.608,
+        20.35,
+        -90.0
+      ],
+      "text": "WORKS OFFICE",
+      "width": 8.222592,
+      "yaw": -1.5707963267948966
+    },
+    {
+      "district": "works",
+      "height": 0.85,
+      "owner": "B05",
+      "p": [
+        104.388,
+        18.35,
+        -100.0
+      ],
+      "text": "PUMP / SERVICE",
+      "width": 5.873279999999999,
+      "yaw": -1.5707963267948966
+    },
+    {
+      "district": "works",
+      "height": 0.85,
+      "owner": "B06",
+      "p": [
+        135.0,
+        22.35,
+        -54.528
+      ],
+      "text": "AIR HANDLING",
+      "width": 6.02784,
+      "yaw": 0
+    },
+    {
+      "district": "works",
+      "height": 0.85,
+      "owner": "B07",
+      "p": [
+        75.488,
+        15.35,
+        10.0
+      ],
+      "text": "FABRICATION",
+      "width": 11.746559999999999,
+      "yaw": -1.5707963267948966
+    },
+    {
+      "district": "clinic",
+      "height": 0.85,
+      "owner": "B08",
+      "p": [
+        110.168,
+        19.35,
+        30.0
+      ],
+      "text": "WATER OFFICE",
+      "width": 7.047936,
+      "yaw": -1.5707963267948966
+    },
+    {
+      "district": "market",
+      "height": 0.85,
+      "owner": "B09",
+      "p": [
+        -40.0,
+        13.35,
+        89.528
+      ],
+      "text": "PANTRY",
+      "width": 10.850112,
+      "yaw": 3.141592653589793
+    },
+    {
+      "district": "market",
+      "height": 0.85,
+      "owner": "B10",
+      "p": [
+        0.0,
+        16.35,
+        91.232
+      ],
+      "text": "BASIN MARKET",
+      "width": 12.05568,
+      "yaw": 0
+    },
+    {
+      "district": "market",
+      "height": 0.85,
+      "owner": "B11",
+      "p": [
+        40.0,
+        13.35,
+        89.528
+      ],
+      "text": "TEA & MENDING",
+      "width": 10.850112,
+      "yaw": 3.141592653589793
+    },
+    {
+      "district": "depot",
+      "height": 0.85,
+      "owner": "B12",
+      "p": [
+        -115.0,
+        14.35,
+        137.24800000000002
+      ],
+      "text": "FREIGHT OFFICE",
+      "width": 14.466816,
+      "yaw": 3.141592653589793
+    },
+    {
+      "district": "clinic",
+      "height": 0.85,
+      "owner": "B13",
+      "p": [
+        115.0,
+        14.35,
+        137.24800000000002
+      ],
+      "text": "CLINIC SERVICES",
+      "width": 14.466816,
+      "yaw": 3.141592653589793
+    },
+    {
+      "district": "depot",
+      "height": 0.85,
+      "owner": "B14",
+      "p": [
+        2.978341015526363e-16,
+        10.66,
+        148.568
+      ],
+      "text": "SOUTH GATE",
+      "width": 8.438975999999998,
+      "yaw": 3.141592653589793
+    },
+    {
+      "district": "quarry",
+      "height": 0.85,
+      "owner": "QRY_STEP_A",
+      "p": [
+        -296.848,
+        10.85,
+        12.0
+      ],
+      "text": "EXTRACTION / 01",
+      "width": 15.456000000000001,
+      "yaw": 1.5707963267948966
+    },
+    {
+      "district": "quarry",
+      "height": 0.85,
+      "owner": "QRY_STEP_B",
+      "p": [
+        -301.848,
+        13.85,
+        32.0
+      ],
+      "text": "GRADE / 02",
+      "width": 12.3648,
+      "yaw": 1.5707963267948966
+    },
+    {
+      "district": "quarry",
+      "height": 0.85,
+      "owner": "QRY_STEP_C",
+      "p": [
+        -297.848,
+        16.85,
+        48.0
+      ],
+      "text": "BASIN CUT / 03",
+      "width": 7.728000000000001,
+      "yaw": 1.5707963267948966
+    },
+    {
+      "district": "depot",
+      "height": 0.85,
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -145.0,
+        18.75,
+        123.032
+      ],
+      "text": "01",
+      "width": 4.6368,
+      "yaw": 0
+    },
+    {
+      "district": "depot",
+      "height": 0.85,
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -131.0,
+        14.75,
+        123.032
+      ],
+      "text": "02",
+      "width": 4.6368,
+      "yaw": 0
+    },
+    {
+      "district": "market",
+      "height": 0.85,
+      "owner": "MRK_FIN_N",
+      "p": [
+        3.860086710912457e-16,
+        18.35,
+        63.848
+      ],
+      "text": "MARKET HALL",
+      "width": 7.728000000000001,
+      "yaw": 3.141592653589793
+    }
+  ],
+  "parts": [
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -83.0,
+        16.2,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -83.0,
+        16.96,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -83.765,
+        16.3,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -80.0,
+        16.2,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -80.0,
+        16.96,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -80.765,
+        16.3,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -77.0,
+        16.2,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -77.0,
+        16.96,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -77.765,
+        16.3,
+        -5.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -80.0,
+        14.35,
+        4.1899999999999995
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        19.656,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "B01",
+      "p": [
+        -71.1548,
+        14.35,
+        4.27
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.17936,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -60.0,
+        21.2,
+        -70.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        3.4,
+        0.2
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -60.0,
+        21.0,
+        -70.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.8,
+        0.16,
+        0.22
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -61.92,
+        21.3,
+        -70.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        1.15,
+        0.25
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -58.08,
+        21.3,
+        -70.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        1.15,
+        0.25
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -60.0,
+        22.2,
+        -70.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.3,
+        0.16,
+        0.22
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -62.52,
+        22.5,
+        -70.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        1.15,
+        0.25
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -57.48,
+        22.5,
+        -70.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        1.15,
+        0.25
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -58.8,
+        20.15,
+        -70.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1.3,
+        1.3
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -66.31,
+        18.35,
+        -70.0
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        8.9376,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "relay",
+      "kind": "box",
+      "owner": "B02",
+      "p": [
+        -66.39,
+        18.35,
+        -65.97808
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        0.536256,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B03",
+      "p": [
+        17.4,
+        18.15,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "size": [
+        1.04,
+        5.6,
+        1.04
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B03",
+      "p": [
+        17.4,
+        17.66,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.25,
+        0.32,
+        6.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B03",
+      "p": [
+        17.4,
+        18.55,
+        -62.32
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.1,
+        1.5,
+        1.1
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B03",
+      "p": [
+        17.4,
+        19.32,
+        -62.32
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.38,
+        0.16,
+        1.38
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B03",
+      "p": [
+        22.6,
+        18.15,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "size": [
+        1.04,
+        5.6,
+        1.04
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B03",
+      "p": [
+        22.6,
+        17.66,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.25,
+        0.32,
+        6.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B03",
+      "p": [
+        22.6,
+        18.55,
+        -62.32
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.1,
+        1.5,
+        1.1
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B03",
+      "p": [
+        22.6,
+        19.32,
+        -62.32
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.38,
+        0.16,
+        1.38
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B03",
+      "p": [
+        20.0,
+        17.74,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        0.18,
+        0.22
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B03",
+      "p": [
+        20.0,
+        16.35,
+        -69.19
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        18.345599999999997,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "works",
+      "kind": "box",
+      "owner": "B03",
+      "p": [
+        11.744480000000001,
+        16.35,
+        -69.27
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        1.1007359999999997,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        47.4,
+        22.15,
+        -90.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1.3,
+        4.96
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        47.4,
+        22.84,
+        -90.7
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        47.4,
+        22.84,
+        -90.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        47.4,
+        22.84,
+        -89.3
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        52.6,
+        22.15,
+        -90.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1.3,
+        4.96
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        52.6,
+        22.84,
+        -90.7
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        52.6,
+        22.84,
+        -90.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        52.6,
+        22.84,
+        -89.3
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        50.0,
+        21.74,
+        -90.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        0.18,
+        0.22
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        43.69,
+        20.35,
+        -90.0
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        8.9376,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "works",
+      "kind": "box",
+      "owner": "B04",
+      "p": [
+        43.61,
+        20.35,
+        -85.97808
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        0.536256,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B05",
+      "p": [
+        107.4,
+        20.15,
+        -100.0
+      ],
+      "role": "roof",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "size": [
+        1.04,
+        4.76,
+        1.04
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B05",
+      "p": [
+        107.4,
+        19.66,
+        -100.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.25,
+        0.32,
+        5.304
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B05",
+      "p": [
+        107.4,
+        20.55,
+        -101.972
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.1,
+        1.5,
+        1.1
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B05",
+      "p": [
+        107.4,
+        21.32,
+        -101.972
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.38,
+        0.16,
+        1.38
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B05",
+      "p": [
+        112.6,
+        20.15,
+        -100.0
+      ],
+      "role": "roof",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "size": [
+        1.04,
+        4.76,
+        1.04
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B05",
+      "p": [
+        112.6,
+        19.66,
+        -100.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.25,
+        0.32,
+        5.304
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B05",
+      "p": [
+        112.6,
+        20.55,
+        -101.972
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.1,
+        1.5,
+        1.1
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "B05",
+      "p": [
+        112.6,
+        21.32,
+        -101.972
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.38,
+        0.16,
+        1.38
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B05",
+      "p": [
+        110.0,
+        19.74,
+        -100.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        0.18,
+        0.22
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B05",
+      "p": [
+        104.47,
+        18.35,
+        -100.0
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        6.3839999999999995,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "works",
+      "kind": "box",
+      "owner": "B05",
+      "p": [
+        104.39,
+        18.35,
+        -97.1272
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        0.38303999999999994,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        133.18,
+        24.15,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1.3,
+        4.96
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        133.18,
+        24.84,
+        -60.7
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        133.18,
+        24.84,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        133.18,
+        24.84,
+        -59.3
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        136.82,
+        24.15,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1.3,
+        4.96
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        136.82,
+        24.84,
+        -60.7
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        136.82,
+        24.84,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        136.82,
+        24.84,
+        -59.3
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        135.0,
+        23.74,
+        -60.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.8999999999999995,
+        0.18,
+        0.22
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        135.0,
+        22.35,
+        -54.61
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.552,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "works",
+      "kind": "box",
+      "owner": "B06",
+      "p": [
+        137.9484,
+        22.35,
+        -54.53
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.39311999999999997,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        82.0,
+        17.2,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        82.0,
+        17.96,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        81.235,
+        17.3,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        85.0,
+        17.2,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        85.0,
+        17.96,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        84.235,
+        17.3,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        88.0,
+        17.2,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        88.0,
+        17.96,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        87.235,
+        17.3,
+        10.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        75.57,
+        15.35,
+        10.0
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        12.767999999999999,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "works",
+      "kind": "box",
+      "owner": "B07",
+      "p": [
+        75.49,
+        15.35,
+        15.7456
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        0.7660799999999999,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        112.004,
+        21.5,
+        30.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.15,
+        2,
+        5.6
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        117.996,
+        21.5,
+        30.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.15,
+        2,
+        5.6
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        20.8,
+        27.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.163199999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        20.8,
+        32.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.163199999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        21.3,
+        27.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.163199999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        21.3,
+        32.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.163199999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        21.8,
+        27.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.163199999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        21.8,
+        32.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.163199999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        22.3,
+        27.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.163199999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        22.3,
+        32.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.163199999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        115.0,
+        21.05,
+        30.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.8519999999999994,
+        1.1,
+        2.88
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        110.25,
+        19.35,
+        30.0
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        7.660799999999999,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B08",
+      "p": [
+        110.17,
+        19.35,
+        33.44736
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        -1.5707963267948966,
+        0
+      ],
+      "size": [
+        0.45964799999999995,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -40.0,
+        15.05,
+        95.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        1.1,
+        3.84
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -40.0,
+        15.65,
+        95.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.800000000000001,
+        0.18,
+        4.64
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -42.5,
+        15.12,
+        96.96
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -42.5,
+        15.12,
+        93.04
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -40.0,
+        15.12,
+        96.96
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -40.0,
+        15.12,
+        93.04
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -37.5,
+        15.12,
+        96.96
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -37.5,
+        15.12,
+        93.04
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -40.0,
+        13.35,
+        89.61
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        11.7936,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "market",
+      "kind": "box",
+      "owner": "B09",
+      "p": [
+        -45.30712,
+        13.35,
+        89.53
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        0.7076159999999999,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        0.0,
+        18.05,
+        85.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        1.1,
+        3.84
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        0.0,
+        18.65,
+        85.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.800000000000001,
+        0.18,
+        4.64
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        -2.5,
+        18.12,
+        86.96
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        -2.5,
+        18.12,
+        83.04
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        0.0,
+        18.12,
+        86.96
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        0.0,
+        18.12,
+        83.04
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        2.5,
+        18.12,
+        86.96
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        2.5,
+        18.12,
+        83.04
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7999999999999998,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        0.0,
+        16.35,
+        91.15
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.104,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "market",
+      "kind": "box",
+      "owner": "B10",
+      "p": [
+        5.8968,
+        16.35,
+        91.23
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.7862399999999999,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        36.5,
+        15.5,
+        95.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.15,
+        2,
+        5.6
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        43.5,
+        15.5,
+        95.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.15,
+        2,
+        5.6
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        14.8,
+        92.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        14.8,
+        97.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        15.3,
+        92.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        15.3,
+        97.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        15.8,
+        92.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        15.8,
+        97.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        16.3,
+        92.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        16.3,
+        97.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        15.05,
+        95.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.5,
+        1.1,
+        2.88
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        40.0,
+        13.35,
+        89.61
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        11.7936,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "market",
+      "kind": "box",
+      "owner": "B11",
+      "p": [
+        34.69288,
+        13.35,
+        89.53
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        0.7076159999999999,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -118.0,
+        16.2,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -118.0,
+        16.96,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -118.765,
+        16.3,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -115.0,
+        16.2,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -115.0,
+        16.96,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -115.765,
+        16.3,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -112.0,
+        16.2,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        1.4,
+        5.2
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -112.0,
+        16.96,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        -0.16
+      ],
+      "size": [
+        1.8,
+        0.16,
+        5.6
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -112.765,
+        16.3,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.06,
+        0.65,
+        4.0
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -115.0,
+        14.35,
+        137.33
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        15.724799999999998,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B12",
+      "p": [
+        -122.07616,
+        14.35,
+        137.25
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        0.9434879999999999,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        111.5,
+        16.5,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.15,
+        2,
+        5.6
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        118.5,
+        16.5,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.15,
+        2,
+        5.6
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        15.8,
+        142.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        15.8,
+        147.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        16.3,
+        142.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        16.3,
+        147.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        16.8,
+        142.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        16.8,
+        147.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        17.3,
+        142.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        17.3,
+        147.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.199999999999999,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        16.05,
+        145.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.5,
+        1.1,
+        2.88
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        115.0,
+        14.35,
+        137.33
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        15.724799999999998,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "B13",
+      "p": [
+        107.92384,
+        14.35,
+        137.25
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        0.9434879999999999,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        -2.6,
+        12.15,
+        151.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1.3,
+        2.3312
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        -2.6,
+        12.84,
+        150.3
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        -2.6,
+        12.84,
+        151.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        -2.6,
+        12.84,
+        151.7
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        2.6,
+        12.15,
+        151.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1.3,
+        2.3312
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        2.6,
+        12.84,
+        150.3
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        2.6,
+        12.84,
+        151.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "steel",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        2.6,
+        12.84,
+        151.7
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.65,
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        0.0,
+        11.74,
+        151.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        0.18,
+        0.22
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        2.87791997799628e-16,
+        10.66,
+        148.65
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        9.172799999999999,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "depot",
+      "kind": "box",
+      "owner": "B14",
+      "p": [
+        -4.127759999999999,
+        10.66,
+        148.57
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        0.5503679999999999,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -305.496,
+        13.35,
+        9.120000000000001
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -298.504,
+        13.35,
+        9.120000000000001
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -302.0,
+        14.7,
+        9.120000000000001
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.727999999999999,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -302.0,
+        13.647,
+        9.120000000000001
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        7.084,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -305.496,
+        13.35,
+        14.879999999999999
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -298.504,
+        13.35,
+        14.879999999999999
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -302.0,
+        14.7,
+        14.879999999999999
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.727999999999999,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -302.0,
+        13.647,
+        14.879999999999999
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        7.084,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -302.0,
+        14.8,
+        12.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.28,
+        0.32,
+        6.56
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -296.93,
+        10.85,
+        12.0
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "size": [
+        16.8,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_A",
+      "p": [
+        -296.85,
+        10.85,
+        4.4399999999999995
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "size": [
+        1.008,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -308.736,
+        16.35,
+        29.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -303.264,
+        16.35,
+        29.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -306.0,
+        17.7,
+        29.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.048,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -306.0,
+        16.647,
+        29.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        5.5440000000000005,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -308.736,
+        16.35,
+        34.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -303.264,
+        16.35,
+        34.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -306.0,
+        17.7,
+        34.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.048,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -306.0,
+        16.647,
+        34.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        5.5440000000000005,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -306.0,
+        17.8,
+        32.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.28,
+        0.32,
+        6.56
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -301.93,
+        13.85,
+        32.0
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "size": [
+        13.44,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_B",
+      "p": [
+        -301.85,
+        13.85,
+        25.951999999999998
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "size": [
+        0.8063999999999999,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -306.496,
+        19.35,
+        45.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -299.504,
+        19.35,
+        45.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -303.0,
+        20.7,
+        45.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.727999999999999,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -303.0,
+        19.647,
+        45.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        7.084,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -306.496,
+        19.35,
+        50.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -299.504,
+        19.35,
+        50.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.7,
+        0.24
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -303.0,
+        20.7,
+        50.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.727999999999999,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -303.0,
+        19.647,
+        50.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        7.084,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -303.0,
+        20.8,
+        48.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.28,
+        0.32,
+        6.56
+      ]
+    },
+    {
+      "color": "quarry",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -297.93,
+        16.85,
+        48.0
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "size": [
+        8.4,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "quarry",
+      "kind": "box",
+      "owner": "QRY_STEP_C",
+      "p": [
+        -297.85,
+        16.85,
+        44.22
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "size": [
+        0.504,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -146.976,
+        18.55,
+        117.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.1,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -143.024,
+        18.55,
+        117.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.1,
+        0.24
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -145.0,
+        19.6,
+        117.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.368,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -145.0,
+        18.781,
+        117.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        4.0040000000000004,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -146.976,
+        18.55,
+        122.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.1,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -143.024,
+        18.55,
+        122.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.1,
+        0.24
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -145.0,
+        19.6,
+        122.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.368,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -145.0,
+        18.781,
+        122.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        4.0040000000000004,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -145.0,
+        19.7,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.28,
+        0.32,
+        6.56
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -145.0,
+        19.0,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.6,
+        0.8,
+        0.7
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -145.0,
+        18.75,
+        122.95
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.04,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_A",
+      "p": [
+        -142.732,
+        18.75,
+        123.03
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.3024,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -132.976,
+        14.55,
+        117.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.1,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -129.024,
+        14.55,
+        117.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.1,
+        0.24
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -131.0,
+        15.6,
+        117.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.368,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -131.0,
+        14.781,
+        117.12
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        4.0040000000000004,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -132.976,
+        14.55,
+        122.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.1,
+        0.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -129.024,
+        14.55,
+        122.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        2.1,
+        0.24
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -131.0,
+        15.6,
+        122.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.368,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -131.0,
+        14.781,
+        122.88
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0.21
+      ],
+      "size": [
+        4.0040000000000004,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -131.0,
+        15.7,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.28,
+        0.32,
+        6.56
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -131.0,
+        15.0,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.6,
+        0.8,
+        0.7
+      ]
+    },
+    {
+      "color": "depot",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -131.0,
+        14.75,
+        122.95
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.04,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "depot",
+      "kind": "box",
+      "owner": "DEP_TWIN_B",
+      "p": [
+        -128.732,
+        14.75,
+        123.03
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.3024,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "RLY_MAST",
+      "p": [
+        -2.7,
+        24.0,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        2.1,
+        0.42
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "box",
+      "owner": "RLY_MAST",
+      "p": [
+        -1.35,
+        23.5,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.7,
+        0.14,
+        0.2
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "RLY_MAST",
+      "p": [
+        2.7,
+        24.0,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        2.1,
+        0.42
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "box",
+      "owner": "RLY_MAST",
+      "p": [
+        1.35,
+        23.5,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.7,
+        0.14,
+        0.2
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "RLY_MAST",
+      "p": [
+        -2.7,
+        28.0,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        2.1,
+        0.42
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "box",
+      "owner": "RLY_MAST",
+      "p": [
+        -1.35,
+        27.5,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.7,
+        0.14,
+        0.2
+      ]
+    },
+    {
+      "color": "relay",
+      "district": "relay",
+      "kind": "box",
+      "owner": "RLY_MAST",
+      "p": [
+        2.7,
+        28.0,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        2.1,
+        0.42
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "box",
+      "owner": "RLY_MAST",
+      "p": [
+        1.35,
+        27.5,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.7,
+        0.14,
+        0.2
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "relay",
+      "kind": "cylinder",
+      "owner": "RLY_MAST",
+      "p": [
+        0.0,
+        33.1,
+        -285.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.18,
+        2.2,
+        0.18
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "WRK_STACK_A",
+      "p": [
+        128.0,
+        15.78,
+        -75.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.24,
+        0.48,
+        4.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        12.3,
+        -75.38
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.1,
+        6.4,
+        0.1
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        12.3,
+        -74.62
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.1,
+        6.4,
+        0.1
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        14.4,
+        -75.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        13.68,
+        -75.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        12.96,
+        -75.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        12.24,
+        -75.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        11.52,
+        -75.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        10.8,
+        -75.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_A",
+      "p": [
+        130.24,
+        10.08,
+        -75.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "WRK_STACK_B",
+      "p": [
+        138.0,
+        19.78,
+        -82.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.24,
+        0.48,
+        4.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        15.02,
+        -82.38
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.1,
+        8.96,
+        0.1
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        15.02,
+        -81.62
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.1,
+        8.96,
+        0.1
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        18.4,
+        -82.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        17.68,
+        -82.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        16.96,
+        -82.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        16.24,
+        -82.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        15.52,
+        -82.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        14.8,
+        -82.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_B",
+      "p": [
+        140.24,
+        14.08,
+        -82.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "cylinder",
+      "owner": "WRK_STACK_C",
+      "p": [
+        130.0,
+        23.78,
+        -92.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.24,
+        0.48,
+        4.24
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        17.740000000000002,
+        -92.38
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.1,
+        11.52,
+        0.1
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        17.740000000000002,
+        -91.62
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.1,
+        11.52,
+        0.1
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        22.4,
+        -92.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        21.68,
+        -92.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        20.96,
+        -92.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        20.24,
+        -92.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        19.52,
+        -92.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        18.8,
+        -92.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "works",
+      "district": "works",
+      "kind": "box",
+      "owner": "WRK_STACK_C",
+      "p": [
+        132.24,
+        18.08,
+        -92.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.09,
+        0.85
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        0.0,
+        20.05,
+        67.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.4399999999999995,
+        1.1,
+        2.496
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        0.0,
+        20.65,
+        67.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.175999999999999,
+        0.18,
+        3.016
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -2.3,
+        20.12,
+        68.274
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.656,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -2.3,
+        20.12,
+        65.726
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.656,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        0.0,
+        20.12,
+        68.274
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.656,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        0.0,
+        20.12,
+        65.726
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.656,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        2.3,
+        20.12,
+        68.274
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.656,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        2.3,
+        20.12,
+        65.726
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.656,
+        0.6,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        3.759665673382374e-16,
+        18.35,
+        63.93
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        8.4,
+        1.5,
+        0.14
+      ]
+    },
+    {
+      "color": "repair",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -3.78,
+        18.35,
+        63.85
+      ],
+      "role": "fascia",
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "size": [
+        0.504,
+        1.1,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -4.2,
+        8.68,
+        70.98
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -2.1,
+        8.68,
+        70.98
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        0.0,
+        8.68,
+        70.98
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        2.1,
+        8.68,
+        70.98
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        4.2,
+        8.68,
+        70.98
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        5.980000000533268,
+        8.68,
+        69.59999999990154
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        5.980000000266635,
+        8.68,
+        68.29999999990154
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        5.98,
+        8.68,
+        66.99999999990155
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        5.979999999733366,
+        8.68,
+        65.69999999990155
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        5.979999999466731,
+        8.68,
+        64.39999999990155
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        4.199999999803101,
+        8.68,
+        63.019999998277136
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        3.141592654,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        2.0999999998031007,
+        8.68,
+        63.01999999913857
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        3.141592654,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -1.968992913747179e-10,
+        8.68,
+        63.02
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        3.141592654,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -2.1000000001968995,
+        8.68,
+        63.02000000086144
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        3.141592654,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -4.2000000001969,
+        8.68,
+        63.02000000172287
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        3.141592654,
+        0
+      ],
+      "size": [
+        2.06,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -5.979999999466731,
+        8.68,
+        64.39999999990155
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        -1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -5.979999999733366,
+        8.68,
+        65.69999999990155
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        -1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -5.98,
+        8.68,
+        66.99999999990155
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        -1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "market",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -5.980000000266635,
+        8.68,
+        68.29999999990154
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        -1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "market",
+      "kind": "box",
+      "owner": "MRK_FIN_N",
+      "p": [
+        -5.980000000533268,
+        8.68,
+        69.59999999990154
+      ],
+      "role": "awning_trim",
+      "rotation": [
+        0,
+        -1.570796327,
+        0
+      ],
+      "size": [
+        1.26,
+        0.34,
+        0.06
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        141.78,
+        26.5,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.15,
+        2,
+        5.6
+      ]
+    },
+    {
+      "color": "cream",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        148.22,
+        26.5,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.15,
+        2,
+        5.6
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        25.8,
+        117.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.624,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        25.8,
+        122.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.624,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        26.3,
+        117.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.624,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        26.3,
+        122.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.624,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        26.8,
+        117.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.624,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        26.8,
+        122.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.624,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        27.3,
+        117.2
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.624,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        27.3,
+        122.8
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.624,
+        0.22,
+        0.12
+      ]
+    },
+    {
+      "color": "frame",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        145.0,
+        26.05,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.14,
+        1.1,
+        2.88
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        143.7,
+        28.1,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.45,
+        3.4,
+        0.65
+      ]
+    },
+    {
+      "color": "clinic",
+      "district": "clinic",
+      "kind": "box",
+      "owner": "CLN_TOWER",
+      "p": [
+        146.3,
+        28.1,
+        120.0
+      ],
+      "role": "roof",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.45,
+        3.4,
+        0.65
+      ]
+    }
+  ],
+  "version": "world-identity-detail-v2"
+}

@@ -41,6 +41,7 @@ func build(source_data: P1AWorldData) -> void:
 	preload("res://scripts/neighborhood_architecture.gd").new().build(self)
 	_build_node_markers()
 	preload("res://scripts/world_polish_presentation.gd").new().build(self, data)
+	preload("res://scripts/world_identity_detail_v2.gd").new().build(self, data)
 
 
 func _build_terrain() -> void:

@@ -1,0 +1,15 @@
+{
+  "identity": "default-trail-v1",
+  "history_seconds": 0.6,
+  "sample_hz": 30,
+  "max_samples": 18,
+  "stern_offset_m": 1.1,
+  "vertical_offset_m": 0.18,
+  "rail_offset_m": 0.62,
+  "maximum_join_m": 8.0,
+  "straight_half_width_m": 0.065,
+  "drift_half_width_m": 0.36,
+  "straight_alpha": 0.11,
+  "drift_alpha": 0.55,
+  "tail_fraction": 0.5
+}

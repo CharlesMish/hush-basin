@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "baseline": "ce48769fd648a44dd0b28c975b8fe4bf78bd3cb1",
+  "baseline_inventory_count": 465,
+  "checks": {
+    "all_baseline_files_preserved_except_exact_hook": true,
+    "generator_repeatable": true,
+    "finite_positive_geometry": true,
+    "occupied_plot_bounds": true,
+    "building_roof_detail_above_existing_roofs": true,
+    "bounded_parts": true,
+    "bounded_labels": true,
+    "config_hash_bound": true
+  },
+  "unexpected_changes": [],
+  "bounds_failures": [],
+  "parts": 296,
+  "labels": 20,
+  "generated_sha256": "973ce61997ef327b2f18d73d9c289221f240fa28dd3a5672e7f03464ba5a2c0f"
+}

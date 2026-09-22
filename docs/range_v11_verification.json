@@ -1,0 +1,106 @@
+{
+  "engine": "4.7.1.stable.official.a13da4feb",
+  "native_integration": {
+    "status": "PASS",
+    "checks": 114
+  },
+  "movement": {
+    "ticks": 1260,
+    "candidate_exact": true,
+    "protected_exact": true,
+    "note": "Exact same installed engine/platform. No cross-platform determinism claim."
+  },
+  "cargo_parity": {
+    "unprotected_full_events_exact": true,
+    "events": 3440,
+    "protected_controller_exact": true
+  },
+  "suites": {
+    "predicates": {
+      "status": "PASS",
+      "checks": 40
+    },
+    "cargo": {
+      "status": "PASS",
+      "checks": 92
+    },
+    "protected-cargo": {
+      "status": "PASS",
+      "checks": 92
+    },
+    "vehicle": {
+      "status": "PASS",
+      "checks": 39
+    },
+    "run": {
+      "status": "PASS",
+      "checks": 54
+    },
+    "paused": {
+      "status": "PASS",
+      "checks": 15
+    },
+    "world": {
+      "status": "PASS",
+      "checks": 35
+    },
+    "weather": {
+      "status": "PASS",
+      "checks": 30
+    },
+    "combo-exploit": {
+      "status": "PASS",
+      "checks": 5
+    }
+  },
+  "historical_policy": "Historical three-job/geometry manifests remain untouched. V1.1 explicitly versions only changed expectations. Historical R7 inventory failure is retained, not recast as pass.",
+  "source_inventory": {
+    "status": "PASS",
+    "baseline": "0fb521fa8d881abcc595a3e2d19787f2ba25c4d6",
+    "files": 612,
+    "changed_existing": [
+      "game/review/alpha_loop/alpha_review.gd",
+      "game/scripts/courier/alpha_contracts.gd",
+      "game/scripts/courier/alpha_director.gd",
+      "game/scripts/courier/alpha_hud.gd",
+      "game/scripts/courier/slip_trail.gd",
+      "tools/export_web.py"
+    ],
+    "unexpected": []
+  },
+  "web": {
+    "full": {
+      "pass": true,
+      "errors": [],
+      "checks": 0,
+      "ready_ms": 3537
+    },
+    "run": {
+      "pass": true,
+      "errors": [],
+      "checks": 13,
+      "ready_ms": 9572
+    },
+    "range": {
+      "pass": true,
+      "errors": [],
+      "checks": 114,
+      "ready_ms": 445040
+    }
+  },
+  "owner_gates": "Feel, comfort, controller play, challenge calibration and replay desire remain owner review.",
+  "f3_bookmark": {
+    "observed": 1,
+    "combo_history_entries": 5,
+    "cargo_instrumentation_unchanged": true
+  },
+  "repair_rounds_after_complete_verification": 0,
+  "status": "PASS",
+  "known_issues": [
+    "Haul neighboring input variants can miss its final Drive leg; human calibration unresolved.",
+    "Zero-grace drift may feel brittle; human review required.",
+    "Thread may still be gentle; open legal routes intentionally remain.",
+    "Web north-arrow fallback glyph also present in accepted V1.",
+    "Historical R7 inventory has expected successor mismatches; retained unchanged."
+  ]
+}

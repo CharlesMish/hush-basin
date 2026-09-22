@@ -1,0 +1,175 @@
+[
+  {
+    "id": "RLY_committed_18",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "speed": 18,
+    "unfold_remaining": 30,
+    "course_gain": 1
+  },
+  {
+    "id": "RLY_committed_21",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "speed": 21,
+    "unfold_remaining": 30,
+    "course_gain": 1
+  },
+  {
+    "id": "RLY_committed_24",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "speed": 24,
+    "unfold_remaining": 30,
+    "course_gain": 1
+  },
+  {
+    "id": "RLY_committed_27",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "speed": 27,
+    "unfold_remaining": 30,
+    "course_gain": 1
+  },
+  {
+    "id": "RLY_conservative",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ]
+  },
+  {
+    "id": "RLY_spread",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "spread": true,
+    "spread_speed": 10
+  },
+  {
+    "id": "RLY_interior",
+    "routes": [
+      "-L5",
+      "-L4"
+    ]
+  },
+  {
+    "id": "HAUL_shelf_spread8",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 8400,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 5000,
+        "drive": false,
+        "speed": 8
+      }
+    ]
+  },
+  {
+    "id": "HAUL_shelf_spread9",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 8400,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 5000,
+        "drive": false,
+        "speed": 9
+      }
+    ]
+  },
+  {
+    "id": "HAUL_shelf_spread10",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 8400,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 5000,
+        "drive": false,
+        "speed": 10
+      }
+    ]
+  },
+  {
+    "id": "HAUL_easy",
+    "routes": [
+      "-L1",
+      "-L0",
+      "-A0"
+    ]
+  },
+  {
+    "id": "HAUL_all_spread",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 8400,
+    "spread": true,
+    "spread_speed": 10
+  }
+]

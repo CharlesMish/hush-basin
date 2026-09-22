@@ -1,0 +1,106 @@
+{
+  "schema": "hush_basin.review_publication.v1",
+  "candidate_commit": "6570619b7bff67140bec03039942585208b5a8be",
+  "candidate_source_zip_sha256": "9acc11eebe07a17f4308c0fb4d8ef8fa9cada6742aed50122266cc07c9b5154c",
+  "public_parent_main": "df221870b45de53e4ebb5ea8889b6cf1114054c6",
+  "branch": "review/rens-receiver-v0.1",
+  "publication_method": "Exact tracked candidate snapshot on public main ancestry; unpublished local commit history not imported.",
+  "owner_status": "Current playable candidate verified against launcher, clean candidate commit, all 752 inventory entries and delivered ZIP; comprehension pass not yet owner-playtested.",
+  "candidate_files": 752,
+  "candidate_files_byte_identical": 739,
+  "game_files_byte_identical_except_two_historical_provenance_documents": 500,
+  "gameplay_changes": [],
+  "publication_only_existing_changes": {
+    "MECHANICS_RESULTS.md": {
+      "candidate_sha256": "748e09534c75f3d340f9411eb3ec11e5a0820f7191bc39c725a32542649fcb4e",
+      "published_sha256": "3c2eb36705b42858c1114db1d94e78f83e6038dd2294780967ac4601eb19a158",
+      "reason": "Historical local-path redaction only"
+    },
+    "README.md": {
+      "candidate_sha256": "be439babf038d530e61f15c75ac7f29cc8cd1305a0626ebf3ff05af7c558cc2e",
+      "published_sha256": "f2bcf55e8f4125ccbc2179721b470874d955d643a9e02262bccef4b8f75ba40b",
+      "reason": "Reviewer entry point"
+    },
+    "design/p1b-gameplay-reward-lab/README.md": {
+      "candidate_sha256": "9749f88dd41d1966746852abae6e933e1c0aeda5aeb57cf29f16c7e223a3cabd",
+      "published_sha256": "1d4f890302c57b3b6bf175921871a7d75e68d8a3f93abf4b242a5df17079530d",
+      "reason": "Historical local-path redaction only"
+    },
+    "design/p1b-gameplay-reward-lab/iterations/ITERATION_06_CONTRACT_BREADTH.md": {
+      "candidate_sha256": "2fab671a3f40fcfbf5bcaf9871f041e3bc57f460bea39049eb210bbcb04fed80",
+      "published_sha256": "9b45ad38aec117fd67877a3ec31f183cbed3140079e8eb1dfe38e015155efa64",
+      "reason": "Historical local-path redaction only"
+    },
+    "docs/CLOUDFLARE_HOSTING_PROOF_V1.md": {
+      "candidate_sha256": "f9d905b49e7bb4df55740d715de08ba57b55ff2786da3275e9ba2af4a2131ded",
+      "published_sha256": "5f9384e4062e6dc35154b2c375d4d4c8f9970e152bb80109bc76b3db518b15ad",
+      "reason": "Historical local-path redaction only"
+    },
+    "docs/GITHUB_SETUP.md": {
+      "candidate_sha256": "8dd078202e30a6be9b4948d449c57f182726915cb9dd9f312ac44b34c523e4f0",
+      "published_sha256": "a77925e2c92d4f7de66202f63409397fea311282df5ab1d31d4d7c57cc01a058",
+      "reason": "Historical local-path redaction only"
+    },
+    "docs/PRODUCTION_WEB_V1.md": {
+      "candidate_sha256": "c055193ae92919fa34a75c5ae8699fc6dd1bd7c45cc321f6960e2b6086336c8f",
+      "published_sha256": "a15072466a91728cb2f5e9f25b3ecf08ebfcd08112fbd6059c6c2b12289fb3c6",
+      "reason": "Historical local-path redaction only"
+    },
+    "docs/WARM_OVERCAST_V1_STATUS.md": {
+      "candidate_sha256": "a221a39ab641399662508804c26eba7fc2f5f166c577c1e1ab1dcce6105f6f4d",
+      "published_sha256": "5569dc628c4d9a1d0d93875d0c0cc6313ee3bda5336cfdd8d64f061b34f0e79b",
+      "reason": "Historical local-path redaction only"
+    },
+    "docs/WEB_FEASIBILITY_STATUS.md": {
+      "candidate_sha256": "576c94a9439c2f07c1e4771e0964a7b50de084e4dbf66430f22687e010fce589",
+      "published_sha256": "b577754e21fec94f6717a73b0eba1f68d08c7056c91af84c7c19fe3d93f54266",
+      "reason": "Historical local-path redaction only"
+    },
+    "docs/WORLD_POLISH_V1_STATUS.md": {
+      "candidate_sha256": "4024e08ced11aeb592dfe03495de63fa28f18635efb67214be9dcfed3cf3657f",
+      "published_sha256": "c3c0841f01f10bcd24f8a53aecafb45954e68f24c5276418a9c89282c8c88670",
+      "reason": "Historical local-path redaction only"
+    },
+    "game/P1A_CODEX_SENDOFF.md": {
+      "candidate_sha256": "06a16656338e3ddbaff7c1b74a9b98714ba90530653d4b0927972e6add1e0207",
+      "published_sha256": "4f50f8a7f88be4f68b33e712868f5942e406e394f84634e7abfdb8fac73be609",
+      "reason": "Historical local-path redaction only"
+    },
+    "game/P1A_V1_2_8_SOURCE_AND_EVIDENCE_BINDING.json": {
+      "candidate_sha256": "2ccb41be1cfcb00b2f3f5a110786c8d72fcd89df56ea2219a6648e9b19bdd1a5",
+      "published_sha256": "f0c96b4b2be00d26bd1e8b49ead79f369df99845c4404d04159e4152d5bf2417",
+      "reason": "Historical local-path redaction only"
+    },
+    "tools/quarto_preview/README.md": {
+      "candidate_sha256": "c49168f09c84eb05d1fe836a1d1b39af5f66e76a2fd6918aaeeac87ed5f2b872",
+      "published_sha256": "9f77de81cb90ed04fffe55c73413b82df5f36d0d939eac29c2967e02c464097e",
+      "reason": "Historical local-path redaction only"
+    }
+  },
+  "new_reviewer_files": [
+    "REVIEW_CURRENT.md",
+    "docs/REVIEW_PUBLICATION.json"
+  ],
+  "checks": {
+    "candidate_inventory_and_zip": "PASS",
+    "game_runtime_and_resources_exact_parity": "PASS",
+    "fresh_import_parse_and_180_frame_smoke": "PASS",
+    "staged_inventory_754_files": "PASS",
+    "staged_artifact_secret_signature_and_local_path_scan": "PASS",
+    "json_and_reviewer_link_checks": "PASS",
+    "git_diff_check": "PASS",
+    "engine": "4.7.1.stable.official.a13da4feb"
+  },
+  "prior_candidate_verification": "See RECEIVER_VERIFICATION.md: native 57/57, Web 57/57, exact 1260-tick parity and persistence checks. Full gameplay/Web suites were not rerun for publication-only documentation changes.",
+  "historical_integrity": "Historical inventories and results are retained verbatim. Explicit redactions change documentation hashes only; old milestone verifiers are not relabeled as current passes. Original records remain local.",
+  "exclusions": [
+    "Godot import caches",
+    "exports and build outputs",
+    "logs and local saves",
+    "raw evidence archives",
+    "credentials and auth state",
+    "private machine paths"
+  ],
+  "source_asset_note": "Source-required baked geometry, native textures, image import settings and the review_logs/.gitignore placeholder are retained; no runtime logs or generated import cache is tracked.",
+  "main_and_production": "No main update or deployment authorized or performed."
+}

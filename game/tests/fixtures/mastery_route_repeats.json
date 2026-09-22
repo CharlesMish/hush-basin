@@ -1,0 +1,122 @@
+[
+  {
+    "id": "RLY_committed_24_repeat",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "speed": 24,
+    "unfold_remaining": 30,
+    "course_gain": 1,
+    "objective": "SWEEP"
+  },
+  {
+    "id": "RLY_committed_27_repeat",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "speed": 27,
+    "unfold_remaining": 30,
+    "course_gain": 1,
+    "objective": "SWEEP"
+  },
+  {
+    "id": "HAUL_read_shelf_12_repeat",
+    "objective": "HAUL",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 8400,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 5000,
+        "drive": false,
+        "speed": 10,
+        "look": 12
+      }
+    ]
+  },
+  {
+    "id": "HAUL_read_shelf_16_repeat",
+    "objective": "HAUL",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 8400,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 5000,
+        "drive": false,
+        "speed": 10,
+        "look": 16
+      }
+    ]
+  },
+  {
+    "ticks": 7200,
+    "committed": true,
+    "drive_index": 850,
+    "look": 100,
+    "course_gain": 1.5,
+    "speed": 26,
+    "unfold_remaining": 35,
+    "phases": [
+      {
+        "start_index": 2410,
+        "end_index": 3950,
+        "drive": false,
+        "speed": 10
+      },
+      {
+        "start_index": 3950,
+        "end_index": 4460,
+        "drive": true,
+        "speed": 26,
+        "look": 70
+      },
+      {
+        "start_index": 4460,
+        "end_index": 4595,
+        "drive": false,
+        "speed": 10
+      }
+    ],
+    "id": "HAUL_v11_accepted",
+    "objective": "HAUL",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ]
+  }
+]

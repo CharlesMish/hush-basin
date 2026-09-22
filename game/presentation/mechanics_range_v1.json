@@ -1,0 +1,23 @@
+{
+  "identity": "mechanics-range-v1",
+  "works": {
+    "route": "L6",
+    "fraction": 0.65,
+    "width_m": 10.0,
+    "depth_m": 1.8,
+    "height_m": 1.14,
+    "warning_distance_m": 35.0,
+    "color": "867d67",
+    "accent": "d9ac62"
+  },
+  "trail": {
+    "history_seconds": 0.52,
+    "sample_hz": 30,
+    "max_samples": 18,
+    "base_width_m": 0.08,
+    "slip_width_m": 0.3,
+    "min_alpha": 0.1,
+    "max_alpha": 0.42,
+    "color": "69c9b9"
+  }
+}

@@ -1,0 +1,717 @@
+[
+  {
+    "id": "DEP_straight",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ]
+  },
+  {
+    "id": "DEP_road",
+    "routes": [
+      "-L1"
+    ]
+  },
+  {
+    "id": "DEP_slip_1",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 2.4,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 2.4,
+        "end": 3.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_slip_1.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 2.9,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 2.9,
+        "end": 4.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_slip_2",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.4,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 3.4,
+        "end": 5.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "RLY_interior",
+    "routes": [
+      "-L5",
+      "-L4"
+    ]
+  },
+  {
+    "id": "RLY_sweep_6",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 6,
+    "anticipation": 0.5,
+    "speed": 30,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_sweep_12",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 12,
+    "anticipation": 0.5,
+    "speed": 30,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_sweep_20",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 20,
+    "anticipation": 0.5,
+    "speed": 30,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "WRK_easy",
+    "routes": [
+      "L6"
+    ]
+  },
+  {
+    "id": "RLY_sweep_l30_v26",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 30,
+    "anticipation": 0.5,
+    "speed": 26,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_sweep_l30_v30",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 30,
+    "anticipation": 0.5,
+    "speed": 30,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_sweep_l45_v26",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 45,
+    "anticipation": 0.5,
+    "speed": 26,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_sweep_l45_v30",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 45,
+    "anticipation": 0.5,
+    "speed": 30,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_sweep_l60_v26",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 60,
+    "anticipation": 0.5,
+    "speed": 26,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_sweep_l60_v30",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 60,
+    "anticipation": 0.5,
+    "speed": 30,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_interior_committed",
+    "routes": [
+      "-L5",
+      "-L4"
+    ],
+    "committed": true,
+    "look": 30,
+    "speed": 30,
+    "unfold_remaining": 25
+  },
+  {
+    "id": "DEP_drift_1.2",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 2.5999999999999996,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 2.5999999999999996,
+        "end": 3.8,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_drift_1.4",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 2.8,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 2.8,
+        "end": 4.199999999999999,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_drift_1.6",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.0,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 3.0,
+        "end": 4.6,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "WRK_hot",
+    "routes": [
+      "L6"
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 5,
+    "hop_distance": 0,
+    "speed": 30
+  },
+  {
+    "id": "WRK_early",
+    "routes": [
+      "L6"
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 62,
+    "hop_distance": 50,
+    "speed": 30
+  },
+  {
+    "id": "WRK_early2",
+    "routes": [
+      "L6"
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 66,
+    "hop_distance": 52,
+    "speed": 30
+  },
+  {
+    "id": "WRK_late",
+    "routes": [
+      "L6"
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 45,
+    "hop_distance": 50,
+    "speed": 30
+  },
+  {
+    "id": "WRK_spread",
+    "routes": [
+      "L6"
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 120,
+    "hop_distance": 50,
+    "speed": 30
+  },
+  {
+    "id": "WRK_bypass",
+    "routes": [
+      "-L5",
+      "R0"
+    ]
+  },
+  {
+    "id": "RLY_line_l20_v22",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 20,
+    "anticipation": 0.5,
+    "speed": 22,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_line_l20_v24",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 20,
+    "anticipation": 0.5,
+    "speed": 24,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_line_l40_v22",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "anticipation": 0.5,
+    "speed": 22,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_line_l40_v24",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "anticipation": 0.5,
+    "speed": 24,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_line_l70_v22",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 70,
+    "anticipation": 0.5,
+    "speed": 22,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_line_l70_v24",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 70,
+    "anticipation": 0.5,
+    "speed": 24,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_short_north_burst",
+    "routes": [
+      "-L5",
+      "-L4"
+    ],
+    "committed": true,
+    "drive_index": 650,
+    "look": 20,
+    "speed": 30,
+    "unfold_remaining": 20
+  },
+  {
+    "id": "RLY_anticipate_20_0.5",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 20,
+    "course_gain": 0.5,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_anticipate_20_1",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 20,
+    "course_gain": 1,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_anticipate_40_0.5",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "course_gain": 0.5,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_anticipate_40_1",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "course_gain": 1,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_anticipate_60_0.5",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 60,
+    "course_gain": 0.5,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_anticipate_60_1",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 60,
+    "course_gain": 1,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_short_burst_control",
+    "routes": [
+      "-L5",
+      "-L4"
+    ],
+    "committed": true,
+    "drive_index": 675,
+    "look": 12,
+    "speed": 30,
+    "unfold_remaining": 20
+  },
+  {
+    "id": "RLY_direct_north",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        -210
+      ]
+    ],
+    "committed": true,
+    "unfold_remaining": 25,
+    "speed": 32
+  },
+  {
+    "id": "RLY_interior_late_burst",
+    "routes": [
+      "-L5",
+      "-L4"
+    ],
+    "committed": true,
+    "drive_index": 500,
+    "look": 12,
+    "speed": 30,
+    "unfold_remaining": 25
+  },
+  {
+    "id": "WRK_naive_no_hop",
+    "routes": [
+      "L6"
+    ],
+    "ticks": 1800
+  },
+  {
+    "id": "WRK_direct_hot",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        90,
+        -55
+      ]
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 5,
+    "hop_distance": 0,
+    "speed": 30,
+    "ticks": 3600
+  },
+  {
+    "id": "WRK_direct_hop_early",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        90,
+        -55
+      ]
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 64,
+    "hop_distance": 51,
+    "speed": 30,
+    "ticks": 3600
+  },
+  {
+    "id": "WRK_direct_hop_mid",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        90,
+        -55
+      ]
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 62,
+    "hop_distance": 48,
+    "speed": 30,
+    "ticks": 3600
+  },
+  {
+    "id": "WRK_direct_hop_late",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        90,
+        -55
+      ]
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 48,
+    "hop_distance": 46,
+    "speed": 30,
+    "ticks": 3600
+  },
+  {
+    "id": "WRK_direct_spread_no_hop",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        90,
+        -55
+      ]
+    ],
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 120,
+    "hop_distance": 0,
+    "speed": 30,
+    "ticks": 3600
+  }
+]

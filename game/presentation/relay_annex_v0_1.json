@@ -1,0 +1,42 @@
+{
+  "identity": "relay-dispatch-annex-visual-v0.1",
+  "owner": "RLY_MAST",
+  "note": "All offsets are metres from the existing mast base. Equipment is elevated within the existing occupied plot; it adds no collision or lights.",
+  "roughness": 0.72,
+  "emission_energy": 0.42,
+  "palette": {
+    "frame": "344b49",
+    "repair": "a5a69a",
+    "relay": "3c7471",
+    "panel": "bac3b8",
+    "warm": "dec088",
+    "dark": "35423e"
+  },
+  "parts": [
+    {"stage":1,"role":"mount_upright","p":[-4.15,10.0,2.8],"size":[0.38,8.4,0.55],"color":"frame"},
+    {"stage":1,"role":"mount_upright","p":[4.15,10.0,2.8],"size":[0.38,8.4,0.55],"color":"frame"},
+    {"stage":1,"role":"mount_header","p":[0,14.0,2.8],"size":[8.9,0.48,0.65],"color":"repair"},
+    {"stage":1,"role":"mount_sill","p":[0,6.0,2.8],"size":[8.9,0.48,0.65],"color":"relay"},
+    {"stage":1,"role":"mount_return","p":[-1.5,13.85,1.1],"size":[0.35,0.45,3.1],"color":"frame"},
+    {"stage":1,"role":"mount_return","p":[1.5,13.85,1.1],"size":[0.35,0.45,3.1],"color":"frame"},
+    {"stage":1,"role":"mount_return","p":[-1.5,6.0,1.1],"size":[0.35,0.45,3.1],"color":"frame"},
+    {"stage":1,"role":"mount_return","p":[1.5,6.0,1.1],"size":[0.35,0.45,3.1],"color":"frame"},
+    {"stage":1,"role":"fitted_bracket","p":[-4.15,9.9,3.13],"size":[0.65,1.15,0.15],"color":"repair"},
+    {"stage":1,"role":"fitted_bracket","p":[4.15,9.9,3.13],"size":[0.65,1.15,0.15],"color":"repair"},
+    {"stage":2,"role":"receiver_housing","p":[-2.45,10.05,2.86],"size":[2.8,6.95,0.55],"color":"relay"},
+    {"stage":2,"role":"receiver_housing","p":[2.45,10.05,2.86],"size":[2.8,6.95,0.55],"color":"relay"},
+    {"stage":2,"role":"receiver_face","p":[-2.45,10.05,3.18],"size":[2.4,6.45,0.14],"color":"panel"},
+    {"stage":2,"role":"receiver_face","p":[2.45,10.05,3.18],"size":[2.4,6.45,0.14],"color":"panel"},
+    {"stage":2,"role":"receiver_segment","p":[-2.45,10.05,3.26],"size":[2.4,0.13,0.06],"color":"relay"},
+    {"stage":2,"role":"receiver_segment","p":[2.45,10.05,3.26],"size":[2.4,0.13,0.06],"color":"relay"},
+    {"stage":2,"role":"receiver_segment","p":[-2.45,11.95,3.26],"size":[2.4,0.13,0.06],"color":"relay"},
+    {"stage":2,"role":"receiver_segment","p":[2.45,11.95,3.26],"size":[2.4,0.13,0.06],"color":"relay"},
+    {"stage":2,"role":"receiver_segment","p":[-2.45,8.15,3.26],"size":[2.4,0.13,0.06],"color":"relay"},
+    {"stage":2,"role":"receiver_segment","p":[2.45,8.15,3.26],"size":[2.4,0.13,0.06],"color":"relay"},
+    {"stage":2,"role":"status_strip","p":[-1.09,10.05,3.28],"size":[0.18,6.45,0.14],"color":"warm","emissive":true},
+    {"stage":2,"role":"status_strip","p":[1.09,10.05,3.28],"size":[0.18,6.45,0.14],"color":"warm","emissive":true},
+    {"stage":2,"role":"dispatch_header","p":[0,5.3,2.99],"size":[8.9,1.05,0.42],"color":"warm","emissive":true},
+    {"stage":2,"role":"header_cap","p":[0,4.7,2.99],"size":[8.9,0.18,0.48],"color":"frame"}
+  ],
+  "sign": {"stage":2,"text":"RELAY DISPATCH","p":[0,5.3,3.215],"width_m":8.1,"height_m":0.56,"color":"dark"}
+}

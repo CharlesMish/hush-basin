@@ -1,0 +1,11 @@
+{
+  "name": "hush-basin",
+  "pages_build_output_dir": "./site",
+  "compatibility_date": "2026-09-14",
+  "r2_buckets": [
+    {
+      "binding": "HUSH_ARTIFACTS",
+      "bucket_name": "hush-basin-artifacts"
+    }
+  ]
+}

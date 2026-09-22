@@ -77,7 +77,7 @@ should remain empty afterward.
 ## Before making the repository public
 
 - Choose an actual software/content license. No license is currently granted.
-- Decide whether historical owner-name and `/Users/cmish/...` provenance hints
+- Decide whether historical owner-name and `<LOCAL_PATH>` provenance hints
   should be public.
 - Decide whether the AI-generated concept sheet and its provenance metadata
   belong in the public design archive.

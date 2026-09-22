@@ -8,18 +8,18 @@ replace the bound v1.2.7R1 source. Do not launch calibration from this directory
 ## Expected local inputs
 
 - authority overlay:
-  `/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.8-Authority-Run-1/District-Zero-P1A-v1.2.8-Authority-Overlay`
+  `<LOCAL_HANDOFF>/District-Zero-P1A-v1.2.8-Authority-Run-1/District-Zero-P1A-v1.2.8-Authority-Overlay`
 - clean unmaterialized R1 source:
-  `/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.7R1-Repair-Run-1/District-Zero-P1A-v1.2.7R1-Source`
+  `<LOCAL_HANDOFF>/District-Zero-P1A-v1.2.7R1-Repair-Run-1/District-Zero-P1A-v1.2.7R1-Source`
 - clean v1.2.7 comparison base:
-  `/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.7-Calibration-Run-1/District-Zero-P1A-v1.2.7-Working-Source`
+  `<LOCAL_HANDOFF>/District-Zero-P1A-v1.2.7-Calibration-Run-1/District-Zero-P1A-v1.2.7-Working-Source`
 - closed Run-2 evidence ZIP:
-  `/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.7R1-Repair-Run-2/District-Zero-P1A-v1.2.7R1-Calibration-Validation-Evidence.zip`
+  `<LOCAL_HANDOFF>/District-Zero-P1A-v1.2.7R1-Repair-Run-2/District-Zero-P1A-v1.2.7R1-Calibration-Validation-Evidence.zip`
 - P0 root:
-  `/Users/cmish/Downloads/District-Zero-P0-Source(1)`
+  `<LOCAL_DOWNLOADS>/District-Zero-P0-Source(1)`
 - exact engine candidate: `/opt/homebrew/bin/godot`
 - proposed unused execution parent:
-  `/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-P1A-v1.2.8-Execution-Run-1`
+  `<LOCAL_HANDOFF>/District-Zero-P1A-v1.2.8-Execution-Run-1`
 
 Paths are hints, not identity substitutes. Resolve them read-only. If the
 proposed output exists or is nonempty, choose the next unused explicit `Run-N`;

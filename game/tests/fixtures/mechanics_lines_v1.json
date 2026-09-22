@@ -1,0 +1,49 @@
+{
+  "DEP_style": {
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 2.9,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 2.9,
+        "end": 4.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  "RLY_sweep": {
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "speed": 27,
+    "unfold_remaining": 30,
+    "course_gain": 0.5
+  },
+  "WRK_way": {
+    "committed": true,
+    "look": 12,
+    "unfold_remaining": 64,
+    "hop_distance": 51,
+    "speed": 30
+  },
+  "WRK_hot_recovery": {
+    "committed": true,
+    "unfold_remaining": 5,
+    "speed": 30,
+    "maneuvers": [
+      {
+        "start": 4,
+        "end": 12,
+        "drive": false,
+        "steer": 0,
+        "speed": 8
+      }
+    ],
+    "hop_start_s": 4.6,
+    "hop_end_s": 4.75
+  }
+}

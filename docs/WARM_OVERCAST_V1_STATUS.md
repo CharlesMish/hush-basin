@@ -27,7 +27,7 @@ director/HUD/BRRR and Run scene are unchanged. Only Run's map overlay changes.
 ## Exact verification
 
 Evidence root:
-`/Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-Warm-Overcast-V1-Run-1/evidence`.
+`<LOCAL_HANDOFF>/District-Zero-Warm-Overcast-V1-Run-1/evidence`.
 
 Fresh pre-edit baseline: inventory 605/605 PASS, exact-engine import/parse and
 180-frame smoke PASS, 25 native views and five native moving comparisons.
@@ -35,7 +35,7 @@ Fresh pre-edit baseline: inventory 605/605 PASS, exact-engine import/parse and
 Complete command from successor source:
 
 ```sh
-python3 tools/verify_overcast_suite.py --evidence /Users/cmish/Desktop/Hush-Basin-Movement-Lab-Handoff/District-Zero-Warm-Overcast-V1-Run-1/evidence/complete-2 --native
+python3 tools/verify_overcast_suite.py --evidence <LOCAL_HANDOFF>/District-Zero-Warm-Overcast-V1-Run-1/evidence/complete-2 --native
 ```
 
 Observed: overall PASS, 27/27 suite records. `complete-2/suite.json` records

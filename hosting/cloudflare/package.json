@@ -1,0 +1,12 @@
+{
+  "name": "hush-basin-cloudflare-hosting-proof",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "deploy:preview": "wrangler pages deploy --branch hosting-proof"
+  },
+  "devDependencies": {
+    "wrangler": "4.131.1"
+  }
+}

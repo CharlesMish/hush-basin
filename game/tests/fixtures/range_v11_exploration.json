@@ -1,0 +1,346 @@
+[
+  {
+    "id": "DEP_straight",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ]
+  },
+  {
+    "id": "RLY_interior",
+    "routes": [
+      "-L5",
+      "-L4"
+    ]
+  },
+  {
+    "id": "RLY_outer_v1",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "course_gain": 0.5,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "CLN_direct",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        110,
+        75
+      ]
+    ]
+  },
+  {
+    "id": "CLN_south_dogleg",
+    "routes": [
+      "-L1",
+      "S0",
+      "DOG",
+      "S1"
+    ],
+    "spread": true
+  },
+  {
+    "id": "QRY_short",
+    "routes": [
+      "-L1",
+      "-L0",
+      "-A0"
+    ]
+  },
+  {
+    "id": "QRY_long_conservative",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "ticks": 9000
+  },
+  {
+    "id": "QRY_long_spread",
+    "routes": [
+      "L2",
+      "L3",
+      "-A2",
+      "-X0"
+    ],
+    "spread": true,
+    "ticks": 9000
+  },
+  {
+    "id": "DEP_shape_0.75_2.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.4,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 3.4,
+        "end": 5.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_0.75_2.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.9,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 3.9,
+        "end": 6.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_0.75_3.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.4,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 4.4,
+        "end": 7.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_0.75_3.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.9,
+        "drive": true,
+        "steer": 0.75
+      },
+      {
+        "start": 4.9,
+        "end": 8.4,
+        "drive": true,
+        "steer": -0.75
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_1.0_2.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.4,
+        "drive": true,
+        "steer": 1.0
+      },
+      {
+        "start": 3.4,
+        "end": 5.4,
+        "drive": true,
+        "steer": -1.0
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_1.0_2.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 3.9,
+        "drive": true,
+        "steer": 1.0
+      },
+      {
+        "start": 3.9,
+        "end": 6.4,
+        "drive": true,
+        "steer": -1.0
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_1.0_3.0",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.4,
+        "drive": true,
+        "steer": 1.0
+      },
+      {
+        "start": 4.4,
+        "end": 7.4,
+        "drive": true,
+        "steer": -1.0
+      }
+    ]
+  },
+  {
+    "id": "DEP_shape_1.0_3.5",
+    "points": [
+      [
+        0,
+        20
+      ],
+      [
+        -110,
+        75
+      ]
+    ],
+    "maneuvers": [
+      {
+        "start": 1.4,
+        "end": 4.9,
+        "drive": true,
+        "steer": 1.0
+      },
+      {
+        "start": 4.9,
+        "end": 8.4,
+        "drive": true,
+        "steer": -1.0
+      }
+    ]
+  },
+  {
+    "id": "RLY_clean_40",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 40,
+    "course_gain": 1.0,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_clean_60",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 60,
+    "course_gain": 1.0,
+    "speed": 27,
+    "unfold_remaining": 30
+  },
+  {
+    "id": "RLY_clean_80",
+    "routes": [
+      "-L1",
+      "-L0",
+      "A1"
+    ],
+    "committed": true,
+    "drive_index": 810,
+    "look": 80,
+    "course_gain": 1.0,
+    "speed": 27,
+    "unfold_remaining": 30
+  }
+]

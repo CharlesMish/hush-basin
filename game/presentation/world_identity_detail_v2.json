@@ -1,0 +1,56 @@
+{
+  "version": "world-identity-detail-v2",
+  "baseline_commit": "ce48769fd648a44dd0b28c975b8fe4bf78bd3cb1",
+  "geometry_identity": "world-polish-v1",
+  "roughness": 0.86,
+  "palette": {
+    "steel": [0.16,0.22,0.22], "frame": [0.35,0.39,0.36],
+    "cream": [0.75,0.70,0.57], "letter": [0.85,0.82,0.67],
+    "quarry": [0.52,0.36,0.21], "depot": [0.64,0.39,0.14],
+    "relay": [0.22,0.43,0.43], "works": [0.43,0.27,0.19],
+    "market": [0.18,0.40,0.34], "clinic": [0.44,0.60,0.54],
+    "repair": [0.48,0.48,0.40]
+  },
+  "limits": {"max_parts": 850, "max_labels": 26, "max_roof_rise_m": 4.5, "facade_depth_m": 0.14},
+  "buildings": [
+    {"owner":"B01","district":"quarry","roof":"sawtooth","front":"S","sign":"CUT / REPAIR","serial":"03"},
+    {"owner":"B02","district":"relay","roof":"aerial","front":"W","sign":"BASIN UTILITIES","serial":"R2"},
+    {"owner":"B03","district":"works","roof":"ducts","front":"N","sign":"MATERIAL STORES","serial":"W3"},
+    {"owner":"B04","district":"works","roof":"ventbank","front":"W","sign":"WORKS OFFICE","serial":"W4"},
+    {"owner":"B05","district":"works","roof":"ducts","front":"W","sign":"PUMP / SERVICE","serial":"W5"},
+    {"owner":"B06","district":"works","roof":"ventbank","front":"S","sign":"AIR HANDLING","serial":"W6"},
+    {"owner":"B07","district":"works","roof":"sawtooth","front":"W","sign":"FABRICATION","serial":"W7"},
+    {"owner":"B08","district":"clinic","roof":"screen","front":"W","sign":"WATER OFFICE","serial":"C8"},
+    {"owner":"B09","district":"market","roof":"lantern","front":"N","sign":"PANTRY","serial":"09"},
+    {"owner":"B10","district":"market","roof":"lantern","front":"S","sign":"BASIN MARKET","serial":"10"},
+    {"owner":"B11","district":"market","roof":"screen","front":"N","sign":"TEA & MENDING","serial":"11"},
+    {"owner":"B12","district":"depot","roof":"sawtooth","front":"N","sign":"FREIGHT OFFICE","serial":"12"},
+    {"owner":"B13","district":"clinic","roof":"screen","front":"N","sign":"CLINIC SERVICES","serial":"13"},
+    {"owner":"B14","district":"depot","roof":"ventbank","front":"N","sign":"SOUTH GATE","serial":"14"}
+  ],
+  "landmarks": [
+    {"owner":"QRY_STEP_A","district":"quarry","roof":"gantry","front":"E","sign":"EXTRACTION / 01"},
+    {"owner":"QRY_STEP_B","district":"quarry","roof":"gantry","front":"E","sign":"GRADE / 02"},
+    {"owner":"QRY_STEP_C","district":"quarry","roof":"gantry","front":"E","sign":"BASIN CUT / 03"},
+    {"owner":"DEP_TWIN_A","district":"depot","roof":"freight","front":"S","sign":"01"},
+    {"owner":"DEP_TWIN_B","district":"depot","roof":"freight","front":"S","sign":"02"},
+    {"owner":"RLY_MAST","district":"relay","roof":"relay","front":"S","sign":""},
+    {"owner":"WRK_STACK_A","district":"works","roof":"stack","front":"W","sign":""},
+    {"owner":"WRK_STACK_B","district":"works","roof":"stack","front":"W","sign":""},
+    {"owner":"WRK_STACK_C","district":"works","roof":"stack","front":"W","sign":""},
+    {"owner":"MRK_FIN_N","district":"market","roof":"lantern","front":"N","sign":"MARKET HALL"},
+    {"owner":"CLN_TOWER","district":"clinic","roof":"civic","front":"E","sign":""}
+  ],
+  "transitions": {
+    "note":"Thin maintenance bands follow selected existing retaining faces; no arrows, new access or ground objects.",
+    "height_below_top_m": 1.25, "band_height_m": 0.24, "offset_m": 0.045,
+    "areas": [
+      {"district":"quarry","center":[-280,25],"radius":70},
+      {"district":"depot","center":[-125,110],"radius":52},
+      {"district":"relay","center":[0,-255],"radius":60},
+      {"district":"works","center":[110,-75],"radius":65},
+      {"district":"market","center":[0,85],"radius":65},
+      {"district":"clinic","center":[125,115],"radius":52}
+    ]
+  }
+}

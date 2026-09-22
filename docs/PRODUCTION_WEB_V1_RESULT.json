@@ -1,0 +1,276 @@
+{
+  "status": "AWAITING_PRODUCTION_CONTROLS_CONFIRMATION",
+  "baseline_commit": "c33ff6e0624c3a281df28795caad6a3ac1f47727",
+  "branch": "feature/production-web-promotion-v1",
+  "deployed_infrastructure_commit": "7176214901fc383edf38826c0114f9b56c00b141",
+  "build": {
+    "build_id": "3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0",
+    "export_source_commit": "df221870b45de53e4ebb5ea8889b6cf1114054c6",
+    "engine": "4.7.1.stable.official.a13da4feb",
+    "template_sha256": "b7b7d7da29fc6cc2f4934fdd26cc571a40e7af57f716ea3eb7e18da720dae28a",
+    "diagnostic_entry": false,
+    "files": [
+      {
+        "name": "index.apple-touch-icon.png",
+        "bytes": 11944,
+        "sha256": "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
+      },
+      {
+        "name": "index.audio.position.worklet.js",
+        "bytes": 2973,
+        "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+      },
+      {
+        "name": "index.audio.worklet.js",
+        "bytes": 7298,
+        "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+      },
+      {
+        "name": "index.html",
+        "bytes": 5469,
+        "sha256": "771fc37829f87e14d43a6e1054fa52d3259abc8d34dbfa802ffd56fc57ad4639"
+      },
+      {
+        "name": "index.icon.png",
+        "bytes": 5700,
+        "sha256": "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5"
+      },
+      {
+        "name": "index.js",
+        "bytes": 279815,
+        "sha256": "68586d6daafc93c6e697b3fb258976874aa7459b8931165ebb1dc3c9614cc42c"
+      },
+      {
+        "name": "index.pck",
+        "bytes": 101717356,
+        "sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6"
+      },
+      {
+        "name": "index.png",
+        "bytes": 21443,
+        "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+      },
+      {
+        "name": "index.wasm",
+        "bytes": 39513091,
+        "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277"
+      }
+    ]
+  },
+  "accepted_feasibility_successor": "5971b494f1dbb3e15aa4e6ac57ac1af2ba80acd8",
+  "production": {
+    "url": "https://hush-basin.cmish.dev/",
+    "pages_project": "hush-basin",
+    "r2_bucket": "hush-basin-artifacts",
+    "r2_public_dev_url": false,
+    "r2_location": "WNAM",
+    "r2_storage_class": "Standard",
+    "domain_status": "Active",
+    "ssl_enabled": true,
+    "tls_verified": "TLSv1.3",
+    "dns": {
+      "type": "CNAME",
+      "name": "hush-basin.cmish.dev",
+      "target": "hush-basin.pages.dev"
+    },
+    "deployment": {
+      "Id": "0f1d6589-c7a0-424e-9dc8-c2f6cded09b6",
+      "Environment": "Production",
+      "Branch": "production",
+      "Source": "7176214",
+      "Deployment": "https://0f1d6589.hush-basin.pages.dev",
+      "Status": "4 minutes ago",
+      "Build": "https://dash.cloudflare.com/REDACTED_ACCOUNT_ID/pages/view/hush-basin/0f1d6589-c7a0-424e-9dc8-c2f6cded09b6"
+    }
+  },
+  "r2_keys": [
+    "builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.wasm",
+    "builds/3ac4997d783741ccd07ff74298302c622fe62300484ef2f55bf3a2153e42b0c0/index.pck"
+  ],
+  "verification": {
+    "final_preview_full_hashes": 9,
+    "production_unique_full_hashes": 9,
+    "production_stable_full_hashes": 9,
+    "custom_domain_full_hashes": 20,
+    "custom_domain_registry_and_full_hashes": 9,
+    "promotion_barrier_tests": 4,
+    "game_source_hashes_preserved": 311,
+    "game_git_diff": "empty",
+    "unknown_build_status": 404,
+    "unsupported_method_status": 405,
+    "head_status": 200,
+    "head_body_bytes": 0,
+    "quarto_verifier": {
+      "status": "FAIL",
+      "checks": 449,
+      "failures": [
+        "PRESERVED:.gitignore",
+        "PRESERVED_WRAPPER_SUFFIX:README.md"
+      ],
+      "classification": "Authorized hosting wrapper updates; no game source failure"
+    },
+    "legacy_verifier": {
+      "status": "FAIL",
+      "checks": 389,
+      "failures": [
+        "UNCHANGED:game/scenes/vehicle_visual.tscn",
+        "UNCHANGED:game/scripts/vehicle_visual_rig.gd"
+      ],
+      "classification": "Pre-existing accepted Quarto changes; historical failure retained"
+    }
+  },
+  "browser": {
+    "engine": "4.7.1.stable.official.a13da4feb",
+    "renderer": "WebGL 2 Compatibility / Chromium",
+    "build_configuration": "Emscripten 4.0.20, single-threaded, no GDExtension support",
+    "ready": "P1A_RUNTIME_READY authority=world-polish-v1 routes=17 solids=19",
+    "world_weather_minimap_quarto_visible": true,
+    "run_timer_brrr_visible": true,
+    "retry_countdown": true,
+    "pause": true,
+    "reload_same_build_and_runtime": true,
+    "production_owner_controls": "pending",
+    "prior_proof_owner_holds": "confirmed",
+    "runtime_errors_observed": []
+  },
+  "cache": [
+    {
+      "pass": "first",
+      "file": "index.pck",
+      "status": 200,
+      "bytes": 101717356,
+      "sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+      "seconds": 5.568,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "101717356",
+        "Accept-Ranges": "none",
+        "Cache-Control": "public, max-age=31536000, immutable, no-transform",
+        "ETag": "\"sha256-7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6\"",
+        "X-Hush-Cache": "MISS",
+        "X-Hush-Cached-At": "2026-09-14T03:46:38.725Z",
+        "cf-cache-status": "DYNAMIC",
+        "CF-RAY": "a3ac67ddcecf4857-DFW"
+      }
+    },
+    {
+      "pass": "first",
+      "file": "index.wasm",
+      "status": 200,
+      "bytes": 39513091,
+      "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+      "seconds": 2.891,
+      "headers": {
+        "Content-Type": "application/wasm",
+        "Content-Length": "39513091",
+        "Accept-Ranges": "none",
+        "Cache-Control": "public, max-age=31536000, immutable, no-transform",
+        "ETag": "\"sha256-35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277\"",
+        "X-Hush-Cache": "MISS",
+        "X-Hush-Cached-At": "2026-09-14T03:46:44.313Z",
+        "cf-cache-status": "DYNAMIC",
+        "CF-RAY": "a3ac6801ada2b68c-DFW"
+      }
+    },
+    {
+      "pass": "second",
+      "file": "index.pck",
+      "status": 200,
+      "bytes": 101717356,
+      "sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+      "seconds": 11.86,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "101717356",
+        "cf-cache-status": "DYNAMIC",
+        "Accept-Ranges": "bytes",
+        "Age": "5",
+        "Cache-Control": "public, max-age=31536000, immutable, no-transform",
+        "ETag": "\"sha256-7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6\"",
+        "X-Hush-Cache": "HIT",
+        "X-Hush-Cached-At": "2026-09-14T03:46:38.725Z",
+        "CF-RAY": "a3ac681c8d3bf06a-DFW"
+      }
+    },
+    {
+      "pass": "second",
+      "file": "index.wasm",
+      "status": 200,
+      "bytes": 39513091,
+      "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+      "seconds": 2.793,
+      "headers": {
+        "Content-Type": "application/wasm",
+        "Content-Length": "39513091",
+        "cf-cache-status": "DYNAMIC",
+        "Accept-Ranges": "bytes",
+        "Age": "14",
+        "Cache-Control": "public, max-age=31536000, immutable, no-transform",
+        "ETag": "\"sha256-35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277\"",
+        "X-Hush-Cache": "HIT",
+        "X-Hush-Cached-At": "2026-09-14T03:46:44.313Z",
+        "CF-RAY": "a3ac68678b4c0d3a-DFW"
+      }
+    },
+    {
+      "pass": "range",
+      "file": "index.pck",
+      "status": 200,
+      "bytes": 101717356,
+      "sha256": "7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6",
+      "seconds": 7.25,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "101717356",
+        "cf-cache-status": "DYNAMIC",
+        "Accept-Ranges": "bytes",
+        "Age": "20",
+        "Cache-Control": "public, max-age=31536000, immutable, no-transform",
+        "ETag": "\"sha256-7b1859a86a22af0f40a32f27745e9416b47c5538929502cff215a04b79b091f6\"",
+        "X-Hush-Cache": "HIT",
+        "X-Hush-Cached-At": "2026-09-14T03:46:38.725Z",
+        "CF-RAY": "a3ac6878f9d1f08d-DFW"
+      }
+    },
+    {
+      "pass": "range",
+      "file": "index.wasm",
+      "status": 200,
+      "bytes": 39513091,
+      "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277",
+      "seconds": 5.251,
+      "headers": {
+        "Content-Type": "application/wasm",
+        "Content-Length": "39513091",
+        "cf-cache-status": "DYNAMIC",
+        "Accept-Ranges": "bytes",
+        "Age": "24",
+        "Cache-Control": "public, max-age=31536000, immutable, no-transform",
+        "ETag": "\"sha256-35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277\"",
+        "X-Hush-Cache": "HIT",
+        "X-Hush-Cached-At": "2026-09-14T03:46:44.313Z",
+        "CF-RAY": "a3ac68a6787c59fe-DFW"
+      }
+    }
+  ],
+  "initial_failures": [
+    "Empty Pages project returned 522 before first deployment; bootstrap changed to use deployment inventory",
+    "First preview small asset returned 522; subsequent full checks succeeded",
+    "First production PCK request returned 404 immediately after deploy; helper stopped; subsequent independent unique/stable/domain full checks passed without changing routes"
+  ],
+  "cleanup": {
+    "status": "PENDING_FINAL_BROWSER_VERIFICATION",
+    "proof_pages": "hush-basin-r2-proof-20260914",
+    "proof_r2": "hush-basin-r2-proof-20260914",
+    "account_r2_subscription_changed": false
+  },
+  "limitations": [
+    "Native Forward+ remains authoritative; Web remains provisional",
+    "Original Compatibility presentation and browser canvas sizing retained",
+    "No mobile, gamepad, global CDN performance, or Web/native visual-parity claim",
+    "Rollback retains versioned builds; no earlier production build exists yet to exercise a different-content rollback",
+    "Historical native Quarry–Depot traverse failure remains unresolved",
+    "Single-operator intentional promotion; no distributed lock or automatic main publication"
+  ],
+  "evidence_directory": "../Hush-Basin-Production-Evidence-20260914"
+}

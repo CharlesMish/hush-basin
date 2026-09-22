@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "hush-basin-r2-proof-20260914",
+  "pages_build_output_dir": "./site",
+  "compatibility_date": "2026-09-14",
+  "r2_buckets": [
+    {
+      "binding": "HUSH_ARTIFACTS",
+      "bucket_name": "hush-basin-r2-proof-20260914",
+      "preview_bucket_name": "hush-basin-r2-proof-20260914"
+    }
+  ]
+}
