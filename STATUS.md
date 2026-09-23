@@ -1,11 +1,12 @@
 # Narrative Presence Lab v0.1 — September 23, 2026
 
-State: **implementation verified; final package checks in progress; owner play pending**.
+State: **implementation verified and clean-extracted; owner play pending**.
 
 Starting branch/HEAD: `review/rens-receiver-v0.1` /
 `1afd28a253a3dbc0387cd3f339e5a56ab29dabf4`. Implementation branch:
 `feature/narrative-presence-v0.1`. The reviewed source publication identifies
 `6570619b7bff67140bec03039942585208b5a8be` as its playable candidate.
+Runtime implementation commit: `891d911e4108d7e937d8cc62a30f12a604035dff`.
 Exact engine: `/Applications/Godot.app/Contents/MacOS/Godot`,
 `4.7.1.stable.official.a13da4feb`. Native Metal Forward+ at 1280×720.
 
@@ -34,13 +35,15 @@ Runtime logs/captures/saves are evidence only and excluded from the source ZIP.
 | Retained receiver integration | 57/57 PASS |
 | Retained two-flag save store | 56/56 PASS across nine processes |
 | New narrative store | 16/16 PASS; corruption, failed-write preservation, reset and checkpoint validation |
-| New native narrative flow | 28/28 PASS, normal-input three-leg traversal |
+| New native narrative flow | 29/29 PASS, normal-input three-leg traversal |
 | New native pointer/gamepad event edges | 13/13 PASS; synthetic gamepad events, not physical-device testing |
 | Native restart lane | 37/37 PASS across eight fresh processes using saved stage snapshots |
-| New Web narrative flow | 28/28 PASS; Compatibility browser lane; no captured warnings/errors |
+| New Web narrative flow | 29/29 PASS; Compatibility browser lane; no captured warnings/errors |
+| New Web pointer/gamepad event edges | 13/13 PASS; Skip, release guard, reset, review and zero-condition delivery |
 | Web close/reopen | 41/41 PASS across nine saved states; actual tab close/reopen on one origin/profile |
 | Playable Web entry | Startup, three-card board, pointer reset/confirmation, Market portrait, Skip and decline observed; no auto-accept |
 | Native visual QA | Market, Works, Relay, invitation, ticket, Quarry and matched anchor captures inspected |
+| Clean runtime source archive | Fresh exact-engine import/parse and 29/29 narrative checks PASS; isolated save |
 
 Representative exact command forms, run from the repository root (output paths
 in evidence records are absolute):
@@ -61,14 +64,15 @@ The sequential regression runner invoked each of `world_polish_c1.gd`,
 `receiver_comprehension_native.gd`, `narrative_store_probe.gd` and
 `narrative_native.gd` with `godot --headless --fixed-fps 60 --path game`, explicit
 logs/results, and isolated test saves. `regressions/commands.json` preserves every
-argument. Native final flow/edges/anchors used ordinary rendering without the
-fixed-FPS override; see `native-final/commands.json`.
+argument. The final rerun is in `final-regressions/commands.json`. Native final
+flow/edges/anchors used ordinary rendering without the fixed-FPS override; see
+`native-final/commands.json` and the final 29-check `closeout/commands.json`.
 
 ## Build size and limits
 
-Playable Web PCK: **103,692,052 bytes**, up **703,880** (~0.68%) from the prior
-candidate's recorded 102,988,172 bytes. Complete export: **143,539,787 bytes**, up
-**703,888** (~0.49%). Pinned Web template/WASM and existing architecture unchanged.
+Playable Web PCK: **103,692,868 bytes**, up **704,696** (~0.68%) from the prior
+candidate's recorded 102,988,172 bytes. Complete export: **143,540,603 bytes**, up
+**704,704** (~0.49%). Pinned Web template/WASM and existing architecture unchanged.
 Two portrait textures import at at most 512 pixels. New environmental work is
 sparse static non-colliding mesh furniture with emissive materials; no dynamic
 lights, shaders, particles or physics nodes. This pass did not rerun the full
@@ -88,12 +92,34 @@ QA added the arriving receiver before installation. A later pointer test used
 screen rather than local viewport coordinates; correcting that test fixture
 made all pointer/gamepad checks pass. An inherited pause overlay was hidden only
 in the matched anchor screenshot fixture. No movement/camera/world repair or
-threshold relaxation was performed. No additional gameplay expansion is authorized.
+threshold relaxation was performed. Final copy review found an inherited Market
+return-pouch hint after declining Quarry work; a bounded correction replaced it
+with the concrete dry-socks resume state and added a regression. The complete
+headless suite, normal native integration and Web export were rerun afterward.
+No additional gameplay expansion is authorized.
 
-## Pending closeout
+The unchanged raw Web export shell renders a 1280×720 canvas at 640×360 CSS
+pixels on this browser's device-pixel-ratio 2 profile; some arrow glyphs differ.
+This is a reported Web presentation limit, not a native pass or a Web redesign.
+Browser restart evidence uses actual tab closure/reopening, not a full browser
+process kill. Native persistence uses fresh engine processes at every arc stage.
 
-Final browser restart/edge results and clean source-package validation are added
-below when observed. Owner play remains pending regardless of automated results.
+## Package closeout
+
+`git archive --format=zip` of runtime commit `891d911` was extracted into
+`evidence/clean-runtime`, with no cache. `python3 tools/launch.py --prepare-only`
+passed exact-engine import and parse. A fresh isolated-save full narrative run
+passed 29/29; expanded command/result are `clean-runtime-command.json` and
+`clean-runtime-result.json`. The final source ZIP contains that same runtime
+plus this verification documentation. Final archive hash, extraction launch and
+delivery commit are recorded externally in `FINAL_HANDOFF.md` and
+`evidence/package.json`, avoiding a self-referential archive hash.
+
+Final Web exports are in `evidence/closeout/web-playable` and `web-diagnostic`.
+The latter was served only on loopback port 8082 and completed all 29 integration
+checks in the browser. Web persistence and playable-reset observations are
+retained in `browser-results.json`. No production deployment was made.
+Owner play remains pending regardless of automated results.
 
 ---
 

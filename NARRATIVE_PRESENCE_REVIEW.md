@@ -11,6 +11,7 @@ Starting HEAD: `1afd28a253a3dbc0387cd3f339e5a56ab29dabf4`, clean before Godot im
 Its publication record identifies candidate
 `6570619b7bff67140bec03039942585208b5a8be` as the playable source.
 Implementation branch: `feature/narrative-presence-v0.1`.
+Runtime implementation commit: `891d911e4108d7e937d8cc62a30f12a604035dff`.
 No main update, push, deployment or external account action.
 
 The owner's Narrative Presence request supersedes the historical M5, world,
@@ -184,6 +185,11 @@ Ordinary challenge runs retain their existing session-only behavior.
 Browser persistence depends on its local filesystem/IndexedDB synchronization.
 An immediate forced process kill before that synchronization is not an atomic
 cloud-save guarantee. No cloud services or analytics were added.
+Eight fresh native processes verified saved arc stages (37 checks). Nine actual
+browser tab close/reopen cycles verified saved states (41 checks); a full browser
+process kill was not tested. The raw Web shell retains its high-DPI canvas sizing
+limit and occasional arrow-glyph differences; native Forward+ is the visual
+review authority.
 
 ## Playtest boundaries
 
