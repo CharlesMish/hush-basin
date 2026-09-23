@@ -1,4 +1,103 @@
-# Quiet Surfaces v1 — implementation and verification
+# Narrative Presence Lab v0.1 — September 23, 2026
+
+State: **implementation verified; final package checks in progress; owner play pending**.
+
+Starting branch/HEAD: `review/rens-receiver-v0.1` /
+`1afd28a253a3dbc0387cd3f339e5a56ab29dabf4`. Implementation branch:
+`feature/narrative-presence-v0.1`. The reviewed source publication identifies
+`6570619b7bff67140bec03039942585208b5a8be` as its playable candidate.
+Exact engine: `/Applications/Godot.app/Contents/MacOS/Godot`,
+`4.7.1.stable.official.a13da4feb`. Native Metal Forward+ at 1280×720.
+
+Use `PLAY_NARRATIVE.command`, then Dispatch → **Reset Narrative Experiment…**
+for a fresh play. See `START_NARRATIVE.md`. Architecture, exact implemented
+dialogue, portrait prompts, anchors, save semantics and compromises are recorded
+in `NARRATIVE_PRESENCE_REVIEW.md`. No owner attachment, comprehension, distinction,
+relationship, pacing, comfort, physical-gamepad or desire gate is passed.
+
+## Observed verification
+
+Evidence root (adjacent to the source checkout):
+`../Hush-Basin-Narrative-Presence-v0.1-Review/evidence/`.
+Full expanded commands are retained in each lane's `commands.json` or report.
+Runtime logs/captures/saves are evidence only and excluded from the source ZIP.
+
+| Check | Observed result |
+| --- | --- |
+| Untouched candidate import/180-frame smoke | PASS using explicit writable review log |
+| Untouched native receiver fixture | 57/57 PASS; original captures retained |
+| Candidate source preservation | All pre-existing gameplay/world files exact; only title/entry, export diagnostic selector and documentation change |
+| Same-host movement | All 1,260 ticks byte-identical to untouched baseline; SHA256 `29f1049f8e16ec65d288407c35e6ccae46e87c711bb6b54b134e6158c68b9443` |
+| Cargo / protected cargo | 92/92 + 92/92 PASS |
+| Vehicle | 39/39 PASS |
+| Run / paused retry | 54/54 + 15/15 PASS |
+| Retained receiver integration | 57/57 PASS |
+| Retained two-flag save store | 56/56 PASS across nine processes |
+| New narrative store | 16/16 PASS; corruption, failed-write preservation, reset and checkpoint validation |
+| New native narrative flow | 28/28 PASS, normal-input three-leg traversal |
+| New native pointer/gamepad event edges | 13/13 PASS; synthetic gamepad events, not physical-device testing |
+| Native restart lane | 37/37 PASS across eight fresh processes using saved stage snapshots |
+| New Web narrative flow | 28/28 PASS; Compatibility browser lane; no captured warnings/errors |
+| Web close/reopen | 41/41 PASS across nine saved states; actual tab close/reopen on one origin/profile |
+| Playable Web entry | Startup, three-card board, pointer reset/confirmation, Market portrait, Skip and decline observed; no auto-accept |
+| Native visual QA | Market, Works, Relay, invitation, ticket, Quarry and matched anchor captures inspected |
+
+Representative exact command forms, run from the repository root (output paths
+in evidence records are absolute):
+
+```sh
+godot --version
+godot --headless --path game --log-file /private/tmp/hush-narrative-v01-baseline/smoke-engine.log --quit-after 180 -- --cargo-log /private/tmp/hush-narrative-v01-baseline/smoke-cargo.jsonl
+godot --path game --log-file /private/tmp/hush-narrative-v01-baseline/native2-engine.log --script res://tests/receiver_comprehension_native.gd -- --save /private/tmp/hush-narrative-v01-baseline/project.json --result /private/tmp/hush-narrative-v01-baseline/result.json --captures /private/tmp/hush-narrative-v01-baseline/captures --cargo-log /private/tmp/hush-narrative-v01-baseline/native2-cargo.jsonl
+python3 tools/verify_narrative_preservation.py
+python3 tools/test_relay_persistence.py --output ../Hush-Basin-Narrative-Presence-v0.1-Review/evidence/legacy-store
+python3 tools/export_web.py --narrative-smoke --output ../Hush-Basin-Narrative-Presence-v0.1-Review/evidence/web-final
+python3 tools/export_web.py --output ../Hush-Basin-Narrative-Presence-v0.1-Review/evidence/web-playable
+```
+
+The sequential regression runner invoked each of `world_polish_c1.gd`,
+`alpha_cargo_matrix.gd` (ordinary/protected), `run_v0_probe.gd`,
+`paused_retry_addendum.gd`, `quarto_vehicle_v1.gd`,
+`receiver_comprehension_native.gd`, `narrative_store_probe.gd` and
+`narrative_native.gd` with `godot --headless --fixed-fps 60 --path game`, explicit
+logs/results, and isolated test saves. `regressions/commands.json` preserves every
+argument. Native final flow/edges/anchors used ordinary rendering without the
+fixed-FPS override; see `native-final/commands.json`.
+
+## Build size and limits
+
+Playable Web PCK: **103,692,052 bytes**, up **703,880** (~0.68%) from the prior
+candidate's recorded 102,988,172 bytes. Complete export: **143,539,787 bytes**, up
+**703,888** (~0.49%). Pinned Web template/WASM and existing architecture unchanged.
+Two portrait textures import at at most 512 pixels. New environmental work is
+sparse static non-colliding mesh furniture with emissive materials; no dynamic
+lights, shaders, particles or physics nodes. This pass did not rerun the full
+AB/BA GPU study and makes no performance-improvement claim. Historical world
+performance/traversal limitations below remain historical and unaltered.
+
+Initial sandboxed startup could not write the default `user://` review log;
+the explicit writable-log smoke passed. A sandboxed native display process
+could not access macOS display services and was stopped; desktop-enabled native
+verification passed. One native attempt with relative evidence paths crashed
+before the engine banner; absolute-path native runs passed. These attempts are
+retained, not counted as game regression passes.
+
+Pre-complete development checks caught JSON floating-point round-trip comparison
+and synthetic held-input tracking issues, then passed after correction. Visual
+QA added the arriving receiver before installation. A later pointer test used
+screen rather than local viewport coordinates; correcting that test fixture
+made all pointer/gamepad checks pass. An inherited pause overlay was hidden only
+in the matched anchor screenshot fixture. No movement/camera/world repair or
+threshold relaxation was performed. No additional gameplay expansion is authorized.
+
+## Pending closeout
+
+Final browser restart/edge results and clean source-package validation are added
+below when observed. Owner play remains pending regardless of automated results.
+
+---
+
+# Historical Quiet Surfaces v1 — implementation and verification
 
 2026-09-05. Isolated successor from delivered Working Neighborhood v1 source ZIP SHA256 `9d2ab3d884243e2992c7753ba82adec6d84a7668c21696476d5d9eb8a4af450e`. Original source, inventories and evidence remain intact. Exact engine: `4.7.1.stable.official.a13da4feb`; native Metal Forward+ on Apple M5 at 1280 × 720.
 

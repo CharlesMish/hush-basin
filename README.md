@@ -1,4 +1,18 @@
-# Current review authority — Ren's Receiver v0.1
+# Current candidate — Narrative Presence Lab v0.1
+
+Play with **PLAY_NARRATIVE.command** or `python3 tools/play_narrative.py`.
+Use [the short start card](START_NARRATIVE.md); no design reading is needed.
+Dispatch provides **Reset Narrative Experiment…** for a fresh play.
+
+This local branch adds the bounded Ren/Ivo portrait conversation experiment to
+the exact reviewed receiver source. Driving, camera, city, cargo and scoring are
+preserved. [Implementation record](NARRATIVE_PRESENCE_REVIEW.md) and [observed
+checks](STATUS.md) are reviewer evidence. Attachment, pacing and desire to drive
+remain Charlie's playtest questions. No main update or production deployment.
+
+---
+
+# Previous review authority — Ren's Receiver v0.1
 
 **[Start here: current candidate, controls, systems and review questions](REVIEW_CURRENT.md).**
 

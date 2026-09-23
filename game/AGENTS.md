@@ -1,3 +1,14 @@
+# Current task — Narrative Presence Lab v0.1
+
+The owner's current prompt authorizes the additive narrative slice documented
+in `../NARRATIVE_PRESENCE_REVIEW.md`. Existing vehicle/controller, camera, cargo,
+BRRR/drift, world data and authored routes remain unchanged. Use the new
+narrative scene and tests while retaining historical fixtures as provenance.
+The old task-specific prohibitions below do not veto this explicitly authorized
+successor. Do not expand scope or claim owner gates from automated verification.
+
+---
+
 # Current vehicle task
 
 Read `../QUARTO_VEHICLE_V1_AUTHORITY.md` and `../docs/QUARTO_VEHICLE_V1.md` first. This owner-authorized visual successor may change only the existing `scenes/vehicle_visual.tscn` and `scripts/vehicle_visual_rig.gd` in playable source, plus their new visual resources and separate review/test scenes. It does not reopen gameplay, camera, world, physics, engine or publication. Historical R7 pose identity remains historical, not a target to relabel. The inherited instructions follow unchanged.

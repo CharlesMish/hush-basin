@@ -1,3 +1,15 @@
+# Current task — Narrative Presence Lab v0.1
+
+The owner's explicit narrative implementation request controls this branch.
+Read `NARRATIVE_PRESENCE_REVIEW.md`, `START_NARRATIVE.md` and the current section
+of `STATUS.md`. Preserve the reviewed `1afd28a253a3dbc0387cd3f339e5a56ab29dabf4`
+gameplay/world source. New narrative files extend the existing courier logic;
+the historical restrictions below apply only outside the newly authorized slice.
+No main update, push, production deployment, third character or additional arc.
+Stop for Charlie's playtest; automation cannot establish attachment or comfort.
+
+---
+
 # Current Web shell presentation
 
 The owner confirmed production hosting works and authorized a shell-only sizing
