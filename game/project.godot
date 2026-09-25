@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Hush Basin — Narrative Presence Lab"
-run/main_scene="res://review/narrative_presence/review.tscn"
+config/name="Hush Basin — Opening Chapter v0.1"
+run/main_scene="res://review/opening_chapter/review.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Hush Basin Relay Experiment v01"
 config/features=PackedStringArray("4.7", "Forward Plus")

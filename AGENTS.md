@@ -1,4 +1,19 @@
-# Current task — Narrative Presence Lab v0.1
+# Current task — Opening Chapter v0.1
+
+The owner accepted Narrative Presence Lab and explicitly authorized sections
+2–6 and 13 of `docs/OPENING_CHAPTER_PLAN_V0_1.md`. Read
+`OPENING_CHAPTER_REVIEW.md`, `START_OPENING_CHAPTER.md` and the current `STATUS.md`.
+The new chapter extends accepted source `d8e921068819a86ca888aaa26d9bfbb9fb8e4476`.
+Preserve vehicle, camera, cargo, scoring, world geometry and authored routes.
+Only the named local Ren/Ivo/Tess work, anonymous receipts, minimal anchors and
+cosmetic craft patch are authorized. No Chapter 2, additional faces, relationship
+systems, production deployment, push or main update. Stop for owner review.
+Use `tools/verify_opening_chapter.py` and `tools/verify_opening_preservation.py`;
+historical inventories below remain provenance, not successor pass criteria.
+
+---
+
+# Previous task — Narrative Presence Lab v0.1
 
 The owner's explicit narrative implementation request controls this branch.
 Read `NARRATIVE_PRESENCE_REVIEW.md`, `START_NARRATIVE.md` and the current section

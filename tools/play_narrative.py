@@ -15,7 +15,7 @@ def main():
           '\nE/Enter interact · Enter advance · Left back · X skip · Esc close/pause',
           '\nDispatch → Reset Narrative Experiment starts a fresh review.', flush=True)
     with launch_lock():
-        return subprocess.call([str(engine), '--path', str(ROOT/'game'),
+        return subprocess.call([str(engine), '--path', str(ROOT/'game'), 'res://review/narrative_presence/review.tscn',
             '--log-file', str(folder/f'narrative-engine-{stamp}.log'),
             '--', '--cargo-log', str(folder/f'narrative-{stamp}.jsonl')])
 

@@ -1,4 +1,20 @@
-# Current candidate — Narrative Presence Lab v0.1
+# Current candidate — Opening Chapter v0.1
+
+Double-click **PLAY_OPENING_CHAPTER.command** or run
+`python3 tools/play_opening_chapter.py`. [Short start card](START_OPENING_CHAPTER.md).
+One connected candidate starts with a fresh, separate chapter save. Dispatch →
+**Reset Opening Chapter…** restarts it without altering earlier experiment saves.
+
+The owner accepted Narrative Presence Lab. This bounded successor adds the
+approved opening chapter while preserving driving and the existing world.
+[Implementation and review record](OPENING_CHAPTER_REVIEW.md) ·
+[Observed verification](STATUS.md). No main update or production deployment.
+Whether the connected work feels like the beginning of a game and leaves the
+player eager to drive remains an owner-play question.
+
+---
+
+# Previous candidate — Narrative Presence Lab v0.1
 
 Play with **PLAY_NARRATIVE.command** or `python3 tools/play_narrative.py`.
 Use [the short start card](START_NARRATIVE.md); no design reading is needed.

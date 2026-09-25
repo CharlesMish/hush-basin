@@ -1,4 +1,126 @@
-# Narrative Presence Lab v0.1 — September 23, 2026
+# Opening Chapter v0.1 — September 25, 2026
+
+State: **implemented and verified; stop for owner review**.
+The owner reported the previous Narrative Presence Lab as accepted strongly
+enough for this expansion. That acceptance does not pass the new chapter's gates.
+
+Exact starting branch: `feature/narrative-presence-v0.1`.
+Exact starting HEAD: `d8e921068819a86ca888aaa26d9bfbb9fb8e4476` (clean).
+Implementation branch: `feature/opening-chapter-v0.1`.
+The final commit and source ZIP identity are recorded in the adjacent review
+package's `FINAL_HANDOFF.md` and `package.json`, avoiding a self-referential hash.
+Exact engine: `/Applications/Godot.app/Contents/MacOS/Godot`,
+`4.7.1.stable.official.a13da4feb`. Native Metal Forward+, Apple M5, 1280×720.
+
+Double-click **PLAY_OPENING_CHAPTER.command**. One contiguous candidate uses a
+separate fresh chapter save. Dispatch → **Reset Opening Chapter…** confirms a
+restart; earlier experiments' saves remain untouched. See
+`START_OPENING_CHAPTER.md` for the short card and `OPENING_CHAPTER_REVIEW.md`
+for architecture, exact text source, portrait, geometry, patch, persistence,
+compromises and the owner questions. No main update, push or deployment.
+
+## Observed verification
+
+Evidence root: `../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/`.
+Raw native commands/results are in `complete-1/commands.json` and `suite.json`.
+Browser observations are in `web-observed.json`; compiled source/output hashes
+are in each Web export's `build.json`. Test saves are isolated from owner saves.
+
+| Check | Result |
+| --- | --- |
+| Untouched accepted baseline | Ten retained suites rerun before edits; all PASS, plus exact C1 trace |
+| B11 before modifications | 45-point ground/collision survey; ordinary-input approaches from Market and Clinic PASS, zero resets |
+| HOP / DOG clearance | Contact disk clears operational corridors by 47 m / 46.215 m; no new collision |
+| Source preservation | All original runtime/controller/rig/world/routes/cargo/scoring/narrative files exact; only title/entry and named wrapper/document exceptions |
+| Movement parity | 1,260 ticks byte-identical; SHA256 `29f1049f8e16ec65d288407c35e6ccae46e87c711bb6b54b134e6158c68b9443` |
+| Cargo / protected cargo | 92/92 + 92/92 PASS |
+| Vehicle / run / paused retry | 39/39 + 54/54 + 15/15 PASS |
+| Retained receiver | 57/57 PASS |
+| Retained project persistence | 56/56 PASS across nine separate processes |
+| Retained narrative store / flow / edges | 16/16 + 29/29 + 13/13 PASS |
+| Chapter atomic store | 30/30 PASS; corruption, invalid stages/checkpoints, failed-write preservation, explicit reset |
+| Chapter synthetic handoff guards | 85/85 PASS, including zero condition and one-hour elapsed delivery |
+| Chapter headless full route | 97/97 PASS; eight authored legs, one other paid job, three repositioning drives; zero resets |
+| Chapter native full route | 97/97 PASS, native Forward+; zero resets in all twelve traversals |
+| Chapter native input edges | 16/16 PASS; held final Advance, Skip, pointer, synthetic gamepad, reset, remote-face rejection, text-only ticket |
+| Native process restarts | 134/134 PASS across 20 fresh-process saved stages, including both pending handoffs and every aboard state |
+| Chapter Web full / edges | 97/97 + 16/16 PASS; no captured warnings/errors |
+| Retained narrative Web full / edges | 29/29 + 13/13 PASS; no captured warnings/errors |
+| Web close/reopen | 134/134 PASS across the same 20 saved stages on one origin/profile; no captured warnings/errors |
+| Playable Web entry | Anonymous Market lead, three-card board, Skip, decline, pointer reset/confirmation and fresh introduction observed |
+| Native visual checks | Dialogue and matched B11/Relay/Depot before/after captures inspected; real rear-leaf patch visible |
+| Clean source extraction | Fresh exact-engine import/parse PASS; full chapter 97/97 and native fresh startup 3/3 PASS |
+
+Representative exact commands, from the source root (expanded absolute arguments
+and output files are retained in the evidence):
+
+```sh
+python3 tools/verify_opening_chapter.py --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/complete-1 --native
+python3 tools/verify_opening_preservation.py
+python3 tools/test_relay_persistence.py --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/legacy-store
+python3 tools/export_web.py --chapter-smoke --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/web-chapter-final
+python3 tools/export_web.py --narrative-smoke --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/web-lab-final
+python3 tools/export_web.py --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/web-playable-final
+python3 tools/launch.py --prepare-only
+git diff --check
+```
+
+The clean-extraction flow uses `godot --headless --fixed-fps 60 --path game
+--script res://tests/chapter_native.gd` with absolute isolated save/result/log
+paths; native startup omits headless/fixed-FPS and uses `--phase fresh`.
+`clean-runtime/commands.json` retains the full commands and exit codes.
+The browser diagnostics used the final local exports, `?phase=edges`, and
+`?phase=inspect_<snapshot>` for each stored stage, closing/reopening tabs.
+
+## Size, timing and limits
+
+Playable Web PCK: **104,165,348 bytes**, up **472,480** (~0.46%) from the
+accepted lab's 103,692,868. Complete export: **144,013,081 bytes**, up
+**472,478** (~0.33%) from 143,540,603. Pinned template/WASM unchanged.
+The export was made from the final runtime working tree before commit; its
+manifest records the starting HEAD plus per-file source hashes. Packaging
+checks those hashes against the committed runtime; later differences are
+documentation/UID metadata only. No Web architecture or production change.
+
+No controlled frame-time benchmark was performed. Successful full native/Web
+runs establish integration, not a performance-improvement or parity claim.
+Existing local export high-DPI canvas sizing behavior remains; native is the
+owner candidate. Synthetic gamepad events do not establish physical gamepad feel.
+Restart tests use normal persisted snapshots and new processes/tabs, not abrupt
+OS/browser process-kill guarantees. Same-host movement identity is not a claim
+of deterministic physics across platforms or engine versions.
+
+The scripted route contains roughly five minutes of driving, excluding reading,
+offer browsing and exploration. It does **not** establish the 20–30ish-minute
+human target. **Tess's jackets leg is the suspected pacing weak point**, retained
+as explicitly requested. No padding, additional faces or compensating prose.
+The patch is small, and the scuffs are authored wear, not measured damage.
+
+## Failed attempts and bounded corrections
+
+Development evidence is retained rather than relabeled: an early compile/type
+error; fixture assumptions about already-armed summaries and JSON number types;
+a skipped Quarry introduction that had not been marked seen; a native capture
+fixture that counted physics catch-up ticks instead of UI process frames; and a
+stale prior receipt footer at Tess. These were resolved before the first complete
+post-edit suite. That complete suite passed; no runtime repair followed it.
+
+Initial Web exports under the restricted sandbox could not save Godot's desktop
+editor settings. Re-export with desktop permissions passed. A final import
+invocation with a relative log path crashed before engine startup; rerunning
+with an absolute writable log path passed. Headless sandbox runs can emit the
+host's certificate-store message, unrelated to game behavior. The historical
+`verify_repo.py` inventory still reports earlier successor differences, as it
+did before this work; its old hashes were not rewritten. Use the new scoped
+preservation verifier for this branch.
+
+No new owner attachment, pacing, location-comprehension, noticeability, comfort,
+or desire-to-keep-driving gate is passed. Stop for Charlie and preferably one
+player unfamiliar with the scripts.
+
+---
+
+# Narrative Presence Lab v0.1 — September 23, 2026 (historical)
 
 State: **implementation verified and clean-extracted; owner play pending**.
 

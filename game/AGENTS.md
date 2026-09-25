@@ -1,4 +1,16 @@
-# Current task — Narrative Presence Lab v0.1
+# Current task — Opening Chapter v0.1
+
+The owner authorized the bounded successor in
+`../docs/OPENING_CHAPTER_PLAN_V0_1.md` sections 2–6 and 13.
+`../OPENING_CHAPTER_REVIEW.md` records its geometry inspection and patch decision.
+Extend the accepted narrative slice additively; preserve original movement,
+camera, collision, world, routes, cargo, BRRR, rig and Web architecture.
+The local Tess anchor and child visual patch narrowly supersede the older
+no-third-character/visual freezes below. No wider world or campaign work.
+
+---
+
+# Previous task — Narrative Presence Lab v0.1
 
 The owner's current prompt authorizes the additive narrative slice documented
 in `../NARRATIVE_PRESENCE_REVIEW.md`. Existing vehicle/controller, camera, cargo,
