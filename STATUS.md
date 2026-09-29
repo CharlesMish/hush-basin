@@ -1,3 +1,67 @@
+# Opening Chapter small UX correction — September 29, 2026
+
+Starting branch `feature/opening-chapter-v0.1`, clean HEAD
+`fd6a7563918f257590906f0b7dae0229273b20a3`.
+Correction branch `fix/opening-chapter-ux-v0.1`; final commit/hash in the adjacent
+`Hush-Basin-Opening-Chapter-UX-v0.1-Review/package.json`.
+
+Tess's usable stop moved (40,77) → (40,67), radius 4 → 9 m, with a matching
+ground/minimap cue. Counter and all existing geometry stay fixed. Every chapter
+offer/card/driving purpose names its actual pickup and destination. The map now
+clears stale highlights and labels fixed-road guidance as advisory. Incorrect
+full L2 highlights were removed from three Tess legs. Intentional East return
+and South Cut advisories remain; every story delivery still accepts any legal
+route. See `OPENING_CHAPTER_UX_REVIEW.md` for the full eight-leg audit.
+
+Evidence: `../Hush-Basin-Opening-Chapter-UX-v0.1-Review/evidence/`.
+Installed engine remains `4.7.1.stable.official.a13da4feb`, native Forward+.
+
+| Verification | Observed result |
+| --- | --- |
+| Untouched chapter handoff guards | 85/85 PASS before edits |
+| New UX regression on old candidate | Expected failure reproduced stop, missing origin labels and stale map defects |
+| Final native UX audit | 72/72 PASS across all eight chapter legs |
+| Tess ordinary-input approaches | 12/12 PASS; Market, Clinic, Depot via Market; zero impacts/resets |
+| Ground / route clearance | 25 ground rays PASS; HOP 52 m / DOG 51.184 m clearance |
+| Retained suites + chapter integration | 882 checks across 36 runs PASS; native/headless full chapter 97 each, input edges 16 each |
+| Exact movement parity | 1,260 ticks byte-identical; SHA256 `29f1049f8e16ec65d288407c35e6ccae46e87c711bb6b54b134e6158c68b9443` |
+| Chapter quit/relaunch | 134 checks across 20 fresh processes PASS |
+| Retained project persistence | 56/56 PASS across nine processes |
+| Clean standalone source preparation / native UX | PASS; 72/72 with isolated save |
+| Web full chapter / input edges | 97/97 + 16/16 PASS; no captured warnings/errors |
+| Web close/reopen | Receiver and Clinic repairs aboard: 7/7 each PASS; actual pickup/destination visually checked |
+| Source scope | Six runtime files; all authored dialogue/offer/summary/order constants exact; controller, camera, collision, world/routes, portraits, cargo and persistence store exact |
+
+Commands (run from repository root; exact absolute engine invocations are saved
+in each evidence subfolder's `commands.json` or `command.json`):
+
+```sh
+python3 tools/verify_opening_chapter.py --output ../Hush-Basin-Opening-Chapter-UX-v0.1-Review/evidence/regressions --native
+python3 tools/test_relay_persistence.py --output ../Hush-Basin-Opening-Chapter-UX-v0.1-Review/evidence/retained-persistence
+python3 tools/verify_chapter_ux_preservation.py
+python3 tools/export_web.py --chapter-smoke --output ../Hush-Basin-Opening-Chapter-UX-v0.1-Review/evidence/web-final
+```
+
+Focused tests use `res://tests/chapter_ux_native.gd`, `--phase full` (default)
+or `--phase approaches`, with explicit isolated `--save`, `--result`,
+`--cargo-log` and optional `--captures`. Final UI cleanup only removes the old
+kit transformation heading from the active receiver strip; the handoff remains
+exact. Headless full-flow had already started before that display-only cleanup;
+final native flow and final 72-check UX audit include it.
+
+Final Web diagnostic output grows by 25,208 raw bytes / 9,906 estimated gzip
+bytes versus the prior chapter diagnostic. No performance timing benchmark was
+added for this presentation-only pass. Browser observations and close/reopen
+checks are in `evidence/web-observed.json`; source hashes are in
+`evidence/web-final/build.json`. The export was made before the final commit;
+package metadata verifies that its runtime sources match the committed candidate.
+
+Use the corrected review folder's `PLAY_OPENING_CHAPTER.command`. Existing
+chapter saves resume; Dispatch → Reset Opening Chapter remains optional.
+No owner-feel gate is claimed. No main update, push or production deployment.
+
+---
+
 # Opening Chapter v0.1 — September 25, 2026
 
 State: **implemented and verified; stop for owner review**.

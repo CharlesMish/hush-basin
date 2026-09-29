@@ -18,7 +18,15 @@ func configure_chapter(data: P1AWorldData,craft: CraftController) -> void:
 	_box(parts_case,Vector3(1.0,1.25,0),Vector3(.55,.35,.6),Color("a28e68"))
 	mail=Node3D.new();relay.add_child(mail)
 	for i in 3:_box(mail,Vector3(-1.15,1.1+i*.04,.18),Vector3(.5,.04,.45),Color("d5c5a0"))
-	south=_anchor(data,"TES",Vector2(0,6),"TESS · SOUTH COUNTER")
+	# Keep the counter at its original frontage position; only the parking point moves.
+	var stop:=P1AWorldData.xz(data.manifest.destination_pads.TES.center_xz_m)
+	south=_anchor(data,"TES",Vector2(40,83)-stop,"TESS · SOUTH COUNTER")
+	var marker:=MeshInstance3D.new();marker.name="TessStopMarker"
+	var marker_material:=_material(Color(.20,.80,.68))
+	marker.mesh=get_parent()._node_marker_mesh(marker_material)
+	marker.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	marker.position=Vector3(stop.x,data.terrain_height_at(stop.x,stop.y)+.12,stop.y)
+	add_child(marker)
 	for child in south.get_children():
 		if child is Label3D:child.position.y=3.2
 	_box(south,Vector3(0,1.05,0),Vector3(4,.16,1.25),Color("77624e"))

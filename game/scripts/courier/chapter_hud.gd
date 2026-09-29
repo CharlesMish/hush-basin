@@ -22,7 +22,7 @@ func refresh(job: Node) -> void:
 	if job.state=="FREE_ROAM":
 		var rows:=readout.text.split("\n");readout.text=rows[0]+"\n"+rows[1]+"\n"+job.resume_sentence()
 	if job.state=="ACTIVE" and job.contract.id in Chapter.ORDER:
-		purpose_panel.show();purpose_text.text=job.contract.purpose
+		purpose_panel.show();purpose_text.text=Chapter.pickup_label(job.contract)+"\n"+job.contract.purpose
 		readout.text="DELIVERY · %.0f m\nCargo %.1f%% · %d Credits" % [job._xz().distance_to(job.destination),job.cargo.condition_units/10.0,job.session.balance]
 		if job._xz().distance_to(job.destination)<=job.destination_radius:readout.text+="\n"+("Receiving…" if job.settle>0 else "Settle below 6 m/s to deliver.")
 	if job.state=="RESULTS" and job.last_result.get("job_id","") in Chapter.ORDER:
@@ -44,7 +44,8 @@ func refresh(job: Node) -> void:
 			if entry.id in Chapter.ORDER or String(entry.id).begins_with("chapter_"):
 				card_labels[slot].kind.text="DELIVERY" if entry.id in Chapter.ORDER else "NOTICE"
 				card_labels[slot].stamp.text="Accept when ready" if entry.id in Chapter.ORDER else "No cargo accepted"
-		objective_detail.text=c.purpose
+		objective_detail.text=c.get("purpose",c.objective_text)+"\n"+Chapter.pickup_label(c)
+		if c.id=="chapter_closed":objective_detail.text=c.purpose
 
 func refresh_base(job: Node) -> void:
 	handoff_visual.hide()
@@ -127,4 +128,3 @@ func _refresh_board(job: Node) -> void:
 	if job.neutral_control:notice.text="Review control · delivery availability saved locally; session rewards reset on exit."
 	if not job.board_notice.is_empty():notice.text=job.board_notice
 	if not job.project_error.is_empty():notice.text="PROJECT NOT SAVED: "+job.project_error+". Fix storage or Reset Project Experiment; delivery Credits still paid."
-

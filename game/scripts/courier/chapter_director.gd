@@ -26,8 +26,8 @@ func _input(event: InputEvent) -> void:
 		else:skip_story()
 
 const Story=preload("res://scripts/courier/chapter_text.gd")
-const SOUTH=Vector2(40,77)
-const SOUTH_RADIUS=4.0
+const SOUTH=Vector2(40,67)
+const SOUTH_RADIUS=9.0
 var story_store: RefCounted
 var dialogue: CanvasLayer
 var anchors: Node3D
@@ -76,9 +76,10 @@ func refresh_pool(hub: String) -> void:
 	var id:=offer_id()
 	if not id.is_empty() and Story.ORIGINS[id]==hub:board_jobs.append(Story.job(id))
 	if hub=="RLY" and coda_available():
-		var ticket: Dictionary=Story.local_work("RLY");ticket.merge({"id":"chapter_ticket","name":"Quarry request","place":"Tess · South counter","base":0,"purpose":"Patch kit → Quarry Stores. Pick up at Tess’s counter.","character":"Relay-posted request · view ticket"},true);board_jobs.append(ticket)
+		var ticket: Dictionary=Story.local_work("TES");ticket.merge({"id":"chapter_ticket","name":"Quarry request","destination":"QRY","place":"Quarry Stores","base":0,"purpose":"Patch kit → Quarry Stores. Pick up at Tess’s counter.","character":"Relay-posted request · view ticket"},true);board_jobs.append(ticket)
 	if hub=="MRK":
-		for i in 5:board_jobs.append(Catalog.ordinary(i))
+		for i in 5:
+			var c: Dictionary=Catalog.ordinary(i);c.origin=hub;board_jobs.append(c)
 	elif hub!="TES" or story_store.record.patch:board_jobs.append(Story.local_work(hub))
 	# Before the arc unlock, Tess has no remotely spoken introduction or fake job.
 	if board_jobs.is_empty():
@@ -114,6 +115,10 @@ func primary_action() -> void:
 			story_store.record.parcel=id;story_store.record.checkpoint=checkpoint(1000,0)
 			if not story_store.commit():story_store.record=previous;project_error=story_store.last_error;return
 	var leaving_receipt:=state=="RESULTS"
+	if state=="DISPATCH":
+		# Acceptance and restore both know the actual pickup, never the old Market default.
+		origin=hub_position(board_jobs[selected].origin)
+		origin_radius=float(gate.data.manifest.destination_pads[board_jobs[selected].origin].inner_flat_radius_m)
 	super.primary_action()
 	if leaving_receipt:receipt_text=""
 	update_anchors()
@@ -176,12 +181,26 @@ func return_local() -> void:
 func _process(delta: float) -> void:
 	super._process(delta)
 	if story_store==null or dialogue==null:return
-	if state=="NARRATIVE":cue.configure(hub_position(Story.HOME[conversation]),Story.HOME[conversation])
+	refresh_navigation()
 	if state=="NARRATIVE" and summary and not acceptance_armed:
 		release_frames=release_frames+1 if inputs_neutral() and _held_story_inputs.is_empty() else 0
 		if release_frames>=2:acceptance_armed=true;update_dialogue()
 	if state=="ACTIVE" and not story_store.record.parcel.is_empty() and cargo.condition_units!=_last_saved_condition:
 		save_checkpoint();_last_saved_condition=cargo.condition_units
+
+func refresh_navigation() -> void:
+	var active: bool=state=="ACTIVE" or state in ["PAUSED","WAIT_NEUTRAL"] and _resume_state=="ACTIVE"
+	var advisory: Array[String]=[]
+	if active:
+		for route in contract.routes:advisory.append(String(route).trim_prefix("-"))
+	# The retained diagnostic menu can write this map too. The current chapter state
+	# owns its guidance, including clearing an old line during a handoff or decline.
+	if gate.map.highlighted_route_ids!=advisory:gate.map.set_highlighted_routes(advisory)
+	gate.map.route_caption=("Suggested · any legal route" if contract.objective=="NONE" else "Optional challenge route") if active and not advisory.is_empty() else "Destination · any legal route" if active else "Pickup / local stop"
+	if active:cue.configure(destination,"To "+String(contract.destination))
+	elif state=="NARRATIVE":cue.configure(hub_position(Story.HOME[conversation]),Story.HOME[conversation])
+	else:
+		var id:=guidance_id();cue.configure(hub_position(id),"Stop "+id)
 func _finish(delivered: bool,message: String) -> void:
 	if story_store==null:super._finish(delivered,message);return
 	if not (state=="ACTIVE" or state in ["PAUSED","WAIT_NEUTRAL"] and _resume_state=="ACTIVE"):return

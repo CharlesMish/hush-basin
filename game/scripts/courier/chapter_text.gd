@@ -45,20 +45,25 @@ static func job(id: String) -> Dictionary:
 	 "relay_stock":{"destination":"WRK","name":"Receiver kit","base":120,"routes":["L4","R0"],"reaction":"Receiver kit received."},
 	 "relay_receiver":{"destination":"RLY","name":"Finished receiver","base":140,"routes":["L7","-A2"],"reaction":"Receiver delivered."},
 	 "relay_quarry":{"destination":"QRY","name":"Dry socks","base":100,"routes":["-A1","-A0"],"reaction":"Six pairs received. We can have the kettle back."},
-	 "tess_jackets":{"destination":"DEP","name":"Mended jackets","base":100,"routes":["-L2","-L1"],"reaction":LINES.depot[0]},
+	 "tess_jackets":{"destination":"DEP","name":"Mended jackets","base":100,"routes":["-L1"],"reaction":LINES.depot[0]},
 	 "tess_aprons":{"destination":"CLN","name":"Clinic’s aprons","base":120,"routes":["S0","DOG","S1"],"reaction":LINES.clinic[0]},
-	 "tess_repairs":{"destination":"TES","name":"Clinic repairs","base":100,"routes":["-L2"],"reaction":"First order received at Tess’s counter."},
-	 "tess_patches":{"destination":"QRY","name":"Patch kit","base":120,"routes":["-L2","-L1","-L0","-A0"],"reaction":"Patches received. Rope’s back on its hook. Come out when you’re not working—we’ll put the kettle on. —B."}
+	 "tess_repairs":{"destination":"TES","name":"Clinic repairs","base":100,"routes":[],"reaction":"First order received at Tess’s counter."},
+	 "tess_patches":{"destination":"QRY","name":"Patch kit","base":120,"routes":["-L1","-L0","-A0"],"reaction":"Patches received. Rope’s back on its hook. Come out when you’re not working—we’ll put the kettle on. —B."}
 	}[id]
-	c.merge(spec,true);c.id=id;c.place=PLACES[c.destination];c.character="To "+String(c.place);c.objective_text="Paid delivery · no timer or quality gate"
+	c.merge(spec,true);c.id=id;c.origin=ORIGINS[id];c.place=PLACES[c.destination];c.character="To "+String(c.place);c.objective_text="Paid delivery · no timer or quality gate"
 	var exchange: String=OFFERS.find_key(id)
-	c.purpose=SUMMARIES[exchange];c.dispatch=c.purpose
+	c.purpose=SUMMARIES[exchange]
+	if id=="relay_receiver":c.purpose=c.purpose.get_slice("\n\n",1) # Transformation belongs to the handoff, not the active leg.
+	c.dispatch=c.purpose
 	return c
 
 static func local_work(hub: String) -> Dictionary:
 	var c: Dictionary=preload("res://scripts/courier/relay_contracts.gd").outbound()
-	c.id="mending_pickup" if hub=="TES" else "local_"+hub
+	c.id="mending_pickup" if hub=="TES" else "local_"+hub;c.origin=hub
 	c.name="Mended work" if hub=="TES" else "Market post pouch"
 	c.destination="DEP" if hub=="TES" else "MRK";c.place=PLACES[c.destination];c.character=PLACES[hub]+" → "+c.place
 	c.purpose=c.name+" → "+c.place+"\nOrdinary paid work.";c.dispatch=c.purpose;c.reaction="Mended work received." if hub=="TES" else "Post received at Market.";c.routes=[]
 	return c
+
+static func pickup_label(c: Dictionary) -> String:
+	return "Pickup: "+PLACES[c.origin]+" → "+PLACES[c.destination]

@@ -9,6 +9,8 @@ func display(id: String,index: int,summary: bool,reviewing: bool,receipt: String
 	caption.text="You pass on Ivo’s invitation." if id=="relay" and index==1 else Chapter.SOCK_TICKET if id=="quarry_offer" else Chapter.TICKET if id=="coda" else ""
 	caption.visible=not caption.text.is_empty()
 	speech.text=Chapter.SUMMARIES.get(id,"Exchange complete.") if summary else Chapter.LINES[id][index]
+	if summary and id in Chapter.OFFERS:
+		speech.text+="\n"+Chapter.pickup_label(Chapter.job(Chapter.OFFERS[id]))
 	speech.add_theme_font_size_override("font_size",19 if summary else 22)
 	footer.text=receipt if summary or not receipt.is_empty() else "%d / %d" % [index+1,Chapter.LINES[id].size()]
 	next_button.visible=not summary;back_button.visible=not summary and index>0;skip_button.visible=not summary
