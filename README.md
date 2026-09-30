@@ -1,15 +1,32 @@
 # Hush Basin — current full-game checkpoint
 
-The complete Quiet Surfaces city now uses the Quarto-derived native vehicle.
-Charlie approved putting this played version on main on September 7, 2026.
-Native integration passed on Godot `4.7.1.stable.official.a13da4feb`; see the
-[current checkpoint record](docs/QUARTO_MAIN_CHECKPOINT_20260907.md) for exact
+A driving game made in Godot. You drive a small **craft** through a city district
+in warm drizzle. The craft has two forms: **Spread**, the default and more
+maneuverable form, and **Drive**, the faster form you hold with Shift. In Spread,
+Space makes a **Hop**, trading forward speed for lift. The game opens a **Run**, a
+timed drive from Quarry to Relay; its results card shows the clock and **BRRR**, a
+provisional score for fast, sideways Drive motion.
+
+Demos showed that a story adds meaning and anticipation to the driving, so the game
+is being fleshed out as a story. That work is not on `main` yet.
+
+`main` holds the played full-game checkpoint from September 7, 2026: the complete
+Quiet Surfaces city with the current native vehicle, a simplified rig adapted from
+Quarto's shape. Native integration passed on Godot `4.7.1.stable.official.a13da4feb`;
+see the [current checkpoint record](docs/QUARTO_MAIN_CHECKPOINT_20260907.md) for exact
 verification and remaining limitations. Earlier handoffs below remain history.
 
 Run `python3 tools/launch.py`, or open **PLAY_FULL_GAME.command** on macOS.
 For the separate F6 comparison or vehicle studio, run
 `python3 tools/launch_quarto_vehicle.py --view compare` or `--view studio`.
 The full project is `game/project.godot`. No engine installation is automatic.
+
+A browser build is at [hush-basin.cmish.dev](https://hush-basin.cmish.dev/). The native
+Godot build is the reference; the browser build is a provisional play target and is
+deployed separately.
+
+See the [charter](docs/CHARTER.md) and [changelog](CHANGELOG.md). Released under the
+[MIT License](LICENSE).
 
 ---
 
