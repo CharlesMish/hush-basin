@@ -9,7 +9,7 @@ animation clock.
 Source baseline: `9fd4c020c374a7a6db441e4cbc20b53919d5a5e4`, Quiet Surfaces v1.
 Task branch: `feature/quarto-native-vehicle-v1`.
 Scope: [QUARTO_VEHICLE_V1_AUTHORITY.md](../QUARTO_VEHICLE_V1_AUTHORITY.md).
-Status: **candidate; native Godot validation and owner acceptance pending**.
+Status: **on `main` since September 7, 2026**; see the [checkpoint record](QUARTO_MAIN_CHECKPOINT_20260907.md).
 The pinned engine was not available in the implementation environment. No
 substitute engine was installed or used, and browser images are not native proof.
 
