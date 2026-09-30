@@ -9,11 +9,11 @@ Notable changes to this project are recorded here. The format follows [Keep a Ch
 - README introduction that defines the craft, Spread, Drive, Hop, Run, and BRRR, and links to the browser build.
 
 ### Changed
-- The README and CONTRIBUTING.md no longer use internal agent or approval language.
-- Docs that said to keep the repository private now say that it is public (`AGENTS.md`, `docs/SOURCE_PROVENANCE.md`, `docs/GITHUB_SETUP.md`).
+- The README introduction explains the current game without internal agent or approval language. Its inherited body and CONTRIBUTING.md remain unchanged.
+- The AGENTS.md preamble points to the September 7 checkpoint. Historical privacy and license wording in its inherited body, CONTRIBUTING.md, and provenance/setup records remains preserved by the verification contracts; the new LICENSE and README introduction describe the current terms and setup.
 
 ### Fixed
-- The first-setup check in CONTRIBUTING.md now names the verifier that applies to `main` (`tools/verify_quarto_vehicle.py`). `tools/verify_repo.py` still checks the older R7 inventory.
+- The README introduction names the current checkpoint verifier (`tools/verify_quarto_vehicle.py`) and explains its static/native distinction. CONTRIBUTING.md still names `tools/verify_repo.py`, whose entry point delegates to the older Quiet Surfaces verifier and retains two known vehicle-rig inventory failures.
 - `docs/QUARTO_VEHICLE_V1.md` no longer describes the vehicle as a pending candidate.
 
 ## 2026-09-07

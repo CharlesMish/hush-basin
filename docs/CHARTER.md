@@ -1,6 +1,6 @@
 # Charter: the hush-basin repository
 
-This page says what this project is for and what it is not. How to run it is in the [README](../README.md) and [CONTRIBUTING.md](../CONTRIBUTING.md). Rules for coding agents are in [AGENTS.md](../AGENTS.md), and notable changes are in [CHANGELOG.md](../CHANGELOG.md).
+This page says what this project is for and what it is not. Current setup is in the [README introduction](../README.md); [CONTRIBUTING.md](../CONTRIBUTING.md) retains a historical workflow. Rules for coding agents are in [AGENTS.md](../AGENTS.md), and notable changes are in [CHANGELOG.md](../CHANGELOG.md).
 
 **Names.** The repository and its README title use **Hush Basin**. The Godot project, the in-game build label, the launchers, and older records use **District Zero**. This charter uses the names as the repository already does and renames nothing.
 
@@ -39,7 +39,7 @@ The project is released under the MIT License (see [LICENSE](../LICENSE)). CONTR
 - Write plain, measured sentences. Say what was checked and what wasn't ("unjudged", "not certified"). Keep failures on the record. Don't rewrite them.
 - The game's own words are *craft*, *Spread*, *Drive*, *Hop*, *Run*, and *BRRR*. Define each one where it first appears, and don't pile them up.
 - Visual passes (World Polish, Warm Overcast, Working Neighborhood, Quiet Surfaces) are proper nouns.
-- The README, CONTRIBUTING.md, this charter, and the game's text don't use internal agent or approval language such as "owner review", "director", "Codex", or "Charlie approved".
+- New public-facing prose should avoid internal agent or approval language such as "owner review", "director", "Codex", or "Charlie approved". The inherited README body, CONTRIBUTING.md, agent records, and existing game labels still retain some of that wording; this documentation pass does not change them.
 - Leave archival records as they are. That includes scope and status documents, inventories, P1A/P1B, R7, and the old gate names.
 - No marketing language.
 

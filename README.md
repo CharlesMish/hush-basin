@@ -28,6 +28,24 @@ deployed separately.
 See the [charter](docs/CHARTER.md) and [changelog](CHANGELOG.md). Released under the
 [MIT License](LICENSE).
 
+For local development, use Python 3.10+ and the exact Godot version above.
+The current checkpoint's verifier is:
+
+```sh
+python3 tools/verify_quarto_vehicle.py --evidence /absolute/new/evidence
+```
+
+Choose a new, empty evidence directory. This runs source/data checks only; the
+[checkpoint record](docs/QUARTO_MAIN_CHECKPOINT_20260907.md) gives the separate
+`--native` command and its limits. `python3 tools/verify_repo.py` currently runs
+the older Quiet Surfaces verifier. It reports two known inventory mismatches for
+the later vehicle rig, so it is not a clean-check command for this checkpoint.
+
+The inherited README below, CONTRIBUTING.md, and older agent/provenance records
+are preserved historical text. Their private-repository and no-license wording
+predates [LICENSE](LICENSE). Use this introduction and the current checkpoint
+record for setup; do not rewrite the historical inventories to make them pass.
+
 ---
 
 # District Zero — Quiet Surfaces v1
