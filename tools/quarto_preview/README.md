@@ -17,7 +17,7 @@ No engine or package installation occurs. Supply an existing Babylon core:
 
 ```sh
 python3 tools/quarto_preview/serve.py \
-  --babylon-root /home/cmish/MECHA/MT1/node_modules/@babylonjs/core
+  --babylon-root /path/to/node_modules/@babylonjs/core
 ```
 
 Open `http://127.0.0.1:5192`. The server binds only to loopback and exposes the
