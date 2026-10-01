@@ -1,0 +1,55 @@
+{
+  "version": "fine-ground-v1",
+  "detail": {
+    "resolution": 256,
+    "seed": 40213,
+    "pebbles": 300,
+    "pebble_radius_px": [
+      1.6,
+      5.5
+    ],
+    "aggregate": 1100,
+    "aggregate_radius_px": [
+      0.6,
+      1.6
+    ]
+  },
+  "shader": {
+    "near_tile_m": 3.0,
+    "far_tile_m": 11.3,
+    "far_weight": 0.4,
+    "mineral_albedo": 0.22,
+    "asphalt_albedo": 0.16,
+    "mineral_relief": 0.3,
+    "asphalt_relief": 0.12,
+    "fade_start_m": 28.0,
+    "fade_end_m": 85.0,
+    "asphalt_roughness_range": [
+      0.7,
+      0.8
+    ]
+  },
+  "atmosphere": {
+    "ssao": {
+      "enabled": true,
+      "radius": 1.4,
+      "intensity": 1.6,
+      "power": 1.5,
+      "detail": 0.5,
+      "horizon": 0.06,
+      "sharpness": 0.98
+    },
+    "fog": {
+      "enabled": true,
+      "density": 0.0016,
+      "light_color": [
+        0.7,
+        0.71,
+        0.68
+      ],
+      "light_energy": 1.0,
+      "aerial_perspective": 0.5,
+      "sky_affect": 0.0
+    }
+  }
+}

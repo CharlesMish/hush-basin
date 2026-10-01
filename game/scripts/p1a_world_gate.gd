@@ -33,6 +33,7 @@ func _ready() -> void:
 	world.build(data)
 	preload("res://scripts/world_polish_presentation.gd").new().environment(self, data)
 	preload("res://scripts/overcast_resources.gd").environment(self)
+	preload("res://scripts/fine_ground.gd").atmosphere(self)
 	var weather := preload("res://scripts/overcast_weather.gd").new()
 	weather.name = "WarmOvercastWeather"
 	add_child(weather)

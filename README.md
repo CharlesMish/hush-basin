@@ -1,3 +1,13 @@
+# Hush Basin — Fine Ground v1 (branch)
+
+Near-range ground detail from one 229 KiB seamless tile over the unchanged
+Quiet Surfaces maps, plus SSAO, light distance haze and 16× anisotropic
+filtering. Presentation only; native validation is pending. See
+[FINE_GROUND_V1_AUTHORITY.md](FINE_GROUND_V1_AUTHORITY.md) and
+[docs/FINE_GROUND_V1.md](docs/FINE_GROUND_V1.md).
+
+---
+
 # Hush Basin — current full-game checkpoint
 
 The complete Quiet Surfaces city now uses the Quarto-derived native vehicle.

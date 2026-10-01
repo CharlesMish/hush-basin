@@ -1,3 +1,9 @@
+# Current world task
+
+Read `../FINE_GROUND_V1_AUTHORITY.md` first. Playable changes are limited to the terrain material line in `scripts/p1a_world_builder.gd`, one atmosphere call in `scripts/p1a_world_gate.gd`, one anisotropic setting in `project.godot`, and the new `scripts/fine_ground.gd`, its config and generated tile. The inherited instructions follow unchanged.
+
+---
+
 # Current vehicle task
 
 Read `../QUARTO_VEHICLE_V1_AUTHORITY.md` and `../docs/QUARTO_VEHICLE_V1.md` first. This owner-authorized visual successor may change only the existing `scenes/vehicle_visual.tscn` and `scripts/vehicle_visual_rig.gd` in playable source, plus their new visual resources and separate review/test scenes. It does not reopen gameplay, camera, world, physics, engine or publication. Historical R7 pose identity remains historical, not a target to relabel. The inherited instructions follow unchanged.

@@ -110,3 +110,4 @@ common/physics_interpolation=true
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.008, 0.014, 0.024, 1)
+textures/default_filters/anisotropic_filtering_level=4
