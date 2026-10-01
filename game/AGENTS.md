@@ -1,3 +1,15 @@
+# Current task — Chapters 2 + 3 v0.1
+
+The owner's October 1 request authorizes `docs/QUARRY_SLICE_V1_1.md` and
+`docs/CHAPTER_3_SLICE_V1_1.md` as exact authored authority. Continue from
+`fix/opening-chapter-ux-v0.1` at `9a559f95c1ec5eea910affd17b52d02eac562476`.
+Read `NARRATIVE_SLICES_REVIEW.md` and current `STATUS.md`. Validate and commit
+Chapter 2 before implementing Chapter 3. Preserve the opening, accepted Tess
+stop, movement/camera/cargo/world/routes and Web architecture. No main, push,
+production deployment or story beyond these two slices. Stop for owner play.
+Historical task prohibitions below are provenance, not a veto of this request.
+
+---
 # Current task — Opening Chapter v0.1
 
 The owner authorized the bounded successor in

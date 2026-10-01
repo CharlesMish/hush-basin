@@ -56,10 +56,11 @@ def main():
     parser.add_argument("--range-v11-smoke", action="store_true", help="Separate five-job mechanics V1.1 diagnostic entry")
     parser.add_argument("--mastery-smoke", action="store_true", help="Separate five-job mastery alpha diagnostic entry")
     parser.add_argument("--relay-smoke", action="store_true", help="Separate finite Relay consequence diagnostic entry")
+    parser.add_argument("--slices-smoke", action="store_true", help="Integrated authored narrative slices diagnostic")
     parser.add_argument("--chapter-smoke", action="store_true", help="Separate Opening Chapter integration diagnostic entry")
     parser.add_argument("--narrative-smoke", action="store_true", help="Separate narrative integration diagnostic entry")
     args = parser.parse_args()
-    if sum([args.smoke, args.courier_smoke, args.alpha_smoke, args.mechanics_smoke, args.range_v11_smoke, args.mastery_smoke, args.relay_smoke, args.narrative_smoke, args.chapter_smoke]) > 1:
+    if sum([args.smoke, args.courier_smoke, args.alpha_smoke, args.mechanics_smoke, args.range_v11_smoke, args.mastery_smoke, args.relay_smoke, args.narrative_smoke, args.chapter_smoke, args.slices_smoke]) > 1:
         parser.error("Choose one diagnostic entry")
     engine, version = resolve_engine(args.godot)
     template = args.template.expanduser().resolve()
@@ -72,7 +73,7 @@ def main():
     web = out / "web"
     web.mkdir()
     inputs = {str(p.relative_to(ROOT / "game")): sha(p.read_bytes()) for p in source_files()}
-    record = {"engine": version, "template_sha256": TEMPLATE_SHA256, "diagnostic_entry": args.smoke or args.courier_smoke or args.alpha_smoke or args.mechanics_smoke or args.range_v11_smoke or args.mastery_smoke or args.relay_smoke or args.narrative_smoke or args.chapter_smoke,
+    record = {"engine": version, "template_sha256": TEMPLATE_SHA256, "diagnostic_entry": args.smoke or args.courier_smoke or args.alpha_smoke or args.mechanics_smoke or args.range_v11_smoke or args.mastery_smoke or args.relay_smoke or args.narrative_smoke or args.chapter_smoke or args.slices_smoke,
               "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
               "source_sha256": inputs, "commands": [], "status": "INCOMPLETE"}
     try:
@@ -82,14 +83,15 @@ def main():
                 target = stage / name
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(ROOT / "game" / name, target)
-            if args.smoke or args.courier_smoke or args.alpha_smoke or args.mechanics_smoke or args.range_v11_smoke or args.mastery_smoke or args.relay_smoke or args.narrative_smoke or args.chapter_smoke:
-                diagnostic = ROOT / ("tools/chapter_web_smoke.gd" if args.chapter_smoke else "tools/narrative_web_smoke.gd" if args.narrative_smoke else "tools/relay_web_smoke.gd" if args.relay_smoke else "tools/mastery_web_smoke.gd" if args.mastery_smoke else "tools/range_v11_web_smoke.gd" if args.range_v11_smoke else "tools/mechanics_web_smoke.gd" if args.mechanics_smoke else "tools/alpha_web_smoke.gd" if args.alpha_smoke else "tools/courier_web_smoke.gd" if args.courier_smoke else "tools/web_smoke.gd")
-                record["diagnostic_kind"] = "opening_chapter" if args.chapter_smoke else "narrative_presence" if args.narrative_smoke else "relay_consequence" if args.relay_smoke else "mastery_alpha" if args.mastery_smoke else "range_v11" if args.range_v11_smoke else "mechanics_range" if args.mechanics_smoke else "alpha_loop" if args.alpha_smoke else "courier" if args.courier_smoke else "run_v0"
+            if args.smoke or args.courier_smoke or args.alpha_smoke or args.mechanics_smoke or args.range_v11_smoke or args.mastery_smoke or args.relay_smoke or args.narrative_smoke or args.chapter_smoke or args.slices_smoke:
+                diagnostic = ROOT / ("tools/slices_web_smoke.gd" if args.slices_smoke else "tools/chapter_web_smoke.gd" if args.chapter_smoke else "tools/narrative_web_smoke.gd" if args.narrative_smoke else "tools/relay_web_smoke.gd" if args.relay_smoke else "tools/mastery_web_smoke.gd" if args.mastery_smoke else "tools/range_v11_web_smoke.gd" if args.range_v11_smoke else "tools/mechanics_web_smoke.gd" if args.mechanics_smoke else "tools/alpha_web_smoke.gd" if args.alpha_smoke else "tools/courier_web_smoke.gd" if args.courier_smoke else "tools/web_smoke.gd")
+                record["diagnostic_kind"] = "narrative_slices" if args.slices_smoke else "opening_chapter" if args.chapter_smoke else "narrative_presence" if args.narrative_smoke else "relay_consequence" if args.relay_smoke else "mastery_alpha" if args.mastery_smoke else "range_v11" if args.range_v11_smoke else "mechanics_range" if args.mechanics_smoke else "alpha_loop" if args.alpha_smoke else "courier" if args.courier_smoke else "run_v0"
                 record["diagnostic_script_sha256"] = sha(diagnostic.read_bytes())
                 shutil.copyfile(diagnostic, stage / "web_smoke.gd")
                 (stage / "web_smoke.tscn").write_text('[gd_scene load_steps=2 format=3]\n[ext_resource type="Script" path="res://web_smoke.gd" id="1"]\n[node name="WebSmoke" type="Node"]\nscript = ExtResource("1")\n')
                 settings = stage / "project.godot"
-                main_entries = ['run/main_scene="res://review/opening_chapter/review.tscn"',
+                main_entries = ['run/main_scene="res://review/narrative_slices/review.tscn"',
+                                'run/main_scene="res://review/opening_chapter/review.tscn"',
                                 'run/main_scene="res://review/narrative_presence/review.tscn"',
                                 'run/main_scene="res://review/relay_consequence/relay_review.tscn"',
                                 'run/main_scene="res://scenes/district_zero_run.tscn"',

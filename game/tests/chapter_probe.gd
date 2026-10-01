@@ -1,8 +1,9 @@
 extends "res://tests/narrative_probe.gd"
 const Chapter=preload("res://scripts/courier/chapter_text.gd")
+var review_scene_path:="res://review/opening_chapter/review.tscn"
 func run() -> void:
 	get_tree().set_meta("chapter_test_save",save_path);get_tree().set_meta("relay_test_save",save_path+".legacy")
-	review=load("res://review/opening_chapter/review.tscn").instantiate();add_child(review);await ticks(120)
+	review=load(review_scene_path).instantiate();add_child(review);await ticks(120)
 	game=review.game;job=review.job;gate=job.gate;craft=job.craft
 	checks["chapter_initialized"]=job.story_store!=null and job.anchors!=null
 	if job.story_store==null:finish();return

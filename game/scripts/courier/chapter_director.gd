@@ -45,20 +45,26 @@ var _held_story_inputs: Dictionary={}
 
 func _initialize() -> void:
 	await super._initialize()
-	story_store=preload("res://scripts/courier/chapter_store.gd").new(String(get_tree().get_meta("chapter_test_save","user://opening_chapter_v01.json")))
+	story_store=create_story_store()
 	var loaded: Dictionary=story_store.load_state();project=story_store
 	project_error="" if loaded.ok else String(loaded.error)
-	remove_child(hud);hud.queue_free();hud=preload("res://scripts/courier/chapter_hud.gd").new();add_child(hud)
+	remove_child(hud);hud.queue_free();hud=create_story_hud();add_child(hud)
 	hud.primary.connect(primary_action);hud.secondary.connect(close_dispatch);hud.select_job.connect(select_contract);hud.purchase.connect(purchase_liner);hud.reset_experiment.connect(reset_experiment);hud.review_conversation.connect(review_local);hud.return_line.connect(return_local)
 	hud.mastery_state=session.mastery
-	dialogue=preload("res://scripts/courier/chapter_panel.gd").new();add_child(dialogue)
+	dialogue=create_story_panel();add_child(dialogue)
 	dialogue.advance.connect(advance_story);dialogue.back.connect(back_story);dialogue.skip.connect(skip_story);dialogue.accept.connect(accept_offer);dialogue.decline.connect(decline_offer)
 	# Local interaction metadata only. No terrain/collision/route data is changed.
 	gate.data.manifest.destination_pads["TES"]={"center_xz_m":[SOUTH.x,SOUTH.y],"inner_flat_radius_m":SOUTH_RADIUS}
-	anchors=preload("res://scripts/courier/chapter_anchors.gd").new();gate.world.add_child(anchors);anchors.configure_chapter(gate.data,craft)
+	anchors=create_story_anchors();gate.world.add_child(anchors);anchors.configure_chapter(gate.data,craft)
 	apply_project_state();refresh_pool("MRK")
 	if loaded.ok:restore_narrative()
 	update_anchors();print("OPENING_CHAPTER_READY step=",story_store.record.step)
+
+# Construction seams keep the accepted chapter's behavior and fixtures intact.
+func create_story_store() -> RefCounted:return preload("res://scripts/courier/chapter_store.gd").new(String(get_tree().get_meta("chapter_test_save","user://opening_chapter_v01.json")))
+func create_story_hud() -> CanvasLayer:return preload("res://scripts/courier/chapter_hud.gd").new()
+func create_story_panel() -> CanvasLayer:return preload("res://scripts/courier/chapter_panel.gd").new()
+func create_story_anchors() -> Node3D:return preload("res://scripts/courier/chapter_anchors.gd").new()
 
 func nearby_hub() -> String:
 	for id in ["MRK","RLY","WRK","DEP","CLN","QRY","TES"]:

@@ -17,7 +17,7 @@ def main():
     with launch_lock():
         return subprocess.call([str(engine), '--path', str(ROOT/'game'),
             '--log-file', str(logs/f'chapter-engine-{stamp}.log'),
-            '--', '--cargo-log', str(logs/f'chapter-{stamp}.jsonl')])
+            'res://review/opening_chapter/review.tscn', '--', '--cargo-log', str(logs/f'chapter-{stamp}.jsonl')])
 
 if __name__ == '__main__':
     raise SystemExit(main())

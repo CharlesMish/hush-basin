@@ -1,3 +1,15 @@
+# Chapters 2 + 3 successor — October 1, 2026
+
+Starting clean `fix/opening-chapter-ux-v0.1` at
+`9a559f95c1ec5eea910affd17b52d02eac562476`. Current work is on
+`experiment/narrative-chapters-2-3-v0-1`; main and production untouched.
+Chapter 2 checkpoint A is implemented and validated before Chapter 3 begins.
+See `NARRATIVE_SLICES_REVIEW.md` for exact scope, source adaptations, observed
+results and commands. Evidence is in the adjacent Chapters-2-3 review folder.
+Owner gates remain untested. This is a local review candidate only.
+
+---
+
 # Opening Chapter small UX correction — September 29, 2026
 
 Starting branch `feature/opening-chapter-v0.1`, clean HEAD
