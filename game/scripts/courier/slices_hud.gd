@@ -5,6 +5,11 @@ func _ready() -> void:
 func refresh(job: Node) -> void:
 	super.refresh(job)
 	if job.story_store==null or job.state=="NARRATIVE":return
+	# Show both actions at dispatch; keep the driving strip to one concrete lead.
+	if job.state=="FREE_ROAM" and Slice.chapter_two_complete(job.story_store.record):
+		var rows:=readout.text.split("\n");var leads: PackedStringArray=job.resume_sentence().split("\n")
+		var lead: String=leads[-1] if job.nearby_hub()=="RLY" else leads[0]
+		readout.text=rows[0]+"\n"+rows[1]+"\n"+lead
 	reset_dialog.dialog_text="Reset all three chapters, conversations, parcels and their physical changes?\nEarlier review saves and session rewards are preserved."
 	if job.state=="ACTIVE" and job.contract.id in Slice.JOBS:
 		purpose_panel.show();purpose_text.text=Chapter.pickup_label(job.contract)+"\n"+job.contract.purpose

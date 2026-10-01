@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Hush Basin — Opening Chapter v0.1"
+config/name="Hush Basin — Narrative Chapters v0.1"
 run/main_scene="res://review/narrative_slices/review.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Hush Basin Relay Experiment v01"

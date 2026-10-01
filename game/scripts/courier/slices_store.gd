@@ -8,7 +8,7 @@ const VERSION="hush-basin-narrative-chapters-v0.1"
 var record: Dictionary=fresh_record()
 
 static func fresh_record() -> Dictionary:
-	return {"step":0,"seen":[],"parcel":"","pending":"","checkpoint":{},"patch":false,"after_arc1":false,"after_arc2":false,"slices":{"done":[],"installed":false,"bedded":false}}
+	return {"step":0,"seen":[],"parcel":"","pending":"","checkpoint":{},"patch":false,"after_arc1":false,"after_arc2":false,"slices":{"done":[],"installed":false,"bedded":false,"relined":false,"shelf_label":false}}
 func _init(path: String=PATH) -> void:super(path)
 func load_state() -> Dictionary:
 	var r: Dictionary=super.load_state()
@@ -29,6 +29,7 @@ func contribute(id: String,delivered: bool=true) -> Dictionary:
 	var changed: bool=step_before<8 and Text.ORDER[step_before]==id
 	if changed:record.step+=1
 	elif step_before==8:
+		if not id in Slice.JOBS and delivery_destination=="QRY" and "relined_sleeve" in record.slices.done and not "red_return" in record.slices.done:record.slices.done.append("red_return")
 		if not id in Slice.JOBS and delivery_destination=="QRY" and "quarry_later" in record.slices.done and not "groove_return" in record.slices.done:record.slices.done.append("groove_return")
 		if id in Slice.available(previous):record.slices.done.append(id);changed=true
 		if not id in Slice.JOBS and delivery_destination=="CLN" and "new_threshold" in record.slices.done and record.slices.installed and not "clinic_release" in record.slices.done:
@@ -60,12 +61,15 @@ func _read_document(path: String) -> Dictionary:
 		if typeof(r.get(flag))!=TYPE_BOOL:return _bad()
 	if r.patch and r.step<7 or r.after_arc1 and r.step<4 or r.after_arc2 and (r.step<7 or not r.patch):return _bad()
 	if r.step==8 and not r.after_arc2:return _bad()
-	if not r.get("slices") is Dictionary or r.slices.size()!=3:return _bad()
+	if not r.get("slices") is Dictionary or not r.slices.size() in [3,5]:return _bad()
 	var s: Dictionary=r.slices
+	# Checkpoint A saves gain only the two new physical flags; no progress is inferred.
+	if s.size()==3:s["relined"]=false;s["shelf_label"]=false
 	if not s.get("done") is Array or typeof(s.get("installed"))!=TYPE_BOOL or typeof(s.get("bedded"))!=TYPE_BOOL:return _bad()
+	if typeof(s.get("relined"))!=TYPE_BOOL or typeof(s.get("shelf_label"))!=TYPE_BOOL:return _bad()
 	var unique: Array=[]
 	for id in s.done:
-		if not id in ["new_threshold","nell_first_tray","clinic_release","old_threshold","quarry_later","groove_return"] or id in unique:return _bad()
+		if not (id in ["new_threshold","nell_first_tray","clinic_release","old_threshold","quarry_later","groove_return","ren_answer","ren_letter","red_return"] or id in Slice.CHAPTER_THREE_JOBS) or id in unique:return _bad()
 		unique.append(id)
 	if not s.done.is_empty() and r.step!=8:return _bad()
 	if s.installed and not "new_threshold" in s.done:return _bad()
@@ -75,6 +79,13 @@ func _read_document(path: String) -> Dictionary:
 	if "quarry_later" in s.done and not s.bedded:return _bad()
 	if "groove_return" in s.done and not "quarry_later" in s.done:return _bad()
 	if "nell_first_tray" in s.done and not "new_threshold" in s.done:return _bad()
+	for id in Slice.CHAPTER_THREE_JOBS+["ren_answer","ren_letter","red_return"]:
+		if id in s.done and not ("quarry_later" in s.done and "nell_first_tray" in s.done):return _bad()
+	for id in {"tray_two":"tray_one","ren_answer":"tray_two","thread_box":"ren_answer","tagged_mending":"thread_box","ren_letter":"tagged_mending","kneeling_pads":"quarry_sleeve","relined_sleeve":"kneeling_pads","red_return":"relined_sleeve"}:
+		if id in s.done and not {"tray_two":"tray_one","ren_answer":"tray_two","thread_box":"ren_answer","tagged_mending":"thread_box","ren_letter":"tagged_mending","kneeling_pads":"quarry_sleeve","relined_sleeve":"kneeling_pads","red_return":"relined_sleeve"}[id] in s.done:return _bad()
+	if s.relined and not "kneeling_pads" in s.done:return _bad()
+	if "relined_sleeve" in s.done and not s.relined:return _bad()
+	if s.shelf_label and not "thread_box" in s.done:return _bad()
 	for id in r.seen:
 		if not id in Text.LINES and not id in Slice.SCENES:return _bad()
 	if r.pending!="" and not r.pending in Text.LINES and not r.pending in Slice.SCENES:return _bad()
@@ -85,6 +96,10 @@ func _read_document(path: String) -> Dictionary:
 			if not r.parcel in Text.ORDER:return _bad()
 			if r.step>=8 or Text.ORDER[int(r.step)]!=r.parcel or r.checkpoint.is_empty():return _bad()
 	if r.pending in Slice.SCENES and (r.step!=8 or not r.parcel.is_empty()):return _bad()
+	for id in Slice.JOBS:
+		if not r.pending.is_empty() and r.pending==Slice.JOBS[id].arrival and not id in s.done:return _bad()
+	if r.pending=="ren_answer" and (not "tray_two" in s.done or "ren_answer" in s.done):return _bad()
+	if r.pending=="ren_letter" and (not "tagged_mending" in s.done or "ren_letter" in s.done):return _bad()
 	if r.pending=="relay" and (r.step!=2 or r.parcel!="relay_receiver"):return _bad()
 	for id in {"ren_intro":1,"works":2,"quarry_offer":3,"depot":5,"clinic":6,"tess_final":7}:
 		if r.pending==id and (r.step!={"ren_intro":1,"works":2,"quarry_offer":3,"depot":5,"clinic":6,"tess_final":7}[id] or r.parcel!=""):return _bad()

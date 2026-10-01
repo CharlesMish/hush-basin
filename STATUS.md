@@ -3,7 +3,18 @@
 Starting clean `fix/opening-chapter-ux-v0.1` at
 `9a559f95c1ec5eea910affd17b52d02eac562476`. Current work is on
 `experiment/narrative-chapters-2-3-v0-1`; main and production untouched.
-Chapter 2 checkpoint A is implemented and validated before Chapter 3 begins.
+Chapter 2 checkpoint A is `31677586809b56ba9993802b33ca3eb1fa6d6828`, committed
+after validation and before Chapter 3 implementation. Both authored slices now
+run contiguously after the accepted opening. Checkpoint B is the final local
+candidate commit recorded in the owner package; neither main nor remote changed.
+
+Final retained suite: 882 checks / 36 runs PASS; native C1 trace remains exact.
+Fresh contiguous story: 275 checks PASS in native headless and Web. Chapter 3
+native integration: 139 PASS. Ren-first / sleeve-first: 140 each PASS. New
+resume coverage: 124 checks across 16 processes PASS, plus 45 atomic-store checks.
+B11 real approaches: 19 PASS without scraping/reset. Existing project-save suite:
+56 PASS across nine processes. Exact authored text: 46 passages preserved, two
+conditional lines omitted with the draft's permission. No human gate is claimed.
 See `NARRATIVE_SLICES_REVIEW.md` for exact scope, source adaptations, observed
 results and commands. Evidence is in the adjacent Chapters-2-3 review folder.
 Owner gates remain untested. This is a local review candidate only.
