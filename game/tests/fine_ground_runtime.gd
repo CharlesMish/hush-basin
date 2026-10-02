@@ -75,6 +75,7 @@ func run() -> void:
 		var atmosphere: Dictionary = cfg.atmosphere
 		check("SSAO_CONFIGURED", env.ssao_enabled == bool(atmosphere.ssao.enabled) and is_equal_approx(env.ssao_radius, float(atmosphere.ssao.radius)))
 		check("FOG_CONFIGURED", env.fog_enabled == bool(atmosphere.fog.enabled) and is_equal_approx(env.fog_density, float(atmosphere.fog.density)) and is_equal_approx(env.fog_sky_affect, float(atmosphere.fog.sky_affect)))
+		check("VIEWPORT_MSAA_CONFIGURED", int(gate.get_viewport().msaa_3d) == int(cfg.display.msaa_3d))
 		check("ANISOTROPIC_16X", int(ProjectSettings.get_setting("rendering/textures/default_filters/anisotropic_filtering_level")) == 4)
 	if capture_dir != "" and DisplayServer.get_name() != "headless":
 		DirAccess.make_dir_recursive_absolute(capture_dir)

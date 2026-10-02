@@ -31,6 +31,15 @@ at 100 m, about 38% at 300 m) uses the warm-grey horizon tone with aerial
 perspective and leaves the sky itself untouched. The project-wide anisotropic
 filtering level is 16× so ground textures stay sharp at grazing angles.
 
+**Edges and gradients (October 2).** 2× MSAA on the game viewport smooths the
+stair-stepped silhouettes of box architecture, walls, poles and road-edge
+geometry. Unlike FXAA, it leaves the new ground detail sharp. Debanding removes 8-bit
+stepping in the smooth overcast sky and haze. Both are in the config's `display` block
+(`msaa_3d`: 0 off, 1 = 2×, 2 = 4×). Considered and left alone: shadows on
+non-solid decorative modules (deliberately off), screen-space reflections on damp
+asphalt (expensive, little gain at its roughness), glow and a tonemapper change
+(would shift the approved palette).
+
 **Loading.** The detail folder carries `.gdignore`; the loader decodes the PNG
 from bytes and builds its mipmaps at startup (a 256-square tile). An existing
 `.godot` cache therefore never needs a reimport, and no `.import` file is created.
@@ -39,7 +48,8 @@ from bytes and builds its mipmaps at startup (a 256-square tile). An existing
 
 Every value is in `game/presentation/fine_ground_v1.json`. If the result is too strong,
 lower `mineral_albedo`, `asphalt_albedo` or the two `relief` values. If tiling or
-shimmer is visible, reduce `fade_end_m`. Set `ssao.enabled` or `fog.enabled` to
+shimmer is visible, reduce `fade_end_m`. If edges cost too much frame time, set
+`display.msaa_3d` to 0. Set `ssao.enabled` or `fog.enabled` to
 `false` to remove either. To change the tile itself, edit the `detail` block, then
 run `python3 tools/generate_fine_ground.py`. Do not hand-edit the PNG.
 
@@ -68,5 +78,5 @@ used during tuning approximate albedo and Lambert shading only; they say nothing
 about Godot photometry, SSAO, haze, shimmer or performance.
 
 Not claimed: visual acceptance, comfort, shimmer-free motion, performance
-(four lookups instead of two, plus SSAO, are real GPU work; the inherited Quiet Surfaces
+(four lookups instead of two, plus SSAO and 2× MSAA, are real GPU work; the inherited Quiet Surfaces
 Market–Clinic +14.61% miss remains open), or any gameplay change.

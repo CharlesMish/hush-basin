@@ -1,7 +1,8 @@
 extends RefCounted
 ## Fine Ground v1: near-range ground detail over the unchanged Quiet Surfaces
 ## macro maps, plus bounded ambient occlusion and distance haze. Presentation
-## only; no geometry, collision, scene objects or gameplay state.
+## only; no geometry, collision, scene objects or gameplay state. Also applies
+## 3D MSAA and debanding to the game viewport.
 const CONFIG := "res://presentation/fine_ground_v1.json"
 const MACRO := "res://presentation/generated/"
 const DETAIL := "res://presentation/fine_ground/fine_ground_detail.png"
@@ -98,3 +99,9 @@ static func atmosphere(gate: Node3D) -> void:
 	env.fog_light_energy = float(fog.light_energy)
 	env.fog_aerial_perspective = float(fog.aerial_perspective)
 	env.fog_sky_affect = float(fog.sky_affect)
+	var display: Dictionary = config().display
+	var viewport := gate.get_viewport()
+	# 0 off, 1 = 2x, 2 = 4x. MSAA keeps the ground detail sharp, unlike FXAA.
+	viewport.msaa_3d = int(display.msaa_3d) as Viewport.MSAA
+	# set() stays a silent no-op if an engine build lacks the property.
+	viewport.set("use_debanding", bool(display.debanding))

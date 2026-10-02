@@ -90,6 +90,8 @@ def static_checks():
     check('BOUNDED_STRENGTHS', all(0 <= s[k] <= 0.35 for k in ['mineral_albedo', 'asphalt_albedo']) and all(0 <= s[k] <= 0.6 for k in ['mineral_relief', 'asphalt_relief']))
     check('NON_ALIGNED_TILES', abs(s['far_tile_m'] / s['near_tile_m'] - round(s['far_tile_m'] / s['near_tile_m'])) > 0.1)
     loader = LOADER.read_text()
+    d = cfg['display']
+    check('BOUNDED_DISPLAY', d['msaa_3d'] in (0, 1, 2) and isinstance(d['debanding'], bool) and 'msaa_3d' in loader and 'use_debanding' in loader, d)
     declared = set(re.findall(r'uniform\s+\w+\s+(\w+)', loader))
     check('CONFIG_UNIFORMS_DECLARED', set(s) <= declared, sorted(set(s) - declared))
     check('PRESENTATION_ONLY_LOADER', all(t not in loader for t in ['add_child(', 'craft', 'Collision', 'PhysicsBody', 'StaticBody3D', 'Area3D', 'RayCast', 'Input.', 'telemetry']))

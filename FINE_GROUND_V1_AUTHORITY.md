@@ -25,7 +25,8 @@ roughness, perturbs the shading normal, and fades all detail to zero between
 
 Atmosphere and filtering: screen-space ambient occlusion, a light exponential
 distance haze (sky unaffected) applied after the existing weather lighting, and
-16× anisotropic texture filtering. All values live in
+16× anisotropic texture filtering. A `display` block
+sets the game viewport's 3D MSAA (2×) and debanding. All values live in
 `game/presentation/fine_ground_v1.json` and can be disabled there.
 
 Playable baseline files permitted to change: `game/project.godot` (one
@@ -34,6 +35,11 @@ setting), `game/scripts/p1a_world_builder.gd` (terrain material line) and
 to `README.md`, `AGENTS.md` and `game/AGENTS.md`. Every other file tracked at
 the baseline commit stays byte-identical; `tools/verify_fine_ground.py`
 enforces the exact wiring diff and the declared file set.
+
+On October 2, 2026 the owner asked: “can you handle some of the other low
+hanging fruit you named, commit, and push to the Claude branch?” That adds 2×
+3D MSAA and debanding on the game viewport, set from the same config's
+`display` block, and authorizes pushing this branch (not merging it).
 
 ## Preserved boundaries
 
