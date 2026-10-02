@@ -1,0 +1,13 @@
+{
+  "artifacts": {
+    "fine_ground_detail.png": "f40d01df01303565d4ced87b81760cfbea95648bad34d61cabc2c5e607f14632"
+  },
+  "channels": "RGBA8: slope_u, slope_v, mineral_grain, asphalt_grain (all signed, 127.5 bias)",
+  "config_sha256": "686d584ef1d6f91adf06bd2953d40b46e28063521283a70539591af61f234e51",
+  "resident_texture_bytes_upper_bound": 349524,
+  "size": [
+    256,
+    256
+  ],
+  "version": "fine-ground-v1"
+}

@@ -1,4 +1,34 @@
-# Current review authority — Ren's Receiver v0.1
+# Current candidate — Opening Chapter v0.1
+
+Double-click **PLAY_OPENING_CHAPTER.command** or run
+`python3 tools/play_opening_chapter.py`. [Short start card](START_OPENING_CHAPTER.md).
+One connected candidate starts with a fresh, separate chapter save. Dispatch →
+**Reset Opening Chapter…** restarts it without altering earlier experiment saves.
+
+The owner accepted Narrative Presence Lab. This bounded successor adds the
+approved opening chapter while preserving driving and the existing world.
+[Implementation and review record](OPENING_CHAPTER_REVIEW.md) ·
+[Observed verification](STATUS.md). No main update or production deployment.
+Whether the connected work feels like the beginning of a game and leaves the
+player eager to drive remains an owner-play question.
+
+---
+
+# Previous candidate — Narrative Presence Lab v0.1
+
+Play with **PLAY_NARRATIVE.command** or `python3 tools/play_narrative.py`.
+Use [the short start card](START_NARRATIVE.md); no design reading is needed.
+Dispatch provides **Reset Narrative Experiment…** for a fresh play.
+
+This local branch adds the bounded Ren/Ivo portrait conversation experiment to
+the exact reviewed receiver source. Driving, camera, city, cargo and scoring are
+preserved. [Implementation record](NARRATIVE_PRESENCE_REVIEW.md) and [observed
+checks](STATUS.md) are reviewer evidence. Attachment, pacing and desire to drive
+remain Charlie's playtest questions. No main update or production deployment.
+
+---
+
+# Previous review authority — Ren's Receiver v0.1
 
 **[Start here: current candidate, controls, systems and review questions](REVIEW_CURRENT.md).**
 

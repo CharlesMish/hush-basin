@@ -1,4 +1,338 @@
-# Quiet Surfaces v1 — implementation and verification
+# Chapters 2 + 3 successor — October 1, 2026
+
+Starting clean `fix/opening-chapter-ux-v0.1` at
+`9a559f95c1ec5eea910affd17b52d02eac562476`. Current work is on
+`experiment/narrative-chapters-2-3-v0-1`; main and production untouched.
+Chapter 2 checkpoint A is `31677586809b56ba9993802b33ca3eb1fa6d6828`, committed
+after validation and before Chapter 3 implementation. Both authored slices now
+run contiguously after the accepted opening. Checkpoint B is the final local
+candidate commit recorded in the owner package; neither main nor remote changed.
+
+Final retained suite: 882 checks / 36 runs PASS; native C1 trace remains exact.
+Fresh contiguous story: 275 checks PASS in native headless and Web. Chapter 3
+native integration: 139 PASS. Ren-first / sleeve-first: 140 each PASS. New
+resume coverage: 124 checks across 16 processes PASS, plus 45 atomic-store checks.
+B11 real approaches: 19 PASS without scraping/reset. Existing project-save suite:
+56 PASS across nine processes. Exact authored text: 46 passages preserved, two
+conditional lines omitted with the draft's permission. No human gate is claimed.
+See `NARRATIVE_SLICES_REVIEW.md` for exact scope, source adaptations, observed
+results and commands. Evidence is in the adjacent Chapters-2-3 review folder.
+Owner gates remain untested. This is a local review candidate only.
+
+---
+
+# Opening Chapter small UX correction — September 29, 2026
+
+Starting branch `feature/opening-chapter-v0.1`, clean HEAD
+`fd6a7563918f257590906f0b7dae0229273b20a3`.
+Correction branch `fix/opening-chapter-ux-v0.1`; final commit/hash in the adjacent
+`Hush-Basin-Opening-Chapter-UX-v0.1-Review/package.json`.
+
+Tess's usable stop moved (40,77) → (40,67), radius 4 → 9 m, with a matching
+ground/minimap cue. Counter and all existing geometry stay fixed. Every chapter
+offer/card/driving purpose names its actual pickup and destination. The map now
+clears stale highlights and labels fixed-road guidance as advisory. Incorrect
+full L2 highlights were removed from three Tess legs. Intentional East return
+and South Cut advisories remain; every story delivery still accepts any legal
+route. See `OPENING_CHAPTER_UX_REVIEW.md` for the full eight-leg audit.
+
+Evidence: `../Hush-Basin-Opening-Chapter-UX-v0.1-Review/evidence/`.
+Installed engine remains `4.7.1.stable.official.a13da4feb`, native Forward+.
+
+| Verification | Observed result |
+| --- | --- |
+| Untouched chapter handoff guards | 85/85 PASS before edits |
+| New UX regression on old candidate | Expected failure reproduced stop, missing origin labels and stale map defects |
+| Final native UX audit | 72/72 PASS across all eight chapter legs |
+| Tess ordinary-input approaches | 12/12 PASS; Market, Clinic, Depot via Market; zero impacts/resets |
+| Ground / route clearance | 25 ground rays PASS; HOP 52 m / DOG 51.184 m clearance |
+| Retained suites + chapter integration | 882 checks across 36 runs PASS; native/headless full chapter 97 each, input edges 16 each |
+| Exact movement parity | 1,260 ticks byte-identical; SHA256 `29f1049f8e16ec65d288407c35e6ccae46e87c711bb6b54b134e6158c68b9443` |
+| Chapter quit/relaunch | 134 checks across 20 fresh processes PASS |
+| Retained project persistence | 56/56 PASS across nine processes |
+| Clean standalone source preparation / native UX | PASS; 72/72 with isolated save |
+| Web full chapter / input edges | 97/97 + 16/16 PASS; no captured warnings/errors |
+| Web close/reopen | Receiver and Clinic repairs aboard: 7/7 each PASS; actual pickup/destination visually checked |
+| Source scope | Six runtime files; all authored dialogue/offer/summary/order constants exact; controller, camera, collision, world/routes, portraits, cargo and persistence store exact |
+
+Commands (run from repository root; exact absolute engine invocations are saved
+in each evidence subfolder's `commands.json` or `command.json`):
+
+```sh
+python3 tools/verify_opening_chapter.py --output ../Hush-Basin-Opening-Chapter-UX-v0.1-Review/evidence/regressions --native
+python3 tools/test_relay_persistence.py --output ../Hush-Basin-Opening-Chapter-UX-v0.1-Review/evidence/retained-persistence
+python3 tools/verify_chapter_ux_preservation.py
+python3 tools/export_web.py --chapter-smoke --output ../Hush-Basin-Opening-Chapter-UX-v0.1-Review/evidence/web-final
+```
+
+Focused tests use `res://tests/chapter_ux_native.gd`, `--phase full` (default)
+or `--phase approaches`, with explicit isolated `--save`, `--result`,
+`--cargo-log` and optional `--captures`. Final UI cleanup only removes the old
+kit transformation heading from the active receiver strip; the handoff remains
+exact. Headless full-flow had already started before that display-only cleanup;
+final native flow and final 72-check UX audit include it.
+
+Final Web diagnostic output grows by 25,208 raw bytes / 9,906 estimated gzip
+bytes versus the prior chapter diagnostic. No performance timing benchmark was
+added for this presentation-only pass. Browser observations and close/reopen
+checks are in `evidence/web-observed.json`; source hashes are in
+`evidence/web-final/build.json`. The export was made before the final commit;
+package metadata verifies that its runtime sources match the committed candidate.
+
+Use the corrected review folder's `PLAY_OPENING_CHAPTER.command`. Existing
+chapter saves resume; Dispatch → Reset Opening Chapter remains optional.
+No owner-feel gate is claimed. No main update, push or production deployment.
+
+---
+
+# Opening Chapter v0.1 — September 25, 2026
+
+State: **implemented and verified; stop for owner review**.
+The owner reported the previous Narrative Presence Lab as accepted strongly
+enough for this expansion. That acceptance does not pass the new chapter's gates.
+
+Exact starting branch: `feature/narrative-presence-v0.1`.
+Exact starting HEAD: `d8e921068819a86ca888aaa26d9bfbb9fb8e4476` (clean).
+Implementation branch: `feature/opening-chapter-v0.1`.
+The final commit and source ZIP identity are recorded in the adjacent review
+package's `FINAL_HANDOFF.md` and `package.json`, avoiding a self-referential hash.
+Exact engine: `/Applications/Godot.app/Contents/MacOS/Godot`,
+`4.7.1.stable.official.a13da4feb`. Native Metal Forward+, Apple M5, 1280×720.
+
+Double-click **PLAY_OPENING_CHAPTER.command**. One contiguous candidate uses a
+separate fresh chapter save. Dispatch → **Reset Opening Chapter…** confirms a
+restart; earlier experiments' saves remain untouched. See
+`START_OPENING_CHAPTER.md` for the short card and `OPENING_CHAPTER_REVIEW.md`
+for architecture, exact text source, portrait, geometry, patch, persistence,
+compromises and the owner questions. No main update, push or deployment.
+
+## Observed verification
+
+Evidence root: `../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/`.
+Raw native commands/results are in `complete-1/commands.json` and `suite.json`.
+Browser observations are in `web-observed.json`; compiled source/output hashes
+are in each Web export's `build.json`. Test saves are isolated from owner saves.
+
+| Check | Result |
+| --- | --- |
+| Untouched accepted baseline | Ten retained suites rerun before edits; all PASS, plus exact C1 trace |
+| B11 before modifications | 45-point ground/collision survey; ordinary-input approaches from Market and Clinic PASS, zero resets |
+| HOP / DOG clearance | Contact disk clears operational corridors by 47 m / 46.215 m; no new collision |
+| Source preservation | All original runtime/controller/rig/world/routes/cargo/scoring/narrative files exact; only title/entry and named wrapper/document exceptions |
+| Movement parity | 1,260 ticks byte-identical; SHA256 `29f1049f8e16ec65d288407c35e6ccae46e87c711bb6b54b134e6158c68b9443` |
+| Cargo / protected cargo | 92/92 + 92/92 PASS |
+| Vehicle / run / paused retry | 39/39 + 54/54 + 15/15 PASS |
+| Retained receiver | 57/57 PASS |
+| Retained project persistence | 56/56 PASS across nine separate processes |
+| Retained narrative store / flow / edges | 16/16 + 29/29 + 13/13 PASS |
+| Chapter atomic store | 30/30 PASS; corruption, invalid stages/checkpoints, failed-write preservation, explicit reset |
+| Chapter synthetic handoff guards | 85/85 PASS, including zero condition and one-hour elapsed delivery |
+| Chapter headless full route | 97/97 PASS; eight authored legs, one other paid job, three repositioning drives; zero resets |
+| Chapter native full route | 97/97 PASS, native Forward+; zero resets in all twelve traversals |
+| Chapter native input edges | 16/16 PASS; held final Advance, Skip, pointer, synthetic gamepad, reset, remote-face rejection, text-only ticket |
+| Native process restarts | 134/134 PASS across 20 fresh-process saved stages, including both pending handoffs and every aboard state |
+| Chapter Web full / edges | 97/97 + 16/16 PASS; no captured warnings/errors |
+| Retained narrative Web full / edges | 29/29 + 13/13 PASS; no captured warnings/errors |
+| Web close/reopen | 134/134 PASS across the same 20 saved stages on one origin/profile; no captured warnings/errors |
+| Playable Web entry | Anonymous Market lead, three-card board, Skip, decline, pointer reset/confirmation and fresh introduction observed |
+| Native visual checks | Dialogue and matched B11/Relay/Depot before/after captures inspected; real rear-leaf patch visible |
+| Clean source extraction | Fresh exact-engine import/parse PASS; full chapter 97/97 and native fresh startup 3/3 PASS |
+
+Representative exact commands, from the source root (expanded absolute arguments
+and output files are retained in the evidence):
+
+```sh
+python3 tools/verify_opening_chapter.py --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/complete-1 --native
+python3 tools/verify_opening_preservation.py
+python3 tools/test_relay_persistence.py --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/legacy-store
+python3 tools/export_web.py --chapter-smoke --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/web-chapter-final
+python3 tools/export_web.py --narrative-smoke --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/web-lab-final
+python3 tools/export_web.py --output ../Hush-Basin-Opening-Chapter-v0.1-Review/evidence/web-playable-final
+python3 tools/launch.py --prepare-only
+git diff --check
+```
+
+The clean-extraction flow uses `godot --headless --fixed-fps 60 --path game
+--script res://tests/chapter_native.gd` with absolute isolated save/result/log
+paths; native startup omits headless/fixed-FPS and uses `--phase fresh`.
+`clean-runtime/commands.json` retains the full commands and exit codes.
+The browser diagnostics used the final local exports, `?phase=edges`, and
+`?phase=inspect_<snapshot>` for each stored stage, closing/reopening tabs.
+
+## Size, timing and limits
+
+Playable Web PCK: **104,165,348 bytes**, up **472,480** (~0.46%) from the
+accepted lab's 103,692,868. Complete export: **144,013,081 bytes**, up
+**472,478** (~0.33%) from 143,540,603. Pinned template/WASM unchanged.
+The export was made from the final runtime working tree before commit; its
+manifest records the starting HEAD plus per-file source hashes. Packaging
+checks those hashes against the committed runtime; later differences are
+documentation/UID metadata only. No Web architecture or production change.
+
+No controlled frame-time benchmark was performed. Successful full native/Web
+runs establish integration, not a performance-improvement or parity claim.
+Existing local export high-DPI canvas sizing behavior remains; native is the
+owner candidate. Synthetic gamepad events do not establish physical gamepad feel.
+Restart tests use normal persisted snapshots and new processes/tabs, not abrupt
+OS/browser process-kill guarantees. Same-host movement identity is not a claim
+of deterministic physics across platforms or engine versions.
+
+The scripted route contains roughly five minutes of driving, excluding reading,
+offer browsing and exploration. It does **not** establish the 20–30ish-minute
+human target. **Tess's jackets leg is the suspected pacing weak point**, retained
+as explicitly requested. No padding, additional faces or compensating prose.
+The patch is small, and the scuffs are authored wear, not measured damage.
+
+## Failed attempts and bounded corrections
+
+Development evidence is retained rather than relabeled: an early compile/type
+error; fixture assumptions about already-armed summaries and JSON number types;
+a skipped Quarry introduction that had not been marked seen; a native capture
+fixture that counted physics catch-up ticks instead of UI process frames; and a
+stale prior receipt footer at Tess. These were resolved before the first complete
+post-edit suite. That complete suite passed; no runtime repair followed it.
+
+Initial Web exports under the restricted sandbox could not save Godot's desktop
+editor settings. Re-export with desktop permissions passed. A final import
+invocation with a relative log path crashed before engine startup; rerunning
+with an absolute writable log path passed. Headless sandbox runs can emit the
+host's certificate-store message, unrelated to game behavior. The historical
+`verify_repo.py` inventory still reports earlier successor differences, as it
+did before this work; its old hashes were not rewritten. Use the new scoped
+preservation verifier for this branch.
+
+No new owner attachment, pacing, location-comprehension, noticeability, comfort,
+or desire-to-keep-driving gate is passed. Stop for Charlie and preferably one
+player unfamiliar with the scripts.
+
+---
+
+# Narrative Presence Lab v0.1 — September 23, 2026 (historical)
+
+State: **implementation verified and clean-extracted; owner play pending**.
+
+Starting branch/HEAD: `review/rens-receiver-v0.1` /
+`1afd28a253a3dbc0387cd3f339e5a56ab29dabf4`. Implementation branch:
+`feature/narrative-presence-v0.1`. The reviewed source publication identifies
+`6570619b7bff67140bec03039942585208b5a8be` as its playable candidate.
+Runtime implementation commit: `891d911e4108d7e937d8cc62a30f12a604035dff`.
+Exact engine: `/Applications/Godot.app/Contents/MacOS/Godot`,
+`4.7.1.stable.official.a13da4feb`. Native Metal Forward+ at 1280×720.
+
+Use `PLAY_NARRATIVE.command`, then Dispatch → **Reset Narrative Experiment…**
+for a fresh play. See `START_NARRATIVE.md`. Architecture, exact implemented
+dialogue, portrait prompts, anchors, save semantics and compromises are recorded
+in `NARRATIVE_PRESENCE_REVIEW.md`. No owner attachment, comprehension, distinction,
+relationship, pacing, comfort, physical-gamepad or desire gate is passed.
+
+## Observed verification
+
+Evidence root (adjacent to the source checkout):
+`../Hush-Basin-Narrative-Presence-v0.1-Review/evidence/`.
+Full expanded commands are retained in each lane's `commands.json` or report.
+Runtime logs/captures/saves are evidence only and excluded from the source ZIP.
+
+| Check | Observed result |
+| --- | --- |
+| Untouched candidate import/180-frame smoke | PASS using explicit writable review log |
+| Untouched native receiver fixture | 57/57 PASS; original captures retained |
+| Candidate source preservation | All pre-existing gameplay/world files exact; only title/entry, export diagnostic selector and documentation change |
+| Same-host movement | All 1,260 ticks byte-identical to untouched baseline; SHA256 `29f1049f8e16ec65d288407c35e6ccae46e87c711bb6b54b134e6158c68b9443` |
+| Cargo / protected cargo | 92/92 + 92/92 PASS |
+| Vehicle | 39/39 PASS |
+| Run / paused retry | 54/54 + 15/15 PASS |
+| Retained receiver integration | 57/57 PASS |
+| Retained two-flag save store | 56/56 PASS across nine processes |
+| New narrative store | 16/16 PASS; corruption, failed-write preservation, reset and checkpoint validation |
+| New native narrative flow | 29/29 PASS, normal-input three-leg traversal |
+| New native pointer/gamepad event edges | 13/13 PASS; synthetic gamepad events, not physical-device testing |
+| Native restart lane | 37/37 PASS across eight fresh processes using saved stage snapshots |
+| New Web narrative flow | 29/29 PASS; Compatibility browser lane; no captured warnings/errors |
+| New Web pointer/gamepad event edges | 13/13 PASS; Skip, release guard, reset, review and zero-condition delivery |
+| Web close/reopen | 41/41 PASS across nine saved states; actual tab close/reopen on one origin/profile |
+| Playable Web entry | Startup, three-card board, pointer reset/confirmation, Market portrait, Skip and decline observed; no auto-accept |
+| Native visual QA | Market, Works, Relay, invitation, ticket, Quarry and matched anchor captures inspected |
+| Clean runtime source archive | Fresh exact-engine import/parse and 29/29 narrative checks PASS; isolated save |
+
+Representative exact command forms, run from the repository root (output paths
+in evidence records are absolute):
+
+```sh
+godot --version
+godot --headless --path game --log-file /private/tmp/hush-narrative-v01-baseline/smoke-engine.log --quit-after 180 -- --cargo-log /private/tmp/hush-narrative-v01-baseline/smoke-cargo.jsonl
+godot --path game --log-file /private/tmp/hush-narrative-v01-baseline/native2-engine.log --script res://tests/receiver_comprehension_native.gd -- --save /private/tmp/hush-narrative-v01-baseline/project.json --result /private/tmp/hush-narrative-v01-baseline/result.json --captures /private/tmp/hush-narrative-v01-baseline/captures --cargo-log /private/tmp/hush-narrative-v01-baseline/native2-cargo.jsonl
+python3 tools/verify_narrative_preservation.py
+python3 tools/test_relay_persistence.py --output ../Hush-Basin-Narrative-Presence-v0.1-Review/evidence/legacy-store
+python3 tools/export_web.py --narrative-smoke --output ../Hush-Basin-Narrative-Presence-v0.1-Review/evidence/web-final
+python3 tools/export_web.py --output ../Hush-Basin-Narrative-Presence-v0.1-Review/evidence/web-playable
+```
+
+The sequential regression runner invoked each of `world_polish_c1.gd`,
+`alpha_cargo_matrix.gd` (ordinary/protected), `run_v0_probe.gd`,
+`paused_retry_addendum.gd`, `quarto_vehicle_v1.gd`,
+`receiver_comprehension_native.gd`, `narrative_store_probe.gd` and
+`narrative_native.gd` with `godot --headless --fixed-fps 60 --path game`, explicit
+logs/results, and isolated test saves. `regressions/commands.json` preserves every
+argument. The final rerun is in `final-regressions/commands.json`. Native final
+flow/edges/anchors used ordinary rendering without the fixed-FPS override; see
+`native-final/commands.json` and the final 29-check `closeout/commands.json`.
+
+## Build size and limits
+
+Playable Web PCK: **103,692,868 bytes**, up **704,696** (~0.68%) from the prior
+candidate's recorded 102,988,172 bytes. Complete export: **143,540,603 bytes**, up
+**704,704** (~0.49%). Pinned Web template/WASM and existing architecture unchanged.
+Two portrait textures import at at most 512 pixels. New environmental work is
+sparse static non-colliding mesh furniture with emissive materials; no dynamic
+lights, shaders, particles or physics nodes. This pass did not rerun the full
+AB/BA GPU study and makes no performance-improvement claim. Historical world
+performance/traversal limitations below remain historical and unaltered.
+
+Initial sandboxed startup could not write the default `user://` review log;
+the explicit writable-log smoke passed. A sandboxed native display process
+could not access macOS display services and was stopped; desktop-enabled native
+verification passed. One native attempt with relative evidence paths crashed
+before the engine banner; absolute-path native runs passed. These attempts are
+retained, not counted as game regression passes.
+
+Pre-complete development checks caught JSON floating-point round-trip comparison
+and synthetic held-input tracking issues, then passed after correction. Visual
+QA added the arriving receiver before installation. A later pointer test used
+screen rather than local viewport coordinates; correcting that test fixture
+made all pointer/gamepad checks pass. An inherited pause overlay was hidden only
+in the matched anchor screenshot fixture. No movement/camera/world repair or
+threshold relaxation was performed. Final copy review found an inherited Market
+return-pouch hint after declining Quarry work; a bounded correction replaced it
+with the concrete dry-socks resume state and added a regression. The complete
+headless suite, normal native integration and Web export were rerun afterward.
+No additional gameplay expansion is authorized.
+
+The unchanged raw Web export shell renders a 1280×720 canvas at 640×360 CSS
+pixels on this browser's device-pixel-ratio 2 profile; some arrow glyphs differ.
+This is a reported Web presentation limit, not a native pass or a Web redesign.
+Browser restart evidence uses actual tab closure/reopening, not a full browser
+process kill. Native persistence uses fresh engine processes at every arc stage.
+
+## Package closeout
+
+`git archive --format=zip` of runtime commit `891d911` was extracted into
+`evidence/clean-runtime`, with no cache. `python3 tools/launch.py --prepare-only`
+passed exact-engine import and parse. A fresh isolated-save full narrative run
+passed 29/29; expanded command/result are `clean-runtime-command.json` and
+`clean-runtime-result.json`. The final source ZIP contains that same runtime
+plus this verification documentation. Final archive hash, extraction launch and
+delivery commit are recorded externally in `FINAL_HANDOFF.md` and
+`evidence/package.json`, avoiding a self-referential archive hash.
+
+Final Web exports are in `evidence/closeout/web-playable` and `web-diagnostic`.
+The latter was served only on loopback port 8082 and completed all 29 integration
+checks in the browser. Web persistence and playable-reset observations are
+retained in `browser-results.json`. No production deployment was made.
+Owner play remains pending regardless of automated results.
+
+---
+
+# Historical Quiet Surfaces v1 — implementation and verification
 
 2026-09-05. Isolated successor from delivered Working Neighborhood v1 source ZIP SHA256 `9d2ab3d884243e2992c7753ba82adec6d84a7668c21696476d5d9eb8a4af450e`. Original source, inventories and evidence remain intact. Exact engine: `4.7.1.stable.official.a13da4feb`; native Metal Forward+ on Apple M5 at 1280 × 720.
 

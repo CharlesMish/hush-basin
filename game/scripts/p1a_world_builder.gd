@@ -96,7 +96,11 @@ func _build_terrain() -> void:
 	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
 	# Surface authority replaces color/roughness only; all geometry arrays above
 	# still construct the exact original terrain and its collision below.
-	mesh.surface_set_material(0, preload("res://scripts/quiet_surfaces.gd").material())
+	# Fine Ground preserves the macro maps; a missing detail asset keeps the baseline.
+	var ground_material = preload("res://scripts/fine_ground.gd").material()
+	if ground_material == null:
+		ground_material = preload("res://scripts/quiet_surfaces.gd").material()
+	mesh.surface_set_material(0, ground_material)
 	var visual := MeshInstance3D.new()
 	visual.name = "FrozenHeightfieldVisual"
 	visual.mesh = mesh

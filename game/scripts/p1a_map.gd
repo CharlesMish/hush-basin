@@ -7,6 +7,7 @@ const WORLD_MAX := Vector2(330.0, 285.0)
 var data: P1AWorldData
 var craft: CraftController
 var highlighted_route_ids: Array[String] = []
+var route_caption := "active route"
 
 
 func configure(source_data: P1AWorldData, source_craft: CraftController) -> void:
@@ -68,7 +69,7 @@ func _draw() -> void:
 		draw_line(p, tip, Color.WHITE, 2.0)
 	# North-up orientation marker.
 	draw_string(ThemeDB.fallback_font, Vector2(12.0, 20.0), "N ↑", HORIZONTAL_ALIGNMENT_LEFT, -1.0, 14, Color(0.88, 0.92, 0.90))
-	draw_string(ThemeDB.fallback_font, Vector2(12.0, size.y - 10.0), "active route", HORIZONTAL_ALIGNMENT_LEFT, -1.0, 12, Color(0.18, 0.9, 0.8, 0.9))
+	draw_string(ThemeDB.fallback_font, Vector2(12.0, size.y - 10.0), route_caption, HORIZONTAL_ALIGNMENT_LEFT, -1.0, 12, Color(0.18, 0.9, 0.8, 0.9))
 
 
 func _world_to_map(world: Vector2) -> Vector2:

@@ -1,3 +1,47 @@
+# Current task — Story + Fine Ground review
+
+Read `../docs/STORY_FINE_GROUND_REVIEW.md`. The owner authorized a bounded ground-only
+integration onto the latest story and a new draft PR. Preserve narrative,
+gameplay, world, camera, saves and existing branches. No main merge or
+production deployment. Earlier task prohibitions remain historical provenance.
+
+---
+
+# Current task — Chapters 2 + 3 v0.1
+
+The owner's October 1 request authorizes `docs/QUARRY_SLICE_V1_1.md` and
+`docs/CHAPTER_3_SLICE_V1_1.md` as exact authored authority. Continue from
+`fix/opening-chapter-ux-v0.1` at `9a559f95c1ec5eea910affd17b52d02eac562476`.
+Read `NARRATIVE_SLICES_REVIEW.md` and current `STATUS.md`. Validate and commit
+Chapter 2 before implementing Chapter 3. Preserve the opening, accepted Tess
+stop, movement/camera/cargo/world/routes and Web architecture. No main, push,
+production deployment or story beyond these two slices. Stop for owner play.
+Historical task prohibitions below are provenance, not a veto of this request.
+
+---
+# Current task — Opening Chapter v0.1
+
+The owner authorized the bounded successor in
+`../docs/OPENING_CHAPTER_PLAN_V0_1.md` sections 2–6 and 13.
+`../OPENING_CHAPTER_REVIEW.md` records its geometry inspection and patch decision.
+Extend the accepted narrative slice additively; preserve original movement,
+camera, collision, world, routes, cargo, BRRR, rig and Web architecture.
+The local Tess anchor and child visual patch narrowly supersede the older
+no-third-character/visual freezes below. No wider world or campaign work.
+
+---
+
+# Previous task — Narrative Presence Lab v0.1
+
+The owner's current prompt authorizes the additive narrative slice documented
+in `../NARRATIVE_PRESENCE_REVIEW.md`. Existing vehicle/controller, camera, cargo,
+BRRR/drift, world data and authored routes remain unchanged. Use the new
+narrative scene and tests while retaining historical fixtures as provenance.
+The old task-specific prohibitions below do not veto this explicitly authorized
+successor. Do not expand scope or claim owner gates from automated verification.
+
+---
+
 # Current vehicle task
 
 Read `../QUARTO_VEHICLE_V1_AUTHORITY.md` and `../docs/QUARTO_VEHICLE_V1.md` first. This owner-authorized visual successor may change only the existing `scenes/vehicle_visual.tscn` and `scripts/vehicle_visual_rig.gd` in playable source, plus their new visual resources and separate review/test scenes. It does not reopen gameplay, camera, world, physics, engine or publication. Historical R7 pose identity remains historical, not a target to relabel. The inherited instructions follow unchanged.

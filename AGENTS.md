@@ -1,3 +1,51 @@
+# Current task — Story + Fine Ground review
+
+Read `docs/STORY_FINE_GROUND_REVIEW.md`. The owner authorized a bounded ground-only
+integration onto the latest story and a new draft PR. Preserve narrative,
+gameplay, world, camera, saves and existing branches. No main merge or
+production deployment. Earlier task prohibitions remain historical provenance.
+
+---
+
+# Current task — Chapters 2 + 3 v0.1
+
+The owner's October 1 request authorizes `docs/QUARRY_SLICE_V1_1.md` and
+`docs/CHAPTER_3_SLICE_V1_1.md` as exact authored authority. Continue from
+`fix/opening-chapter-ux-v0.1` at `9a559f95c1ec5eea910affd17b52d02eac562476`.
+Read `NARRATIVE_SLICES_REVIEW.md` and current `STATUS.md`. Validate and commit
+Chapter 2 before implementing Chapter 3. Preserve the opening, accepted Tess
+stop, movement/camera/cargo/world/routes and Web architecture. No main, push,
+production deployment or story beyond these two slices. Stop for owner play.
+Historical task prohibitions below are provenance, not a veto of this request.
+
+---
+# Current task — Opening Chapter v0.1
+
+The owner accepted Narrative Presence Lab and explicitly authorized sections
+2–6 and 13 of `docs/OPENING_CHAPTER_PLAN_V0_1.md`. Read
+`OPENING_CHAPTER_REVIEW.md`, `START_OPENING_CHAPTER.md` and the current `STATUS.md`.
+The new chapter extends accepted source `d8e921068819a86ca888aaa26d9bfbb9fb8e4476`.
+Preserve vehicle, camera, cargo, scoring, world geometry and authored routes.
+Only the named local Ren/Ivo/Tess work, anonymous receipts, minimal anchors and
+cosmetic craft patch are authorized. No Chapter 2, additional faces, relationship
+systems, production deployment, push or main update. Stop for owner review.
+Use `tools/verify_opening_chapter.py` and `tools/verify_opening_preservation.py`;
+historical inventories below remain provenance, not successor pass criteria.
+
+---
+
+# Previous task — Narrative Presence Lab v0.1
+
+The owner's explicit narrative implementation request controls this branch.
+Read `NARRATIVE_PRESENCE_REVIEW.md`, `START_NARRATIVE.md` and the current section
+of `STATUS.md`. Preserve the reviewed `1afd28a253a3dbc0387cd3f339e5a56ab29dabf4`
+gameplay/world source. New narrative files extend the existing courier logic;
+the historical restrictions below apply only outside the newly authorized slice.
+No main update, push, production deployment, third character or additional arc.
+Stop for Charlie's playtest; automation cannot establish attachment or comfort.
+
+---
+
 # Current Web shell presentation
 
 The owner confirmed production hosting works and authorized a shell-only sizing
