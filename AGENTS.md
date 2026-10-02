@@ -1,3 +1,12 @@
+# Current task — Story + Fine Ground review
+
+Read `docs/STORY_FINE_GROUND_REVIEW.md`. The owner authorized a bounded ground-only
+integration onto the latest story and a new draft PR. Preserve narrative,
+gameplay, world, camera, saves and existing branches. No main merge or
+production deployment. Earlier task prohibitions remain historical provenance.
+
+---
+
 # Current task — Chapters 2 + 3 v0.1
 
 The owner's October 1 request authorizes `docs/QUARRY_SLICE_V1_1.md` and
