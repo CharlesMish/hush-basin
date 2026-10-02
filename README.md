@@ -35,7 +35,8 @@ The current checkpoint's verifier is:
 python3 tools/verify_quarto_vehicle.py --evidence /absolute/new/evidence
 ```
 
-Choose a new, empty evidence directory. This runs source/data checks only; the
+Choose an output directory that does not yet exist; the verifier creates it.
+This runs source/data checks only; the
 [checkpoint record](docs/QUARTO_MAIN_CHECKPOINT_20260907.md) gives the separate
 `--native` command and its limits. `python3 tools/verify_repo.py` currently runs
 the older Quiet Surfaces verifier. It reports two known inventory mismatches for
