@@ -1,15 +1,51 @@
 # Hush Basin — current full-game checkpoint
 
-The complete Quiet Surfaces city now uses the Quarto-derived native vehicle.
-Charlie approved putting this played version on main on September 7, 2026.
-Native integration passed on Godot `4.7.1.stable.official.a13da4feb`; see the
-[current checkpoint record](docs/QUARTO_MAIN_CHECKPOINT_20260907.md) for exact
+A driving game made in Godot. You drive a small **craft** through a city district
+in warm drizzle. The craft has two forms: **Spread**, the default and more
+maneuverable form, and **Drive**, the faster form you hold with Shift. In Spread,
+Space makes a **Hop**, trading forward speed for lift. The game opens a **Run**, a
+timed drive from Quarry to Relay; its results card shows the clock and **BRRR**, a
+provisional score for fast, sideways Drive motion.
+
+Demos showed that a story adds meaning and anticipation to the driving, so the game
+is being fleshed out as a story. That work is not on `main` yet.
+
+`main` holds the played full-game checkpoint from September 7, 2026: the complete
+Quiet Surfaces city with the current native vehicle, a simplified rig adapted from
+Quarto's shape. Native integration passed on Godot `4.7.1.stable.official.a13da4feb`;
+see the [current checkpoint record](docs/QUARTO_MAIN_CHECKPOINT_20260907.md) for exact
 verification and remaining limitations. Earlier handoffs below remain history.
 
 Run `python3 tools/launch.py`, or open **PLAY_FULL_GAME.command** on macOS.
 For the separate F6 comparison or vehicle studio, run
 `python3 tools/launch_quarto_vehicle.py --view compare` or `--view studio`.
 The full project is `game/project.godot`. No engine installation is automatic.
+
+A browser build is at [hush-basin.cmish.dev](https://hush-basin.cmish.dev/). The native
+Godot build is the reference; the browser build is a provisional play target and is
+deployed separately.
+
+See the [charter](docs/CHARTER.md) and [changelog](CHANGELOG.md). Released under the
+[MIT License](LICENSE).
+
+For local development, use Python 3.10+ and the exact Godot version above.
+The current checkpoint's verifier is:
+
+```sh
+python3 tools/verify_quarto_vehicle.py --evidence /absolute/new/evidence
+```
+
+Choose an output directory that does not yet exist; the verifier creates it.
+This runs source/data checks only; the
+[checkpoint record](docs/QUARTO_MAIN_CHECKPOINT_20260907.md) gives the separate
+`--native` command and its limits. `python3 tools/verify_repo.py` currently runs
+the older Quiet Surfaces verifier. It reports two known inventory mismatches for
+the later vehicle rig, so it is not a clean-check command for this checkpoint.
+
+The inherited README below, CONTRIBUTING.md, and older agent/provenance records
+are preserved historical text. Their private-repository and no-license wording
+predates [LICENSE](LICENSE). Use this introduction and the current checkpoint
+record for setup; do not rewrite the historical inventories to make them pass.
 
 ---
 

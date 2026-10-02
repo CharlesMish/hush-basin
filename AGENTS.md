@@ -1,6 +1,8 @@
-# Current vehicle task
+# Current state
 
-Read `QUARTO_VEHICLE_V1_AUTHORITY.md` and `docs/QUARTO_VEHICLE_V1.md` first on this branch. The owner explicitly requested building on the existing native rig after reviewing the Quarto visual successor proposal. That authorizes the bounded visual scene/rig changes and their comparison tools; inherited gameplay, world, camera, engine and publication boundaries remain. Use the new versioned vehicle verifier for this successor; preserve historical inventories and their truthful results. The inherited instructions follow unchanged.
+`main` holds the September 7, 2026 full-game checkpoint
+(`docs/QUARTO_MAIN_CHECKPOINT_20260907.md`). The Quarto vehicle v1 scope is complete.
+Start new work from its own versioned scope document. The inherited instructions follow unchanged.
 
 ---
 
