@@ -121,9 +121,10 @@ do not invent Chapter 4 to test the connection. Check that the model really is
 Opus, the examiner protects strong work, disagreements remain visible, the
 revision returns to the same packet, and the room stops at its cap.
 
-The included facts/transport rehearsal needs explicit live-launch approval;
-it is prepared but has not run. Its stricter two-turn/two-pass cap takes
-precedence over the optional extra revision in the general protocol.
+The included facts/transport rehearsal completed after explicit owner approval;
+see `CONNECTION_STATUS.md`. Its stricter two-turn/two-pass cap was respected.
+That verifies one bounded execution; it does not establish writing quality,
+billing-pool attribution or reliable unattended enforcement of these caps.
 
 After a substantial accepted arc or several accepted scenes, use
 `ASTRA_CONTINUITY_INTEGRATOR_PROMPT.md`. Human acceptance records travel with

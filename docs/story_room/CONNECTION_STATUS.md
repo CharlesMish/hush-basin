@@ -23,10 +23,10 @@ of the pinned game commit. Observed report:
 | Billing | Tool does not expose exact pool attribution, remaining allowance or per-run cost; not verified |
 | Git boundary | No verified hard no-push switch; artifact-only instructions and result inspection remain necessary |
 
-This is a report observed in the account's authenticated Bot UI, not an Opus
-execution test. The public platform documentation is linked separately in
-`INTEGRATION_NOTES.md`. No writer model has been launched during setup, and no
-new story has been generated.
+This preflight was observed in the account's authenticated Bot UI. The public
+platform documentation is linked separately in `INTEGRATION_NOTES.md`. The
+subsequent owner-approved live rehearsal is recorded below. No new story was
+generated.
 
 Both Bots posted `HB_ROOM_GROUP_READY` in the shared group, with the correct
 distinct roles. A separate shared-file/direct-message roundtrip then succeeded:
@@ -72,18 +72,71 @@ live rehearsal. Explicit owner confirmation was requested. The direct-chat
 message was not sent; its composer was verified empty afterward. No safeguard
 was disabled or routed around.
 
-Thus the room is **prepared and connected**, while the live writer/revision
-cycle is **not tested**. Begin actual assignments in the Producer's direct chat
-so the native approval path can operate; keep peer discussion/results in the
-group. The next step is approval of the bounded rehearsal, not recreating Bots
-or rechecking the already-verified packet.
+Charlie subsequently gave explicit permission for that exact bounded rehearsal.
+The instruction was sent successfully in Producer's direct chat at 01:23 CT on
+October 6. Producer first checked that the refused group attempt had created no
+agent, then launched one agent through normal native approval. No further
+approval card was needed. Begin future assignments in Producer's direct chat;
+keep peer discussion/results in the group. Do not recreate the existing Bots.
 
 For an initial bounded assignment use the requested **Opus 5.5** explicitly.
 Ordinary starting settings are 300k context, high effort, fast off, unless
 Charlie chooses otherwise. These are configuration defaults, not new creative
 constraints. Do not ask him to pick every routine parameter again.
 
-Still untested: a full Opus draft→review→revision→acceptance run, its exact charged
-allowance, and actual writer compliance with artifact-only output. The room
-is idle pending the live rehearsal's explicit launch approval. It will not
-invent Chapter 4 as a connection test. Existing spending limits remain in force.
+## Completed live rehearsal
+
+Run `rehearsal-20261006-01` completed with **one agent, two writer turns, two
+Examiner passes and one revision**. Producer and Examiner both reported idle;
+the writer was finished and unwatched, with no schedule or next assignment.
+The result verifies this bounded facts/transport loop, not story-writing quality
+or unattended operation.
+
+| Provenance | Observed result |
+| --- | --- |
+| Agent | `bc-92d0b21c-f906-5502-b841-e7cf92473bed` ([Cursor record](https://cursor.com/agents/bc-92d0b21c-f906-5502-b841-e7cf92473bed)) |
+| Explicit launch selection | `claude-opus-5-5`, context `300k`, effort `high`, fast `false`; accepted without a reported substitution |
+| Model verification limit | Writer self-reports Claude Opus 5.5; platform status does not echo model/settings, and the writer cannot independently observe those settings |
+| Frozen source | `05d55064a1013483b869dba0bc9d2d1906a24b6b`; game still `5be7feeef34dbed468e007f5ff4de594d41b0f80` |
+| Continuation | Same agent, second run `run-4fadf51c-7809-4855-be5f-517f04e8e5e5` |
+| Review | READY WITH MINOR NOTES → READY; three citation/completeness notes resolved |
+| Writer Git state | Transcript contains exact starting HEAD and empty porcelain status after both turns; all edits target external artifact files |
+| Remote activity | Producer reports no new branch/PR or writer commit; the tooling branch's pre-launch `d005361` addendum is accounted for separately |
+| Billing | Exact charged pool/plan, cost, tokens and remaining allowance remain unexposed; existing account/spending settings retained |
+
+The first draft was 241 words; the revision was 275. Examiner caught a line
+reference error and requested stronger route citations and the complete tray
+sequence. Opus also corrected the review's mistaken `objective_text`/`objective`
+supporting detail; Examiner explicitly withdrew that detail. An independent
+local source audit confirmed the final five facts and the justified correction.
+No new canon or ledger changes resulted.
+
+| Retained file | SHA-256 |
+| --- | --- |
+| `draft-0.md` | `cc5c27a4a6ba6b3bb7865cdb7e1de0a9c41ef43539515921e2fa27521ba7eb44` |
+| `review-0.md` | `0d686b74ee83753436a3618e9a958a8cfa3eebcb50f3cd725f3a5fba4ce2178d` |
+| `revision-1.md` | `11fc3ac42a4b9ad88ae33a4603dcf2041f885e5dd615788df0e30193bbf1b72a` |
+| `findings-response-1.md` | `d6cde51f998ff49f42fd923196ff42a6b35eeb3beaa23893882e4804c27443f3` |
+| `acceptance-1.md` | `2acfe6ca570a4c355d50bf0e6d1cae87b14e59ee38487759505229987427389c` |
+
+Writer artifacts originated under
+`/opt/cursor/artifacts/hb-rehearsal-20261006-01/`, were transferred natively to
+`/workspace/cloud-agent-artifacts/bc-92d0b21c-f906-5502-b841-e7cf92473bed/hb-rehearsal-20261006-01/`,
+then copied into the shared run. Producer verified hashes before each Examiner
+handoff. Both drafts, both reports, findings response, ledger and returned
+transcripts were downloaded through the app as
+`hb-rehearsal-20261006-01-evidence.zip` (109,835 bytes), SHA-256
+`3a2eadcc040927572f9cbd5ad6e2ec0ee99808fa3b19a800cb52491814f1b5b0`.
+
+Local evidence lives in sibling `Hush-Basin-Story-Room-20261006/`, with safe
+extraction under `rehearsal-evidence/runs/rehearsal-20261006-01/`. Local checks
+independently verified ZIP hash/CRC, all five ledger artifact hashes/sizes,
+assignment and frozen-manifest hashes, and writer command/edit results. The
+43 returned tool results show reads and three external artifact files only;
+both final Git checks are clean. The Producer ledger uses approximate launch
+timestamps; the app's visible timestamps place successful launch at 01:23 and
+final delivery at 01:29 CT. Original evidence is preserved unchanged.
+
+Existing spending limits remain in force. The general loop's turn caps remain
+instructions and an auditable ledger, not a hard billing limiter. The next
+creative assignment needs Charlie's bounded brief; no Chapter 4 is inferred.

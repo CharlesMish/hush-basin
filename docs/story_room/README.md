@@ -28,10 +28,12 @@ platform research; installed command-line tools alone are not a connected room.
 3. Inspect the final artifacts and disagreements. A model's READY verdict is
    not your acceptance and never authorizes implementation or deployment.
 
-The two Bots have already verified the initial frozen packet and their direct
-messaging. The live facts/transport rehearsal is prepared but awaits explicit
-launch approval; no Opus writer has run. See `CONNECTION_STATUS.md` for the
-actual approval-review boundary and remaining account usage unknowns.
+The two Bots verified the frozen packet and completed an owner-approved live
+facts/transport rehearsal: one explicitly selected Opus 5.5 agent, two writer
+turns, independent review and acceptance, verified artifact transfers and a
+finite stop. Both Bots are idle. See `CONNECTION_STATUS.md` for the evidence,
+model-reporting limits and remaining account-usage unknowns. Story-writing
+quality remains to be tested with Charlie's first bounded creative assignment.
 
 For a portable bundle, from repository root:
 

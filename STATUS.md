@@ -9,7 +9,12 @@ Grok Producer and independent Examiner prompts, Opus draft/revision templates,
 finite native messaging/delegation protocol and periodic Astra integration role.
 Grok Bot's actual signed-in account now has the two named Bots and their shared
 Hush Basin Story Room; connection evidence and remaining execution limits are
-in `CONNECTION_STATUS.md`. No new chapter or Opus writing run was commissioned.
+in `CONNECTION_STATUS.md`. After explicit owner approval, a facts-only rehearsal
+completed: one Opus agent, two writer turns, two Examiner passes, verified
+artifact transfers and final idle state. Its final five facts received an
+independent source audit; no new story or game edit was commissioned. Model
+settings were explicitly supplied but are not echoed by platform status; exact
+charged pool/cost remains unknown. No creative-quality gate is claimed.
 
 `tools/package_story_room.py` creates a portable hash-manifest packet; its four
 focused byte/allowlist/refusal tests pass. Current README now points to the full
@@ -18,6 +23,16 @@ native/Web/persistence results, fresh immutable preview, unchanged production
 pointer and exact unexecuted promotion step are in
 `docs/story_room/PUBLICATION_READINESS.md`. Owner play remains required before
 promotion. No merge to main or production deployment occurred.
+
+Rehearsal closeout changed five documentation files only. `git diff --check`
+passes and `git diff 5be7fee -- game` is empty. Local ZIP CRC/hash and all five
+returned artifact hashes/sizes match the Producer ledger; the full writer
+transcript confirms clean Git status after both turns. Re-running
+`python3 tools/verify_repo.py` still reports the same 11 historical inventory
+mismatches across 389 checks, all byte-identical to the starting game commit.
+Its output is retained as `evidence/rehearsal-closeout-verify-repo.txt` in the
+adjacent story-room review folder. No gameplay regression rerun was needed for
+this documentation-only closeout; the fresh preparation results above stand.
 
 ---
 

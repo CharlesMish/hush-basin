@@ -4,11 +4,12 @@ This is a setup assignment, not fiction or a quality evaluation. No new story,
 canon, mission, character or Chapter 4. It tests the native Opus delegation,
 artifact return, independent review, same-agent revision and finite stop.
 
-Status: prepared, not executed. Automatic approval review requires Charlie's
-explicit confirmation before starting this potentially billable native Cursor
-agent. Start from the Producer's direct chat, where native launch approval is
-available; the group remains the shared review space. Do not retry the blocked
-launch elsewhere without that confirmation. See `CONNECTION_STATUS.md`.
+Status: completed October 6, 2026 after Charlie's explicit approval. One agent,
+two writer turns and two Examiner passes; final verdict READY for this facts
+exercise. Both Bots stopped. See `CONNECTION_STATUS.md` for hashes, evidence,
+the earlier approval boundary and verification limits. This retained assignment
+is not an instruction to launch again. New assignments start in Producer's
+direct chat, where native approval is available; peer review remains shared.
 
 Producer uses `claude-opus-5-5`, 300k context, high effort, fast off through the
 existing signed-in Cursor route and existing spending settings. Start from the
