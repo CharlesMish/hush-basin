@@ -1,4 +1,19 @@
-# Current task — Chapters 2 + 3 v0.1
+# Current task — Story room and publication preparation, October 6, 2026
+
+The owner authorized a communicating Grok Producer / Grok Examiner room, with
+the Producer using Opus through the existing Cursor account. Read
+`docs/story_room/README.md` and the role/loop packet. Implemented game authority
+is `5be7feeef34dbed468e007f5ff4de594d41b0f80`; no new chapter or gameplay edit is
+authorized by this preparation task. Review artifacts do not become canon from
+a model verdict. Delegated writers return artifacts only: no source changes,
+commits, pushes, PRs or deployments. The tooling packet may be shared on its
+separate tooling branch. Safe immutable Web preview preparation is authorized;
+production promotion remains unexecuted pending owner play and approval.
+The earlier task records below remain provenance, not current task boundaries.
+
+---
+
+# Previous task — Chapters 2 + 3 v0.1
 
 The owner's October 1 request authorizes `docs/QUARRY_SLICE_V1_1.md` and
 `docs/CHAPTER_3_SLICE_V1_1.md` as exact authored authority. Continue from

@@ -1,4 +1,19 @@
-# Current candidate — Opening Chapter v0.1
+# Current candidate — Opening Chapter + Chapters 2 and 3
+
+Double-click **PLAY_HUSH_BASIN_STORY.command**, or run
+`python3 tools/play_story.py`. [Short controls/reset card](START_STORY.md).
+This is one contiguous game/save; Dispatch → **Reset Story** starts it afresh.
+
+Implemented source: `5be7feeef34dbed468e007f5ff4de594d41b0f80` on
+`experiment/narrative-chapters-2-3-v0-1`. The `tooling/story-room-v0-1` successor
+adds the [Grok/Opus story room](docs/story_room/README.md) and publication
+preparation without changing the game. [Web review and fresh verification](docs/story_room/PUBLICATION_READINESS.md).
+Production has not been promoted. The historical launchers below intentionally
+open earlier experiments; use the story launcher above for current owner play.
+
+---
+
+# Previous candidate — Opening Chapter v0.1
 
 Double-click **PLAY_OPENING_CHAPTER.command** or run
 `python3 tools/play_opening_chapter.py`. [Short start card](START_OPENING_CHAPTER.md).

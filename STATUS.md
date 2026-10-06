@@ -1,3 +1,26 @@
+# Story room and publication preparation — October 6, 2026
+
+Started from clean `experiment/narrative-chapters-2-3-v0-1` at
+`5be7feeef34dbed468e007f5ff4de594d41b0f80`, already pushed at the owner's request.
+Current tooling successor: `tooling/story-room-v0-1`. No game-source change.
+
+`docs/story_room/` contains the source-grounded canon/character/world/seed packet,
+Grok Producer and independent Examiner prompts, Opus draft/revision templates,
+finite native messaging/delegation protocol and periodic Astra integration role.
+Grok Bot's actual signed-in account now has the two named Bots and their shared
+Hush Basin Story Room; connection evidence and remaining execution limits are
+in `CONNECTION_STATUS.md`. No new chapter or Opus writing run was commissioned.
+
+`tools/package_story_room.py` creates a portable hash-manifest packet; its four
+focused byte/allowlist/refusal tests pass. Current README now points to the full
+story launcher instead of the historical opening-only launcher. Full current
+native/Web/persistence results, fresh immutable preview, unchanged production
+pointer and exact unexecuted promotion step are in
+`docs/story_room/PUBLICATION_READINESS.md`. Owner play remains required before
+promotion. No merge to main or production deployment occurred.
+
+---
+
 # Chapters 2 + 3 successor — October 1, 2026
 
 Starting clean `fix/opening-chapter-ux-v0.1` at
