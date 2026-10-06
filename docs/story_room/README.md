@@ -21,10 +21,17 @@ platform research; installed command-line tools alone are not a connected room.
 
 1. Put both Bots in **Hush Basin Story Room** and give them the same frozen
    packet. Use `GROUP_KICKOFF_PROMPT.md` if setting up another account.
-2. Give Producer a bounded assignment using `OPUS_SCENE_DRAFT_TEMPLATE.md`.
+2. Give Producer a bounded assignment **in its direct chat**, using
+   `OPUS_SCENE_DRAFT_TEMPLATE.md`; native Cursor approval cannot start in a group.
+   The shared group remains the place for peer handoffs and visible results.
    Nothing here authorizes writing Chapter 4 automatically.
 3. Inspect the final artifacts and disagreements. A model's READY verdict is
    not your acceptance and never authorizes implementation or deployment.
+
+The two Bots have already verified the initial frozen packet and their direct
+messaging. The live facts/transport rehearsal is prepared but awaits explicit
+launch approval; no Opus writer has run. See `CONNECTION_STATUS.md` for the
+actual approval-review boundary and remaining account usage unknowns.
 
 For a portable bundle, from repository root:
 

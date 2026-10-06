@@ -25,6 +25,8 @@ Paste into the group containing **Hush Basin Story Producer** and
 >
 > Once setup is acknowledged, remain idle. No Chapter 4 drafting yet.
 
-When ready, replace setup mode with a completed `OPUS_SCENE_DRAFT_TEMPLATE.md`
-assignment. Give Producer sole ownership of the next step and let Examiner
-receive the exact draft. Do not broadcast simultaneous writer tasks to both.
+When ready, give a completed `OPUS_SCENE_DRAFT_TEMPLATE.md` assignment in the
+Producer's direct chat: the actual platform requires that channel for Cursor
+launch approval. Keep peer handoffs/results in this group. Give Producer sole
+ownership of the next step and let Examiner receive the exact draft. Do not
+broadcast simultaneous writer tasks to both.

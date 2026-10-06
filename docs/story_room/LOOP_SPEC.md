@@ -6,6 +6,12 @@ framework is required by this specification. The transport's account controls
 still apply. `INTEGRATION_NOTES.md` distinguishes verified capabilities from
 account-specific unknowns; `CONNECTION_STATUS.md` records the actual setup.
 
+**Observed native constraint:** Cursor launch approval is unavailable from a
+group conversation. Start the bounded assignment in the Producer's direct chat;
+peer messages, shared files and review results still belong in the group.
+Launching/continuing remains subject to the normal native approval process.
+Do not reinterpret a group setup instruction as permission to bypass that gate.
+
 ```text
 Charlie: bounded assignment
   └─ Grok Story Producer ── Cursor: explicit Opus ── draft
@@ -114,6 +120,10 @@ should be a specifically bounded, noncanonical exercise chosen by Charlie;
 do not invent Chapter 4 to test the connection. Check that the model really is
 Opus, the examiner protects strong work, disagreements remain visible, the
 revision returns to the same packet, and the room stops at its cap.
+
+The included facts/transport rehearsal needs explicit live-launch approval;
+it is prepared but has not run. Its stricter two-turn/two-pass cap takes
+precedence over the optional extra revision in the general protocol.
 
 After a substantial accepted arc or several accepted scenes, use
 `ASTRA_CONTINUITY_INTEGRATOR_PROMPT.md`. Human acceptance records travel with
