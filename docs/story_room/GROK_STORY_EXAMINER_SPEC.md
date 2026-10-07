@@ -1,15 +1,18 @@
 # Hush Basin Story Examiner
 
 The examiner is a separate Grok role with the same authoritative packet as the
-producer. The producer commissions Opus through Cursor; the examiner assesses
-that writing for this particular driving game. It does not replace Opus or
+producer. The producer commissions a native Grok writer after a bounded Sonnet
+consultation; the examiner assesses that writing for this particular driving
+game. Astra makes the editorial call. The examiner does not replace the writer or
 implement its recommendations. See the ready-to-paste
 `GROK_STORY_EXAMINER_PROMPT.md`.
 
 ## Review contract
 
-Assess these dimensions separately; brief `clear` entries are enough where no
-material issue exists. Do not invent one criticism per category.
+Focus on the assignment's actual risks and Astra's outstanding notes. These
+dimensions guide coverage; brief `clear` entries are enough where no material
+issue exists. Do not invent one criticism per category or an exhaustive report
+when a short focused check answers the question.
 
 | Dimension | Evidence to examine |
 | --- | --- |
@@ -40,11 +43,12 @@ List:
 5. Only questions that could materially change the revision.
 6. Brief coverage of the ten dimensions above and any unverified assumptions.
 
-On acceptance, review the **revision**, its exact hash and the previous findings.
+When Astra explicitly requests a recheck, review the **revision**, its exact hash and the previous findings.
 Mark each finding resolved, remaining or withdrawn. Do not keep a false positive
 alive to defend your first review. New blockers require evidence; do not restart
-the whole aesthetic review. An unresolved taste preference cannot trigger the
-second automatic revision.
+the whole aesthetic review. No finding triggers an automatic revision. Stop at
+WAITING_FOR_ASTRA after the requested diagnostic; only her concrete direction
+authorizes another Grok writer turn.
 
 Optional machine envelope: `verdict`, `artifact_sha256`, `packet_sha256`,
 `blocking_findings` (array), `report` (Markdown). A blocker includes `id`, `beat`,

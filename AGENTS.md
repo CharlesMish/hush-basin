@@ -1,4 +1,17 @@
-# Current task — Story room and publication preparation, October 6, 2026
+# Current task — Consultation-led Grok writing pilot, October 6, 2026
+
+Charlie now authorizes Astra editorial direction and final writing calls, a Grok
+Producer, one bounded Sonnet 5.5 consultation, and a separate Grok writer for
+drafting and repairs. Read `docs/story_room/LOOP_SPEC.md` and current role prompts.
+The first pilot repairs the proposed Ivo slice against Astra's A1–A4 review.
+No playable-source work or production promotion is authorized. Earlier role/model
+instructions are history; the six canon ledgers and game at
+`5be7feeef34dbed468e007f5ff4de594d41b0f80` remain unchanged. Tooling documentation
+may be shared on the existing tooling branch.
+
+---
+
+# Previous task — Story room and publication preparation, October 6, 2026
 
 The owner authorized a communicating Grok Producer / Grok Examiner room, with
 the Producer using Opus through the existing Cursor account. Read

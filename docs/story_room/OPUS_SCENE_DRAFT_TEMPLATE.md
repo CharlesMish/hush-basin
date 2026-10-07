@@ -1,7 +1,11 @@
-# Opus draft assignment
+# Writer draft assignment
+
+Legacy filename retained for existing packet links. The v0.2 default writer is
+the separate native Grok Writer; Sonnet supplies a short prior consultation.
 
 You are writing for Hush Basin. The Grok producer directs this bounded assignment;
-a separate Grok examiner will review the result. Write good playable scenes,
+a separate Grok examiner diagnoses it, and Astra makes the editorial call.
+Write good playable scenes,
 not prose that advertises checklist compliance. The courier mostly drives and
 listens; people and physical work give those journeys meaning.
 
@@ -9,7 +13,8 @@ listens; people and physical work give those journeys meaning.
 
 - Run ID / packet manifest hash / implemented revision:
 - Assigned review output directory:
-- Actual Cursor model selected (record the returned identity as well):
+- Actual writer route / Bot identity / exposed model identity (do not guess):
+- Sonnet consultation artifact/hash and Astra's binding decisions:
 - Assignment, narrative purpose and human authorizing it:
 - Current chapter/world/character state (specify branch/interleaving if relevant):
 - Allowed characters and relevant roads/contact points:
@@ -30,10 +35,10 @@ details within the approved scope without asking about every noun.
 
 ## Output
 
-The review output directory is on your delegated agent's computer, outside its
-repository checkout. Reference each exact output file in your final response
-so native artifact transfer can copy it back. Include its SHA-256; the Producer
-will verify the copied bytes before asking the Examiner to read them.
+Write to the assigned shared run directory, outside any repository checkout.
+Reference each exact file and SHA-256 in your final response. Producer verifies
+the bytes before handing them to Examiner and Astra. If transport uses separate
+computers, use native artifact transfer and verify the copied files.
 
 Give the scene/arc first, in a form an implementer can distinguish:
 

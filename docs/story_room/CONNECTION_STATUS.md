@@ -1,7 +1,105 @@
 # Native story-room connection — October 6, 2026
 
+## Current v0.2 pilot
+
+Charlie changed the workflow to Astra direction → Grok Producer → one Sonnet
+consultation → separate Grok Writer → Astra review and directed Grok repairs.
+The existing Examiner remains a focused diagnostic role. Historical Opus
+defaults below describe the original rehearsal, not the current assignment.
+
+Run `ivo-grok-repair-20261006-01` repairs the earlier Sonnet Ivo proposal without
+changing the frozen packet or game. The starting manuscript is
+`revision-1.md`, SHA-256
+`bc9344c48f7330fd1175af002c56cf589f4db81a09225dfc6a5ff5da2432a7a0`.
+The four Astra notes address Ivo's competence, useful player flow, physical
+clarity and factual hygiene.
+
+Observed through the signed-in UI: Producer created one native **Hush Basin
+Story Writer**, identity prefix `8225f9cd`, and added it to the existing room.
+Producer reports native Grok Bot account usage, not a Cursor-hosted Grok model;
+per-Bot billing attribution is not exposed. Existing Sonnet agent
+`bc-fcec7dfd-4d25-5883-a67a-dd5c32e70818` received exactly one advisory turn
+with explicit `claude-sonnet-5-5`, 300k/high settings. The consultation returned
+and was unwatched before Writer received its assignment.
+
+The run was actively supervised by Astra and paused at WAITING_FOR_ASTRA after
+each requested handoff. Examiner READY does not approve writing or trigger
+another rewrite. No automatic cross-app wakeup bridge has been verified.
+No new schedule or spending change was requested.
+
+### First Grok revision and Astra review
+
+Downloaded `hb-ivo-grok-repair-20261006-01-review-bundle.zip`, SHA-256
+`c4173d410d145524f3f29bc47a8cc284511aba8b786d1cb6f58077d5efdb38e4`.
+Local CRC and all 11 manifest entries verify. Native Writer's full identity is
+`8225f9cd-289f-44ed-8288-13c461ae5ba3`.
+
+Draft 1 (`21a74821fd6fc5444cb51a4614c33e0c688f16f223a9de4661ce7a962ec63ce3`)
+received Examiner NOTES, with A1–A4 marked PASS. Astra independently read the
+files and returned REVISION ADVISED. Requiring another paid delivery still made
+five deliveries necessary, and Ivo's dialogue stated the progression rule.
+The spoken surface checks remained ambiguous and the new grit/oil explanation
+was unsupported. These are editorial findings, not automated regression results.
+
+Astra directed the same Grok Writer to retain four required deliveries, use a
+brief player-advanced local ellipsis for the bench work, remove the intervening
+job gate, simplify the physical account, distinguish checking from re-facing,
+and preserve the strongest character lines. Pay values and optional route
+hypotheses were settled within the proposal. No second Sonnet call or automatic
+Examiner pass was requested.
+
+Usage evidence: one consultant turn completed; the preserved advisory body has
+747 whitespace-delimited words, exceeding the requested 600-word limit. This is
+recorded rather than hidden or corrected with another billed call. Turn counts
+do not establish tokens, cost or exact charged pool. Sonnet's read-only Git claim
+is present in its returned advice; this compact bundle contains no full consultant
+tool transcript for an independent command audit.
+
+### Second Grok revision: editorial acceptance
+
+Astra read draft 2, its complete appendix, response and clean script, verified
+all 17 manifest entries and ZIP CRC, inspected current dialogue source and
+checked the technical references. At 19:20 CT she accepted the exact writing
+candidate for the next prototype / owner review. No further writer, consultant
+or Examiner turn was authorized. No playable implementation or canon promotion
+follows automatically.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| Turn-2 bundle | `0f5c799e84270467913b9ea8e73546367a1f792309b37b4e744abb41d2dd2c6d` |
+| `writer/draft-2.md` | `fb64d3fb7515463d618c1d78bc8664ba10e60ccf22c2e334f66b48595477b52d` |
+| `writer/CLEAN_SCRIPT.md` | `56dc708c6082c3bd2aa9812b745dea89d7961a13b0f0d71cb8d897b579dfbaf2` |
+| `writer/RESPONSE_R1-R4.md` | `7f54cca551c332926103777be83a42a041724c073ba4763b95e331e8b174e2b5` |
+
+The revision retains four required deliveries and completes the bench exchange
+on the same Works visit using a paper-panel ellipsis. It removes the extra-job
+gate and unsupported grit/oil explanation, distinguishes the plain die from
+the untouched lettered one, and makes the stone a checking reference. Ivo's
+lending gesture, receiver callback and stopping-point line survive.
+
+Final writing counts: **one Sonnet advisory turn, two Grok writing turns total
+(initial revision plus one directed repair), one Examiner diagnostic on draft 1,
+and two Astra editorial reads**. Producer packaging is separate. The remaining
+repair allowance is unused. No next slice was assigned.
+
+Implementation annotations accompany acceptance: paper-first pickup is already
+supported by `slices_panel.gd`; a same-contact continuation needs a small hook
+or local board tap, with Skip forwarding and neutral-release tests. Add concrete
+pending resume text. Permanent props mean slab/feet only; dies leave on pickup.
+Bench ellipsis and repeated Works visits remain owner-play pacing questions.
+The source check supports general tool/reference practice, not a certified
+press-repair procedure. One Starrett catalog link did not load for Astra.
+
+Provenance correction: Producer's saved `astra-review-draft-1.md` is a faithful
+condensed/reformatted brief, despite its initial “verbatim” label. Astra flagged
+that in closeout and requested an honest label while preserving original
+evidence. Local downloads and extracted artifacts are in sibling
+`Hush-Basin-Story-Room-20261006/ivo-grok-pilot/`.
+
+## Historical v0.1 setup and rehearsal
+
 Setup has moved beyond prompt files. The signed-in Grok Bot desktop app now has
-two newly created Bots, **Hush Basin Story Producer** and **Hush Basin Story
+two initially created Bots, **Hush Basin Story Producer** and **Hush Basin Story
 Examiner**, in a group named **Hush Basin Story Room**. Existing unrelated Bots
 were left alone. No scheduled routines, worker, new credentials or spending
 settings were created/changed.

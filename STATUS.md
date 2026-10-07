@@ -1,3 +1,29 @@
+# Consultation-led Grok writing pilot — October 6, 2026
+
+Started clean on `tooling/story-room-v0-1` at
+`daaa05d6649034ed6ca49fb2adc33940a6288775`. Charlie explicitly requested Astra
+oversight, one Sonnet consultation, a separate native Grok writer, and repair
+of the Ivo proposal. The live pilot is `ivo-grok-repair-20261006-01`.
+Current roles, caps, communication and pause semantics are in
+`docs/story_room/LOOP_SPEC.md`. No game or six-ledger canon change.
+
+The pilot completed with one Sonnet consultation, two native Grok writing turns
+(initial revision plus one Astra-directed repair), one Examiner diagnostic and
+two Astra editorial reads. Astra accepted draft 2 as a writing candidate for
+the next prototype / owner review. The first diagnostic had passed issues that
+her review still found material; it did not trigger acceptance or another turn.
+Detailed artifacts, hashes, usage limits and implementation annotations are in
+`CONNECTION_STATUS.md`. No next slice, gameplay implementation or deployment.
+
+Documentation verification: `python3 tools/test_package_story_room.py` passes
+all four tests; `git diff --check` passes. Game and six canon ledgers remain
+byte-identical to their starting refs. `python3 tools/verify_repo.py` reports
+the same 11 historical mismatches across 389 checks; output retained in the
+adjacent story-room folder at `evidence/grok-pilot-verify-repo.txt`.
+No gameplay regression rerun is justified by documentation-only changes.
+
+---
+
 # Story room and publication preparation — October 6, 2026
 
 Started from clean `experiment/narrative-chapters-2-3-v0-1` at

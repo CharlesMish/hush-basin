@@ -1,10 +1,10 @@
-# Hush Basin Story Room v0.1
+# Hush Basin Story Room v0.2
 
-**Two communicating Grok Bots; one Opus writer through Cursor.** Producer
-directs Opus, Examiner independently critiques, and Opus revises with room to
-disagree. The default loop stops after one revision and acceptance check; at
-most one further revision may address genuine blockers. Charlie directs and
-accepts. Astra periodically integrates accepted work across the wider game.
+**Astra directs; Grok produces and writes; Sonnet consults once.** Three native
+Grok Bots share the room: Producer coordinates, Writer drafts and repairs, and
+Examiner gives a focused independent diagnostic. Astra makes the editorial call
+and directs any further repair. Charlie retains playable acceptance. Claude is
+reserved for a bounded consultation, not each rewrite.
 
 This packet is production preparation, not a new chapter. Its implemented game
 authority is `5be7feeef34dbed468e007f5ff4de594d41b0f80`, comprising the Opening
@@ -19,21 +19,22 @@ packet revision they received, and remaining live checks. Do not create
 duplicates when the named Bots already exist. `INTEGRATION_NOTES.md` records
 platform research; installed command-line tools alone are not a connected room.
 
-1. Put both Bots in **Hush Basin Story Room** and give them the same frozen
+1. Put the three Bots in **Hush Basin Story Room** and give them the same frozen
    packet. Use `GROUP_KICKOFF_PROMPT.md` if setting up another account.
 2. Give Producer a bounded assignment **in its direct chat**, using
-   `OPUS_SCENE_DRAFT_TEMPLATE.md`; native Cursor approval cannot start in a group.
+   `OPUS_SCENE_DRAFT_TEMPLATE.md` (legacy filename, now model-neutral).
+   Native Cursor consultation approval cannot start in a group.
    The shared group remains the place for peer handoffs and visible results.
    Nothing here authorizes writing Chapter 4 automatically.
 3. Inspect the final artifacts and disagreements. A model's READY verdict is
    not your acceptance and never authorizes implementation or deployment.
 
-The two Bots verified the frozen packet and completed an owner-approved live
-facts/transport rehearsal: one explicitly selected Opus 5.5 agent, two writer
-turns, independent review and acceptance, verified artifact transfers and a
-finite stop. Both Bots are idle. See `CONNECTION_STATUS.md` for the evidence,
-model-reporting limits and remaining account-usage unknowns. Story-writing
-quality remains to be tested with Charlie's first bounded creative assignment.
+The original two-Bot/Opus rehearsal and subsequent Sonnet Ivo proposal are
+historical runs. The current pilot repairs that proposal with one Sonnet
+consultation and a native Grok Writer. See `CONNECTION_STATUS.md` for observed
+identities, artifacts, model-reporting limits and usage unknowns. No automatic
+Grok-to-Codex wakeup bridge has been verified: a run pauses for Astra when active
+supervision is unavailable. Bot agreement alone is never acceptance.
 
 For a portable bundle, from repository root:
 
@@ -66,9 +67,11 @@ with source references, not authority to silently fix design ambiguities.
 ## Roles and loop
 
 - [Producer prompt](GROK_PRODUCER_PROMPT.md)
+- [Grok Writer prompt](GROK_WRITER_PROMPT.md)
+- [Sonnet consultation template](SONNET_CONSULT_TEMPLATE.md)
 - [Examiner specification](GROK_STORY_EXAMINER_SPEC.md) and
   [ready-to-paste prompt](GROK_STORY_EXAMINER_PROMPT.md)
-- [Opus draft](OPUS_SCENE_DRAFT_TEMPLATE.md) and
+- [Draft](OPUS_SCENE_DRAFT_TEMPLATE.md) and
   [revision](OPUS_REVISION_TEMPLATE.md) templates
 - [Finite loop and communication contract](LOOP_SPEC.md)
 - [Periodic Astra integration prompt](ASTRA_CONTINUITY_INTEGRATOR_PROMPT.md)
