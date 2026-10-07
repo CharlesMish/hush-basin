@@ -1,3 +1,40 @@
+# Story second-opinion publication — October 6, 2026
+
+Charlie requested the drafts and relevant preceding story on GitHub. Starting
+clean branch `tooling/story-room-v0-1`, exact HEAD
+`1134720153d7006a57655c625feca54ba4d7b054`; documentation successor
+`review/story-second-opinion-20261006`. The existing repository was verified
+public; no visibility change is requested or made.
+
+See `docs/story_room/reviews/2026-10-06/README.md` for the publication. It contains
+43 selected editorial artifacts, a single reading packet with unchanged
+story/dialogue wording, review navigation and a SHA-256 manifest. Five copies
+omit operational identifiers from metadata only; all scripts/drafts retain
+their exact bytes. Raw transcripts, operational run ledgers and archives are
+excluded. Detailed source/publication identities are recorded in the manifest.
+
+Ivo remains accepted as writing but unimplemented. Nell is held on voice/payoff
+grounds after two repairs; no major continuity contradiction was found. The
+Examiner's disagreement and all draft versions are preserved. Both runs are
+closed; no fresh Bot/model task or implementation is commissioned here.
+
+Verification: `python3 tools/test_package_story_room.py` passes 4 tests.
+The 50 publication payload hashes, 10 aggregate input hashes, 43 imported
+source records and 149 local navigation links verify; a sensitive-pattern scan
+finds no new credentials, account links or local user paths in the packet.
+The default staged whitespace check flags 24 preserved Markdown hard breaks
+and one original end-of-file blank line. Wrapper-only checking passes; the
+full check also passes with only those two whitespace categories disabled.
+Original draft bytes are retained deliberately rather than reformatted.
+`python3 tools/verify_repo.py` still reports 11 historical inventory mismatches
+across 389 checks; those paths are unchanged in this publication. No gameplay
+regression rerun is warranted for document publication. Game files remain
+unchanged from `5be7feeef34dbed468e007f5ff4de594d41b0f80`, and the six canon
+ledgers remain unchanged from `05d55064a1013483b869dba0bc9d2d1906a24b6b`.
+No main update, production deployment or playable acceptance is claimed.
+
+---
+
 # Consultation-led Grok writing pilot — October 6, 2026
 
 Started clean on `tooling/story-room-v0-1` at

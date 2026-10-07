@@ -1,0 +1,506 @@
+{
+  "format": "hush-basin-second-opinion-publication-v1",
+  "date": "2026-10-06",
+  "starting_tooling_commit": "1134720153d7006a57655c625feca54ba4d7b054",
+  "implemented_game_commit": "5be7feeef34dbed468e007f5ff4de594d41b0f80",
+  "frozen_canon_commit": "05d55064a1013483b869dba0bc9d2d1906a24b6b",
+  "scope": "Every file below this directory except MANIFEST.json itself. Not an archive hash or a complete account/transcript export.",
+  "aggregate_sources": [
+    {
+      "path": "docs/story_room/STORY_CANON_CURRENT.md",
+      "sha256": "abea3f494d0ecddd300f71f68dffe04489ca8de306f23812aed82c603f964f3c",
+      "bytes": 8751,
+      "treatment": "wording unchanged; relative Markdown link targets rebased"
+    },
+    {
+      "path": "docs/story_room/CHARACTER_LEDGER.md",
+      "sha256": "fa7f5628232e3903ac9b968c71a5dadf1365e55bbfb4f1b98360189c5b05af43",
+      "bytes": 9611,
+      "treatment": "wording unchanged; relative Markdown link targets rebased"
+    },
+    {
+      "path": "docs/story_room/WORLD_AND_ROUTE_STORY_MAP.md",
+      "sha256": "9e0304cb089c44a7dec2b3b37726a72afe88831ff749f0015f46783445f54862",
+      "bytes": 9057,
+      "treatment": "wording unchanged; relative Markdown link targets rebased"
+    },
+    {
+      "path": "docs/story_room/WORLD_STATE_LEDGER.md",
+      "sha256": "b87b30fc93dcfd578bd9f0ea7dc2bc8d47848bca7de89c37a23176735b26c9d1",
+      "bytes": 7408,
+      "treatment": "wording unchanged; relative Markdown link targets rebased"
+    },
+    {
+      "path": "docs/story_room/SEED_PAYOFF_LEDGER.md",
+      "sha256": "78ea09b98841a098356874cbd2efe44012a7e4caf49853b2f415077e28fb2c95",
+      "bytes": 4573,
+      "treatment": "wording unchanged; relative Markdown link targets rebased"
+    },
+    {
+      "path": "docs/story_room/NARRATIVE_RULES.md",
+      "sha256": "9ecb0add6e6a6727c79f4b18beaaafe77fd1fdc8b229d4fc5f1ba8a5707c5409",
+      "bytes": 6829,
+      "treatment": "wording unchanged; relative Markdown link targets rebased"
+    },
+    {
+      "path": "game/scripts/courier/chapter_text.gd",
+      "sha256": "8f85f9a78384b73b8913b9df50661fcf4ce6fe9166a8a01b72ab8306342b7257",
+      "bytes": 7219,
+      "treatment": "verbatim fenced GDScript"
+    },
+    {
+      "path": "game/scripts/courier/slices_text.gd",
+      "sha256": "4ffc69890c4f83b6252aed9f638e19e9a11e5bc0cd85f2de9084aa9c1492cdab",
+      "bytes": 11267,
+      "treatment": "verbatim fenced GDScript"
+    },
+    {
+      "path": "docs/story_room/reviews/2026-10-06/ivo/writer/CLEAN_SCRIPT.md",
+      "sha256": "56dc708c6082c3bd2aa9812b745dea89d7961a13b0f0d71cb8d897b579dfbaf2",
+      "bytes": 8169,
+      "treatment": "wording unchanged; relative Markdown link targets rebased"
+    },
+    {
+      "path": "docs/story_room/reviews/2026-10-06/nell/writer/CLEAN_SCRIPT_v3.md",
+      "sha256": "c0cfd2006c41e3bf1260b188ece17a300acd652e0e697f99d93a4ccd7228c3b1",
+      "bytes": 9485,
+      "treatment": "wording unchanged; relative Markdown link targets rebased"
+    }
+  ],
+  "files": {
+    "PROVENANCE.md": {
+      "sha256": "350535e898586ea8eb79fade1a57404571f63a830b246a7508c4afc75707df85",
+      "bytes": 3888,
+      "source": "publication-authored wrapper"
+    },
+    "README.md": {
+      "sha256": "2f238f98c3570aa37459c5d99da84a2e875b47cf41641433127206b96dbfdf7e",
+      "bytes": 4264,
+      "source": "publication-authored wrapper"
+    },
+    "REVIEW_REQUEST.md": {
+      "sha256": "91604f19a26842ed3e817e7d21e474aad5d9e91c9ebfabb9b04bca785147af66",
+      "bytes": 1661,
+      "source": "publication-authored wrapper"
+    },
+    "SECOND_OPINION_PACKET.md": {
+      "sha256": "4bf77d9b13acc1e3682e1ffd1c4a3965ee3401e0a2ea2579123f1b2700eeca4c",
+      "bytes": 85602,
+      "source": "generated from aggregate_sources"
+    },
+    "ivo/README.md": {
+      "sha256": "9e0ac843ab5e1d0adb73715432074fb6e73a63fa4269e2ec1ebcf5b3a96a2836",
+      "bytes": 1615,
+      "source": "publication-authored wrapper"
+    },
+    "ivo/astra/astra-final-call-draft-2.md": {
+      "sha256": "57cb8c03674cfd8547c7da58da4a6a28c7b943dc15e8c763e68cae9c2ce0a031",
+      "bytes": 4015,
+      "source": "ivo-final-bundle/astra/astra-final-call-draft-2.md",
+      "source_sha256": "a3fe8849505758222fac6cc3502ccb2a0cf70db212fde9342d91d21cf1b2008e",
+      "source_bytes": 3901,
+      "byte_exact_copy": false,
+      "publication_changes": [
+        "Machine identifier omitted from provenance header"
+      ]
+    },
+    "ivo/astra/astra-review-draft-1-original-excerpts.md": {
+      "sha256": "037bcdd4a513cebfc577434d76c6a254cf881c49c8dd1f8e332a2fbd80d44ce5",
+      "bytes": 4681,
+      "source": "ivo-final-bundle/astra/astra-review-draft-1-original-excerpts.md",
+      "source_sha256": "037bcdd4a513cebfc577434d76c6a254cf881c49c8dd1f8e332a2fbd80d44ce5",
+      "source_bytes": 4681,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/astra/astra-review-draft-1.md": {
+      "sha256": "364f1e348a6c5a33b0f63955c2ed978e8a3d6050d7b5d1a684861fd47eaad630",
+      "bytes": 3718,
+      "source": "ivo-final-bundle/astra/astra-review-draft-1.md",
+      "source_sha256": "364f1e348a6c5a33b0f63955c2ed978e8a3d6050d7b5d1a684861fd47eaad630",
+      "source_bytes": 3718,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/closeout/PROVENANCE_CORRECTIONS.md": {
+      "sha256": "c96de2b3ad0d7f2035447ba8b6274caa844f94a6b24a17df3b131f2bb6635f5f",
+      "bytes": 2318,
+      "source": "ivo-final-bundle/closeout/PROVENANCE_CORRECTIONS.md",
+      "source_sha256": "c96de2b3ad0d7f2035447ba8b6274caa844f94a6b24a17df3b131f2bb6635f5f",
+      "source_bytes": 2318,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/consultation/CONSULT_BRIEF.md": {
+      "sha256": "bea1260e67aabacfccab3631aacf4f1392619079bb401fb1bb1b7bf3fdf4bf58",
+      "bytes": 3221,
+      "source": "ivo-final-bundle/consultation/CONSULT_BRIEF.md",
+      "source_sha256": "bea1260e67aabacfccab3631aacf4f1392619079bb401fb1bb1b7bf3fdf4bf58",
+      "source_bytes": 3221,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/consultation/consultation-advice.md": {
+      "sha256": "659fcdca6567e4c1277f9a0170c7ce2e307088b62a4ff55a7b2cd9948c114dc0",
+      "bytes": 4954,
+      "source": "ivo-final-bundle/consultation/consultation-advice.md",
+      "source_sha256": "0dc274fb56f145a094558be8dd7ee23f0dc64963f61d211d7904f259b6ff48f7",
+      "source_bytes": 4775,
+      "byte_exact_copy": false,
+      "publication_changes": [
+        "Operational identifier omitted from metadata field - **Agent"
+      ]
+    },
+    "ivo/examiner/FOCUSED_CHECK_BRIEF.md": {
+      "sha256": "c102a4a9be96578c468ee1a74e70e47366b18013bc37f2bc3b9bbb095144651b",
+      "bytes": 2465,
+      "source": "ivo-final-bundle/examiner/FOCUSED_CHECK_BRIEF.md",
+      "source_sha256": "c102a4a9be96578c468ee1a74e70e47366b18013bc37f2bc3b9bbb095144651b",
+      "source_bytes": 2465,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/examiner/focused-check-1.md": {
+      "sha256": "17a2472625989fe2d958130ffacf8f131626da7bddb1ddf986dcaa1cf940ea96",
+      "bytes": 5195,
+      "source": "ivo-final-bundle/examiner/focused-check-1.md",
+      "source_sha256": "17a2472625989fe2d958130ffacf8f131626da7bddb1ddf986dcaa1cf940ea96",
+      "source_bytes": 5195,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/input-revision-1.md": {
+      "sha256": "bc9344c48f7330fd1175af002c56cf589f4db81a09225dfc6a5ff5da2432a7a0",
+      "bytes": 18365,
+      "source": "ivo-final-bundle/input-revision-1.md",
+      "source_sha256": "bc9344c48f7330fd1175af002c56cf589f4db81a09225dfc6a5ff5da2432a7a0",
+      "source_bytes": 18365,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/writer/ASSIGNMENT.md": {
+      "sha256": "6b6aced0198122bdb9df5e3e0e858fa30994983e3ae52ef6e17304652947a41e",
+      "bytes": 4565,
+      "source": "ivo-final-bundle/writer/ASSIGNMENT.md",
+      "source_sha256": "6b6aced0198122bdb9df5e3e0e858fa30994983e3ae52ef6e17304652947a41e",
+      "source_bytes": 4565,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/writer/ASSIGNMENT_TURN2.md": {
+      "sha256": "b640bb8a62de90aedc5bb415dd11608260a6dac8a21324832b4b526ad88b970a",
+      "bytes": 1280,
+      "source": "ivo-final-bundle/writer/ASSIGNMENT_TURN2.md",
+      "source_sha256": "b640bb8a62de90aedc5bb415dd11608260a6dac8a21324832b4b526ad88b970a",
+      "source_bytes": 1280,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/writer/CHANGE_NOTES.md": {
+      "sha256": "ec6c0895bdcea1fbb63641096b599b6067b35f05a8f32cc689be0aceb5439e5a",
+      "bytes": 1600,
+      "source": "ivo-final-bundle/writer/CHANGE_NOTES.md",
+      "source_sha256": "ec6c0895bdcea1fbb63641096b599b6067b35f05a8f32cc689be0aceb5439e5a",
+      "source_bytes": 1600,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/writer/CLEAN_SCRIPT.md": {
+      "sha256": "56dc708c6082c3bd2aa9812b745dea89d7961a13b0f0d71cb8d897b579dfbaf2",
+      "bytes": 8169,
+      "source": "ivo-final-bundle/writer/CLEAN_SCRIPT.md",
+      "source_sha256": "56dc708c6082c3bd2aa9812b745dea89d7961a13b0f0d71cb8d897b579dfbaf2",
+      "source_bytes": 8169,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/writer/RESPONSE_R1-R4.md": {
+      "sha256": "7f54cca551c332926103777be83a42a041724c073ba4763b95e331e8b174e2b5",
+      "bytes": 4443,
+      "source": "ivo-final-bundle/writer/RESPONSE_R1-R4.md",
+      "source_sha256": "7f54cca551c332926103777be83a42a041724c073ba4763b95e331e8b174e2b5",
+      "source_bytes": 4443,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/writer/draft-1.md": {
+      "sha256": "21a74821fd6fc5444cb51a4614c33e0c688f16f223a9de4661ce7a962ec63ce3",
+      "bytes": 26238,
+      "source": "ivo-final-bundle/writer/draft-1.md",
+      "source_sha256": "21a74821fd6fc5444cb51a4614c33e0c688f16f223a9de4661ce7a962ec63ce3",
+      "source_bytes": 26238,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo/writer/draft-2.md": {
+      "sha256": "fb64d3fb7515463d618c1d78bc8664ba10e60ccf22c2e334f66b48595477b52d",
+      "bytes": 17750,
+      "source": "ivo-final-bundle/writer/draft-2.md",
+      "source_sha256": "fb64d3fb7515463d618c1d78bc8664ba10e60ccf22c2e334f66b48595477b52d",
+      "source_bytes": 17750,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo-original/CLEAN_SCRIPT.md": {
+      "sha256": "ea75a2329d794720fc82f6daf8348cad681f0a30f8790a270b01c8da0a508d7a",
+      "bytes": 8387,
+      "source": "original-ivo-bundle/runs/ivo-slice-20261006-01/CLEAN_SCRIPT.md",
+      "source_sha256": "ea75a2329d794720fc82f6daf8348cad681f0a30f8790a270b01c8da0a508d7a",
+      "source_bytes": 8387,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo-original/README.md": {
+      "sha256": "571a4c2f74da8d90f45504f8b9232711b973aa2bb015d545e7c3f5c1ec2a0102",
+      "bytes": 785,
+      "source": "publication-authored wrapper"
+    },
+    "ivo-original/acceptance-1.md": {
+      "sha256": "c376e00599f2a9c9ab8f0400455b6eb872bd04246043c23439d7973f9de5dd3f",
+      "bytes": 2899,
+      "source": "original-ivo-bundle/runs/ivo-slice-20261006-01/acceptance-1.md",
+      "source_sha256": "c376e00599f2a9c9ab8f0400455b6eb872bd04246043c23439d7973f9de5dd3f",
+      "source_bytes": 2899,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo-original/assignment.md": {
+      "sha256": "eb25a7609109f7c83e2d0bf120143c7ffa98df37d298ea21aa01efe5bac40440",
+      "bytes": 4704,
+      "source": "original-ivo-bundle/runs/ivo-slice-20261006-01/assignment.md",
+      "source_sha256": "eb25a7609109f7c83e2d0bf120143c7ffa98df37d298ea21aa01efe5bac40440",
+      "source_bytes": 4704,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo-original/draft-0.md": {
+      "sha256": "2931de462b8d88f5edc1120892b93842f9beee9ef5d82dfaa7678fd293307670",
+      "bytes": 16800,
+      "source": "original-ivo-bundle/runs/ivo-slice-20261006-01/draft-0.md",
+      "source_sha256": "2931de462b8d88f5edc1120892b93842f9beee9ef5d82dfaa7678fd293307670",
+      "source_bytes": 16800,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo-original/findings-response-1.md": {
+      "sha256": "f029369b8c6142648ff23ec92bf894538d73d4e8092d13d3c1c3ae75c0928b77",
+      "bytes": 2456,
+      "source": "original-ivo-bundle/runs/ivo-slice-20261006-01/findings-response-1.md",
+      "source_sha256": "f029369b8c6142648ff23ec92bf894538d73d4e8092d13d3c1c3ae75c0928b77",
+      "source_bytes": 2456,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo-original/review-0.md": {
+      "sha256": "9e07258020111c1575971f63fa1f75126f27626987690a60afaab00eb936f2ec",
+      "bytes": 9187,
+      "source": "original-ivo-bundle/runs/ivo-slice-20261006-01/review-0.md",
+      "source_sha256": "9e07258020111c1575971f63fa1f75126f27626987690a60afaab00eb936f2ec",
+      "source_bytes": 9187,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "ivo-original/revision-1.md": {
+      "sha256": "bc9344c48f7330fd1175af002c56cf589f4db81a09225dfc6a5ff5da2432a7a0",
+      "bytes": 18365,
+      "source": "original-ivo-bundle/runs/ivo-slice-20261006-01/revision-1.md",
+      "source_sha256": "bc9344c48f7330fd1175af002c56cf589f4db81a09225dfc6a5ff5da2432a7a0",
+      "source_bytes": 18365,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/ASSIGNMENT_ASTRA.md": {
+      "sha256": "d3a4017359e7df4cee98ebfad4131c789fe32cd1458b13b0db3dad3c629b34b0",
+      "bytes": 4745,
+      "source": "nell-turn3-bundle/ASSIGNMENT_ASTRA.md",
+      "source_sha256": "956502239fa4a3da7eeb0afecbcfe5f35af422daddd100172b98869ec8011c1f",
+      "source_bytes": 4621,
+      "byte_exact_copy": false,
+      "publication_changes": [
+        "Machine identifier omitted from provenance header"
+      ]
+    },
+    "nell/README.md": {
+      "sha256": "81192bfe308bdece15782a292bdeaf28bbd8896e9041a930a0ee01c880729751",
+      "bytes": 1753,
+      "source": "publication-authored wrapper"
+    },
+    "nell/astra/ASTRA_FINAL_DECISION.txt": {
+      "sha256": "7f8b318b9b98fd421b4e71f1ec5aa10896066ea6a4e0f29ca8b67c05b34a7c73",
+      "bytes": 3672,
+      "source": "local-director-closeout/ASTRA_FINAL_DECISION.txt",
+      "source_sha256": "7f8b318b9b98fd421b4e71f1ec5aa10896066ea6a4e0f29ca8b67c05b34a7c73",
+      "source_bytes": 3672,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/astra/astra-review-draft-1.md": {
+      "sha256": "d080bcf4ba4c0876f64fb0c4b80217d345f83594f9dddabc5d302a8271fcb268",
+      "bytes": 4459,
+      "source": "nell-turn3-bundle/astra/astra-review-draft-1.md",
+      "source_sha256": "4f67f82d85fa8c9ae83aa58cd1a0530be8eb50dc3e8d655afce8b4adfa4b4996",
+      "source_bytes": 4335,
+      "byte_exact_copy": false,
+      "publication_changes": [
+        "Machine identifier omitted from provenance header"
+      ]
+    },
+    "nell/astra/astra-review-draft-2.md": {
+      "sha256": "c5d28fd6c89c7c6a1ca1c5f52029ae0fa77401bb040b6ce2fde4f8c19c0b849f",
+      "bytes": 2211,
+      "source": "nell-turn3-bundle/astra/astra-review-draft-2.md",
+      "source_sha256": "c5d28fd6c89c7c6a1ca1c5f52029ae0fa77401bb040b6ce2fde4f8c19c0b849f",
+      "source_bytes": 2211,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/consultation/CONSULT_BRIEF.md": {
+      "sha256": "d7b916c189be0f13bf964728c2346544526bbc31a6295936fb4a88a8cde37862",
+      "bytes": 2803,
+      "source": "nell-turn3-bundle/consultation/CONSULT_BRIEF.md",
+      "source_sha256": "d7b916c189be0f13bf964728c2346544526bbc31a6295936fb4a88a8cde37862",
+      "source_bytes": 2803,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/consultation/WORD_COUNT.txt": {
+      "sha256": "cd1921ee7d878a0fb94743076d5e6556d4a8c861a4243682c699db1b112860a4",
+      "bytes": 141,
+      "source": "nell-turn3-bundle/consultation/WORD_COUNT.txt",
+      "source_sha256": "cd1921ee7d878a0fb94743076d5e6556d4a8c861a4243682c699db1b112860a4",
+      "source_bytes": 141,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/consultation/consultation-advice.md": {
+      "sha256": "1f27c1e7a087027b982e614e81118a5ca16e4009fc5b1dc6b3dc96c031d98a41",
+      "bytes": 4194,
+      "source": "nell-turn3-bundle/consultation/consultation-advice.md",
+      "source_sha256": "e9696b09cc44e094335100be165a5e3753f6185814c111b6f3a0c877496a9277",
+      "source_bytes": 4068,
+      "byte_exact_copy": false,
+      "publication_changes": [
+        "Operational identifier omitted from metadata field - **Agent",
+        "Operational identifier omitted from metadata field - **Follow-up run",
+        "Operational identifier omitted from metadata field - **Source"
+      ]
+    },
+    "nell/examiner/FOCUSED_CHECK_BRIEF.md": {
+      "sha256": "c4e8211c612e2cd7b68968f9087d956673aba760e28358c3dc231a9bf13230c8",
+      "bytes": 1492,
+      "source": "nell-turn3-bundle/examiner/FOCUSED_CHECK_BRIEF.md",
+      "source_sha256": "c4e8211c612e2cd7b68968f9087d956673aba760e28358c3dc231a9bf13230c8",
+      "source_bytes": 1492,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/examiner/focused-check-1.md": {
+      "sha256": "2281bb96d56938864eac80531f211e63a44c2af6dbc466d9321d808a36f65a82",
+      "bytes": 9476,
+      "source": "nell-turn3-bundle/examiner/focused-check-1.md",
+      "source_sha256": "2281bb96d56938864eac80531f211e63a44c2af6dbc466d9321d808a36f65a82",
+      "source_bytes": 9476,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/ASSIGNMENT.md": {
+      "sha256": "6f95c1c381b8903987be1eddcc262e995d26d8b138817941c45a1cabd461c07b",
+      "bytes": 2490,
+      "source": "nell-turn3-bundle/writer/ASSIGNMENT.md",
+      "source_sha256": "6f95c1c381b8903987be1eddcc262e995d26d8b138817941c45a1cabd461c07b",
+      "source_bytes": 2490,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/ASSIGNMENT_TURN2.md": {
+      "sha256": "d025d5f5dac70681cb14c88bec495376fbb8687ffc4325f391bbb6c246002307",
+      "bytes": 1381,
+      "source": "nell-turn3-bundle/writer/ASSIGNMENT_TURN2.md",
+      "source_sha256": "d025d5f5dac70681cb14c88bec495376fbb8687ffc4325f391bbb6c246002307",
+      "source_bytes": 1381,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/ASSIGNMENT_TURN3.md": {
+      "sha256": "c0f7bb69af8a4855fd1112bb0f74b4cfad63d317327f3a9b573e9f9f2c459faf",
+      "bytes": 2308,
+      "source": "nell-turn3-bundle/writer/ASSIGNMENT_TURN3.md",
+      "source_sha256": "c0f7bb69af8a4855fd1112bb0f74b4cfad63d317327f3a9b573e9f9f2c459faf",
+      "source_bytes": 2308,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/CLEAN_SCRIPT.md": {
+      "sha256": "acb44d3dcb382bdd4c4e0c7d04696cf19a983770e32f58747f73e801cd613180",
+      "bytes": 6962,
+      "source": "nell-turn3-bundle/writer/CLEAN_SCRIPT.md",
+      "source_sha256": "acb44d3dcb382bdd4c4e0c7d04696cf19a983770e32f58747f73e801cd613180",
+      "source_bytes": 6962,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/CLEAN_SCRIPT_v2.md": {
+      "sha256": "e5002c9f6a173af4ba4ef2095093f9a93f31fa597fdebaa14c4a6730bb387482",
+      "bytes": 8595,
+      "source": "nell-turn3-bundle/writer/CLEAN_SCRIPT_v2.md",
+      "source_sha256": "e5002c9f6a173af4ba4ef2095093f9a93f31fa597fdebaa14c4a6730bb387482",
+      "source_bytes": 8595,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/CLEAN_SCRIPT_v3.md": {
+      "sha256": "c0cfd2006c41e3bf1260b188ece17a300acd652e0e697f99d93a4ccd7228c3b1",
+      "bytes": 9485,
+      "source": "nell-turn3-bundle/writer/CLEAN_SCRIPT_v3.md",
+      "source_sha256": "c0cfd2006c41e3bf1260b188ece17a300acd652e0e697f99d93a4ccd7228c3b1",
+      "source_bytes": 9485,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/RESPONSE_R1-R3-TURN3.md": {
+      "sha256": "f0636359b4fde4349b707872a568340f041dd130778fdaface7a634a7431bfd4",
+      "bytes": 1531,
+      "source": "nell-turn3-bundle/writer/RESPONSE_R1-R3-TURN3.md",
+      "source_sha256": "f0636359b4fde4349b707872a568340f041dd130778fdaface7a634a7431bfd4",
+      "source_bytes": 1531,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/RESPONSE_R1-R3.md": {
+      "sha256": "c68c0541ca86edc1462db3809b2d6606157c5a1821cf152a0d496941a1da8225",
+      "bytes": 2843,
+      "source": "nell-turn3-bundle/writer/RESPONSE_R1-R3.md",
+      "source_sha256": "c68c0541ca86edc1462db3809b2d6606157c5a1821cf152a0d496941a1da8225",
+      "source_bytes": 2843,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/draft-1.md": {
+      "sha256": "f67effa12483837dfcf12bf3390ed4fd22e4c25fb24ee2be930cf6c865ab3b74",
+      "bytes": 12135,
+      "source": "nell-turn3-bundle/writer/draft-1.md",
+      "source_sha256": "f67effa12483837dfcf12bf3390ed4fd22e4c25fb24ee2be930cf6c865ab3b74",
+      "source_bytes": 12135,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/draft-2.md": {
+      "sha256": "290f8ab671ede0314d2626f5cf067a178fdf4091cc4fdd465823e9e30bc06117",
+      "bytes": 17022,
+      "source": "nell-turn3-bundle/writer/draft-2.md",
+      "source_sha256": "290f8ab671ede0314d2626f5cf067a178fdf4091cc4fdd465823e9e30bc06117",
+      "source_bytes": 17022,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    },
+    "nell/writer/draft-3.md": {
+      "sha256": "ea008765f477a37e14f5ba322173287a8e996ade426123848b5ece15022c181e",
+      "bytes": 17965,
+      "source": "nell-turn3-bundle/writer/draft-3.md",
+      "source_sha256": "ea008765f477a37e14f5ba322173287a8e996ade426123848b5ece15022c181e",
+      "source_bytes": 17965,
+      "byte_exact_copy": true,
+      "publication_changes": []
+    }
+  }
+}

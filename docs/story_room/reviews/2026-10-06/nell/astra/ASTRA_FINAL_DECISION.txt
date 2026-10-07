@@ -1,0 +1,22 @@
+Astra director decision — 6 October 2026
+Run: nell-wants-20261006-01 / Heels for a Corner
+Disposition: HOLD — NOT EDITORIALLY ACCEPTED. Run closed at its agreed repair cap.
+
+Reviewed the full draft-3, clean script, keyed repair response, earlier drafts, Sonnet advice, and the Examiner's focused report. Verified the turn-3 ZIP SHA256 and CRC and all 37 payload entries in its manifest.
+Final reviewed draft SHA256: ea008765f477a37e14f5ba322173287a8e996ade426123848b5ece15022c181e
+Final reviewed clean script SHA256: c0cfd2006c41e3bf1260b188ece17a300acd652e0e697f99d93a4ccd7228c3b1
+Final reviewed bundle SHA256: 00aac2c804e70a54a2b45769be570f85ad62b9014e9eff8880d75815c48c04e1
+
+What works: Nell initiates a small trade for her own appetite; she parts with her guarded portion; two paid loaded legs use real contacts; Bea is paper-only; no extra errand, deadline, repair lesson, apology, or permanent trophy. The small proposed Quarry bake is permitted within the writing brief. Cargo, acceptance, postponement, once-only settlement, pending exchanges, and six concrete resume strings are specified sufficiently for a future implementation discussion. No major continuity contradiction was found.
+
+Why I am holding it: this is an editorial quality judgment, not a newly discovered canon or runtime defect. The prose still makes Nell sound like a compressed set of preferences. The final repair changes "Soft can sit" to "Soft stays put" while retaining the same register. "Salt's dried into this crust" observes a material property; the ending still gives me little sense of the experience that prompted her curiosity. I am not persuaded by this script's payoff yet. Its small stakes are welcome; it does not need more story, sentiment, or a larger reward. It needs a fresher piece of conversation if reopened.
+
+The Examiner's READY WITH MINOR NOTES was a diagnostic on draft-1, not acceptance. Its structural checks were useful, but it treated the clipped lines as strengths. That disagreement is preserved. The Writer's claim that its lines are natural is not a verified review result. Two narrow repairs did not fully resolve my voice note; further near-paraphrases in this run are unlikely to teach us much.
+
+Counts: one Sonnet 5.5 consultation, one initial Grok draft plus two Grok repair turns, one Examiner pass on draft-1, three Astra Nell editorial reads. The consultant's reported 617 words exceeded the requested 450; no second call was used. Exact billing/pool attribution is unavailable. Packaging self-hash/embedded-ZIP-hash issues in review-1 are preserved as historical; later payload manifests verified. These are artifact checks, not gameplay regressions.
+
+Authority: game stays at 5be7feeef34dbed468e007f5ff4de594d41b0f80; local tooling checkout remains clean at 1134720153d7006a57655c625feca54ba4d7b054. No code, canon ledger, save, main, or production change. No gameplay tests were required or run for this writing-only task. No attachment or pacing playtest outcome is claimed.
+
+Ivo: full reread reconfirmed the existing acceptance of A Flat He Didn't Make (clean script 56dc708c6082c3bd2aa9812b745dea89d7961a13b0f0d71cb8d897b579dfbaf2). Still unimplemented. The same-visit bench ellipsis and repeated Works visits remain owner-play questions.
+
+Next recommendation: prototype the accepted Ivo candidate before accumulating more arcs. Keep Nell's food-trade premise as a held option for a later fresh writing brief. This recommendation is not an implementation assignment. All three Grok story Bots should remain idle after recording this decision. No more model calls, repairs, next slice, automation, canon promotion, or deployment in this run.

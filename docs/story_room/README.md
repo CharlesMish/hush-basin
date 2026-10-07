@@ -1,5 +1,11 @@
 # Hush Basin Story Room v0.2
 
+**October 6 draft review:** [Start with the independent second-opinion packet](https://github.com/CharlesMish/hush-basin/blob/review/story-second-opinion-20261006/docs/story_room/reviews/2026-10-06/README.md).
+It contains Ivo and Nell's scripts, earlier drafts, review disagreements and
+the preceding story. Ivo is accepted as writing; Nell is held. Both are
+unimplemented and both writing runs are closed. This GitHub review archive is
+separate from the portable canon/role packet produced by the command below.
+
 **Astra directs; Grok produces and writes; Sonnet consults once.** Three native
 Grok Bots share the room: Producer coordinates, Writer drafts and repairs, and
 Examiner gives a focused independent diagnostic. Astra makes the editorial call

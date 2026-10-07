@@ -1,5 +1,11 @@
 # Native story-room connection — October 6, 2026
 
+Latest closeout: the Ivo writing candidate remains accepted and unimplemented;
+the subsequent Nell run is closed, held after two repairs. All three story Bots
+are idle. The [published review packet](https://github.com/CharlesMish/hush-basin/blob/review/story-second-opinion-20261006/docs/story_room/reviews/2026-10-06/README.md) contains
+the actual drafts, advice, disagreements and final decisions. Earlier setup and
+pilot records below remain historical evidence, not an active assignment.
+
 ## Current v0.2 pilot
 
 Charlie changed the workflow to Astra direction → Grok Producer → one Sonnet

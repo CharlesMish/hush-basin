@@ -1,4 +1,17 @@
-# Current task — Consultation-led Grok writing pilot, October 6, 2026
+# Current task — Publish story second-opinion packet, October 6, 2026
+
+Charlie explicitly requests the drafts and relevant story documents on GitHub
+for an independent second opinion. Publish documentation on the separate
+`review/story-second-opinion-20261006` branch. Read
+`docs/story_room/reviews/2026-10-06/README.md` for exact candidate dispositions
+and provenance. Ivo is accepted writing; Nell is held; neither is implemented.
+Both writing runs are closed. No new Bot assignment, gameplay/canon change,
+main update, repository-visibility change or production deployment is part of
+this publication. Archived prompts and repair requests are historical evidence.
+
+---
+
+# Previous task — Consultation-led Grok writing pilot, October 6, 2026
 
 Charlie now authorizes Astra editorial direction and final writing calls, a Grok
 Producer, one bounded Sonnet 5.5 consultation, and a separate Grok writer for
