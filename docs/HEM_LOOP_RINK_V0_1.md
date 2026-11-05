@@ -132,9 +132,9 @@ spot, leaning over the inside wall at the apex with it held out.
 
 - **What you do differently, and why.** The fast solo line rides wide in
   Drive. To take a jacket from someone's hand without stopping, you unfold
-  early and brush the inside wall in Spread. The bot's inside line is ~2–3 s
-  slower through the Hem than its drift line: it's the line you wouldn't take
-  for time.
+  early and brush the inside wall in Spread. The bot's inside line is ~5 s
+  slower across the two sectors that span the Hem (24.4 s vs 19.3 s): it's the
+  line you would never take for time.
 - **What responds to what actually happened.** You catch the jacket if the
   craft passes within 3.4 m of her hand (centre within ~5 m of the wall):
 
@@ -173,7 +173,59 @@ spot, leaning over the inside wall at the apex with it held out.
 All commands run from the repository root with `GODOT_BIN` set to the exact
 engine. Results below are from the final commit unless noted.
 
-RESULTS_PLACEHOLDER
+Engine `4.7.1.stable.official.a13da4feb`, Linux x86_64, this cloud container.
+
+| What | Command | Result |
+|---|---|---|
+| Untouched base, before any change | `python3 tools/verify_story_fine_ground.py`; `python3 tools/verify_slices.py --phase complete --output <dir>` | 899/899 static PASS; contiguous story 275/275 PASS |
+| Base preservation, scope, startup, saves, closure | `python3 tools/verify_rink.py` | 10/10 PASS (every base file byte-identical except the prepended AGENTS sections) |
+| Rink suite, headless native | `godot --headless --fixed-fps 60 --path game --script res://tests/rink_suite.gd -- --result <file>` | **63/63 PASS** |
+| Story on this branch | `python3 tools/verify_rink.py --native --evidence <dir>` | rink suite PASS + contiguous story **275/275 PASS** (same count as the base) |
+| Rink suite inside the exported Web build | `python3 tools/export_rink_web.py --smoke --output <dir>`, then Chromium on `?draw=0` | 58/58 PASS at `a12ff6c` in headless Chromium (SwiftShader WebGL2; 13.7 min; no console errors); the clean-delivery scenario added afterwards: BROWSER_CLEAN |
+| Playable Web build in Chromium | `python3 tools/export_rink_web.py --zip --output <dir>` | Loads in ~3–5 s, no console errors; title card, W to race, Shift Drive, Esc pause, C crew run all respond |
+| Hem input sweep | `godot --headless ... --script res://tests/rink_hem_sweep.gd` | 7 simple input patterns, 0 hard hits with the bank (table above) |
+
+What the suite drives (all through ordinary input actions):
+
+- **Consecutive valid laps:** 3 flying laps in a row, 34.96 / 35.08 / 35.05 s.
+  Checkpoints arrive in order every lap, the best is the minimum, sectors sum to
+  the lap, and the chalkboard shows the best.
+- **Doubling back over the finish:** cross the line, stop, turn round, cross it
+  backwards, turn round, cross forwards. No lap is awarded; the refusal lists
+  all three checkpoints; the clock restarts; the next full lap counts (35.85 s).
+- **Skipped checkpoint:** a labelled test-only jump across the Hem infield
+  (the walls make a real cut impossible). The lap is refused, the HUD says
+  "missed the Hem", and the next lap is valid.
+- **Retry:** R mid-lap puts you back on the grid with the clock at 0:00.00. The
+  lap is discarded rather than refused, and the next attempt is a valid 34.96 s.
+- **Story hit:** inside line, caught on the first pass in Spread at 14.2 m/s,
+  3.2 m from her hand; jacket visible on the craft, Tess's hand empty; delivered
+  at the line; the night driver now wears it.
+- **Story miss, then hit:** the fast wide line sails past (miss recorded; Tess
+  still holding it; ring and chalk shown; "Too wide…" spoken). The next lap on
+  the inside line catches on attempt 2, and the crew's answer acknowledges the
+  retries or the scuffs.
+- **Scuffs:** deliberately hitting a wall while carrying marks the jacket, and
+  the crew comments on the wall.
+- **Clean delivery:** careful Spread line home. 0 scuffs; "First pass, and not
+  a mark on it. Ta."; the three-line reveal; and on the next Hem pass Tess says
+  "Clean all the way round. Now I've seen everything."
+- **Entry and modes:** W starts racing in the same keypress and the craft is
+  moving within half a second; C on the title card or after Esc starts the crew
+  run; T returns to the plain time trial.
+
+Bot reference laps (relative, not human pace):
+
+| Line | Lap | Yard→Hem apex | Hem apex→Siding | Siding→Dock | Dock→Line |
+|---|---|---|---|---|---|
+| Spread flick + Drive drift | 34.96 s | 9.37 | 9.96 | 8.10 | 7.65 |
+| Same + **dock Hop** | **32.63 s** | 9.36 | 9.97 | **6.86** | 6.48 |
+| Crew-run inside line | 40.45 s | 12.51 | 11.88 | 8.78 | 7.28 |
+| Lazy Spread on the centreline | 57.19 s | 18.73 | 17.66 | 10.24 | 10.58 |
+
+The browser and native runs produced the same lap times to about 10⁻⁵ s, the
+same impact counts and the same story outcomes on this host pair. That is
+agreement on one machine, not a cross-platform determinism claim.
 
 ## What still needs hands on the controls
 

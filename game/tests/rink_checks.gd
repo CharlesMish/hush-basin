@@ -123,7 +123,7 @@ func _key(code: Key) -> void:
 
 func _main() -> void:
 	var started := Time.get_ticks_msec()
-	var list := ["entry", "consecutive_laps", "doubling_back", "skipped_checkpoint", "retry", "story_hit", "story_miss_then_hit", "story_scuff", "lines"]
+	var list := ["entry", "consecutive_laps", "doubling_back", "skipped_checkpoint", "retry", "story_hit", "story_miss_then_hit", "story_scuff", "story_clean", "lines"]
 	var chosen := only.split(",", false)
 	for name in list:
 		if not chosen.is_empty() and not chosen.has(name):
@@ -365,6 +365,25 @@ func _scenario_story_scuff() -> void:
 	var lines := _story_lines()
 	check("scuff.crew_notices_wall", story.state == "DELIVERED" and (lines.has(game.Story.Text.DELIVER_SCUFF) or lines.has(game.Story.Text.DELIVER_WALL)), [story.scuffs, lines])
 	scenarios["story_scuff"] = {"delivered": story.delivered_record}
+
+
+func _scenario_story_clean() -> void:
+	await _fresh("CREW")
+	var story = game.story
+	bot.set_plan(Plans.INSIDE_CLEAN)
+	bot.active = true
+	await _until(func(): return story.state == "DELIVERED", 60 * 70)
+	check("clean.delivered_without_scuffs", story.state == "DELIVERED" and story.scuffs == 0 and story.misses == 0, story.delivered_record)
+	check("clean.jacket_shows_no_scuffs_en_route", not story.craft_scuffs.any(func(m): return m.visible))
+	# Keep going: Tess answers on the next pass of the Hem.
+	await _until(func(): return story._post_hem_called, 60 * 70)
+	await _ticks(60 * 2)
+	var lines := _story_lines()
+	check("clean.crew_says_not_a_mark", lines.has(game.Story.Text.DELIVER_FIRST), lines)
+	check("clean.reveal_spoken", lines.has(game.Story.Text.REVEAL[0][1]) and lines.has(game.Story.Text.REVEAL[2][1]), lines)
+	check("clean.tess_notices_clean_run", lines.has(game.Story.Text.AFTER_CLEAN), lines)
+	bot.active = false
+	scenarios["story_clean"] = {"delivered": story.delivered_record, "lines": lines}
 
 
 func _scenario_lines() -> void:

@@ -95,3 +95,18 @@ const INSIDE_HEM := [
 	["GATE", 1.0, -3.0, "D", 30.0],
 	["YARD", 30.0, -4.0, "D", 34.0],
 ]
+
+## Crew run, careful: inside the Hem in Spread, then Spread all the way home.
+const INSIDE_CLEAN := [
+	["YARD", 0.0, 0.0, "D", 34.0],
+	["YARD", 0.55, 4.0, "D", 34.0],
+	["HEM", -45.0, 6.0, "S", 16.0],
+	["HEM", 0.08, "W+3.0", "S", 15.0],
+	["HEM", 0.5, "W+2.2", "S", 15.0],
+	["HEM", 0.9, "W+3.0", "S", 15.0],
+	["HEMX", 0.5, 0.0, "S", 15.0],
+	["SIDING", 0.0, 0.0, "S", 15.0],
+	["CRANE", 0.0, -3.0, "S", 12.0],
+	["SOUTH", 0.0, 0.0, "S", 15.0],
+	["GATE", 0.0, 0.0, "S", 15.0],
+]

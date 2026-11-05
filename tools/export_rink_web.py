@@ -71,6 +71,8 @@ README = '''HEM LOOP · Hush Basin rink experiment (Web build)
 2. macOS: double-click PLAY_IN_BROWSER.command
    Anywhere:   python3 serve_hem_loop.py
    (or any static server pointed at the web/ folder; file:// will not work)
+   If macOS says the .command can't be opened, right-click it and choose Open,
+   or run the python3 line above in Terminal from this folder.
 3. A browser tab opens at http://127.0.0.1:8765/ — click the game once to focus.
 
 W or Enter   race the rink (solo time trial; the clock starts at the line)
