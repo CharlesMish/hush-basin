@@ -14,7 +14,7 @@ const Story = preload("res://rink/rink_story.gd")
 const Overcast = preload("res://scripts/overcast_resources.gd")
 
 const ENTRY_TEXT := "HEM LOOP · DEPOT YARD\nThe freight crew's old turning loop. On wet evenings they race it alone, against the chalkboard.\n\nW  or  Enter   Race the rink\nC   Crew run · Tess is at the Hem\n\nW/S thrust · A/D steer · Shift Drive · Space Hop\nR grid · Esc pause"
-const PAUSE_TEXT := "PAUSED\n\nEsc   resume\nR   back to the grid\nT   time trial\nC   crew run"
+const PAUSE_TEXT := "PAUSED\n\nEsc / Start   resume\nR / X   back to the grid\nT   time trial\nC / Back   crew run"
 const HINT_TEXT := "W/S thrust · A/D steer · hold Shift Drive · Space Hop (Spread) · R grid · Esc pause"
 
 @onready var craft: CraftController = $Craft
@@ -35,6 +35,8 @@ var _prev := Vector2.ZERO
 var _wrong_way := 0.0
 var _hint_cleared := false
 var _was_paused := false
+var _impacts_seen := 0
+var _tips_given: Dictionary = {}
 var events: Array[Dictionary] = []
 
 
@@ -133,9 +135,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		var key := (event as InputEventKey).physical_keycode
 		if mode == "ENTRY":
 			if key in [KEY_ENTER, KEY_KP_ENTER]:
+				get_tree().paused = false
 				start_mode("RACE")
 				get_viewport().set_input_as_handled()
 			elif key == KEY_C:
+				get_tree().paused = false
 				start_mode("CREW")
 				get_viewport().set_input_as_handled()
 			return
@@ -146,12 +150,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			elif key == KEY_C:
 				get_tree().paused = false
 				start_mode("CREW")
-	elif event is InputEventJoypadButton and event.pressed and mode == "ENTRY":
-		var button := (event as InputEventJoypadButton).button_index
-		if button == JOY_BUTTON_START:
-			start_mode("RACE")
-		elif button == JOY_BUTTON_BACK:
+	elif event is InputEventJoypadButton and event.pressed:
+		# Gamepad: stick forward races from the title; Back starts the crew run
+		# from the title or the pause menu (Start is the shared pause button).
+		if (event as InputEventJoypadButton).button_index == JOY_BUTTON_BACK and (mode == "ENTRY" or get_tree().paused):
+			get_tree().paused = false
 			start_mode("CREW")
+			get_viewport().set_input_as_handled()
 
 
 func _on_reset(_count: int, reason: String) -> void:
@@ -183,9 +188,37 @@ func _physics_process(delta: float) -> void:
 	lateral = float(proj.lateral)
 	piece = String(proj.id)
 	_update_wrong_way(delta)
+	_coach()
 	if mode == "CREW":
 		story.physics(delta, curr, proj)
 	_prev = curr
+
+
+## One-time tips after the two mistakes a first lap is most likely to make.
+func _coach() -> void:
+	if craft.impact_count == _impacts_seen:
+		return
+	_impacts_seen = craft.impact_count
+	if mode == "ENTRY" or craft.last_impact_severity < 0.3:
+		return
+	var hem: Vector2 = course.piece_ranges["HEM"]
+	var tip := ""
+	var key := ""
+	if piece == "HEM" and progress_s < hem.x + 90.0 and craft.last_impact_in_drive:
+		key = "hem_entry"
+		tip = "Tip · Drive won't hold the Hem above ~30 m/s. Brake at the boards, or tap out of Drive to flick it in."
+	elif piece in ["SIDING", "CRANE"] and progress_s > dock_lead_s() - 3.0 and progress_s < dock_lead_s() + 3.0 and lateral > 2.0:
+		key = "dock"
+		tip = "Tip · The dock buffer wants a Hop: Spread, then Space just before it."
+	if key == "" or _tips_given.has(key):
+		return
+	_tips_given[key] = true
+	hud.show_result(tip, Hud.AMBER, 5.5)
+	log_event("tip", {"tip": key})
+
+
+func dock_lead_s() -> float:
+	return builder.dock_range().x
 
 
 func _update_wrong_way(delta: float) -> void:

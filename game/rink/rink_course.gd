@@ -166,6 +166,34 @@ func project(point: Vector2, hint_s: float = -1.0) -> Dictionary:
 	}
 
 
+## Height of the yard surface at (s, lateral): zero everywhere except the
+## Hem's banked outer band. Lateral beyond the outer edge clamps to the edge.
+func bank_height(s: float, lateral: float) -> float:
+	if not data.has("bank"):
+		return 0.0
+	var b: Dictionary = data.bank
+	var r: Vector2 = piece_ranges[String(b.piece)]
+	var x := fposmod(s, length)
+	var start := r.x - float(b.lead_m)
+	var finish := r.y + float(b.trail_m)
+	if x < start or x > finish:
+		return 0.0
+	var envelope := smoothstep(start, start + float(b.ramp_in_m), x) * (1.0 - smoothstep(finish - float(b.ramp_out_m), finish, x))
+	if envelope <= 0.0:
+		return 0.0
+	var wr := float(pose_at(x).wr)
+	var band := float(b.band_m)
+	var u := clampf((-lateral - (wr - band)) / band, 0.0, 1.0)
+	return float(b.height_m) * envelope * u * u
+
+
+func bank_range() -> Vector2:
+	if not data.has("bank"):
+		return Vector2.ZERO
+	var r: Vector2 = piece_ranges[String(data.bank.piece)]
+	return Vector2(r.x - float(data.bank.lead_m), r.y + float(data.bank.trail_m))
+
+
 func grid_transform(height: float) -> Transform3D:
 	var pose := pose_at(float(data.grid_s))
 	var yaw := atan2(-pose.f.x, -pose.f.y)

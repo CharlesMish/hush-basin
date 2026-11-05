@@ -61,7 +61,9 @@ func _draw() -> void:
 		var tint := Color(0.96, 0.96, 0.92) if i == 0 else Color(0.13, 0.74, 0.69, 0.9)
 		draw_line(to_map(g[0]), to_map(g[1]), tint, 2.0 if i == 0 else 1.0)
 	for m in marks:
-		draw_circle(to_map(m[0]), 4.0, m[1])
+		draw_circle(to_map(m[0]), 6.5, Color(0.0, 0.0, 0.0, 0.6))
+		draw_circle(to_map(m[0]), 5.0, m[1])
+		draw_arc(to_map(m[0]), 8.5, 0.0, TAU, 20, m[1], 1.5, true)
 	var c := to_map(craft_point)
-	draw_circle(c, 4.5, Color(0.98, 0.72, 0.3))
-	draw_line(c, c + craft_heading.normalized() * 10.0, Color(0.98, 0.72, 0.3), 2.0)
+	draw_circle(c, 4.5, Color(0.96, 0.96, 0.92))
+	draw_line(c, c + craft_heading.normalized() * 10.0, Color(0.96, 0.96, 0.92), 2.0)

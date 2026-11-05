@@ -1,3 +1,13 @@
+# Current task — Hem Loop rink v0.1 (November 5, 2026)
+
+Read `../docs/HEM_LOOP_RINK_V0_1.md`. The owner authorized a separately
+launchable rink in `rink/` with tests `tests/rink_*`. It instances the
+unchanged `scenes/craft.tscn`, `resources/default_tuning.tres` and
+`scripts/camera_rig.gd`; it must not edit them, `project.godot`, the world,
+story scripts or saves. Verify with `../tools/verify_rink.py`.
+
+---
+
 # Current task — Story + Fine Ground review
 
 Read `../docs/STORY_FINE_GROUND_REVIEW.md`. The owner authorized a bounded ground-only

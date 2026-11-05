@@ -124,5 +124,15 @@
     "tess_fraction": 0.5,
     "hand_reach_m": 1.6,
     "catch_radius_m": 3.4
+  },
+  "bank": {
+    "piece": "HEM",
+    "band_m": 12.0,
+    "height_m": 2.4,
+    "lead_m": 4.0,
+    "ramp_in_m": 45.0,
+    "trail_m": 12.0,
+    "ramp_out_m": 55.0,
+    "note": "Turned-up outer edge of the Hem: u^2 profile (zero slope where it starts, max ~22 deg at the wall)."
   }
 }

@@ -27,6 +27,7 @@ func build(source: Course) -> void:
 	_build_walls()
 	_build_dock()
 	_build_markings()
+	_build_brake_boards()
 	_build_gantry()
 	_build_hem_apex()
 	_build_crane()
@@ -79,7 +80,9 @@ func _wall_prisms(side: float, height: float, thickness: float, node_name: Strin
 	var s := 0.0
 	while s < course.length - 0.001:
 		var pose := course.pose_at(s)
-		var step := 6.0 if absf(float(pose.k)) < 0.0001 and absf(float(course.pose_at(s + 6.0).k)) < 0.0001 else 1.0
+		var flat := absf(float(pose.k)) < 0.0001 and absf(float(course.pose_at(s + 6.0).k)) < 0.0001
+		var banked := course.bank_height(s, -float(pose.wr)) > 0.0 or course.bank_height(s + 6.0, -float(course.pose_at(s + 6.0).wr)) > 0.0
+		var step := 6.0 if flat and not banked else 1.0
 		var s1 := minf(s + step, course.length)
 		var pts := PackedVector3Array()
 		for at in [s, s1]:
@@ -88,7 +91,8 @@ func _wall_prisms(side: float, height: float, thickness: float, node_name: Strin
 			var lateral := float(p.wl) if side > 0.0 else -float(p.wr)
 			var face: Vector2 = p.p + lf * lateral
 			var back: Vector2 = face + lf * side * thickness
-			for y in [0.0, height]:
+			var lift := course.bank_height(at, lateral)
+			for y in [0.0, height + lift]:
 				pts.append(Vector3(face.x, y, face.y))
 				pts.append(Vector3(back.x, y, back.y))
 		var shape := ConvexPolygonShape3D.new()
@@ -164,32 +168,44 @@ func _label(parent: Node3D, text: String, at: Vector3, yaw: float, pixel: float,
 	return label
 
 
-## Quad strip between two lateral offsets along the course, at height y.
+## Quad strip between two lateral offsets along the course, at height y above
+## the yard surface (the Hem's bank lifts anything painted on it).
 func _ribbon(s0: float, s1: float, lat_a: Callable, lat_b: Callable, y: float, step: float = 1.0, closed: bool = false) -> ArrayMesh:
+	return _strip(s0, s1, [lat_a, lat_b], y, step, closed)
+
+
+## Multi-column strip: columns are lateral Callables ordered left to right.
+func _strip(s0: float, s1: float, columns: Array, y: float, step: float = 1.0, closed: bool = false) -> ArrayMesh:
 	var st := SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 	var count := maxi(1, int(ceil((s1 - s0) / step)))
-	var prev_a := Vector3.ZERO
-	var prev_b := Vector3.ZERO
+	var prev: Array[Vector3] = []
 	for i in count + 1:
 		var s := s0 + (s1 - s0) * float(i) / float(count)
 		if closed and i == count:
 			s = s0
-		var pa: Vector2 = course.edge_point(s, float(lat_a.call(s)))
-		var pb: Vector2 = course.edge_point(s, float(lat_b.call(s)))
-		var a := Vector3(pa.x, y, pa.y)
-		var b := Vector3(pb.x, y, pb.y)
+		var row: Array[Vector3] = []
+		for column in columns:
+			var lat := float(column.call(s))
+			var p: Vector2 = course.edge_point(s, lat)
+			row.append(Vector3(p.x, y + course.bank_height(s, lat), p.y))
 		if i > 0:
-			st.set_normal(Vector3.UP)
-			st.set_uv(Vector2(0, s)); st.add_vertex(prev_a)
-			st.set_uv(Vector2(1, s)); st.add_vertex(b)
-			st.set_uv(Vector2(1, s)); st.add_vertex(prev_b)
-			st.set_uv(Vector2(0, s)); st.add_vertex(prev_a)
-			st.set_uv(Vector2(0, s)); st.add_vertex(a)
-			st.set_uv(Vector2(1, s)); st.add_vertex(b)
-		prev_a = a
-		prev_b = b
+			for c in columns.size() - 1:
+				_tri(st, prev[c], row[c + 1], prev[c + 1], s)
+				_tri(st, prev[c], row[c], row[c + 1], s)
+		prev = row
 	return st.commit()
+
+
+func _tri(st: SurfaceTool, a: Vector3, b: Vector3, c: Vector3, s: float) -> void:
+	var n := (b - a).cross(c - a)
+	if n.y < 0.0:
+		n = -n
+	n = n.normalized() if n.length() > 0.000001 else Vector3.UP
+	for v in [a, b, c]:
+		st.set_normal(n)
+		st.set_uv(Vector2(0, s))
+		st.add_vertex(v)
 
 
 # --- floor and track ----------------------------------------------------------
@@ -223,8 +239,15 @@ func _wr(s: float) -> float:
 func _build_track_surface() -> void:
 	var asphalt := color("paving", Color(0.16, 0.2, 0.2)) * 0.93
 	asphalt.a = 1.0
-	var mesh := _ribbon(0.0, course.length, func(s): return _wl(s) + 0.4, func(s): return -_wr(s) - 0.4, 0.012, 1.0, true)
+	var band := float(course.data.bank.band_m) if course.data.has("bank") else 0.0
+	var columns: Array = [func(s): return _wl(s) + 0.4]
+	for k in 7:
+		var u := float(k) / 6.0
+		columns.append(func(s): return -(_wr(s) - band) - band * u)
+	columns.append(func(s): return -_wr(s) - 0.4)
+	var mesh := _strip(0.0, course.length, columns, 0.012, 1.0, true)
 	_add_mesh(mesh, material("asphalt", asphalt, 0.56), "TrackSurface")
+	_build_bank_collision(band)
 	# Wet patches: darker, glossier puddles where the yard dips.
 	var puddle := material("puddle", asphalt * 0.62, 0.06)
 	var rng := RandomNumberGenerator.new()
@@ -233,7 +256,23 @@ func _build_track_surface() -> void:
 		var s := rng.randf_range(0.0, course.length)
 		var lat := rng.randf_range(-0.7, 0.7) * _wr(s)
 		var size := rng.randf_range(2.0, 5.5)
+		if course.bank_height(s, lat - size) > 0.01 or course.bank_height(s + size * 1.6, lat - size) > 0.01:
+			continue
 		_add_mesh(_ribbon(s, s + size * 1.6, func(_x): return lat + size * 0.5, func(_x): return lat - size * 0.5, 0.018, 0.8), puddle, "Puddle%d" % i)
+
+
+func _build_bank_collision(band: float) -> void:
+	## The banked band is ground (hover support), not a hard wall.
+	var r := course.bank_range()
+	if r.y <= r.x:
+		return
+	var columns: Array = []
+	for k in 9:
+		var u := float(k) / 8.0
+		columns.append(func(s): return -(_wr(s) - band) - band * u - (0.3 if k == 8 else 0.0))
+	var mesh := _strip(r.x, r.y, columns, 0.0, 1.0)
+	var body := _collide(mesh, "HemBankCollision")
+	body.set_meta("source_geometry_id", "HEM_BANK")
 
 
 # --- walls ------------------------------------------------------------------
@@ -250,6 +289,7 @@ func _wall_mesh(side: float, height: float, thickness: float, band: bool) -> Arr
 	var inset := 0.0 if not band else -0.02
 	var pts: Array[Vector2] = []
 	var outs: Array[Vector2] = []
+	var lifts: Array[float] = []
 	for i in count + 1:
 		var s := fposmod(course.length * float(i) / float(count), course.length)
 		var pose := course.pose_at(s)
@@ -257,19 +297,26 @@ func _wall_mesh(side: float, height: float, thickness: float, band: bool) -> Arr
 		var lateral := (float(pose.wl) if side > 0.0 else -float(pose.wr)) + side * inset
 		pts.append(pose.p + lf * lateral)
 		outs.append(lf * side)
+		lifts.append(course.bank_height(s, lateral))
 	for i in count:
 		var a := pts[i]
 		var b := pts[i + 1]
 		var oa := outs[i]
 		var ob := outs[i + 1]
+		var la := lifts[i]
+		var lb := lifts[i + 1]
 		var inward_a := Vector3(-oa.x, 0, -oa.y)
-		_quad(st, Vector3(a.x, y0, a.y), Vector3(b.x, y0, b.y), Vector3(b.x, y1, b.y), Vector3(a.x, y1, a.y), inward_a)
+		# The racing face starts at the (possibly banked) surface; the back
+		# face drops to the yard floor like a retaining wall.
+		var fa0 := (y0 + la) if band else la
+		var fb0 := (y0 + lb) if band else lb
+		_quad(st, Vector3(a.x, fa0, a.y), Vector3(b.x, fb0, b.y), Vector3(b.x, y1 + lb, b.y), Vector3(a.x, y1 + la, a.y), inward_a)
 		if band:
 			continue
 		var ta := a + oa * thickness
 		var tb := b + ob * thickness
-		_quad(st, Vector3(a.x, y1, a.y), Vector3(b.x, y1, b.y), Vector3(tb.x, y1, tb.y), Vector3(ta.x, y1, ta.y), Vector3.UP)
-		_quad(st, Vector3(tb.x, y0, tb.y), Vector3(ta.x, y0, ta.y), Vector3(ta.x, y1, ta.y), Vector3(tb.x, y1, tb.y), Vector3(oa.x, 0, oa.y))
+		_quad(st, Vector3(a.x, y1 + la, a.y), Vector3(b.x, y1 + lb, b.y), Vector3(tb.x, y1 + lb, tb.y), Vector3(ta.x, y1 + la, ta.y), Vector3.UP)
+		_quad(st, Vector3(tb.x, y0, tb.y), Vector3(ta.x, y0, ta.y), Vector3(ta.x, y1 + la, ta.y), Vector3(tb.x, y1 + lb, tb.y), Vector3(oa.x, 0, oa.y))
 	return st.commit()
 
 
@@ -360,6 +407,10 @@ func _build_dock() -> void:
 		var u := (float(k) + 0.5) / 5.0
 		var p := a.lerp(b, u)
 		_box(self, Vector3(p.x, bh + 0.005, p.y), Vector3(len / 10.0, 0.01, depth + 0.01), stripe_mat, yaw)
+	# Stencil on the buffer's approach face: the dock is a Spread + Hop line.
+	var face_f: Vector2 = course.pose_at(r.x).f
+	var face := mid - face_f * (depth * 0.5 + 0.02)
+	_label(self, "HOP", Vector3(face.x, h + (bh - h) * 0.5 + 0.02, face.y), _yaw_of(face_f), 0.0075, Color(0.95, 0.92, 0.84), 96)
 
 
 # --- painted markings ---------------------------------------------------------
@@ -374,6 +425,19 @@ func _build_markings() -> void:
 	# Amber skim stripe at the foot of the Hem's outer wall: the wall-ride line.
 	var hem: Vector2 = course.piece_ranges["HEM"]
 	_add_mesh(_ribbon(hem.x - 10.0, hem.y + 6.0, func(s): return -_wr(s) + 0.55, func(s): return -_wr(s) + 0.1, 0.024, 1.0), amber, "HemSkimStripe")
+	# Dashed "stitches" along the Hem's banked edge: they show the rise and give
+	# a drift something to aim along.
+	if course.data.has("bank"):
+		var band := float(course.data.bank.band_m)
+		var br := course.bank_range()
+		var stitch := material("paint_stitch", Color(0.9, 0.87, 0.78), 0.6)
+		var x := br.x + float(course.data.bank.ramp_in_m) * 0.6
+		while x < br.y - float(course.data.bank.ramp_out_m) * 0.6:
+			for u in [0.45, 0.8]:
+				var a := func(q): return -(_wr(q) - band) - band * u + 0.12
+				var b := func(q): return -(_wr(q) - band) - band * u - 0.12
+				_add_mesh(_ribbon(x, x + 2.2, a, b, 0.03, 1.1), stitch, "HemStitch")
+			x += 4.5
 	# Start / finish checker.
 	var line_s := float(course.gates[0].s)
 	var cells := 12
@@ -393,6 +457,26 @@ func _build_markings() -> void:
 	for spec in [[grid_s + 8.0, 3], [course.piece_ranges["HEM"].x - 55.0, 3], [course.piece_ranges["CRANE"].x - 60.0, 2], [course.piece_ranges["GATE"].x - 20.0, 2]]:
 		for k in int(spec[1]):
 			_chevron(float(spec[0]) + k * 6.0, amber)
+
+
+func _build_brake_boards() -> void:
+	## Countdown boards on the outside wall before the Hem's turn-in.
+	var hem: Vector2 = course.piece_ranges["HEM"]
+	var t := float(course.data.wall.thickness_m)
+	var h := float(course.data.wall.height_m)
+	var board := material("brake_board", Color(0.94, 0.92, 0.86), 0.7)
+	var stripe := material("brake_stripe", Color(0.86, 0.48, 0.1), 0.6)
+	for d in [150, 100, 50]:
+		var s := hem.x - float(d)
+		var pose := course.pose_at(s)
+		var lf := Course.left_of(pose.f)
+		var p: Vector2 = pose.p - lf * (float(pose.wr) + t * 0.5)
+		var yaw := _yaw_of(pose.f)
+		var back := Vector3(-pose.f.x, 0, -pose.f.y)
+		_box(self, Vector3(p.x, h + 0.9, p.y), Vector3(1.9, 1.5, 0.12), board, yaw)
+		for k in d / 50:
+			_box(self, Vector3(p.x, h + 0.38 + 0.0, p.y) + back * 0.07 + Vector3(lf.x, 0, lf.y) * (0.0 + (k - (d / 50 - 1) * 0.5) * 0.42), Vector3(0.24, 0.3, 0.02), stripe, yaw)
+		_label(self, str(d), Vector3(p.x, h + 1.02, p.y) + back * 0.07, yaw, 0.012, Color(0.1, 0.1, 0.1), 96)
 
 
 func _chevron(s: float, mat: Material) -> void:

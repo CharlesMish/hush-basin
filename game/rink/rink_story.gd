@@ -10,7 +10,7 @@ extends Node3D
 ## the crew and Tess answer. Lines are one short sentence and never pause play.
 
 const Text = preload("res://rink/rink_story_text.gd")
-const TESS_PORTRAIT := "res://presentation/narrative/tess.png"
+const TESS_PORTRAIT: Texture2D = preload("res://presentation/narrative/tess.png")
 const JACKET := Color(0.93, 0.5, 0.1)
 const REFLECT := Color(0.9, 0.92, 0.85)
 const SCUFF := Color(0.24, 0.24, 0.23)
@@ -50,8 +50,7 @@ func configure(owner_game: Node3D) -> void:
 	game = owner_game
 	course = game.course
 	process_mode = Node.PROCESS_MODE_PAUSABLE
-	if ResourceLoader.exists(TESS_PORTRAIT):
-		_tess_portrait = load(TESS_PORTRAIT)
+	_tess_portrait = TESS_PORTRAIT
 	var spec: Dictionary = course.data.story
 	apex_s = course.piece_s(String(spec.tess_piece), -1.0, float(spec.tess_fraction))
 	var pose: Dictionary = course.pose_at(apex_s)

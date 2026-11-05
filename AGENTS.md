@@ -1,3 +1,17 @@
+# Current task — Hem Loop rink v0.1 (November 5, 2026)
+
+The owner's November 5 request authorizes one separately launchable racing-rink
+experiment on top of `review/story-ground-20261001` at
+`a9d7aceffb07fe6326bfa6021645d4a6d43c7755`: `game/rink/` (`res://rink/rink.tscn`),
+its tests, tools, launcher and docs. Read `docs/HEM_LOOP_RINK_V0_1.md` first.
+It reuses the unchanged craft, tuning, camera rig, palette, sky and drizzle
+config, changes no existing file except these headers, keeps project.godot's
+story startup and saves, and writes no save of its own. Verify with
+`python3 tools/verify_rink.py` (add `--native --evidence <new dir>`). No main
+merge or production deployment. The sections below are provenance.
+
+---
+
 # Current task — Story + Fine Ground review
 
 Read `docs/STORY_FINE_GROUND_REVIEW.md`. The owner authorized a bounded ground-only
