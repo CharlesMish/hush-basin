@@ -1,0 +1,128 @@
+{
+  "version": "hem-loop-v0.1",
+  "place": "Depot yard turning loop, Hush Basin",
+  "note": "Counter-clockwise lap from the Gate exit. x east, z south, metres. Widths are left/right of the racing direction. SIDING and SOUTH lengths close the loop exactly (tools/rink_layout.py --check).",
+  "start_yaw_degrees": -90.0,
+  "width_blend_m": 22.0,
+  "pieces": [
+    {
+      "id": "YARD",
+      "name": "Yard Straight",
+      "kind": "straight",
+      "len": 205.0,
+      "wl": 12.0,
+      "wr": 12.0
+    },
+    {
+      "id": "HEM",
+      "name": "the Hem",
+      "kind": "arc",
+      "deg": 200.0,
+      "r": 66.0,
+      "wl": 17.0,
+      "wr": 21.0
+    },
+    {
+      "id": "HEMX",
+      "name": "Hem exit",
+      "kind": "straight",
+      "len": 36.0,
+      "wl": 13.0,
+      "wr": 19.0,
+      "blend_m": 10.0
+    },
+    {
+      "id": "POINTS",
+      "name": "the Points",
+      "kind": "arc",
+      "deg": -20.0,
+      "r": 110.0,
+      "wl": 12.0,
+      "wr": 13.0,
+      "blend_m": 38.0
+    },
+    {
+      "id": "SIDING",
+      "name": "Long Siding",
+      "kind": "straight",
+      "len": 126.976,
+      "wl": 12.0,
+      "wr": 12.0
+    },
+    {
+      "id": "CRANE",
+      "name": "Crane Corner",
+      "kind": "arc",
+      "deg": 90.0,
+      "r": 24.0,
+      "wl": 13.0,
+      "wr": 13.0
+    },
+    {
+      "id": "SOUTH",
+      "name": "Dock Lane",
+      "kind": "straight",
+      "len": 45.073,
+      "wl": 11.0,
+      "wr": 11.0
+    },
+    {
+      "id": "GATE",
+      "name": "the Gate",
+      "kind": "arc",
+      "deg": 90.0,
+      "r": 40.0,
+      "wl": 13.0,
+      "wr": 16.0
+    }
+  ],
+  "grid_s": 22.0,
+  "gates": [
+    {
+      "id": "LINE",
+      "name": "Start / finish",
+      "piece": "YARD",
+      "at": 58.0
+    },
+    {
+      "id": "HEM",
+      "name": "the Hem",
+      "piece": "HEM",
+      "at_fraction": 0.5
+    },
+    {
+      "id": "SIDING",
+      "name": "Long Siding",
+      "piece": "SIDING",
+      "at_fraction": 0.45
+    },
+    {
+      "id": "DOCK",
+      "name": "Dock Lane",
+      "piece": "SOUTH",
+      "at_fraction": 0.5
+    }
+  ],
+  "gate_overhang_m": 4.0,
+  "wall": {
+    "height_m": 2.0,
+    "thickness_m": 0.6
+  },
+  "dock": {
+    "piece": "CRANE",
+    "from_fraction": 0.0,
+    "to_fraction": 0.78,
+    "inner_m": 0.0,
+    "width_m": 8.5,
+    "height_m": 0.5,
+    "buffer_height_m": 1.0,
+    "buffer_depth_m": 0.45,
+    "lead_in_m": 14.0
+  },
+  "story": {
+    "tess_piece": "HEM",
+    "tess_fraction": 0.5,
+    "hand_reach_m": 1.6,
+    "catch_radius_m": 3.4
+  }
+}

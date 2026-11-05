@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://rink/rink_game.gd" id="1_game"]
+[ext_resource type="PackedScene" path="res://scenes/craft.tscn" id="2_craft"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="3_camera"]
+[ext_resource type="Resource" path="res://resources/default_tuning.tres" id="4_tuning"]
+[ext_resource type="Script" path="res://rink/rink_builder.gd" id="5_builder"]
+
+[node name="HemLoop" type="Node3D"]
+script = ExtResource("1_game")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-38, -35, 0)
+light_color = Color(1, 0.89, 0.7, 1)
+light_energy = 1.1
+shadow_enabled = true
+shadow_opacity = 0.32
+directional_shadow_max_distance = 230.0
+
+[node name="Course" type="Node3D" parent="."]
+script = ExtResource("5_builder")
+
+[node name="Craft" parent="." instance=ExtResource("2_craft")]
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("3_camera")
+target_path = NodePath("../Craft")
+tuning = ExtResource("4_tuning")
+
+[node name="Camera" type="Camera3D" parent="CameraRig"]
+current = true
+near = 0.12
+far = 900.0
