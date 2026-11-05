@@ -181,7 +181,7 @@ Engine `4.7.1.stable.official.a13da4feb`, Linux x86_64, this cloud container.
 | Base preservation, scope, startup, saves, closure | `python3 tools/verify_rink.py` | 10/10 PASS (every base file byte-identical except the prepended AGENTS sections) |
 | Rink suite, headless native | `godot --headless --fixed-fps 60 --path game --script res://tests/rink_suite.gd -- --result <file>` | **63/63 PASS** |
 | Story on this branch | `python3 tools/verify_rink.py --native --evidence <dir>` | rink suite PASS + contiguous story **275/275 PASS** (same count as the base) |
-| Rink suite inside the exported Web build | `python3 tools/export_rink_web.py --smoke --output <dir>`, then Chromium on `?draw=0` | 58/58 PASS at `a12ff6c` in headless Chromium (SwiftShader WebGL2; 13.7 min; no console errors); the clean-delivery scenario added afterwards: BROWSER_CLEAN |
+| Rink suite inside the exported Web build | `python3 tools/export_rink_web.py --smoke --output <dir>`, then Chromium on `?draw=0` | 58/58 PASS at `a12ff6c` in headless Chromium (SwiftShader WebGL2; 13.7 min; no console errors); the clean-delivery scenario added afterwards, plus entry checks: 14/14 PASS in the browser at `ecf2b98` |
 | Playable Web build in Chromium | `python3 tools/export_rink_web.py --zip --output <dir>` | Loads in ~3–5 s, no console errors; title card, W to race, Shift Drive, Esc pause, C crew run all respond |
 | Hem input sweep | `godot --headless ... --script res://tests/rink_hem_sweep.gd` | 7 simple input patterns, 0 hard hits with the bank (table above) |
 
